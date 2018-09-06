@@ -1,0 +1,159 @@
++++
+title = "Instrucciones"
+weight = 100
++++
+
+Aquí explicamos lo necesario para poder generar y editar estos apuntes en tu ordenador.
+
+## Montaje previo
+
+1. Instala [Hugo](https://gohugo.io/getting-started/installing/).
+
+2. 
+
+## Formato markdown
+
+El título de esta sección se ha escrito con el código `## Formato markdown`. Las **negrillas** se escriben `**negrillas**`. Las _cursivas_ se pueden escribir `_cursivas_` o `*cursivas*`, si una de las dos produce errores debido al contexto, se usa la otra. 
+
+Es muy fácil hacer listas:
+
+* uno 
+	1. primero
+	2. segundo
+* dos 
+	- primero
+	- segundo
+* tres 
+
+se escribe:
+
+```
+* uno 
+	1. primero
+	2. segundo
+* dos 
+	- primero
+	- segundo
+* tres 
+```
+
+Es sencillo crear enlaces y referencias cruzadas a secciones:
+
+* Aprende markdown en [Wikipedia](https://en.wikipedia.org/wiki/Markdown). Esto se escribe `[Wikipedia](https://en.wikipedia.org/wiki/Markdown)`.
+
+* Pulsa [aquí](#notación-matemática) para is a la sección sobre cómo escribir matemáticas. En este caso el código es `[aquí](#notación-matemática)`.
+
+También es fácil insertar imágenes:
+
+![esto es una imagen](../images/gaussian_primes.png)
+
+```
+![esto es una imagen](../images/gaussian_primes.png)
+```
+
+
+## Notación matemática
+
+Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir <code>$\LaTeX$</code>. Lo entiende casi todo, pero algunas modificaciones son necesarias: 
+
+* **Subíndices**: El símbolo `_` se sustituye por `\_`, por tanto $\sum\_{n\geq 0}a\_n$ se escribe `$\sum\_{n\geq 0}a\_n$`.
+
+* **Entornos tabulares**: en vez de usar `\\` para saltos de línea hay que usar `\cr`, así $\left(\begin{smallmatrix} 1 & 0 \cr 0 & 1 \end{smallmatrix}\right)$ es `$\left(\begin{smallmatrix} 1 & 0 \cr 0 & 1 \end{smallmatrix}\right)$`.
+
+* **Matemáticas en párrafo**: se pueden escribir de dos maneras, $x^2+1$ es bien `$x^2+1$` o bien `\\(x^2+1\\)`.
+
+* **Fórmulas exentas**: también se pueden escribir de dos maneras, $$x^2+1$$ es bien `$$x^2+1$$` o bien `\\[x^2+1\\]`.
+
+## Entornos
+
+La plantilla posee diferentes entornos para ordenar el contenido. Se explican en los siguientes ejemplos, que se acompañan de su códio.
+
+{{% definition %}} Esto es una definición. {{% /definition %}}
+
+```
+{{%/* definition */%}} Esto es una definición. {{%/* /definition */%}}
+```
+
+{{% proposition %}} Esto es una proposición. {{% /proposition  %}}
+
+```
+{{%/* proposition */%}} Esto es una proposición. {{%/* /proposition  */%}}
+```
+
+{{% lemma %}} Esto es un lema. {{% /lemma %}}
+
+```
+{{%/* lemma */%}} Esto es un lema. {{%/* /lemma */%}}
+```
+
+{{% theorem %}} Esto es un teorema. {{% /theorem %}}
+
+```
+{{%/* theorem */%}} Esto es un teorema. {{%/* /theorem */%}}
+```
+
+{{% theorem name="Nombre" %}} Esto es un teorema con nombre. {{% /theorem %}}
+
+```
+{{%/* theorem name="Nombre" */%}} Esto es un teorema con nombre. {{%/* /theorem */%}}
+```
+
+{{% example name="Nombre del ejemplo" %}} Esto es un ejemplo. Los ejemplos van encabezados con un nombre, así que esta variable es aquí obligatoria. {{% /example %}}
+
+```
+{{%/* example name="Nombre del ejemplo" */%}} Esto es un ejemplo. Los ejemplos van encabezados con un nombre, por lo que esta variable es obligatoria. {{%/* /example */%}}
+```
+
+{{% ojo %}} ¡OJO! Esto es un mensaje de alerta. {{% /ojo %}}
+
+```
+{{%/* ojo */%}} ¡OJO! Esto es un mensaje de alerta. {{%/* /ojo */%}}
+```
+
+
+Las **pruebas** tienen un aspecto especial. Aparecen plegadas para no sobrecargar el contenido y se despliegan pulsando sobre ellas.
+
+{{% proof %}} Esto es una prueba. Aparecen plegadas por defecto. {{% /proof %}}
+
+
+```
+{{%/* proof */%}} Esto es una prueba. Aparecen plegadas por defecto. {{%/* /proof */%}}
+```
+
+
+## Saltos de línea y espacios verticales
+
+No debe haber saltos de línea innecesarios ya que de lo contrario aparecen espacios verticales no deseados. Veámoslo con un ejemplo.
+
+{{% definition %}} 
+Esto es una definición con excesivos espacios verticales. 
+{{% /definition %}}
+
+```
+{{%/* definition */%}} 
+Esto es una definición con excesivos espacios verticales. 
+{{%/* /definition */%}}
+```
+
+No obstante, los saltos de línea son a veces necesarios, como cuando una definición contiene una lista. En estos casos, la longitud vertical de la definición mitiga los excesivos espacios verticales en los extremos.
+
+{{% definition %}} Esto es una definición con una lista:
+
+* uno 
+	- primero
+	- segundo
+* dos 
+* tres 
+{{% /definition %}}
+
+
+```
+{{%/* definition */%}} Esto es una definición con una lista:
+
+* uno 
+	- primero
+	- segundo
+* dos 
+* tres 
+{{%/* /definition */%}}
+```

@@ -1,0 +1,10 @@
+baseURL = "http://asignatura.us.es/estalg"
+languageCode = "es-ES"
+DefaultContentLanguage = "es"
+
+title = "Estructuras algebraicas"
+theme = "hugo-theme-lecturenotes"
+disableLiveReload = false
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
