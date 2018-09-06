@@ -1,4 +1,4 @@
-baseURL = "http://asignatura.us.es/estalg"
+baseURL = "https://asignatura.us.es/estalg"
 languageCode = "es-ES"
 DefaultContentLanguage = "es"
 
