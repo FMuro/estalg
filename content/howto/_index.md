@@ -152,7 +152,7 @@ Esto es una definición con excesivos espacios verticales.
 {{%/* /definition */%}}
 ```
 
-No obstante, los saltos de línea son a veces necesarios, como cuando una definición contiene una lista. En estos casos, la longitud vertical de la definición mitiga los excesivos espacios verticales en los extremos.
+No obstante, los saltos de línea son a veces inevitables, como cuando una definición contiene una lista. En estos casos, la longitud vertical de la definición mitiga los excesivos espacios verticales en los extremos.
 
 {{% definition %}} Esto es una definición con una lista:
 
