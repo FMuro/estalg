@@ -121,10 +121,10 @@ La plantilla posee diferentes entornos para ordenar el contenido. Se explican en
 {{%/* example name="Nombre del ejemplo" */%}} Esto es un ejemplo. Los ejemplos van encabezados con un nombre, por lo que esta variable es obligatoria. {{%/* /example */%}}
 ```
 
-{{% ojo %}} ¡OJO! Esto es un mensaje de alerta. {{% /ojo %}}
+{{% watch %}} ¡watch! Esto es un mensaje de alerta. {{% /watch %}}
 
 ```
-{{%/* ojo */%}} ¡OJO! Esto es un mensaje de alerta. {{%/* /ojo */%}}
+{{%/* watch */%}} ¡watch! Esto es un mensaje de alerta. {{%/* /watch */%}}
 ```
 
 

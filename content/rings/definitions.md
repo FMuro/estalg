@@ -53,7 +53,7 @@ $$0+a=a,\qquad 1a=a.$$
 
 * Existencia de un elemento opuesto para la suma \\(-a\in R\\) para todo \\(a\in R\\) de modo que $$a+(-a)=0.$${{% /definition %}}
 
-{{% ojo %}}La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición ed anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.{{% /ojo %}}
+{{% watch %}}La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición ed anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.{{% /watch %}}
 
 {{% example name="El anillo trivial" %}}El conjunto unitario $R=\\{0\\}$, dotado de las únicas operaciones suma y multiplicación posibles, es un anillo. Aquí obviamente $1=0$.{{% /example %}}
 
@@ -78,7 +78,7 @@ $\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.
 * $ab\in S$ para todo $a,b\in S$.
 {{% /definition %}}
 
-{{% ojo %}}Un subanillo $S\subset R$ es un anillo por derecho propio con la suma y la multiplicación heredadas de $S$. Observa que $0\in S$. También es un subgrupo para la suma. Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[x]\subset R[[x]]$.{{% /ojo %}}
+{{% watch %}}Un subanillo $S\subset R$ es un anillo por derecho propio con la suma y la multiplicación heredadas de $S$. Observa que $0\in S$. También es un subgrupo para la suma. Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[x]\subset R[[x]]$.{{% /watch %}}
 
 {{% example name="Series convergentes"   %}}Si $R=\mathbb R$ o $\mathbb C$, podemos considerar el subanillo de **series convergentes** $R\\{x\\}\subset R[[x]]$. De hecho $R[x]\subset R\\{x\\}\subset R[[x]]$.{{% /example %}}
 
@@ -86,7 +86,7 @@ $\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.
 
 {{% definition %}}Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$, denominado **inverso** de $u$, de modo que $uu^{-1}=1$. Un **cuerpo** es un anillo no trivial donde todos los elementos no nulos son unidades.{{% /definition %}}
 
-{{% ojo %}}El elemento inverso $u^{-1}$ de una unidad $u$ es único. Dividir por una unidad es multiplicar por el elemento inverso $a/u=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. Intenta calcular las unidades de los ejemplos de anillos vistos hasta ahora. ¿Puede el cero ser una unidad? {{% /ojo %}}
+{{% watch %}}El elemento inverso $u^{-1}$ de una unidad $u$ es único. Dividir por una unidad es multiplicar por el elemento inverso $a/u=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. Intenta calcular las unidades de los ejemplos de anillos vistos hasta ahora. ¿Puede el cero ser una unidad? {{% /watch %}}
 
 
 
@@ -96,7 +96,7 @@ Los homomorfismos de anillos son aplicaciones entre anillos que preservan la est
 
 {{% definition %}}Dados dos anillos $R$ y $S$, un **homomorfismo** $f\colon R\rightarrow S$ es una aplicación tal que, para todo $a,b\in R$, $$\begin{array}{rcl} f(a+b)&=&f(a)+f(b),\cr f(ab)&=&f(a)f(b),\cr f(0)&=&0,\cr f(1)&=&1.\end{array}$$ Un **isomorfismo** es un homomorfismo biyectivo. Un **automorfismo** es un isomorfismo de un anillo en sí mismo.{{% /definition %}}
 
-{{% ojo %}}Los homomorfismos satisfacen $f(-a)=-f(a)$. Es más, si $u$ es una unidad entonces $f(u)$ también y $f(u^{-1})=f(u)^{-1}$. La identidad $\operatorname{id}_R\colon R\rightarrow R$ es un isomorfismo. Comprueba que si $$R\stackrel{f}\longrightarrow S\stackrel{g}\longrightarrow T$$ son homomorfismos entonces la composición $g\circ f\colon R\rightarrow T$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon R\rightarrow S$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon S\rightarrow R$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $R\cong S$. Prueba que esta relación es de equivalencia. {{% /ojo %}}
+{{% watch %}}Los homomorfismos satisfacen $f(-a)=-f(a)$. Es más, si $u$ es una unidad entonces $f(u)$ también y $f(u^{-1})=f(u)^{-1}$. La identidad $\operatorname{id}_R\colon R\rightarrow R$ es un isomorfismo. Comprueba que si $$R\stackrel{f}\longrightarrow S\stackrel{g}\longrightarrow T$$ son homomorfismos entonces la composición $g\circ f\colon R\rightarrow T$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon R\rightarrow S$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon S\rightarrow R$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $R\cong S$. Prueba que esta relación es de equivalencia. {{% /watch %}}
 
 {{% example name="La inclusión"   %}}Si $R$ es un anillo y $S\subset R$ es un subanillo, la **inclusión** $i\colon S\hookrightarrow R$, $i(a)=a$, es un homomorfismo. ¿Qué diferencia a la inclusión de la identidad?{{% /example %}}
 
@@ -118,7 +118,7 @@ Los homomorfismos de anillos son aplicaciones entre anillos que preservan la est
 Si $f=i\circ g$ entonces tendríamos $$f(a)=(i\circ g)(a)=i(g(a))=g(a).$$ La unicidad de $g$ sería consecuencia de esta fórmula ya que fuerza su definición. Definimos pues la aplicación $g\colon R\rightarrow U$ como $g(a)=f(a)$. Tiene sentido porque $\operatorname{im}f\subset U$. La aplicación $g$ es un homomorfismo pues está definida por la misma fórmula que el homomorfismo $f$.  
 {{%  /proof %}}
 
-{{% ojo %}} En la proposición anterior podemos siempre tomar $U=\operatorname{im} f$. {{% /ojo %}}
+{{% watch %}} En la proposición anterior podemos siempre tomar $U=\operatorname{im} f$. {{% /watch %}}
 
 {{% example name="La evaluación"   %}}Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[x]\rightarrow R$ como $ev_a(p(x))=p(a)$. Define análogamente homomorfismos de evaluación en los anillos de polinomios en varias variables $R[x_1,\dots, x_n]$, de series convergentes $R\\{x\\}$ y de funciones $R^X$ y $\mathcal C(X)$ definidos arriba.{{% /example %}}
 
@@ -179,7 +179,7 @@ Existe otro tipo destacado de subconjunto de un anillo que juega un papel más i
 * $ra\in I$ para todo $r\in R$ y $a\in I$.
 {{% /definition %}}
 
-{{% ojo %}}Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. {{% /ojo %}}
+{{% watch %}}Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. {{% /watch %}}
 
 {{%  proposition %}}El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;|\;f(a)=0\\},$$ es un ideal $\ker f\subset R$.{{% /proposition %}}
 
@@ -195,13 +195,13 @@ Existe otro tipo destacado de subconjunto de un anillo que juega un papel más i
  
 {{%  /proof %}}
 
-{{% ojo %}} Como ocurre con los grupos, un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.{{% /ojo %}}
+{{% watch %}} Como ocurre con los grupos, un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.{{% /watch %}}
 
 Definimos ahora el ideal generado por un conjunto de elementos de un anillo, que es el menor ideal que los contiene.
 
 {{% definition %}}El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ se define como $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}.$$ Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$. {{% /definition %}}
 
-{{% ojo %}}Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_n\in (a_1,\dots, a_n)$. Es más, si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$. Intenta dar una definición razonable de ideal generado por un conjunto infinito de elementos que satisfaga las propiedades análogas al caso finito. {{% /ojo %}}
+{{% watch %}}Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_n\in (a_1,\dots, a_n)$. Es más, si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$. Intenta dar una definición razonable de ideal generado por un conjunto infinito de elementos que satisfaga las propiedades análogas al caso finito. {{% /watch %}}
 
 {{%  proposition  %}}Todos los ideales de $\mathbb Z$ son principales.{{% /proposition %}}
 
@@ -213,7 +213,7 @@ Por un lado $(a)\subset I$ pues $a\in I$.
 Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$, $$b=ca+r.$$ El resto satisface $|r|<|a|$. Además $r=b-ca\in I$, por tanto $r=0$ y $b=ca\in (a)$.  
 {{%  /proof %}}
 
-{{% ojo %}} La demostración de la proposición anterior solo usa la noción de división euclídea, por tanto es válida no solo para $\mathbb Z$ sino para cualquier *dominio euclídeo* (noción conocida que repasaremos más adelante). La siguiente proposición destaca otro caso particular de interés.{{% /ojo %}}
+{{% watch %}} La demostración de la proposición anterior solo usa la noción de división euclídea, por tanto es válida no solo para $\mathbb Z$ sino para cualquier *dominio euclídeo* (noción conocida que repasaremos más adelante). La siguiente proposición destaca otro caso particular de interés.{{% /watch %}}
 
 {{%  proposition  %}}Dado un cuerpo $k$, todos los ideales de $k[x]$ son principales.{{% /proposition %}}
 
@@ -248,7 +248,7 @@ El ser $f\colon k\rightarrow R$ un homomorfismo, $f(1)=1$. Como $R$ no es trivia
 
 {{% definition %}}Dado un anillo $R$ y un ideal $I\subset R$, el **anillo cociente** $R/I$ es el cociente de los grupos abelianos subyacentes dotado de la multiplicación $$(a+I)(b+I)=(ab)+I.$${{% /definition %}}
 
-{{% ojo %}} Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente $$a+I=\bar a.$$ La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n\neq\pm1$ es primo.{{% /ojo %}}
+{{% watch %}} Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente $$a+I=\bar a.$$ La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n\neq\pm1$ es primo.{{% /watch %}}
 
 {{%  theorem  %}}El anillo cociente $R/I$ está bien definido. Su estructura es la única que hace que la **proyección natural** $p\colon R\twoheadrightarrow R/I$, $p(a)=a+I$, sea un homomorfismo. El núcleo de esta proyección es $\ker p=I$. {{% /theorem %}}
 
@@ -275,7 +275,7 @@ Si $f=g\circ p$ entonces tendríamos $$f(a)=(g\circ p)(a)=g(p(a))=g(a+I).$$ Defi
 Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ Por tanto $$g(a+I)=f(a)=f(a')=g(a'+I).$$ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
 {{%  /proof %}}
 
-{{% ojo %}} En la proposición anterior podemos tomar siempre $I=\ker f$. {{% /ojo %}}
+{{% watch %}} En la proposición anterior podemos tomar siempre $I=\ker f$. {{% /watch %}}
 
 {{% theorem name="Primer Teorema de Isomorfía"%}} Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ Además $\bar f$ es un isomorfismo.{{% /theorem %}}
 
@@ -341,7 +341,7 @@ La siguiente definición nos da una receta para añadir nuevos elementos a un an
 
 {{% definition %}}Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen del homomorfismo $g\colon R[x]\rightarrow S$ definido como la inclusión $i\colon R\rightarrow S$ sobre $R$ tal que $g(x)=s$, $R[s]=\operatorname{im} g$.{{% /definition %}}
 
-{{% ojo %}}La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede expresar (aunque no de manera única) como $a_ns^n+\cdots+a_1s+a_0$ para ciertos $a_i\in R$. Por tanto, si $U\subset S$ es un subanillo tal qu $R\subset U$ y $s\in U$ entonces $R[s]\subset U$. En particular $\mathbb R[i]=\mathbb C$ y $\mathbb Z[i]\subset\mathbb C$ son los enteros de Gauss. Da una definición general del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. {{% /ojo %}}
+{{% watch %}}La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede expresar (aunque no de manera única) como $a_ns^n+\cdots+a_1s+a_0$ para ciertos $a_i\in R$. Por tanto, si $U\subset S$ es un subanillo tal qu $R\subset U$ y $s\in U$ entonces $R[s]\subset U$. En particular $\mathbb R[i]=\mathbb C$ y $\mathbb Z[i]\subset\mathbb C$ son los enteros de Gauss. Da una definición general del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. {{% /watch %}}
 
 También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, si tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Veamos cómo añadir elementos que satisfagan ecuaciones.
 
@@ -365,7 +365,7 @@ Como este polinomo tiene grado ${<} n$ deducimos que es trivial, luego $(b_1,\do
 Para la sobreyectividad, basta ver que todo elemento de $S=R[x]/(p(x))$ tiene un representante de grado ${<} n$. En particular basta comprobar que si $q(x)+(p(x))$ tiene un representante $q(x)=c_mx^m+\cdots$ de grado $m\geq n$ entonces también tiene otro representante de grado ${<} m$. El polinomio $$r(x)=q(x)-c_mx^{m-n}p(x)=(c_mx^m+\cdots)-c_mx^{m-n}(x^n+\cdots)$$ tiene grado ${<} m$ y $q(x)-r(x)=c_mx^{m-n}p(x)\in (p(x))$, luego $q(x)+(p(x))=r(x)+(p(x))$.  
 {{%  /proof %}}
 
-{{% ojo %}}Ya hemos visto que las dos maneras de añadirle a $\mathbb R$ una raíz de $-1$, es decir $\mathbb C$ y $\mathbb R[x]/(x^2+1)$, coinciden (salvo isomorfismo). En las condiciones de la proposición anterior deducimos como consecuencia de su tesis que si $p(x)$ tiene grado ${\geq }1$ el homomorfismo $R\rightarrow S$ que manda cada elemento de $R$ a la clase del correspondiente polinomio constante es inyectivo, por lo que podemos considerarlo como la inclusión de un subanillo $R\subset S$.  También es posible en general añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.{{% /ojo %}}
+{{% watch %}}Ya hemos visto que las dos maneras de añadirle a $\mathbb R$ una raíz de $-1$, es decir $\mathbb C$ y $\mathbb R[x]/(x^2+1)$, coinciden (salvo isomorfismo). En las condiciones de la proposición anterior deducimos como consecuencia de su tesis que si $p(x)$ tiene grado ${\geq }1$ el homomorfismo $R\rightarrow S$ que manda cada elemento de $R$ a la clase del correspondiente polinomio constante es inyectivo, por lo que podemos considerarlo como la inclusión de un subanillo $R\subset S$.  También es posible en general añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.{{% /watch %}}
 
 {{% example name="$\mathbb Z[x]/(x^3+3x+1)$"   %}}Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x^2+ a_1 \bar x+ a_0$ para ciertos coeficientes $a_0,a_1,a_2\in\mathbb Z$. La suma es muy fácil de calcular, sumando coeficientes. El producto es más complejo porque suele ser necesario reducir el grado del representante obtenido. Esto se hace usando que $\bar x$ es una raíz del denominador. Concretamente en este caso $\bar x^3+3\bar x+1=0$, luego $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr\bar x^5&=& -3\bar x^3-\bar x^2\cr&=& -3(-3\bar x-1)-\bar x^2\cr&=&-\bar x^2+9\bar x+3,\cr\bar x^6&=&\dots\end{array}$$Usamos esto en el siguiente ejemplo de cálculo,$$\begin{array}{rcl}(- \bar x^2+ \bar x+ 2)(\bar x+ 1)&=& -\bar x^3+3\bar x+2\cr&=& -(-3\bar x-1)+3\bar x+2\cr&=&6\bar x+3.\end{array}$${{% /example %}}
 
@@ -375,7 +375,7 @@ Para la sobreyectividad, basta ver que todo elemento de $S=R[x]/(p(x))$ tiene un
 
 {{% definition %}}Dado un anillo $R$, un **divisor de cero** es un elemento $a\in R$ no nulo, $a\neq 0$, tal que existe otro $b\in R$, $b\neq 0$, de modo que $ab=0$. Un anillo no trivial $R$ es un **dominio (de integridad)** si no posee divisores de cero.{{% /definition %}}
 
-{{% ojo %}}Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $2\cdot 3=6=0$ pero $2\neq 0\neq 3$.{{% /ojo %}}
+{{% watch %}}Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $2\cdot 3=6=0$ pero $2\neq 0\neq 3$.{{% /watch %}}
 
 {{%  proposition  %}}Si $R$ es un dominio entonces $R[x]$ también.{{% /proposition %}}
 
@@ -387,7 +387,7 @@ Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, tod
 
 {{% definition %}}Dado un dominio $R$, su **cuerpo de fracciones** $Q( R )$ es el cociente del conjunto $$\left\\{\frac{a}{b}\;\bigg|\; a,b\in R,\,b\neq 0\right\\}$$ por la relación de equivalencia $$\frac{a}{b}\sim\frac{a'}{b'}\Leftrightarrow ab'=a'b$$ dotado de las operaciones $$\begin{array}{rcl}\displaystyle \frac{a}{b}+\frac{c}{d}&\displaystyle =&\displaystyle  \frac{ad+bc}{bd},\cr\displaystyle \frac{a}{b}\cdot\frac{c}{d}&\displaystyle =&\displaystyle \frac{a c}{b d}.\end{array}$${{% /definition %}}
 
-{{% ojo %}}El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.{{% /ojo %}}
+{{% watch %}}El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.{{% /watch %}}
 
 {{%  proposition  %}}El cuerpo de fracciones $Q( R )$ de un dominio $R$ está bien definido. La aplicación $i\colon R\rightarrow Q( R )$, $i(a)=\frac{a}{1}$, es un homomorfismo inyectivo. Todo homomorfismo inyectivo $f\colon R\rightarrow k$ donde $k$ es un cuerpo factoriza de manera única a través de $i$, es decir, existe un único homomorfismo $g\colon Q( R )\rightarrow k$ tal que $f=g\circ i$, $$f\colon R\stackrel{i}\rightarrow Q( R )\stackrel{g}\rightarrow k.$${{% /proposition %}}
 
@@ -415,11 +415,11 @@ Ahora basta definir $g\colon Q( R )\rightarrow k$ como $g\left(\frac{a}{b}\right
 
 {{% definition %}}Dado un cuerpo $k$, el **cuerpo de funciones racionales** en una variable se define como $k(x)=Q(k[x])$.{{% /definition %}}
 
-{{% ojo %}}Da dos definiciones del cuerpo de funciones racionales en varias variables $k(x_1,\dots,x_n)$, una inductiva y otra directa, que sean aparentemente distintas pero isomorfas.{{% /ojo %}}
+{{% watch %}}Da dos definiciones del cuerpo de funciones racionales en varias variables $k(x_1,\dots,x_n)$, una inductiva y otra directa, que sean aparentemente distintas pero isomorfas.{{% /watch %}}
 
 {{% definition %}}Los ideales distintos del total se denominan **propios**. Un ideal $I\subsetneq R$ es **primo** si dados $a,b\in R$ tales que $ab\in I$ entonces $a\in I$ o $b\in I$.{{% /definition %}}
 
-{{% ojo %}}Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$. En general $(0)\subset R$ es primo si y solo si $R$ es un dominio.{{% /ojo %}}
+{{% watch %}}Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$. En general $(0)\subset R$ es primo si y solo si $R$ es un dominio.{{% /watch %}}
 
 {{%  proposition  %}}Un ideal $I\subset R$ es primo $\Leftrightarrow$ $R/I$ es un dominio.{{% /proposition %}}
 
@@ -433,7 +433,7 @@ $\Leftarrow$ Dados $a,b\in R$, si $ab\in I$ entonces $\bar a\bar b=\overline{ab}
 
 {{% definition %}}Un ideal $I\subsetneq R$ es **maximal** si los únicos ideales que lo contienen son el total $R$ y el propio $I$.{{% /definition %}}
 
-{{% ojo %}}De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$.{{% /ojo %}}
+{{% watch %}}De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$.{{% /watch %}}
 
 {{%  proposition  %}}Un ideal $I\subset R$ es maximal $\Leftrightarrow$ $R/I$ es un cuerpo.{{% /proposition %}}
 
@@ -443,7 +443,7 @@ $\Leftarrow$ Dados $a,b\in R$, si $ab\in I$ entonces $\bar a\bar b=\overline{ab}
 
 {{% definition %}}Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio donde todos los ideales son principales.{{% /definition %}}
 
-{{% ojo %}}Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.{{% /ojo %}}
+{{% watch %}}Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.{{% /watch %}}
 
 
 {{%  proposition  %}}En un dominio de ideales principales $R$ todos los ideales primos no nulos son maximales.{{% /proposition %}}

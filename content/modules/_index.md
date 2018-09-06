@@ -44,7 +44,7 @@ $$0+a=a,\qquad 1a=a.$$
 * Existencia de un elemento opuesto para la suma $-a\in M$ para todo $a\in M$ de modo que $$a+(-a)=0.$$
 {{% /definition %}}
 
-{{% ojo %}} Cuando quede claro por el contexto o no sea relevante especificarlo, omitiremos $R$ de la notación. La suma en un módulo lo dota de estructura de grupo abeliano. Recordemos que el elemento neutro de un grupo es único, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Además $0a=0=r0$ y $r(-a)=-ra=(-r)a$. Si $R=k$ es un cuerpo la noción de $R$-módulo coincide con la de $k$-espacio vectorial.{{% /ojo %}}
+{{% watch %}} Cuando quede claro por el contexto o no sea relevante especificarlo, omitiremos $R$ de la notación. La suma en un módulo lo dota de estructura de grupo abeliano. Recordemos que el elemento neutro de un grupo es único, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Además $0a=0=r0$ y $r(-a)=-ra=(-r)a$. Si $R=k$ es un cuerpo la noción de $R$-módulo coincide con la de $k$-espacio vectorial.{{% /watch %}}
 
 
 {{% example name="El módulo trivial" %}}
@@ -81,9 +81,9 @@ Es fácil comprobar que estas fórmulas definen una estructra de $\mathbb Z$-mó
 {{% /definition %}}
 
 
-{{% ojo %}}
+{{% watch %}}
 Un submódulo $N\subset M$ es un módulo por derecho propio con la suma y el producto por escalares heredados de $M$. El módulo trivial $\\{0\\}$ es un submódulo de cualquier otro. Los submódulos de $R$ coinciden con los ideales del anillo. 
-{{% /ojo %}}
+{{% /watch %}}
 
 
 ## Homomorfismos
@@ -92,7 +92,7 @@ Los homomorfismos de módulos son aplicaciones que preservan la estructura, es d
 
 {{%  definition  %}}Dados dos $R$-módulos $M$ y $N$, un **homomorfismo** $f\colon M\rightarrow N$ es una aplicación tal que, para todo $r\in R$ y $a,b\in M$, $$\begin{array}{rcl} f(a+b)&=&f(a)+f(b),\cr f(ra)&=&rf(a).\end{array}$$ Un **isomorfismo** es un homomorfismo biyectivo. Un **automorfismo** es un isomorfismo de un $R$-módulo en sí mismo.{{% /definition %}}
 
-{{% ojo %}}Los homomorfismos satisfacen $f(-a)=-f(a)$ y $f(0)=0$. La identidad $\operatorname{id}_M\colon M\rightarrow M$ es un isomorfismo. Comprueba que si $$M\stackrel{f}\longrightarrow N\stackrel{g}\longrightarrow P$$ son homomorfismos entonces la composición $g\circ f\colon M\rightarrow P$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon M\rightarrow N$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon N\rightarrow M$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $M\cong N$. Prueba que esta relación es de equivalencia. {{% /ojo %}}
+{{% watch %}}Los homomorfismos satisfacen $f(-a)=-f(a)$ y $f(0)=0$. La identidad $\operatorname{id}_M\colon M\rightarrow M$ es un isomorfismo. Comprueba que si $$M\stackrel{f}\longrightarrow N\stackrel{g}\longrightarrow P$$ son homomorfismos entonces la composición $g\circ f\colon M\rightarrow P$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon M\rightarrow N$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon N\rightarrow M$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $M\cong N$. Prueba que esta relación es de equivalencia. {{% /watch %}}
 
 
 {{% example name="La inclusión"   %}}Si $M$ es un módulo y $P\subset M$ es un submódulo, la **inclusión** $i\colon P\hookrightarrow M$, $i(a)=a$, es un homomorfismo. ¿Qué diferencia a la inclusión de la identidad?{{% /example %}}
@@ -109,7 +109,7 @@ Los homomorfismos de módulos son aplicaciones que preservan la estructura, es d
 
 {{% example name="Matrices"   %}}Toda matriz $B$ de tamaño $m\times n$ con entradas en $R$ da lugar a un homomorfismo definido por la multiplicación de matrices: $$\begin{array}{rcl} R^n&\longrightarrow&R^m,\cr \left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right)&\mapsto& B\left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right). \end{array}$$ La composición de este tipo de homomorfismos es el producto de matrices. En particular $B$ define un isomorfismo si y solo si es una matriz invertible. Cualquier homomorfismo $f\colon R^n\rightarrow R^m$ es de este tipo. En efecto, si para cada $1\leq i\leq n$ consideramos el elemento $$e\_i=\left(\begin{smallmatrix}0\cr\vdots\cr1\cr\vdots\cr0\end{smallmatrix}\right)\in R^n$$ cuya única coordenada no trivial es la $i$-ésima, que vale $1$, puedes comprobar la matriz que define $f\colon R^n\rightarrow R^m$ es aquella cuyas columnas son los $f(e\_i)$, $$\left(f(e\_1)|\cdots|f(e\_n)\right).$${{% /example %}}
 
-{{% ojo %}} Demuestra que si $M\cong M'$ y $N\cong N'$ entonces $M\times N\cong M'\times N'$.{{% /ojo %}}
+{{% watch %}} Demuestra que si $M\cong M'$ y $N\cong N'$ entonces $M\times N\cong M'\times N'$.{{% /watch %}}
 
 
 {{% example name="Homomorfismos desde $R^n$"   %}}Si $M$ es un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ es un subconjunto cualquiera, comprueba que la aplicación $$\phi_S=\phi\_{\\{a\_1,\dots,a\_n\\}}\colon R^n\longrightarrow M$$ definida por $$\phi\_{\\{a\_1,\dots,a\_n\\}}(r\_1,\dots,r\_n)=r\_1a\_1+\cdots +r\_na\_n$$ es un homomorfismo que satisface  $$\phi\_{\\{a\_1,\dots,a\_n\\}}(e\_i)=a\_i.$$  Comprueba también que cualquier homomorfismo $f\colon R^n\rightarrow M$ es de esta forma, concretamente $f=\phi\_{\\{f(e\_1),\dots,f(e\_n)\\}}$.{{% /example %}}
@@ -141,22 +141,22 @@ Los homomorfismos de módulos son aplicaciones que preservan la estructura, es d
  
 {{%  /proof %}}
 
-{{% ojo %}} Como ocurre con los grupos, un homomorfismo de módulos $f\colon M\rightarrow N$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in M$ es tal que $f(a)=0$ entonces $a=0$.{{% /ojo %}}
+{{% watch %}} Como ocurre con los grupos, un homomorfismo de módulos $f\colon M\rightarrow N$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in M$ es tal que $f(a)=0$ entonces $a=0$.{{% /watch %}}
 
 ## Módulos libres
 
 {{%  definition  %}}Sea $M$ un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto. Decimos que $S$ **genera** $M$ si todo elemento de $x\in M$ es **combinación lineal** de $S$, es decir, de la forma $$x=r\_1a\_1+\cdots+r\_na\_n$$ para ciertos $r\_1,\dots,r\_n\in R$. Decimos que $S$ es **linealmente independiente** si la única combinación lineal de $S$ que da como resultado $0$ es aquella que tiene todos los cieficientes nulos, es decir si $r\_1,\dots,r\_n\in R$ son tales que $$r\_1a\_1+\cdots+r\_na\_n=0$$ entonces $r\_1=\cdots=r\_n=0$. Decimos además que $S$ es una **base** de $M$ si lo genera y es linealmente independiente. Un $R$-módulo es **finitamente generado** si posee un subconjunto finito que genera, y es **libre** si posee una base.{{% /definition %}}
 
 
-{{% ojo %}} Si $R=k$ es un cuerpo todo $R$-módulo es libre puesto que todo $k$-espacio vectorial posee una base. Los $k$-espacios vectoriales finitamente generados se denominan también de dimensión finita.{{% /ojo %}}
+{{% watch %}} Si $R=k$ es un cuerpo todo $R$-módulo es libre puesto que todo $k$-espacio vectorial posee una base. Los $k$-espacios vectoriales finitamente generados se denominan también de dimensión finita.{{% /watch %}}
 
 {{% example name="$R^n$ es libre"   %}} El sub conjunto $\\{e\_1,\dots,e\_n\\}\subset R^n$ es una base denominada **canónica**.{{% /example %}}
 
 
-{{% ojo %}} En términos del homomorfismo $$\phi\_S\colon R^n\longrightarrow M$$ definido antes, $S=\\{a\_1,\dots,a\_n\\}\subset M$ genera si y solo si $\phi\_S$ es sobreyectivo y $S$ es linealmente independiente si y solo si $\phi\_S$ es inyectivo. Por tanto $S$ es una base si y solo si $\phi\_S$ es un isomorfismo. En particular, en este caso para todo $x\in M$ existe un único $(r\_1,\dots,r\_n)\in R^n$ tal que $x=\phi\_S(r\_1,\dots,r\_n)=r\_1a\_1+\cdots+r\_na\_n$. Decimos entonces que $(r\_1,\dots,r\_n)$ son las **coordenadas** de $x$ respecto de $S$. Es más, la aplicación que envía cada elemento a sus coordenadas respecto de $S$ es $$\phi\_S^{-1}\colon M\longrightarrow R^n,$$ que es un isomorfismo, por tanto la asignación de coordenadas respecto de una base preserva sumas y productos por escalares. Cualquier $R$-módulo isomorfo a algún $R^n$ es libre porque los isomorfismos preservan bases. Concluimos que un $R$-módulo es libre si y solo si es isomorfo a algún $R^n$.{{% /ojo %}}
+{{% watch %}} En términos del homomorfismo $$\phi\_S\colon R^n\longrightarrow M$$ definido antes, $S=\\{a\_1,\dots,a\_n\\}\subset M$ genera si y solo si $\phi\_S$ es sobreyectivo y $S$ es linealmente independiente si y solo si $\phi\_S$ es inyectivo. Por tanto $S$ es una base si y solo si $\phi\_S$ es un isomorfismo. En particular, en este caso para todo $x\in M$ existe un único $(r\_1,\dots,r\_n)\in R^n$ tal que $x=\phi\_S(r\_1,\dots,r\_n)=r\_1a\_1+\cdots+r\_na\_n$. Decimos entonces que $(r\_1,\dots,r\_n)$ son las **coordenadas** de $x$ respecto de $S$. Es más, la aplicación que envía cada elemento a sus coordenadas respecto de $S$ es $$\phi\_S^{-1}\colon M\longrightarrow R^n,$$ que es un isomorfismo, por tanto la asignación de coordenadas respecto de una base preserva sumas y productos por escalares. Cualquier $R$-módulo isomorfo a algún $R^n$ es libre porque los isomorfismos preservan bases. Concluimos que un $R$-módulo es libre si y solo si es isomorfo a algún $R^n$.{{% /watch %}}
 
 
-{{% ojo %}} Sea $f\colon M\rightarrow N$ es un homomorfismo de $R$-módulos y $S=\\{a\_1,\dots,a\_n\\}\subset M$. Los siguientes enunciados son consecuencia de las observaciones anteriores. Comprúebalo: 
+{{% watch %}} Sea $f\colon M\rightarrow N$ es un homomorfismo de $R$-módulos y $S=\\{a\_1,\dots,a\_n\\}\subset M$. Los siguientes enunciados son consecuencia de las observaciones anteriores. Comprúebalo: 
 
 * Si $S\subset M$ genera y $f$ es sobreyectivo $\Rightarrow$ $f(S)\subset N$ genera.
 
@@ -164,13 +164,13 @@ Los homomorfismos de módulos son aplicaciones que preservan la estructura, es d
 
 * Si $S\subset M$ es una base y $f$ es biyectivo $\Rightarrow$ $f(S)\subset N$ es una base.
 
-* $f(S)\subset\operatorname{im}f$ genera.{{% /ojo %}}
+* $f(S)\subset\operatorname{im}f$ genera.{{% /watch %}}
 
 Seguidamente definimos la noción de determinante para matrices sobre un anillo igual que se hacía para los cuerpos.
 
 {{%  definition  %}}El **determinante** $|A|$ de una matriz cuadrada $A=(a\_{ij})$ de tamaño $n\times n$ con entradas en un anillo conmutativo $R$ se define como $$|A|=\sum\_{\sigma\in S\_n}\operatorname{signo}(\sigma)a\_{1\sigma(1)}\cdots a\_{n\sigma(n)}.$$ Aquí $S_n$ denota el grupo de permutaciones de $n$ elementos.{{% /definition %}}
 
-{{% ojo %}} El determinante de la matriz identidad es $|I|=1$. Si $A$ tiene una fila de ceros entonces $|A|=0$. Una matriz $A$ y su traspuesta $A^t$ tienen el mismo determinante $|A|=|A^t|$. El determinante preserva productos $|AB|=|A||B|$. Las fórmulas del desarrollo de un determinante por los adjuntos de una fila o columna también son válidas en este contexto. Si $A$ es una matriz cuadrada invertible entonces $|A|\in R^{\times}$ es una unidad puesto que $AA^{-1}=I$, luego $|A||A^{-1}|=|AA^{-1}|=|I|=1$. Además vemos que en dicho caso $|A^{-1}|=|A|^{-1}$.  El recíproco también es cierto pues se puede comprobar que si $A$ es cuadrada y $|A|\in R^{\times}$ es una unidad entonces la matriz traspuesta de la adjunta de $A$ dividida por $|A|$ es inversa de $A$. Las matrices invertibles son necesariamente cuadradas si $R$ no es el anillo trivial. Esto se comprueba por reducción al absurdo. En efecto, sean $A$ y $B$ matrices tales que $AB=I$ y $BA=I$. Como las matrices identidad $I$ son cuadradas, si $A$ tiene tamaño $m\times n$ entonces el tamaño de $B$ tiene que ser $n\times m$. Podemos suponer sin pérdida de generalidad que $m>n$. Completamos la columnas de $A$ y las filas de $B$ con ceros hasta formar matrices cuadradas y observamos que $$\left(\begin{array}{c|c}A&0\end{array}\right)\left(\begin{array}{c}B\cr \hline 0\end{array}\right)=AB+0=AB=I,$$ pero esto es imposible porque los determinantes de las matrices de la izquierda son $0$, pues contienen alguna fila o columna de ceros, pero el determinante de $I$ es $1$.{{% /ojo %}}
+{{% watch %}} El determinante de la matriz identidad es $|I|=1$. Si $A$ tiene una fila de ceros entonces $|A|=0$. Una matriz $A$ y su traspuesta $A^t$ tienen el mismo determinante $|A|=|A^t|$. El determinante preserva productos $|AB|=|A||B|$. Las fórmulas del desarrollo de un determinante por los adjuntos de una fila o columna también son válidas en este contexto. Si $A$ es una matriz cuadrada invertible entonces $|A|\in R^{\times}$ es una unidad puesto que $AA^{-1}=I$, luego $|A||A^{-1}|=|AA^{-1}|=|I|=1$. Además vemos que en dicho caso $|A^{-1}|=|A|^{-1}$.  El recíproco también es cierto pues se puede comprobar que si $A$ es cuadrada y $|A|\in R^{\times}$ es una unidad entonces la matriz traspuesta de la adjunta de $A$ dividida por $|A|$ es inversa de $A$. Las matrices invertibles son necesariamente cuadradas si $R$ no es el anillo trivial. Esto se comprueba por reducción al absurdo. En efecto, sean $A$ y $B$ matrices tales que $AB=I$ y $BA=I$. Como las matrices identidad $I$ son cuadradas, si $A$ tiene tamaño $m\times n$ entonces el tamaño de $B$ tiene que ser $n\times m$. Podemos suponer sin pérdida de generalidad que $m>n$. Completamos la columnas de $A$ y las filas de $B$ con ceros hasta formar matrices cuadradas y observamos que $$\left(\begin{array}{c|c}A&0\end{array}\right)\left(\begin{array}{c}B\cr \hline 0\end{array}\right)=AB+0=AB=I,$$ pero esto es imposible porque los determinantes de las matrices de la izquierda son $0$, pues contienen alguna fila o columna de ceros, pero el determinante de $I$ es $1$.{{% /watch %}}
 
 
 
@@ -185,9 +185,9 @@ Todas las bases de un mismo $R$-módulo libre $M$ tiene el mismo número de elem
 {{%  definition  %}}El **rango** de un $R$-módulo libre $M$ es el número de elementos de una base. {{% /definition %}}
 
 
-{{% ojo %}} Cuando $R=k$ es un cuerpo, el rango de un $k$-espacio vectorial se denomina dimensión.{{% /ojo %}}
+{{% watch %}} Cuando $R=k$ es un cuerpo, el rango de un $k$-espacio vectorial se denomina dimensión.{{% /watch %}}
 
-{{% ojo %}} Si $S=\\{a\_1,\dots,a\_n\\}$ y $S'=\\{a\_1',\dots,a\_n'\\}$ son bases de un mismo $R$-módulo libre de rango $n$, el isomorfismo $\phi\_{S'}^{-1}\circ\phi\_S\colon R^n\rightarrow R^n$ considerado en la demostración anterior está definido por una matriz $B=(b_{ij})$ invertible $n\times n$ sobre $R$, que es la única que satisface las siguientes ecuaciones para todo $1\leq i\leq n$, $$a\_i=b\_{1i}a\_1'+\cdots+b\_{ni}a\_n'.$$ Es decir, las columnas de $B$ son las coordenadas de los elementos de $S$ respecto de la base $S'$. Si $x\in M$ tiene coordenadas $(r\_1,\dots, r\_n)$ respecto de $S$ y $(r\_1',\dots, r\_n')$ respecto de $S'$ entonces se satisface que $$B\left(\begin{smallmatrix}r\_1\cr\vdots\cr r\_n\end{smallmatrix}\right)=\left(\begin{smallmatrix}r\_1'\cr\vdots\cr r\_n'\end{smallmatrix}\right).$$ Por eso $B$ se denomina **matriz de cambio de base** de $S$ a $S'$. {{% /ojo %}}
+{{% watch %}} Si $S=\\{a\_1,\dots,a\_n\\}$ y $S'=\\{a\_1',\dots,a\_n'\\}$ son bases de un mismo $R$-módulo libre de rango $n$, el isomorfismo $\phi\_{S'}^{-1}\circ\phi\_S\colon R^n\rightarrow R^n$ considerado en la demostración anterior está definido por una matriz $B=(b_{ij})$ invertible $n\times n$ sobre $R$, que es la única que satisface las siguientes ecuaciones para todo $1\leq i\leq n$, $$a\_i=b\_{1i}a\_1'+\cdots+b\_{ni}a\_n'.$$ Es decir, las columnas de $B$ son las coordenadas de los elementos de $S$ respecto de la base $S'$. Si $x\in M$ tiene coordenadas $(r\_1,\dots, r\_n)$ respecto de $S$ y $(r\_1',\dots, r\_n')$ respecto de $S'$ entonces se satisface que $$B\left(\begin{smallmatrix}r\_1\cr\vdots\cr r\_n\end{smallmatrix}\right)=\left(\begin{smallmatrix}r\_1'\cr\vdots\cr r\_n'\end{smallmatrix}\right).$$ Por eso $B$ se denomina **matriz de cambio de base** de $S$ a $S'$. {{% /watch %}}
 
 
 {{% example name="No todos los módulos son libres"   %}} El $\mathbb Z$-módulo $\mathbb Z/(2)$ está generado por el conjunto $S=\\{\bar 1\\}$ pero $S$ no es linealmente independiente porque $2\cdot\bar 1=\bar 2=\bar 0$ y $0\neq 2\in\mathbb Z$. De hecho el $\mathbb Z$-módulo $\mathbb Z/(2)$ no puede tener ninguna base ya que los subconjuntos de $\mathbb Z/(2)$ son $\varnothing$, $\\{\bar 0\\}$, $\\{\bar 1\\}$ y $\\{\bar 0,\bar 1\\}$, los dos primeros no generan y los dos últimos no son linealmente independientes. Este argumento, por elemental, es algo complejo. Es más sencillo observar que los $\mathbb Z$-módulos libres poseen un único elemento, $\mathbb Z^0=\\{0\\}$, o infinitos, $\mathbb Z^n$ con $n>0$, por tanto $\mathbb Z/2$, que tiene dos elementos, no puede ser libre.{{% /example %}}
@@ -198,7 +198,7 @@ En este apartado $R$ denotará siempre un dominio.
 
 {{%  definition  %}}Dado un $R$-módulo $M$, decimos que $a\in M$ es un elemento de **torsion** si existe algún $r\in R$ no nulo, $r\neq 0$, tal que $ra=0$. {{% /definition %}}
 
-{{% ojo %}} El $0\in M$ es siempre un elemento de torsión ya que $1\neq 0$ y $1\cdot 0 = 0$. Dado un entero no nulo $0\neq n\in\mathbb Z$, todo elemento $\bar a$ del $\mathbb Z$-módulo $\mathbb Z/(n)$ es de torsión puesto que $n\bar a=\overline{na}=\bar 0$.{{% /ojo %}}
+{{% watch %}} El $0\in M$ es siempre un elemento de torsión ya que $1\neq 0$ y $1\cdot 0 = 0$. Dado un entero no nulo $0\neq n\in\mathbb Z$, todo elemento $\bar a$ del $\mathbb Z$-módulo $\mathbb Z/(n)$ es de torsión puesto que $n\bar a=\overline{na}=\bar 0$.{{% /watch %}}
 
 Veamos una condición suficiente, aunque no necesaria, para que un módulo no sea libre.
 
@@ -206,7 +206,7 @@ Veamos una condición suficiente, aunque no necesaria, para que un módulo no se
 
 {{% proof %}} Supongamos por reducción al absurdo que $\\{a\_1,\dots,a\_n\\}\subset M$ fuera una base. Tomamos un elemento no trivial de torsión $0\neq x\in M$ y lo escribimos como $$x=r\_1a\_1+\cdots+r\_na\_n$$ con $r\_1,\dots,r\_n\in R$. Ha de haber algún $r_i\neq 0$ para cierto $1\leq i\leq n$ ya que $x\neq 0$. Como $x\in M$ es de torsión existe $0\neq s\in R$ tal que $$0=sx=sr\_1a\_1+\cdots+sr\_na\_n.$$ Uno de los coeficientes de esta combinación lineal es $sr\_i\neq 0$ que es no nulo porque $R$ es un dominio. Esto contradice la independencia lineal.    {{%  /proof %}}
 
-{{% ojo %}} El $\mathbb Z$-módulo $\mathbb Q$ no tiene torsión, pero se puede comprobar que no es libre, es decir, no posee niguna base, ni finita ni infinita. {{% /ojo %}}
+{{% watch %}} El $\mathbb Z$-módulo $\mathbb Q$ no tiene torsión, pero se puede comprobar que no es libre, es decir, no posee niguna base, ni finita ni infinita. {{% /watch %}}
 
 Los elementos de torsión forman un submódulo.
 {{% proposition   %}} Si $M$ es un $R$-módulo, el subconjunto $T(M)\subset M$ formado por los elementos de torsión es un submódulo.{{% /proposition %}}
@@ -245,7 +245,7 @@ Veamos ahora $\supset$. Si $(a,b)\in T(M)\times T(N)$, es decir $a\in T(M)$ y $b
 
 {{%  definition  %}}Dado un $R$-módulo $M$ y un submódulo $N\subset M$, el **$R$-módulo cociente** $M/N$ es el cociente de los grupos abelianos subyacentes dotado del producto por escalares $$r(a+N)=(ra)+N.$${{% /definition %}}
 
-{{% ojo %}} Recordemos que $M/N=\\{a+N\,|\, a\in M\\}$ de modo que $a+N=b+N$ si y solo si $a-b\in N$. En particular $a+N=0+N$ si y solo si $a\in N$. El elemento $a+N$ del cociente se denomina **clase** de $a$ **módulo** $N$. Cuando el submódulo $N$ se sobreentiende se escribe simplemente $$a+N=\bar a.$$ La suma en el cociente se define como $(a+N)+(b+N)=(a+b)+N$. El cero en el cociente es $0+N$. Comprueba que $M/M$ es el módulo trivial y $M/(0)\cong M$. Si $R$ es un dominio y $0\neq x\in R$ todo elemento del $R$-módulo cociente $\bar a\in R/(x)$ es de torsión pues $x\bar a=\overline{xa}=0$. {{% /ojo %}}
+{{% watch %}} Recordemos que $M/N=\\{a+N\,|\, a\in M\\}$ de modo que $a+N=b+N$ si y solo si $a-b\in N$. En particular $a+N=0+N$ si y solo si $a\in N$. El elemento $a+N$ del cociente se denomina **clase** de $a$ **módulo** $N$. Cuando el submódulo $N$ se sobreentiende se escribe simplemente $$a+N=\bar a.$$ La suma en el cociente se define como $(a+N)+(b+N)=(a+b)+N$. El cero en el cociente es $0+N$. Comprueba que $M/M$ es el módulo trivial y $M/(0)\cong M$. Si $R$ es un dominio y $0\neq x\in R$ todo elemento del $R$-módulo cociente $\bar a\in R/(x)$ es de torsión pues $x\bar a=\overline{xa}=0$. {{% /watch %}}
 
 {{%  theorem  %}}El $R$-módulo cociente $M/N$ está bien definido. Su estructura es la única que hace que la **proyección natural** $p\colon M\twoheadrightarrow M/N$, $p(a)=a+N$, sea un homomorfismo. El núcleo de esta proyección es $\ker p=N$. {{% /theorem %}}
 
@@ -272,7 +272,7 @@ Si $f=g\circ p$ entonces tendríamos $$f(a)=(g\circ p)(a)=g(p(a))=g(a+N).$$ Defi
 Si $a+N=a'+N$ entonces $a-a'\in N\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ Por tanto $$g(a+N)=f(a)=f(a')=g(a'+N).$$ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
 {{%  /proof %}}
 
-{{% ojo %}} En la proposición anterior podemos tomar siempre $N=\ker f$. Comprueba que $g$ es inyectivo si y solo si $N=\ker f$. Es más, comprueba que $g$ es un isomorfismo si y solo si $f$ es sobreyectivo y $N=\ker f$. {{% /ojo %}}
+{{% watch %}} En la proposición anterior podemos tomar siempre $N=\ker f$. Comprueba que $g$ es inyectivo si y solo si $N=\ker f$. Es más, comprueba que $g$ es un isomorfismo si y solo si $f$ es sobreyectivo y $N=\ker f$. {{% /watch %}}
 
 {{% example name="El cociente de un producto por un factor"   %}}Recordemos que dados dos $R$-módulos $M$ y $N$ podemos considerar el $R$-módulos producto $M\times N$ y los homomorfismos de inclusión $i\_1\colon M\rightarrow M\times N$, $i\_1(a)=(a,0)$, y proyección $p\_2\colon M\times N\rightarrow N$, $p\_2(a,b)=b$. El primero es inyectivo y el segundo sobreyectivo. Claramente $\operatorname{im}i\_1=M\times\\{0\\}=\ker p\_2$, por tanto la proposición anterior nos proporciona un isomorfismo $$\frac{M\times N}{M\times\\{0\\}}\cong N.$$ Análogamente podemos obtener un isomorfismo $$\frac{M\times N}{\\{0\\}\times N}\cong M.$$ {{% /example %}}
 
@@ -374,7 +374,7 @@ que es la factorización de $\phi_{\\{b\_1,\dots,b\_m\\}}\colon R^m\rightarrow N
 
 {{%  definition  %}}Una **presentación** de un $R$-módulo $M$ consiste en dos homomorfismos $$R^n\stackrel{A}\longrightarrow R^m\stackrel{f}\twoheadrightarrow M$$ tales que $f$ es sobreyectivo e $\operatorname{im} A=\ker f$. Esto, en virtud de la proposición de factorización de homomorfismos a través de cocientes, equivale a dar un isomorfismo $$g\colon \frac{R^n}{\operatorname{im} A}\stackrel{\cong}\longrightarrow M.$$ Decimos que un módulo es **finitamente presentado** si admite una presentación como esta. {{% /definition %}}
 
-{{% ojo %}} El $R$-módulo $M$ está generado por $\\{f(e\_1),\dots,f(e\_m)\\}\subset M$, que satisfacen las relaciones determinadas por la matriz $A$. {{% /ojo %}}
+{{% watch %}} El $R$-módulo $M$ está generado por $\\{f(e\_1),\dots,f(e\_m)\\}\subset M$, que satisfacen las relaciones determinadas por la matriz $A$. {{% /watch %}}
 
 
 {{% proposition  %}}Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generado $M$ admite una presentación. {{% /proposition %}}
@@ -435,7 +435,7 @@ Las operaciones elementales anteriores se corresponden con el producto por los s
 3. $E_{ii}(u)=\left(\begin{array}{ccccccc}1&&&&&&\cr &\ddots&&&&&\cr &&1&&&&\cr &&&u&&&\cr &&&&1&&\cr &&&&&\ddots&\cr &&&&&&1\end{array}\right)$.
 {{% /definition %}}
 
-{{% ojo %}} Las matrices elementales son invertibles, concretamente:
+{{% watch %}} Las matrices elementales son invertibles, concretamente:
 
 1. $E\_{ij}( r )^{-1}=E\_{ij}(-r)$.
 
@@ -461,7 +461,7 @@ Por tanto, si $A'$ se obtiene a partir de $A$ a través de operaciones elemental
 En particular $A$ y $A'$ presentan el mismo módulo.
 
 También deducimos que el determinante de una matriz no varía cuando se realiza una operación elemental de tipo 1, cambia de signo al hacer una operación elemental de tipo 2, y pasa a ser un asociado al realizar una operación elemental de tipo 3.
-{{% /ojo %}}
+{{% /watch %}}
 
 
 {{% theorem name="Forma normal de Smith"  %}}Dada una matriz $A$ sobre un dominio euclídeo $R$, existen matrices invertibles $P$ y $Q$, que son productos de matrices elementales, tales que $$QAP^{-1}=D=\left( \begin{array}{ccc|c} d\_1&&&\cr &\ddots&&0\cr &&d\_k&\cr \hline &0&&0 \end{array} \right)$$ es una matriz con una descomposición de tamaño $2\times 2$ por cajas cuya única caja no trivial es la superior izquierda, que es diagonal con entradas diagonales no nulas y satisface $d\_i|d\_{i+1}$ para todo $1\leq i {<} k$. Esta matriz $D$ se denomina **forma normal de Smith** de $A$. <!--- el número $k$ de entradas no nulas es único y los $d_i$ son únicos salvo asociados. --> {{% /theorem %}}
@@ -502,7 +502,7 @@ Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamie
   
 {{%  /proof %}}
 
-{{% ojo %}} El teorema anterior es cierto más generalmente para dominios de ideales principales. La demostración es análoga pero hace uso de la identidad de Bézout en lugar de la división euclídea y de un tipo más general de operación elemental. La forma normal de Smith es única salvo asociados, aunque no lo hemos probado. <!--- Si $R=\mathbb Z$ hay una única forma normal de Smith que donde todos los $d\_i$ son positivos, ya que todo entero no nulo es asociado de un único entero positivo. A esta forma normal de Smith se que llega usando también operaciones elementales de tipo $3$. Análogamente, si $R=k[x]$, con $k$ un cuerpo, hay una única forma normal de Smith que donde todos los polinomios $d\_i$ son mónicos. -->{{% /ojo %}}
+{{% watch %}} El teorema anterior es cierto más generalmente para dominios de ideales principales. La demostración es análoga pero hace uso de la identidad de Bézout en lugar de la división euclídea y de un tipo más general de operación elemental. La forma normal de Smith es única salvo asociados, aunque no lo hemos probado. <!--- Si $R=\mathbb Z$ hay una única forma normal de Smith que donde todos los $d\_i$ son positivos, ya que todo entero no nulo es asociado de un único entero positivo. A esta forma normal de Smith se que llega usando también operaciones elementales de tipo $3$. Análogamente, si $R=k[x]$, con $k$ un cuerpo, hay una única forma normal de Smith que donde todos los polinomios $d\_i$ son mónicos. -->{{% /watch %}}
 
 
 {{% corollary %}} Toda matriz invertible con entradas en un dominio euclídeo es producto de matrices elementales. {{% /corollary %}}
@@ -536,7 +536,7 @@ Como los isomorfismos preservan la torsión, la parte de torsión es isomorfa a 
 &=&R^r.
 \end{array}$$    {{%  /proof %}}
 
-{{% ojo %}} Los $d_i$ del teorema de estructura también son únicos salvo asociados. Esto es cierto en general pero aquí nos limitaremos a probarlo más abajo para $R=\mathbb{Z}$ y a esbozarlo para $R=k[x]$ con $k$ un cuerpo. {{% /ojo %}}
+{{% watch %}} Los $d_i$ del teorema de estructura también son únicos salvo asociados. Esto es cierto en general pero aquí nos limitaremos a probarlo más abajo para $R=\mathbb{Z}$ y a esbozarlo para $R=k[x]$ con $k$ un cuerpo. {{% /watch %}}
 
 
 {{% example name="Teorema chino del resto"  %}} Si $R$ es un DIP y $\operatorname{mcd}(a,b)=1$ entonces tenemos un isomorfismo $$\begin{array}{rcl}g\colon \frac{R}{(ab)}&\stackrel{\cong}\longrightarrow&\frac{R}{(a)}\times \frac{R}{(b)},\cr(\bar r)&\mapsto &(\bar r,\bar r).\end{array}$${{% /example %}}
@@ -547,7 +547,7 @@ Como los isomorfismos preservan la torsión, la parte de torsión es isomorfa a 
 
 {{% proof %}} Es consecuencia de la primera forma del teorema de estructura y del teorema chino del resto, el cual permite probar por inducción que si $q\_{1}^{s\_1}\cdots q\_{t}^{s\_t}$ es un producto de potencias de primos no asociados entonces $$\frac{R}{(q\_{1}^{s\_1}\cdots q\_{t}^{s\_t})}\cong \frac{R}{(q\_{1}^{s\_1})}\times\cdots\times \frac{R}{(q\_{t}^{s\_t})}.$$  {{%  /proof %}}
 
-{{% ojo %}} Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes. {{% /ojo %}}
+{{% watch %}} Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes. {{% /watch %}}
 
 {{% example name="Grupos abelianos con el mismo número de elementos"   %}} Los grupos abelianos $$\mathbb{Z}/(4)\times \mathbb{Z}/(4),\qquad\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4),$$ tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos. Para verlo jugaremos con la noción de **orden** de un elemento de torsión $a\in A$ de un grupo abeliano $A$, que es el menor entero positivo $n\in\mathbb Z$ tal que $na=0$. El $0\in A$ es el único elemento de orden $1$. Si $A$ es finito, el orden de cualquier $a\in A$ divide al número de elementos de $A$ (este número se conoce como orden de $A$). En particular, todo elemento de $\mathbb Z/(m)$ tiene un orden divisor de $m$. El orden de $-a\in A$ coincide con el de $a\in A$ y el orden de la suma de dos elementos de torsión $a+b\in A$ divide al múltiplo común mínimo de los órdenes de los factores. En particular, para cada entero $n$ el subconjunto $T\_n(A)\subset A$ formado por los elementos cuyo orden divide a $n$ es un subgrupo. Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$, y si $A\cong B$ entonces $T\_n(A)\cong T\_n(B)$, por tanto $t\_n(A)=t\_n(B)$. El orden de $\bar a\in\mathbb Z/(m)$ es $m/\operatorname{mcd}(a,m)$ si $m\neq 0$. Usando esto podemos comprobar que, si $d=\operatorname{mcd}(m,n)$, $$T\_n(\mathbb{Z}/(m))=\left\\{1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\}$$ luego $$t\_n(\mathbb{Z}/(m))=\operatorname{mcd}(n,m).$$ Aplicando esto a los dos grupos del principio, vemos que el primero cumple $$t\_2(\mathbb{Z}/(4)\times \mathbb{Z}/(4))=2\cdot 2=4,$$ mientras que el segundo satisface $$t\_2(\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4))=2\cdot 2\cdot 2=8,$$ con lo cual no pueden ser isomorfos.{{% /example %}}
 

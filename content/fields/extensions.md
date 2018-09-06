@@ -24,7 +24,7 @@ weight = 10
 
 {{%  definition  %}} Dadas dos extensiones $F\subset K$ y $F\subset L$ de un mismo cuerpo $F$, un **homomorfismo** de extensiones $f\colon K\rightarrow L$ es un homomorfismo de anillos que deja fijo a $F$, es decir satisface $f(\alpha)=\alpha$ para todo $\alpha\in F$. Un **isomorfismo** de extensiones es un homomorfismo biyectivo. Un **automorfismo** de una extensión $F\subset K$ es un isomorfismo de extensiones $f\colon K\rightarrow K$ que parte y llega al mismo sitio. {{% /definition %}}
 
-{{% ojo %}} La identidad es un homomorfismo de extensiones y la composición de homomorfismos de extensiones es también un homomorfismo de extensiones. Lo mismo ocurre con isomorfismos y automorfismos. Además, la aplicación inversa de un isomorfismo de extensiones es otro isomorfismo de extensiones, e igual para los automorfismos. Recuerda que los homorfismos de cuerpos son inyectivos, así que los homomorfismos de extensiones también. Comprueba las afirmaciones anteriores como ejercicio. Los homomorfismos de extensiones son homomorfismos de $F$-espacios vectoriales ya que preservan sumas por ser homomorfismos de anillos, y además, dados $x\in F$ e $y\in K$, como $f$ preserva productos y deja fijo a $F$, $$\begin{array}{rcl}f(xy)&=& f(x)f(y)\cr &=&xf(y).\end{array}$$ Por tanto los isomorfismos de extensiones preservan la finitud y el grado. También es importante observar que si la extensión $F\subset K$ es finita, cualquier homomorfimso $f\colon K\rightarrow K$ es un automorfimo ya que todo endomorfismo inyectivo de un espacio vectorial de dimensión finita es biyectivo. {{% /ojo %}}
+{{% watch %}} La identidad es un homomorfismo de extensiones y la composición de homomorfismos de extensiones es también un homomorfismo de extensiones. Lo mismo ocurre con isomorfismos y automorfismos. Además, la aplicación inversa de un isomorfismo de extensiones es otro isomorfismo de extensiones, e igual para los automorfismos. Recuerda que los homorfismos de cuerpos son inyectivos, así que los homomorfismos de extensiones también. Comprueba las afirmaciones anteriores como ejercicio. Los homomorfismos de extensiones son homomorfismos de $F$-espacios vectoriales ya que preservan sumas por ser homomorfismos de anillos, y además, dados $x\in F$ e $y\in K$, como $f$ preserva productos y deja fijo a $F$, $$\begin{array}{rcl}f(xy)&=& f(x)f(y)\cr &=&xf(y).\end{array}$$ Por tanto los isomorfismos de extensiones preservan la finitud y el grado. También es importante observar que si la extensión $F\subset K$ es finita, cualquier homomorfimso $f\colon K\rightarrow K$ es un automorfimo ya que todo endomorfismo inyectivo de un espacio vectorial de dimensión finita es biyectivo. {{% /watch %}}
 
 Más adelante veremos ejemplos de extensiones no isomorfas del mismo grado.
 
@@ -34,7 +34,7 @@ Más adelante veremos ejemplos de extensiones no isomorfas del mismo grado.
 
 {{%  definition  %}} Dada una extensión $F\subset K$, decimos que $\alpha\in K$ es **algebraico** si existe $p(x)\in F[x]$ no nulo tal que $p(\alpha)=0$. En caso contrario decimos que $\alpha$ es **trascendente**. {{% /definition %}}
 
-{{% ojo %}} Si tenemos dos extensiones sucesivas $F\subset K\subset L$ y $\alpha\in L$ es algebraico sobre $F$ entonces también es algebraico sobre $K$ ya que $F[x]\subset K[x]$. El recíproco no es cierto. {{% /ojo %}}
+{{% watch %}} Si tenemos dos extensiones sucesivas $F\subset K\subset L$ y $\alpha\in L$ es algebraico sobre $F$ entonces también es algebraico sobre $K$ ya que $F[x]\subset K[x]$. El recíproco no es cierto. {{% /watch %}}
 
 {{% example name="Existencia de elementos trascendentes en $\mathbb Q\subset\mathbb C$"   %}} Como $\mathbb Q$ es numerable, $\mathbb Q[x]$ también. Además, todo polinomio tiene una cantidad finita de soluciones en $\mathbb C$. Por tanto hay una cantidad numerable de elementos algebraicos para la extensión $\mathbb Q\subset\mathbb C$. Como $\mathbb C$ no es numerable, han de existir elementos trascendentes, de hecho una cantidad no numerable de ellos. Lo mismo se aplica a la extensión $\mathbb Q\subset\mathbb R$. Dar un ejemplo concreto de número trascendente es sin embargo bastante complicado. Es conocido que $\pi$ es trascendente sobre $\mathbb Q$ pero no es fácil probarlo. {{% /example %}}
 
@@ -111,7 +111,7 @@ $$F[x]\cong \frac{F[x]}{(0)}\cong\operatorname{im} f=F[\alpha].$$
 {{% proof %}} Dada una base $\\{x\_1,\dots, x\_p\\}\subset K$ como $F$-espacio vectorial y una base $\\{y\_1,\dots, y\_q\\}\subset L$ como $K$-espacio vectorial, afirmamos que $$\\{x\_iy\_j\\}_{\substack{1\leq i\leq p\cr 1\leq j\leq q}}\subset L$$ es una base como $F$-espacio vectorial. Hemos de ver que todo elemento de $L$ se puede expresar de manera única como combinación lineal de este conjunto con coeficientes en $F$. La base de $L$ como $K$-espacio vectorial nos garantiza que todo $\alpha\in L$ se puede escribir de manera única como $$\alpha=\beta\_1y\_1+\cdots+\beta\_qy\_q,$$ con $\beta\_j\in K$. La base de $K$ como $F$-espacio vectorial nos asegura que cada uno de estos coeficientes se puede expresar de manera única como $$\beta\_j=\gamma\_{1j}x\_1+\cdots+\gamma\_{pj}x\_p$$ con $\gamma\_{ij}\in F$. Por tanto $$\alpha=\sum\_{i=1}^p\sum\_{j=1}^q\gamma\_{ij}x\_iy\_j$$ y esta expresión es única.  
 {{%  /proof %}}
 
-{{% ojo %}} Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos que $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$. La extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]$ ya hemos visto que tiene grado $3$. Además como $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$, la extensión $\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$ tiene grado $2$. Por tanto $$\begin{array}{rcl}[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q]&=&[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q[\sqrt[3]{2}]][\mathbb Q[\sqrt[3]{2}]:\mathbb Q]\cr &=&2\cdot 3=6.\end{array}$${{% /ojo %}}
+{{% watch %}} Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos que $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$. La extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]$ ya hemos visto que tiene grado $3$. Además como $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$, la extensión $\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$ tiene grado $2$. Por tanto $$\begin{array}{rcl}[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q]&=&[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q[\sqrt[3]{2}]][\mathbb Q[\sqrt[3]{2}]:\mathbb Q]\cr &=&2\cdot 3=6.\end{array}$${{% /watch %}}
 
 
 {{% corollary %}} Dadas extensiones $F\subset K\subset L$: 
@@ -221,7 +221,7 @@ Por tanto $(-a)^{-1}=-a^{-1}$ también es constructible. Esto demuestra que el a
  {{%  /proof %}}
 
 
-{{% ojo %}} El cuerpo de los números constructibles contiene a $\mathbb Q$ ya que está contenido en $\mathbb R$ y cualquier racional se puede obtener a partir del $1$ sumando, tomando opuestos y dividiendo por números no nulos. Esto se aplica también a cualquier cuerpo contenido en $\mathbb C$ pero obviamente no es válido para los cuerpos finitos $\mathbb Z/(p)$. {{% /ojo %}}
+{{% watch %}} El cuerpo de los números constructibles contiene a $\mathbb Q$ ya que está contenido en $\mathbb R$ y cualquier racional se puede obtener a partir del $1$ sumando, tomando opuestos y dividiendo por números no nulos. Esto se aplica también a cualquier cuerpo contenido en $\mathbb C$ pero obviamente no es válido para los cuerpos finitos $\mathbb Z/(p)$. {{% /watch %}}
 
 {{% proposition   %}} Si $a\in\mathbb R$ es positivo $a>0$ y constructible entonces $\sqrt{a}$ también es constructible. {{% /proposition %}}
 
@@ -249,7 +249,7 @@ Para intersecar dos circunferencias, observamos que la diferencia de ambas ecuac
  
 {{%  /proof %}}
 
-{{% ojo %}} Recuerda que antes hemos visto que $[F[\sqrt{r}]:F]=2$. {{% /ojo %}}
+{{% watch %}} Recuerda que antes hemos visto que $[F[\sqrt{r}]:F]=2$. {{% /watch %}}
 
 {{%  theorem %}}Dados números reales constructibles $a\_1,\dots,a\_m\in\mathbb R$, hay una cadena de extensiones $$\mathbb Q=F\_0\subset F\_1\subset F\_2\subset\cdots\subset F\_n=K$$ tales que
 
@@ -265,7 +265,7 @@ En particular $[K:\mathbb Q]=2^n$.
 
 {{% proof %}} La construtibilidad de los números $a\_i$ equivale a la de los puntos $(a\_i,0)$. Los puntos constructibles se construyen a partir de los básicos, $(0,0)$ y $(1,0)$, trazando e intersecando rectas y circunferencias mendiante los métodos permitidos. Los puntos básicos tienen coordenadas en $\mathbb Q$. Por la propisición anterior, los puntos que se construyen a partir de ellos tendrán coordenadas en extensiones sucesivas de $\mathbb Q$ obtenidas al añadir nuevas raíces cuadradas de números positivos, por tanto el teorema se sigue de la proposición anterior por inducción. La observación sobre el grado se siguie de la fórmula del grado para extensiones intermedias, que en este caso nos dice que $$[K:\mathbb Q]=\prod\_{i=0}^{n-1}[F\_{i+1}:F\_i]=2^n$$ ya que por el tercer apartado $[F\_{i+1}:F\_i]=2$.  {{%  /proof %}}
 
-{{% ojo %}} La cantidad de raíces cuadradas que hemos de añadir a $\mathbb Q$ para construir $K$ ($n$ según la notación del teorema) no tiene relación con la cantidad de números constructibles $a\_1,\dots,a\_m$ que queremos que $K$ posea. {{% /ojo %}}
+{{% watch %}} La cantidad de raíces cuadradas que hemos de añadir a $\mathbb Q$ para construir $K$ ($n$ según la notación del teorema) no tiene relación con la cantidad de números constructibles $a\_1,\dots,a\_m$ que queremos que $K$ posea. {{% /watch %}}
 
 {{% corollary %}} Los números constructibles son algebraicos sobre $\mathbb Q$ y el grado de un número constructible es siempre una potencia de $2$. {{% /corollary %}}
 

@@ -2,7 +2,7 @@
 
 Esta web contiene las notas de clase del profesor [Fernando Muro](http://personal.us.es/fmuro/) para la asignatura obligatoria [Estructuras Algebraicas](http://www.us.es/estudios/grados/plan_171/asignatura_1710020/proyecto_986369) del [Grado en Matemáticas](http://www.us.es/estudios/grados/plan_171) de la [Universidad de Sevilla](http://www.us.es).
 
-{{% ojo %}} Esta web está **en construcción**. El contenido actual es incompleto, puede contener erratas y será modificado para su mejora sin previo aviso. Se recomienda recargar la web cada día que se consulte para evitar que ordenador muestre copias antiguas almacenadas en la caché.{{% /ojo %}}
+{{% watch %}} Esta web está **en construcción**. El contenido actual es incompleto, puede contener erratas y será modificado para su mejora sin previo aviso. Se recomienda recargar la web cada día que se consulte para evitar que ordenador muestre copias antiguas almacenadas en la caché.{{% /watch %}}
 
 ## Cómo manejarse
 

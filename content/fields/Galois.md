@@ -9,7 +9,7 @@ En esta sección supondremos sin necesida de mencionarlo explícitamente que tod
 
 {{%  definition  %}}Dada una extensión $F\subset K$, su **grupo de Galois** $G(K/F)$ es el conjunto de los automorfismos de $F\subset K$. {{% /definition %}}
 
-{{% ojo %}} La estructura de grupo del grupo de Galois es la composición. El elemento unidad es la identidad. El grupo de Galois de la extensión trivial es el grupo trivial $G(F/F)=\\{\operatorname{id}\_{F}\\}$. Recuerda que si la extensión $F\subset K$ es finita cualquier homomorfismo de extensiones $f\colon K\rightarrow K$ es un elemento de $G(K/F)$, y si además $F=\mathbb Q$ entonces nos vale cualquier homomorfismo de anillos $f$, pues todos preservan $\mathbb Q$. Recuerda también que todo elemento de $G(K/F)$ es además un isomorfismo de $F$-espacios vectoriales, pero no todo isomorfismo de $F$-espacios vectoriales $f\colon K\rightarrow K$ está en $G(K/F)$ ya que podría no preservar el producto en $K$, o incluso el $1$. Asimismo, recuerda que todo elemento de $G(K/F)$ preserva raíces de polinomios con coeficientes en $F$. {{% /ojo %}}
+{{% watch %}} La estructura de grupo del grupo de Galois es la composición. El elemento unidad es la identidad. El grupo de Galois de la extensión trivial es el grupo trivial $G(F/F)=\\{\operatorname{id}\_{F}\\}$. Recuerda que si la extensión $F\subset K$ es finita cualquier homomorfismo de extensiones $f\colon K\rightarrow K$ es un elemento de $G(K/F)$, y si además $F=\mathbb Q$ entonces nos vale cualquier homomorfismo de anillos $f$, pues todos preservan $\mathbb Q$. Recuerda también que todo elemento de $G(K/F)$ es además un isomorfismo de $F$-espacios vectoriales, pero no todo isomorfismo de $F$-espacios vectoriales $f\colon K\rightarrow K$ está en $G(K/F)$ ya que podría no preservar el producto en $K$, o incluso el $1$. Asimismo, recuerda que todo elemento de $G(K/F)$ preserva raíces de polinomios con coeficientes en $F$. {{% /watch %}}
 
 {{% example name="$G(\mathbb C/\mathbb R)$"   %}} Un homomorfismo de $\mathbb R$-espacios vectoriales $f\colon \mathbb C\rightarrow\mathbb C$ está determinado por la imagen de los elementos de una base, por ejemplo $\\{1,i\\}\subset\mathbb C$. Para que $f\in G(\mathbb C/\mathbb R)$ ha de ser un homomorfismo de anillos, así que debe satisfacer $f(1)=1$. También ha de preservar raíces en $\mathbb C$ de polinomios en $\mathbb R[x]$. Las raíces complejas de $x^2+1$ son $\pm i$, así que $f$ ha de cumplir $f=\pm i$. Por tanto los dos posibles elementos de $G(\mathbb C/\mathbb R)$ son los homomorfismos de $\mathbb R$-espacios vectoriales definidos por $$\begin{array}{rcl}f(1)&=&1,\cr f(i)&=&i,\end{array}$$ y por $$\begin{array}{rcl}f(1)&=&1,\cr f(i)&=&-i.\end{array}$$ Algunos de estos dos homomorfismos de $\mathbb R$-espacios vectoriales podría no estar en $G(\mathbb C/\mathbb R)$ pues podría no preservar el producto, pero ambos lo preservan porque claramente el primero es la identidad $\operatorname{id}\_{\mathbb C}$ y el segundo es la conjugación, que denotaremos $c$. Así que $G(\mathbb C/\mathbb R)=\\{\operatorname{id}\_{\mathbb C},c\\}$, que es un grupo cíclico de orden $2$ generado por la conjugación $c$, que satisface $c\circ c=\operatorname{id}_{\mathbb C}$. {{% /example %}}
 
@@ -28,7 +28,7 @@ $$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&\sqrt{\delta},\end{array}$$ 
 
 {{% /definition %}}
 
-{{% ojo %}} Dado un cuerpo $F$, que suponemos $F\subset\mathbb C$, como todo polinomio de grado positivo en $\mathbb C[x]$ factoriza como producto de polinomios de grado $1$, todo polinomio mónico de grado positivo $p(x)\in F[x]$ tiene un único cuerpo de descomposición $K\subset \mathbb C$ que es $K=F[\alpha\_1,\dots,\alpha\_n]$, donde los $\alpha\_i$ son las raíces complejas de $p(x)$. {{% /ojo %}}
+{{% watch %}} Dado un cuerpo $F$, que suponemos $F\subset\mathbb C$, como todo polinomio de grado positivo en $\mathbb C[x]$ factoriza como producto de polinomios de grado $1$, todo polinomio mónico de grado positivo $p(x)\in F[x]$ tiene un único cuerpo de descomposición $K\subset \mathbb C$ que es $K=F[\alpha\_1,\dots,\alpha\_n]$, donde los $\alpha\_i$ son las raíces complejas de $p(x)$. {{% /watch %}}
 
 {{% proposition   %}} Toda extensión $F\subset K$ de grado $2$ es un cuerpo de descomposición. {{% /proposition %}}
 
@@ -198,11 +198,11 @@ Las extensiones del tipo que hemos estudiado en esta sección se denominan **ext
 
 {{%  definition  %}}Una extensión $F\subset K$ es una **extensión por radicales** si hay una sucesión finita de extensiones $$F=F\_0\subset F\_1\subset\cdots\subset F\_n=K$$ tales que $F\_{i+1}=F\_i[\alpha\_i]$ donde $\alpha\_i$ es es raíz de un polinomio de la forma $x^{p\_i}-a\_i\in F\_i[x]$ con $p\_i$ es primo, $i=0,\dots,p-1$. {{% /definition %}}
 
-{{% ojo %}} Observa que toda extensión por radicales es finita pues cada $F\_i\subset F\_{i+1}$ es finita de grado $\leq p\_i$ ya que $r\_i$ es raíz de un polinomio de grado $p\_i$ con coeficientes en $F\_i$. {{% /ojo %}}
+{{% watch %}} Observa que toda extensión por radicales es finita pues cada $F\_i\subset F\_{i+1}$ es finita de grado $\leq p\_i$ ya que $r\_i$ es raíz de un polinomio de grado $p\_i$ con coeficientes en $F\_i$. {{% /watch %}}
 
 {{%  definition  %}} Dado un polinomio no nulo $p(x)\in F[x]$ decimos que la ecuación $p(x)=0$ se puede **resolver por radicales** si existe una extensión por radicales de $F$ en la que $p(x)$ factoriza como producto de polinomios de grado $1$. {{% /definition %}}
 
-{{% ojo %}} Esto equivale a decir que hay una extensión por radicales de $F$ que contiene al cuerpo de descomposición de $p(x)$. {{% /ojo %}}
+{{% watch %}} Esto equivale a decir que hay una extensión por radicales de $F$ que contiene al cuerpo de descomposición de $p(x)$. {{% /watch %}}
 
 {{%  definition  %}} Un grupo finito $G$ es **soluble** si existe una sucesión de subgrupos $$\\{1\\}=G\_0\subset G\_i\subset \cdots\subset G\_n=G$$ tal que $G\_i\subset G\_{i+1}$ es normal y $G\_{i+1}/G\_i$ es cíclico de orden $p\_i$ primo, $0\leq i{<}n$. {{% /definition %}}
 
