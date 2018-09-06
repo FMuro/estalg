@@ -7,8 +7,6 @@ Aquí explicamos lo necesario para poder generar y editar estos apuntes en tu or
 
 ## Montaje previo
 
-# Cómo generar y editar estos apuntes en tu ordenador
-
 1. Instala [Hugo](https://gohugo.io/getting-started/installing/) y [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 2. Abre una terminal  y ejecuta los siguientes comandos:
