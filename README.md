@@ -2,7 +2,7 @@
 
 1. Instala [Hugo](https://gohugo.io/getting-started/installing/) y [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-2. Abre una terminal  y ejecuta los siguientes comandos
+2. Abre una terminal  y ejecuta los siguientes comandos:
 ```
 $ git clone --recurse-submodules https://gitlab.com/edarfoc/estalg.git
 $ cd estalg
