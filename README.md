@@ -5,9 +5,7 @@
 2. Abre una terminal  y ejecuta los siguientes comandos
 ```
 $ git clone --recurse-submodules https://gitlab.com/edarfoc/estalg.git
-
 $ cd estalg
-
 $ hugo server
 ```
 
