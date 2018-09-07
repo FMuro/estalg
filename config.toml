@@ -6,5 +6,14 @@ title = "Estructuras algebraicas"
 theme = "hugo-theme-lecturenotes"
 disableLiveReload = false
 
+creatordisplayname = "Valere JEANTET"
+creatoremail = "valere.jeantet@gmail.com"
+lastmodifierdisplayname = "Fernando"
+lastmodifieremail = "fmuro@us.es"
+
+[author]
+  name = "Fernando Muro"
+  homepage = "http://personal.us.es/fmuro/"
+
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
