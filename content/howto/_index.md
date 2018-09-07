@@ -1,6 +1,6 @@
 +++
 title = "Instrucciones"
-weight = 100
+hidden = true
 +++
 
 Aquí explicamos lo necesario para poder generar y editar estos apuntes en tu ordenador.
