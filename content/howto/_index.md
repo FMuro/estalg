@@ -85,92 +85,94 @@ Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir <code>$\LaTeX$</
 
 La plantilla posee diferentes entornos para ordenar el contenido. Se explican en los siguientes ejemplos, que se acompañan de su códio.
 
-{{% definition %}} Esto es una definición. {{% /definition %}}
+{{% definition %}}
+Esto es una definición. 
+{{% /definition %}}
+
 
 ```
-{{%/* definition */%}} Esto es una definición. {{%/* /definition */%}}
+{{%/* definition */%}}
+Esto es una definición. 
+{{%/* /definition */%}}
 ```
 
-{{% proposition %}} Esto es una proposición. {{% /proposition  %}}
+{{% proposition %}}
+Esto es una proposición. 
+{{% /proposition %}}
+
 
 ```
-{{%/* proposition */%}} Esto es una proposición. {{%/* /proposition  */%}}
+{{%/* proposition */%}}
+Esto es una proposición. 
+{{%/* /proposition  */%}}
 ```
 
-{{% lemma %}} Esto es un lema. {{% /lemma %}}
+{{% lemma %}}
+Esto es un lema. 
+{{% /lemma %}}
+
 
 ```
-{{%/* lemma */%}} Esto es un lema. {{%/* /lemma */%}}
+{{%/* lemma */%}}
+Esto es un lema. 
+{{%/* /lemma */%}}
 ```
 
-{{% theorem %}} Esto es un teorema. {{% /theorem %}}
+{{% theorem %}}
+Esto es un teorema. 
+{{% /theorem %}}
+
 
 ```
-{{%/* theorem */%}} Esto es un teorema. {{%/* /theorem */%}}
+{{%/* theorem */%}}
+Esto es un teorema. 
+{{%/* /theorem */%}}
 ```
 
-{{% theorem name="Nombre" %}} Esto es un teorema con nombre. {{% /theorem %}}
+{{% theorem name="Nombre" %}}
+Esto es un teorema con nombre. 
+{{% /theorem %}}
+
 
 ```
-{{%/* theorem name="Nombre" */%}} Esto es un teorema con nombre. {{%/* /theorem */%}}
+{{%/* theorem name="Nombre" */%}}
+Esto es un teorema con nombre. 
+{{%/* /theorem */%}}
 ```
 
-{{% example name="Nombre del ejemplo" %}} Esto es un ejemplo. Los ejemplos van encabezados con un nombre, así que esta variable es aquí obligatoria. {{% /example %}}
+{{% example name="Nombre del ejemplo" %}}
+Esto es un ejemplo. Los ejemplos van encabezados con un nombre, así que esta variable es aquí obligatoria. 
+{{% /example %}}
+
 
 ```
-{{%/* example name="Nombre del ejemplo" */%}} Esto es un ejemplo. Los ejemplos van encabezados con un nombre, por lo que esta variable es obligatoria. {{%/* /example */%}}
+{{%/* example name="Nombre del ejemplo" */%}}
+Esto es un ejemplo. Los ejemplos van encabezados con un nombre, por lo que esta variable es obligatoria. 
+{{%/* /example */%}}
 ```
 
-{{% watch %}} ¡watch! Esto es un mensaje de alerta. {{% /watch %}}
+{{% watch %}}
+Esto es un mensaje de alerta. 
+{{% /watch %}}
+
 
 ```
-{{%/* watch */%}} ¡watch! Esto es un mensaje de alerta. {{%/* /watch */%}}
+{{%/* watch */%}}
+¡watch! Esto es un mensaje de alerta. 
+{{%/* /watch */%}}
 ```
-
 
 Las **pruebas** tienen un aspecto especial. Aparecen plegadas para no sobrecargar el contenido y se despliegan pulsando sobre ellas.
 
-{{% proof %}} Esto es una prueba. Aparecen plegadas por defecto. {{% /proof %}}
+{{% proof %}}
+ Esto es una prueba. Aparecen plegadas por defecto. 
+{{% /proof %}}
 
-
-```
-{{%/* proof */%}} Esto es una prueba. Aparecen plegadas por defecto. {{%/* /proof */%}}
-```
-
-
-## Saltos de línea y espacios verticales
-
-No debe haber saltos de línea innecesarios ya que de lo contrario aparecen espacios verticales no deseados. Veámoslo con un ejemplo.
-
-{{% definition %}} 
-Esto es una definición con excesivos espacios verticales. 
-{{% /definition %}}
-
-```
-{{%/* definition */%}} 
-Esto es una definición con excesivos espacios verticales. 
-{{%/* /definition */%}}
-```
-
-No obstante, los saltos de línea son a veces inevitables, como cuando una definición contiene una lista. En estos casos, la longitud vertical de la definición mitiga los excesivos espacios verticales en los extremos.
-
-{{% definition %}} Esto es una definición con una lista:
-
-* uno 
-	- primero
-	- segundo
-* dos 
-* tres 
-{{% /definition %}}
 
 
 ```
-{{%/* definition */%}} Esto es una definición con una lista:
-
-* uno 
-	- primero
-	- segundo
-* dos 
-* tres 
-{{%/* /definition */%}}
+{{%/* proof */%}}
+Esto es una prueba. Aparecen plegadas por defecto. 
+{{%/* /proof */%}}
 ```
+

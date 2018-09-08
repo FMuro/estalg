@@ -7,11 +7,18 @@ La noción clásica de divisibilidad se comporta de manera inesperada en presenc
 
 ## Divisores
 
-{{%  definition  %}}En un dominio $R$, decimos que $a$ **divide** a $b$, o que $b$ es un **múltiplo** de $a$, y escribimos $a|b$, si $b=aq$ para cierto $q\in R$, que llamaremos **cociente**. Decimos que $a$ es un **divisor propio** de $b$ si además ni $a$ ni $q$ son unidades. Un elemento no trivial de $R$ es **irreducible** si no tiene divisores propios ni es una unidad. Dos elementos $a$ y $a'$ son **asociados** si tanto $a| a'$ como $a'|a$. {{% /definition %}}
+{{%  definition %}}
+En un dominio $R$, decimos que $a$ **divide** a $b$, o que $b$ es un **múltiplo** de $a$, y escribimos $a|b$, si $b=aq$ para cierto $q\in R$, que llamaremos **cociente**. Decimos que $a$ es un **divisor propio** de $b$ si además ni $a$ ni $q$ son unidades. Un elemento no trivial de $R$ es **irreducible** si no tiene divisores propios ni es una unidad. Dos elementos $a$ y $a'$ son **asociados** si tanto $a| a'$ como $a'|a$. 
+{{% /definition %}}
 
-{{% watch %}}El cero solo divide al cero, por tanto el cero es el único asociado del cero. Es más, si $a\neq 0$ y $a|b$ el cociente es único, es decir, solo hay un $q\in R$ tal que $b=qa$ pues si $b=q'a$ entonces $qa=q'a$ y por la propiedad cancelativa $q=q'$.{{% /watch %}}
 
-{{% proposition  %}}En un dominio $R$:
+{{% watch %}}
+El cero solo divide al cero, por tanto el cero es el único asociado del cero. Es más, si $a\neq 0$ y $a|b$ el cociente es único, es decir, solo hay un $q\in R$ tal que $b=qa$ pues si $b=q'a$ entonces $qa=q'a$ y por la propiedad cancelativa $q=q'$.
+{{% /watch %}}
+
+
+{{% proposition %}}
+En un dominio $R$:
 
 * $a|b \Leftrightarrow (a)\supset (b)$.
 
@@ -20,9 +27,12 @@ La noción clásica de divisibilidad se comporta de manera inesperada en presenc
 * $u$ es una unidad $\Leftrightarrow (u)=(1)$.
 
 * $a$ es un divisor propio de $b \Leftrightarrow (1)\supsetneq (a)\supsetneq (b)$.
+
 {{% /proposition%}}
 
+
 {{% proof %}}
+
 * $(a)\supset (b)\Leftrightarrow (a)\ni b\Leftrightarrow a|b$.
 
 * La primera equivalencia se sigue del apartado anterior. Para la segunda, $\Leftarrow$ es obvio pues también $a=u^{-1}a'$. Veamos $\Rightarrow$. Si $a$ y $a'$ son asociados entonces $a'=qa$ y $a=q'a'$, luego $a=q'qa$. Si $a=0$ entonces $a'=0$ y podemos tomar $u=1$. En caso contrario, por la propiedad cancelativa $1=q'q$, luego $q'$ y $q$ son unidades y podemos tomar $u=q$.
@@ -32,18 +42,29 @@ La noción clásica de divisibilidad se comporta de manera inesperada en presenc
 * Es consecuencia de los tres apartados anteriores. 
 {{%  /proof %}}
 
-{{% watch %}}Si $a\in R$ no es nulo ni una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ y $a'$ son irreducibles y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.{{% /watch %}}
+
+{{% watch %}}
+Si $a\in R$ no es nulo ni una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ y $a'$ son irreducibles y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.
+{{% /watch %}}
+
 
 
 ## Factorizaciones      
 
 En un dominio $R$, si $a\in R$ es un elemento no trivial que no es una unidad ni tampoco irreducible, entonces podemos descomponerlo como producto de dos divisores propios $a=bc$. Lo mismo podemos hacer con $b$ y con $c$, y así sucesivamente. Este procedimiento puede acabar en una descomposición de $a=b\_1\cdots b\_n$ como producto de elementos irreducibles $b_i\in R$, $1\leq i\leq n$, pero también podría no acabar nunca.
 
-{{%  definition  %}}Decimos que **existen factorizaciones** en un dominio $R$ si el anterior proceso de factorización acaba para todo elemento no nulo que no sea una unidad.{{% /definition %}}
+{{%  definition %}}
+Decimos que **existen factorizaciones** en un dominio $R$ si el anterior proceso de factorización acaba para todo elemento no nulo que no sea una unidad.
+{{% /definition %}}
 
-{{% proposition  %}}En un dominio $R$ existen factorizaciones $\Leftrightarrow$ no existe ninguna sucesión estrictamente creciente de ideales principales $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$.{{% /proposition %}}
 
-{{% proof %}}$\Rightarrow$ Lo haremos por reducción al absurdo. Tomamos pues una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Podemos suponer que $a\_1\neq 0$ ya que en caso contrario la inclusión estricta $(a\_1)\subsetneq(a\_2)$ implicaría que $a\_2\neq 0$ y bastaría reindexar. Observa que $(a\_n)\subsetneq (1)$ para todo $n\geq 1$, ya que la sucesión es estrictamente creciente y $(1)=R$ es el ideal total. Las inclusiones $(a\_n)\subsetneq (a\_{n+1})\subsetneq(1)$ nos dicen entonces que $a_n$ se puede descomponer como producto de divisores propios $a\_n=q\_{n+1}a\_{n+1}$, por tanto el proceso de factorización no termina para
+{{% proposition %}}
+En un dominio $R$ existen factorizaciones $\Leftrightarrow$ no existe ninguna sucesión estrictamente creciente de ideales principales $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$.
+{{% /proposition %}}
+
+
+{{% proof %}}
+$\Rightarrow$ Lo haremos por reducción al absurdo. Tomamos pues una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Podemos suponer que $a\_1\neq 0$ ya que en caso contrario la inclusión estricta $(a\_1)\subsetneq(a\_2)$ implicaría que $a\_2\neq 0$ y bastaría reindexar. Observa que $(a\_n)\subsetneq (1)$ para todo $n\geq 1$, ya que la sucesión es estrictamente creciente y $(1)=R$ es el ideal total. Las inclusiones $(a\_n)\subsetneq (a\_{n+1})\subsetneq(1)$ nos dicen entonces que $a_n$ se puede descomponer como producto de divisores propios $a\_n=q\_{n+1}a\_{n+1}$, por tanto el proceso de factorización no termina para
 $$\begin{array}{rcl}
 a\_1&=& q\_2a\_2\cr
 &=& q\_2q\_3a\_3\cr
@@ -55,37 +76,68 @@ lo cual es una contradicción.
 $\Leftarrow$ Probaremos que si no existen factorizaciones entonces podemos encontrar una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Sea $a\_1\in R$ un elemento no nulo que no sea una unidad para el cual el proceso de factorización no termina. Entonces podemos descomponerlo como producto de divisores propios $a\_1=q\_2a\_2$ de modo que alguno de los dos no es irreducible. Como el producto es conmutativo podemos suponer que es $a_2$ el que no es irreducible. Por tanto este también se puede descomponer como producto de dos divisores propios $a\_2=q\_3a\_3$ alguno de los cuales no es irreducible. Una vez más podemos suponer que es $a\_3$ el no irreducible y continuar indefinidamente con el proceso. Por construcción, esto nos da una sucesión creciente $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$ que es estricta porque todas las descomposiciones anteriores son como producto de dos divisores propios. 
 {{%  /proof %}}
 
-{{% watch %}}La condición de la derecha del enunciado de la proposición anterior se suele denominar **condición de cadena ascendente** para ideales principales. Las condiciones de cadena juegan un papel muy importante en el álgebra moderna. Los anillos que satisfacen la condición de cadena ascendente para ideales cualesquiera se denominan **noetherianos**, por [Emmy Noether](https://es.wikipedia.org/wiki/Emmy_Noether). Los que cumplen la **condición de cadena descendente** para ideales arbitrarios se llaman **artinianos**, por [Emil Artin](https://es.wikipedia.org/wiki/Emil_Artin), padre de Michael, el autor del libro que estamos siguiendo. {{% /watch %}}
 
-{{% example name="Un dominio sin factorizaciones"   %}}No es fácil construir dominios donde no existan factorizaciones. El ejemplo más sencillo es el cociente $R/I$, donde $$R=k[x\_1,x\_2,x\_3,\dots]$$ es un anillo de polinomios sobre un cuerpo $k$ en una sucesión infinita de variables $\\{x\_n\\}_{n\geq 1}$ e $$I=(x\_1-x\_2^2, x\_2-x\_3^2, x\_3-x\_4^2,\dots)$$ es un ideal infinitamente generado que fuerza las relaciones $\bar x\_n=\bar x\_{n+1}^2\in R/I$, $n\geq 1$. En este cociente $$(\bar x\_1)\subsetneq(\bar x\_2)\subsetneq(\bar x\_3)\subsetneq\cdots.$$ Más concretamente, el proceso $\bar x\_1=\bar x\_2\bar x\_2=\bar x\_2\bar x\_3\bar x\_3=\bar x\_2\bar x\_3\bar x\_4\bar x\_4=\cdots$ no termina.{{% /example %}}
+{{% watch %}}
+La condición de la derecha del enunciado de la proposición anterior se suele denominar **condición de cadena ascendente** para ideales principales. Las condiciones de cadena juegan un papel muy importante en el álgebra moderna. Los anillos que satisfacen la condición de cadena ascendente para ideales cualesquiera se denominan **noetherianos**, por [Emmy Noether](https://es.wikipedia.org/wiki/Emmy_Noether). Los que cumplen la **condición de cadena descendente** para ideales arbitrarios se llaman **artinianos**, por [Emil Artin](https://es.wikipedia.org/wiki/Emil_Artin), padre de Michael, el autor del libro que estamos siguiendo. 
+{{% /watch %}}
 
-{{%  definition  %}}Un **dominio de factorización única** (también **DFU** o **UFD**) es un dominio donde existen factorizaciones y tal que dos factorizaciones de un mismo elemento coinciden salvo orden y asociados, es decir si $$b\_1\cdots b\_s=c\_1\cdots c\_t$$ son productos de irreducibles entonces $s=t$ y existe una permutación $\sigma\in S\_s$ de $s$ elementos tal que $b\_i$ y $c\_{\sigma(i)}$ son asociados, $1\leq i\leq s$.{{% /definition %}}
 
-{{% example name="Un dominio con factorizaciones que no son únicas"   %}}En $\mathbb Z[\sqrt{-5}]\subset\mathbb C$, $$9=3^2=(2+\sqrt{-5})(2-\sqrt{-5}).$$
+{{% example name="Un dominio sin factorizaciones" %}}
+No es fácil construir dominios donde no existan factorizaciones. El ejemplo más sencillo es el cociente $R/I$, donde $$R=k[x\_1,x\_2,x\_3,\dots]$$ es un anillo de polinomios sobre un cuerpo $k$ en una sucesión infinita de variables $\\{x\_n\\}_{n\geq 1}$ e $$I=(x\_1-x\_2^2, x\_2-x\_3^2, x\_3-x\_4^2,\dots)$$ es un ideal infinitamente generado que fuerza las relaciones $\bar x\_n=\bar x\_{n+1}^2\in R/I$, $n\geq 1$. En este cociente $$(\bar x\_1)\subsetneq(\bar x\_2)\subsetneq(\bar x\_3)\subsetneq\cdots.$$ Más concretamente, el proceso $\bar x\_1=\bar x\_2\bar x\_2=\bar x\_2\bar x\_3\bar x\_3=\bar x\_2\bar x\_3\bar x\_4\bar x\_4=\cdots$ no termina.
+{{% /example %}}
+
+
+{{%  definition %}}
+Un **dominio de factorización única** (también **DFU** o **UFD**) es un dominio donde existen factorizaciones y tal que dos factorizaciones de un mismo elemento coinciden salvo orden y asociados, es decir si $$b\_1\cdots b\_s=c\_1\cdots c\_t$$ son productos de irreducibles entonces $s=t$ y existe una permutación $\sigma\in S\_s$ de $s$ elementos tal que $b\_i$ y $c\_{\sigma(i)}$ son asociados, $1\leq i\leq s$.
+{{% /definition %}}
+
+
+{{% example name="Un dominio con factorizaciones que no son únicas" %}}
+En $\mathbb Z[\sqrt{-5}]\subset\mathbb C$, $$9=3^2=(2+\sqrt{-5})(2-\sqrt{-5}).$$
 Todo elemento de $\mathbb Z[\sqrt{-5}]$ es de la forma $$z=a+b\sqrt{-5}=a+ib\sqrt{5}$$ donde $a,b\in\mathbb Z$. El cuadrado de la norma de tal elemento es $$|z|^2=|a+b\sqrt{-5}|=a^2+5b^2\in\mathbb Z.$$ Como $$|z_1z_2|^2=|z_1|^2\cdot|z_2|^2,$$ si $z\in \mathbb Z[\sqrt{-5}]$ es una unidad entonces $1=|z|^2\cdot|z^{-1}|^2$, así que $|z|^2\in\mathbb Z$ es invertible (y positivo), luego $|z|^2=1$. La única posibilidad de que esto ocurra es que $z=\pm 1$, por tanto las unidades de nuestro anillo son $\\{\pm1\\}$.
 
 En $\mathbb Z[\sqrt{-5}]$ existen factorizaciones. En efecto, si hubiera una cadena $(z_1)\subsetneq(z_2)\subsetneq(z_3)\subsetneq\cdots$ entonces tendríamos que $|z_1|^2>|z_2|^2>|z_3|^2>\cdots\geq 0$, pero esto es imposible, no hay sucesiones infinitas estrictamente decrecientes de enteros no negativos.
 
 Veamos que $3$ es irreducible. Si $3=z_1z_2$ es una factorización como producto de divisores propios entonces $3^2=|z_1|^2|z_2|^2$. No puede ser que $|z_i|^2=1$ ya que $z_i$ no es una unidad para ningún $i\in\\{1,2\\}$, luego, por el teorema fundamental de la aritmética para números enteros, $|z_1|^2=|z_2|^2=3$, pero no hay ningún elemento en $\mathbb Z[\sqrt{-5}]$ que tenga este cuadrado de norma. Análogamente, $2\pm\sqrt{-5}$ es irreducible pues si $2\pm\sqrt{-5}=z_1z_2$ entonces de nuevo $|2\pm\sqrt{-5}|^2=3^2=|z_1|^2|z_2|^2$.
 
-Por último, el $3$ no es un asociado de $2\pm\sqrt{-5}$ porque las únicas unidades de $\mathbb Z[\sqrt{-5}]$ son $\pm1$, luego las dos factorizaciones anteriores de $9$ como producto de irreducibles son esencialmente distintas.{{% /example %}}
+Por último, el $3$ no es un asociado de $2\pm\sqrt{-5}$ porque las únicas unidades de $\mathbb Z[\sqrt{-5}]$ son $\pm1$, luego las dos factorizaciones anteriores de $9$ como producto de irreducibles son esencialmente distintas.
+{{% /example %}}
+
 
 Con el objetivo de caracterizar los DFU, introducimos un nuevo tipo de elemento.
 
-{{%  definition  %}}Un elemento de un dominio $p\in R$ es **primo** si no es nulo ni una unidad y además si $p|ab$ entonces bien $p|a$ o bien $p|b$. {{% /definition %}}
-
-{{% watch %}}En términos de ideales, un elemento $p\in R$ no nulo es primo si y solo si $(p)\subset R$ es un ideal primo.{{% /watch %}}
-
-{{% proposition  %}}En un dominio, todo elemento primo $p\in R$ es irreducible.{{% /proposition %}}
-
-{{% proof %}}El primo no es una unidad porque los ideales primos son distintos del total, $(p)\neq (1)$. Veamos que no tiene divisores propios. Para ello supongamos que $p=ab$ y demostremos que $a$ o $b$ es una unidad. Como $p|ab$, entonces $p|a$ o $p|b$. Si $p|a$ entonces $a=pq$, luego $p=ab=pqb$. Como los primos no son nulos y estamos en un dominio esto implica que $1=qb$, por tanto $b$ es una unidad. Si $p|b$ deducimos del mismo modo que $a$ tendría que ser una unidad. {{%  /proof %}}
-
-{{% example name="Un irreducible que no es primo"   %}}Continuando con el ejemplo anterior, el irreducible $3\in \mathbb Z[\sqrt{-5}]$ no es primo porque $3|(2+\sqrt{-5})(2-\sqrt{-5})$ pero $3\nmid 2\pm \sqrt{-5}$ porque ambos son irreducibles pero no asociados.{{% /example %}}
+{{%  definition %}}
+Un elemento de un dominio $p\in R$ es **primo** si no es nulo ni una unidad y además si $p|ab$ entonces bien $p|a$ o bien $p|b$. 
+{{% /definition %}}
 
 
-{{%  theorem %}}Un dominio $R$ es de factorización única $\Leftrightarrow$ existen factorizaciones y todo irreducible es primo.{{% /theorem %}}
+{{% watch %}}
+En términos de ideales, un elemento $p\in R$ no nulo es primo si y solo si $(p)\subset R$ es un ideal primo.
+{{% /watch %}}
 
-{{% proof %}}$\Rightarrow$ Sea $c\in R$ irreducible. Supongamos que $c|ab$. Entonces $ab=cd$ para cierto $d\in R$. Podemos excluir los casos en los que $a$, $b$ y $d$ son nulos o unidades ya que en estos casos sería obvio deducir que $c$ tendría que dividir a $a$ o a $b$. Descomponemos $a$, $b$ y $d$ como producto de irreducibles,
+
+{{% proposition %}}
+En un dominio, todo elemento primo $p\in R$ es irreducible.
+{{% /proposition %}}
+
+
+{{% proof %}}
+El primo no es una unidad porque los ideales primos son distintos del total, $(p)\neq (1)$. Veamos que no tiene divisores propios. Para ello supongamos que $p=ab$ y demostremos que $a$ o $b$ es una unidad. Como $p|ab$, entonces $p|a$ o $p|b$. Si $p|a$ entonces $a=pq$, luego $p=ab=pqb$. Como los primos no son nulos y estamos en un dominio esto implica que $1=qb$, por tanto $b$ es una unidad. Si $p|b$ deducimos del mismo modo que $a$ tendría que ser una unidad. {{%  /proof %}}
+
+
+{{% example name="Un irreducible que no es primo" %}}
+Continuando con el ejemplo anterior, el irreducible $3\in \mathbb Z[\sqrt{-5}]$ no es primo porque $3|(2+\sqrt{-5})(2-\sqrt{-5})$ pero $3\nmid 2\pm \sqrt{-5}$ porque ambos son irreducibles pero no asociados.
+{{% /example %}}
+
+
+
+{{%  theorem %}}
+Un dominio $R$ es de factorización única $\Leftrightarrow$ existen factorizaciones y todo irreducible es primo.
+{{% /theorem %}}
+
+
+{{% proof %}}
+$\Rightarrow$ Sea $c\in R$ irreducible. Supongamos que $c|ab$. Entonces $ab=cd$ para cierto $d\in R$. Podemos excluir los casos en los que $a$, $b$ y $d$ son nulos o unidades ya que en estos casos sería obvio deducir que $c$ tendría que dividir a $a$ o a $b$. Descomponemos $a$, $b$ y $d$ como producto de irreducibles,
 $$\begin{array}{rcl}
 a&=&a\_1\cdots a\_r,\cr
 b&=&b\_1\cdots b\_s,\cr
@@ -103,41 +155,69 @@ $$a\_2\cdots a\_r=ub\_1\cdots\widehat{b}_i\cdots b\_s.$$
 Por hipótesis de inducción, ambas factorizaciones coinciden salvo orden y asociados, por tanto las anteriores también. 
 {{%  /proof %}}
 
-{{% proposition  %}}En un DFU, un producto de irreducibles $a_1\cdots a_r$ divide a otro $b_1\cdots b_s$ si y solo si $r\leq s$ y, salvo reordenamiento, $a_i$ y $b_i$ son asociados $1\leq i\leq r$.{{% /proposition %}}
 
-{{% proof %}}Como el primer producto divide al segundo, existe $c\in R$ tal que $a_1\cdots a_rc=b_1\cdots b_s$. Si $c$ no es una unidad, lo factorizamos como producto de irreducibles $c=c_1\cdots c_t$, $$a_1\cdots a_rc_1\cdots c_t=b_1\cdots b_s.$$ Por la unicidad de las factorizaciones, cada $a_i$ es asociado a un $b_j$ distinto, y salvo reordenamiento podemos suponer que son los $r$ primeros. Si $c$ fuera una unidad la unicidad de las factorizaciones demostraría directamente que $r=s$ y que cada $a_i$ es asociado de un $b_j$ distinto.  {{%  /proof %}}
+{{% proposition %}}
+En un DFU, un producto de irreducibles $a_1\cdots a_r$ divide a otro $b_1\cdots b_s$ si y solo si $r\leq s$ y, salvo reordenamiento, $a_i$ y $b_i$ son asociados $1\leq i\leq r$.
+{{% /proposition %}}
 
-{{% corollary %}}Dados dos elementos no nulos de un DFU, $a,b\in R$, existe un **divisor común máximo** $d\in R$, que es un elemento que satisface:
+
+{{% proof %}}
+Como el primer producto divide al segundo, existe $c\in R$ tal que $a_1\cdots a_rc=b_1\cdots b_s$. Si $c$ no es una unidad, lo factorizamos como producto de irreducibles $c=c_1\cdots c_t$, $$a_1\cdots a_rc_1\cdots c_t=b_1\cdots b_s.$$ Por la unicidad de las factorizaciones, cada $a_i$ es asociado a un $b_j$ distinto, y salvo reordenamiento podemos suponer que son los $r$ primeros. Si $c$ fuera una unidad la unicidad de las factorizaciones demostraría directamente que $r=s$ y que cada $a_i$ es asociado de un $b_j$ distinto.  {{%  /proof %}}
+
+
+{{% corollary %}}
+Dados dos elementos no nulos de un DFU, $a,b\in R$, existe un **divisor común máximo** $d\in R$, que es un elemento que satisface:
 
 * $d|a$ y $d|b$.
 
 * si $d'|a$ y $d'|b$ entonces $d'|d$.
 
 El divisor común máximo es único salvo asociados y se denota $\operatorname{mcd}(a,b)$ o $\gcd(a,b)$.
+
 {{% /corollary %}}
 
-{{% proof %}}Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo puesto los divisores de una unidad son las unidades. En caso contrario, basta factorizar ambos elementos $a=a_1\cdots a_r$ y $b=b_1\cdots b_s$ como producto de primos y tomar $d$ como el producto del mayor subconjunto de los factores de $a$ que tienen asociados distintos entre los factores de $b$. La unicidad salvo asociados se deduce de que si $d$ y $d'$ son divisores comunes máximos de $a$ y $b$ entonces por definición $d|d'$ y $d'|d$. {{%  /proof %}}
 
-{{% watch %}} Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. Además, $\operatorname{mcd}(a,b)=0$ si y solo si $a=0=b$ ya que en un dominio no hay divisores de cero. A diferencia de los dominios euclídeos, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.{{% /watch %}}
+{{% proof %}}
+Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo puesto los divisores de una unidad son las unidades. En caso contrario, basta factorizar ambos elementos $a=a_1\cdots a_r$ y $b=b_1\cdots b_s$ como producto de primos y tomar $d$ como el producto del mayor subconjunto de los factores de $a$ que tienen asociados distintos entre los factores de $b$. La unicidad salvo asociados se deduce de que si $d$ y $d'$ son divisores comunes máximos de $a$ y $b$ entonces por definición $d|d'$ y $d'|d$. {{%  /proof %}}
 
-{{% corollary %}}Dados dos elementos no nulos de un DFU, $a,b\in R$, existe un **múltiplo común mínimo** $m\in R$, que es un elemento que satisface:
+
+{{% watch %}}
+ Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. Además, $\operatorname{mcd}(a,b)=0$ si y solo si $a=0=b$ ya que en un dominio no hay divisores de cero. A diferencia de los dominios euclídeos, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
+{{% /watch %}}
+
+
+{{% corollary %}}
+Dados dos elementos no nulos de un DFU, $a,b\in R$, existe un **múltiplo común mínimo** $m\in R$, que es un elemento que satisface:
 
 * $a|m$ y $b|m$.
 
 * si $a|m'$ y $b|m'$ entonces $m|m'$.
 
 El múltiplo común mínimo es único salvo asociados y se denota $\operatorname{mcm}(a,b)$ o $\operatorname{lcm}(a,b)$.
+
 {{% /corollary %}}
 
-{{% proof %}}Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia y la segunda se puede demostrar de manera análoga al caso de los números enteros, conocido por todos.  {{%  /proof %}}
-
-{{%  lemma %}}Dada una sucesión creciente de ideales $I\_1\subset I\_2\subset I\_3\subset\cdots$ en un anillo $R$, su unión $I\_\infty=\cup\_{n\geq 1}I\_n$ es un ideal.{{% /lemma %}}
-
-{{% proof %}}Por un lado, $0\in I\_1\subset I\_{\infty}$. Por otro, dados $a,b\in I\_\infty$ es obvio que $a,b\in I\_n$ para cierto $n\geq 1$, por tanto $a+b$, $-a$ y $ra$, $r\in R$, pertenecen a $I\_n\subset I\_\infty$. {{%  /proof %}}
-
-{{% proposition  %}}Todo DIP es un DFU.{{% /proposition %}}
 
 {{% proof %}}
+Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia y la segunda se puede demostrar de manera análoga al caso de los números enteros, conocido por todos.  {{%  /proof %}}
+
+
+{{%  lemma %}}
+Dada una sucesión creciente de ideales $I\_1\subset I\_2\subset I\_3\subset\cdots$ en un anillo $R$, su unión $I\_\infty=\cup\_{n\geq 1}I\_n$ es un ideal.
+{{% /lemma %}}
+
+
+{{% proof %}}
+Por un lado, $0\in I\_1\subset I\_{\infty}$. Por otro, dados $a,b\in I\_\infty$ es obvio que $a,b\in I\_n$ para cierto $n\geq 1$, por tanto $a+b$, $-a$ y $ra$, $r\in R$, pertenecen a $I\_n\subset I\_\infty$. {{%  /proof %}}
+
+
+{{% proposition %}}
+Todo DIP es un DFU.
+{{% /proposition %}}
+
+
+{{% proof %}}
+
 Sea $R$ un DIP. Veamos por reducción al absurdo que no puede existir una sucesión estrictamente creciente de ideales principales
 $$(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots.$$
 Al estar en un DIP, $\cup\_{n\geq 1}(a\_n)=(b)$ para cierto $b\in R$. Como $b\in \cup\_{n\geq 1}(a\_n)$ este elemento ha de estar en cierto término de la sucesión, $b\in (a\_n)$. Si esto es así $(b)\subset (a\_n)\subsetneq (a\_{n+1})\subset (b)$, lo cual es una contradicción.
@@ -145,62 +225,113 @@ Al estar en un DIP, $\cup\_{n\geq 1}(a\_n)=(b)$ para cierto $b\in R$. Como $b\in
 Veamos ahora que todo irreducible $a\in R$ es primo. Probaremos por reducción al absurdo que el ideal $(a)$ es maximal y por tanto primo. Si $(a)$, que es un ideal propio y no trivial, no fuera maximal podríamos encontrar un ideal $I$ tal que $(a)\subsetneq I\subsetneq R$. Como $R$ es un DIP, $I=(b)$ para cierto $b\in I$. Entonces tenemos que $(a)\subsetneq(b)\subsetneq(1)$. Esto quiere decir que $b$ es un divisor propio de $a$, lo cual es una contradicción. 
 {{%  /proof %}}
 
+
 Más adelante veremos ejemplos de DFU que no son DIP.
 
-{{% proposition  %}}En un DIP, dados $a,b\in R$, cualquier $d\in R$ tal que $(a,b)=(d)$ es un $\operatorname{mcd}(a,b)$.{{% /proposition %}}
-
-{{% proof %}}Como $a,b\in (a,b)=(d)$, $d$ es un divisor común. Si $d'|a$ y $d'|b$ entonces $a,b\in (d')$, luego $(d)=(a,b)\subset (d')$ y por tanto $d'|d$. {{%  /proof %}}
-
-{{% watch %}}Acabamos de demostrat que en un DIP todo divisor común máximo satisface una identidad de Bézout.{{% /watch %}}
-
-{{%  definition  %}}Un **dominio euclídeo** es un dominio $R$ equipado con una función $$\delta\colon R\setminus\\{0\\}\longrightarrow\\{0,1,2\dots\\},$$ llamada **función de tamaño** o **euclídea**, tal que dados $D,d\in R$ con $d\neq 0$, denominados **dividendo** y **divisor**, respectivamente, existen $c,r\in R$, **cociente** y **resto**, de modo que $$D=dc+r$$ y bien $r=0$ o bien $\delta( r )<\delta(d)$.{{% /definition %}}
-
-{{% watch %}}Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con función de tamaño el valor absoluto y el grado, respectivamente. En general, el cociente y el resto no están determinados de manera única por el dividendo y el divisor, por ejemplo $$13=4\cdot 3+1=5\cdot 3+(-2).$$ Los dominios euclídeos son dominios de ideales principales. Todo ideal no trivial está generado por cualquiera de sus elementos no nulos de menor tamaño.{{% /watch %}}
-
-{{% example name="Los enteros de Gauss"   %}}Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Puedes probar a visualizar esta situación en casos concretos [usando esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews). Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su norma es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ {{% /example %}}
+{{% proposition %}}
+En un DIP, dados $a,b\in R$, cualquier $d\in R$ tal que $(a,b)=(d)$ es un $\operatorname{mcd}(a,b)$.
+{{% /proposition %}}
 
 
-{{% example name="Enteros cuadráticos"   %}}Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. [Esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews) te permite explorar la posibilidad de realizar divisiones euclídeas respecto de la norma en estos anillos. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la norma para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con la norma.{{% /example %}}
+{{% proof %}}
+Como $a,b\in (a,b)=(d)$, $d$ es un divisor común. Si $d'|a$ y $d'|b$ entonces $a,b\in (d')$, luego $(d)=(a,b)\subset (d')$ y por tanto $d'|d$. {{%  /proof %}}
+
+
+{{% watch %}}
+Acabamos de demostrat que en un DIP todo divisor común máximo satisface una identidad de Bézout.
+{{% /watch %}}
+
+
+{{%  definition %}}
+Un **dominio euclídeo** es un dominio $R$ equipado con una función $$\delta\colon R\setminus\\{0\\}\longrightarrow\\{0,1,2\dots\\},$$ llamada **función de tamaño** o **euclídea**, tal que dados $D,d\in R$ con $d\neq 0$, denominados **dividendo** y **divisor**, respectivamente, existen $c,r\in R$, **cociente** y **resto**, de modo que $$D=dc+r$$ y bien $r=0$ o bien $\delta( r )<\delta(d)$.
+{{% /definition %}}
+
+
+{{% watch %}}
+Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con función de tamaño el valor absoluto y el grado, respectivamente. En general, el cociente y el resto no están determinados de manera única por el dividendo y el divisor, por ejemplo $$13=4\cdot 3+1=5\cdot 3+(-2).$$ Los dominios euclídeos son dominios de ideales principales. Todo ideal no trivial está generado por cualquiera de sus elementos no nulos de menor tamaño.
+{{% /watch %}}
+
+
+{{% example name="Los enteros de Gauss" %}}
+Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Puedes probar a visualizar esta situación en casos concretos [usando esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews). Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su norma es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ 
+{{% /example %}}
+
+
+
+{{% example name="Enteros cuadráticos" %}}
+Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. [Esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews) te permite explorar la posibilidad de realizar divisiones euclídeas respecto de la norma en estos anillos. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la norma para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con la norma.
+{{% /example %}}
+
 
 ## Enteros de Gauss
 
 Vamos a estudiar los primos y las factorizaciones en el anillo $\mathbb Z[i]$, que es un DFU por ser un DIP. En nuestros argumentos haremos uso de la conjugación, de la norma y de su cuadrado. Recordemos que el cero es el único elemento de norma cero y las unidades $\\{\pm1,\pm i\\}$ son los elementos de norma $1$.
 
-{{% proposition  %}}Si $\pi\in\mathbb Z[i]$ es primo entonces su conjugado $\bar\pi$ también.{{% /proposition %}}
+{{% proposition %}}
+Si $\pi\in\mathbb Z[i]$ es primo entonces su conjugado $\bar\pi$ también.
+{{% /proposition %}}
 
-{{% proof %}}Como la conjugación preserva productos, si $\bar\pi|ab$ entonces $\pi|\bar a\bar b$ luego $\pi|\bar a$ o $\pi|\bar b$, es decir $\bar\pi|a$ o $\bar\pi|b$.   {{%  /proof %}}
+
+{{% proof %}}
+Como la conjugación preserva productos, si $\bar\pi|ab$ entonces $\pi|\bar a\bar b$ luego $\pi|\bar a$ o $\pi|\bar b$, es decir $\bar\pi|a$ o $\bar\pi|b$.   {{%  /proof %}}
+
 
 Necesitaremos la siguiente observación sobre enteros primos.
 
-{{%  lemma %}}Todo entero primo $p\in\mathbb Z$ satisface una y solo una de las siguientes ecuaciones:
+{{%  lemma %}}
+Todo entero primo $p\in\mathbb Z$ satisface una y solo una de las siguientes ecuaciones:
 
 * $p\equiv 1$ mod $4$.
 
 * $p\equiv 3$ mod $4$.
 
 * $p=\pm2$.
+
 {{% /lemma %}}
 
-{{% proof %}}Si $p\equiv 0$ mod $4$ entonces $p$ sería un múltiplo de $4$, con lo cual no sería primo. Si $p\equiv 2$ mod $4$ entonces $p=2+4n=2(1+2n)$ para cierto $n\in\mathbb Z$, que solo es primo si $1+2n$ es invertible en $\mathbb Z$, es decir si y solo si $p=\pm2$.   {{%  /proof %}}
 
-{{% watch %}}Los primos 5, 13, 17, 29, 37, 41, 53, 61... son 1 mod 4, y 3, 7, 11, 19, 23, 31, 43, 47... son 3 mod 4. Demuestra que hay una cantidad infinita de primos que satisfacen tanto la primera como la segunda ecuación.{{% /watch %}}
+{{% proof %}}
+Si $p\equiv 0$ mod $4$ entonces $p$ sería un múltiplo de $4$, con lo cual no sería primo. Si $p\equiv 2$ mod $4$ entonces $p=2+4n=2(1+2n)$ para cierto $n\in\mathbb Z$, que solo es primo si $1+2n$ es invertible en $\mathbb Z$, es decir si y solo si $p=\pm2$.   {{%  /proof %}}
 
-{{% proposition  %}}Si $\pi\in\mathbb Z[i]$ es tal que $|\pi|^2=p\in\mathbb Z$ es un entero primo entonces $\pi$ es primo en los enteros de Gauss y además bien $p=2$ o bien $p\equiv 1$ mod $4$.{{% /proposition %}}
 
-{{% proof %}}Probamos la primera parte por reducción al absurdo, supongamos que $\pi$ se descompone como producto de divisores propios $\pi=z_1z_2$ en $\mathbb Z[i]$. Entonces tenemos la ecuación $|z_1|^2|z_2|^2=|\pi|^2=p$ de números enteros. Como $p$ es primo en los enteros, necesariamente $|z_i|^2=1$ para algún $i\in\\{1,2\\}$, es decir, algún $z_i$ tendría que ser una unidad, lo cual es una contradicción.
+{{% watch %}}
+Los primos 5, 13, 17, 29, 37, 41, 53, 61... son 1 mod 4, y 3, 7, 11, 19, 23, 31, 43, 47... son 3 mod 4. Demuestra que hay una cantidad infinita de primos que satisfacen tanto la primera como la segunda ecuación.
+{{% /watch %}}
+
+
+{{% proposition %}}
+Si $\pi\in\mathbb Z[i]$ es tal que $|\pi|^2=p\in\mathbb Z$ es un entero primo entonces $\pi$ es primo en los enteros de Gauss y además bien $p=2$ o bien $p\equiv 1$ mod $4$.
+{{% /proposition %}}
+
+
+{{% proof %}}
+Probamos la primera parte por reducción al absurdo, supongamos que $\pi$ se descompone como producto de divisores propios $\pi=z_1z_2$ en $\mathbb Z[i]$. Entonces tenemos la ecuación $|z_1|^2|z_2|^2=|\pi|^2=p$ de números enteros. Como $p$ es primo en los enteros, necesariamente $|z_i|^2=1$ para algún $i\in\\{1,2\\}$, es decir, algún $z_i$ tendría que ser una unidad, lo cual es una contradicción.
 
 Veamos la ecuación en congruencias. Si $\pi=a+ib$ entonces $p=|\pi|^2=a^2+b^2$. En $\mathbb Z/4$ los únicos elementos que son cuadrados de otros son $0,1\in\mathbb Z$, por tanto $p=a^2+b^2$ puede ser $0$, $1$ o $2$ módulo $4$. La primera posibilidad queda descartada por el lema anterior y la tercera solo se da cuando $p=2$.  {{%  /proof %}}
 
-{{% watch %}}De este modo vemos que $1+i$, $2+i$, $3+2i$, $4+i$, $5+2i$, $6+i$, $5+4i$, $7+2i$, $6+5i$... son primos en los enteros de Gauss, así como sus conjugados y asociados. En particular $5=(2+i)(2-i)$ es una factorización como producto de primos en $\mathbb Z[i]$.{{% /watch %}}
 
-{{% proposition  %}}Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 3$ mod $4$ entonces $p$ también es primo en los enteros de Gauss.{{% /proposition %}}
+{{% watch %}}
+De este modo vemos que $1+i$, $2+i$, $3+2i$, $4+i$, $5+2i$, $6+i$, $5+4i$, $7+2i$, $6+5i$... son primos en los enteros de Gauss, así como sus conjugados y asociados. En particular $5=(2+i)(2-i)$ es una factorización como producto de primos en $\mathbb Z[i]$.
+{{% /watch %}}
 
-{{% proof %}}Supongamos por reducción al absurdo que $p$ se descompone como producto de divisores propios $p=z_1z_2$, entonces tenemos la ecuación $p^2=|z_1|^2|z_2|^2$ en los enteros. Como ningún $z_i$ es una unidad, necesariamente $|z_1|^2=|z_2|^2=p$. Como $p\equiv 3$ mod $4$, esto es imposible por la proposición anterior.   {{%  /proof %}}
+
+{{% proposition %}}
+Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 3$ mod $4$ entonces $p$ también es primo en los enteros de Gauss.
+{{% /proposition %}}
 
 
-{{% proposition  %}}Salvo asociados, $1+i\in\mathbb Z[i]$ es el único primo cuya norma al cuadrado es $2$.{{% /proposition %}}
+{{% proof %}}
+Supongamos por reducción al absurdo que $p$ se descompone como producto de divisores propios $p=z_1z_2$, entonces tenemos la ecuación $p^2=|z_1|^2|z_2|^2$ en los enteros. Como ningún $z_i$ es una unidad, necesariamente $|z_1|^2=|z_2|^2=p$. Como $p\equiv 3$ mod $4$, esto es imposible por la proposición anterior.   {{%  /proof %}}
 
-{{% proof %}}Si $\pi=a+ib$ y $2=|\pi|^2=a^2+b^2$ es fácil observar que $a^2=b^2=1$, es decir $a=\pm1=b$. Esto nos da
+
+
+{{% proposition %}}
+Salvo asociados, $1+i\in\mathbb Z[i]$ es el único primo cuya norma al cuadrado es $2$.
+{{% /proposition %}}
+
+
+{{% proof %}}
+Si $\pi=a+ib$ y $2=|\pi|^2=a^2+b^2$ es fácil observar que $a^2=b^2=1$, es decir $a=\pm1=b$. Esto nos da
 $$\begin{array}{rcl}
 1+i,&&\cr
 1-i&=&(-i)(1+i),\cr
@@ -209,29 +340,55 @@ $$\begin{array}{rcl}
 \end{array}$$
   {{%  /proof %}}
 
-{{% watch %}}La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(1-i)=(-i)(1+i)^2$.{{% /watch %}}
+
+{{% watch %}}
+La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(1-i)=(-i)(1+i)^2$.
+{{% /watch %}}
+
 
 Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como norma y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
 
-{{%  lemma %}}Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equiv -1$ mod $p$.{{% /lemma %}}
+{{%  lemma %}}
+Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equiv -1$ mod $p$.
+{{% /lemma %}}
 
-{{% proof %}}Observemos la definición del factorial $$(p-1)!=1\underbrace{2\cdots (p-2)}(p-1).$$ Como $p$ es primo, $\mathbb Z/(p)$ es un cuerpo y todo elemento no nulo es una unidad. Ningún factor de la definición de $(p-1)!$ es divisible por $p$, porque es menor. Por tanto todos son unidades módulo $p$. En $\mathbb Z/(p)$ las únicas unidades que son inversas de sí mismas son $\pm 1$ ya que estas son las únicas raíces del polinomio $x^2-1=(x-1)(x+1)$. El primer factor de $(p-1)!$ es $1$ y el último es $p-1\equiv -1$ mod $p$, por tanto, todos los factores de en medio tienen una inversa diferente, que es otro elemento del mismo producto. Dicho de otro modo, el producto de los $p-3$ factores centrales se puede dividir en $(p-3)/2$ pares de elementos mutuamente inversos módulo $p$, con lo que este producto es congruente con $1$ módulo $p$, así que $(p-1)!\equiv 1(p-1)\equiv -1$ mod $p$.   {{%  /proof %}}
 
-{{%  lemma %}}Si $p\in\mathbb Z$ es un  entero primo tal que $p\equiv 1$ mod $4$ entonces $p|(m^2+1)$ para cierto $m\in\mathbb Z$.{{% /lemma %}}
+{{% proof %}}
+Observemos la definición del factorial $$(p-1)!=1\underbrace{2\cdots (p-2)}(p-1).$$ Como $p$ es primo, $\mathbb Z/(p)$ es un cuerpo y todo elemento no nulo es una unidad. Ningún factor de la definición de $(p-1)!$ es divisible por $p$, porque es menor. Por tanto todos son unidades módulo $p$. En $\mathbb Z/(p)$ las únicas unidades que son inversas de sí mismas son $\pm 1$ ya que estas son las únicas raíces del polinomio $x^2-1=(x-1)(x+1)$. El primer factor de $(p-1)!$ es $1$ y el último es $p-1\equiv -1$ mod $p$, por tanto, todos los factores de en medio tienen una inversa diferente, que es otro elemento del mismo producto. Dicho de otro modo, el producto de los $p-3$ factores centrales se puede dividir en $(p-3)/2$ pares de elementos mutuamente inversos módulo $p$, con lo que este producto es congruente con $1$ módulo $p$, así que $(p-1)!\equiv 1(p-1)\equiv -1$ mod $p$.   {{%  /proof %}}
 
-{{% proof %}}Podemos suponer sin pérdida de genralidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces $$\begin{array}{rcl}(p-1)!&=&1\cdot 2\cdots (4n-1)\cdot (4n)\cr &=& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(2n+1)\cdot (2n+2)\cdots (4n-1)\cdot (4n)}.\end{array}$$ Para todo $1\leq i\leq 2n$, en $\mathbb Z/(p)$ el $i$-ésimo factor de la primera mitad es el opuesto por el signo del $i$-ésimo factor de la segunda mitad empezando por el final ya que ambos suman $4n+1=p\equiv 0$ mod $p$. Por tanto, módulo $p$, $$\begin{array}{rcl}(p-1)!&\equiv& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(-2n)\cdot (-2n-1)\cdots (-2)\cdot (-1)}\cr&\equiv&(-1)^{2n}\cdot 1^2\cdot 2^2\cdots (2n-1)^2 (2n)^2\cr &=&m^2\end{array}$$
+
+{{%  lemma %}}
+Si $p\in\mathbb Z$ es un  entero primo tal que $p\equiv 1$ mod $4$ entonces $p|(m^2+1)$ para cierto $m\in\mathbb Z$.
+{{% /lemma %}}
+
+
+{{% proof %}}
+Podemos suponer sin pérdida de genralidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces $$\begin{array}{rcl}(p-1)!&=&1\cdot 2\cdots (4n-1)\cdot (4n)\cr &=& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(2n+1)\cdot (2n+2)\cdots (4n-1)\cdot (4n)}.\end{array}$$ Para todo $1\leq i\leq 2n$, en $\mathbb Z/(p)$ el $i$-ésimo factor de la primera mitad es el opuesto por el signo del $i$-ésimo factor de la segunda mitad empezando por el final ya que ambos suman $4n+1=p\equiv 0$ mod $p$. Por tanto, módulo $p$, $$\begin{array}{rcl}(p-1)!&\equiv& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(-2n)\cdot (-2n-1)\cdots (-2)\cdot (-1)}\cr&\equiv&(-1)^{2n}\cdot 1^2\cdot 2^2\cdots (2n-1)^2 (2n)^2\cr &=&m^2\end{array}$$
 para $m=(2n)!$.  {{%  /proof %}}
 
-{{% watch %}}En la demostración hemos visto que si $p=4n+1\geq 0$ podemos tomar $m=(2n)!$, pero en general se pueden usar números más pequeños, concretamente siempre hay un $0{<}m{<}p$ adecuado ya que simplemente se trata de resolver la ecuación $x^2+1\equiv 0$ mod $p$. Por ejemplo, para $p=13=4\cdot 3+1$, $(2\cdot 3)!=720$ pero podemos tomar $m=5$.{{% /watch %}}
 
-{{% proposition  %}}Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces $p$ no es primo en los enteros de Gauss.{{% /proposition %}}
+{{% watch %}}
+En la demostración hemos visto que si $p=4n+1\geq 0$ podemos tomar $m=(2n)!$, pero en general se pueden usar números más pequeños, concretamente siempre hay un $0{<}m{<}p$ adecuado ya que simplemente se trata de resolver la ecuación $x^2+1\equiv 0$ mod $p$. Por ejemplo, para $p=13=4\cdot 3+1$, $(2\cdot 3)!=720$ pero podemos tomar $m=5$.
+{{% /watch %}}
 
-{{% proof %}}Sabemos que $p|(m^2+1)$ para cierto $m\in\mathbb Z$, es decir $p|(m+i)(m-i)$ pero $p$ no divide a $m\pm i$ ya que no divide a su parte imaginaria. Por tanto $p$ no es primo en $\mathbb Z[i]$.   {{%  /proof %}}
+
+{{% proposition %}}
+Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces $p$ no es primo en los enteros de Gauss.
+{{% /proposition %}}
 
 
-{{%  theorem %}}Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces, salvo asociados, hay exactamente dos primos en los enteros de Gauss cuya norma al cuadrado es $p$. Además estos dos primos son conjugados $\pi,\bar\pi\in\mathbb Z[i]$.{{% /theorem %}}
+{{% proof %}}
+Sabemos que $p|(m^2+1)$ para cierto $m\in\mathbb Z$, es decir $p|(m+i)(m-i)$ pero $p$ no divide a $m\pm i$ ya que no divide a su parte imaginaria. Por tanto $p$ no es primo en $\mathbb Z[i]$.   {{%  /proof %}}
 
-{{% proof %}}Como $p$ no es primo en $\mathbb Z[i]$ podemos descomponerlo como producto de dos divisores propios $p=z_1z_2$. Tenemos la ecuación $p^2=|z_1|^2|z_2|^2$ en los enteros. Como ningún $z_i$ es una unidad, necesariamente $|z_1|^2=|z_2|^2=p$. Según hemos visto antes estos $z_i$ son primos en $\mathbb Z[i]$. Es más $z_1\bar z_1=|z_1|^2=p=z_1z_2$, por tanto $z_2=\bar z_1$.
+
+
+{{%  theorem %}}
+Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces, salvo asociados, hay exactamente dos primos en los enteros de Gauss cuya norma al cuadrado es $p$. Además estos dos primos son conjugados $\pi,\bar\pi\in\mathbb Z[i]$.
+{{% /theorem %}}
+
+
+{{% proof %}}
+Como $p$ no es primo en $\mathbb Z[i]$ podemos descomponerlo como producto de dos divisores propios $p=z_1z_2$. Tenemos la ecuación $p^2=|z_1|^2|z_2|^2$ en los enteros. Como ningún $z_i$ es una unidad, necesariamente $|z_1|^2=|z_2|^2=p$. Según hemos visto antes estos $z_i$ son primos en $\mathbb Z[i]$. Es más $z_1\bar z_1=|z_1|^2=p=z_1z_2$, por tanto $z_2=\bar z_1$.
 
 Llamemos $\pi=z_1=a+ib$. Veamos que $\pi$ y $\bar\pi$ no son asociados. Los asociados de $\pi$ son
 $$\begin{array}{rcl}
@@ -245,22 +402,35 @@ Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera 
 Finalmente, comprobemos no puede haber más que estos primos de Gauss y sus asociados con norma al cuadrado $p$. En efecto, si $\pi'\in\mathbb Z[i]$ satisficiera $p=|\pi'|^2=\pi'\bar\pi'$ entonces como $\pi'|p=\pi\bar\pi$ tendríamos que bien $\pi'|\pi$ o bien $\pi'|\bar\pi$, es decir, como estos tres elementos son primos, $\pi'$ es asociado a $\pi$ o a $\bar\pi$.
   {{%  /proof %}}
 
-{{% watch %}} En las condiciones del enunciado anterior, la factorización de $p$ en $\mathbb Z[i]$ es $p=\pi\bar\pi$. Para $p=5$ los dos primos de Gauss son $\pi=2+i$ y $\bar\pi=2-i$. Los asociados de $\pi$ son $2+i$, $-2-i$, $-1+2i$ y $1-2i$. Los asociados de $\bar\pi$ son los conjugados de los anteriores, $2-i$, $-2+i$, $-1-2i$ y $1+2i$.{{% /watch %}}
+
+{{% watch %}}
+ En las condiciones del enunciado anterior, la factorización de $p$ en $\mathbb Z[i]$ es $p=\pi\bar\pi$. Para $p=5$ los dos primos de Gauss son $\pi=2+i$ y $\bar\pi=2-i$. Los asociados de $\pi$ son $2+i$, $-2-i$, $-1+2i$ y $1-2i$. Los asociados de $\bar\pi$ son los conjugados de los anteriores, $2-i$, $-2+i$, $-1-2i$ y $1+2i$.
+{{% /watch %}}
+
 
 Hasta el momento hemos conseguido calcular aquellos primos de Gauss que son factores de un primo entero. Veamos que estos son todos los primos de Gauss posibles y que por tanto hemos dado ya una descripción completa de todos los primos en $\mathbb Z[i]$
 
-{{% proposition  %}}Todo primo en $\mathbb Z[i]$ divide a un primo en $\mathbb Z$.{{% /proposition %}}
+{{% proposition %}}
+Todo primo en $\mathbb Z[i]$ divide a un primo en $\mathbb Z$.
+{{% /proposition %}}
 
-{{% proof %}}Sea $\pi\in\mathbb Z[i]$ un primo. Factorizamos $|\pi|^2\in\mathbb Z$ como producto de primos enteros $|\pi|^2=p_1\cdots p_n$. Como $|\pi|^2=\pi\bar\pi$ entonces $\pi|p_1\cdots p_n$ así que $\pi|p_i$ para cierto $1\leq i\leq n$.   {{%  /proof %}}
+
+{{% proof %}}
+Sea $\pi\in\mathbb Z[i]$ un primo. Factorizamos $|\pi|^2\in\mathbb Z$ como producto de primos enteros $|\pi|^2=p_1\cdots p_n$. Como $|\pi|^2=\pi\bar\pi$ entonces $\pi|p_1\cdots p_n$ así que $\pi|p_i$ para cierto $1\leq i\leq n$.   {{%  /proof %}}
 
 
-{{% example name="Factores de $p\equiv 1$ mod $4$"   %}}Dado un entero primo $p\in\mathbb Z$ tal que $p\equiv 1$ mod $4$, podemos hallar su factorización como producto de primos $p=\pi\bar\pi$ en $\mathbb Z[i]$ del siguiente modo. Primero encontramos un $m\in\mathbb Z$ tal que $p|(m^2+1)$. Hemos visto en una demostración anterior que $p$ no divide a $m\pm i$, pero $\pi|p$ y $p|(m^2+1)=(m+i)(m-i)$, por tanto el primo de Gauss $\pi$ divide a $m+i$ o a su conjugado, y análogamente $\bar\pi$. Deducimos que $\pi$ y $\bar \pi$ son $\operatorname{mcd}(p,m+i)$ y $\operatorname{mcd}(p,m-i)$.
+
+{{% example name="Factores de $p\equiv 1$ mod $4$" %}}
+Dado un entero primo $p\in\mathbb Z$ tal que $p\equiv 1$ mod $4$, podemos hallar su factorización como producto de primos $p=\pi\bar\pi$ en $\mathbb Z[i]$ del siguiente modo. Primero encontramos un $m\in\mathbb Z$ tal que $p|(m^2+1)$. Hemos visto en una demostración anterior que $p$ no divide a $m\pm i$, pero $\pi|p$ y $p|(m^2+1)=(m+i)(m-i)$, por tanto el primo de Gauss $\pi$ divide a $m+i$ o a su conjugado, y análogamente $\bar\pi$. Deducimos que $\pi$ y $\bar \pi$ son $\operatorname{mcd}(p,m+i)$ y $\operatorname{mcd}(p,m-i)$.
 
 Por ejemplo, para $p=13$ hemos visto que podemos tomar $m=5$. Calculamos $\operatorname{mcd}(13, 5+i)$, mediante el algoritmo de Euclides. Como la norma de $13$ es mayor que la de $5+i$, comenzamos realizando la división euclídea del primero por el segundo, $$13=(5+i)\cdot 3+(-2-3i).$$ Ahora dividimos $5+i$ por el resto de la anterior división, $$(5+i)=(-2-3i)(-1+i)+0.$$
 El resto de esta división es $0$. El divisor común máximo es el último resto no nulo, $$\pi=-2-3i.$$
+
 {{% /example %}}
 
-{{% example name="Factorización en $\mathbb Z[i]$"   %}}Factorizar $n\in\mathbb Z$ en los enteros de Gauss es muy sencillo. Basta factorizarlo en $\mathbb Z$ y luego factorizar sus factores primos enteros en $\mathbb Z[i]$. Factorizar un entero de Gauss genérico $a+ib\in\mathbb Z[i]$ es más complejo. Primero factorizamos su norma al cuadrado $a^2+b^2$ en $\mathbb Z$. Analizando esta factorización obtenemos una de $a+ib\in\mathbb Z$ del siguiente modo:
+
+{{% example name="Factorización en $\mathbb Z[i]$" %}}
+Factorizar $n\in\mathbb Z$ en los enteros de Gauss es muy sencillo. Basta factorizarlo en $\mathbb Z$ y luego factorizar sus factores primos enteros en $\mathbb Z[i]$. Factorizar un entero de Gauss genérico $a+ib\in\mathbb Z[i]$ es más complejo. Primero factorizamos su norma al cuadrado $a^2+b^2$ en $\mathbb Z$. Analizando esta factorización obtenemos una de $a+ib\in\mathbb Z$ del siguiente modo:
 
 
 * Por cada $p^2$ con $p\equiv 3$ mod $4$ que aparezca en la factorización de $a^2+b^2$ tenemos un $p$ en la factorización de $a+ib$.
@@ -286,7 +456,9 @@ El resultado no es un entero de Gauss, por tanto el factor es $2-i$.
 
 Este cálculo nos dice que, salvo asociados, la factorización de $15-45i\in\mathbb Z[i]$ es $$3\cdot (1+i)\cdot (2+i)\cdot (2-i)\cdot (2-i)=45+15i=i(15-45i).$$
 Pasando la unidad $i$ al otro lado de la igualdad obtenemos una verdadera factorización de $15-45i\in\mathbb Z[i]$ como producto de primos, $$15-45i=(-3i)\cdot (1+i)\cdot (2+i)\cdot (2-i)\cdot (2-i).$$
+
 {{% /example %}}
+
 
 El siguiente gráfico nos muestra la distribución de los primos cercanos al origen en los enteros de Gauss. Puedes también usar [esta aplicación interactiva](https://cocalc.com/projects/014254b4-7c8b-4c79-9191-a9a18b5b0708/files/Primos%20de%20Gauss.sagews) para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen.
 
@@ -298,9 +470,13 @@ A modo de ejemplo, vamos a estudiar aquí un par de ecuaciones diofánticas cuya
 
 Al comienzo del tema de anillos nos habíamos planteado como motivación el solucionar la ecuación diofántica $$x^2+y^2=5.$$ Ahora consideraremos más generalmente esta ecuación con un término independiente entero $n\geq 2$ cualquiera, $$x^2+y^2=n.$$
 
-{{%  theorem %}}La ecuación diofántica $$x^2+y^2=n$$ tiene solución si y solo si cualquier primo $p\equiv 3$ mod $4$ tiene exponente par en la factorización de  $n$.{{% /theorem %}}
+{{%  theorem %}}
+La ecuación diofántica $$x^2+y^2=n$$ tiene solución si y solo si cualquier primo $p\equiv 3$ mod $4$ tiene exponente par en la factorización de  $n$.
+{{% /theorem %}}
 
-{{% proof %}}La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales que $|x+iy|^2=n$, pues $|x+iy|^2=x^2+y^2$. Si $x+iy=\pi_1\cdots\pi_n$ es una factorización en $\mathbb Z[i]$ entonces $|x+iy|^2=|\pi_1|^2\cdots|\pi_n|^2$. Sabemos además que $|\pi_i|^2$ puede ser $2$, un primo $p\equiv 1$ mod $4$ o $p^2$ donde $p\equiv 3$ mod $4$. Esto demuestra la necesidad de la condición del enunciado. También la suficiencia porque, si se cumple, basta tomar $x+iy$ como el producto de:
+
+{{% proof %}}
+La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales que $|x+iy|^2=n$, pues $|x+iy|^2=x^2+y^2$. Si $x+iy=\pi_1\cdots\pi_n$ es una factorización en $\mathbb Z[i]$ entonces $|x+iy|^2=|\pi_1|^2\cdots|\pi_n|^2$. Sabemos además que $|\pi_i|^2$ puede ser $2$, un primo $p\equiv 1$ mod $4$ o $p^2$ donde $p\equiv 3$ mod $4$. Esto demuestra la necesidad de la condición del enunciado. También la suficiencia porque, si se cumple, basta tomar $x+iy$ como el producto de:
 
 * Un factor $1+i$ por cada $2$ que aparezca en la factorización de $n$.
 
@@ -310,7 +486,9 @@ Al comienzo del tema de anillos nos habíamos planteado como motivación el solu
 
 El conjunto de todas las soluciones se obtiene permitiendo reemplazar los $\pi$ del segundo apartado por sus conjugados y tomando los asociados de todas las soluciones particulares así obtenidas. En particular hay un número finito de soluciones.   {{%  /proof %}}
 
-{{% example name="$x^2+y^2=1170$"   %}}En este caso concreto $1170=2\cdot 3^2\cdot 5\cdot 13$. El único primo que vale $3$ módulo $4$ y que aparece en esta factorización es el propio $3$, con exponente par, por lo que la ecuación tiene solución. Una solución se corresponde con el entero de Gauss $x+iy$ obtenido al multiplicar los siguientes factores:
+
+{{% example name="$x^2+y^2=1170$" %}}
+En este caso concreto $1170=2\cdot 3^2\cdot 5\cdot 13$. El único primo que vale $3$ módulo $4$ y que aparece en esta factorización es el propio $3$, con exponente par, por lo que la ecuación tiene solución. Una solución se corresponde con el entero de Gauss $x+iy$ obtenido al multiplicar los siguientes factores:
 
 * $1+i$ por aparecer el $2$ como factor de $90$.
 
@@ -335,7 +513,9 @@ $$
 27+21i,&33-9i,&9-33i,&-21-27i.
 \end{array}
 $$
+
 {{% /example %}}
+
 
 La otra ecuación diofántica que vamos a considerar en este epígrafe es la **ecuación de Pitágoras** $$x^2+y^2=z^2.$$
 Sus soluciones positivas $x,y,z>0$ se denominan **ternas pitagóricas** y parametrizan los triángulos rectángulos con lados de medida entera.
@@ -355,29 +535,49 @@ Podemos pues suponer que en una terna pitagórica primitiva $(x,y,z)$, $x$ es im
 La conexión de la ecuación de Pitágoras con los enteros de Gauss proviene de que esta ecuación equivale a
 $$(x+iy)(x-iy)=z^2.$$
 
-{{%  lemma %}}Dados $x,y\in\mathbb Z$ tenemos que $x\equiv y$ mod $2$ $\Leftrightarrow$ $(1+i)|(x+iy)$.{{% /lemma %}}
+{{%  lemma %}}
+Dados $x,y\in\mathbb Z$ tenemos que $x\equiv y$ mod $2$ $\Leftrightarrow$ $(1+i)|(x+iy)$.
+{{% /lemma %}}
 
-{{% proof %}}$\Rightarrow$ Si $x\equiv y$ mod $2$ entonces $x$ e $y$ son ambos pares o ambos impares. Si son ambos pares entonces $2|(x+iy)$ y ya sabemos que $(1+i)|2$ con lo que $(1+i)|(x+iy)$. Si son ambos impares entonces $y\pm x$ es par y tenemos la siguiente ecuación en $\mathbb Z[i]$, $$x+iy=(1+i)\left(\frac{y+x}{2}+i\frac{y-x}{2}\right).$$
+
+{{% proof %}}
+$\Rightarrow$ Si $x\equiv y$ mod $2$ entonces $x$ e $y$ son ambos pares o ambos impares. Si son ambos pares entonces $2|(x+iy)$ y ya sabemos que $(1+i)|2$ con lo que $(1+i)|(x+iy)$. Si son ambos impares entonces $y\pm x$ es par y tenemos la siguiente ecuación en $\mathbb Z[i]$, $$x+iy=(1+i)\left(\frac{y+x}{2}+i\frac{y-x}{2}\right).$$
 
 $\Leftarrow$ Si $(1+i)|(x+iy)$ entonces  $$x+iy=(1+i)(x'+iy')=(x'-y')+(x'+y')i$$ y por tanto $$x=x'-y'\equiv x'+y'=y \mod 2.$$   {{%  /proof %}}
 
+
 En el siguiente lema caracterizamos en términos de los enteros de Gauss la condición sobre $x$ e $y$ que caracteriza las ternas pitagóricas que son primitivas.
 
-{{%  lemma %}}Dados $x,y\in\mathbb Z$ tenemos que $\operatorname{mcd}(x,y)=1$ y $x\not\equiv y$ mod $2$ $\Leftrightarrow$ $\operatorname{mcd}(x+iy,x-iy)=1$.{{% /lemma %}}
+{{%  lemma %}}
+Dados $x,y\in\mathbb Z$ tenemos que $\operatorname{mcd}(x,y)=1$ y $x\not\equiv y$ mod $2$ $\Leftrightarrow$ $\operatorname{mcd}(x+iy,x-iy)=1$.
+{{% /lemma %}}
 
-{{% proof %}}$\Rightarrow$ Por reducción al absurdo. Si $\pi\in\mathbb Z[i]$ es un primo de Gauss tal que $\pi|(x+iy)$ y $\pi|(x-iy)$ entonces $$\begin{array}{rcl}\pi\;|\;[(x+iy)+(x-iy)]&=&2x,\cr \pi\;|\;[(x+iy)-(x-iy)]&=&2yi.\end{array}$$ Como $\operatorname{mcd}(x,y)=1$ entonces $\pi|2$, es decir $\pi=1+i$ (o un asociado). Por tanto $(1+i)|(x+iy)$, así que por el lema anterior $x\equiv y$ mod $2$, lo cual es una contradicción.
+
+{{% proof %}}
+$\Rightarrow$ Por reducción al absurdo. Si $\pi\in\mathbb Z[i]$ es un primo de Gauss tal que $\pi|(x+iy)$ y $\pi|(x-iy)$ entonces $$\begin{array}{rcl}\pi\;|\;[(x+iy)+(x-iy)]&=&2x,\cr \pi\;|\;[(x+iy)-(x-iy)]&=&2yi.\end{array}$$ Como $\operatorname{mcd}(x,y)=1$ entonces $\pi|2$, es decir $\pi=1+i$ (o un asociado). Por tanto $(1+i)|(x+iy)$, así que por el lema anterior $x\equiv y$ mod $2$, lo cual es una contradicción.
 
 $\Leftarrow$ Cualquier divisor común de $x$ e $y$ divide tanto a $x+iy$ como a $x-iy$, por tanto $\operatorname{mcd}(x,y)=1$. Además $x\not\equiv y$ mod $2$ ya que en caso contrario, por el lema anterior, $(1+i)|(x+iy)$ y por tanto $(1-i)|(x-iy)$. Como $1+i$ y $1-i$ son asociados, ambos dividirían tanto a $x+iy$ como a $x-iy$, que no podrían ser coprimos.
   {{%  /proof %}}
 
-{{%  lemma %}}En un DFU $R$, las soluciones de la ecuación $xy=z^2$ con $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.{{% /lemma %}}
 
-{{% proof %}} Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2=1$.   {{%  /proof %}}
+{{%  lemma %}}
+En un DFU $R$, las soluciones de la ecuación $xy=z^2$ con $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.
+{{% /lemma %}}
 
 
-{{%  theorem %}}Las ternas pitagóricas primitivas son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$ con $a,b\in\mathbb Z$, $a>b>0$, $\operatorname{mcd}(a,b)=1$, $a\not\equiv b$ mod $2$.{{% /theorem %}}
+{{% proof %}}
+ Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2=1$.   {{%  /proof %}}
 
-{{% proof %}}La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el lema anterior, tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, en primera instancia $x+iy=(a+ib)^2$ y $x-iy=(a-ib)^2$. En particular $$\begin{array}{rcl} x&=&a^2-b^2,\cr y&=&2ab. \end{array}$$ Además, de nuevo por el lema anterior, $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$. La positividad de las ternas pitagóricas equivale a $a>b>0$. Además, claramente la primera coordenada es impar y la segunda par. Es sencillo comprobar que todas estas ternas satisfacen en efecto la ecuación de Pitágoras. En segunda instancia tendríamos que considerar más generalmente soluciones de la forma $x+iy=u(a+ib)^2$ y $x-iy=\bar u (a-ib)^2$, donde $u$ es una unidad en $\mathbb Z[i]$, pero se puede comprobar como ejercicio que por esta vía acabaríamos dando exactamente con las mismas ternas pitagóricas primitivas que antes.   {{%  /proof %}}
+
+
+{{%  theorem %}}
+Las ternas pitagóricas primitivas son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$ con $a,b\in\mathbb Z$, $a>b>0$, $\operatorname{mcd}(a,b)=1$, $a\not\equiv b$ mod $2$.
+{{% /theorem %}}
+
+
+{{% proof %}}
+La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el lema anterior, tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, en primera instancia $x+iy=(a+ib)^2$ y $x-iy=(a-ib)^2$. En particular $$\begin{array}{rcl} x&=&a^2-b^2,\cr y&=&2ab. \end{array}$$ Además, de nuevo por el lema anterior, $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$. La positividad de las ternas pitagóricas equivale a $a>b>0$. Además, claramente la primera coordenada es impar y la segunda par. Es sencillo comprobar que todas estas ternas satisfacen en efecto la ecuación de Pitágoras. En segunda instancia tendríamos que considerar más generalmente soluciones de la forma $x+iy=u(a+ib)^2$ y $x-iy=\bar u (a-ib)^2$, donde $u$ es una unidad en $\mathbb Z[i]$, pero se puede comprobar como ejercicio que por esta vía acabaríamos dando exactamente con las mismas ternas pitagóricas primitivas que antes.   {{%  /proof %}}
+
 
 El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica con $x,y\leq 4500$.
 
@@ -387,13 +587,23 @@ El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pi
 
 En este epígrafe demostraremos que los anillos de polinomios con coeficients en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
 
-{{%  definition  %}}Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. {{% /definition %}}
+{{%  definition %}}
+Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
+{{% /definition %}}
 
-{{% watch %}}Los únicos polinomios primitivos constantes son las unidades de $R$.{{% /watch %}}
 
-{{%  lemma %}}Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in k[x]$ no nulo existe una constante $c\in k$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in R[x]$ tal que $$f(x)=c\cdot f_0(x).$$ Además $c$ y $f_0(x)$ son únicos salvo producto por unidades de $R$. Denotaremos $c=\operatorname{cont}(f)$. {{% /lemma %}}
+{{% watch %}}
+Los únicos polinomios primitivos constantes son las unidades de $R$.
+{{% /watch %}}
+
+
+{{%  lemma %}}
+Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in k[x]$ no nulo existe una constante $c\in k$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in R[x]$ tal que $$f(x)=c\cdot f_0(x).$$ Además $c$ y $f_0(x)$ son únicos salvo producto por unidades de $R$. Denotaremos $c=\operatorname{cont}(f)$. 
+{{% /lemma %}}
+
 
 {{% proof %}}
+
 Veamos la existencia. Podemos quitar denominadores de los coeficientes de $f(x)$ multiplicando por una constante $d\in R$ no nula, $$d\cdot f(x)\in R[x].$$ Si $e$ es el divisor común máximo de los coeficientes de $d\cdot f(x)$ vemos que podemos tomar
 $$\begin{array}{rcl}
 f_0&=&\frac{d}{e}\cdot f(x),\cr
@@ -403,32 +613,63 @@ c&=&\frac{e}{d}.
 Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in R[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in R$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del máximo común divisor, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in R$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
    {{%  /proof %}}
 
-{{% watch %}}Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f(x))\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$ (o cualquier unidad de $R$).{{% /watch %}}
 
-{{% example name="Lema de Gauss"  %}}El producto de polinomios primitivos en $R[x]$ es primitivo. {{% /example %}}
+{{% watch %}}
+Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f(x))\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$ (o cualquier unidad de $R$).
+{{% /watch %}}
 
-{{% proof %}} Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0,$$ el homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.    {{%  /proof %}}
 
-{{% corollary %}}Dados $f,g\in k[x]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$. {{% /corollary %}}
+{{% example name="Lema de Gauss" %}}
+El producto de polinomios primitivos en $R[x]$ es primitivo. 
+{{% /example %}}
 
-{{% proof %}} Tomamos $f,g\in k[x]$ y los descomponemos  $$\begin{array}{rcl} f&=&c\cdot f_0,\cr g&=&d\cdot g_0, \end{array}$$ con $c,d\in k$ y $f_0,g_0\in R[x]$ primitivos. Entonces $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposición válida del producto $f\cdot g$, así que $c\cdot d$ es su contenido.   {{%  /proof %}}
-
-{{% proposition  %}}Dados $f,g\in R[x]$, si $g|f$ en $k[x]$ y $g$ es primitivo entonces $g|f$ en $R[x]$. {{% /proposition %}}
-
-{{% proof %}} Supongamos que $f=g\cdot q$ en $k[x]$. Como $g$ es primitivo, $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$ Como $f\in R[x]$ su contenido está en $R$, y como este coindice con el de $q$, entonces $q\in R[x]$, por lo que $g|f$ en $R[x]$.  {{%  /proof %}}
-
-{{% proposition  %}}Un polinomio $f\in R[x]$ no constante es irreducible en $R[x]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $k[x]$. {{% /proposition %}}
 
 {{% proof %}}
+ Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0,$$ el homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.    {{%  /proof %}}
+
+
+{{% corollary %}}
+Dados $f,g\in k[x]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$. 
+{{% /corollary %}}
+
+
+{{% proof %}}
+ Tomamos $f,g\in k[x]$ y los descomponemos  $$\begin{array}{rcl} f&=&c\cdot f_0,\cr g&=&d\cdot g_0, \end{array}$$ con $c,d\in k$ y $f_0,g_0\in R[x]$ primitivos. Entonces $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposición válida del producto $f\cdot g$, así que $c\cdot d$ es su contenido.   {{%  /proof %}}
+
+
+{{% proposition %}}
+Dados $f,g\in R[x]$, si $g|f$ en $k[x]$ y $g$ es primitivo entonces $g|f$ en $R[x]$. 
+{{% /proposition %}}
+
+
+{{% proof %}}
+ Supongamos que $f=g\cdot q$ en $k[x]$. Como $g$ es primitivo, $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$ Como $f\in R[x]$ su contenido está en $R$, y como este coindice con el de $q$, entonces $q\in R[x]$, por lo que $g|f$ en $R[x]$.  {{%  /proof %}}
+
+
+{{% proposition %}}
+Un polinomio $f\in R[x]$ no constante es irreducible en $R[x]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $k[x]$. 
+{{% /proposition %}}
+
+
+{{% proof %}}
+
 $\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
 
 $\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.   {{%  /proof %}}
 
-{{% watch %}}Una constante $a\in R$ es irreducible en $R[x]$ si y solo si lo es en $R$.{{% /watch %}}
 
-{{%  theorem %}}$R[x]$ es un DFU.{{% /theorem %}}
+{{% watch %}}
+Una constante $a\in R$ es irreducible en $R[x]$ si y solo si lo es en $R$.
+{{% /watch %}}
+
+
+{{%  theorem %}}
+$R[x]$ es un DFU.
+{{% /theorem %}}
+
 
 {{% proof %}}
+
 Primero probamos que existen factorizaciones en $R[x]$. Supongamos por reducción al absurdo que tenemos una sucesión estrictamente creciente de ideales principales (que podemos suponer no nulos) en este anillo, $$(f\_1)\subsetneq (f\_2)\subsetneq (f\_3)\subsetneq\cdots.$$ Ningún $(f\_n)$ puede ser el ideal total porque la sucesión estabilizaría necesariamente a partir de este punto. Por tanto, cada $f\_{n+1}$ es un divisor propio de $f\_{n}$, $n\geq 1$. En particular grado de $0\leq$ grado de $f\_{n+1}\leq$ grado de $f\_{n}$, es decir, los grados de los generadores forman una sucesion decreciente de enteros no negativos. Esta sucesión de enteros no nulos ha de estabilizar a partir de cierto punto, es decir, ha de existir cierto $n\_0\geq 1$ tal que grado de $f\_{n+1}=$ grado de $f\_{n}$ para todo $n\geq n\_0$, o equivalentemente $f\_n=c\_{n+1}f\_{n+1}$ para cierto $c\_{n+1}\in R$ que no puede ser una unidad ni tampoco nulo.
 Si llamamos $d\_n$ al contenido de $f\_n$ tenemos que $d\_n=c\_{n+1}d\_{n+1}$. Ningún contenido $d\_n$ puede ser una unidad porque es divisible por $c\_{n+1}$ así que por tanto $d\_n=c\_{n+1}d\_{n+1}$ es una factorización como producto de divisores propios. Sustituyendo reiteradamente vemos que
 $$
@@ -445,19 +686,32 @@ Veamos que todo elemento irreducible de $R[x]$ es primo. Consideraremos primero 
 
 Supongamos ahora que  $a\in R\subset  R[x]$ es una constante irreducible y que $a|gh$ en $R[x]$. Esto último equivale adecir que $a$ divide al contenido de $gh$, es decir $a|cd$ donde $c,d\in R$ son los contenidos de $g$ y $h$, respectivamente. Como $R$ es un DFU, el irreducible $a$ es primo en $R$, así que $a|c$ o $a|d$, es decir, $a|g$ o $a|h$.
 
-   {{%  /proof %}} 
+   {{%  /proof %}}
+ 
 
-{{% corollary %}}$R[x_1,\dots, x_n]$ es un DFU para todo $n\geq 0$.{{% /corollary %}}
+{{% corollary %}}
+$R[x_1,\dots, x_n]$ es un DFU para todo $n\geq 0$.
+{{% /corollary %}}
 
-{{% example name="El anillo $\mathbb Z[x]$"   %}}Este anillo es un DFU pero no es un DIP. Para comprobarlo basta ver que la identidad de Bézout para el divisor común máximo no siempre se da. Tanto $2$ como $x$ son primos en $\mathbb Z[x]$ según criterios vistos anteriormente. Como no son asociados, $\operatorname{mcd}(2,x)=1$, pero $1\notin (2,x)$ ya que todo elemento de este ideal es de la forma $2g+xh$ para ciertos $g,h\in \mathbb Z[x]$, así que su término independiente ha de ser par. Por tanto no hay una identidad de Bézout en este caso. El ideal $(2,x)\subset \mathbb Z[x]$ es de hecho un ejemplo de ideal que no es principal.{{% /example %}}
+
+{{% example name="El anillo $\mathbb Z[x]$" %}}
+Este anillo es un DFU pero no es un DIP. Para comprobarlo basta ver que la identidad de Bézout para el divisor común máximo no siempre se da. Tanto $2$ como $x$ son primos en $\mathbb Z[x]$ según criterios vistos anteriormente. Como no son asociados, $\operatorname{mcd}(2,x)=1$, pero $1\notin (2,x)$ ya que todo elemento de este ideal es de la forma $2g+xh$ para ciertos $g,h\in \mathbb Z[x]$, así que su término independiente ha de ser par. Por tanto no hay una identidad de Bézout en este caso. El ideal $(2,x)\subset \mathbb Z[x]$ es de hecho un ejemplo de ideal que no es principal.
+{{% /example %}}
+
 
 Finalmente veremos un par de condiciones suficientes para la irreducibilidad de un polinomio.
 
-{{% proposition  %}}Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$, $p\in R$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(R/(p))[x]$, entonces $f$ es irreducible en $R[x]$. {{% /proposition %}}
+{{% proposition %}}
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$, $p\in R$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(R/(p))[x]$, entonces $f$ es irreducible en $R[x]$. 
+{{% /proposition %}}
 
-{{% proof %}} Usaremos el homomorfismo $\phi_p\colon R[x]\rightarrow (R/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ Reduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $R$ como $R/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.   {{%  /proof %}}
 
-{{% theorem name="Criterio de Eisenstein"%}}Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$ y $p\in R$ es un primo tal que: 
+{{% proof %}}
+ Usaremos el homomorfismo $\phi_p\colon R[x]\rightarrow (R/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ Reduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $R$ como $R/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.   {{%  /proof %}}
+
+
+{{% theorem name="Criterio de Eisenstein"%}}
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$ y $p\in R$ es un primo tal que: 
 
 * $p$ no divide $a\_n$,
 
@@ -465,6 +719,10 @@ Finalmente veremos un par de condiciones suficientes para la irreducibilidad de 
 
 * $p^2$ no divide a $a_0$,
 
-entonces $f$ es irreducible en $R[x]$. {{% /theorem %}}
+entonces $f$ es irreducible en $R[x]$. 
+{{% /theorem %}}
 
-{{% proof %}} Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in R$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $R/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   {{%  /theorem %}}
+
+{{% proof %}}
+ Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in R$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $R/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   {{%  /theorem %}}
+
