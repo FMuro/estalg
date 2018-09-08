@@ -29,10 +29,9 @@ El diseño es adaptable, debe funcionar igual de bien tanto en ordenadores como 
 
 ![responsive](./images/responsive.png)
 
-Las pruebas de resultados aparecerán frecuentemente plegadas para no sobrecargar la página. Se despliegan pulsando.
+Las pruebas de resultados aparecerán plegadas para no sobrecargar la página. Se despliegan pulsando sobre ellas.
 
 {{% proof %}}
-
 Aquí iría la demostración.
 {{%  /proof %}}
 

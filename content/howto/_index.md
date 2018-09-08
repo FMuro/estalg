@@ -68,6 +68,19 @@ También es fácil insertar imágenes:
 ![esto es una imagen](../images/gaussian_primes.png)
 ```
 
+Se pueden incluso hacer tablas del siguiente modo:
+
+| Primera columna   | Segunda columna                |
+| ------------------| ------------------------------ |
+| Papas             | Cerveza                        |
+| Huevos            | Whisky                         |
+
+```
+| Primera columna   | Segunda columna                |
+| ------------------| ------------------------------ |
+| Papas             | Cerveza                        |
+| Huevos            | Whisky                         |
+```
 
 ## Notación matemática
 
