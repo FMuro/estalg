@@ -30,7 +30,7 @@ GitLab también genera periódicamente una versión de la web [en esta direcció
 
 ## Formato markdown
 
-El título de esta sección se ha escrito con el código `## Formato markdown`. Las **negrillas** se escriben `**negrillas**`. Las _cursivas_ se pueden escribir `_cursivas_` o `*cursivas*`, si una de las dos produce errores debido al contexto, se usa la otra. 
+El título de esta sección se ha escrito con el código `## Formato markdown`. Las __negrillas__ se escriben `**negrillas**` o bien `__negrillas__`, si una de las dos produce errores debido al contexto, se usa la otra. Las _cursivas_ se pueden escribir `*cursivas*` o `_cursivas_`. Se puede ~~tachar~~ escribiendo `~~tachar~~`.
 
 Es muy fácil hacer listas:
 
@@ -58,7 +58,7 @@ Es sencillo crear enlaces y referencias cruzadas a secciones:
 
 * Aprende markdown en [Wikipedia](https://en.wikipedia.org/wiki/Markdown). Esto se escribe `[Wikipedia](https://en.wikipedia.org/wiki/Markdown)`.
 
-* Pulsa [aquí](#notación-matemática) para is a la sección sobre cómo escribir matemáticas. En este caso el código es `[aquí](#notación-matemática)`.
+* Pulsa [aquí](#notación-matemática) para ir a la sección sobre cómo escribir matemáticas. En este caso el código es `[aquí](#notación-matemática)`.
 
 También es fácil insertar imágenes:
 
