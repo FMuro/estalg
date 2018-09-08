@@ -158,7 +158,7 @@ Esto es un mensaje de alerta.
 
 ```
 {{%/* watch */%}}
-¡watch! Esto es un mensaje de alerta. 
+Esto es un mensaje de alerta. 
 {{%/* /watch */%}}
 ```
 
