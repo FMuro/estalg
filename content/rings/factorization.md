@@ -7,7 +7,7 @@ La noción clásica de divisibilidad se comporta de manera inesperada en presenc
 
 ## Divisores
 
-{{%  definition %}}
+{{% definition %}}
 En un dominio $R$, decimos que $a$ **divide** a $b$, o que $b$ es un **múltiplo** de $a$, y escribimos $a|b$, si $b=aq$ para cierto $q\in R$, que llamaremos **cociente**. Decimos que $a$ es un **divisor propio** de $b$ si además ni $a$ ni $q$ son unidades. Un elemento no trivial de $R$ es **irreducible** si no tiene divisores propios ni es una unidad. Dos elementos $a$ y $a'$ son **asociados** si tanto $a| a'$ como $a'|a$. 
 {{% /definition %}}
 
@@ -40,7 +40,7 @@ En un dominio $R$:
 * $\Rightarrow$ se ha visto antes. $\Leftarrow$ si $(u)=(1)$ entonces existe $r\in R$ tal que $ru=1$, con lo que $u$ es una unidad.
 
 * Es consecuencia de los tres apartados anteriores. 
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -53,7 +53,7 @@ Si $a\in R$ no es nulo ni una unidad, un divisor de $a$  es bien propio, bien as
 
 En un dominio $R$, si $a\in R$ es un elemento no trivial que no es una unidad ni tampoco irreducible, entonces podemos descomponerlo como producto de dos divisores propios $a=bc$. Lo mismo podemos hacer con $b$ y con $c$, y así sucesivamente. Este procedimiento puede acabar en una descomposición de $a=b\_1\cdots b\_n$ como producto de elementos irreducibles $b_i\in R$, $1\leq i\leq n$, pero también podría no acabar nunca.
 
-{{%  definition %}}
+{{% definition %}}
 Decimos que **existen factorizaciones** en un dominio $R$ si el anterior proceso de factorización acaba para todo elemento no nulo que no sea una unidad.
 {{% /definition %}}
 
@@ -74,7 +74,7 @@ a\_1&=& q\_2a\_2\cr
 lo cual es una contradicción.
 
 $\Leftarrow$ Probaremos que si no existen factorizaciones entonces podemos encontrar una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Sea $a\_1\in R$ un elemento no nulo que no sea una unidad para el cual el proceso de factorización no termina. Entonces podemos descomponerlo como producto de divisores propios $a\_1=q\_2a\_2$ de modo que alguno de los dos no es irreducible. Como el producto es conmutativo podemos suponer que es $a_2$ el que no es irreducible. Por tanto este también se puede descomponer como producto de dos divisores propios $a\_2=q\_3a\_3$ alguno de los cuales no es irreducible. Una vez más podemos suponer que es $a\_3$ el no irreducible y continuar indefinidamente con el proceso. Por construcción, esto nos da una sucesión creciente $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$ que es estricta porque todas las descomposiciones anteriores son como producto de dos divisores propios. 
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -87,7 +87,7 @@ No es fácil construir dominios donde no existan factorizaciones. El ejemplo má
 {{% /example %}}
 
 
-{{%  definition %}}
+{{% definition %}}
 Un **dominio de factorización única** (también **DFU** o **UFD**) es un dominio donde existen factorizaciones y tal que dos factorizaciones de un mismo elemento coinciden salvo orden y asociados, es decir si $$b\_1\cdots b\_s=c\_1\cdots c\_t$$ son productos de irreducibles entonces $s=t$ y existe una permutación $\sigma\in S\_s$ de $s$ elementos tal que $b\_i$ y $c\_{\sigma(i)}$ son asociados, $1\leq i\leq s$.
 {{% /definition %}}
 
@@ -106,7 +106,7 @@ Por último, el $3$ no es un asociado de $2\pm\sqrt{-5}$ porque las únicas unid
 
 Con el objetivo de caracterizar los DFU, introducimos un nuevo tipo de elemento.
 
-{{%  definition %}}
+{{% definition %}}
 Un elemento de un dominio $p\in R$ es **primo** si no es nulo ni una unidad y además si $p|ab$ entonces bien $p|a$ o bien $p|b$. 
 {{% /definition %}}
 
@@ -122,7 +122,8 @@ En un dominio, todo elemento primo $p\in R$ es irreducible.
 
 
 {{% proof %}}
-El primo no es una unidad porque los ideales primos son distintos del total, $(p)\neq (1)$. Veamos que no tiene divisores propios. Para ello supongamos que $p=ab$ y demostremos que $a$ o $b$ es una unidad. Como $p|ab$, entonces $p|a$ o $p|b$. Si $p|a$ entonces $a=pq$, luego $p=ab=pqb$. Como los primos no son nulos y estamos en un dominio esto implica que $1=qb$, por tanto $b$ es una unidad. Si $p|b$ deducimos del mismo modo que $a$ tendría que ser una unidad. {{%  /proof %}}
+El primo no es una unidad porque los ideales primos son distintos del total, $(p)\neq (1)$. Veamos que no tiene divisores propios. Para ello supongamos que $p=ab$ y demostremos que $a$ o $b$ es una unidad. Como $p|ab$, entonces $p|a$ o $p|b$. Si $p|a$ entonces $a=pq$, luego $p=ab=pqb$. Como los primos no son nulos y estamos en un dominio esto implica que $1=qb$, por tanto $b$ es una unidad. Si $p|b$ deducimos del mismo modo que $a$ tendría que ser una unidad.
+{{% /proof %}}
 
 
 {{% example name="Un irreducible que no es primo" %}}
@@ -131,7 +132,7 @@ Continuando con el ejemplo anterior, el irreducible $3\in \mathbb Z[\sqrt{-5}]$ 
 
 
 
-{{%  theorem %}}
+{{% theorem %}}
 Un dominio $R$ es de factorización única $\Leftrightarrow$ existen factorizaciones y todo irreducible es primo.
 {{% /theorem %}}
 
@@ -153,7 +154,7 @@ $$a\_1\cdots a\_r=b\_1\cdots b\_s.$$
 Supongamos sin pérdida de generalidad que $1\leq r\leq s$. Procedemos por inducción en $r$. Si $r=1$ entonces $s=1$ puesto que un irreducible no tiene divisores propios. En este caso no hay nada que probar pues $a_1=b_1$. Sea $r>1$. Como $a_1|b_1\cdots b_s$ y $a_1$ es primo, $a_1$ es asociado de algún $b_i$, es decir $b_i=ua_1$ para cierta unidad $u\in R$. Por la propiedad cancelativa
 $$a\_2\cdots a\_r=ub\_1\cdots\widehat{b}_i\cdots b\_s.$$
 Por hipótesis de inducción, ambas factorizaciones coinciden salvo orden y asociados, por tanto las anteriores también. 
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -162,7 +163,8 @@ En un DFU, un producto de irreducibles $a_1\cdots a_r$ divide a otro $b_1\cdots 
 
 
 {{% proof %}}
-Como el primer producto divide al segundo, existe $c\in R$ tal que $a_1\cdots a_rc=b_1\cdots b_s$. Si $c$ no es una unidad, lo factorizamos como producto de irreducibles $c=c_1\cdots c_t$, $$a_1\cdots a_rc_1\cdots c_t=b_1\cdots b_s.$$ Por la unicidad de las factorizaciones, cada $a_i$ es asociado a un $b_j$ distinto, y salvo reordenamiento podemos suponer que son los $r$ primeros. Si $c$ fuera una unidad la unicidad de las factorizaciones demostraría directamente que $r=s$ y que cada $a_i$ es asociado de un $b_j$ distinto.  {{%  /proof %}}
+Como el primer producto divide al segundo, existe $c\in R$ tal que $a_1\cdots a_rc=b_1\cdots b_s$. Si $c$ no es una unidad, lo factorizamos como producto de irreducibles $c=c_1\cdots c_t$, $$a_1\cdots a_rc_1\cdots c_t=b_1\cdots b_s.$$ Por la unicidad de las factorizaciones, cada $a_i$ es asociado a un $b_j$ distinto, y salvo reordenamiento podemos suponer que son los $r$ primeros. Si $c$ fuera una unidad la unicidad de las factorizaciones demostraría directamente que $r=s$ y que cada $a_i$ es asociado de un $b_j$ distinto.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -178,7 +180,8 @@ El divisor común máximo es único salvo asociados y se denota $\operatorname{m
 
 
 {{% proof %}}
-Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo puesto los divisores de una unidad son las unidades. En caso contrario, basta factorizar ambos elementos $a=a_1\cdots a_r$ y $b=b_1\cdots b_s$ como producto de primos y tomar $d$ como el producto del mayor subconjunto de los factores de $a$ que tienen asociados distintos entre los factores de $b$. La unicidad salvo asociados se deduce de que si $d$ y $d'$ son divisores comunes máximos de $a$ y $b$ entonces por definición $d|d'$ y $d'|d$. {{%  /proof %}}
+Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo puesto los divisores de una unidad son las unidades. En caso contrario, basta factorizar ambos elementos $a=a_1\cdots a_r$ y $b=b_1\cdots b_s$ como producto de primos y tomar $d$ como el producto del mayor subconjunto de los factores de $a$ que tienen asociados distintos entre los factores de $b$. La unicidad salvo asociados se deduce de que si $d$ y $d'$ son divisores comunes máximos de $a$ y $b$ entonces por definición $d|d'$ y $d'|d$.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -199,16 +202,18 @@ El múltiplo común mínimo es único salvo asociados y se denota $\operatorname
 
 
 {{% proof %}}
-Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia y la segunda se puede demostrar de manera análoga al caso de los números enteros, conocido por todos.  {{%  /proof %}}
+Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia y la segunda se puede demostrar de manera análoga al caso de los números enteros, conocido por todos.
+{{% /proof %}}
 
 
-{{%  lemma %}}
+{{% lemma %}}
 Dada una sucesión creciente de ideales $I\_1\subset I\_2\subset I\_3\subset\cdots$ en un anillo $R$, su unión $I\_\infty=\cup\_{n\geq 1}I\_n$ es un ideal.
 {{% /lemma %}}
 
 
 {{% proof %}}
-Por un lado, $0\in I\_1\subset I\_{\infty}$. Por otro, dados $a,b\in I\_\infty$ es obvio que $a,b\in I\_n$ para cierto $n\geq 1$, por tanto $a+b$, $-a$ y $ra$, $r\in R$, pertenecen a $I\_n\subset I\_\infty$. {{%  /proof %}}
+Por un lado, $0\in I\_1\subset I\_{\infty}$. Por otro, dados $a,b\in I\_\infty$ es obvio que $a,b\in I\_n$ para cierto $n\geq 1$, por tanto $a+b$, $-a$ y $ra$, $r\in R$, pertenecen a $I\_n\subset I\_\infty$.
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -223,7 +228,7 @@ $$(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots.$$
 Al estar en un DIP, $\cup\_{n\geq 1}(a\_n)=(b)$ para cierto $b\in R$. Como $b\in \cup\_{n\geq 1}(a\_n)$ este elemento ha de estar en cierto término de la sucesión, $b\in (a\_n)$. Si esto es así $(b)\subset (a\_n)\subsetneq (a\_{n+1})\subset (b)$, lo cual es una contradicción.
 
 Veamos ahora que todo irreducible $a\in R$ es primo. Probaremos por reducción al absurdo que el ideal $(a)$ es maximal y por tanto primo. Si $(a)$, que es un ideal propio y no trivial, no fuera maximal podríamos encontrar un ideal $I$ tal que $(a)\subsetneq I\subsetneq R$. Como $R$ es un DIP, $I=(b)$ para cierto $b\in I$. Entonces tenemos que $(a)\subsetneq(b)\subsetneq(1)$. Esto quiere decir que $b$ es un divisor propio de $a$, lo cual es una contradicción. 
-{{%  /proof %}}
+{{% /proof %}}
 
 
 Más adelante veremos ejemplos de DFU que no son DIP.
@@ -234,7 +239,8 @@ En un DIP, dados $a,b\in R$, cualquier $d\in R$ tal que $(a,b)=(d)$ es un $\oper
 
 
 {{% proof %}}
-Como $a,b\in (a,b)=(d)$, $d$ es un divisor común. Si $d'|a$ y $d'|b$ entonces $a,b\in (d')$, luego $(d)=(a,b)\subset (d')$ y por tanto $d'|d$. {{%  /proof %}}
+Como $a,b\in (a,b)=(d)$, $d$ es un divisor común. Si $d'|a$ y $d'|b$ entonces $a,b\in (d')$, luego $(d)=(a,b)\subset (d')$ y por tanto $d'|d$.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -242,7 +248,7 @@ Acabamos de demostrat que en un DIP todo divisor común máximo satisface una id
 {{% /watch %}}
 
 
-{{%  definition %}}
+{{% definition %}}
 Un **dominio euclídeo** es un dominio $R$ equipado con una función $$\delta\colon R\setminus\\{0\\}\longrightarrow\\{0,1,2\dots\\},$$ llamada **función de tamaño** o **euclídea**, tal que dados $D,d\in R$ con $d\neq 0$, denominados **dividendo** y **divisor**, respectivamente, existen $c,r\in R$, **cociente** y **resto**, de modo que $$D=dc+r$$ y bien $r=0$ o bien $\delta( r )<\delta(d)$.
 {{% /definition %}}
 
@@ -273,12 +279,13 @@ Si $\pi\in\mathbb Z[i]$ es primo entonces su conjugado $\bar\pi$ también.
 
 
 {{% proof %}}
-Como la conjugación preserva productos, si $\bar\pi|ab$ entonces $\pi|\bar a\bar b$ luego $\pi|\bar a$ o $\pi|\bar b$, es decir $\bar\pi|a$ o $\bar\pi|b$.   {{%  /proof %}}
+Como la conjugación preserva productos, si $\bar\pi|ab$ entonces $\pi|\bar a\bar b$ luego $\pi|\bar a$ o $\pi|\bar b$, es decir $\bar\pi|a$ o $\bar\pi|b$.
+{{% /proof %}}
 
 
 Necesitaremos la siguiente observación sobre enteros primos.
 
-{{%  lemma %}}
+{{% lemma %}}
 Todo entero primo $p\in\mathbb Z$ satisface una y solo una de las siguientes ecuaciones:
 
 * $p\equiv 1$ mod $4$.
@@ -291,7 +298,8 @@ Todo entero primo $p\in\mathbb Z$ satisface una y solo una de las siguientes ecu
 
 
 {{% proof %}}
-Si $p\equiv 0$ mod $4$ entonces $p$ sería un múltiplo de $4$, con lo cual no sería primo. Si $p\equiv 2$ mod $4$ entonces $p=2+4n=2(1+2n)$ para cierto $n\in\mathbb Z$, que solo es primo si $1+2n$ es invertible en $\mathbb Z$, es decir si y solo si $p=\pm2$.   {{%  /proof %}}
+Si $p\equiv 0$ mod $4$ entonces $p$ sería un múltiplo de $4$, con lo cual no sería primo. Si $p\equiv 2$ mod $4$ entonces $p=2+4n=2(1+2n)$ para cierto $n\in\mathbb Z$, que solo es primo si $1+2n$ es invertible en $\mathbb Z$, es decir si y solo si $p=\pm2$.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -307,7 +315,8 @@ Si $\pi\in\mathbb Z[i]$ es tal que $|\pi|^2=p\in\mathbb Z$ es un entero primo en
 {{% proof %}}
 Probamos la primera parte por reducción al absurdo, supongamos que $\pi$ se descompone como producto de divisores propios $\pi=z_1z_2$ en $\mathbb Z[i]$. Entonces tenemos la ecuación $|z_1|^2|z_2|^2=|\pi|^2=p$ de números enteros. Como $p$ es primo en los enteros, necesariamente $|z_i|^2=1$ para algún $i\in\\{1,2\\}$, es decir, algún $z_i$ tendría que ser una unidad, lo cual es una contradicción.
 
-Veamos la ecuación en congruencias. Si $\pi=a+ib$ entonces $p=|\pi|^2=a^2+b^2$. En $\mathbb Z/4$ los únicos elementos que son cuadrados de otros son $0,1\in\mathbb Z$, por tanto $p=a^2+b^2$ puede ser $0$, $1$ o $2$ módulo $4$. La primera posibilidad queda descartada por el lema anterior y la tercera solo se da cuando $p=2$.  {{%  /proof %}}
+Veamos la ecuación en congruencias. Si $\pi=a+ib$ entonces $p=|\pi|^2=a^2+b^2$. En $\mathbb Z/4$ los únicos elementos que son cuadrados de otros son $0,1\in\mathbb Z$, por tanto $p=a^2+b^2$ puede ser $0$, $1$ o $2$ módulo $4$. La primera posibilidad queda descartada por el lema anterior y la tercera solo se da cuando $p=2$.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -321,7 +330,8 @@ Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 3$ mod $4$ entonces $p$ t
 
 
 {{% proof %}}
-Supongamos por reducción al absurdo que $p$ se descompone como producto de divisores propios $p=z_1z_2$, entonces tenemos la ecuación $p^2=|z_1|^2|z_2|^2$ en los enteros. Como ningún $z_i$ es una unidad, necesariamente $|z_1|^2=|z_2|^2=p$. Como $p\equiv 3$ mod $4$, esto es imposible por la proposición anterior.   {{%  /proof %}}
+Supongamos por reducción al absurdo que $p$ se descompone como producto de divisores propios $p=z_1z_2$, entonces tenemos la ecuación $p^2=|z_1|^2|z_2|^2$ en los enteros. Como ningún $z_i$ es una unidad, necesariamente $|z_1|^2=|z_2|^2=p$. Como $p\equiv 3$ mod $4$, esto es imposible por la proposición anterior.
+{{% /proof %}}
 
 
 
@@ -338,7 +348,7 @@ $$\begin{array}{rcl}
 -1+i&=&i(1+i),\cr
 -1-i&=&(-1)(1+i).
 \end{array}$$
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
 {{% watch %}}
@@ -348,23 +358,25 @@ La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(
 
 Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como norma y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
 
-{{%  lemma %}}
+{{% lemma %}}
 Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equiv -1$ mod $p$.
 {{% /lemma %}}
 
 
 {{% proof %}}
-Observemos la definición del factorial $$(p-1)!=1\underbrace{2\cdots (p-2)}(p-1).$$ Como $p$ es primo, $\mathbb Z/(p)$ es un cuerpo y todo elemento no nulo es una unidad. Ningún factor de la definición de $(p-1)!$ es divisible por $p$, porque es menor. Por tanto todos son unidades módulo $p$. En $\mathbb Z/(p)$ las únicas unidades que son inversas de sí mismas son $\pm 1$ ya que estas son las únicas raíces del polinomio $x^2-1=(x-1)(x+1)$. El primer factor de $(p-1)!$ es $1$ y el último es $p-1\equiv -1$ mod $p$, por tanto, todos los factores de en medio tienen una inversa diferente, que es otro elemento del mismo producto. Dicho de otro modo, el producto de los $p-3$ factores centrales se puede dividir en $(p-3)/2$ pares de elementos mutuamente inversos módulo $p$, con lo que este producto es congruente con $1$ módulo $p$, así que $(p-1)!\equiv 1(p-1)\equiv -1$ mod $p$.   {{%  /proof %}}
+Observemos la definición del factorial $$(p-1)!=1\underbrace{2\cdots (p-2)}(p-1).$$ Como $p$ es primo, $\mathbb Z/(p)$ es un cuerpo y todo elemento no nulo es una unidad. Ningún factor de la definición de $(p-1)!$ es divisible por $p$, porque es menor. Por tanto todos son unidades módulo $p$. En $\mathbb Z/(p)$ las únicas unidades que son inversas de sí mismas son $\pm 1$ ya que estas son las únicas raíces del polinomio $x^2-1=(x-1)(x+1)$. El primer factor de $(p-1)!$ es $1$ y el último es $p-1\equiv -1$ mod $p$, por tanto, todos los factores de en medio tienen una inversa diferente, que es otro elemento del mismo producto. Dicho de otro modo, el producto de los $p-3$ factores centrales se puede dividir en $(p-3)/2$ pares de elementos mutuamente inversos módulo $p$, con lo que este producto es congruente con $1$ módulo $p$, así que $(p-1)!\equiv 1(p-1)\equiv -1$ mod $p$.
+{{% /proof %}}
 
 
-{{%  lemma %}}
+{{% lemma %}}
 Si $p\in\mathbb Z$ es un  entero primo tal que $p\equiv 1$ mod $4$ entonces $p|(m^2+1)$ para cierto $m\in\mathbb Z$.
 {{% /lemma %}}
 
 
 {{% proof %}}
 Podemos suponer sin pérdida de genralidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces $$\begin{array}{rcl}(p-1)!&=&1\cdot 2\cdots (4n-1)\cdot (4n)\cr &=& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(2n+1)\cdot (2n+2)\cdots (4n-1)\cdot (4n)}.\end{array}$$ Para todo $1\leq i\leq 2n$, en $\mathbb Z/(p)$ el $i$-ésimo factor de la primera mitad es el opuesto por el signo del $i$-ésimo factor de la segunda mitad empezando por el final ya que ambos suman $4n+1=p\equiv 0$ mod $p$. Por tanto, módulo $p$, $$\begin{array}{rcl}(p-1)!&\equiv& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(-2n)\cdot (-2n-1)\cdots (-2)\cdot (-1)}\cr&\equiv&(-1)^{2n}\cdot 1^2\cdot 2^2\cdots (2n-1)^2 (2n)^2\cr &=&m^2\end{array}$$
-para $m=(2n)!$.  {{%  /proof %}}
+para $m=(2n)!$.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -378,11 +390,12 @@ Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces $p$ n
 
 
 {{% proof %}}
-Sabemos que $p|(m^2+1)$ para cierto $m\in\mathbb Z$, es decir $p|(m+i)(m-i)$ pero $p$ no divide a $m\pm i$ ya que no divide a su parte imaginaria. Por tanto $p$ no es primo en $\mathbb Z[i]$.   {{%  /proof %}}
+Sabemos que $p|(m^2+1)$ para cierto $m\in\mathbb Z$, es decir $p|(m+i)(m-i)$ pero $p$ no divide a $m\pm i$ ya que no divide a su parte imaginaria. Por tanto $p$ no es primo en $\mathbb Z[i]$.
+{{% /proof %}}
 
 
 
-{{%  theorem %}}
+{{% theorem %}}
 Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces, salvo asociados, hay exactamente dos primos en los enteros de Gauss cuya norma al cuadrado es $p$. Además estos dos primos son conjugados $\pi,\bar\pi\in\mathbb Z[i]$.
 {{% /theorem %}}
 
@@ -400,7 +413,7 @@ i(a+ib)&=&-b+ia,\cr
 Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera el primero tendríamos que $b=0$, pero entonces $p=|\pi|^2=a^2$, lo cual es una contradicción. Si fuera el segundo tendríamos que $a=0$ y llegaríamos a la contradicción $p=|\pi|^2=b^2$. Si fuera el tercero tendríamos que $a=-b$, con lo que $\pi=a(1-i)$, que solo es primo si $a$ es una unidad, pero en este caso $p=|\pi|^2=2\not\equiv 1$ mod $4$. Análogamiente si fuera el último tendríamos que $a=b$ y $\pi=a(1+i)$, incurriendo en la misma contradicción que en el caso anterior.
 
 Finalmente, comprobemos no puede haber más que estos primos de Gauss y sus asociados con norma al cuadrado $p$. En efecto, si $\pi'\in\mathbb Z[i]$ satisficiera $p=|\pi'|^2=\pi'\bar\pi'$ entonces como $\pi'|p=\pi\bar\pi$ tendríamos que bien $\pi'|\pi$ o bien $\pi'|\bar\pi$, es decir, como estos tres elementos son primos, $\pi'$ es asociado a $\pi$ o a $\bar\pi$.
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
 {{% watch %}}
@@ -416,7 +429,8 @@ Todo primo en $\mathbb Z[i]$ divide a un primo en $\mathbb Z$.
 
 
 {{% proof %}}
-Sea $\pi\in\mathbb Z[i]$ un primo. Factorizamos $|\pi|^2\in\mathbb Z$ como producto de primos enteros $|\pi|^2=p_1\cdots p_n$. Como $|\pi|^2=\pi\bar\pi$ entonces $\pi|p_1\cdots p_n$ así que $\pi|p_i$ para cierto $1\leq i\leq n$.   {{%  /proof %}}
+Sea $\pi\in\mathbb Z[i]$ un primo. Factorizamos $|\pi|^2\in\mathbb Z$ como producto de primos enteros $|\pi|^2=p_1\cdots p_n$. Como $|\pi|^2=\pi\bar\pi$ entonces $\pi|p_1\cdots p_n$ así que $\pi|p_i$ para cierto $1\leq i\leq n$.
+{{% /proof %}}
 
 
 
@@ -470,7 +484,7 @@ A modo de ejemplo, vamos a estudiar aquí un par de ecuaciones diofánticas cuya
 
 Al comienzo del tema de anillos nos habíamos planteado como motivación el solucionar la ecuación diofántica $$x^2+y^2=5.$$ Ahora consideraremos más generalmente esta ecuación con un término independiente entero $n\geq 2$ cualquiera, $$x^2+y^2=n.$$
 
-{{%  theorem %}}
+{{% theorem %}}
 La ecuación diofántica $$x^2+y^2=n$$ tiene solución si y solo si cualquier primo $p\equiv 3$ mod $4$ tiene exponente par en la factorización de  $n$.
 {{% /theorem %}}
 
@@ -484,7 +498,8 @@ La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales qu
 
 * Si $p\equiv 3$ mod $4$, un factor $p$ por cada dos factores $p$ de $n$.
 
-El conjunto de todas las soluciones se obtiene permitiendo reemplazar los $\pi$ del segundo apartado por sus conjugados y tomando los asociados de todas las soluciones particulares así obtenidas. En particular hay un número finito de soluciones.   {{%  /proof %}}
+El conjunto de todas las soluciones se obtiene permitiendo reemplazar los $\pi$ del segundo apartado por sus conjugados y tomando los asociados de todas las soluciones particulares así obtenidas. En particular hay un número finito de soluciones.
+{{% /proof %}}
 
 
 {{% example name="$x^2+y^2=1170$" %}}
@@ -535,7 +550,7 @@ Podemos pues suponer que en una terna pitagórica primitiva $(x,y,z)$, $x$ es im
 La conexión de la ecuación de Pitágoras con los enteros de Gauss proviene de que esta ecuación equivale a
 $$(x+iy)(x-iy)=z^2.$$
 
-{{%  lemma %}}
+{{% lemma %}}
 Dados $x,y\in\mathbb Z$ tenemos que $x\equiv y$ mod $2$ $\Leftrightarrow$ $(1+i)|(x+iy)$.
 {{% /lemma %}}
 
@@ -543,12 +558,13 @@ Dados $x,y\in\mathbb Z$ tenemos que $x\equiv y$ mod $2$ $\Leftrightarrow$ $(1+i)
 {{% proof %}}
 $\Rightarrow$ Si $x\equiv y$ mod $2$ entonces $x$ e $y$ son ambos pares o ambos impares. Si son ambos pares entonces $2|(x+iy)$ y ya sabemos que $(1+i)|2$ con lo que $(1+i)|(x+iy)$. Si son ambos impares entonces $y\pm x$ es par y tenemos la siguiente ecuación en $\mathbb Z[i]$, $$x+iy=(1+i)\left(\frac{y+x}{2}+i\frac{y-x}{2}\right).$$
 
-$\Leftarrow$ Si $(1+i)|(x+iy)$ entonces  $$x+iy=(1+i)(x'+iy')=(x'-y')+(x'+y')i$$ y por tanto $$x=x'-y'\equiv x'+y'=y \mod 2.$$   {{%  /proof %}}
+$\Leftarrow$ Si $(1+i)|(x+iy)$ entonces  $$x+iy=(1+i)(x'+iy')=(x'-y')+(x'+y')i$$ y por tanto $$x=x'-y'\equiv x'+y'=y \mod 2.$$   
+{{% /proof %}}
 
 
 En el siguiente lema caracterizamos en términos de los enteros de Gauss la condición sobre $x$ e $y$ que caracteriza las ternas pitagóricas que son primitivas.
 
-{{%  lemma %}}
+{{% lemma %}}
 Dados $x,y\in\mathbb Z$ tenemos que $\operatorname{mcd}(x,y)=1$ y $x\not\equiv y$ mod $2$ $\Leftrightarrow$ $\operatorname{mcd}(x+iy,x-iy)=1$.
 {{% /lemma %}}
 
@@ -557,26 +573,28 @@ Dados $x,y\in\mathbb Z$ tenemos que $\operatorname{mcd}(x,y)=1$ y $x\not\equiv y
 $\Rightarrow$ Por reducción al absurdo. Si $\pi\in\mathbb Z[i]$ es un primo de Gauss tal que $\pi|(x+iy)$ y $\pi|(x-iy)$ entonces $$\begin{array}{rcl}\pi\;|\;[(x+iy)+(x-iy)]&=&2x,\cr \pi\;|\;[(x+iy)-(x-iy)]&=&2yi.\end{array}$$ Como $\operatorname{mcd}(x,y)=1$ entonces $\pi|2$, es decir $\pi=1+i$ (o un asociado). Por tanto $(1+i)|(x+iy)$, así que por el lema anterior $x\equiv y$ mod $2$, lo cual es una contradicción.
 
 $\Leftarrow$ Cualquier divisor común de $x$ e $y$ divide tanto a $x+iy$ como a $x-iy$, por tanto $\operatorname{mcd}(x,y)=1$. Además $x\not\equiv y$ mod $2$ ya que en caso contrario, por el lema anterior, $(1+i)|(x+iy)$ y por tanto $(1-i)|(x-iy)$. Como $1+i$ y $1-i$ son asociados, ambos dividirían tanto a $x+iy$ como a $x-iy$, que no podrían ser coprimos.
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
-{{%  lemma %}}
+{{% lemma %}}
 En un DFU $R$, las soluciones de la ecuación $xy=z^2$ con $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.
 {{% /lemma %}}
 
 
 {{% proof %}}
- Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2=1$.   {{%  /proof %}}
+ Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2=1$.
+{{% /proof %}}
 
 
 
-{{%  theorem %}}
+{{% theorem %}}
 Las ternas pitagóricas primitivas son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$ con $a,b\in\mathbb Z$, $a>b>0$, $\operatorname{mcd}(a,b)=1$, $a\not\equiv b$ mod $2$.
 {{% /theorem %}}
 
 
 {{% proof %}}
-La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el lema anterior, tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, en primera instancia $x+iy=(a+ib)^2$ y $x-iy=(a-ib)^2$. En particular $$\begin{array}{rcl} x&=&a^2-b^2,\cr y&=&2ab. \end{array}$$ Además, de nuevo por el lema anterior, $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$. La positividad de las ternas pitagóricas equivale a $a>b>0$. Además, claramente la primera coordenada es impar y la segunda par. Es sencillo comprobar que todas estas ternas satisfacen en efecto la ecuación de Pitágoras. En segunda instancia tendríamos que considerar más generalmente soluciones de la forma $x+iy=u(a+ib)^2$ y $x-iy=\bar u (a-ib)^2$, donde $u$ es una unidad en $\mathbb Z[i]$, pero se puede comprobar como ejercicio que por esta vía acabaríamos dando exactamente con las mismas ternas pitagóricas primitivas que antes.   {{%  /proof %}}
+La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el lema anterior, tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, en primera instancia $x+iy=(a+ib)^2$ y $x-iy=(a-ib)^2$. En particular $$\begin{array}{rcl} x&=&a^2-b^2,\cr y&=&2ab. \end{array}$$ Además, de nuevo por el lema anterior, $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$. La positividad de las ternas pitagóricas equivale a $a>b>0$. Además, claramente la primera coordenada es impar y la segunda par. Es sencillo comprobar que todas estas ternas satisfacen en efecto la ecuación de Pitágoras. En segunda instancia tendríamos que considerar más generalmente soluciones de la forma $x+iy=u(a+ib)^2$ y $x-iy=\bar u (a-ib)^2$, donde $u$ es una unidad en $\mathbb Z[i]$, pero se puede comprobar como ejercicio que por esta vía acabaríamos dando exactamente con las mismas ternas pitagóricas primitivas que antes.
+{{% /proof %}}
 
 
 El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica con $x,y\leq 4500$.
@@ -587,7 +605,7 @@ El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pi
 
 En este epígrafe demostraremos que los anillos de polinomios con coeficients en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
 
-{{%  definition %}}
+{{% definition %}}
 Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
 {{% /definition %}}
 
@@ -597,7 +615,7 @@ Los únicos polinomios primitivos constantes son las unidades de $R$.
 {{% /watch %}}
 
 
-{{%  lemma %}}
+{{% lemma %}}
 Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in k[x]$ no nulo existe una constante $c\in k$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in R[x]$ tal que $$f(x)=c\cdot f_0(x).$$ Además $c$ y $f_0(x)$ son únicos salvo producto por unidades de $R$. Denotaremos $c=\operatorname{cont}(f)$. 
 {{% /lemma %}}
 
@@ -611,7 +629,7 @@ c&=&\frac{e}{d}.
 \end{array}$$
 
 Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in R[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in R$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del máximo común divisor, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in R$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
-   {{%  /proof %}}
+   {{% /proof %}}
 
 
 {{% watch %}}
@@ -625,7 +643,8 @@ El producto de polinomios primitivos en $R[x]$ es primitivo.
 
 
 {{% proof %}}
- Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0,$$ el homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.    {{%  /proof %}}
+ Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0,$$ el homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -634,7 +653,8 @@ Dados $f,g\in k[x]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{con
 
 
 {{% proof %}}
- Tomamos $f,g\in k[x]$ y los descomponemos  $$\begin{array}{rcl} f&=&c\cdot f_0,\cr g&=&d\cdot g_0, \end{array}$$ con $c,d\in k$ y $f_0,g_0\in R[x]$ primitivos. Entonces $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposición válida del producto $f\cdot g$, así que $c\cdot d$ es su contenido.   {{%  /proof %}}
+ Tomamos $f,g\in k[x]$ y los descomponemos  $$\begin{array}{rcl} f&=&c\cdot f_0,\cr g&=&d\cdot g_0, \end{array}$$ con $c,d\in k$ y $f_0,g_0\in R[x]$ primitivos. Entonces $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposición válida del producto $f\cdot g$, así que $c\cdot d$ es su contenido.
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -643,7 +663,8 @@ Dados $f,g\in R[x]$, si $g|f$ en $k[x]$ y $g$ es primitivo entonces $g|f$ en $R[
 
 
 {{% proof %}}
- Supongamos que $f=g\cdot q$ en $k[x]$. Como $g$ es primitivo, $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$ Como $f\in R[x]$ su contenido está en $R$, y como este coindice con el de $q$, entonces $q\in R[x]$, por lo que $g|f$ en $R[x]$.  {{%  /proof %}}
+ Supongamos que $f=g\cdot q$ en $k[x]$. Como $g$ es primitivo, $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$ Como $f\in R[x]$ su contenido está en $R$, y como este coindice con el de $q$, entonces $q\in R[x]$, por lo que $g|f$ en $R[x]$.
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -655,7 +676,8 @@ Un polinomio $f\in R[x]$ no constante es irreducible en $R[x]$ $\Leftrightarrow$
 
 $\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
 
-$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.   {{%  /proof %}}
+$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -663,7 +685,7 @@ Una constante $a\in R$ es irreducible en $R[x]$ si y solo si lo es en $R$.
 {{% /watch %}}
 
 
-{{%  theorem %}}
+{{% theorem %}}
 $R[x]$ es un DFU.
 {{% /theorem %}}
 
@@ -686,7 +708,7 @@ Veamos que todo elemento irreducible de $R[x]$ es primo. Consideraremos primero 
 
 Supongamos ahora que  $a\in R\subset  R[x]$ es una constante irreducible y que $a|gh$ en $R[x]$. Esto último equivale adecir que $a$ divide al contenido de $gh$, es decir $a|cd$ donde $c,d\in R$ son los contenidos de $g$ y $h$, respectivamente. Como $R$ es un DFU, el irreducible $a$ es primo en $R$, así que $a|c$ o $a|d$, es decir, $a|g$ o $a|h$.
 
-   {{%  /proof %}}
+   {{% /proof %}}
  
 
 {{% corollary %}}
@@ -707,7 +729,8 @@ Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0
 
 
 {{% proof %}}
- Usaremos el homomorfismo $\phi_p\colon R[x]\rightarrow (R/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ Reduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $R$ como $R/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.   {{%  /proof %}}
+ Usaremos el homomorfismo $\phi_p\colon R[x]\rightarrow (R/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ Reduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $R$ como $R/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.
+{{% /proof %}}
 
 
 {{% theorem name="Criterio de Eisenstein"%}}
@@ -724,5 +747,5 @@ entonces $f$ es irreducible en $R[x]$.
 
 
 {{% proof %}}
- Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in R$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $R/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   {{%  /theorem %}}
+ Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in R$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $R/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   {{% /theorem %}}
 

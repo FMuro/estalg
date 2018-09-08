@@ -84,11 +84,11 @@ n a&=&(1+\stackrel{n}{\cdots}+1)a\cr&=&1a+\stackrel{n}{\cdots}+1a\cr&=&a+\stackr
 0a&=&0.
 \end{array}$$
 Es fácil comprobar que estas fórmulas definen una estructra de $\mathbb Z$-módulo en $A$, necesariamente única.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 
-{{%  definition %}}
+{{% definition %}}
 Un subconjunto $N\subset M$ de un $R$-módulo $M$ es un **submódulo** si:
 
 * $0\in N$.
@@ -116,7 +116,7 @@ Un submódulo $N\subset M$ es un módulo por derecho propio con la suma y el pro
 
 Los homomorfismos de módulos son aplicaciones que preservan la estructura, es decir, la suma y el producto por escalares.
 
-{{%  definition %}}
+{{% definition %}}
 Dados dos $R$-módulos $M$ y $N$, un **homomorfismo** $f\colon M\rightarrow N$ es una aplicación tal que, para todo $r\in R$ y $a,b\in M$, $$\begin{array}{rcl} f(a+b)&=&f(a)+f(b),\cr f(ra)&=&rf(a).\end{array}$$ Un **isomorfismo** es un homomorfismo biyectivo. Un **automorfismo** es un isomorfismo de un $R$-módulo en sí mismo.
 {{% /definition %}}
 
@@ -189,7 +189,7 @@ Dado un homomorfismo $f\colon M\rightarrow N$, su imagen $\operatorname{im} f\su
 * $rf(a)=f(ra)\in \operatorname{im} f$ para todo $r\in R$ y $a\in M$.
 
  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -207,7 +207,7 @@ El **núcleo** de un homomorfismo $f\colon M\rightarrow N$, $$\ker f=\\{a\in M\;
 
 * Si $a\in\ker f$ y $r\in R$ entonces $ra\in \ker f$ pues $f(ra)=rf(a)=r0=0$.
  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -217,7 +217,7 @@ El **núcleo** de un homomorfismo $f\colon M\rightarrow N$, $$\ker f=\\{a\in M\;
 
 ## Módulos libres
 
-{{%  definition %}}
+{{% definition %}}
 Sea $M$ un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto. Decimos que $S$ **genera** $M$ si todo elemento de $x\in M$ es **combinación lineal** de $S$, es decir, de la forma $$x=r\_1a\_1+\cdots+r\_na\_n$$ para ciertos $r\_1,\dots,r\_n\in R$. Decimos que $S$ es **linealmente independiente** si la única combinación lineal de $S$ que da como resultado $0$ es aquella que tiene todos los cieficientes nulos, es decir si $r\_1,\dots,r\_n\in R$ son tales que $$r\_1a\_1+\cdots+r\_na\_n=0$$ entonces $r\_1=\cdots=r\_n=0$. Decimos además que $S$ es una **base** de $M$ si lo genera y es linealmente independiente. Un $R$-módulo es **finitamente generado** si posee un subconjunto finito que genera, y es **libre** si posee una base.
 {{% /definition %}}
 
@@ -255,7 +255,7 @@ Sea $M$ un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto. Deci
 
 Seguidamente definimos la noción de determinante para matrices sobre un anillo igual que se hacía para los cuerpos.
 
-{{%  definition %}}
+{{% definition %}}
 El **determinante** $|A|$ de una matriz cuadrada $A=(a\_{ij})$ de tamaño $n\times n$ con entradas en un anillo conmutativo $R$ se define como $$|A|=\sum\_{\sigma\in S\_n}\operatorname{signo}(\sigma)a\_{1\sigma(1)}\cdots a\_{n\sigma(n)}.$$ Aquí $S_n$ denota el grupo de permutaciones de $n$ elementos.
 {{% /definition %}}
 
@@ -281,7 +281,7 @@ Todas las bases de un mismo $R$-módulo libre $M$ tiene el mismo número de elem
 
 
 
-{{%  definition %}}
+{{% definition %}}
 El **rango** de un $R$-módulo libre $M$ es el número de elementos de una base. 
 {{% /definition %}}
 
@@ -307,7 +307,7 @@ El **rango** de un $R$-módulo libre $M$ es el número de elementos de una base.
 
 En este apartado $R$ denotará siempre un dominio.
 
-{{%  definition %}}
+{{% definition %}}
 Dado un $R$-módulo $M$, decimos que $a\in M$ es un elemento de **torsion** si existe algún $r\in R$ no nulo, $r\neq 0$, tal que $ra=0$. 
 {{% /definition %}}
 
@@ -325,7 +325,8 @@ Veamos una condición suficiente, aunque no necesaria, para que un módulo no se
 
 
 {{% proof %}}
- Supongamos por reducción al absurdo que $\\{a\_1,\dots,a\_n\\}\subset M$ fuera una base. Tomamos un elemento no trivial de torsión $0\neq x\in M$ y lo escribimos como $$x=r\_1a\_1+\cdots+r\_na\_n$$ con $r\_1,\dots,r\_n\in R$. Ha de haber algún $r_i\neq 0$ para cierto $1\leq i\leq n$ ya que $x\neq 0$. Como $x\in M$ es de torsión existe $0\neq s\in R$ tal que $$0=sx=sr\_1a\_1+\cdots+sr\_na\_n.$$ Uno de los coeficientes de esta combinación lineal es $sr\_i\neq 0$ que es no nulo porque $R$ es un dominio. Esto contradice la independencia lineal.    {{%  /proof %}}
+ Supongamos por reducción al absurdo que $\\{a\_1,\dots,a\_n\\}\subset M$ fuera una base. Tomamos un elemento no trivial de torsión $0\neq x\in M$ y lo escribimos como $$x=r\_1a\_1+\cdots+r\_na\_n$$ con $r\_1,\dots,r\_n\in R$. Ha de haber algún $r_i\neq 0$ para cierto $1\leq i\leq n$ ya que $x\neq 0$. Como $x\in M$ es de torsión existe $0\neq s\in R$ tal que $$0=sx=sr\_1a\_1+\cdots+sr\_na\_n.$$ Uno de los coeficientes de esta combinación lineal es $sr\_i\neq 0$ que es no nulo porque $R$ es un dominio. Esto contradice la independencia lineal.
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -351,7 +352,7 @@ Dados $a,b\in T(M)$ existen $s,t\in R$ no nulos, $s\neq 0\neq t$, tales que $sa=
 
 * Dado $r\in R$, $ra\in T(M)$ pues $s(ra)=r(sa)=0$.
 
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
 Los homomorfismos preservan la torsión.
@@ -362,7 +363,8 @@ Los homomorfismos preservan la torsión.
 
 
 {{% proof %}}
-Dado $a\in T(M)$ existe $0\neq r\in R$ tal que $ra=0$ luego $rf(a)=f(ra)=f(0)=0$ y por tanto $f(a)$ es de torsión. Esto prueba la inclusión. Si $f$ además es un isomorfismo entonces podemos aplicarle la parte ya probada a $f^{-1}\colon N\rightarrow M$, con lo que tenemos $f^{-1}(T(N))\subset T(M)$, lo cual equivale a la otra inclusión $T(N)\subset f(T(M))$.   {{%  /proof %}}
+Dado $a\in T(M)$ existe $0\neq r\in R$ tal que $ra=0$ luego $rf(a)=f(ra)=f(0)=0$ y por tanto $f(a)$ es de torsión. Esto prueba la inclusión. Si $f$ además es un isomorfismo entonces podemos aplicarle la parte ya probada a $f^{-1}\colon N\rightarrow M$, con lo que tenemos $f^{-1}(T(N))\subset T(M)$, lo cual equivale a la otra inclusión $T(N)\subset f(T(M))$.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -381,12 +383,12 @@ La torsión preserva productos.
  Veamos primero $\subset$. Si $(a,b)\in T(M\times N)$ existe $0\neq r\in R$ tal que $r(a,b)=(ra,rb)=(0,0)$, es decir $ra=0$ y $rb=0$, por lo que $a\in T(M)$ y $b\in T(N)$, i.e. $(a,b)\in T(M)\times T(N)$. 
 
 Veamos ahora $\supset$. Si $(a,b)\in T(M)\times T(N)$, es decir $a\in T(M)$ y $b\in T(N)$, entonces existen $r,s\in R$ no nulos tales que $ra=0$ y $sb=0$, por tanto $rs\neq 0$ y $rs(a,b)=(s(ra),r(sb))=(0,0)$, luego $(a,b)\in T(M\times N)\subset M\times N$.
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
 ## Cocientes
 
-{{%  definition %}}
+{{% definition %}}
 Dado un $R$-módulo $M$ y un submódulo $N\subset M$, el **$R$-módulo cociente** $M/N$ es el cociente de los grupos abelianos subyacentes dotado del producto por escalares $$r(a+N)=(ra)+N.$$
 {{% /definition %}}
 
@@ -396,7 +398,7 @@ Dado un $R$-módulo $M$ y un submódulo $N\subset M$, el **$R$-módulo cociente*
 {{% /watch %}}
 
 
-{{%  theorem %}}
+{{% theorem %}}
 El $R$-módulo cociente $M/N$ está bien definido. Su estructura es la única que hace que la **proyección natural** $p\colon M\twoheadrightarrow M/N$, $p(a)=a+N$, sea un homomorfismo. El núcleo de esta proyección es $\ker p=N$. 
 {{% /theorem %}}
 
@@ -415,7 +417,7 @@ $$\begin{array}{rcl}
 \end{array}$$
 
 El núcleo de la proyección natural es $$\ker p =\\{a\in M\;|\; p(a)=0\\},$$ pero $p(a)=a+N$ y $a+N=0+N$ si y solo si $a\in N$, luego $\ker p=N$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -428,7 +430,7 @@ Dado un submódulo $N\subset M$ y un homomorfismo $f\colon M\rightarrow P$ tal q
 Si $f=g\circ p$ entonces tendríamos $$f(a)=(g\circ p)(a)=g(p(a))=g(a+N).$$ Definimos la aplicación $g\colon M/N\rightarrow P$ como $$g(a+N)=f(a).$$ Veamos que en efecto está bien definida. La unicidad se seguirá de la primera fórmula.
 
 Si $a+N=a'+N$ entonces $a-a'\in N\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ Por tanto $$g(a+N)=f(a)=f(a')=g(a'+N).$$ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -456,7 +458,7 @@ así que lo podemos escribir como combinación lineal de los geberadores  de $N$
 $$x-(r\_1a\_1+\cdots+r\_pa\_p)=s\_1b\_1+\cdots+s\_qb\_q.$$
 Despejando vemos que $x$ es combinación lineal de $S$, y por tanto $S$ genera $M$.
   
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -469,10 +471,10 @@ Dado un dominio de ideales principales $R$, todo submódulo de $R^n$ es finitame
 Por inducción en $n$. Para $n=0$ es obvio ya que $R^0=\\{0\\}$. Supongamos que todo submódulo de $R^{n-1}$ es finitamente generado para cierto $n\geq 1$. Sea $M\subset R^n$ un submódulo. Vemos $R^n=R^{n-1}\times R$ y consideramos el homomorfismo de proyección sobre la última coordenada $p=p_2\colon R^n\rightarrow R$. La imagen de la restricción $p\_{|\_{M}}\colon M\rightarrow R$ es un submódulo de $R$, es decir un ideal $(a)\subset R$. Por tanto esta restricción induce un homomorfismo sobreyectivo $p\_{|\_{M}}\colon M\twoheadrightarrow I$ y este induce un isomorfismo
 $$\frac{M}{\ker p\_{|\_{M}}}\cong (a).$$ 
 El cociente es finitamente generado por serlo $(a)$. El núcleo de $p=p_2\colon R^n\rightarrow R$ es $R^{n-1}\times\\{0\\}\cong R^{n-1}$ así que el $\ker p\_{|\_{M}}\subset R^{n-1}\times\\{0\\}$, que por tanto es finitamente generado por hipótesis de inducción. Usando la proposición anterior vemos que $M$ es también finitamente generado.   
-{{%  /proof %}}
+{{% /proof %}}
 
 
-{{%  definition %}}
+{{% definition %}}
 Un $R$-módulo $M$  es **cíclico** si se puede generar por un solo elemento.
 {{% /definition %}}
 
@@ -487,7 +489,7 @@ Un $R$-módulo $M$ es cíclico $\Leftrightarrow$ $M\cong R/I$ para algún ideal 
 $\Leftarrow$ El módulo $R/I$ es cíclico pues $\\{\\bar 1\\}\subset R/I$ genera, así que cualquier módulo isomorfo a $R/I$ será también cíclico. 
 
 $\Rightarrow$ Sea $\\{a\\}\subset M$ un generador. El homomorfismo $\phi\_{\\{a\\}}\colon R\rightarrow M$ que envía $1\mapsto a$ es por tanto sobreyectivo, así que $R/\ker \phi\_{\\{a\\}}\cong M$, con lo que podemos tomar $I=\ker \phi\_{\\{a\\}}$.   
-{{%  /proof %}}
+{{% /proof %}}
 
 
 ## Generadores y relaciones
@@ -555,7 +557,7 @@ que satisface
 $$g(a\_i)=b\_i,\quad 1\leq i\leq m,$$
 que es la factorización de $\phi_{\\{b\_1,\dots,b\_m\\}}\colon R^m\rightarrow N$ a través de la proyección natural al cociente $M=R^m/\operatorname{im}A$.
 
-{{%  definition %}}
+{{% definition %}}
 Una **presentación** de un $R$-módulo $M$ consiste en dos homomorfismos $$R^n\stackrel{A}\longrightarrow R^m\stackrel{f}\twoheadrightarrow M$$ tales que $f$ es sobreyectivo e $\operatorname{im} A=\ker f$. Esto, en virtud de la proposición de factorización de homomorfismos a través de cocientes, equivale a dar un isomorfismo $$g\colon \frac{R^n}{\operatorname{im} A}\stackrel{\cong}\longrightarrow M.$$ Decimos que un módulo es **finitamente presentado** si admite una presentación como esta. 
 {{% /definition %}}
 
@@ -572,7 +574,8 @@ Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generad
 
 
 {{% proof %}}
- Sea $S=\\{a\_1,\dots,a\_m\\}\subset M$ un conjunto de generadores. Por serlo, el homomorfismo $\phi\_S\colon R^m\rightarrow M$ es sobreyectivo, así que $$\frac{R^m}{\ker\phi\_{S}}\cong M.$$ Según hemos visto anteriormente, el submódulo $\ker \phi\_S\subset R^n$ es finitamente generado. Escogemos un conjunto de generadores $S'=\\{b\_1,\dots,b\_n\\}\subset \ker \phi\_{S}$, que por tanto inducen otro homomorfismo sobreyectivo $\phi\_{S'}\colon R^n\rightarrow \ker \phi\_{S}$. Consideramos su composición con la inclusión, $$A\colon R^n\stackrel{\phi\_{S'}}\twoheadrightarrow \ker \phi\_S\hookrightarrow R^m,$$ que estará definida por una matriz $A$. Al ser $\phi\_{S'}$ sobreyectiva, $\operatorname{im}A=\ker \phi\_{S}$, con lo que $A$ es una presentación de $M$.   {{%  /proof %}}
+ Sea $S=\\{a\_1,\dots,a\_m\\}\subset M$ un conjunto de generadores. Por serlo, el homomorfismo $\phi\_S\colon R^m\rightarrow M$ es sobreyectivo, así que $$\frac{R^m}{\ker\phi\_{S}}\cong M.$$ Según hemos visto anteriormente, el submódulo $\ker \phi\_S\subset R^n$ es finitamente generado. Escogemos un conjunto de generadores $S'=\\{b\_1,\dots,b\_n\\}\subset \ker \phi\_{S}$, que por tanto inducen otro homomorfismo sobreyectivo $\phi\_{S'}\colon R^n\rightarrow \ker \phi\_{S}$. Consideramos su composición con la inclusión, $$A\colon R^n\stackrel{\phi\_{S'}}\twoheadrightarrow \ker \phi\_S\hookrightarrow R^m,$$ que estará definida por una matriz $A$. Al ser $\phi\_{S'}$ sobreyectiva, $\operatorname{im}A=\ker \phi\_{S}$, con lo que $A$ es una presentación de $M$.
+{{% /proof %}}
 
 
 Una presentación de un módulo se puede modificar y simplificar de los siguientes modos.
@@ -598,7 +601,7 @@ R^m/\operatorname{im}A&\stackrel{\cong}\longrightarrow& R^m/\operatorname{im}A'\
 * Una columna de ceros se corresponde con la relación $0=0$, que no aporta nada, con lo cual puede eliminarse.
 
 * En este caso la $j$-ésima columna se corresponde con la relación $a\_i=0$, así que podemos simplemente eliminar $a\_i$ de la lista de generadores y $a\_i=0$ de la de relaciones. Esto se corresponde con la eliminación de la $i$-ésima fila y la $j$-ésima columna de $A$.
-{{%  /proof %}}
+{{% /proof %}}
 
 
 Cuando una matriz es especialmente sencilla resulta fácil identificar el módulo que presenta.
@@ -609,7 +612,8 @@ El $R$-módulo presentado por la matriz $$A=\left( \begin{array}{ccc} d\_1&&\cr 
 
 
 {{% proof %}}
- Es obvio, ya que este módulo está generado por $\\{a\_1,\dots,a\_n\\}$, donde $a\_i=\bar e\_i$, y las relaciones correspondientes a la matriz $A$ son $$d\_ia\_i=0,\quad 1\leq i\leq n.$$ Por tanto la $i$-ésima coordenada se está considerando módulo $d\_i$, $1\leq i\leq n$, y en el resto no hay relaciones.{{%  /proof %}}
+ Es obvio, ya que este módulo está generado por $\\{a\_1,\dots,a\_n\\}$, donde $a\_i=\bar e\_i$, y las relaciones correspondientes a la matriz $A$ son $$d\_ia\_i=0,\quad 1\leq i\leq n.$$ Por tanto la $i$-ésima coordenada se está considerando módulo $d\_i$, $1\leq i\leq n$, y en el resto no hay relaciones.
+{{% /proof %}}
 
 
 
@@ -617,7 +621,7 @@ El $R$-módulo presentado por la matriz $$A=\left( \begin{array}{ccc} d\_1&&\cr 
 
 En esta sección veremos cómo la matriz de una presentación de un módulo se puede simplificar mediante operaciones elementales.
 
-{{%  definition %}}
+{{% definition %}}
 Las **operaciones elementales por filas** para matrices con entradas en un anillo $R$ son las siguientes:
 
 1. Añadirle a una fila un múltiplo de otra, $F\_i+rF\_j$, $i\neq j$, $r\in R$.
@@ -633,7 +637,7 @@ Las **operaciones elementales por columnas** se definen análogamente.
 
 Las operaciones elementales anteriores se corresponden con el producto por los siguientes tipos de matrices.
 
-{{%  definition %}}
+{{% definition %}}
 Las **matrices elementales** son las que se obtienen a partir de la identidad realizando una de las operaciones elementales por filas anteriores. Concretamente:
 
 1. $E_{ij}( r )=\left(\begin{array}{ccccccc}1&&&&&&\cr &\ddots&&&&&\cr &&1&\cdots&r&&\cr &&&\ddots&\vdots&&\cr &&&&1&&\cr &&&&&\ddots&\cr &&&&&&1\end{array}\right)$.
@@ -717,7 +721,7 @@ a\_{i\_rj\_1}&\cdots & a\_{i\_rj\_r}
 Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamiento anterior es igualmente cierto si reemplazamos entradas por menores, es decir, el divisor máximo común de los menores de orden $r$ no varía al hacer operaciones elementales. Para la forma normal de Smith, dicho divisor máximo común es $d\_1\cdots d\_r$ si $1\leq r\leq k$ y $0$ si $r>k$. De aquí se deduce la unicidad de $k$ y de los $d\_i$ salvo asociados. -->
 
   
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -732,7 +736,8 @@ Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamie
 
 
 {{% proof %}}
- El determinante de una matriz $A$ de tamaño $n\times n$ es asociado del determinante de cualquier otra matriz que se obtenga a partir de $A$ tras realizar una operación elemental. En particular, $|A|$ es asociado del determinante de su forma normal de Smith $D$. El determinante $|D|$ es $0$ si $k{<}n$ y $d\_1\cdots d\_n$ si $k=n$. Si $A$ es invertible entonces $|A|$ es una unidad, luego necesariamente $k=n$ y $d\_1\cdots d\_n$ también es una unidad. En particular todos los $d_i$ son unidades, es decir, la forma normal de Smith es un producto de matrices elementales tipo 3, $D=E\_{11}(d\_1)\cdots E\_{nn}(d\_n)$. Despejando $A=Q^{-1}DP$ vemos que $A$ es producto de matrices elementales.    {{%  /proof %}}
+ El determinante de una matriz $A$ de tamaño $n\times n$ es asociado del determinante de cualquier otra matriz que se obtenga a partir de $A$ tras realizar una operación elemental. En particular, $|A|$ es asociado del determinante de su forma normal de Smith $D$. El determinante $|D|$ es $0$ si $k{<}n$ y $d\_1\cdots d\_n$ si $k=n$. Si $A$ es invertible entonces $|A|$ es una unidad, luego necesariamente $k=n$ y $d\_1\cdots d\_n$ también es una unidad. En particular todos los $d_i$ son unidades, es decir, la forma normal de Smith es un producto de matrices elementales tipo 3, $D=E\_{11}(d\_1)\cdots E\_{nn}(d\_n)$. Despejando $A=Q^{-1}DP$ vemos que $A$ es producto de matrices elementales.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -741,7 +746,8 @@ Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamie
 
 
 {{% proof %}}
- Sea $M\subset R^m$ un submódulo. Al demostrar que todo $R$-módulo finitamente generado es finitamente presentado vimos que se puede suponer sin pérdida de generalidad que $M=\operatorname{im}A$ para cierto homomorfismo $A\colon R^n\rightarrow R^m$ (matriz). El $R$-módulo $M$ está pues generado por las columnas de $A$. Haciendo un cambio de base si fuera necesario podemos suponer que $A$ está en forma normal de Smith, como $D$ en el teorema anterior. Claramente las primeras $k$ columnas de $A=D$ son suficientes para generar $M$ y además son linealmente independientes, por tanto forman una base y $M$ es libre. Además $k\leq m$.   {{%  /proof %}}
+ Sea $M\subset R^m$ un submódulo. Al demostrar que todo $R$-módulo finitamente generado es finitamente presentado vimos que se puede suponer sin pérdida de generalidad que $M=\operatorname{im}A$ para cierto homomorfismo $A\colon R^n\rightarrow R^m$ (matriz). El $R$-módulo $M$ está pues generado por las columnas de $A$. Haciendo un cambio de base si fuera necesario podemos suponer que $A$ está en forma normal de Smith, como $D$ en el teorema anterior. Claramente las primeras $k$ columnas de $A=D$ son suficientes para generar $M$ y además son linealmente independientes, por tanto forman una base y $M$ es libre. Además $k\leq m$.
+{{% /proof %}}
 
 
 ## Teoremas de estructura
@@ -775,7 +781,7 @@ Como los isomorfismos preservan la torsión, la parte de torsión es isomorfa a 
  Como los isomorfismos preservan la torsión, basta probarlo para un producto como el de la proposición anterior. En ese caso $$T\left(\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\right)=\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times \\{0\\},$$ por lo tanto $$\begin{array}{rcl}
 \frac{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}}{T\left(\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\right)}&\cong& \frac{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}}{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times\\{0\\}}\cr
 &=&R^r.
-\end{array}$$    {{%  /proof %}}
+\end{array}$$    {{% /proof %}}
 
 
 {{% watch %}}
@@ -790,7 +796,8 @@ Como los isomorfismos preservan la torsión, la parte de torsión es isomorfa a 
 
 
 {{% proof %}}
-Consideramos el homomorfismo de $R$-módulos $$f=\phi\_{\\{(\bar 1,\bar 1)\\}}\colon R\longrightarrow\frac{R}{(a)}\times \frac{R}{(b)}$$ definido por $f(1)=(\bar 1,\bar 1)$. Veamos que $\ker f=(ab)$.  En efecto $ab\in\ker f$ ya que $ab\equiv 0$ módulo $(a)$ y módulo $(b)$. Recíprocamente, si $f( r )=(\bar r,\bar r)=(\bar 0,\bar 0)$, es decir si $r\equiv 0$  módulo $(a)$ y módulo $(b)$, entonces $a|r$ y $b|r$ luego $ab=\operatorname{mcm}(a,b)|r$, esto es $r\in (ab)$. Esto nos prueba que el homomorfismo $g$ del enunciado está bien definido y es inyectivo. Para terminar de ver que es un isomorfismo hemos de comprobar que $f$ es sobreyectivo. Esto equivale a resolver el sistema de ecuaciones $$\left\\{\begin{array}{rcl}x&\equiv& c\mod (a),\cr x&\equiv& d\mod (b),\end{array}\right.$$ para $c,d\in R$ cualesquiera. Tomamos una identidad de Bézout $sa+tb=1$ y observamos que $x=sad+tbc$ resuelve la ecuación.  {{%  /proof %}}
+Consideramos el homomorfismo de $R$-módulos $$f=\phi\_{\\{(\bar 1,\bar 1)\\}}\colon R\longrightarrow\frac{R}{(a)}\times \frac{R}{(b)}$$ definido por $f(1)=(\bar 1,\bar 1)$. Veamos que $\ker f=(ab)$.  En efecto $ab\in\ker f$ ya que $ab\equiv 0$ módulo $(a)$ y módulo $(b)$. Recíprocamente, si $f( r )=(\bar r,\bar r)=(\bar 0,\bar 0)$, es decir si $r\equiv 0$  módulo $(a)$ y módulo $(b)$, entonces $a|r$ y $b|r$ luego $ab=\operatorname{mcm}(a,b)|r$, esto es $r\in (ab)$. Esto nos prueba que el homomorfismo $g$ del enunciado está bien definido y es inyectivo. Para terminar de ver que es un isomorfismo hemos de comprobar que $f$ es sobreyectivo. Esto equivale a resolver el sistema de ecuaciones $$\left\\{\begin{array}{rcl}x&\equiv& c\mod (a),\cr x&\equiv& d\mod (b),\end{array}\right.$$ para $c,d\in R$ cualesquiera. Tomamos una identidad de Bézout $sa+tb=1$ y observamos que $x=sad+tbc$ resuelve la ecuación.
+{{% /proof %}}
 
 
 {{% theorem name="2ª forma del teorema de estructura" %}}
@@ -799,7 +806,8 @@ Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generad
 
 
 {{% proof %}}
- Es consecuencia de la primera forma del teorema de estructura y del teorema chino del resto, el cual permite probar por inducción que si $q\_{1}^{s\_1}\cdots q\_{t}^{s\_t}$ es un producto de potencias de primos no asociados entonces $$\frac{R}{(q\_{1}^{s\_1}\cdots q\_{t}^{s\_t})}\cong \frac{R}{(q\_{1}^{s\_1})}\times\cdots\times \frac{R}{(q\_{t}^{s\_t})}.$$  {{%  /proof %}}
+ Es consecuencia de la primera forma del teorema de estructura y del teorema chino del resto, el cual permite probar por inducción que si $q\_{1}^{s\_1}\cdots q\_{t}^{s\_t}$ es un producto de potencias de primos no asociados entonces $$\frac{R}{(q\_{1}^{s\_1}\cdots q\_{t}^{s\_t})}\cong \frac{R}{(q\_{1}^{s\_1})}\times\cdots\times \frac{R}{(q\_{t}^{s\_t})}.$$  
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -836,7 +844,7 @@ $$d\_{n-1}^{m-1}=\operatorname{mcm}(d\_{n-1},e\_1)\cdots\operatorname{mcm}(d\_{n
 Pero $d\_{n-1}|\operatorname{mcm}(d\_{n-1},e\_{j})$ para todo $1\leq j\leq m-1$, así que la única posibilidad de que ambos productos coincidan es que en todos los casos $d\_{n-1}=\operatorname{mcm}(d\_{n-1},e\_{j})$, es decir $e\_j|d\_{n-1}$. Los papeles de $A$ y $B$, y en particular los de los $d\_i$ y los $e\_j$, son intercambiables, así que también concluimos que $d\_i|e\_{m-1}$ para todo $1\leq i\leq n-1$. En particular $e\_{m-1}|d\_{n-1}$ y $d\_{n-1}|e\_{m-1}$, por tanto $d\_{n-1}=e\_{m-1}$ y deducimos también que $$d\_1\cdots d\_{n-2}=e\_1\cdots e\_{m-2}.$$ 
 
 Este argumento se puede iterar, probando así que los últimos $d\_i$ coinciden con los últimos $e\_j$. Veamos por reducción al absurdo que $n=m$, con lo cual $d\_i=e\_i$ para todo $1\leq i\leq n$. Si $n\neq m$ podemos suponer sin pérdida de generalidad que $n{<}m$. En ese caso acabaríamos probando que $1=e\_1\cdots e\_{m-n}$, pero esto implicaría que estos primeros $e\_j$ son unidades, lo cual sería una contradicción.
- {{%  /proof %}}
+ {{% /proof %}}
 
 
 {{% example name="$k[x]$-módulos de torsión con la misma dimensión" %}}
@@ -899,7 +907,8 @@ $$\begin{array}{rcl}M&\stackrel{x\cdot}\longrightarrow& M,\cr a&\mapsto &x\cdot 
 en particular también es un homomorfismo de $k$-módulos, es decir, es un operador lineal en el $k$-espacio vectorial $M$.
 
 Recíprocamente, dado un $k$-espacio vectorial $V$ y un operador lineal $T\colon V\rightarrow V$, podemos definir una estructura de $k[x]$-módulo en $V$ del siguiente modo. Dado $v\in V$ y $p(x)=a\_nx^n+\cdots+a\_1x+a\_0\in k[x]$, definimos el producto por escalares como
-$$p(x)\cdot v=a\_nT^n(v)+\cdots+a\_1T(v)+a\_0v.$$ Dejamos como ejercicio comprobar que este producto por escalares satisface las propiedades requeridas.  {{%  /proof %}}
+$$p(x)\cdot v=a\_nT^n(v)+\cdots+a\_1T(v)+a\_0v.$$ Dejamos como ejercicio comprobar que este producto por escalares satisface las propiedades requeridas.
+{{% /proof %}}
 
 
 {{% proposition %}}
@@ -912,7 +921,7 @@ $$p(x)\cdot v=a\_nT^n(v)+\cdots+a\_1T(v)+a\_0v.$$ Dejamos como ejercicio comprob
 
 $\Leftarrow$ Recíprocamente, si $M$ tiene dimensión finita como $k$ espacio vectorial, entonces no puede tener parte libre en su descomposición como producto de $k[x]$-módulos cíclicos ya que $k[x]$ no tiene dimensión finita como $k$-espacio vectorial.
 
- {{%  /proof %}}
+ {{% /proof %}}
 
 
 Una **caja de Jordan** es una matriz cuadrada con una constante $\alpha \in k$, denominada **autovalor**, en todas las entradas diagonal principal, $1$ en todas las entradas de la diagonal que está justo por debajo de la principal y $0$ en el resto, 
@@ -947,7 +956,7 @@ Como $k$-espacio vectorial, $V$ tiene base $$\bigcup\_{i=1}^n\\{(\bar x-\alpha_i
 Respecto de esta base, la matriz de $T$ es la matriz diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha\_i$, $1\leq i\leq n$. 
 
 La unicidad de la forma normal de Jordan se corresponde con la de la segunda forma del teorema de estructura. Observa que, sin embargo, la base respecto de la cual la matriz de $T$ está en forma normal de Jordan no es única.
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
 

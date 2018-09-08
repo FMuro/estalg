@@ -7,7 +7,7 @@ En esta sección supondremos sin necesida de mencionarlo explícitamente que tod
 
 ## El Grupo de Galois
 
-{{%  definition %}}
+{{% definition %}}
 Dada una extensión $F\subset K$, su **grupo de Galois** $G(K/F)$ es el conjunto de los automorfismos de $F\subset K$. 
 {{% /definition %}}
 
@@ -29,7 +29,8 @@ Dada una extensión $F\subset K$, su **grupo de Galois** $G(K/F)$ es el conjunto
 
 {{% proof %}}
  Como la extensión no es trivial, ha de existir algún $\alpha\in K$ tal que $\alpha\notin F$. El grado de este elemento ha de dividir a $2$. Como no puede ser $1$ porque $\alpha\notin F$, ha de ser $2$. La extensión $F\subset F[\alpha]$ también tiene grado $2$ y $F[\alpha]\subset K$ por tanto $K=F[\alpha]$. Si $x^2+ax+b\in F[x]$ es el polinomio irreducible de $\alpha$, entonces $$\alpha=\frac{-a\pm\sqrt{\delta}}{2}$$ donde $\delta=a^2-4b\in F$ es el **discriminante**. Deducimos por tanto que $\sqrt{\delta}\in K$, $\sqrt{\delta}\notin F$, y $K=F[\sqrt{\delta}]$. Sabemos que $\\{1,\sqrt{\delta}\\}\subset K$ es una base como $F$-espacio vectorial. Como cualquier $f\in G(K/F)$ preserva $1$ y las raíces de $x^2-\delta$, tenemos solo dos posibilidades:
-$$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&\sqrt{\delta},\end{array}$$ y $$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&-\sqrt{\delta}.\end{array}$$ El primero es la identidad $\operatorname{id}\_{K}$, que es obviamente un isomorfismo de extensiones. El segundo es el que denominamos conjugación $c$. Dejamos como ejercicio probar que la conjugación es un homomorfismo de extensiones.  {{%  /proof %}}
+$$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&\sqrt{\delta},\end{array}$$ y $$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&-\sqrt{\delta}.\end{array}$$ El primero es la identidad $\operatorname{id}\_{K}$, que es obviamente un isomorfismo de extensiones. El segundo es el que denominamos conjugación $c$. Dejamos como ejercicio probar que la conjugación es un homomorfismo de extensiones.
+{{% /proof %}}
 
 
 {{% example name="$G(\mathbb Q[\sqrt[3]{2}]/\mathbb Q)$" %}}
@@ -37,7 +38,7 @@ $$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&\sqrt{\delta},\end{array}$$ 
 {{% /example %}}
 
 
-{{%  definition %}}
+{{% definition %}}
  Dado un cuerpo $F$ y un polinomio mónico no constante $p(x)\in F[x]$, un **cuerpo de descomposición** de $p(x)$ es una extensión $F\subset K$ tal que: 
 
 * El polinomio $p(x)$ factoriza en $K[x]$ como $p(x)=(x-\alpha\_1)\cdots(x-\alpha\_n)$, $\alpha\_i\in K$.
@@ -59,7 +60,8 @@ $$\begin{array}{rcl}f(1)&=&1,\cr f(\sqrt{\delta})&=&\sqrt{\delta},\end{array}$$ 
 
 
 {{% proof %}}
- Ya hemos visto que $K=F[\sqrt{\delta}]$ para cierto $\delta\in F$, entonces $K$ es el cuerpo de descomposición de $x^2-\delta$ ya que $F[\sqrt{\delta},-\sqrt{\delta}]=F[\sqrt{\delta}]$ y $x^2-\delta=(x+\sqrt{\delta})(x-\sqrt{\delta})\in K[x]$.  {{%  /proof %}}
+ Ya hemos visto que $K=F[\sqrt{\delta}]$ para cierto $\delta\in F$, entonces $K$ es el cuerpo de descomposición de $x^2-\delta$ ya que $F[\sqrt{\delta},-\sqrt{\delta}]=F[\sqrt{\delta}]$ y $x^2-\delta=(x+\sqrt{\delta})(x-\sqrt{\delta})\in K[x]$.
+{{% /proof %}}
 
 
 
@@ -97,7 +99,7 @@ f(\alpha)&=&f\left(\sum\_{m\_i\geq 0} b\_{m\_1,\dots,m\_n}\alpha\_1^{m\_1}\cdots
 así que $f=\operatorname{id}\_{K}$. En las ecuaciones anteriores hemos usado que $f$ deja fijo a $F$ y a las raíces $\alpha\_1,\dots,\alpha\_n\in K$ de $p(x)$.
 
  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 Uno homomorfismo $\varphi$ como el del enunciado se denomina **representación** del grupo de Galois como grupo de permutaciones.
@@ -108,12 +110,13 @@ Uno homomorfismo $\varphi$ como el del enunciado se denomina **representación**
 
 
 {{% proof %}}
- En efecto, si $f\colon K\rightarrow K$ es un isomorfismo de anillos que deja fijo a $L$ entonces también deja fijo a $F$ ya que $F\subset L$.  {{%  /proof %}}
+ En efecto, si $f\colon K\rightarrow K$ es un isomorfismo de anillos que deja fijo a $L$ entonces también deja fijo a $F$ ya que $F\subset L$.
+{{% /proof %}}
 
 
 Los subgrupos del grupo de Galois nos permiten construir nuevas extensiones intermedias.
 
-{{%  definition %}}
+{{% definition %}}
  Dada una extensión $F\subset K$ y un subgrupo $H\subset G(K/F)$ definimos el **cuerpo fijo** de $H$ del siguiente modo: $$K^{H}=\\{\alpha\in K\;|\; f(\alpha)=\alpha\;\forall f\in H\\}.$$ 
 {{% /definition %}}
 
@@ -142,18 +145,18 @@ f(\alpha^{-1})&=&f(\alpha)^{-1}\cr
 \end{array}$$
 
  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 
-{{%  theorem %}}
+{{% theorem %}}
  Dada una extensión finita $F\subset K$, su grupo de Galois $G(K/F)$ es finito y su orden divide a $[K:F]$. 
 {{% /theorem %}}
 
 
 El **orden** de un grupo finito $G$, es decir, su número de elementos, se denotará $|G|$.
 
-{{%  definition %}}
+{{% definition %}}
  Una **extensión de Galois** es una extensión finita $F\subset K$ tal que $|G(K/F)|=[K:F]$. 
 {{% /definition %}}
 
@@ -164,11 +167,12 @@ El **orden** de un grupo finito $G$, es decir, su número de elementos, se denot
 
 
 {{% proof %}}
- Sea $L\subset K^{G(K/F)}$. Como todo elemento de $G(K/F)$ deja fijo a $L$ por definición, tenemos que la inclusión $G(K/L)\subset G(K/F)$ es una igualdad. Como $|G(K/L)|$ divide a $[K:L]$ y $|G(K/F)|=[K:F]$ entonces $[K:F]$ divide a $[K:L]$. Pero $[K:L]$ también divide a $[K:F]$ por la fórmula del grado para extensiones consecutivas. Por tanto $[K:F]=[K:L]$ y en consecuencia $F=L$.  {{%  /proof %}}
+ Sea $L\subset K^{G(K/F)}$. Como todo elemento de $G(K/F)$ deja fijo a $L$ por definición, tenemos que la inclusión $G(K/L)\subset G(K/F)$ es una igualdad. Como $|G(K/L)|$ divide a $[K:L]$ y $|G(K/F)|=[K:F]$ entonces $[K:F]$ divide a $[K:L]$. Pero $[K:L]$ también divide a $[K:F]$ por la fórmula del grado para extensiones consecutivas. Por tanto $[K:F]=[K:L]$ y en consecuencia $F=L$.
+{{% /proof %}}
 
 
 
-{{%  theorem %}}
+{{% theorem %}}
  Las extensiones de Galois de un cuerpo $F$ coinciden con los cuerpos de descomposición de los polinomios de $F[x]$. 
 {{% /theorem %}}
 
@@ -179,7 +183,8 @@ El **orden** de un grupo finito $G$, es decir, su número de elementos, se denot
 
 
 {{% proof %}}
- Por ser finita $K=F[\alpha\_1,\dots,\alpha\_n]$ para ciertos $\alpha\_1,\dots,\alpha\_n\in K$ necesariamente algebraicos. Si $p\_i(x)\in F[x]$ es un polinomio que tiene a $\alpha\_i$ como raíz, $1\leq i\leq n$, entonces todos los $\alpha\_i$ son raíces de $p(x)=p\_1(x)\cdots p\_n(x)$, así que $K$ está contenido en el cuerpo de descomposición de $p(x)$.  {{%  /proof %}}
+ Por ser finita $K=F[\alpha\_1,\dots,\alpha\_n]$ para ciertos $\alpha\_1,\dots,\alpha\_n\in K$ necesariamente algebraicos. Si $p\_i(x)\in F[x]$ es un polinomio que tiene a $\alpha\_i$ como raíz, $1\leq i\leq n$, entonces todos los $\alpha\_i$ son raíces de $p(x)=p\_1(x)\cdots p\_n(x)$, así que $K$ está contenido en el cuerpo de descomposición de $p(x)$.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -189,7 +194,7 @@ El **orden** de un grupo finito $G$, es decir, su número de elementos, se denot
 
 {{% proof %}}
  Si $L$ es el cuerpo de descomposición de un polinomio $p(x)\in F[x]$ entonces $L$ es el cuerpo de descomposición del mismo polinomio visto ahora en $K[x]$. En efecto, si $\alpha\_1,\dots,\alpha\_n$ son las raíces complejas de $p(x)$ entonces $L=F[\alpha\_1,\dots,\alpha\_n]=K[\alpha\_1,\dots,\alpha\_n]$. Aquí hay que comprobar la segunda igualdad por doble inclusión. La inclusión $\subset$ es obvia porque $F\subset K$ y $\supset$ es consecuencia de que $K\subset L$ y $\alpha\_1,\dots,\alpha\_n\in K\subset L$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% theorem name="(fundamental de la teoría de Galois)" %}}
@@ -232,7 +237,7 @@ Además, $$\operatorname{id}\_{\mathbb Q[\zeta]}(\zeta)=\zeta$$ por lo que $$\ps
 
 Veamos que $\psi$ es inyectivo. Si $f\in G(\mathbb Q[\zeta]/\mathbb Q)$ es tal que $$\psi(f)=\bar 1$$ es porque $$f(\zeta)=\zeta.	$$
 
-  {{%  /proof %}}
+  {{% /proof %}}
 
 
 ## Extensiones de Kummer
@@ -255,12 +260,13 @@ f^j(\alpha)&=&f(f^{j-1}(\alpha))\cr
 &=&(\zeta\_p^{i})^{j-1}\zeta\_p^i\alpha\cr
 &=&(\zeta\_p^{i})^{j}\alpha.
 \end{array}$$
-Aquí hemos usado que $f(\zeta\_p)=\zeta\_p$ ya que $\zeta\_p\in F$.   {{%  /proof %}}
+Aquí hemos usado que $f(\zeta\_p)=\zeta\_p$ ya que $\zeta\_p\in F$.
+{{% /proof %}}
 
 
 Sorprendentemente el resultado a anterior tiene un recíproco.
 
-{{%  theorem %}}
+{{% theorem %}}
  Si $F\subset \mathbb C$ es un subcuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ primo entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^n-a\in F[x]$. 
 {{% /theorem %}}
 
@@ -277,14 +283,15 @@ f(\alpha^p)&=&f(\alpha)^p\cr
 &=&(\zeta\_p^i)^p\alpha^p\cr
 &=&\alpha^p.
 \end{array}$$
-Se deduce por inducción que $f^i(\alpha^p)=\alpha^p$ para todo $i\geq 1$, por tanto $\alpha^p\in K^{G(K/F)}=F$. Esto demuestra que $\alpha\in K$ es raíz del polinomio $x^p-\alpha^p\in F[x]$. Además, como $f(\alpha)\notin \alpha$ entonces $\alpha\notin F$ así que $F\subsetneq F[\alpha]\subset K$  y como $[K:F]=p$ es primo concluimos que $K=F[\alpha]$.  {{%  /proof %}}
+Se deduce por inducción que $f^i(\alpha^p)=\alpha^p$ para todo $i\geq 1$, por tanto $\alpha^p\in K^{G(K/F)}=F$. Esto demuestra que $\alpha\in K$ es raíz del polinomio $x^p-\alpha^p\in F[x]$. Además, como $f(\alpha)\notin \alpha$ entonces $\alpha\notin F$ así que $F\subsetneq F[\alpha]\subset K$  y como $[K:F]=p$ es primo concluimos que $K=F[\alpha]$.
+{{% /proof %}}
 
 
 Las extensiones del tipo que hemos estudiado en esta sección se denominan **extensiones de Kummer**.
 
 ## Solubilidad por radicales
 
-{{%  definition %}}
+{{% definition %}}
 Una extensión $F\subset K$ es una **extensión por radicales** si hay una sucesión finita de extensiones $$F=F\_0\subset F\_1\subset\cdots\subset F\_n=K$$ tales que $F\_{i+1}=F\_i[\alpha\_i]$ donde $\alpha\_i$ es es raíz de un polinomio de la forma $x^{p\_i}-a\_i\in F\_i[x]$ con $p\_i$ es primo, $i=0,\dots,p-1$. 
 {{% /definition %}}
 
@@ -294,7 +301,7 @@ Una extensión $F\subset K$ es una **extensión por radicales** si hay una suces
 {{% /watch %}}
 
 
-{{%  definition %}}
+{{% definition %}}
  Dado un polinomio no nulo $p(x)\in F[x]$ decimos que la ecuación $p(x)=0$ se puede **resolver por radicales** si existe una extensión por radicales de $F$ en la que $p(x)$ factoriza como producto de polinomios de grado $1$. 
 {{% /definition %}}
 
@@ -304,7 +311,7 @@ Una extensión $F\subset K$ es una **extensión por radicales** si hay una suces
 {{% /watch %}}
 
 
-{{%  definition %}}
+{{% definition %}}
  Un grupo finito $G$ es **soluble** si existe una sucesión de subgrupos $$\\{1\\}=G\_0\subset G\_i\subset \cdots\subset G\_n=G$$ tal que $G\_i\subset G\_{i+1}$ es normal y $G\_{i+1}/G\_i$ es cíclico de orden $p\_i$ primo, $0\leq i{<}n$. 
 {{% /definition %}}
 
@@ -315,10 +322,10 @@ Una extensión $F\subset K$ es una **extensión por radicales** si hay una suces
 
 
 {{% proof %}}
-   {{%  /proof %}}
+   {{% /proof %}}
 
 
-{{%  theorem %}}
+{{% theorem %}}
  Sea $F$ un cuerpo y $p(x)\in F[x]$ un polinomio con cuerpo de descomposición $K$. La ecuación $p(x)=0$ se puede resolver por radicales si y solo si $G(K/F)$ es soluble. 
 {{% /theorem %}}
 
@@ -328,5 +335,5 @@ Una extensión $F\subset K$ es una **extensión por radicales** si hay una suces
 
 $$\Rightarrow$$ 
 
-  {{%  /proof %}}
+  {{% /proof %}}
 

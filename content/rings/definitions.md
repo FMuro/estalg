@@ -154,7 +154,7 @@ Si $R$ es un anillo y $S\subset R$ es un subanillo, la **inclusión** $i\colon S
 {{% /example %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Dado un homomorfismo $f\colon R\rightarrow S$, su imagen $\operatorname{im} f\subset S$ es un subanillo. 
 {{% /proposition %}}
 
@@ -168,10 +168,10 @@ Dado un homomorfismo $f\colon R\rightarrow S$, su imagen $\operatorname{im} f\su
 * $-f(a)=f(-a)\in \operatorname{im} f$ para todo $a\in R$.
 
 * $f(a)f(b)=f(ab)\in \operatorname{im} f$ para todo $a,b\in R$.
-{{%  /proof %}}
+{{% /proof %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Dado un homomorfismo $f\colon R\rightarrow S$ y un subanillo $U\subset S$, si $\operatorname{im} f\subset U$ entonces $f$ factoriza de manera única a través de la inclusión, es decir, existe un único homomorfismo $g\colon R\rightarrow U$ tal que $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow U\stackrel{i}\hookrightarrow S.$$ 
 {{% /proposition %}}
 
@@ -179,7 +179,7 @@ Dado un homomorfismo $f\colon R\rightarrow S$ y un subanillo $U\subset S$, si $\
 {{% proof %}}
  
 Si $f=i\circ g$ entonces tendríamos $$f(a)=(i\circ g)(a)=i(g(a))=g(a).$$ La unicidad de $g$ sería consecuencia de esta fórmula ya que fuerza su definición. Definimos pues la aplicación $g\colon R\rightarrow U$ como $g(a)=f(a)$. Tiene sentido porque $\operatorname{im}f\subset U$. La aplicación $g$ es un homomorfismo pues está definida por la misma fórmula que el homomorfismo $f$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -212,7 +212,8 @@ Definimos pues
 $$
 g(p(x))=f(a_n)c^n+\cdots+ f(a_0).
 $$
-Es tedioso pero trivial comprobar $g$ así definido es un homomorfismo. El cálculo anterior demuestra la unicidad.   {{%  /proof %}}
+Es tedioso pero trivial comprobar $g$ así definido es un homomorfismo. El cálculo anterior demuestra la unicidad.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -227,12 +228,12 @@ Por inducción en $n$.
 Para $n=1$, la existencia y unicidad de $g\colon R[x_1]\rightarrow S$ es consecuencia del teorema anterior.
 
 Veamos que $n-1\Rightarrow n$. Suponiendo que hay un único homomorfismo $h\colon R[x\_1,\dots,x\_{n-1}]\rightarrow S$ que se restringe a $f\colon R\rightarrow S$ sobre las constantes y satisface $g(x_i)=c_i$, $1\leq i\leq n-1$, aplicamos el teorema anterior a $$R[x\_1,\dots,x\_n]=(R[x\_1,\dots,x\_{n-1}])[x\_n]$$ y obtenemos el homomorfismo buscado.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 El anillo de los enteros cumple la siguiente curiosa propiedad, que en términos técnicos se denomina ser inicial en la categoría de los anillos.
 
-{{%  proposition %}}
+{{% proposition %}}
 Para todo anillo $R$ existe un único homorfismo $f\colon \mathbb Z\rightarrow R$. 
 {{% /proposition %}}
 
@@ -245,7 +246,7 @@ f(n)&=&f(1+\stackrel{n}{\cdots}+1)\cr&=&f(1)+\stackrel{n}{\cdots}+f(1)\cr&=&1+\s
 f(-n)&=&-f(n).
 \end{array}$$
 Es fácil comprobar que estas fórmulas definien un homomorfismo, que ha de ser único.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 
@@ -272,7 +273,7 @@ Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;|\;f(a)=0\\},$$ es un ideal $\ker f\subset R$.
 {{% /proposition %}}
 
@@ -288,7 +289,7 @@ El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;
 
 * Si $a\in\ker f$ y $r\in R$ entonces $ra\in \ker f$ pues $f(ra)=f( r )f(a)=f( r )0=0$.
  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -308,7 +309,7 @@ Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Todos los ideales de $\mathbb Z$ son principales.
 {{% /proposition %}}
 
@@ -320,7 +321,7 @@ Sea $I\subset \mathbb Z$ un ideal. Si $I=\\{0\\}=(0)$ ya es principal. Si no, to
 Por un lado $(a)\subset I$ pues $a\in I$.
 
 Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$, $$b=ca+r.$$ El resto satisface $|r|<|a|$. Además $r=b-ca\in I$, por tanto $r=0$ y $b=ca\in (a)$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -328,14 +329,14 @@ Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$, $$b=ca
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Dado un cuerpo $k$, todos los ideales de $k[x]$ son principales.
 {{% /proposition %}}
 
 
 Veamos ahora la relación entre ideales y unidades.
 
-{{%  proposition %}}
+{{% proposition %}}
 Un ideal $I\subset R$ contiene una unidad $\Leftrightarrow$ $I=R$.
 {{% /proposition %}}
 
@@ -347,7 +348,7 @@ $\Leftarrow$ Obvio porque $1\in R=I$ es una unidad.
 $\Rightarrow$ Si $u\in I\subset R$ es una unidad, $u^{-1}\in R$ y por ser $I$ un ideal $1=uu^{-1}\in I.$
 
 Si $1\in I$ y $a\in R$ entonces $1a=a\in I$, por tanto $R\subset I$, así que $I=R$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -360,7 +361,7 @@ Un anillo es un cuerpo $\Leftrightarrow$ tiene solo dos ideales (necesariamente 
 $\Rightarrow$ Sea $k$ un cuerpo. Si $I\subset k$ es un ideal no trivial entonces existe un elemento $a\in I\subset k$ no nulo. Como $k$ es un cuerpo este elemento ha de ser una unidad, así que $I=k$.
 
 $\Leftarrow$ Sea $R$ un anillo cuyos dos únicos ideales son $\\{0\\}$ y $R$. Sea $a\in R$ un elemento no trivial. Como $a\in (a)$, este ideal no puede ser el trivial, así que ha de ser el total $(a)=R$. Al ser $1\in R=(a)$ ha de existir un elemento $r\in R$ tal que $ra=1$, así que $a$ es una unidad.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -371,7 +372,7 @@ Si $f\colon k\rightarrow R$ es un homomorfismo de anillos donde $k$ es un cuerpo
 {{% proof %}}
 
 El ser $f\colon k\rightarrow R$ un homomorfismo, $f(1)=1$. Como $R$ no es trivial, $1\neq 0$ luego $1\notin\ker f\subset k$ no puede ser el total. Por ser $k$ es un cuerpo la única opción posible es $\ker f=\\{0\\}$, luego $f$ es inyectivo.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 
@@ -387,7 +388,7 @@ Dado un anillo $R$ y un ideal $I\subset R$, el **anillo cociente** $R/I$ es el c
 {{% /watch %}}
 
 
-{{%  theorem %}}
+{{% theorem %}}
 El anillo cociente $R/I$ está bien definido. Su estructura es la única que hace que la **proyección natural** $p\colon R\twoheadrightarrow R/I$, $p(a)=a+I$, sea un homomorfismo. El núcleo de esta proyección es $\ker p=I$. 
 {{% /theorem %}}
 
@@ -406,10 +407,10 @@ $$\begin{array}{rcl}
 \end{array}$$
 
 El núcleo de la proyección natural es $$\ker p =\\{a\in R\;|\; p(a)=0\\},$$ pero $p(a)=a+I$ y $a+I=0+I$ si y solo si $a\in I$, luego $\ker p=I$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Dado un ideal $I\subset R$ y un homomorfismo $f\colon R\rightarrow S$ tal que $I\subset \ker f$, $f$ factoriza de manera única a través de la proyección natural, es decir existe un único homomorfismo $g\colon R/I\rightarrow S$ tal que $f=g\circ p$, $$f\colon R\stackrel{p}\twoheadrightarrow R/I\stackrel{g}\rightarrow S.$$
 {{% /proposition %}}
 
@@ -419,7 +420,7 @@ Dado un ideal $I\subset R$ y un homomorfismo $f\colon R\rightarrow S$ tal que $I
 Si $f=g\circ p$ entonces tendríamos $$f(a)=(g\circ p)(a)=g(p(a))=g(a+I).$$ Definimos la aplicación $g\colon R/I\rightarrow S$ como $$g(a+I)=f(a).$$ Veamos que en efecto está bien definida. La unicidad se seguirá de la primera fórmula.
 
 Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ Por tanto $$g(a+I)=f(a)=f(a')=g(a'+I).$$ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -441,7 +442,7 @@ Por otro lado podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de m
 Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es inyectiva. Sea $a+\ker f\in R/\ker f$ tal que $\bar f(a+\ker f)=0$. Como $\bar f(a+\ker f)=f(a)$, deducimos que $a\in \ker f$, por lo que $a+\ker f=0+\ker f$.
 
 Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es sobreyectiva. Dado $b\in\operatorname{im} f$ existe $a\in R$ tal que $f(a)=b$. Por tanto $\bar f(a+\ker f)=f(a)=b$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -452,12 +453,12 @@ $\mathbb R[x]/(x^2+1)\cong\mathbb C$.
 {{% proof %}}
 
 Consideremos el homomorfismo $$f\colon \mathbb R[x]\rightarrow\mathbb C$$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $$f(bx+a)=a+ib,$$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. La inclusión $\supset$ es cierta porque $f(x^2+1)=i^2+1=0$. Por otro lado, dado $p(x)\in\ker f$ realizamos la división euclídea por $x^2+1$ en $\mathbb R[x]$, $$p(x)=c(x)(x^2+1)+r(x).$$ Aquí $r(x)=a_1x+a_0$ pues ha de tener grado ${<} 2$. Como $p(x)\in\ker f$, $$0=p(i)=c(i)(i^2+1)+r(i)=a\_1i+a\_0.$$ La única posibilidad de que esto ocurra es que $a_1=a_0=0$, luego $p(x)\in (x^2+1)$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 Concluimos con un estudio de los ideales de un anillo cociente.
 
-{{%  proposition %}}
+{{% proposition %}}
 Sea $f\colon R\rightarrow S$ un homomorfismo. 
 
 * Si $J\subset S$ es un ideal entonces $f^{-1}(J)\subset R$ también y además $\ker f\subset f^{-1}(J)$. 
@@ -488,10 +489,10 @@ En el segundo caso:
 * En el caso anterior también $-a\in I$ luego $-f(a)=f(-a)\in f(I)$.
 
 * Es más, dado $s\in S$, por ser $f$ sobreyectiva $s=f( r )$ para cierto $r\in R$, y como $ra\in I$ entonces $sf(a)=f( r )f(a)=f(ra)\in f(I)$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Dado un anillo $R$ y un ideal $I$, si $p\colon R\twoheadrightarrow R/I$ denota la proyección natural tenemos la siguiente biyección $$\begin{array}{rcl}\left\\{\text{ideales de }R\text{ que contienen a }I\right\\}&\longleftrightarrow& \left\\{\text{ideales de }R/I\right\\},\cr I'&\mapsto&p(I'),\cr p^{-1}(J)&\leftarrow&J.\end{array}$$
 {{% /proposition %}}
 
@@ -499,7 +500,7 @@ Dado un anillo $R$ y un ideal $I$, si $p\colon R\twoheadrightarrow R/I$ denota l
 {{% proof %}}
 
 La proyección natural es un homomorfismo sobreyectivo con núcleo $I$, por tanto las aplicaciones del enunciado están bien definidas por la proposición anterior. Veamos que una es inversa de la otra. La igualdad $p(p^{-1}(J))=J$ es cierta por ser $p$ sobreyectiva. En general $I'\subset p^{-1}(p(I'))$. Veamos que la otra inclusión es también cierta si $I\subset I'$. Dado $a\in p^{-1}(p(I'))$, $p(a)\in p(I')$ por tanto existe $b\in I'$ tal que $p(b)=p(a)$. Esto implica que $p(a-b)=p(a)-p(b)=0$, es decir, $a-b\in I\subset I'$, por tanto $a=b+(a-b)\in I'$. 
-{{%  /proof %}}
+{{% /proof %}}
 
 
 
@@ -527,7 +528,7 @@ $$ a_n\bar x^n+\cdots + a_1 \bar x+ a_0=\overline{p(x)}=\bar 0\in S.$$
 
 Este anillo posee una descripción similar a la de los números complejos.
 
-{{%  proposition %}}
+{{% proposition %}}
  Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ de grado $n$ la siguiente aplicación entre conjuntos es biyectiva, \\[\\begin{array}{rcl} R\times\stackrel{n}\cdots\times R&\stackrel{f}\longrightarrow& R[x]/(p(x))=S,\cr (b\_1,\dots,b\_{n-1}, b\_n)&\mapsto& b\_1\bar x^{n-1}+\cdots+b\_{n-1}\bar x+b\_n. \\end{array}\\]
 {{% /proposition %}}
 
@@ -543,7 +544,7 @@ $$(b\_1-c\_1) x^{n-1}+\cdots+(b\_{n-1}-c\_{n-1}) x+(b\_n-c\_n)\in (p(x)).$$
 Como este polinomo tiene grado ${<} n$ deducimos que es trivial, luego $(b_1,\dots,b_n)=(c_1,\dots,c_n)$.
 
 Para la sobreyectividad, basta ver que todo elemento de $S=R[x]/(p(x))$ tiene un representante de grado ${<} n$. En particular basta comprobar que si $q(x)+(p(x))$ tiene un representante $q(x)=c_mx^m+\cdots$ de grado $m\geq n$ entonces también tiene otro representante de grado ${<} m$. El polinomio $$r(x)=q(x)-c_mx^{m-n}p(x)=(c_mx^m+\cdots)-c_mx^{m-n}(x^n+\cdots)$$ tiene grado ${<} m$ y $q(x)-r(x)=c_mx^{m-n}p(x)\in (p(x))$, luego $q(x)+(p(x))=r(x)+(p(x))$.  
-{{%  /proof %}}
+{{% /proof %}}
 
 
 {{% watch %}}
@@ -573,13 +574,14 @@ Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ e
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Si $R$ es un dominio entonces $R[x]$ también.
 {{% /proposition %}}
 
 
 {{% proof %}}
-Dados dos polinomios no nulos $p(x)=a_nx^n+\cdots$ y $q(x)=b_mx^m+\cdots$ de grados respectivos $n$ y $m$ ($a_n\neq 0\neq b_m$), su producto $p(x)q(x)=a_nb_mx^{n+m}+\cdots$ es no nulo de grado $n+m$ ya que $a_nb_m\neq 0$ por ser $R$ un dominio.  {{%  /proof %}}
+Dados dos polinomios no nulos $p(x)=a_nx^n+\cdots$ y $q(x)=b_mx^m+\cdots$ de grados respectivos $n$ y $m$ ($a_n\neq 0\neq b_m$), su producto $p(x)q(x)=a_nb_mx^{n+m}+\cdots$ es no nulo de grado $n+m$ ya que $a_nb_m\neq 0$ por ser $R$ un dominio.
+{{% /proof %}}
 
 
 {{% corollary %}}
@@ -599,7 +601,7 @@ El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 El cuerpo de fracciones $Q( R )$ de un dominio $R$ está bien definido. La aplicación $i\colon R\rightarrow Q( R )$, $i(a)=\frac{a}{1}$, es un homomorfismo inyectivo. Todo homomorfismo inyectivo $f\colon R\rightarrow k$ donde $k$ es un cuerpo factoriza de manera única a través de $i$, es decir, existe un único homomorfismo $g\colon Q( R )\rightarrow k$ tal que $f=g\circ i$, $$f\colon R\stackrel{i}\rightarrow Q( R )\stackrel{g}\rightarrow k.$$
 {{% /proposition %}}
 
@@ -649,7 +651,7 @@ Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. Si $p\in\mathb
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Un ideal $I\subset R$ es primo $\Leftrightarrow$ $R/I$ es un dominio.
 {{% /proposition %}}
 
@@ -675,7 +677,7 @@ De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetne
 {{% /watch %}}
 
 
-{{%  proposition %}}
+{{% proposition %}}
 Un ideal $I\subset R$ es maximal $\Leftrightarrow$ $R/I$ es un cuerpo.
 {{% /proposition %}}
 
@@ -701,7 +703,7 @@ Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
 
 
 
-{{%  proposition %}}
+{{% proposition %}}
 En un dominio de ideales principales $R$ todos los ideales primos no nulos son maximales.
 {{% /proposition %}}
 

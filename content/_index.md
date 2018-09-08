@@ -33,7 +33,7 @@ Las pruebas de resultados aparecerán plegadas para no sobrecargar la página. S
 
 {{% proof %}}
 Aquí iría la demostración.
-{{%  /proof %}}
+{{% /proof %}}
 
 
 ## Agradecimientos
