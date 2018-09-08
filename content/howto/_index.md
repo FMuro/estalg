@@ -168,8 +168,6 @@ Las **pruebas** tienen un aspecto especial. Aparecen plegadas para no sobrecarga
  Esto es una prueba. Aparecen plegadas por defecto. 
 {{% /proof %}}
 
-
-
 ```
 {{%/* proof */%}}
 Esto es una prueba. Aparecen plegadas por defecto. 
