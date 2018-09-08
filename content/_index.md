@@ -39,5 +39,5 @@ Aquí iría la demostración.
 
 ## Agradecimientos
 
-Esta web se ha creado íntegramente con herramientas [libres y de código abierto](https://es.wikipedia.org/wiki/Software_libre_y_de_c%C3%B3digo_abierto), entre otras con el generador web [Hugo](https://gohugo.io/), la plantilla [docdock](http://docdock.netlify.com/), la librería para contenido matemático [MathJax](https://www.mathjax.org/), el programa de cálculo [SageMath](http://www.sagemath.org/) y su servicio de computación en la nube [CoCalc](http://cocalc.com/). En la barra lateral encontrarás un enlace al código de esta web, que también es libre, y a instrucciones sobre cómo descargarlo y editarlo.
+Esta web se ha creado íntegramente con herramientas [libres y de código abierto](https://es.wikipedia.org/wiki/Software_libre_y_de_c%C3%B3digo_abierto), entre otras con el generador web [Hugo](https://gohugo.io/), la plantilla [docdock](http://docdock.netlify.com/), la librería para contenido matemático [MathJax](https://www.mathjax.org/), el programa de cálculo [SageMath](http://www.sagemath.org/) y su servicio de computación en la nube [CoCalc](http://cocalc.com/). En la barra lateral encontrarás enlaces al código de esta web, que también es libre, y a instrucciones sobre cómo descargarlo y editarlo.
 
