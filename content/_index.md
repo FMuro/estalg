@@ -32,7 +32,7 @@ El diseño es adaptable, debe funcionar igual de bien tanto en ordenadores como 
 Las pruebas de resultados aparecerán plegadas para no sobrecargar la página. Se despliegan pulsando sobre ellas.
 
 {{% proof %}}
-Aquí iría la demostración.
+Aquí iría la demostración. El final se indica con un cuadrado a la derecha.
 {{% /proof %}}
 
 
