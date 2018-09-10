@@ -82,6 +82,50 @@ Se pueden incluso hacer tablas del siguiente modo:
 | Huevos            | Whisky                         |
 ```
 
+Es posible incluso insertar código en Sage para que se ejecute al pulsar un botón. Esto permite incluir aplicaciones interactivas.
+
+<div class="sage">
+  <script type="text/x-sage">
+@interact
+def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
+    lattice1 = []
+    lattice2 = [[1,1], [1,-1], [-1,1], [-1,-1]]
+    lattice3 = []
+    for x in [-n .. n]:
+        for y in [-n .. n]:
+            if is_prime(x^2+y^2) and (x^2+y^2).mod(4) == 1:
+                lattice1 = lattice1 + [[x,y]]
+    for z in list(primes(3,n+1)):
+        lattice3 = lattice3 + [[z,0], [-z,0]]
+    lattice1_plot = point(lattice1, rgbcolor='green', size=400/n)
+    lattice2_plot = point(lattice2, rgbcolor='red', size=800/n)
+    lattice3_plot = point(lattice3, rgbcolor='blue', size=800/n)
+    return show(lattice1_plot+lattice2_plot+lattice3_plot, aspect_ratio=1)
+  </script>
+</div>
+
+```
+<div class="sage">
+  <script type="text/x-sage">
+@interact
+def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
+    lattice1 = []
+    lattice2 = [[1,1], [1,-1], [-1,1], [-1,-1]]
+    lattice3 = []
+    for x in [-n .. n]:
+        for y in [-n .. n]:
+            if is_prime(x^2+y^2) and (x^2+y^2).mod(4) == 1:
+                lattice1 = lattice1 + [[x,y]]
+    for z in list(primes(3,n+1)):
+        lattice3 = lattice3 + [[z,0], [-z,0]]
+    lattice1_plot = point(lattice1, rgbcolor='green', size=400/n)
+    lattice2_plot = point(lattice2, rgbcolor='red', size=800/n)
+    lattice3_plot = point(lattice3, rgbcolor='blue', size=800/n)
+    return show(lattice1_plot+lattice2_plot+lattice3_plot, aspect_ratio=1)
+  </script>
+</div>
+```
+
 ## Notación matemática
 
 Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir <code>$\LaTeX$</code>. Lo entiende casi todo, pero algunas modificaciones son necesarias: 

@@ -259,11 +259,20 @@ Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con
 
 
 {{% example name="Los enteros de Gauss" %}}
-Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Puedes probar a visualizar esta situación en casos concretos [usando esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews). Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su norma es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ 
+Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su norma es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ 
+{{% /example %}}
+
+
+
+{{% example name="Enteros cuadráticos" %}}
+Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la norma para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con la norma.
+{{% /example %}}
+
+La siguiente aplicación interactiva te permite explorar la posibilidad de realizar divisiones euclídeas respecto del cuadrado del módulo complejo en el anillo de enteros cuadráticos imaginarios $R\subset\mathbb Q[\sqrt{-n}]$ para ciertos valores positivos de $n$. Para $n=1$ tenemos los enteros de Gauss. Puedes seleccionar los coeficientes del dividendo $D=a+b\sqrt{-n}$ y del divisor $d=x+y\sqrt{-n}$. Los coeficientes del dividendo pueden estar en $[-10,10]$ y los del divisor en $[-5,5]$. Aparece un círculo amarillo está centrado en $D$ de radio $|d|$. Los puntos verdes son elementos del anillo y los azules son además múltiplos del divisor. Cada punto azul en el _interior_ del círculo representa una división euclídea. La aplicación da la lista de todos los pares $(c,r)$ que producen divisiones euclídeas $D=d\cdot c+r$.
 
 <div class="sage">
   <script type="text/x-sage">
-  from sage.plot.circle import Circle
+from sage.plot.circle import Circle
 @interact(layout={'top': [['parameter'],['dividend_x', 'divisor_x'],['dividend_y','divisor_y']]})
 def _(parameter=selector([1,2,3,5,6,7,10,11], label="n=", buttons=True), dividend_x=slider(-10,10, step_size=1, default = 0, label="a="), dividend_y=slider(-10,10, step_size=1, default = 0, label="b="), divisor_x=slider(-5,5, step_size=1, default = 1, label="x="), divisor_y=slider(-5,5, step_size=1, default = 0, label="y=")):
     if ((divisor_x,divisor_y) == (0,0)):
@@ -308,15 +317,6 @@ def _(parameter=selector([1,2,3,5,6,7,10,11], label="n=", buttons=True), dividen
         return show(circ+lattice_plot+multiples_plot+cent, aspect_ratio=1)
   </script>
 </div>
-
-{{% /example %}}
-
-
-
-{{% example name="Enteros cuadráticos" %}}
-Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. [Esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews) te permite explorar la posibilidad de realizar divisiones euclídeas respecto de la norma en estos anillos. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la norma para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con la norma.
-{{% /example %}}
-
 
 ## Enteros de Gauss
 
@@ -523,9 +523,31 @@ Pasando la unidad $i$ al otro lado de la igualdad obtenemos una verdadera factor
 {{% /example %}}
 
 
-El siguiente gráfico nos muestra la distribución de los primos cercanos al origen en los enteros de Gauss. Puedes también usar [esta aplicación interactiva](https://cocalc.com/projects/014254b4-7c8b-4c79-9191-a9a18b5b0708/files/Primos%20de%20Gauss.sagews) para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen.
+El siguiente gráfico nos muestra la distribución de los primos cercanos al origen en los enteros de Gauss. 
 
 ![gaussian_primes](../../images/gaussian_primes.png)
+
+Puedes también usar la siguiente aplicación interactiva para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen. Los lados del cuadrado tienen tamaño $2n$. Los puntos rojos son los primos de Gauss de norma 2. En azul están los que son enteros. El resto, en verde.
+
+<div class="sage">
+  <script type="text/x-sage">
+@interact
+def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
+    lattice1 = []
+    lattice2 = [[1,1], [1,-1], [-1,1], [-1,-1]]
+    lattice3 = []
+    for x in [-n .. n]:
+        for y in [-n .. n]:
+            if is_prime(x^2+y^2) and (x^2+y^2).mod(4) == 1:
+                lattice1 = lattice1 + [[x,y]]
+    for z in list(primes(3,n+1)):
+        lattice3 = lattice3 + [[z,0], [-z,0]]
+    lattice1_plot = point(lattice1, rgbcolor='green', size=400/n)
+    lattice2_plot = point(lattice2, rgbcolor='red', size=800/n)
+    lattice3_plot = point(lattice3, rgbcolor='blue', size=800/n)
+    return show(lattice1_plot+lattice2_plot+lattice3_plot, aspect_ratio=1)
+  </script>
+</div>
 
 ## Ecuaciones diofánticas
 
