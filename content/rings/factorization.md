@@ -260,6 +260,55 @@ Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con
 
 {{% example name="Los enteros de Gauss" %}}
 Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Puedes probar a visualizar esta situación en casos concretos [usando esta aplicación en línea](https://cocalc.com/projects/1eab4f16-7ca3-4c59-a0c4-e24203f66d16/files/Intento%20interactivo%20de%20divisi%C3%B3n%20eucl%C3%ADdea.sagews). Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su norma es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ 
+
+<div class="sage">
+  <script type="text/x-sage">
+  from sage.plot.circle import Circle
+@interact(layout={'top': [['parameter'],['dividend_x', 'divisor_x'],['dividend_y','divisor_y']]})
+def _(parameter=selector([1,2,3,5,6,7,10,11], label="n=", buttons=True), dividend_x=slider(-10,10, step_size=1, default = 0, label="a="), dividend_y=slider(-10,10, step_size=1, default = 0, label="b="), divisor_x=slider(-5,5, step_size=1, default = 1, label="x="), divisor_y=slider(-5,5, step_size=1, default = 0, label="y=")):
+    if ((divisor_x,divisor_y) == (0,0)):
+        show("NO SE PUEDE DIVIDIR POR CERO. ESCOJE UN DIVISOR NO NULO.")
+    else:
+        if (-parameter % 4 != 1):
+            dividend = dividend_x+I*dividend_y*sqrt(parameter)
+            divisor = divisor_x+I*divisor_y*sqrt(parameter)
+            radius = N(abs(divisor))
+            bound_x = floor(radius)+1
+            bound_y = floor(radius/sqrt(parameter))+1
+            interval_lattice_x = [dividend.real()-bound_x .. dividend.real()+bound_x]
+            interval_lattice_y = [dividend.imag()+y*sqrt(parameter) for y in [-bound_y .. bound_y]]
+            lattice = cartesian_product([interval_lattice_x,interval_lattice_y]).list()
+            multiples = [z for z in lattice if ((((z[0]+I*z[1])/divisor).real()).is_integer() and (((z[0]+I*z[1])/divisor).imag()/sqrt(parameter)).is_integer())]
+        else:
+            dividend = dividend_x+dividend_y*(1+I*sqrt(parameter))/2
+            divisor = divisor_x+divisor_y*(1+I*sqrt(parameter))/2
+            radius = N(abs(divisor))
+            bound_x = floor(radius)+1
+            bound_y = floor(2*radius/sqrt(parameter))+1
+            lattice = [(dividend.real()+x+1/2*is_odd(y), dividend.imag()+y*sqrt(parameter)/2) for y in [-bound_y .. bound_y] for x in [-bound_x .. bound_x]]
+            def integer_odd(x,y):
+                if x.is_integer():
+                    return (y+1/2*ZZ(x).mod(2)).is_integer()
+                else:
+                    return False
+            multiples = [z for z in lattice if integer_odd(((z[0]+I*z[1])/divisor).imag()*2/sqrt(parameter),((z[0]+I*z[1])/divisor).real())]
+        divisions = [z for z in multiples if abs(divisor)-abs(dividend - (z[0]+I*z[1])) > 0]
+        if len(divisions) == 0:
+            show("NO HAY DIVISIONES EUCLÍDEAS.")
+        else:
+            for z in divisions:
+                show((expand((z[0]+I*z[1])*divisor.conjugate()/(divisor.real()^2+divisor.imag()^2)), dividend-(z[0]+I*z[1])))
+        lattice_plot = point(lattice, rgbcolor='green')
+        multiples_plot = point(multiples, rgbcolor='blue', size=50)
+        circ = circle((dividend.real(), dividend.imag()), radius, alpha=.4, fill = True, facecolor='yellow', thickness=0)
+        if (dividend.real(),dividend.imag()) in multiples:
+            cent = point([(dividend.real(),dividend.imag())], rgbcolor='blue', size=200)
+        else:
+            cent = point([(dividend.real(),dividend.imag())], rgbcolor='green', size=200)
+        return show(circ+lattice_plot+multiples_plot+cent, aspect_ratio=1)
+  </script>
+</div>
+
 {{% /example %}}
 
 
