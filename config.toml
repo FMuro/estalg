@@ -1,14 +1,14 @@
-baseURL = "https://asignatura.us.es/estalg"
+baseURL = "https://asignatura.us.es/algbas"
 languageCode = "es-ES"
 DefaultContentLanguage = "es"
 
-title = "Estructuras algebraicas"
+title = "Álgebra básica"
 theme = "hugo-theme-lecturenotes"
 disableLiveReload = false
 
 creatordisplayname = "Valere JEANTET"
 creatoremail = "valere.jeantet@gmail.com"
-lastmodifierdisplayname = "Fernando"
+lastmodifierdisplayname = "Fernando Muro"
 lastmodifieremail = "fmuro@us.es"
 
 [author]
