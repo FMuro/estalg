@@ -4,12 +4,12 @@
 
 2. Abre una terminal  y ejecuta los siguientes comandos:
 ```
-$ git clone --recurse-submodules https://gitlab.com/basicalgebra/estalg.git
-$ cd estalg
+$ git clone --recurse-submodules https://gitlab.com/basicalgebra/algbas.git
+$ cd algbas
 $ hugo server
 ```
 
-3. Si pinchas [aquí](http://localhost:1313/estalg/) probablemente te aparecerá la vista previa en el navegador. Si no te aparece, mira los mensajes que genera el último comando. Debe aparecer una línea como la siguiente, que contiene la dirección web local correcta:
+3. Si pinchas [aquí](http://localhost:1313/algbas/) probablemente te aparecerá la vista previa en el navegador. Si no te aparece, mira los mensajes que genera el último comando. Debe aparecer una línea como la siguiente, que contiene la dirección web local correcta:
 ```
 Web Server is available at http://localhost:1313/estalg/ (bind address 127.0.0.1)
 ```
