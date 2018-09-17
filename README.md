@@ -11,7 +11,7 @@ $ hugo server
 
 3. Si pinchas [aquí](http://localhost:1313/algbas/) probablemente te aparecerá la vista previa en el navegador. Si no te aparece, mira los mensajes que genera el último comando. Debe aparecer una línea como la siguiente, que contiene la dirección web local correcta:
 ```
-Web Server is available at http://localhost:1313/estalg/ (bind address 127.0.0.1)
+Web Server is available at http://localhost:1313/algbas/ (bind address 127.0.0.1)
 ```
 
 Los ficheros de contenido se encuentran en el subdirectorio `contents`. Los puedes abrir y modificar con tu editor de texto favorito. La vista previa se regenerará automáticamiente cada vez que guardes los cambios.
