@@ -22,9 +22,9 @@ Concretamente usaremos los siguientes capítulos y secciones, referidos siempre 
 
 * Capítulo 15, todas las secciones excepto 6, 7, 9 y 10.
 
-* Capítulo 16, todas excepto la 8 y la 9.
+* Capítulo 16, todas las secciones excepto la 8 y la 9.
 
-En el último de estos capítulos y en parte del penúltimo trabajaremos dentro de $\mathbb{C}$ para simplificar la exposición. El último además veremos parte de la sección 5 del capítulo 7.
+En el último de estos capítulos y en parte del penúltimo trabajaremos dentro de $\mathbb{C}$ para simplificar la exposición. En el último además veremos parte de la sección 5 del capítulo 7.
 
 Recomendamos repasar conceptos vistos en Álgebra Básica que se corresponden con los siguientes capítulos y secciones del libro:
 
@@ -40,7 +40,14 @@ Recomendamos repasar conceptos vistos en Álgebra Básica que se corresponden co
 
 ### ¿Cómo vamos a evaluar?
 
-La evaluación continua se basará en dos exámenes. El primero se realizará entre el 22 y el 24 de noviembre, según el grupo, y el segundo el último día de clase. Los contenidos de cada examen se fijarán con la suficiente antelación. La nota final de la evaluación continua será la media aritmética de ambos exámenes. Los estudiantes que no aprueben por este método podrán presentarse a las convocatorias oficiales en las fechas designadas por la Facultad de Matemáticas bajo las condiciones establecidas por la Universidad de Sevilla. 
+La evaluación continua se basará en dos exámenes. Estos exámenes durarán dos horas y se realizarán en horas de clase. El primero tendrá lugar en la última semana de noviembre y el segundo en las dos últimas horas de clase de la asignatura.
+
+| Grupos            | Fecha del primer examen        | Fecha del segundo examen           |
+| ------------------| ------------------------------ | ---------------------------------- |
+| A                 | Lunes 26 de noviembre          | Miércoles 15 y viernes 18 de enero |
+| B y C             | Martes 27 de noviembre         | Jueves 17 de enero                 |
+
+Los contenidos de cada examen se fijarán con la suficiente antelación. La nota final de la evaluación continua será la media aritmética de ambos exámenes. Los estudiantes que no aprueben por este método podrán presentarse a las convocatorias oficiales en las fechas designadas por la Facultad de Matemáticas bajo las condiciones establecidas por la Universidad de Sevilla. 
 
 Quien apruebe solo uno de los dos exámenes de la evaluación continua y tenga una media suspensa podrá, si así lo desea, presentarse al examen de la primera convocatoria y examinarse solo de la parte que suspendió. Su nota final será la media aritmética de la parte que aprobó y de la que se examine en la primera convocatoria. También podrán presentarse a la primera convocatoria aquellos estudiantes aprobados que deseen subir su nota, en ningún caso la bajarán.
 
