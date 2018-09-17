@@ -1,1 +1,1 @@
-Estructuras Algebraicas
+Álgebra Básica

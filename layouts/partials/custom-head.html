@@ -4,7 +4,29 @@ MathJax.Hub.Config({
         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
         displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
         processEscapes: false,
+    },
+    TeX: {
+    Macros: {
+      RR: "{\\bf R}",
+      bold: ["{\\bf #1}",1],
+      Sim: "{\\operatorname{Sim}}",
+      sop: "{\\operatorname{sop}}",
+      orden: "{\\operatorname{o}}",
+      To: "{\\longrightarrow}",
+      ker: "{\\operatorname{Ker}}",
+      im: "{\\operatorname{Im}}",
+      sign: "{\\operatorname{signo}}",
+      signo: "{\\operatorname{sg}}",
+      inv: ["{#1}^{-1}", 1],
+      id: ["{\\operatorname{1}_{#1}}",1],
+      perm: ["S_{#1}",1],
+      gl: ["{\\operatorname{GL}(#1,#2)}",2],
+      mcd: "{\operatorname{mcd}}",
+      mcm: "{\operatorname{mcm}}",
+      N: "{\\mathbb{N}}",
+      Z: "{\\mathbb{Z}}",
     }
+	}
 })
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

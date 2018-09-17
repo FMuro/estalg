@@ -1,6 +1,6 @@
 +++
 title = "Proyecto docente"
-weight = 30
+weight = 50
 pre = "<i class='fa fa-book'></i> "
 +++
 
