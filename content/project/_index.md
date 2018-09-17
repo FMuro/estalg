@@ -12,7 +12,31 @@ La asigantura se centrará en el estudio de los conceptos de anillo, módulo y c
 
 ![book](../images/book.jpeg)
 
-Concretamente usaremos los capítulos del 10 al 14 de la primera edición del libro, que se corresponden esencialmente con los capítulos del 11, 12, 14, 15 y 16 de la segunda edición. 
+Concretamente usaremos los siguientes capítulos y secciones, referidos siempre a la segunda edición del libro:
+
+* Capítulo 11, secciones de la 5 a la 8.
+
+* Capítulo 12, secciones 2, 3 y 5.
+
+* Capítulo 14, todas las secciones excepto 3, 6 y 9.
+
+* Capítulo 15, todas las secciones excepto 6, 7, 9 y 10.
+
+* Capítulo 16, todas excepto la 8 y la 9.
+
+En el último de estos capítulos y en parte del penúltimo trabajaremos dentro de $\mathbb{C}$ para simplificar la exposición. El último además veremos parte de la sección 5 del capítulo 7.
+
+Recomendamos repasar conceptos vistos en Álgebra Básica que se corresponden con los siguientes capítulos y secciones del libro:
+
+* Capítulo 1, sección 5.
+
+* Capítulo 2.
+
+* Capítulo 7, sección 1.
+
+* Capítulo 11, secciones de la 1 a la 4.
+
+* Capítulo 12, secciones 1 y 4.
 
 ### ¿Cómo vamos a evaluar?
 
