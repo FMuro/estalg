@@ -42,10 +42,10 @@ Recomendamos repasar conceptos vistos en Álgebra Básica que se corresponden co
 
 La evaluación continua se basará en dos exámenes. Estos exámenes durarán dos horas y se realizarán en horas de clase. El primero tendrá lugar en la última semana de noviembre y el segundo en las dos últimas horas de clase de la asignatura.
 
-| Grupos            | Fecha del primer examen        | Fecha del segundo examen           |
-| ------------------| ------------------------------ | ---------------------------------- |
-| A                 | Lunes 26 de noviembre          | Miércoles 15 y viernes 18 de enero |
-| B y C             | Martes 27 de noviembre         | Jueves 17 de enero                 |
+| Grupos            | Fecha del primer examen        | Fecha del segundo examen        |
+| ------------------| ------------------------------ | ------------------------------- |
+| A                 | Lunes 26 de noviembre          | Martes 15 y viernes 18 de enero |
+| B y C             | Martes 27 de noviembre         | Jueves 17 de enero              |
 
 Los contenidos de cada examen se fijarán con la suficiente antelación. La nota final de la evaluación continua será la media aritmética de ambos exámenes. Los estudiantes que no aprueben por este método podrán presentarse a las convocatorias oficiales en las fechas designadas por la Facultad de Matemáticas bajo las condiciones establecidas por la Universidad de Sevilla. 
 
