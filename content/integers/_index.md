@@ -27,7 +27,6 @@ $1 \cdot a = a = a \cdot 1$ para todo $a\in R$.
 {{% /definition %}}
 
 {{% watch %}}
-
 Es un hecho curioso y poco conocido que la conmutatividad del grupo aditivo $(R,+)$ es de hecho una consecuencia de la existencia de un elemento neutro para el producto, el elemento $1$.
 
 En efecto, dados $a,b\in R$, podemos desarrollar la expresión $(1+1)\cdot (a+b)$ de dos formas aplicando las propiedades distributivas a derecha y a izquierda:
@@ -52,7 +51,6 @@ Por tanto, la existencia de "uno" implica que la operación $+$ es conmutativa.
 %{{% /definition %}}
 
 {{% watch %}}
-
 Como viene siendo habitual, en adelante notaremos la operación producto $\cdot$ mediante la yuxtaposición de los correspondientes elementos.
 
 En adelante diremos "sea $R$ un anillo" en lugar de "sea $(R,+,\cdot)$ un anillo", dando por conocidas la operación suma y producto siempre que no haya confusión.
@@ -142,7 +140,6 @@ Sea $(R,+,\cdot )$ un anillo y sea $S\subset R$ un subconjunto. Decimos que $S$ 
 {{% /definition %}}
 
 {{% watch %}}
-
 Si $S$ es un asubanillo de $(R,+,\cdot )$, entonces $S$ es un anillo con las operaciones $+$ y $\cdot$.
 {{% /watch %}}
 
@@ -276,10 +273,6 @@ Sea $(R,+,\cdot )$ un anillo (conmutativo) y sea $I\subset R$ un subconjunto. De
 }
 {{% /definition %}}
 
-%{{% watch %}}
-
-%Todo ideal es un subanillo.
-%{{% /watch %}}
 
 {{% example name="Ejemplo" %}}
 \quad
@@ -534,7 +527,6 @@ $\overline{n} = \overline{0}$. Como $\Z /\Z p$ es finito, deducimos que es un cu
 {{% /example %}}
 
 {{% watch %}}
-
 En adelante notaremos por $\F_p$ al cuerpo $\Z /\Z p$, con $p$ número primo.
 {{% /watch %}}
 
@@ -681,7 +673,6 @@ $\F_p$ y $\F_p[x]$ tienen característica $p$. Sin embargo $\Z$, $\Q$, $\R$ y $\
 {{% /example %}}
 
 {{% watch %}}
-
 Si $R$ es un dominio de integridad finito entonces existe un primo $p>0$ tal que $R$ tiene característica $p$. El recíproco no es cierto, existen dominios de integridad infinitos con característica positiva, por ejemplo $\F_p[x]$.
 {{% /watch %}}
 
@@ -713,13 +704,11 @@ $ac=b$. En este caso se escribe $a|b$. También se dice que $b$ es
 obviamente di\-vi\-den a todos los números enteros. Pero además son
 los únicos enteros con esta propiedad.
 
-%
 Supongamos que $a \in \Z$
 es otro entero con esta propiedad. Entonces debe dividir a $1$, luego existe $b$ tal que $ab=1$. Entonces, o bien
 $a,b$ son positivos o son negativos. Si son negativos, se pone
 $(-a)(-b)=1$, con lo que se puede suponer que ambos son positivos.
 
-%
 En este caso, si fuese $a$ ó $b$ mayor que $1$ (por ejemplo $a$),
 sería $a>1$ y $b>0$ (luego $b\geq 1$) sería $ab>1\cdot b=b\geq 1$,
 luego $ab>1$, lo que no puede ser. Así, $a=b=1$, luego desde el
@@ -732,7 +721,6 @@ Recordemos que $1$ y $-1$ son las unidades del anillo $\Z$.
 %
 
 {{% watch %}}
-
  La relación de divisibilidad verifica
 las propiedades siguientes:
 \begin{enumerate}
@@ -762,19 +750,16 @@ divisibilidad es una relación de orden parcial porque la propiedad
 {{% watch %}}
  La divisibilidad es compatible con las operaciones
 aritméticas. En concreto:
-\begin{enumerate}
 
-\item Si $a|b$ y $a|c$ entonces $a|(b \pm c)$. En efecto,
+* Si $a|b$ y $a|c$ entonces $a|(b \pm c)$. En efecto,
 existen $d,d'\in\Z$ tales que $b=ad$ y $c=ad'$. Así
 $$
 b\pm c=ad \pm ad'=a(d\pm d') \, ,
 $$
 luego $a|(b \pm c)$.
 
-\item Si $a|b$ entonces $a|bc$, $\forall c\in\Z$. En
+* Si $a|b$ entonces $a|bc$, $\forall c\in\Z$. En
 efecto, existe $d\in\Z$ tal que $b=ad$. Así $bc=adc$, luego $a|bc$.
-
-\end{enumerate}
 {{% /watch %}}
 
 Veamos ahora uno de los resultados más importantes de este tema:
@@ -821,17 +806,6 @@ tales que $a = q'b+r', 0 \leq r < |b|$. Si $q \geq q'$, restando
 obtenemos que $0\leq (q-q')b = r'-r < |b|$, igualdad que sólo se puede dar
 si $q=q'$ y $r=r'.$ \hfill {{% /proof %}}
 
-%%%%%%%%%% Por si se escoge la alternativa
-%
-%{{% watch %}}
- Este teorema se puede demostrar usando el principio de buena
-%ordenación. En efecto: sea $S=\\{ a-bx \mid x \in \Z \
-%\mbox{y} \ a-bx \geq 0 \\}.$ $S$ es no vacío y está acotado
-%inferiormente, luego posee un mínimo. Sea $r=a-bq \geq 0$ dicho
-%mínimo. Falta ver que $r < |b|.$ En caso contrario, $r = |b| + r'$, $0
-%\leq r' < r.$ Sustituyendo se tiene que $r'=a -b(q\pm 1) \in S$, en
-%contra de ser $r$ el mínimo.
-%{{% /watch %}}
 
 
 {{% watch %}}
@@ -879,7 +853,6 @@ Si $1$ es un máximo común divisor de $a$ y $b$, se dice que $a$ y $b$ son {\bf
 {{% /definition %}}
 
 {{% watch %}}
-
 Demostraremos más adelante la existencia de máximo común divisor para cualquier par de enteros $a$ y $b$. Si $d$ y $d'$ son dos máximos comunes divisores de $a$ y $b$, entonces debe verificarse que $d|d'$ y $d'|d$, luego $d'=\pm d$. Es decir, el máximo común divisor, si existe, {\bf es único salvo el signo}.
 {{% /watch %}}
 
@@ -1223,61 +1196,6 @@ $$
 Entonces $d={\rm mcd}(a,b)$ y $m={\rm mcm}(a,b)$.
 {{% /proposition %}}
 
-%%
-%\noindent{\bf Teorema (Existencia del máximo común divisor).--} Dados
-%dos enteros $a,b>0$, existe un único $d>0$ que verifica:
-%\begin{enumerate}
-%
-%\item $d|a$ y $d|b$.
-%
-%\item Si $d'>0$ es tal que $d'|a$ y $d'|b$ entonces $d'|d$.
-%\end{enumerate}
-%A este entero se le llama el máximo común divisor de $a$ y $b$ y se
-%le denota $d=\mbox{mcd}(a,b)$.
-%
-%
-%{{% proof %}}
- Sean
-%$$
-%a=\prod_{p\; \mathrm{primo}} p^{\nu_{a}(p)}, \quad b=\prod_{p\;
-%\mathrm{primo}} p^{\nu_{b}(p)}
-%$$
-%las descomposiciones de $a$ y $b$ en producto de primos. Según el
-%enunciado queda claro que el único número que satisface las
-%condiciones es
-%$$
-%d=\prod_{p\; \mathrm{primo}} p^{\min({\nu_{a}(p),\nu_{b}(p))}}\, .
-%$$ \hfill {{% /proof %}}
-%
-%
-%\noindent{\bf Teorema (Existencia del mínimo común múltiplo).--} Dados
-%dos números $a,b>1$, exis\-te un único $m>0$ que verifica:
-%\begin{enumerate}
-%
-%\item $a|m$ y $b|m$.
-%
-%\item Si $m'>0$ es tal que $a|m'$ y $b|m'$ entonces $m|m'$.
-%\end{enumerate}
-%A este entero se le llama el mínimo común múltiplo de $a$ y $b$ y se
-%le denota $m=\mbox{mcm}(a,b)$.
-%
-%
-%{{% proof %}}
- Sean
-%$$
-%a=\prod_{p\; \mathrm{primo}} p^{\nu_{a}(p)}, \quad b=\prod_{p\;
-%\mathrm{primo}} p^{\nu_{b}(p)}
-%$$
-%las descomposiciones de $a$ y $b$ en producto de primos. Según el
-%enunciado queda claro que el único número que satisface las
-%condiciones es
-%$$
-%m=\prod_{p\; \mathrm{primo}}
-%p^{\max({\nu_{a}(p),\nu_{b}(p))}}=\frac{ab}{\mbox{mcd}(a,b)}
-%$$
-%{{% /proof %}}
-%{{% /watch %}}
-
 
 ## Congruencias
 
@@ -1324,7 +1242,6 @@ $a=qm+r$ $b=q'm+r'$,$0 \leq r,r'<m,$ entonces $a-b=(q-q')m+(r-r')$, igualdad que
 %
 
 {{% watch %}}
-
 La relación {\em "ser congruente con"} es precisamente la relación $\sim_{\Z m}$ definida en el tema anterior (Página \pageref{relizq}). Luego es una relación de equivalencia y el conjunto cociente es el anillo $\Z /\Z m$.
 
 En consecuencia las congruencias son compatibles con la suma y el producto.
@@ -1536,7 +1453,6 @@ $$\phi (m) =|U_m|.$$}
 {{% /definition %}}
 
 {{% watch %}}
-
 Sea $p\in\N$, $p$ es primo si y sólo si $\phi (p)=p-1$.
 {{% /watch %}}
 
@@ -1593,7 +1509,6 @@ $$=(p_1-1)\cdots (p_r-1)p_1^{n_1-1}\cdots p_r^{n_r-1}.$$
 {{% /proof %}}
 
 {{% watch %}}
-
 Si $n$ es un entero y $n=p_1^{n_1} p_2^{n_2} \cdots p_r^{n_r}$ es su descomposición en factores primos, entonces
 $$\phi (n)=(p_1-1)\cdots (p_r-1)p_1^{n_1-1}\cdots p_r^{n_r-1}=n\left( 1-\frac{1}{p_1}\right)\cdots\left( 1-\frac{1}{p_r}\right).$$
 {{% /watch %}}
