@@ -336,7 +336,7 @@ $\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\}, 
 {{% /example %}}
 
 {{% watch %}}
-Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito?
+Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito? ¿Es posible que $\mathcal{P}(A)$ sea vacío? ¿Y unitario?
 {{% /watch %}}
 
 
