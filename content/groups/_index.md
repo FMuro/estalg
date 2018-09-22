@@ -315,7 +315,7 @@ $$\sigma =(i_1i_2\ldots i_r)=(i_2i_3\ldots i_ri_1)=\cdots =(i_ri_1\ldots i_{r-1}
 
 Siguiendo esta notación podemos escribir el ciclo identidad como
 $$1_X=(),$$
-pues $\sop (1_X)=\emptyset$ y todos los elementos que no aparecen entre los paréntesis (o sea, todos los elementos de $X$) quedan invariantes.
+pues $\sop (1_X)=\varnothing$ y todos los elementos que no aparecen entre los paréntesis (o sea, todos los elementos de $X$) quedan invariantes.
 {{% /watch %}}
 
 {{% example name="Ejemplo" %}}
@@ -936,7 +936,7 @@ es un subgrupo de $G$ llamado {\bf subgrupo generado por $A$}.}
 
 {{% proof %}}
 
-Como $A\ne\emptyset$, entonces $\langle A\rangle$ también es no vacío.
+Como $A\ne\varnothing$, entonces $\langle A\rangle$ también es no vacío.
 
 Por otro lado, sean $x=x_1\cdots x_n$ e $y=y_1\cdots y_m$ dos elementos de $\langle A\rangle$, es decir, tales que $x_i,y_j\in A\cup \inv{A}$. Es evidente que cada $\inv{y_j}$ también pertenece a $A\cup \inv{A}$. Luego
 $$x\inv{y}=(x_1\cdots x_n) \inv{(y_1\cdots y_m)}=x_1\cdots x_n \inv{y_m}\cdots \inv{y_1}$$

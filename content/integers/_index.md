@@ -169,7 +169,7 @@ Dejamos como ejercicio la demostración de la siguiente propiedad.
 
 Sea $S$ un subconjunto de una anillo $R$. Entonces $S$ es subanillo si y sólo si es un subgrupo de $R$ para la suma y el producto es interno en $S$, es decir, si y sólo si satisface las siguientes propiedades:
 \begin{enumerate}
-\item $S\ne\emptyset$.
+\item $S\ne\varnothing$.
 \item $\forall x,y\in S, x-y\in S$.
 \item $\forall x,y\in S, xy\in S$.
 \end{enumerate}
@@ -810,7 +810,7 @@ contra de ser $r$ el mínimo.
 %                                       (q-1)b\mbox{ en otro caso.}
 %                      \end{array}\right.$$ 
 %En cualquier caso se tiene que ${\rm s}(qb)-qb=|b|$ para cualquier entero $q$. El conjunto formado por todos los intervalos $[ qb,{\rm s}(qb))$ es una partición del conjunto de los números reales, $\RR$, pues
-%$$\bigcup_{q\in\Z}\left[ qb,{\rm s}(qb)\right )=\RR\ \mbox{ y } \left[ qb,{\rm s}(qb)\right)\cap \left[ q'b,{\rm s}(q'b)\right) =\emptyset\mbox{ si }q\ne q'.$$
+%$$\bigcup_{q\in\Z}\left[ qb,{\rm s}(qb)\right )=\RR\ \mbox{ y } \left[ qb,{\rm s}(qb)\right)\cap \left[ q'b,{\rm s}(q'b)\right) =\varnothing\mbox{ si }q\ne q'.$$
 %Sea entonces $q \in \Z$ tal que $a\in[ qb,{\rm s}(qb))$, es decir, $qb \leq a < {\rm s}(qb).$ Pongamos $r=a-bq$; hay que demostrar que $0\leq r<|b|$. Desde luego, como $a
 %\geq qb$ es $a-qb=r\geq 0$. Por otro lado, como $a < {\rm s}(qb)$, se
 %tiene que $ r=a-qb < {\rm s}(qb)-qb=|b|.$

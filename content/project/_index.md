@@ -8,7 +8,10 @@ pre = "<i class='fa fa-book'></i> "
 
 ### ¿Qué vamos a estudiar?
 
-La asigantura se centrará en el estudio de los conceptos de anillo, módulo y cuerpo y sus aplicaciones a las ecuaciones diofánticas, los operadores lineales, las construcciones geométricas con regla y compás y las ecuaciones polinómicas de grado superior en una variable. Seguiremos los capítulos correspondientes del libro titulado [*Algebra*](http://encore.fama.us.es/iii/encore/record/C__Rb1729980), de Michael Artin, basado en las notas que este profesor del Massachussets Institute of Technology usaba en sus clases. 
+La asigantura se centrará en el estudio de los conceptos de conjunto y grupo y de la factorización de números enteros y polinomios. 
+
+
+anillo, módulo y cuerpo y sus aplicaciones a las ecuaciones diofánticas, los operadores lineales, las construcciones geométricas con regla y compás y las ecuaciones polinómicas de grado superior en una variable. Seguiremos los capítulos correspondientes del libro titulado [*Algebra*](http://encore.fama.us.es/iii/encore/record/C__Rb1729980), de Michael Artin, basado en las notas que este profesor del Massachussets Institute of Technology usaba en sus clases. 
 
 ![book](../images/book.jpeg)
 

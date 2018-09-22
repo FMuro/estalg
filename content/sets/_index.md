@@ -4,7 +4,7 @@ weight = 10
 +++
 
 
-## Operaciones básicas
+## Construcciones básicas
 
 Comenzaremos dando una noción intuitiva de uno de los conceptos matemáticos más utilizados: el de conjunto. Sin embargo no daremos una definición rigurosa. ¿Sabes por qué?
 
@@ -87,7 +87,7 @@ También se puede denotar $A\subset B$ como $A\subseteq B$. Hay que tener cuidad
 {{% /watch %}}
 
 {{% remark %}}
-La contención es **transitiva**, $A\subset B\subset C\Rightarrow A\subset C$. También es **reflexiva**, $A\subset A$. Además, el vacío está contenido en cualquier conjunto $\varnothing\subset A$.
+La contención es **transitiva**, $A\subset B\subset C\Rightarrow A\subset C$. También es **reflexiva**, $A\subset A$. Además, el vacío está contenido en cualquier conjunto $\varnothing\subset A$. Los subconjuntos de $A$ distintos de $\varnothing$ y  $A$ se denominan **subconjuntos propios** de $A$.
 {{% /remark %}}
 
 ![La contención es transitiva](../images/inclusion_transitive.png)
@@ -102,382 +102,246 @@ $A=B$ $\Leftrightarrow$ $A\subset B$ y $A\supset B$.
 $A\subset B$ es lo mismo que $x\in A \Rightarrow x\in B$ y $A\supset B$ equivale a $x\in A \Leftarrow x\in B$, por tanto ambas simultáneamente significan $x\in A \Leftrightarrow x\in B$, que es lo mismo que $A=B$.
 {{% /proof %}}
 
+
+{{% definition %}}
+Dados dos conjuntos $A$ y $B$ la **intersección** $A \cap B$ es el conjunto formado por aquellos elementos
+que pertenecen a ambos conjuntos, $A \cap B = \\{ x  |  x \in A  \wedge  x  \in B \\}$.
+{{% /definition %}}
+
+![Intersección](../images/intersection.png)
+
+{{% remark %}}
+Si $C\subset A$ y $C\subset B$ entonces $C\subset A\cap B$
+{{% /remark %}}
+
+{{% theorem %}}
+La intersección de conjuntos verifica las siguientes propiedades,
+donde $A$, $B$ y $C$ son conjuntos cualesquiera:
+
+* $A \cap B = B \cap A$ (**conmutativa**).
+* $(A \cap B) \cap C = A \cap (B \cap C)$ (**asociativa**).
+* $A \cap B \subset A$. 
+* $A \cap B \subset B$.
+* $\varnothing \cap A = \varnothing$.
+* $A \subset B\Leftrightarrow A \cap B = A.$
+{{% /theorem %}}
+
+
+{{% proof %}}
+Los elementos de $A \cap B$ son los que pertenecen a $A$ y a $B$, que son los mismos que pertenecen a $B$ y a $A$.
+
+Las dos intersecciones triples son el mismo conjunto porque representan a los elementos que están en $A$, $B$ y $C$.
+
+Los elementos que están en $A$ y en $B$ están, en particular, en $A$. También en $B$.
+
+La quinta igualdad la demostramos por doble inclusión. La inclusión $\supset$ es siempre cierta y $\subset$ es consecuencia de un apartado anterior.
+
+Demostremos la equivalencia del último apartado. Probemos primero $\Rightarrow$. Supongamos pues que $A\subset B$. Demostraremos la igualdad de la derecha por doble inclusión. La inclusión $\subset$ es siempre cierta. Veamos $\supset$. Como $A\subset B$, todo elemento de $A$ está también en $B$, y por tanto en la intersección. Probemos ahora $\Leftarrow$. Esto es consecuencia de que $A\cap B\subset B$.
+{{% /proof %}}
+
+{{% remark %}}
+Estas propiedades nos permiten definir inductivamente la **intersección** de una *cantidad finita* de conjuntos $A_1\cap\cdots\cap A_n$. Consiste en los elementos que están en *todos* ellos.
+{{% /remark %}}
+
+Veamos el caso posiblemente infinito.
+
+{{% definition %}}
+Dado un conjunto $I$ y una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ indexada por $I$, su **intersección** se define como $\bigcap_{i\in I}A_i=\\{x|\forall i\in I, x\in A_i\\}$.
+{{% /definition %}}
+
+{{% watch %}}
+Si $I$ es finito, esta definición coincide con la anterior, basta enumerar los elementos de $I$ para comprobarlo. Esta definición es también válida para $I$ infinito.
+{{% /watch %}}
+
+
+{{% definition %}}
+Dos conjuntos $A$ y $B$ son **disjuntos** si $A \cap B = \varnothing$.
+{{% /definition %}}
+
+![Disjuntos](../images/disjoint.png)
+
+{{% definition %}}
+Dados dos conjuntos $A$ y $B$ la **unión** $A \cup B$es el conjunto formado por aquellos elementos
+que pertenecen al menos a uno de estos dos conjuntos, $A \cup B = \\{ x  |  x \in A  \vee  x  \in B \\}$.
+{{% /definition %}}
+
+![Unión](../images/union.png)
+
+Observa que $A\cap B\subset A\cup B$.
+
+{{% remark %}}
+Si $A\subset C$ y $B\subset C$ entonces $A\cup B\subset C$
+{{% /remark %}}
+
+{{% theorem %}}
+La unión de conjuntos verifica las siguientes propiedades,
+donde $A$, $B$ y $C$ son conjuntos cualesquiera:
+
+* $A \cup B = B \cup A$ (**conmutativa**).
+* $(A \cup B) \cup C = A \cup (B \cup C)$ (**asociativa**).
+* $\varnothing \cup A = A$ (**elemento neutro**).
+* $A \subset A \cup B$. 
+* $B \subset A \cup B$.
+* $A \subset B\Leftrightarrow B=A \cup B$.
+
+{{% /theorem %}}
+
+{{% proof %}}
+Los elementos de $A \cup B$ son los que pertenecen a $A$ o a $B$, que son los mismos que pertenecen a $B$ o a $A$.
+
+Los dos uniones triples coinciden porque ambas representan el conjunto de elementos que pertenecen a $A$, a $B$ o a $C$.
+
+Como el vacío no tiene elementos, los elementos que pertenecen al vacío o a $A$ son los que pertenecen a $A$.
+
+Es obvio, por la propia definición, que tanto los elementos de $A$ como los de $B$ pertenecen a la unión.
+
+Probemos la última equivalencia. Comenzamos demostrando $\Leftarrow$. Esto es una simple consecuencia de la inclusión $A\subset A\cup B$. Probemos ahora $\Rightarrow$. Supongamos pues que $A \subset B$. Tenemos que demostrar que $B=A \cup B$ y lo haremos por doble inclusión. La inclusión $\subset$ es cierta por el apartado anterior. Probemos la otra. Un elemento que está en $A$ o en $B$ ha de estar necesariamente en $B$ ya que $A\subset B$.
+{{% /proof %}}
+
+
+{{% remark %}}
+Estas propiedades nos permiten definir inductivamente la **unión** de una *cantidad finita* de conjuntos $A_1\cup\cdots\cup A_n$. Consiste en los elementos que están en *alguno* de ellos.
+{{% /remark %}}
+
+Veamos ahora el caso posiblemente infinito.
+
+{{% definition %}}
+Dada una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$, su **unión** se define como $\bigcup_{i\in I}A_i=\\{x\;|\;\exists i\in I| x\in A_i\\}$.
+{{% /definition %}}
+
+{{% watch %}}
+Igual que antes, si $I$ es finito, esta definición coincide con la anterior, pero es también válida para $I$ infinito.
+{{% /watch %}}
+
+
+{{% definition %}}
+Dados dos conjuntos $A$ y $B$ se define la **diferencia** $A \setminus B$, como el conjunto formado por los elementos de $A$ que no están en $B$, $ A \setminus B = \\{x  |  x \in A  \wedge  x \notin B\\}$.
+{{% /definition %}}
+
+![Diferencia](../images/difference.png)
+
+{{% watch %}}
+Observa que $A\setminus B\neq B\setminus A$. De hecho ambos conjuntos son disjuntos.
+{{% /watch %}}
+
+
+{{% definition %}}
+La **diferencia simétrica** $A\triangle B$ de dos conjuntos $A$ y $B$ se define como $A\triangle B=(A\setminus B)\cup(B\setminus A)=(A\cup B)\setminus (A\cap B)$.
+{{% /definition %}}
+
+![Diferencia simétrica](../images/symmetric_difference.png)
+
+
+{{% theorem name="Leyes dstributivas" %}}
+Dados tres conjuntos $A$, $B$ y $C$:
+
+* $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+* $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+{{% /theorem %}}
+
+{{% proof %}}
+Probamos la primera por doble inclusión. La segunda la dejamos como ejercicio.
+
+Comenzamos demostrando $\supset$. Sabemos que $A\cap B\subset A$ y $A\cap B\subset B\subset B\cup C$, por tanto $A\cap B\subset A\cap (B\cup C)$. También sabemos que $A\cap C\subset A$ y $A\cap C\subset C\subset B\cup C$, por tanto $A\cap C\subset A\cap (B\cup C)$. De aquí se deduce $\supset$.
+
+Veamos ahora $\subset$. Dado $x\in A\cap (B\cup C)$ tenemos que $x\in A$ y $x\in B\cup C$. Por un lado, si $x\in B$ entonces $x\in A\cap B\subset (A \cap B) \cup (A \cap C)$. Por otro lado, si $x\in C$ entonces $x\in A\cap C\subset (A \cap B) \cup (A \cap C)$. De esto se sigue $\subset$.
+{{% /proof %}}
+
+![Leyes distributivas](../images/distributive_laws.png)
+
+{{% theorem name="Leyes de De Morgan" %}}
+Dados tres conjuntos $A$, $B$ y $C$:
+
+* $C \setminus (A \cup B) = (C \setminus A) \cap (C \setminus B)$.
+* $C \setminus (A \cap B) = (C \setminus A) \cup (C \setminus B)$.
+{{% /theorem %}}
+
+{{% proof %}}
+Probaremos la segunda ley de De Morgan por doble inclusión. La primera queda como ejercicio.
+
+Comenzamos con $\supset$. Sea $x\in C\setminus A$. Tenemos entonces que $x\in C$ pero $x\notin A$, por tanto $x\notin A\cap B$ ya que $A\cap B\in A$. Esto demuestra que $x\in C \setminus (A \cap B)$, por tanto $C\setminus A\subset C \setminus (A \cap B)$. Los papeles de $A$ y $B$ son intercambiables, así que también $C\setminus B\subset C \setminus (A \cap B)$. Esto demuestra $\supset$.
+
+Para probar $\subset$, tomamos $x\in C \setminus (A \cap B)$. Esto quiere decir que $x\in C$ pero $x\notin A\cap B$. Esto último equivale a que bien $x\notin A$ o bien $x\notin B$. Si $x\notin A$ entonces $x\in C\setminus A$ y si $x\notin B$ entonces $x\in C\setminus B$. Por tanto $x\in (C \setminus A) \cup (C \setminus B)$. Esto prueba $\subset$.
+{{% /proof %}}
+
+![Leyes de De Morgan](../images/morgan.png)
+
 {{% definition %}}
 En una situación concreta, un **conjunto universal** $U$ es quel que contiene a todos los posibles conjuntos que presented el problema que tratamos.
-
-Fijado un conjunto universal $U$, el **complementario** de un conjunto $A$ se denota $\overline{A}$ o $A^c$ y se define como
-$$
-\overline{A} = \\{ x\in U | x \notin A \\}.
-$$
 {{% /definition %}}
 
-<!--
-
- Cuando el conjunto universal $U$ se haya fijado, todo conjunto $A$ podrá representarse con un {\em diagrama de Venn.}
- 
- 
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{conjuntos-01.eps}
- }
- \caption{Diagrama de Venn}
- \label{fig:Venn}
-\end{figure}
-
-Los subconjuntos de $A$ distintos de $\emptyset$ y de $A$ se denominan {\bf subconjuntos propios} de $A$.
-
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{conjuntos-02.eps}
- }
- \caption{Complementario}
- \label{fig:complementario}
-\end{figure}
-
-
-%Dado dos conjuntos $A \subset X$ se define el {\em complementario de
-%$A$ en $X$}  como
-%$$
-%X \setminus A = \\{ x \; | \; x \in X, \, x \notin A \\},
-%$$
-%esto es, el conjunto de elementos de $X$ que no están en $A$.
-
-
-Dado $A \subset U$, se dan las siguientes igualdades:
-$$
-\overline{\emptyset} = U, \quad \overline{U} = \emptyset, \quad  \overline{\overline{A}}=A.
-$$
-
-Nos detendremos solamente en la tercera de las anteriores
-propiedades. En efecto, por definición
-$$
-\overline{\overline{A}} = \\{ x \; | \; x \in U, \, x \notin \overline{A} \\},
-$$
-pero para un $x \in U$, $x \notin \overline{A}$ si y sólo si $x \in A$,
-por tanto los elementos de $\overline{\overline{A}}$ son precisamente los de
-$A$.
-
+![Conjunto universal](../images/universal_set.png)
 
 {{% definition %}}
-{Unión de conjuntos} {Dados dos conjuntos $A$ y $B$ se define la {\bf unión} de $A$ y $B$,
-notado $A \cup B$, como el conjunto formado por aquellos elementos
-que pertenecen al menos a uno de los dos conjuntos, $A$ ó $B$, es decir
-$$ A \cup B = \\{ x \; | \; x \in A \; \vee \; x \; \in B \\}.$$}
+Fijado un conjunto universal $U$, el **complementario** de un conjunto $A$ se denota $\bar{A}$ o $A^c$ y se define como $\bar{A} = \\{ x\in U | x \notin A \\}$.
 {{% /definition %}}
 
-Nótese que en la definición anterior la disyunción $x \in A \vee x \in B$ no es excluyente, es decir un tal $x$ podrí a pertenecer simultáneamente a $A$ y a $B$.
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{conjuntos-03.eps}
- }
- \caption{Unión}
- \label{fig:unión}
-\end{figure}
-
-{{% example name="Ejemplo" %}}
- 1) Sean $A= \\{ a,b,c \\}$ y $B=\\{2,5,7,c,a\\}$, entonces $$A \cup B = \\{a,b,c,2,5,7\\}.$$
-
-\noindent 2) Si $A=\\{x \in \Q \; | \;-2 \leq x \leq 7\\}$ y $B=\\{x \in \Q \; | \; -4 \leq x \leq 3 \\}$, entonces $$A \cup B =\\{x \in \Q \; | \; -4 \leq x \leq 7\\}.$$
-
-\noindent 3) Sean $A= \\{ \mbox{Alumnos nacidos en enero} \\}$ y $B=\\{ \mbox{Alumnos nacidos en día par} \\}$. Entonces $$A \cup B= \\{ \mbox{Alumnos nacidos en día par o en los días impares de enero}\\}.$$
-{{% /example %}}
-
-Se definen de forma similar la unión de una familia finita de
-conjuntos $A_1,...,A_n$, que denotaremos
-$$
-A_1 \cup ... \cup A_n = \bigcup_{i=1}^n A_i,
-$$
-o de una familia arbitraria de conjuntos $\mathcal{A}= \\{
-A_i \\}_{i\in I}$, que denotaremos
-$$ \bigcup \mathcal{A} =
-\bigcup_{i\in I} A_i:
-$$
-$$  \bigcup_{i\in I} A_i = \\{ x \; | \; \exists i\in I\  \mbox{\ tal que\ }\  x \in A_i\\}.
-$$
-
-{{% theorem %}}
-{Propiedades de la unión} {La unión de conjuntos verifica las siguientes propiedades,
-para cualesquiera conjuntos $A$, $B$ y $C$:
-
-* Conmutativa: $A \cup B = B \cup A$.
-* Asociativa: $(A \cup B) \cup C = A \cup (B \cup C)$.
-* $A \subset A \cup B, B \subset A \cup B.$
-* $\emptyset \cup A = A$.
-* $A \subset B$ \mbox{si y sólo si} $A \cup B = B.$
-
-{{% /theorem %}}
-
-{{% proof %}}
- (a) Los elementos de $A \cup B$ son los que pertenecen a $A$ ó a $B$ que, evidentemente, son los mismos elementos que pertenecen a $B$ ó a $A,$ es decir $A \cup B = B \cup A.$ La prueba de (b) se hace igual.
-
-
-\noindent (c) Sea $a \in A.$ Es claro que $a \in A \cup B$ pues el elemento $a$ verifica que está en $A$ o en $B.$
-Análogamente $B \subset A \cup B.$
-
-\noindent (d) Probaremos esta propiedad por doble inclusión. Por (c) tenemos que $A \subset \emptyset \cup A $. Recíprocamente, sea $a \in \emptyset \cup A$. Esto quiere decir que el elemento $a$ tiene que estar, al menos, en uno de los conjuntos $\emptyset$ ó $A$. Sabemos que $a \notin \emptyset$, luego $a \in A$.
-
-\noindent (e) Supongamos que $A \subset B.$ Para probar que $A \cup B =B$ basta probar que $A \cup B \subset B,$ pues la otra inclusión la tenemos por (c). Sea $x \in A \cup B,$ entonces $x \in A$ ó $x \in B$. Pero si $x \in A,$ como $A \subset B$ se tiene que $x \in B$.
-
-Recí procamente, supongamos que $A \cup B = B.$ Entonces, por (c) tenemos $A \subset A \cup B = B$.
-
-{{% /proof %}}
-
-{{% definition %}}
-{Intersección de conjuntos} {Dados dos conjuntos $A$ y $B$ se define la {\bf intersección} de $A$
-y $B$, notado $A \cap B$, como el conjunto formado por aquellos
-elementos que pertenecen al mismo tiempo a ambos conjuntos, $A$ y
-$B$, es decir
-$$ A \cap B = \\{ x \; | \; x \in A \; \wedge \; x \in B \\}.$$}
-{{% /definition %}}
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{conjuntos-04.eps}
- }
- \caption{Intersección}
- \label{fig:intersección}
-\end{figure}
-
-{{% example name="Ejemplo" %}}
- 1) Sean $A= \\{ a,b,c\\}$ y $B=\\{2,5,7,c,a\\}$, entonces $$A\cap B =\\{a,c\\}.$$
-
-\noindent 2) Si $A=\\{x \in \Q \; | \;-2 \leq x \leq 7\\}$ y $B=\\{x \in \Q \; | \; -4 \leq x \leq 3 \\}$, entonces $$A \cap B =\\{x \in \Q \; | \; -2 \leq x \leq 3\\}.$$
-
-\noindent 3) Sean $A= \\{ \mbox{Alumnos nacidos en enero} \\}$ y $B=\\{ \mbox{Alumnos nacidos en día par} \\}$. Entonces $$A \cap B= \\{ \mbox{Alumnos nacidos en los días pares de enero}\\}.$$
-{{% /example %}}
-
-Se definen de forma similar la intersección de una familia
-finita de conjuntos $A_1,...,A_n$, y la intersección de una
-familia arbitraria de conjuntos $\mathcal{A}=\\{ A_i \\}_{i\in I}$,
-que denotaremos, respectivamente,
-$$
-A_1 \cap ... \cap A_n = \bigcap_{i=1}^n A_i, \quad \mbox{ y } \quad
-\bigcap \mathcal{A} = \bigcap_{i\in I} A_i:
-$$
-$$  \bigcap_{i\in I} A_i = \\{ x \; | \;  x \in A_i\ \forall i\in I\\}.
-$$
-
-
-Si $A$ y $B$ son dos conjuntos tales que $A \cap B = \emptyset$ se
-dice que $A$ y $B$ son {\bf disjuntos}.
-
-
-
-{{% theorem %}}
-{Propiedades de la intersección} {La intersección de conjuntos verifica las siguientes
-pro\-pie\-da\-des, para cualesquiera conjuntos $A$, $B$ y $C$:
-
-
-* Conmutativa: $A \cap B = B \cap A$.
-* Asociativa: $(A \cap B) \cap C = A \cap (B \cap C)$.
-* $A \cap B \subset A$, $A \cap B \subset B.$
-* $\emptyset \cap A = \emptyset$.
-* $A \subset B$ \mbox{si y sólo si} $A \cap B = A.$
-
-
-{{% /theorem %}}
-
-
-{{% proof %}}
- (a) Los elementos de $A \cap B$ son los que pertenecen a $A$ y a $B$ que, evidentemente, son los mismos elementos que pertenecen a $B$ y a $A,$ es decir $A \cap B = B \cap A.$ La prueba de (b) se hace igual.
-
-\noindent (c) Sea $a \in A \cap B.$ Entonces $a \in A$ pues el elemento $a$ verifica que está en $A$ y en $B.$
-Análogamente $B \cap A \subset B.$
-
-\noindent (d) Probaremos esta propiedad por doble inclusión. Por (c) tenemos que $A \cap \emptyset \subset \emptyset $. La inclusión contraria se tiene pues sabemos que el $\emptyset$ es subconjunto de todos los conjuntos, en particular es $\emptyset \subset \emptyset \cap A.$
-
-\noindent (e) Supongamos que $A \subset B.$ Para probar que $A \cap B =A$ basta probar que $A \subset A \cap B,$ pues la otra inclusión la tenemos por (c). Sea $x \in A,$ entonces $x \in B$ pues $A \subset B.$ Es decir $x \in A \cap B.$
-
-Recí procamente, supongamos que $A \cap B = A.$ Entonces, por (c) tenemos $ A = A \cap B \subset B.$
-
-{{% /proof %}}
-
-
-
-
-{{% definition %}}
-{Diferencia de conjuntos}{Dados dos conjuntos $A$ y $B$ se define la {\bf diferencia} de $A$ y $B$ (en este orden), notada $A \setminus B$, como el conjunto formado por los elementos de $A$ que no están en $B,$ es decir
-$$ A \setminus B = \\{x \; | \; x \in A \; \wedge \; x \notin B\\}.$$}
-{{% /definition %}}
-
-Cuando tengamos fijado un conjunto universal, se tiene que $A \setminus B = A \cap \overline{B}.$ En efecto, sea $ x \in A \setminus B.$ Entonces $x \in A$ y $x \notin B,$ luego $x \in A$ y $x \in \overline{B},$ es decir $x \in A \cap \overline{B}.$
-Para demostrar la inclusión contraria basta leer la demostración anterior de derecha a izquierda.
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{conjuntos-05.eps}
- }
- \caption{Diferencia}
- \label{fig:diferencia}
-\end{figure}
-
-{{% example name="Ejemplo" %}}
- 1) Sean $A= \\{ a,b,c\\}$ y $B=\\{2,5,7,c,a\\}$, entonces $$A \setminus B =\\{b\\}.$$
-
-\noindent 2) Si $A=\\{x \in \Q \; | \;-2 \leq x \leq 7\\}$ y $B=\\{x \in \Q \; | \; -4 \leq x \leq 3 \\}$, entonces $$A \setminus B =\\{x \in \Q \; | \; 3 \leq x \leq 7\\}.$$
-
-\noindent 3) Sean $A= \\{ \mbox{Alumnos nacidos en enero} \\}$ y $B=\\{ \mbox{Alumnos nacidos en día par} \\}$. Entonces $$A \setminus B= \\{ \mbox{Alumnos nacidos en los días impares de enero}\\}.$$
-{{% /example %}}
-
-Notemos que, en general, $A \setminus B \not= B \setminus A.$ En el apartado 1) del ejemplo anterior es $A \setminus B =\\{a\\}$ y $B \setminus A =\\{2,5,7\\}.$
-
-{{% definition %}}
-{Diferencia simétrica de conjuntos}{Dados dos conjuntos $A$ y $B$ se define la {\bf diferencia simétrica} de $A$ y $B$, notada $A \triangle B$, como el conjunto formado por los elementos que pertenecen a uno sólo de los conjuntos $A, B,$ es decir
-$$ A \triangle B = \\{x \; | \; x \in A \setminus B\; \vee \; x \in B \setminus A\\}.$$}
-{{% /definition %}}
-
-Se tiene que $A \triangle B = (A \cap \overline{B}) \cup (\overline{A} \cap B) = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)$.
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{conjuntos-06.eps}
- }
- \caption{Diferencia simétrica}
- \label{fig:diferencia simétrica}
-\end{figure}
-
-{{% example name="Ejemplo" %}}
- 1) Sean $A= \\{ a,b,c\\}$ y $B=\\{2,5,7,c,a\\}$, entonces $$A \triangle B =\\{b,2,5,7\\}.$$
-
-\noindent 2) Si $A=\\{x \in \Q \; | \;-2 \leq x \leq 7\\}$ y $B=\\{x \in \Q \; | \; -4 \leq x \leq 3 \\}$, entonces $$A \triangle B =\\{x \in \Q \; | \; -4 \leq x < -2 \; \text{o} \; 3 < x \leq 7 \\}.$$
-
-\noindent 3) Sean $A= \\{ \mbox{Alumnos nacidos en enero} \\}$ y $B=\\{ \mbox{Alumnos nacidos en día par} \\}$. Entonces $$A \triangle B= \\{ \mbox{Alumnos nacidos en los días impares de enero o en los pares del resto de meses}\\}.$$
-{{% /example %}}
-
-Veremos ahora algunas propiedades más de los conjuntos y demostraremos algunos resultados fundamentales utilizando la técnica de la doble inclusión.
-
-%El comportamiento de los subconjuntos con las operaciones habituales entre conjuntos es bastante intuitivo. De %hecho, tanto la unión como la intersección se pueden usar para caracterizar a los subconjuntos (esto es, dar %una propiedad que verifican los subconjuntos de un conjunto dado, y solamente éstos).
+![Complementario](../images/complement.png)
 
 {{% proposition %}}
- Sean $A$ y $B$ dos conjuntos. Se satisfacen las siguientes propiedades:
-
-* $A \cap (B \setminus A) = \emptyset$.
-* $A \cup (B \setminus A) = A\cup B$.
-* Si $A\subset B$, entonces $A \cup (B \setminus A) = B$.
-
+Si tenemos fijado un conjunto universal $U$ entonces $A \setminus B = A \cap \bar{B}$.
 {{% /proposition %}}
 
 {{% proof %}}
- La demostración de ambas afirmaciones es sencilla y se deja como ejercicio.
+Como $A,B\subset U$, 
+$$
+\begin{array}{rcl}
+A \setminus B&=&\\{x  |  x \in A  \wedge  x \notin B\\} \cr
+&=&\\{x  |  x \in A  \wedge   (x\in U \wedge x \notin B)\\} \cr
+&=&\\{x  |  x \in A  \wedge   x\in \bar B\\} \cr
+&=&A \cap \bar{B}.
+\end{array}
+$$
 {{% /proof %}}
 
-{{% theorem %}}
-{Leyes distributivas - Leyes de De Morgan} {Dados tres conjuntos $A$, $B$ y $C$ se verifican las
-siguientes igualdades:
 
+{{% proposition %}}
+Dado un conjunto universal $U$:
 
-* Leyes distributivas:
-$$
-A \cap (B \cup C) = (A \cap B) \cup (A \cap C),$$
-$$A \cup (B \cap
-C) = (A \cup B) \cap (A \cup C)
-$$
-* Leyes de De Morgan: %?(supongamos $A,B \subset C$):
-$$
-C \setminus (A \cup B) = (C \setminus A) \cap (C \setminus B),$$
-$$C \setminus (A \cap B) = (C \setminus A) \cup (C \setminus B)
-$$
-
-{{% /theorem %}}
+* $\bar{\bar{A}}=A$.
+* $\bar U=\varnothing$.
+* $\bar{\varnothing}=U$.
+{{% /proposition %}}
 
 {{% proof %}}
- Probaremos una de las leyes distributivas y una de las leyes de
-De Morgan; las restantes quedan como ejercicio por ser simétricas
-a las probadas. Ambos resultados se probarán por doble
-inclusión.
+Como $A\subset U$, 
+$$
+\begin{array}{rcl}
+\bar{\bar{A}} &=& \\{ x  |  x \in U \wedge x \notin \overline{A} \\} \cr
+&=& \\{ x  |  x \in U \wedge (x\notin U \vee x\in A) \\} \cr
+&=& \\{ x  |  x \in U \wedge x\in A \\} \cr
+&=& \\{ x  |  x\in A \\} \cr
+&=& A
+\end{array}
+$$
 
-Veamos que $A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C)$.
-Para ello tomemos un elemento arbitrario $x \in A \cap (B \cup C)$.
-Esto quiere decir que $x$ está en $A$ y además en $B$ ó en
-$C$. Esto implica que, bien está en $A \cap B$, bien está en $A
-\cap C$. En cualquier caso $x \in (A \cap B) \cup (A \cap C)$.
-
-Demostremos ahora que $(A \cap B) \cup (A \cap C) \subset A \cap (B
-\cup C)$. Si consideramos un elemento cualquiera $y \in (A \cap B)
-\cup (A \cap C)$, $y$ ha de pertencer a $A \cap B$ o a $A \cap C$.
-Por tanto, bien está en $A$ y en $B$ o en $A$ y en $C$. En
-cualquier circunstancia ha de estar en $A$ y al menos en uno de los
-otros dos conjuntos $B$ ó $C$, es decir, $y \in A$  y además $y
-\in B \cup C$.
-
-Pasemos a probar la segunda ley de De Morgan. Veamos primero $C
-\setminus (A \cap B) \subset (C \setminus A) \cup (C \setminus B)$.
-Un elemento $x$ de $C \setminus (A \cap B)$ ha de estar en $C$, pero
-no en $A \cap B$, por lo que no puede estar en al menos uno de los
-dos conjuntos $A$ ó $B$. Así , $x$ ha de pertenecer, bien a $C
-\setminus A$, bien a $C \setminus B$. En cualquier caso $x \in  (C
-\setminus A) \cup (C \setminus B)$.
-
-Si tomamos ahora un elemento $z \in (C \setminus A) \cup (C
-\setminus B)$, observemos que $z$ ha de estar, bien en $C \setminus
-A$, bien en $C \setminus B$, por lo que debe estar en $C$ y {\em no
-estar} en $A$ o en $B$. Así , $z \in C$, pero nunca puede estar en
-$A \cap B$, por lo que $z \in C \setminus (A \cap B)$.
+Por otro lado,
+$$
+\bar U=\\{x\in U|x\notin U\\}=\varnothing,
+$$
+así que $U=\bar{\bar{U}}=\bar\varnothing$.
 {{% /proof %}}
 
-Notemos que si en el apartado (b) del teorema anterior tomamos $C=U,$ el conjunto universal, la leyes de De Morgan nos dicen que:
-
- $$ \overline{A \cup B} = \overline{A} \cap \overline{B}, \quad \overline{A \cap B} = \overline{A} \cup \overline{B}.$$
-
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{deMorgan-01.eps}
- }
- \caption{Ley distributiva\ $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$}
- %\label{fig:Leyes de De Morgan}
-\end{figure}
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{deMorgan-02.eps}
- }
- \caption{Ley de De Morgan\ $ C \setminus (A \cap B) = (C \setminus A) \cup (C \setminus B)$}
- \label{fig:Leyes de De Morgan}
-\end{figure}
-
-Damos ahora una noción clave en Teoría de conjuntos que permite construir nuevos conjuntos a partir de uno dado.
 
 {{% definition %}}
-{Partes de un conjunto} {Dado un conjunto $X$, el {\bf conjunto de las partes} de $X$, notado $\mathcal{P}(X)$, es el conjunto cuyos \underline{elementos} son todos los \underline{subconjuntos} de $X$.
-
-De manera simbólica:
-$$ A \in \mathcal{P}(X) \Leftrightarrow A \subset X.
-$$
-}
+Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\{$subconjuntos de $A\\}$.
 {{% /definition %}}
 
-La consideración del conjunto $\mathcal{P}(X)$ transforma pues la propiedad "ser \underline{subconjunto} de $X$" en ser "\underline{elemento perteneciente} a $\mathcal{P}(X)$":
+{{% watch %}}
+$B\subset A\Leftrightarrow B\in\mathcal{P}(A)$.
+{{% /watch %}}
 
-
-Nótese que si $B\subset C$, se tiene $\mathcal{P}(B) \subset \mathcal{P}(C)$.
-
-{{% example name="Ejemplo" %}}
- Si tenemos el conjunto $X = \\{ 0,1,2,3 \\}$, entonces
-\begin{eqnarray*}
-\mathcal{P}(X) &=& \\{ \, \emptyset, \ \\{0\\}, \ \\{ 1 \\}, \ \\{ 2 \\}, \ \\{ 3 \\}, \\{ 0,1\\}, \ \\{0,2\\}, \ \\{0,3\\}, \ \\{1,2\\}, \ \\{1,3\\}, \ \\{2,3\\}, \\
-&& \quad \\{0,1,2\\}, \ \\{0,1,3\\}, \ \\{0,2,3\\}, \ \\{1,2,3\\}, \, X \, \\}
-\end{eqnarray*}
+{{% example name="Las partes de $A = \\{ 1,2,3 \\}$" %}}
+$\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\},  \\{1,3\\},  \\{2,3\\}, A \\}$.
 {{% /example %}}
+
+{{% watch %}}
+Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito?
+{{% /watch %}}
+
+
+
+<!--
 
 
 ## Producto cartesiano y aplicaciones
@@ -496,7 +360,7 @@ A \times B = \\{ (a,b) \; | \; a \in A, \, b \in B \\}.
 $$}
 {{% /definition %}}
 
-Nótese que $\emptyset \times B = \emptyset = A \times \emptyset$.
+Nótese que $\varnothing \times B = \varnothing = A \times \varnothing$.
 
 {{% example name="Ejemplo" %}}
  Sean $A= \\{ a,b,c \\}$ y $B=\\{b,1,2,3\\}$. Entonces el conjunto $A \times B$ es igual a:
@@ -557,7 +421,7 @@ Las correspondencias se pueden representar como sigue:
 Es claro que la representación del ejemplo anterior es posible por trabajar con conjuntos finitos (y con pocos elementos). Si los conjuntos son infinitos, las correspondencias (no finitas) se tienen que dar definiendo propiedades de los pares que la componen. Por ejemplo, si $A = \Z, B = \N$ una correspondencia de $\Z$ en $\N$ es $G= \\{(x,y) \in \Z \times \N \; | \; x \; \mbox{es par}, y \; \mbox{es impar} \\}.$
 
 {{% example name="Ejemplo" %}}
- Si $A$ (ó $B$) es el conjunto vacío, entonces $A \times B = \emptyset$ y por tanto la única correspondencia de $A$ en $B$, ó entre $A$ y $B$, es la correspondencía vacía.
+ Si $A$ (ó $B$) es el conjunto vacío, entonces $A \times B = \varnothing$ y por tanto la única correspondencia de $A$ en $B$, ó entre $A$ y $B$, es la correspondencía vacía.
 {{% /example %}}
 
 
@@ -622,7 +486,7 @@ Ambas son aplicaciones.
 $$ p(x,y)=x,\quad q(x,y) = y\quad \forall (x,y) \in X\times Y$$
 se denominan respectivamente {\bf primera} y {\bf segunda proyección}.
 
-\noindent 10) Si $A=\emptyset$, la única correspondencia de $A$ en $B$ es la correspondencia vacía que es de hecho una aplicación. Si $B=\emptyset$, la única correspondencia de $A$ en $B$ es la correspondencia vacía, pero dicha correspondencia sólo será una aplicación cuando $A$ también sea el conjunto vacío. En particular, si $B=\emptyset$ y $A\neq \emptyset$, no existe ninguna aplicación de $A$ en $B$.
+\noindent 10) Si $A=\varnothing$, la única correspondencia de $A$ en $B$ es la correspondencia vacía que es de hecho una aplicación. Si $B=\varnothing$, la única correspondencia de $A$ en $B$ es la correspondencia vacía, pero dicha correspondencia sólo será una aplicación cuando $A$ también sea el conjunto vacío. En particular, si $B=\varnothing$ y $A\neq \varnothing$, no existe ninguna aplicación de $A$ en $B$.
 {{% /example %}}
 
 {{% definition %}}
@@ -695,7 +559,7 @@ Nótese también que se verificas las siguientes propiedades (se deja como ejerc
  1) Consideremos la aplicación
 $$f: \Z \rightarrow \Z \quad \mbox{definida por} \quad f(n)=2n,$$ y $A =\\{-1,0, 4, 5\\}.$ Entonces $f(A)=\\{ -2,0,8,10\\},$ y la imagen de $f$ es $\Imag(f) = \\{ \mbox{enteros pares}\\}.$
 
-\noindent Sean $B_1 = \\{2,3,8, -4,-1\\}, \; B_2 = \\{1,3\\}.$ Se tiene que $$f^{-1}(B_1) = \\{ 1,4,-2\\}, f^{-1}(B_2)= \emptyset.$$
+\noindent Sean $B_1 = \\{2,3,8, -4,-1\\}, \; B_2 = \\{1,3\\}.$ Se tiene que $$f^{-1}(B_1) = \\{ 1,4,-2\\}, f^{-1}(B_2)= \varnothing.$$
 
 \noindent 2) Sea la aplicación
 $$f: \RR \rightarrow \RR \quad \mbox{definida por} \quad  f(x) = x^2,$$ $A = [0,2].$ Entonces $f(A) = [0,4],$ pues $\forall x \in [0,4],$ existe $\sqrt{x} \in [0,2]$ tal que $f(\sqrt{x})=x.$ En este caso, la imagen de $f$ es $\Imag(f) = [0,+\infty),$ los números reales no negativos.
@@ -731,7 +595,7 @@ f(x) = \left\\{ \begin{array}{ll} x/2+1 & \mbox{ si $x$ es par} \\
 x+2 & \mbox{ si $x$ es impar} \end{array} \right.
 $$
 Tomamos $A_1 = \\{ 1,3,5 \\}$, $A_2 = \\{ 2,4,6 \\}$. Claramente $f (A_1
-\cap A_2 ) = f (\emptyset ) = \emptyset$, pero $f(A_1) \cap f(A_2) =
+\cap A_2 ) = f (\varnothing ) = \varnothing$, pero $f(A_1) \cap f(A_2) =
 \\{ 3 \\}$.
 
 (b) Sea $x$ un elemento de $f^{-1}(B_1 \cup B_2).$ Entonces
@@ -782,11 +646,11 @@ $$
 
 \noindent 2) Sea $f: \Z \rightarrow \Z$ la aplicación definida por $f(n)=2n.$ Esta aplicación es inyectiva ya que, si $f(n) = f(m),$ entonces $2n=2m,$ y de aquí se tiene que $n=m.$ La aplicación no es sobreyectiva pues $\Imag(f) = \\{ \mbox{números pares} \\} \not= \Z.$
 
-\noindent 3) Sean $U, A\subset U, A \not= \emptyset$ unos conjuntos fijos. Sea $f: \mathcal{P}(U) \rightarrow \mathcal{P}(A)$ la aplicación definida por $f(B)=A \cap B.$ Esta aplicación no es inyectiva, pues si $f(B)=f(C),$ tenemos que $A \cap B = A \cap C,$ y de aquí no se deduce que $B=C.$ Basta tomar dos conjuntos distintos $B,C \subset \overline{A}.$ Entonces se verifica que $A \cap B = \emptyset = A \cap C$ y $B \not= C.$
+\noindent 3) Sean $U, A\subset U, A \not= \varnothing$ unos conjuntos fijos. Sea $f: \mathcal{P}(U) \rightarrow \mathcal{P}(A)$ la aplicación definida por $f(B)=A \cap B.$ Esta aplicación no es inyectiva, pues si $f(B)=f(C),$ tenemos que $A \cap B = A \cap C,$ y de aquí no se deduce que $B=C.$ Basta tomar dos conjuntos distintos $B,C \subset \overline{A}.$ Entonces se verifica que $A \cap B = \varnothing = A \cap C$ y $B \not= C.$
 
 Veamos que esta aplicación es sobreyectiva. Sea $D \in \mathcal{P}(A)$ y pongamos $B=D.$ Entonces $$f(B) = A \cap B = A \cap D = D.$$
 
-Notar que también podemos tomar $B = \overline{A} \cup D,$ pues $$f(B) = A \cap B= A \cap (\overline{A} \cup D) = (A \cap \overline{A}) \cup (A \cap D) = \emptyset \cup D = D.$$
+Notar que también podemos tomar $B = \overline{A} \cup D,$ pues $$f(B) = A \cap B= A \cap (\overline{A} \cup D) = (A \cap \overline{A}) \cup (A \cap D) = \varnothing \cup D = D.$$
 Esto nos da otra forma de ver que la aplicación no es inyectiva.
 
 \noindent 4) La aplicación identidad es biyectiva.
@@ -799,7 +663,7 @@ Sobreyectiva: si $m \in \Z,$ tomando $n=m-3$ se tiene que $f(n)=m.$
 
 \noindent 6) Si $X\subset Y$, la inclusión $i_X:X \to Y$ es una aplicación inyectiva.
 
-\noindent 7) Si $X$ e $Y$ son conjuntos con $Y\neq \emptyset$, la primera proyección $p:X\times Y \to X$ es sobreyectiva. Se tiene un resultado análogo para la segunda proyección si $X\neq \emptyset$.
+\noindent 7) Si $X$ e $Y$ son conjuntos con $Y\neq \varnothing$, la primera proyección $p:X\times Y \to X$ es sobreyectiva. Se tiene un resultado análogo para la segunda proyección si $X\neq \varnothing$.
 {{% /example %}}
 
 La prueba de la siguiente proposición se deja como ejercicio.
@@ -854,7 +718,7 @@ $$g \circ f: \mathcal{P}(U) \rightarrow \mathcal{P}(U), \quad (g \circ f)(B) = \
 
 Por otro lado, $f \circ g:$
 
-$$(f \circ g)(B) = f(g(B)) = f( \overline{A} \cup B) = A \cap (\overline{A} \cup B) = (A \cap \overline{A}) \cup (A \cap B) = \emptyset \cup (A \cap B) = A \cap B,$$ luego la composición de $g$ y $f$ es
+$$(f \circ g)(B) = f(g(B)) = f( \overline{A} \cup B) = A \cap (\overline{A} \cup B) = (A \cap \overline{A}) \cup (A \cap B) = \varnothing \cup (A \cap B) = A \cap B,$$ luego la composición de $g$ y $f$ es
 $$f \circ g: \mathcal{P}(U) \rightarrow \mathcal{P}(U), \quad (f \circ g)(B) = A \cap B, \; \forall B \in \mathcal{P}(U).$$
 
 Nótese que $f \circ g \not= g \circ f.$
@@ -1055,11 +919,11 @@ $$
 
 Si $n$ es impar, es fácil ver que la clase de equivalencia $S(n)$ es el conjunto de todos los números impares.
 
-Notar que si $n_1$ y $n_2$ son ambos números pares (impares) entonces $S(n_1) = S(n_2).$ De aquí  se sigue que en este ejemplo sólo tenemos dos clases de equivalencia, por ejemplo $S(0) = \\{ \mbox{enteros pares}\\}$ y $S(1) = \\{\mbox{enteros impares} \\}.$ Nótese también que $S(0) \cap S(1) = \emptyset$ y que $\Z = S(0) \cup S(1).$ En el teorema siguiente se probará que estas propiedades se verifican en cualquier relación de equivalencia.
+Notar que si $n_1$ y $n_2$ son ambos números pares (impares) entonces $S(n_1) = S(n_2).$ De aquí  se sigue que en este ejemplo sólo tenemos dos clases de equivalencia, por ejemplo $S(0) = \\{ \mbox{enteros pares}\\}$ y $S(1) = \\{\mbox{enteros impares} \\}.$ Nótese también que $S(0) \cap S(1) = \varnothing$ y que $\Z = S(0) \cup S(1).$ En el teorema siguiente se probará que estas propiedades se verifican en cualquier relación de equivalencia.
 
-\noindent 2) Calcularemos las clases de equivalencia de la relación, en $ \mathcal{P}(U)$, definida por: $\forall B, C \in \mathcal{P}(U)$, $B\mathcal{R}_A C$ si $A \cap B = A \cap C,$ siendo $A$ un conjunto fijo. Estudiaremos, primero, un caso particular que nos servirá para entender mejor el caso general. Supongamos que el conjunto $A$ que fijamos tiene sólo dos elementos, $A= \\{x,y\\}.$ Veamos que, en este caso, sólo existen 4 clases de equivalencia: $\mathcal{R}_A(\emptyset), \mathcal{R}_A(A), \mathcal{R}_A(\\{x\\})$ y $\mathcal{R}_A(\\{y\\}).$ En efecto: sea $B$ un conjunto cualquiera. Las posibilidades para $A \cap B$ son
+\noindent 2) Calcularemos las clases de equivalencia de la relación, en $ \mathcal{P}(U)$, definida por: $\forall B, C \in \mathcal{P}(U)$, $B\mathcal{R}_A C$ si $A \cap B = A \cap C,$ siendo $A$ un conjunto fijo. Estudiaremos, primero, un caso particular que nos servirá para entender mejor el caso general. Supongamos que el conjunto $A$ que fijamos tiene sólo dos elementos, $A= \\{x,y\\}.$ Veamos que, en este caso, sólo existen 4 clases de equivalencia: $\mathcal{R}_A(\varnothing), \mathcal{R}_A(A), \mathcal{R}_A(\\{x\\})$ y $\mathcal{R}_A(\\{y\\}).$ En efecto: sea $B$ un conjunto cualquiera. Las posibilidades para $A \cap B$ son
 \begin{itemize}
-\item $A \cap B = \emptyset = A \cap \emptyset,$ de donde $B \mathcal{R}_A \emptyset$ y $B \in \mathcal{R}_A(\emptyset).$
+\item $A \cap B = \varnothing = A \cap \varnothing,$ de donde $B \mathcal{R}_A \varnothing$ y $B \in \mathcal{R}_A(\varnothing).$
 \item $A \cap B = A = A \cap A,$ de donde $B \mathcal{R}_A A$ y $B \in \mathcal{R}_A(A).$
 \item $A \cap B = \\{x\\} = A \cap \\{x\\},$ de donde $B \mathcal{R}_A \\{x\\}$ y $B \in \mathcal{R}_A(\\{x\\}).$
 \item $A \cap B = \\{y\\} = A \cap \\{y\\},$ de donde $B \mathcal{R}_A \\{y\\}$ y $B \in \mathcal{R}_A(\\{y\\}).$
@@ -1078,7 +942,7 @@ Hemos visto en los ejemplos anteriores que las clases de equivalencia distintas 
 en común, y que la unión de todas la clases es el conjunto total. Veamos que esta es una propiedad de cualquier relación de equivalencia, pero antes daremos una nueva noción.
 
 {{% definition %}}
-{Particiones de un conjunto}{Dado un conjunto $A\neq \emptyset$, una {\bf partición} de $A$ es un subconjunto $\mathcal{Q} \subset \mathcal{P}(A)$ (los elementos de $\mathcal{Q}$ son subconjuntos de $A$) que verifica las siguientes propiedades:
+{Particiones de un conjunto}{Dado un conjunto $A\neq \varnothing$, una {\bf partición} de $A$ es un subconjunto $\mathcal{Q} \subset \mathcal{P}(A)$ (los elementos de $\mathcal{Q}$ son subconjuntos de $A$) que verifica las siguientes propiedades:
 \begin{enumerate}
 \item[(a)] Todos los elementos de $\mathcal{Q}$ son no vací os.
 \item[(b)] La unión de todos los elementos de $\mathcal{Q}$ es $A$.
@@ -1086,9 +950,9 @@ en común, y que la unión de todas la clases es el conjunto total. Veamos que e
 \end{enumerate}
 O expresado simbólicamente, 
 \begin{enumerate}
-\item[(a)] $\forall B\in \mathcal{Q}$ se tiene $B\neq \emptyset$ (ó equivalentemente: $\emptyset \notin \mathcal{Q}$).
+\item[(a)] $\forall B\in \mathcal{Q}$ se tiene $B\neq \varnothing$ (ó equivalentemente: $\varnothing \notin \mathcal{Q}$).
 \item[(b)] $\bigcup \mathcal{Q} =A$ (ó escrito de otro modo: $\forall x\in A$, $\exists B\in \mathcal{Q}$ tal que $x\in B$)\footnote{Nótese que la inclusión $\bigcup \mathcal{Q} \subset A$ siempre se tiene puesto que $\mathcal{Q} \subset \mathcal{P}(A)$.}.
-\item[(c)] Si $B,C\in \mathcal{Q}$ y $B\neq C$, entonces $B\cap C=\emptyset$. 
+\item[(c)] Si $B,C\in \mathcal{Q}$ y $B\neq C$, entonces $B\cap C=\varnothing$. 
 \end{enumerate}
 }
 {{% /definition %}}
@@ -1299,7 +1163,7 @@ Para tratar matemáticamente a las nociones de "conjunto finito" y de "conjunto 
 {Conjuntos finitos y conjuntos infinitos}{
 Decimos que un conjunto $X$ es {\bf finito} si o bien es vacío, o si no es vacío, existe un número natural $n\geq 1$ tal que $X$ es equipotente a $\\{1,2,\dots, n\\}$.
 
-\noindent Decimos que un conjunto $X$ es infinito, si $X$ es equipotente a algún subconjunto propio de $X$, i.e. a algún $Y\subset X$ con $\emptyset \neq Y \neq X$.
+\noindent Decimos que un conjunto $X$ es infinito, si $X$ es equipotente a algún subconjunto propio de $X$, i.e. a algún $Y\subset X$ con $\varnothing \neq Y \neq X$.
 }
 {{% /definition %}}
 
@@ -1329,7 +1193,7 @@ La proposición siguiente nos garantiza que las definiciones dadas de de conjunt
 
 \noindent (b) $\Rightarrow$ (a): es equivalente a probar que si $X$ no es finito, entonces $X$ es infinito. 
 
-Supongamos que $X$ no es finito, es decir, no es vacío y no es posible establecer una aplicación biyectiva entre $X$ y ningún conjunto de la forma $\\{1,2,\dots, m\\}$, con $m\geq 1$. Como $X\neq \emptyset$, podemos encontrar un elemento $x_1\in X$. Sea $f_1:\\{1\\} \to X$ la aplicación inyectiva definida por $f_1(1)=x_1$. Como $X$ no es finito, la aplicación $f$ no puede ser sobreyectiva y por tanto podremos encontrar un $x_2\in X$ que no pertenece a la imagen de $f_1$. Consideremos la aplicación $f_2: \\{1,2\\} \to X$ que extiende a $f_1$ y tal que $f_2(2)=x_2$. Por la misma razón anterior $f_2$ no puede ser sobreyectiva.
+Supongamos que $X$ no es finito, es decir, no es vacío y no es posible establecer una aplicación biyectiva entre $X$ y ningún conjunto de la forma $\\{1,2,\dots, m\\}$, con $m\geq 1$. Como $X\neq \varnothing$, podemos encontrar un elemento $x_1\in X$. Sea $f_1:\\{1\\} \to X$ la aplicación inyectiva definida por $f_1(1)=x_1$. Como $X$ no es finito, la aplicación $f$ no puede ser sobreyectiva y por tanto podremos encontrar un $x_2\in X$ que no pertenece a la imagen de $f_1$. Consideremos la aplicación $f_2: \\{1,2\\} \to X$ que extiende a $f_1$ y tal que $f_2(2)=x_2$. Por la misma razón anterior $f_2$ no puede ser sobreyectiva.
 
 Continuando con este proceso definimos una familia de aplicaciones 
 $$ f_n: \\{1,\dots, n\\} \to X,\quad n\in\N,
