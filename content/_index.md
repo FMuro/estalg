@@ -1,6 +1,6 @@
 # Álgebra Básica
 
-Esta web contiene las transparencias del profesor [Fernando Muro](http://personal.us.es/fmuro/) para la asignatura obligatoria [Estructuras Algebraicas](http://www.us.es/estudios/grados/plan_171/asignatura_1710020/proyecto_986369) del [Grado en Matemáticas](http://www.us.es/estudios/grados/plan_171) de la [Universidad de Sevilla](http://www.us.es). Los contenidos son esencialmente los mismos que los de los apuntes disponibles en PDF en [este enlace](https://rodas5.us.es/items/1141d30f-73ed-4c7a-92f9-d5046dbdffe1/1/). Han sido elaborados por diversos profesores del [Departamento de Álgebra](http://www.algebra.us.es/).
+Esta web contiene las transparencias del profesor [Fernando Muro](http://personal.us.es/fmuro/) para la asignatura obligatoria [Álgebra Básica](http://www.us.es/estudios/grados/plan_171/asignatura_1710001) del [Grado en Matemáticas](http://www.us.es/estudios/grados/plan_171) de la [Universidad de Sevilla](http://www.us.es). Los contenidos son esencialmente los mismos que los de los apuntes disponibles en PDF en [este enlace](https://rodas5.us.es/items/1141d30f-73ed-4c7a-92f9-d5046dbdffe1/1/). Han sido elaborados por diversos profesores del [Departamento de Álgebra](http://www.algebra.us.es/).
 
 {{% watch %}}
  Esta web está **en construcción**. El contenido actual es incompleto, puede contener erratas y será modificado para su mejora sin previo aviso. Se recomienda recargar la web cada día que se consulte para evitar que ordenador muestre copias antiguas almacenadas en la caché.

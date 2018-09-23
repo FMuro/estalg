@@ -9,25 +9,23 @@ weight = 10
 Comenzaremos dando una noción intuitiva de uno de los conceptos matemáticos más utilizados: el de conjunto. Sin embargo no daremos una definición rigurosa. ¿Sabes por qué?
 
 {{% definition %}}
-Un **conjunto** es a una colección de elementos. Normalmente están caracterizados por compartir alguna propiedad. Para que un conjunto esté bien definido debe ser
+Un **conjunto** es una colección de **elementos**. Normalmente están caracterizados por compartir alguna propiedad. Para que un conjunto esté bien definido debe ser
 posible discernir si un elemento arbitrario está o no en él.
 {{% /definition %}}
 
 Los conjuntos pueden definirse de manera **explícita**, citando todos
-los objetos de los que consta *entre llaves*, 
+los elementos de los que consta *entre llaves*, 
 $$
 A = \\{ 1,2,3,4,5 \\},
 $$
 o **implícita**, dando una o varias características que
-determinen si un objeto dado está o no en el conjunto, 
+determinen si un elemento dado está o no en el conjunto, 
 $$
 A = \\{ \text{números naturales del }1\text{ al }5\\}.
 $$
 
 {{% watch %}}
-Los elementos de un conjunto *no están ordenados*, aunque vengan especificados como una lista, por tanto $A=\\{3,1,2,5,4\\}$.
-
-En una definición explícita *no se pueden repetir elementos*, así que $\\{1,1,2,3,4,5\\}$ sería una manera incorrecta de expresar el conjunto $A$.
+Los elementos de un conjunto *no están ordenados*, aunque vengan especificados como una lista, por tanto $A=\\{3,1,2,5,4\\}$. En una definición explícita *no se pueden repetir elementos*, así que $\\{1,1,2,3,4,5\\}$ sería una manera incorrecta de expresar el conjunto $A$.
 {{% /watch %}}
 
 {{% example name="Conjuntos de números" %}}
@@ -83,7 +81,7 @@ Dados dos conjuntos $A$ y $B$, decimos que $A$ está **contenido** en $B$ o que 
 {{% /definition %}}
 
 {{% watch %}}
-También se puede denotar $A\subset B$ como $A\subseteq B$. Hay que tener cuidado con la negación de estos dos símbolos. Tanto $A\not\subset B$ como $A\not\subseteq B$ significan que $A$ no está contenido en $B$, o no es un subconjunto de $B$. Sin embargo $A\subsetneq B$ solo niega la igualdad, por lo que significa que $A$ es un subconjunto de $B$ pero que $A$ no es igual a $B$. Por ejemplo, $\\{2,3,4\\}\subsetneq\\{1,2,3,4,5\\}$.
+También se puede denotar $A\subset B$ como $A\subseteq B$. Hay que tener cuidado con la negación de estos dos símbolos. Tanto $A\not\subset B$ como $A\not\subseteq B$ significan que $A$ no está contenido en $B$, o no es un subconjunto de $B$. Sin embargo $A\subsetneq B$ solo niega la igualdad, por lo que significa que $A$ es un subconjunto de $B$ pero que $A$ no es igual a $B$, es decir, la contención es **estricta**. Por ejemplo, $\\{2,3,5\\}\subsetneq\\{1,2,3,4,5\\}$.
 {{% /watch %}}
 
 {{% remark %}}
@@ -102,6 +100,16 @@ $A=B$ $\Leftrightarrow$ $A\subset B$ y $A\supset B$.
 $A\subset B$ es lo mismo que $x\in A \Rightarrow x\in B$ y $A\supset B$ equivale a $x\in A \Leftarrow x\in B$, por tanto ambas simultáneamente significan $x\in A \Leftrightarrow x\in B$, que es lo mismo que $A=B$.
 {{% /proof %}}
 
+{{% watch %}}
+Cualquier enunciado matemático debe venir seguido de una prueba. Se usan diversos términos para denominar a los enunciados matemáticos, de acuerdo con la percepción que tengamos de su importancia o dificultad. De mayor a menor:
+
+* Teorema.
+* Proposición.
+* Lema.
+* Corolario.
+
+Los lemas suelen tener un carácter técnico y presentarse como pasos intermedios en la demostración de un resultado de mayor envergadura. Los corolarios se enuncian habitualmente después de un resultado más importante y su prueba suele ser obvia y omitirse.
+{{% /watch %}}
 
 {{% definition %}}
 Dados dos conjuntos $A$ y $B$ la **intersección** $A \cap B$ es el conjunto formado por aquellos elementos
@@ -161,7 +169,7 @@ Dos conjuntos $A$ y $B$ son **disjuntos** si $A \cap B = \varnothing$.
 ![Disjuntos](../images/disjoint.png)
 
 {{% definition %}}
-Dados dos conjuntos $A$ y $B$ la **unión** $A \cup B$es el conjunto formado por aquellos elementos
+Dados dos conjuntos $A$ y $B$ la **unión** $A \cup B$ es el conjunto formado por aquellos elementos
 que pertenecen al menos a uno de estos dos conjuntos, $A \cup B = \\{ x  |  x \in A  \vee  x  \in B \\}$.
 {{% /definition %}}
 
@@ -232,7 +240,7 @@ La **diferencia simétrica** $A\triangle B$ de dos conjuntos $A$ y $B$ se define
 ![Diferencia simétrica](../images/symmetric_difference.png)
 
 
-{{% theorem name="Leyes dstributivas" %}}
+{{% theorem name="Leyes distributivas" %}}
 Dados tres conjuntos $A$, $B$ y $C$:
 
 * $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
@@ -267,7 +275,7 @@ Para probar $\subset$, tomamos $x\in C \setminus (A \cap B)$. Esto quiere decir 
 ![Leyes de De Morgan](../images/morgan.png)
 
 {{% definition %}}
-En una situación concreta, un **conjunto universal** $U$ es quel que contiene a todos los posibles conjuntos que presented el problema que tratamos.
+En una situación concreta, un **conjunto universal** $U$ es el que contiene a todos los posibles conjuntos del problema que tratamos.
 {{% /definition %}}
 
 ![Conjunto universal](../images/universal_set.png)
@@ -339,28 +347,17 @@ $\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\}, 
 Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito? ¿Es posible que $\mathcal{P}(A)$ sea vacío? ¿Y unitario?
 {{% /watch %}}
 
-
-
-<!--
-
-
 ## Producto cartesiano y aplicaciones
 
 {{% definition %}}
-{Pares ordenados} {Dados dos objetos $x$ e $y$, diremos que $x$ (respectivamente $y$) es la primera (resp. la segunda) componente del {\bf par ordenado} $(x,y)$. Dos pares ordenados son iguales si y sólo si coinciden sus primeras componentes y coinciden sus segundas componentes:
-$$ (x,y)=(x',y') \Leftrightarrow \left\\{ \begin{array}{c} x=x' \\ \wedge \\ y=y'.\end{array} \right.
-$$}
+El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$ cuyos elementos son los **pares ordenados** $(a,b)$ donde $a\in A$ y $b\in B$, es decir $A \times B = \\{ (a,b)  |  a \in A \wedge b \in B \\}$.
 {{% /definition %}}
 
-{{% definition %}}
-{Producto cartesiano} {Dados dos conjuntos $A$ y $B$, se define el {\bf producto cartesiano}
-de $A$ y $B$ como el conjunto cuyos elementos son todos los pares ordenados cuya primera componente es un elemento de $A$ y cuya segunda componente es un elemento de $B$ y se denota $A \times B$:
-$$
-A \times B = \\{ (a,b) \; | \; a \in A, \, b \in B \\}.
-$$}
-{{% /definition %}}
+{{% watch %}}
+$A \times \varnothing = \varnothing = \varnothing \times B$.
+{{% /watch %}}
 
-Nótese que $\varnothing \times B = \varnothing = A \times \varnothing$.
+<!--
 
 {{% example name="Ejemplo" %}}
  Sean $A= \\{ a,b,c \\}$ y $B=\\{b,1,2,3\\}$. Entonces el conjunto $A \times B$ es igual a:
