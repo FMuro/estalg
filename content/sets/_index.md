@@ -347,477 +347,418 @@ $\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\}, 
 Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito? ¿Es posible que $\mathcal{P}(A)$ sea vacío? ¿Y unitario?
 {{% /watch %}}
 
+
+
 ## Producto cartesiano y aplicaciones
 
 {{% definition %}}
-El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$ cuyos elementos son los **pares ordenados** $(a,b)$ donde $a\in A$ y $b\in B$, es decir $A \times B = \\{ (a,b)  |  a \in A \wedge b \in B \\}$.
+El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$ cuyos elementos son los **pares ordenados** $(a,b)$ cuya primera **coordenada** está en $A$, $a\in A$, y la segunda en $B$, $b\in B$, es decir $A \times B = \\{ (a,b)  |  a \in A \wedge b \in B \\}$.
+{{% /definition %}}
+
+{{% example name="Un producto cartesiano" %}}
+Si $A= \\{ 1,2,3 \\}$ y $B=\\{a,b\\}$ entonces $A \times B=\\{(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)\\}$.
+{{% /example %}}
+
+{{% watch %}}
+El vacío hace el papel de cero $A \times \varnothing = \varnothing = \varnothing \times B$. En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$. Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $A\times B$?
+{{% /watch %}}
+
+{{% remark %}}
+Análogamente, podemos definir el **producto cartesiano** de una cantidad finita de conjuntos $A\_1\times\cdots\times A\_n$ como el formado por las **$n$-uplas** $(a\_1,\dots, a\_n)$ tales que $a\_i\in A\_i$. Más generalmente,  podemos definir el producto cartesiano de una familia arbitraria de conjuntos $\\{A\_i\\}\_{i\in I}$, $\prod\_{i\in I}A\_i=\\{(a\_i)\_{i\in I}|a\_i\in A\_i\\}$.
+{{% /remark %}}
+
+
+
+{{% definition %}}
+Dados dos conjuntos $A$ y $B$, una **correspondencia** $C$ de $A$ en $B$ es un subconjunto $C\subset A \times B$.
+{{% /definition %}}
+
+Las correspondencias se suelen representar del siguiente modo
+
+![Correspondence](../images/correspondence.png)
+
+Esta correspondencia es $C=\\{(1,a), (1,b), (2,b), (3, b)\\}\subset A\times B$. Pensamos en las correspondencias como reglas que asocian elementos del segundo conjunto a elementos del primero. En este ejemplo al $1$ se le asocian el $a$ y el $b$, y al $2$ y al $3$ solo el $b$. Al $4$ no se le asocia ningún elemento de $B$ y $c\in B$ no está asociado a ningún elemento de $A$.
+
+{{% watch %}}
+¿Cuántas correspondencias hay de $\varnothing$ en $A$? ¿Y de $A$ en $\varnothing$?
+{{% /watch %}}
+
+{{% definition %}}
+Dados dos conjuntos $A$ y $B$, una **aplicación** $f$ de $A$ en $B$, que se denota $f\colon A\rightarrow B$, es una correspondencia que asocia a cada elemento de $A$ un único elemento de $B$, es decir $ \forall a \in A \; \exists ! \; b \in B | (a,b)\in f$.
+{{% /definition %}}
+
+La correspondencia del diagrama anterior no es una aplicación, pero la siguiente sí:
+
+![Aplicación](../images/map.png)
+
+Como conjunto, $f=\\{(1,a), (4,b), (2,b), (3, b)\\}\subset A\times B$.
+
+{{% definition %}}
+Dada una aplicación $f\colon A\rightarrow B$ y $a \in A$, denotaremos $f(a)\in B$ al único elemento tal que $(a,f(a))\in f$ y lo denominaremos **imagen** de $a$ por $f$. También diremos que $f(a)$ es el **valor** de $f$ en $a$. 
 {{% /definition %}}
 
 {{% watch %}}
-$A \times \varnothing = \varnothing = \varnothing \times B$.
+Para definir una aplicación hay que especificar lo siguiente:
+
+* El conjunto de partida, también llamado **dominio**.
+* El de llegada, o **codominio**.
+* La imagen de cada elemento del conjunto de partida.
+
+Si dos aplicaciones difieren en alguno de estos tres puntos se consideran diferentes.
 {{% /watch %}}
+
+{{% example name="Aplicaciones parecidas pero diferentes" %}}
+La aplicación $f\colon \mathbb{N}\rightarrow \mathbb{N}$ definida como $f(n)=n$ para todo $n\in\mathbb{N}$ es diferente de la aplicación $g\colon \mathbb{N}\rightarrow \mathbb{Z}$ definida como $g(n)=n$ para todo $n\in\mathbb{N}$.
+{{% /example %}}
+
+
+{{% watch %}}
+Dada una aplicación $f\colon A\rightarrow B$, una manera habitual de denotar que $b=f(a)$ es $a\mapsto b$.
+{{% /watch %}}
+
+
+La aplicación del diagrama anterior se puede definir también del siguiente modo:
+$$
+\begin{array}{rcl}
+A&\stackrel{f}\longrightarrow& B,\cr
+1&\mapsto&a,\cr
+2&\mapsto&b,\cr
+3&\mapsto&b,\cr
+4&\mapsto&b.
+\end{array}
+$$
+Observa que el nombre de la aplicación se puede poner sobre la flecha.
+
+
+
+
+{{% example name="Algunas aplicaciones importantes" %}}
+* La **identidad** $1_A\colon A\rightarrow A$ se define como $1_A(a)=a$ para todo $a\in A$. Esta aplicación está definida para cualquier conjunto $A$.
+
+* Dado un subconjunto $B\subset A$, la **inclusión** $i\colon B\rightarrow A$ se definie como $i(b)=b$ para todo $b\in B$. 
+
+* Dados dos conjuntos $A$ y $B$ y un elemento $b\in B$, la aplicación **constante** $c_b\colon A\rightarrow B$ se define como $c_b(a)=b$ para todo $a\in A$.
+{{% /example %}}
+
+{{% watch %}}
+Dado un conjunto $A$, ¿hay algun aplicación $\varnothing\rightarrow A$? ¿Y $A\rightarrow\varnothing$?.
+{{% /watch %}}
+
+
+{{% definition %}}
+Dadas dos aplicaciones 
+$$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C$$
+su **composición** $g\circ f\colon A\rightarrow C$ es la aplicación definida como $(g\circ f)(a)=g(f(a))$.
+{{% /definition %}}
+
+
+{{% proposition %}}
+La composición de aplicaciones satisface las propiedades siguientes:
+
+* Dadas tres aplicaciones $$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C\stackrel{h}\longrightarrow D$$
+se verifica que $h\circ (g\circ f)=(h\circ g)\circ f$ (**asociativa**).
+* Dada una aplicación $f\colon A\rightarrow B$, se tiene que $f\circ 1_A=f=1_B\circ f$ (**elemento neutro**).
+{{% /proposition %}}
+
+{{% proof %}}
+Las aplicaciones cuya igualdad se plantea tienen el mismo dominio y condominio, por tanto bastará comprobar que las imágenes de los elementos del dominio coinciden.
+
+Dado $a\in A$, por un lado
+$$
+\begin{array}{rcl}
+(h\circ (g\circ f))(a)&=&h((g\circ f)(a))\cr
+&=&h(g(f(a)),\cr
+((h\circ g)\circ f)(a)&=&(h\circ g)(f(a))\cr
+&=&h(g(f(a)).
+\end{array}
+$$
+
+Por otro lado
+$$
+\begin{array}{rcl}
+(f\circ 1_A)(a)&=&f(1_A(a))\cr
+&=&f(a)\cr
+&=&1_B(f(a))\cr
+&=&(1_B\circ f)(a).
+\end{array}
+$$
+{{% /proof %}}
+
+{{% definition %}}
+Una aplicación $f \colon  A \rightarrow B$ es **invertible** si existe $g \colon B \rightarrow A$ tal que
+$g \circ f = 1_A$ y $f \circ g = 1_B$.
+{{% /definition %}}
+
+{{% proposition %}}
+La aplicación $g$ de la definición anterior, si existe, es única.
+{{% /proposition %}}
+
+{{% proof %}}
+Si hubiera otra $g' \colon B \rightarrow A$ entonces 
+$$
+\begin{array}{rcl}
+g&=&g\circ 1_B\cr
+&=&g\circ (f\circ g')\cr
+&=&(g\circ f)\circ g'\cr
+&=&1_A\circ g'=g'.
+\end{array}
+$$
+{{% /proof %}}
+
+{{% definition %}}
+Si $f \colon  A \rightarrow B$ es invertible su aplicación **inversa** si  $f^{-1} \colon B \rightarrow A$ es la única que satisface
+$f^{-1} \circ f = 1_A$ y $f \circ f^{-1} = 1_B$.
+{{% /definition %}}
+
+
+{{% remark %}}
+La identidad $1_A\colon A\rightarrow A$ es invertible y $1_A^{-1}=1_A$. Si $f\colon A\rightarrow B$ es invertible entonces $f^{-1} \colon B \rightarrow A$ también y $(f^{-1})^{-1}=f$.
+{{% /remark %}}
+
+{{% proposition %}}
+Si tenemos dos aplicaciones invertibles
+$$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C$$ entonces $g\circ f$ es invertible y $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
+{{% /proposition %}}
+
+{{% proof %}}
+Basta observar que
+$$
+\begin{array}{rcl}
+(g\circ f)\circ (f^{-1}\circ g^{-1})
+&=&
+g\circ (f\circ f^{-1})\circ g^{-1}\cr
+&=&
+g\circ 1_B\circ g^{-1}\cr
+&=&
+g\circ g^{-1}\cr
+&=&
+1_C,
+\end{array}
+$$
+y que
+$$
+\begin{array}{rcl}
+(f^{-1}\circ g^{-1})\circ (g\circ f)
+&=&
+f^{-1}\circ (g^{-1}\circ g)\circ f\cr
+&=&
+f^{-1}\circ 1_B\circ f\cr
+&=&
+f^{-1}\circ f\cr
+&=&
+1_A.
+\end{array}
+$$
+{{% /proof %}}
+
+Nos disponemos a dar una caracterización más asequible de las aplicaciones invertibles.
+
+{{% definition %}}
+Sea $f\colon A \rightarrow B$ una aplicación. 
+
+* $f$ es **inyectiva** o **uno-a-uno** si no existen dos elementos diferentes de $A$ con la misma imagen.
+* $f$ es **sobreyectiva** si todo elemento de $B$ es la imagen de algún elemento de $A$.
+* $f$ es **biyectiva** si es inyectiva y sobreyectiva.
+{{% /definition %}}
+
+En una aplicación inyectiva no puede ocurrir los siguiente:
+
+![Aplicación no inyectiva](../images/noinjective.png)
+
+En una sobreyectiva está prohibida la siguiente situación:
+
+![Aplicación no sobreyectiva](../images/nosurjective.png)
+
+{{% remark %}}
+En notación matemática, $f\colon A\rightarrow B$ es **inyectiva** si, dados $a,a'\in A$, $f(a)=f(a')\Rightarrow a=a'$, y $f$ es **sobreyectiva** si $\forall b\in B\;\exists a\in A|f(a)=b$.
+{{% /remark %}}
+
+{{% watch %}}
+Es un error tristemente común el confundir la caracterización anterior de la inyectividad con la implicación $\Leftarrow$. En realidad esta impliciación es cierta para cualquier aplicación por la propia definición.
+{{% /watch %}}
+
+{{% lemma %}}
+Una aplicación $f\colon A \rightarrow B$ es biyectiva $\Leftrightarrow$ $\forall b\in B\;\exists! a\in A|f(a)=b$.
+{{% /lemma %}}
+
+{{% proof %}}
+Veamos $\Rightarrow$. Supongamos pues que $f$ es biyectiva. Si excluimos la condición de unicidad, el enunciado de la derecha es cierto por ser $f$ sobreyectiva. La unicidad se deduce de ser $f$ inyectiva, pues si existieran $a,a'\in A$ tales que $f(a)=b=f(a')$ entonces tendríamos que $a=a'$.
+
+Veamos ahora $\Leftarrow$. Como ya hemos comentado, el enunciado de la derecha implicia la sobreyectividad de $f$ ya que incluso la condición de unicidad no sería necesaria para esto. Para ver que $f$ es inyectiva tomamos $a,a'\in A$ y suponemos que $f(a)=f(a')$. Tomando $b=f(a)$ tenemos que $f(a)=b$ y $f(a')=b$, así que por la unicidad $a=a'$, que es lo que teníamos que probar.
+{{% /proof %}}
+
+{{% watch %}}
+Si $f\colon A\rightarrow B$ es biyectiva y $A$ es finito, ¿qué podemos decir de $B$?
+{{% /watch %}}
+
+{{% theorem %}}
+Una aplicación $f\colon A \rightarrow B$ es invertible $\Leftrightarrow$ es biyectiva.
+{{% /theorem  %}}
+
+{{% proof %}}
+Supongamos que $f$ es invertible. Veamos que es sobreyectiva. Dado $b\in B$ tenemos que $f(f^{-1}(b))=(f\circ f^{-1})(b)=1_B(b)=b$, con lo que $f$ es sobreyectiva. Si, dados $a,a'\in A$, $f(a)=f(a')$, entonces $f^{-1}(f(a))=f^{-1}(f(a'))$. Como $f^{-1}\circ f=1_A$ deducimos que $a=a'$, luego $f$ es inyectiva.
+
+Supongamos ahora que $f$ es biyectiva. Definimos $g\colon B\rightarrow A$ del siguiente modo. Dado $b\in B$, $g(b)\in A$ es el único elemento tal que $f(g(b))=a$. Esto implica que $f\circ g=1_B$. Veamos que $g\circ f=1_A$. Para ello tomamos $a\in A$ cualquiera y calculamos
+$$
+\begin{array}{rcl}
+(f\circ(g\circ f))(a)&=&f((g\circ f)(a)),\cr
+((f\circ g)\circ f)(a)&=&(1_B\circ f)(a),\cr
+&=&f(a).
+\end{array}
+$$
+Por la asociatividad de la composición $f((g\circ f)(a))=f(a)$ y por la inyectividad de $f$ tenemos que $(g\circ f)(a)=a$. Esto es lo que había que probar.
+{{% /proof %}}
+
+{{% remark %}}
+Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que la igualdad en el ámbito de los números, es por eso que se denotan  $$f\colon\stackrel{\cong}\longrightarrow B$$ o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
+$$
+\begin{array}{rcl}
+A\times B&\cong &B\times A,\cr
+(a,b)&\mapsto &(b,a).
+\end{array}
+$$
+Decimos pues que el producto cartesiano es conmutativo *salvo biyección*. Lo mismo ocurre con la asociatividad del producto cartesiano,
+$$
+\begin{array}{rcl}
+(A\times B)\times C&\cong &A\times(B\times C),\cr
+((a,b),c)&\mapsto &(a,(b,c)).
+\end{array}
+$$
+Es más, ambos están en biyección con el producto triple, por ejemplo
+$$
+\begin{array}{rcl}
+A\times B\times C&\cong &A\times B\times C,\cr
+((a,b),c)&\mapsto &(a,b,c).
+\end{array}
+$$
+{{% /remark %}}
+
+{{% definition %}}
+Sea $f \colon  A \longrightarrow B$ una aplicación. 
+
+* La **imagen directa** de un subconjunto del dominio $U\subset A$ 
+es el subconjunto del codominio $f(U)=\\{b\in B\:|\;\exists a\in U|f(a)=b\\}\subset B$. 
+* La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}$.
+
+La **imagen** de la aplicación $A$ se define como $\operatorname{Im}f=f(A)$.
+{{% /definition %}}
+
+La imagen inversa recible otros nombres como **contraimagen**, **preimagen** o **anti-imagen**. La imagen directa también se denomina simplemente **imagen**.
+
+{{% watch %}}
+Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen de un elemento de $A$ con la imagen directa de un subconjunto de $A$, aunque obviamente son conceptos relacionados. Observa que $f(\\{a\\})=\\{ f(a) \\}$.
+{{% /watch %}}
+
+
+{{% watch %}}
+¿Cuál es la imagen directa del subconjunto vacío? ¿Y su imagen inversa?
+{{% /watch %}}
+
+{{% watch %}}
+La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. 
+{{% /watch %}}
+
+
+{{% remark %}}
+Sea $f\colon A\rightarrow B$ una aplicación. Podemos caracterizar la inyectividad y la sobreyectividad de $f$ en términos de la imagen inversa de subconjuntos subunitarios:
+
+* $f$ es inyectiva $\Leftrightarrow$ $f^{-1} (\\{ a \\})$ consta  *a lo más* de de un elemento para todo $a \in A$.
+* $f$ es sobre $\Leftrightarrow$ 
+$f^{-1} (\\{ a \\})$ consta *por lo menos* de un elemento para todo $a \in A$.
+* $f$ es biyectiva $\Leftrightarrow$ $f^{-1} (\\{ a \\})$ es unitario para todo $a \in A$.
+
+Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto. 
+{{% /remark %}}
+
+
+{{% remark %}}
+Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{Im}f=B$.
+{{% /remark %}}
+
+{{% watch %}}
+Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. Como acabamos de ver, el enunciado análogo para la imagen directa caracteriza las aplicaciones sobreyectivas, así que no es cierto en general.
+{{% /watch %}}
+
+
+{{% watch %}}
+A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\bar{f}\colon  A \to \Imag(f)$ como $\bar{f}(a)=f(a)$ para todo $a\in A$. ¿En qué se diferencian $f$ y $\bar{f}$?
+{{% /watch %}}
+
+{{% watch %}}
+Prueba como ejercicio que las imágenes directa e inversa preservan inclusiones, es decir, 
+dada una aplicación $f\colon A\rightarrow B$: 
+
+* $U\subset U'\subset A\Rightarrow f(U)\subset f(U')\subset B$
+* $V \subset V'\subset B\Rightarrow f^{-1}(V)\subset f^{-1}(V')\subset A$.
+
+¿Son ciertos los recíprocos?
+{{% /watch %}}
+
+
+{{% proposition %}}
+Dada una aplicaicón $f\colon A \rightarrow B$ y subconjuntos $U\subset
+A$ y $V\subset B$, se verifican las siguientes propiedades:
+
+* $U \subset f^{-1}(f(U))$.
+* $f(f^{-1}(V)) \subset V$. 
+{{% /proposition %}}
+
+{{% proof %}}
+Probaremos la segunda propiedad y dejaremos la primera como ejercicio. Dado $y\in f(f^{-1}(V))$ existe $x\in f^{-1}(V)$ tal que $y=f(x)$. Como $x\in f^{-1}(V)$, $f(x)\in V$, así que $y\in V$. Esto es lo que había que demostrar.
+{{% /proof %}}
+
+{{% proposition %}}
+Dada una aplicaicón $f\colon A \rightarrow B$ y subconjuntos $U_1,U_2 \subset
+A$ y $V_1,V_2 \subset B$, se verifican las siguientes propiedades:
+
+1. $f(U_1 \cup U_2) = f(U_1) \cup f(U_2)$. 
+2. $f(U_1 \cap U_2) \subset f(U_1) \cap f(U_2)$.
+3. $f^{-1} (V_1 \cup V_2) = f^{-1} (V_1) \cup f^{-1} (V_2)$.
+4. $f^{-1} (V_1 \cap V_2) = f^{-1} (V_1) \cap f^{-1} (V_2)$.
+{{% /proposition %}}
+
+{{% proof %}}
+Vamos a probar 2 y 3. Los demás apartados son similares y quedan como ejercicio.
+
+Dado $y \in
+f(U_1 \cap U_2)$ existe $x \in U_1 \cap U_2$ tal que $y =
+f(x)$. Como $x\in U_1$ y $x\in U_2$ deducimos que $y \in f(U_1)$ e $y \in f(U_2)$, por tanto  $y\in f(U_1) \cap f(U_2)$.
+
+Tenemos que $x\in f^{-1}(V_1 \cup V_2)$ si y solo si $f(x)\in V_1\cup V_2$. Esto equivale a decir que $f(x)\in V_1$ o $f(x)\in U_2$, lo que es lo mismo, $x\in f^{-1}(V_1)$ o $x\in f^{-1}(V_2)$. Esto último es idéntico a afirmar que $x\in f^{-1}(V_1)\cup f^{-1}(V_1)$.
+{{% /proof %}}
+
+
+
+
+{{% definition %}}
+La **restricción** de una aplicación $f\colon A \rightarrow B$ a un subconjunto
+$U\subset A$ es la aplicación $f|_U\colon U\rightarrow B$ definida como $f|_U(u)=f(u)$ para todo $u\in U$.
+{{% /definition %}}
+
+{{% watch %}}
+¿En qué se diferencian $f$ y su restricción $f|U$?
+{{% /watch %}}
+
+
+{{% definition %}}
+Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicaciones $A\rightarrow B\\}$.
+{{% /definition %}}
+
+
+{{% watch %}}
+Si $A$ y $B$ son finitos, ¿puedes acotar el número de elementos de $B^A$?
+{{% /watch %}}
+
+{{% watch %}}
+Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}$ y $\\{e\\}^A$.
+{{% /watch %}}
+
+
 
 <!--
 
-{{% example name="Ejemplo" %}}
- Sean $A= \\{ a,b,c \\}$ y $B=\\{b,1,2,3\\}$. Entonces el conjunto $A \times B$ es igual a:
-$$ \\{ (a,b), (a,1), (a,2), (a,3), (b,b), (b,1), (b,2), (b,3), (c,b), (c,1), (c,2), (c,3)\\}$$
-{{% /example %}}
 
-\noindent De manera similar, podemos considerar $n$-uplas ordenadas de objetos $(x_1,\dots,x_n)$ y 
-definir el producto cartesiano de una familia
-finita de conjuntos (no trataremos por ahora el caso de familias infinitas):
-$$
-A_1 \times ... \times A_n = \prod_{i=1}^n A_i = \left\\{
-(a_1,...,a_n) \; | \; a_i \in A_i, \mbox{ para } i=1,...,n \right\\}.
-$$
-Cuando todos los $A_i$ son iguales a un conjunto dado $A$ notaremos $A^n = A \times \cdots \times A$ ($n$ veces).
-\bigskip
 
-En muchas situaciones, dados dos conjuntos $A$ y $B$, nos aparecen reglas o procedimientos para asociar ciertos elementos de $A$ con ciertos elementos de $B$. Damos a continuación la noción matemática que sirve para modelizar este hecho.
-
-{{% definition %}}
-{Correspondencia} {Una {\bf correspondencia} $G$ de $A$ en $B$ es un subconjunto del
-producto $A \times B$. Una correspondencia de $A$ en $B$ se interpreta como una
-regla que asocia algunos elementos de $A$ con algunos elementos de
-$B$. Concretamente, entendemos que la correspondencia $G$ "asocia" $a \in A$ con $b \in B$ si y sólo si $(a,b) \in G$.
-\smallskip
-
-El conjunto de todas las correspondencias de $A$ en $B$ es pues $\mathcal{P}(A \times B)$.}
-{{% /definition %}}
-
-Nótese que toda correspondencia $G$ de $A$ en $B$ determina (y está determinada por) otra correspondencia $G'$ de $B$ en $A$
-$$ G' =\\{ (y,x) \in B \times A\; | \; (x,y) \in G\\}.
-$$
-Así, los conjuntos $A$ y $B$ juegan papeles simétricos, por lo que podríamos hablar de correspondencias \underline{entre} los conjuntos $A$ y $B$ en lugar de correspondencia de $A$ en $B$.
-
-{{% example name="Ejemplo" %}}
- Sean $A= \\{ a,b,c \\}$ y $B=\\{b,1,2,3\\}$ los conjuntos del ejemplo anterior. Entonces $ G = \\{ (a,1), (a,3), (b,b), (b,1), (b,3) \\}$ es una correspondencia de $A$ en $B$.\\
-
-Si $A=B= [-1,1]$ (el intervalo de los números reales $x$ con $-1\leq x \leq 1$), una correspondencia de $A$ en $B$ viene dada por
-$$ G = \\{ (x,y) \in [-1,1] \times [-1,1] \; | \;  x^2 + y^2 = 1\\}.
-$$
-Si denotamos por $A$ al conjunto de los estudiantes de la Facultad de Matemáticas y por $B$ al conjunto de las aulas de la Facultad de Matemáticas,
-$$ G = \\{(a,b)\in A \times B \; |\; a\ \text{tiene alguna clase en el aula\ }\ b\\}
-$$
-es una correspondencia de $A$ en $B$.
-{{% /example %}}
-
-Las correspondencias se pueden representar como sigue:
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=1]{funcion-01.eps}
- }
- \caption{Correspondencia}
- \label{fig:Correspondencia}
-\end{figure}
-
-Es claro que la representación del ejemplo anterior es posible por trabajar con conjuntos finitos (y con pocos elementos). Si los conjuntos son infinitos, las correspondencias (no finitas) se tienen que dar definiendo propiedades de los pares que la componen. Por ejemplo, si $A = \Z, B = \N$ una correspondencia de $\Z$ en $\N$ es $G= \\{(x,y) \in \Z \times \N \; | \; x \; \mbox{es par}, y \; \mbox{es impar} \\}.$
-
-{{% example name="Ejemplo" %}}
- Si $A$ (ó $B$) es el conjunto vacío, entonces $A \times B = \varnothing$ y por tanto la única correspondencia de $A$ en $B$, ó entre $A$ y $B$, es la correspondencía vacía.
-{{% /example %}}
-
-
-{{% definition %}}
-{Aplicación} {Una {\bf aplicación} $f$ de $A$ en $B$ es una correspondencia $f\subset A\times B$  donde \underline{cada}
-elemento de $A$ tiene asociado un \underline{único} elemento de $B$. Esto es,
-en notación matemática, la correspondencia $f$ es una
-aplicación si y sólo si se verifica que
-$$
-\forall a \in A \;\;\; \exists ! b \in B \; \mbox{ tal que } (a,b)
-\in f.
-$$}
-{{% /definition %}}
-
-
-{{% watch %}}
- Para referirnos a una correspondencia $f\subset A\times B$ que sea una aplicación, es habitual denotarla de la forma $f : A \longrightarrow B$. Además, en este caso, dado un $a \in A$, el único $b \in B$ verificando $(a,b) \in f$ se denotará $f(a)$ y
-se denominará {\bf imagen} de $a$ (por la aplicación $f$). A veces también llamaremos a $f(a)$ {\bf valor} de $f$ en $a$. Una aplicación $f$ de $A$ en $B$ también se especificará en la forma
-$$ a \in A \longmapsto  f(a) \in B.
-$$
-
-De esta notación surge la terminologí a, comúnmente usada, de
-llamar a $A$ {\bf conjunto de partida} (o dominio) y a $B$ {\bf conjunto de llegada} (o rango) de la aplicación $f$. Nótese que, contrariamente al caso de las correspondencias en general, en una aplicación el conjunto de partida y el conjunto de llegada juegan papeles que no son intercambiables.
-
-Para dar una aplicación debemos pues indicar:
-
-* su conjunto de partida, 
-* su conjunto de llegada, y
-* la imagen de cada elemento del conjunto de partida, que habrá de ser un elemento bien determinado del conjunto de llegada.
-
-A veces, cuando estamos definiendo una aplicación, para dar la imagen de cada elemento del conjunto de partida utilizamos alguna elección auxiliar. En tal caso hemos de probar que el resultado no depende de esta elección, o dicho de otra forma, que la imagen de cada elemento del conjunto de partida está "bien definida".
-
-
-\noindent{\bf Importante:} Para probar que dos aplicaciones $f,g:A \longrightarrow B$ son iguales debemos probar es que las imágenes de cualquier elemento de $A$ por $f$ y por $g$ coinciden. Simbólicamente
-$$ f=g \Leftrightarrow f(x)=g(x)\quad \forall x\in A.
-$$
-{{% /watch %}}
-
-
-{{% example name="Ejemplo" %}}
- 1) Sea $X$ un conjunto cualquiera. Siempre se tiene la aplicación $$f: X \rightarrow X, \quad \mbox{definida por} \quad f(x) = x, \, \forall x \in X,$$ que llamaremos aplicación {\bf identidad} y  notaremos por $1_X.$
-
-\noindent 2) Sean $X, Y$ conjuntos cualesquiera e $y_0 \in Y$ un elemento fijo. Siempre se tiene la aplicación $$g: X \rightarrow Y \quad \mbox{definida por} \quad  g(x) = y_0, \; \forall x \in X,$$ que llamaremos aplicación constante (con valor $y_0$).
-
-\noindent 3) Si $X$ es un subconjunto de $Y$, $X\subset Y$, siempre disponemos de una aplicación especial $i_X: X \to Y$, definida por $i_X(x)=x$ para cada $x\in X$. Dicha aplicación se denomina la {\bf inclusión} de $X$ en $Y$.
-
-\noindent 4) Sea $f \subset \RR \times \RR$ la correspondencia dada por $$(a,b) \in f \quad \mbox{si y sólo si} \quad b^2=a.$$ La correspondencia $f$ no es aplicación, pues no todos los elementos de $\RR$ poseen una imagen (si $a < 0$, no existe $b \in \RR$ con $b^2 = a.$)
-
-\noindent 5) Consideremos la correspondencia anterior donde la primera componente la suponemos en $\RR^+$ (los números reales positivos), es decir $f \subset \RR^+ \times \RR.$ En este caso, a todos los elementos de $\RR^+$ les corresponde algún elemento de $\RR$, pero $f$ no es aplicación, pues este elemento no es único. Por ejemplo, $(4,2) \in f$ y $(4,-2) \in f.$
-
-\noindent 6) Si consideramos $f \subset \RR^+ \times \RR^+$, definida por $$(a,b)\in f \quad  \mbox{si y sólo si} \quad b^2=a,$$ entonces sí es aplicación.
-
-\noindent 7)  La correspondencia $$f\subset (\Z -\\{1\\})\times  \Q, \quad  f = \left\\{ \left(n,\frac{n}{n-1}\right)\ |\ n\in \Z -\\{1\\}\right\\}$$ es aplicación.
-
-\noindent 8) Fijemos un conjunto $U$ y un subconjunto $A\subset U$. Definimos las correspondencias $f,g\subset \mathcal{P}(U) \times \mathcal{P}(U)$ por:
-$$
-f =\\{(B,A\cap B)\ |\ B\in \mathcal{P}(U)\\},\quad g =\\{(B,A\cup B)\ |\ B\in \mathcal{P}(U)\\}.
-$$
-Ambas son aplicaciones.
-
-\noindent 9) Si $X$ e $Y$ son conjuntos, las aplicaciones $p:X\times Y \to X$, $q:X\times Y \to Y$ dadas por
-$$ p(x,y)=x,\quad q(x,y) = y\quad \forall (x,y) \in X\times Y$$
-se denominan respectivamente {\bf primera} y {\bf segunda proyección}.
-
-\noindent 10) Si $A=\varnothing$, la única correspondencia de $A$ en $B$ es la correspondencia vacía que es de hecho una aplicación. Si $B=\varnothing$, la única correspondencia de $A$ en $B$ es la correspondencia vacía, pero dicha correspondencia sólo será una aplicación cuando $A$ también sea el conjunto vacío. En particular, si $B=\varnothing$ y $A\neq \varnothing$, no existe ninguna aplicación de $A$ en $B$.
-{{% /example %}}
-
-{{% definition %}}
-{Exponenciación de conjuntos} {Dados dos conjuntos $X$ e $Y$, el {\bf conjunto $Y$ elevado a $X$}, notado $Y^X$, es por definición el conjunto cuyos elementos son todas las aplicaciones de $X$ en $Y$:
-$$ Y^X = \\{f\in \mathcal{P}(X\times Y) \; |\; f\  \text{es una aplicación de $X$ en $Y$.}\\}.
-$$
-Se tiene pues que $Y^X \subset \mathcal{P}(X\times Y)$.
-}
-{{% /definition %}}
-
-{{% definition %}}
-{Producto cartesiano de aplicaciones} {Dadas dos aplicaciones $f:X\to Y$ y $f':X'\to Y'$, el {\bf producto cartesiano} de $f$ y $f'$ es la aplicación que denotaremos  $f\times f': X\times X' \to Y\times Y'$ definida por
-$$ (f\times f')(x,x') = (f(x),f'(x')),\quad \text{\ para cada\ }\ (x,x')\in X\times X'.
-$$
-}
-{{% /definition %}}
-
-{{% definition %}}
-{Imagen y anti-imagen} {Sea $f : X \longrightarrow Y$ una aplicación. Dado un subconjunto
-$A \subset X$  definimos:
-
-
-* La {\bf imagen} de $A$ (o imagen directa de $A$), notada $f(A)$, como
-$$
-f(A) = \\{ y \in Y \; | \; \exists x \in A \mbox{ con } f(x) = y \\}
-\subset Y,
-$$
-esto es, el conjunto de los elementos del conjunto de llegada que son imagen
-de algún elemento de $A$.
-Si $A=X$ se denota $f(X) = \Imag(f)$ y se denomina {\bf imagen de $f$.}
-
-
-Dado un subconjunto $B \subset Y$ definimos:
-
-* La {\bf anti--imagen} (o contraimagen, o imagen recí proca o imagen inversa)
-de $B$, notada $f^{-1} (B)$, como
-$$
-f^{-1} (B) = \\{ x \in X \; | \; f(x) \in B \\} \subset X,
-$$
-esto es, el conjunto de elementos del conjunto de partida cuya imagen
-pertenece a $B$.
-
-{{% /definition %}}
-
-{{% watch %}}
- \label{nota:f(?)} En general, si $f: X \rightarrow Y$ es una aplicación, $f(X) \not= Y.$ Basta tomar la última aplicación del ejemplo anterior. Sí se verifica siempre que $f^{-1}(Y) = X.$
-
-
-Dada una aplicación $f:X \longrightarrow Y$, la notación $f(\cdot)$ se utiliza para dos situaciones distintas:
-
-* Cuando $x \in X$, es decir, $x$ es un \underline{elemento} que pertenece a $X$, $f(x)$ denota la imagen de $x$ por $f$, que es un \underline{elemento} que pertenece a $Y$: $f(x)\in Y$.
-* Cuando $A\subset X$, es decir, $A$ es un \underline{subconjunto} de $X$, $f(A)$ denota la imagen (directa) de $A$, que es un \underline{subconjunto} de $Y$: $f(A) \subset Y$.
-
-Siempre debemos saber en qué contexto estamos utilizando $f(\cdot)$. Una posibilidad para evitar confusiones sería usar una notación para la imagen  (o imagen directa) de un subconjunto $A\subset X$ por la aplicación $f$ distinta de la notación de la imagen de un elemento $x\in X$, como por ejemplo $f_*(A)$ ó $f[A]$, pero como no es lo habitual en los textos de Matemáticas, no lo haremos en estas notas.
-
-Nótese que si $x\in X$, $f(\\{x\\}) = \\{f(x)\\}$, donde estamos utilizando la notación $f(\cdot)$ en las dos situaciones mencionadas.
-
-Nótese también que se verificas las siguientes propiedades (se deja como ejercicio su prueba)
-\begin{eqnarray*}
- A \subset A' (\subset X) & \Rightarrow & f(A) \subset f(A'),\\
- B \subset B' (\subset Y) & \Rightarrow & f^{-1}(B) \subset f^{-1}(B').\\
-\end{eqnarray*}
-{{% /watch %}}
-
-{{% example name="Ejemplo" %}}
- En el caso de la aplicación identidad $1_X:X \longrightarrow X$ es claro que $1_X(A)=A$ y $1_X^{-1}(B)=B$ para cualesquiera subconjuntos $A,B\subset X$.
-{{% /example %}}
-
-{{% example name="Ejemplo" %}}
- 1) Consideremos la aplicación
-$$f: \Z \rightarrow \Z \quad \mbox{definida por} \quad f(n)=2n,$$ y $A =\\{-1,0, 4, 5\\}.$ Entonces $f(A)=\\{ -2,0,8,10\\},$ y la imagen de $f$ es $\Imag(f) = \\{ \mbox{enteros pares}\\}.$
-
-\noindent Sean $B_1 = \\{2,3,8, -4,-1\\}, \; B_2 = \\{1,3\\}.$ Se tiene que $$f^{-1}(B_1) = \\{ 1,4,-2\\}, f^{-1}(B_2)= \varnothing.$$
-
-\noindent 2) Sea la aplicación
-$$f: \RR \rightarrow \RR \quad \mbox{definida por} \quad  f(x) = x^2,$$ $A = [0,2].$ Entonces $f(A) = [0,4],$ pues $\forall x \in [0,4],$ existe $\sqrt{x} \in [0,2]$ tal que $f(\sqrt{x})=x.$ En este caso, la imagen de $f$ es $\Imag(f) = [0,+\infty),$ los números reales no negativos.
-{{% /example %}}
-
-{{% proposition %}}
- Sea $f:X \longrightarrow Y$ una aplicación, $A_1,A_2 \subset
-X$ y $B_1,B_2 \subset Y$. Se verifica:
-
-* $f(A_1 \cup A_2) = f(A_1) \cup f(A_2)$, $f(A_1 \cap A_2)
-\subset f(A_1) \cap f(A_2)$.
-* $f^{-1} (B_1 \cup B_2) = f^{-1} (B_1) \cup f^{-1} (B_2)$,
-$f^{-1} (B_1 \cap B_2) = f^{-1} (B_1) \cap f^{-1} (B_2)$.
-* $f(f^{-1}(B_1)) \subset B_1$, $A_1 \subset f^{-1}(f(A_1))$.
-
-{{% /proposition %}}
-
-{{% proof %}}
- Vamos a probar la segunda afirmación de (a) y
-la primera de (b) y de (c). Las demás son similares.
-
-(a) Consideremos $y \in
-f(A_1 \cap A_2)$. Entonces existe $x \in A_1 \cap A_2$ tal que $y =
-f(x)$. Por tanto, $y \in f(A_1)$ e $y \in f(A_2)$, por lo que se
-tiene el resultado.
-
-Es importante entender que, para afirmar que la otra inclusión no
-es cierta, basta con dar un contraejemplo; esto es, un caso
-particular donde no sea cierto el enunciado. Para ello consideremos por ejemplo 
-$f: \N \longrightarrow \N$ definida por
-$$
-f(x) = \left\\{ \begin{array}{ll} x/2+1 & \mbox{ si $x$ es par} \\
-x+2 & \mbox{ si $x$ es impar} \end{array} \right.
-$$
-Tomamos $A_1 = \\{ 1,3,5 \\}$, $A_2 = \\{ 2,4,6 \\}$. Claramente $f (A_1
-\cap A_2 ) = f (\varnothing ) = \varnothing$, pero $f(A_1) \cap f(A_2) =
-\\{ 3 \\}$.
-
-(b) Sea $x$ un elemento de $f^{-1}(B_1 \cup B_2).$ Entonces
-$$x \in f^{-1}(B_1 \cup B_2) \Leftrightarrow f(x) \in B_1 \cup B_2 \Leftrightarrow f(x) \in B_1 \; \mbox{ó} \; f(x) \in B_2 \Leftrightarrow$$ $$\Leftrightarrow x \in f^{-1}(B_1) \; \mbox{ó} \; x \in f^{-1}(B_2) \Leftrightarrow x \in f^{-1}(B_1) \cup f^{-1}(B_2).$$
-
-(c) Probemos ahora que $f(f^{-1}(B_1)) \subset B_1$. Si $y \in
-f(f^{-1}(B_1))$, es porque existe $x \in f^{-1} (B_1)$ tal que $y =
-f(x)$. Pero, al ser $x \in f^{-1} (B_1)$, por definición tenemos
-que $y = f(x) \in B_1$.
-
-Para demostrar que la inclusión contraria no es cierta en general
-podemos tomar la misma aplicación que en el caso anterior y
-considerar $B_1 = \\{ 1,3,5\\}$ nuevamente. Entonces $f^{-1} (B_1) =
-\\{0, 1,3,4,8 \\}$. Pero
-$f(f^{-1} (B_1)) = \\{ 3,5 \\}$, por lo que hemos acabado.
-
-Veamos que $A_1 \subset f^{-1}(f(A_1))$. Pongamos $C = f(A_1).$ Sea $x \in A_1,$ luego $f(x) \in C.$ Esto quiere decir, por la definición de contraimagen, que $x \in f^{-1}(C) = f^{-1}(f(A_1))$.
-
-Para demostrar que la inclusión contraria no es cierta en general consideramos la aplicación constante $f: X \rightarrow Y$ dada por $f(x) = y_0,$ para un elemento $y_0 \in Y$ fijado. Sea $A$ cualquier subconjunto propio de $X.$ Entonces $$ f^{-1}(f(A)) = f^{-1}(\\{y_0\\})= X \not\subset A.$$
-{{% /proof %}}
-
-{{% watch %}}
- \label{nota:antiimag_unitarios} Sea $f:X\to Y$ una aplicación e $\\{y\\}\subset Y$ un subconjunto \underline{unitario} de $Y$. Con objeto de aligerar la notación, en la mayoría de los textos se escribe $f^{-1}(y)$ en lugar de $f^{-1}(\\{y\\})$, es decir, la notación $f^{-1}(y)$ se refiere a:
-$$ f^{-1}(y) = \\{ x \in X \; | \; f(x)\in  \\{y\\} \\} = \\{ x \in X \; | \; f(x) = y \\}.
-$$
-Hemos de tener especial cuidado con esta notación, pues puede confundirse con la imagen de $y$ por la aplicación inversa de $f$, cuando dicha aplicación inversa exista (ver Nota \ref{nota:notaciones_antiimag}). 
-{{% /watch %}}
-
-{{% definition %}}
-{Aplicaciones inyectivas, sobreyectivas y biyectivas} {Sea una aplicación $f: X \longrightarrow Y$.
-
-
-* $f$ se dice {\bf inyectiva} si dos elementos distintos de
-$X$ siempre tienen imágenes distintas. Dicho de otro modo, si para $x, x' \in X$ se tiene 
-$$f(x) = f(x') \Rightarrow x=x'.
-$$
-* $f$ se dice {\bf sobreyectiva (o sobre)} si todo elemento de
-$Y$ es imagen de algún elemento de $X$. O sea, $f$ es sobre si
-$f(X)=\Imag(f)=Y$, o dicho de otro modo, si
-$$ \forall y\in Y, \exists x\in X\quad \text{tal que}\quad f(x)=y.
-$$
-* $f$ se dice {\bf biyectiva} si es inyectiva y sobreyectiva.
-
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
- 1) Sea $f: \RR \rightarrow \RR$ la aplicación definida por $f(x) = x^2.$ Esta aplicación no es inyectiva, pues $f(x) = f(-x).$ Tampoco es sobreyectiva, pues $\Imag(f) = [0,+ \infty) \not= \RR.$
-
-\noindent 2) Sea $f: \Z \rightarrow \Z$ la aplicación definida por $f(n)=2n.$ Esta aplicación es inyectiva ya que, si $f(n) = f(m),$ entonces $2n=2m,$ y de aquí se tiene que $n=m.$ La aplicación no es sobreyectiva pues $\Imag(f) = \\{ \mbox{números pares} \\} \not= \Z.$
-
-\noindent 3) Sean $U, A\subset U, A \not= \varnothing$ unos conjuntos fijos. Sea $f: \mathcal{P}(U) \rightarrow \mathcal{P}(A)$ la aplicación definida por $f(B)=A \cap B.$ Esta aplicación no es inyectiva, pues si $f(B)=f(C),$ tenemos que $A \cap B = A \cap C,$ y de aquí no se deduce que $B=C.$ Basta tomar dos conjuntos distintos $B,C \subset \overline{A}.$ Entonces se verifica que $A \cap B = \varnothing = A \cap C$ y $B \not= C.$
-
-Veamos que esta aplicación es sobreyectiva. Sea $D \in \mathcal{P}(A)$ y pongamos $B=D.$ Entonces $$f(B) = A \cap B = A \cap D = D.$$
-
-Notar que también podemos tomar $B = \overline{A} \cup D,$ pues $$f(B) = A \cap B= A \cap (\overline{A} \cup D) = (A \cap \overline{A}) \cup (A \cap D) = \varnothing \cup D = D.$$
-Esto nos da otra forma de ver que la aplicación no es inyectiva.
-
-\noindent 4) La aplicación identidad es biyectiva.
-
-\noindent 5) Sea $f: \Z \rightarrow \Z$ la aplicación definida por $f(n)=n+3.$ Veamos que esta aplicación es biyectiva.
-
-Inyectiva: si $f(n)=f(m) \Rightarrow n+3 =m+3 \Rightarrow n=m.$
-
-Sobreyectiva: si $m \in \Z,$ tomando $n=m-3$ se tiene que $f(n)=m.$
-
-\noindent 6) Si $X\subset Y$, la inclusión $i_X:X \to Y$ es una aplicación inyectiva.
-
-\noindent 7) Si $X$ e $Y$ son conjuntos con $Y\neq \varnothing$, la primera proyección $p:X\times Y \to X$ es sobreyectiva. Se tiene un resultado análogo para la segunda proyección si $X\neq \varnothing$.
-{{% /example %}}
-
-La prueba de la siguiente proposición se deja como ejercicio.
-
-{{% proposition %}}
- \label{prop:mn} Sean dos números enteros $m,n \geq 1$. Probar que existe una aplicación biyectiva $f: \\{1,\dots,m\\} \times \\{1,\dots,n\\} \to \\{1,\dots,mn\\}$.
-{{% /proposition %}}
-
-{{% watch %}}
- En términos de la imagen inversa de conjuntos unitarios tenemos las siguientes equivalencias:
-
-* $f$ es inyectiva si y sólo si para todo $y \in Y$, el conjunto
-$f^{-1} (\\{ y \\})$ consta, a lo más, de un elemento.
-* $f$ es sobre si y sólo si para todo $y \in Y$, el conjunto
-$f^{-1} (\\{ y \\})$ consta, por lo menos, de un elemento (es decir, es no vacío).
-* $f$ es biyectiva si y sólo si para todo $y \in Y$, el conjunto
-$f^{-1} (\\{ y \\})$ consta, exactamente, de un elemento.
-
-{{% /watch %}}
-
-{{% watch %}}
- A partir de cualquier aplicación $f:X\to Y$ podemos definir una aplicación sobreyectiva $\widehat{f}: X \to \Imag(f)$ cuya acción sobre los elementos de $X$ coincide con la de $f$:  $\widehat{f}(x)= f(x)$ para cada $x\in X$. Aunque la acción de ambas aplicaciones está definida de la misma manera, debemos considerarlas en general como aplicaciones distintas, pues sus conjuntos de llegada son distintos. Tan sólo serán iguales cuando la aplicación $f$ de partida fuera sobreyectiva.
-{{% /watch %}}
-
-{{% definition %}}
-{Composición de aplicaciones} {Dadas dos aplicaciones $f: X \longrightarrow Y$ y $g: Y
-\longrightarrow Z$ se define la {\bf composición} de $f$ y $g$, notada
-$g \circ f: X \longrightarrow Z$, que será una aplicación de $X$ en $Z$, como
-$$
-(g \circ f) (x) = g(f(x)), \mbox{ para todo } x \in X.
-$$}
-{{% /definition %}}
-
-
-Obviamente $g \circ f$ es una aplicación. Es claro también que $g \circ 1_Y= g$ y $1_Y \circ f = f$.
-
-{{% example name="Ejemplo" %}}
- 1) Sean las aplicaciones $f: \Z \rightarrow \Q, \; g: \Q \rightarrow \RR$ definidas por
-$$f(n) = \frac{n}{2},   \; g(x)=\sqrt{x^2+3} .$$
-La composición de $f$ y $g$ es
-$$g \circ f: \Z \rightarrow \RR \quad  \mbox{dada por} \quad (g \circ f)(n) = \sqrt{\left(\frac{n}{2}\right)^2+3},$$ pues
-$$(g \circ f)(n) = g(f(n)) = g\left(\frac{n}{2}\right)=\sqrt{\left(\frac{n}{2}\right)^2+3}.$$
-
-
-2) Sea $A$ un conjunto fijo y consideremos las aplicaciones
-$$f,g: \mathcal{P}(U) \rightarrow \mathcal{P}(U) \quad \mbox{definidas por} \quad f(B)=A \cap B,g(B) = \overline{A} \cup B.$$ En este caso podemos calcular la composición de $f$ y $g$ y la composición de $g$ y $f$.
-
-Calculamos $g \circ f:$
-$$(g \circ f)(B) = g(f(B)) = g( A \cap B) = \overline{A} \cup (A \cap B) = (\overline{A} \cup A) \cap (\overline{A} \cup B) = U \cap (\overline{A} \cup B) = \overline{A} \cup B,$$
-luego la composición de $f$ y $g$ es la aplicación
-$$g \circ f: \mathcal{P}(U) \rightarrow \mathcal{P}(U), \quad (g \circ f)(B) = \overline{A} \cup B, \; \forall B \in \mathcal{P}(U).$$
-
-Por otro lado, $f \circ g:$
-
-$$(f \circ g)(B) = f(g(B)) = f( \overline{A} \cup B) = A \cap (\overline{A} \cup B) = (A \cap \overline{A}) \cup (A \cap B) = \varnothing \cup (A \cap B) = A \cap B,$$ luego la composición de $g$ y $f$ es
-$$f \circ g: \mathcal{P}(U) \rightarrow \mathcal{P}(U), \quad (f \circ g)(B) = A \cap B, \; \forall B \in \mathcal{P}(U).$$
-
-Nótese que $f \circ g \not= g \circ f.$
-
-{{% /example %}}
-
-{{% watch %}}
-{\label{asociativa}} Dadas aplicaciones entre conjuntos
-$$
-X_1 \stackrel{f}{\longrightarrow} X_2 \stackrel{g}{\longrightarrow} X_3 \stackrel{h}{\longrightarrow} X_4,
-$$
-es elemental comprobar que $(h \circ g) \circ f = h \circ (g \circ f)$ (asociatividad de la composición de aplicaciones).
-
-{{% /watch %}}
-
-{{% definition %}}
-{Aplicaciones invertibles} {Diremos que una aplicación $f : X \longrightarrow Y$ es {\bf invertible} cuando exista una aplicación $g : Y \longrightarrow X$ tal que
-$$ g \circ f = 1_X,\quad f \circ g = 1_Y.$$}
-{{% /definition %}}
-
-{{% proposition %}}
- Si una aplicación $f : X \longrightarrow Y$ es invertible, la aplicación $g : Y \longrightarrow X$ tal que
-$ g \circ f = 1_X$ y $ f \circ g = 1_Y$ es única.
-{{% /proposition %}} 
-
-A la aplicación $g$ de la proposición anterior se la denomina {\bf aplicación inversa} de $f$ y se denota por $f^{-1}: Y \longrightarrow X$.
-
-{{% example name="Ejemplo" %}}
- 1) La aplicación identidad $1_X: X \to X$ es invertible y su inversa es ella misma.
-
-\noindent 2) La aplicación  $$f: \Z \rightarrow \Z \quad \mbox{definida por} \quad f(n)=n+3$$
-es invertible y su inversa es la aplicación  $$f^{-1}: \Z \rightarrow \Z \quad \mbox{definida por} \quad  f^{-1}(m) = m-3.$$
-{{% /example %}}
-
-{{% proposition %}}
- Sea $f:X \rightarrow Y$ una aplicación. Las propiedades siguientes son equivalentes:
-\begin{enumerate}
-\item[(a)] $f$ es invertible.
-\item[(b)] $f$ es biyectiva.
-\end{enumerate}
-{{% /proposition %}}
-
-{{% proof %}}
- (a) $\Rightarrow$ (b): Supongamos que $f$ es invertible y consideremos su aplicación inversa $f^{-1}$. Veamos que $f$ es biyectiva:
-
-Inyectiva: si $f(a) = f(b),$ aplicando $f^{-1}$ tenemos $f^{-1}(f(a))=f^{-1}(f(b)),$ luego $a=b$ por ser  $f^{-1} \circ f = 1_X.$
-
-Sobreyectiva: sea $y \in Y$ y consideremos $x=f^{-1}(y) \in X.$ Aplicando $f$ tenemos que $f(x) = f(f^{-1}(y)) = 1_Y(y) = y,$ luego $f$ es sobreyectiva.
-
-
-\noindent (b) $\Rightarrow$ (a): 
-Si $f$ es biyectiva, tomemos la aplicación $g:Y\to X$ definida del siguiente modo: para cada $y\in Y$, $g(y) = x$ siendo $x$ el único (pues $f$ es inyectiva) elemento de $X$ que verifica $f(x) = y$ (que existe, pues $f$ es sobreyectiva). 
-
-Comprobamos sin dificultad que $g \circ f = 1_X$ y $f \circ g = 1_Y$, y por tanto $f$ es invertible.
-{{% /proof %}}
-
-{{% watch %}}
- \label{nota:notaciones_antiimag} Al igual que ocurría con la notación $f(\cdot)$ (ver Nota \ref{nota:f(?)}), cuando $f:X\to Y$ es una aplicación, la notación $f^{-1}(\cdot)$ se utiliza para dos situaciones distintas que pueden dar lugar a confusiones de fondo:
-\begin{enumerate}
-\item[i)] Cuando $B\subset Y$, $f^{-1}(B)$ denota la anti-imagen de $B$ por $f$, que es un \underline{subconjunto} de $X$.
-\item[ii)] Cuando $f$ es invertible e $y\in Y$, $f^{-1}(y)$ indica la imagen de $y$ por la inversa de $f$, que es un \underline{elemento} de $X$.
-\end{enumerate}
-De hecho, tal como indicamos en la Nota \ref{nota:antiimag_unitarios}, la notación $f^{-1}(\cdot)$ es también utilizada en una tercera situación que puede confundirse fácilmente con ii).
-Es pues fundamental saber en cada caso en qué situación estamos. En ii) estamos suponiendo que $f$ es invertible (o, equivalentemente, biyectiva), mientras que  i)  tiene sentido para cualquier aplicación $f$, invertible o no.
-{{% /watch %}}
-
-{{% definition %}}
-{Restricción de una aplicación} {Dada una aplicación $f: X \longrightarrow Y$ y un subconjunto
-$A\subset X$, se define la restricción de $f$ a $A$ como la
-aplicación
-\begin{eqnarray*}
-f|_{A}: A & \longrightarrow & Y \\
-x\in A & \longmapsto & f|_{A}(x) := f(x) \in Y
-\end{eqnarray*}}
-{{% /definition %}}
-
-Esto es, $f|_{A}$ actúa exactamente como $f$, pero {\em sólo sobre
-los elementos de $A$.} Nótese que la inclusión $i_A: A \longrightarrow X$ no es más que la restricción de la identidad $1_X$ a $A$, y que
-la restricción $f|_{A}$ coincide con la composición de $f$ con la inclusión $i_A:A \to X$:
-$$ f|_{A} = f \circ i_A.$$
-
-{{% example name="Ejemplo" %}}
- Sean $A\subset U$ conjuntos fijos y consideremos la aplicación $f: \mathcal{P}(U) \rightarrow \mathcal{P}(U)$ definidas por $f(B)=A \cap B.$ La restricción de $f$ a $\mathcal{P}(A),$ $f: \mathcal{P}(A) \rightarrow \mathcal{P}(U)$ es
-$$f|_{\mathcal{P}(A)}(B)=f(B)= A \cap B= B, \quad \mbox{ya que} \quad B \subset A.$$
-{{% /example %}}
-
-{{% example name="Ejemplo" %}}
- Veamos un ejemplo que pone de manifiesto la importancia de, a la hora de dar una aplicación, precisar
-los conjuntos de partida y de llegada y no sólo cómo se determina la
-imagen de cada elemento.
-
-Consideremos $f:A \rightarrow B$ dada por $f(x)=x^2.$ Entonces:
-\begin{itemize}
-\item Si $A=B=\RR,$ la función anterior no es ni inyectiva ni sobreyectiva.
-
-\item Si $A=\RR$ y $B= \RR_+$, $f$ es sobreyectiva y no inyectiva.
-
-\item Si $A=[0,1]$ y $B= \RR$, $f$ es inyectiva y no sobreyectiva.
-
-\item Si $A=B=[0,1],$ $f$ es biyectiva.
-\end{itemize}
-{{% /example %}}
 
 
 ## Conjuntos cociente
