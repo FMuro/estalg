@@ -57,4 +57,9 @@ Cuatro horas semanales, de las cuales una hora será de problemas, de media a lo
 
 ### Tutorías
 
-Martes, miércoles y jueves de 9:30 a 11:30.
+| Profesor(a)           | Días y horas                                                                            |
+|-----------------------|-----------------------------------------------------------------------------------------|
+| Fernando Muro         | Martes, miércoles y jueves de 9:30 a 11:30                                              |
+| Luis Narváez          | Lunes y miércoles de 15:00 a 18:00                                                      |
+| Miguel Ángel Olalla   | Martes, miércoles y jueves de 10:00 a 12:00                                             |
+| Mercedes Rosas        | Lunes, martes y jueves de 11:00 a 12:00 y miércoles de 10:00 a 12:00 y de 15:00 a 16:00 |

@@ -506,7 +506,7 @@ $$
 {{% /proof %}}
 
 {{% definition %}}
-Si $f \colon  A \rightarrow B$ es invertible su aplicación **inversa** si  $f^{-1} \colon B \rightarrow A$ es la única que satisface
+Si $f \colon  A \rightarrow B$ es invertible su aplicación **inversa**  $f^{-1} \colon B \rightarrow A$ es la única que satisface
 $f^{-1} \circ f = 1_A$ y $f \circ f^{-1} = 1_B$.
 {{% /definition %}}
 
@@ -591,6 +591,8 @@ Veamos ahora $\Leftarrow$. Como ya hemos comentado, el enunciado de la derecha i
 Si $f\colon A\rightarrow B$ es biyectiva y $A$ es finito, ¿qué podemos decir de $B$?
 {{% /watch %}}
 
+El siguiente tema versará en buena parte sobre el estudio de las aplicaciones biyectivas de un conjunto finito en sí mismo.
+
 {{% theorem %}}
 Una aplicación $f\colon A \rightarrow B$ es invertible $\Leftrightarrow$ es biyectiva.
 {{% /theorem  %}}
@@ -610,7 +612,7 @@ Por la asociatividad de la composición $f((g\circ f)(a))=f(a)$ y por la inyecti
 {{% /proof %}}
 
 {{% remark %}}
-Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que la igualdad en el ámbito de los números, es por eso que se denotan  $$f\colon\stackrel{\cong}\longrightarrow B$$ o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
+Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que las igualdades en el campo de los números, es por eso que se denotan  $$f\colon\stackrel{\cong}\longrightarrow B$$ o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
 $$
 \begin{array}{rcl}
 A\times B&\cong &B\times A,\cr
@@ -627,7 +629,7 @@ $$
 Es más, ambos están en biyección con el producto triple, por ejemplo
 $$
 \begin{array}{rcl}
-A\times B\times C&\cong &A\times B\times C,\cr
+(A\times B)\times C&\cong &A\times B\times C,\cr
 ((a,b),c)&\mapsto &(a,b,c).
 \end{array}
 $$
@@ -655,20 +657,8 @@ Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen d
 {{% /watch %}}
 
 {{% watch %}}
-La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. 
+La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto. 
 {{% /watch %}}
-
-
-{{% remark %}}
-Sea $f\colon A\rightarrow B$ una aplicación. Podemos caracterizar la inyectividad y la sobreyectividad de $f$ en términos de la imagen inversa de subconjuntos subunitarios:
-
-* $f$ es inyectiva $\Leftrightarrow$ $f^{-1} (\\{ a \\})$ consta  *a lo más* de de un elemento para todo $a \in A$.
-* $f$ es sobre $\Leftrightarrow$ 
-$f^{-1} (\\{ a \\})$ consta *por lo menos* de un elemento para todo $a \in A$.
-* $f$ es biyectiva $\Leftrightarrow$ $f^{-1} (\\{ a \\})$ es unitario para todo $a \in A$.
-
-Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto. 
-{{% /remark %}}
 
 
 {{% remark %}}
@@ -736,7 +726,7 @@ $U\subset A$ es la aplicación $f|_U\colon U\rightarrow B$ definida como $f|_U(u
 {{% /definition %}}
 
 {{% watch %}}
-¿En qué se diferencian $f$ y su restricción $f|U$?
+¿En qué se diferencian $f$ y su restricción $f|_U$?
 {{% /watch %}}
 
 
