@@ -178,7 +178,7 @@ que pertenecen al menos a uno de estos dos conjuntos, $A \cup B = \\{ x  |  x \i
 Observa que $A\cap B\subset A\cup B$.
 
 {{% remark %}}
-Si $A\subset C$ y $B\subset C$ entonces $A\cup B\subset C$
+Si $A\subset C$ y $B\subset C$ entonces $A\cup B\subset C$.
 {{% /remark %}}
 
 {{% theorem %}}

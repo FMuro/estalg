@@ -10,7 +10,7 @@ pre = "<i class='fa fa-book'></i> "
 
 La asigantura consta de cuatro temas:
 
-* Conuntos.
+* Conjuntos.
 
 * Grupos.
 
