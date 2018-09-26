@@ -253,6 +253,8 @@ Comenzamos demostrando $\supset$. Sabemos que $A\cap B\subset A$ y $A\cap B\subs
 Veamos ahora $\subset$. Dado $x\in A\cap (B\cup C)$ tenemos que $x\in A$ y $x\in B\cup C$. Por un lado, si $x\in B$ entonces $x\in A\cap B\subset (A \cap B) \cup (A \cap C)$. Por otro lado, si $x\in C$ entonces $x\in A\cap C\subset (A \cap B) \cup (A \cap C)$. De esto se sigue $\subset$.
 {{% /proof %}}
 
+Los siguientes diagramas ilustran las leyes distributivas.
+
 ![Leyes distributivas](../images/distributive_laws.png)
 
 {{% theorem name="Leyes de De Morgan" %}}
@@ -269,6 +271,8 @@ Comenzamos con $\supset$. Sea $x\in C\setminus A$. Tenemos entonces que $x\in C$
 
 Para probar $\subset$, tomamos $x\in C \setminus (A \cap B)$. Esto quiere decir que $x\in C$ pero $x\notin A\cap B$. Esto último equivale a que bien $x\notin A$ o bien $x\notin B$. Si $x\notin A$ entonces $x\in C\setminus A$ y si $x\notin B$ entonces $x\in C\setminus B$. Por tanto $x\in (C \setminus A) \cup (C \setminus B)$. Esto prueba $\subset$.
 {{% /proof %}}
+
+Las leyes de De Morgan quedan mejor explicadas por los siguientes diagramas.
 
 ![Leyes de De Morgan](../images/morgan.png)
 
@@ -360,7 +364,7 @@ Si $A= \\{ 1,2,3 \\}$ y $B=\\{a,b\\}$ entonces $A \times B=\\{(1,a), (1,b), (2,a
 {{% /example %}}
 
 {{% remark %}}
-El vacío hace el papel de cero $A \times \varnothing = \varnothing = \varnothing \times B$. 
+El vacío hace el papel de cero con respecto al producto cartesiano $A \times \varnothing = \varnothing = \varnothing \times B$. 
 {{% /remark %}}
 
 {{% watch %}}
@@ -650,7 +654,7 @@ Sea $f \colon  A \longrightarrow B$ una aplicación.
 es el subconjunto del codominio $f(U)=\\{b\in B\:|\;\exists a\in U|f(a)=b\\}\subset B$. 
 * La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}$.
 
-La **imagen** de la aplicación $A$ se define como $\operatorname{Im}f=f(A)$.
+La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
 {{% /definition %}}
 
 La imagen inversa recible otros nombres como **contraimagen**, **preimagen** o **anti-imagen**. La imagen directa también se denomina simplemente **imagen**.
@@ -670,11 +674,11 @@ La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la n
 
 
 {{% remark %}}
-* Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{Im}f=f(A)=B$.
+* Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{im}f=f(A)=B$.
 
 * Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
 
-* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\bar{f}\colon  A \to \Imag(f)$
+* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\overline{f}\colon  A \to \Imag(f)$
 
 * Las imágenes directa e inversa preservan inclusiones, es decir, 
 dada una aplicación $f\colon A\rightarrow B$: 
@@ -753,7 +757,7 @@ Una **relación** $R$ en un conjunto $A$ es un subconjunto $R\subset A\times A$.
 
 Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades:
 
-* $aRa$ para todo $a \in A$ (**refleaiva**).
+* $aRa$ para todo $a \in A$ (**reflexiva**).
 * $aRb\Leftrightarrow bRa$ para $a,b\in A$ cualesquiera (**simétrica**).
 * $aRb\wedge bRc\Rightarrow aRc$ para $a,b,c\in A$ (**transitiva**).
 {{% /definition %}}
@@ -785,7 +789,7 @@ Estudia si las siguientes relaciones en el conjunto de los seres humanos son de 
 
 * Llevarse menos de un año de edad.
 
-Pon más ejemplos, definidos sobre los conjuntos que desees, de relaciones que satisfagan exactamente uno o exactamente dos de las propiedades que se le demandan a las relaciones de equivalencia.
+Pon más ejemplos, definidos sobre los conjuntos que desees, de relaciones que satisfagan exactamente una o exactamente dos de las propiedades que se le demandan a las relaciones de equivalencia.
 {{% /exercise %}}
 
 {{% definition %}}
@@ -803,11 +807,11 @@ En las relaciones de equivalencia, y por tanto en los cocientes, el problema que
 {{% example name="Conjuntos cociente" %}}
 Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos casos estableciendo una biyección con otro conjunto más sencillo.
 
-* $\\{$Seres humanos$\\}/$poseer el mismo grupo sanguíneo $\cong \\{0, A,B,AB\\}\colon [x]\mapsto$ grupo sanguíneo de $x$.
+* $\\{$Seres humanos$\\}/$poseer el mismo grupo sanguíneo $\cong \\{0, A,B,AB\\}\colon [x]\mapsto$ grupo sanguíneo de cualquier representante.
 
-* $\\{$Estudiantes de primero de Matemáticas$\\}/$estar en el mismo grupo de Álgebra Básica $\cong \\{A,B,C,D,E,F\\}\colon [x]\mapsto$ grupo al que pertenece $x$.
+* $\\{$Estudiantes de primero de Matemáticas$\\}/$estar en el mismo grupo de Álgebra Básica $\cong \\{A,B,C,D,E,F\\}\colon [x]\mapsto$ grupo al que pertenece un representante cualquiera.
 
-* En $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$, tener la misma paridad, o equivalentemente $x\sim y$ si $x-y$ es par.
+* En $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$.
 
 * En $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$. 
 
@@ -851,62 +855,77 @@ Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalenc
 {{% /proof %}}
 
 
-### Factorización canónica de una aplicación
+## Factorización canónica de una aplicación
 
 {{% theorem name="Propiedad universal de la proyección canónica" %}}
 Si $f\colon A\rightarrow B$ es una aplicación y $R$ es una relación de equivalencia en $A$ tal que
 $ a R b \Rightarrow f(a) =f(b)$, entonces
-existe una única aplicación $\bar{f}\colon A/R\to B$ tal que $f=\bar{f}\circ\pi$, 
+existe una única aplicación $\overline{f}\colon A/R\to B$ tal que $f=\overline{f}\circ\pi$, 
 $$
-f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\bar{f}}\longrightarrow B.
+f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\overline{f}}\longrightarrow B.
 $$
 {{% /theorem %}}
+
+{{% proof %}}
+Vamos a suponer que $\overline{f}$ existe y cumple las propiedades indicadas. De ahí deduciremos una fórmula forzosa para $\overline{f}$, con lo cual de existir será única. Luego veremos que la fórmula tiene sentido, luego $\overline{f}$ existirá.
+
+Si $f=\overline{f}\circ\pi$ entonces dado $a\in A$,
+$$
+\begin{array}{rcl}
+f(a)&=&(\overline{f}\circ\pi)(a)\cr
+&=&\overline{f}(\pi(a))\cr
+&=&\overline{f}(R(a)).
+\end{array}
+$$
+Definimos pues $\overline{f}$ mediante la fórmula $\overline{f}(R(a))=f(a)$. Veamos que $\overline{f}$ está bien definida así. Para ello hemos de comprobar que si $R(a)=R(b)$ entonces $f(a)=f(b)$. Esto se deduce de la hipótesis ya que $R(a)=R(b)$ si y solo si $aRb$.
+{{% /proof %}}
 
 {{% definition %}}
 Dada una aplicación $f\colon A\to B$, podemos definir relación de equivalencia $\sim_f$ en $A$ asociada a $f$ como $a\sim_fb$ si $f(a)=f(b)$.
 {{% /definition %}}
 
 {{% exercise %}}
-Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe la partición asociada usando imágenes inversas. Demuestra también que si $R$ es una relación de equivalencia en $A$ y $\pi\colon A\rightarrow A/R$ es la proyección natural entonces $\sim\_\pi=R$.
+Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe el conjunto cociente y la partición asociada. Demuestra también que si $R$ es una relación de equivalencia en $A$ y $\pi\colon A\rightarrow A/R$ es la proyección natural entonces $\sim\_\pi=R$.
 {{% /exercise %}}
 
 
-<!--
 
-{{% theorem %}}
-{Toda aplicación $f\colon X\to Y$ se descompone de manera canónica como composición $f=i\circ {\bar f}\circ\pi$, 
-\[\xymatrix{X\ar[r]^-{f}\ar[d]_-\pi& Y\\
-		X/R_f\ar[r]^-{\bar f}& \Imag(f)\ar[u]_-i}\]
-donde $\pi$ es la proyección canónica, $i$ es la inclusión de $\Imag(f)$ en $Y$ y ${\bar f}\colon X/R_f\to\Imag (f)$ es la \underline{única} aplicación que hace conmutativo el diagrama anterior, que viene dada por ${\bar f}(R_f(x))=f(x)$.
-Además, la aplicación ${\bar f}$ es biyectiva y por tanto 
-toda aplicación entre dos conjuntos se descompone canónicamente como composición de una aplicación inyectiva, una aplicación biyectiva y una aplicación sobreyectiva. }
+
+{{% theorem name="Factorización canónica" %}}
+Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\cong\; \im f$ tal que el siguiente diagrama es conmutativo
+$$\require{AMScd}\begin{CD}A @>f>> B\cr @V{\pi}VV @AA{i}A\cr A/\sim_f @>>{\overline{f}}> \operatorname{im} f \end{CD}$$
+es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además, la aplicación $\overline{f}$ es biyectiva.
 {{% /theorem %}}
 
-El conjunto cociente de un conjunto $A$ por una relación de equivalencia $R$ es una construcción matemática abstracta y en ejemplos concretos nos resulta a veces conveniente "describirlo" de manera más palpable. Esto se puede hacer fundamentalmente de dos modos:
-\begin{enumerate}
-\item[a)] Encontrando un subconjunto explícito $A' \subset A$ de manera que cada clase de equivalencia de $A$ por $R$ tenga algún representante en $A'$, y que dos elementos distintos de $A'$ no estén relacionados por $R$, o dicho de manera más formal, que la composición de las aplicaciones
-\begin{equation*}
-\begin{CD}
-A' @>{i_{A'}}>{\text{inclusión}}> A @>{\pi}>{\text{proyección canónica}}> A/R
-\end{CD}
-\end{equation*}
-sea una aplicación biyectiva.
-\item[b)] Encontrando un conjunto "conocido" $Y$ y una aplicación sobreyectiva  $f:A \longrightarrow Y$ tal que $R = R_f$. En este caso, la factorización canónica de $f$ nos proporciona una biyección $\overline{f}:A/R \xrightarrow{\sim} Y$.
-\end{enumerate}
-En ambos casos encontramos una biyección entre el conjunto cociente $A/R$, que es un conjunto abstracto, y un conjunto "conocido", $A'$ en el primer caso e $Y$ en el segundo, que nos sirve para "describir" (o "etiquetar") a las clases de equivalencia de $A$ por $R$.
+{{% proof %}}
+Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\im f$ como $f'(a)=f(a)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(a)=i(f(a))=f(a)$ para todo $a\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$. 
 
-{{% example name="Ejemplo" %}}
- Sea $A=\R$ el conjunto de los números reales y consideremos la relación de equivalencia en $\R$ dada por:
-$$  a R b \stackrel{\text{def.}}{\Leftrightarrow} a^2 = b^2.
+El teorema anterior se puede aplicar a $f'\colon A\rightarrow\im f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \im f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $a\in A$,
 $$
-Siguiendo el modo a) que acabamos de explicar, podemos tomar por ejemplo 
-$ A' = \\{ a\in \R \; |\; a\geq 0\\} = [0,+\infty)$. También serviría $ A' = \\{ a\in \R \; |\; a\leq 0\\} = (-\infty,0]$, o incluso
-$A' = (-\infty,-1] \cup [0,1)$.
+\begin{array}{rcl}
+f(a)&=&(i\circ\overline{f}\circ\pi)(a)\cr
+&=&i(\overline{f}(\pi(a)))\cr
+&=&i(\overline{f}([a]))\cr
+&=&\overline{f}([a]).
+\end{array}
+$$
 
+Veamos que $\overline{f}$ es biyectiva. Comenzamos por la sobreyectividad. Dado $b\in\im f$, como $f'$ es sobreyectiva, existe $a\in A$ tal que $b=f(a)=\overline{f}([a])$. Esto prueba que $\overline{f}$ es sobreyectiva. Comprobemos ahora la inyectividad. Dados $[a],[b]\in A/\sim\_f$, usando la anterior fórmula para $\overline{f}$ vemos que $\overline{f}([a])=\overline{f}([b])$ si y solo si $f(a)=f(b)$, lo cual equivale a que $a\sim\_fb$, que es lo mismo que decir $[a]=[b]$. Esto concluye la prueba.
+{{% /proof %}}
 
-Si seguimos el modo b), podemos tomar $Y=[0,+\infty)$ y $f:\R \longrightarrow [0,+\infty)$ dada por $f(a) = a^2$ para todo $a\in \R$.
+Este teorema nos proporciona un método muy eficiente para establecen una biyección de un conjunto cociente en otro.
 
+{{% example name="$\mathbb{Z}$ módulo $n$" %}}
+Vamos a dar una demostración rigurosa de que $\mathbb{Z}/\sim\_n$ posee $n$ elementos para $n>0$. Para ello definimos la aplicación $f\colon \mathbb Z\rightarrow \mathbb Z$ tal que $f(m)$ es el resto no negativo de dividir $m$ entre $n$. 
+
+La imagen de $f$ es $\im f=\\{0,\dots, n-1\\}$. En efecto, el resto de la división es $\geq 0$ y $<n$, lo cual demuestra $\subset$. Además, para $0\leq m<n$, el cociente de la división es $0$ y el resto es el propio $m$, por tanto también tenemos $\subset$. 
+
+Veamos ahora que $\sim\_f=\sim\_n$. Sean $m,m'\in\mathbb Z$. Dividimos ambos números entre $n$, $m=c\cdot n+f(m)$ y $m'=c'\cdot n+f(m')$. Tenemos que $m-m'=(c-c')\cdot n+(f(m)-f(m'))$ es también una división, porque $|f(m)-f(m')|<n$. Por tanto $f(m)=f(m')$ si y solo si $m-m'$ es divisible por $n$. Esto demuestra que ambas relaciones coinciden.
+
+Aplicando el teorema de factorización, deducimos que hay una biyección $\overline{f}\colon \mathbb Z/\sim\_n\cong \\{0,\dots, n-1\\}$ definida por $\overline{f}([m])=f(m)$.
 {{% /example %}}
+
+<!--
 
 
 ## Finitud
