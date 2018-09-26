@@ -154,12 +154,12 @@ Estas propiedades nos permiten definir inductivamente la **intersección** de un
 Veamos el caso posiblemente infinito.
 
 {{% definition %}}
-Dado un conjunto $I$ y una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ indexada por $I$, su **intersección** se define como $\bigcap_{i\in I}A_i=\\{x|\forall i\in I, x\in A_i\\}$.
+Dado un conjunto $I$, una **familia de conjuntos** indexada por $I$ consiste en dar un conjunto $A_i$ para cada $i\in I$. Se denota como $\\{ A\_i \\}\_{i\in I}$.
+
+La **intersección** de una familia de conjuntos se define como $\bigcap_{i\in I}A_i=\\{x|\forall i\in I, x\in A_i\\}$.
 {{% /definition %}}
 
-{{% watch %}}
 Si $I$ es finito, esta definición coincide con la anterior, basta enumerar los elementos de $I$ para comprobarlo. Esta definición es también válida para $I$ infinito.
-{{% /watch %}}
 
 
 {{% definition %}}
@@ -214,12 +214,10 @@ Estas propiedades nos permiten definir inductivamente la **unión** de una *cant
 Veamos ahora el caso posiblemente infinito.
 
 {{% definition %}}
-Dada una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$, su **unión** se define como $\bigcup_{i\in I}A_i=\\{x\;|\;\exists i\in I| x\in A_i\\}$.
+La **unión** de una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ se define como $\bigcup_{i\in I}A_i=\\{x\;|\;\exists i\in I| x\in A_i\\}$.
 {{% /definition %}}
 
-{{% watch %}}
 Igual que antes, si $I$ es finito, esta definición coincide con la anterior, pero es también válida para $I$ infinito.
-{{% /watch %}}
 
 
 {{% definition %}}
@@ -273,6 +271,24 @@ Para probar $\subset$, tomamos $x\in C \setminus (A \cap B)$. Esto quiere decir 
 {{% /proof %}}
 
 ![Leyes de De Morgan](../images/morgan.png)
+
+
+
+{{% definition %}}
+Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\{$subconjuntos de $A\\}$.
+{{% /definition %}}
+
+{{% watch %}}
+$B\subset A\Leftrightarrow B\in\mathcal{P}(A)$.
+{{% /watch %}}
+
+{{% example name="Las partes de $A = \\{ 1,2,3 \\}$" %}}
+$\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\},  \\{1,3\\},  \\{2,3\\}, A \\}$.
+{{% /example %}}
+
+{{% exercise %}}
+Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito? ¿Es posible que $\mathcal{P}(A)$ sea vacío? ¿Y unitario?
+{{% /exercise %}}
 
 {{% definition %}}
 En una situación concreta, un **conjunto universal** $U$ es el que contiene a todos los posibles conjuntos del problema que tratamos.
@@ -331,22 +347,6 @@ así que $U=\bar{\bar{U}}=\bar\varnothing$.
 {{% /proof %}}
 
 
-{{% definition %}}
-Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\{$subconjuntos de $A\\}$.
-{{% /definition %}}
-
-{{% watch %}}
-$B\subset A\Leftrightarrow B\in\mathcal{P}(A)$.
-{{% /watch %}}
-
-{{% example name="Las partes de $A = \\{ 1,2,3 \\}$" %}}
-$\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\},  \\{1,3\\},  \\{2,3\\}, A \\}$.
-{{% /example %}}
-
-{{% watch %}}
-Si $A$ es un conjunto con $n$ elementos, ¿cuántos elementos tiene $\mathcal{P}(A)$? ¿Qué ocurre si $A$ es infinito? ¿Es posible que $\mathcal{P}(A)$ sea vacío? ¿Y unitario?
-{{% /watch %}}
-
 
 
 ## Producto cartesiano y aplicaciones
@@ -359,9 +359,17 @@ El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$
 Si $A= \\{ 1,2,3 \\}$ y $B=\\{a,b\\}$ entonces $A \times B=\\{(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)\\}$.
 {{% /example %}}
 
+{{% remark %}}
+El vacío hace el papel de cero $A \times \varnothing = \varnothing = \varnothing \times B$. 
+{{% /remark %}}
+
 {{% watch %}}
-El vacío hace el papel de cero $A \times \varnothing = \varnothing = \varnothing \times B$. En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$. Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $A\times B$?
+En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$. 
 {{% /watch %}}
+
+{{% exercise %}}
+Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $A\times B$?
+{{% /exercise %}}
 
 {{% remark %}}
 Análogamente, podemos definir el **producto cartesiano** de una cantidad finita de conjuntos $A\_1\times\cdots\times A\_n$ como el formado por las **$n$-uplas** $(a\_1,\dots, a\_n)$ tales que $a\_i\in A\_i$. Más generalmente,  podemos definir el producto cartesiano de una familia arbitraria de conjuntos $\\{A\_i\\}\_{i\in I}$, $\prod\_{i\in I}A\_i=\\{(a\_i)\_{i\in I}|a\_i\in A\_i\\}$.
@@ -379,9 +387,9 @@ Las correspondencias se suelen representar del siguiente modo
 
 Esta correspondencia es $C=\\{(1,a), (1,b), (2,b), (3, b)\\}\subset A\times B$. Pensamos en las correspondencias como reglas que asocian elementos del segundo conjunto a elementos del primero. En este ejemplo al $1$ se le asocian el $a$ y el $b$, y al $2$ y al $3$ solo el $b$. Al $4$ no se le asocia ningún elemento de $B$ y $c\in B$ no está asociado a ningún elemento de $A$.
 
-{{% watch %}}
+{{% exercise %}}
 ¿Cuántas correspondencias hay de $\varnothing$ en $A$? ¿Y de $A$ en $\varnothing$?
-{{% /watch %}}
+{{% /exercise %}}
 
 {{% definition %}}
 Dados dos conjuntos $A$ y $B$, una **aplicación** $f$ de $A$ en $B$, que se denota $f\colon A\rightarrow B$, es una correspondencia que asocia a cada elemento de $A$ un único elemento de $B$, es decir $ \forall a \in A \; \exists ! \; b \in B | (a,b)\in f$.
@@ -440,9 +448,9 @@ Observa que el nombre de la aplicación se puede poner sobre la flecha.
 * Dados dos conjuntos $A$ y $B$ y un elemento $b\in B$, la aplicación **constante** $c_b\colon A\rightarrow B$ se define como $c_b(a)=b$ para todo $a\in A$.
 {{% /example %}}
 
-{{% watch %}}
+{{% exercise %}}
 Dado un conjunto $A$, ¿hay algun aplicación $\varnothing\rightarrow A$? ¿Y $A\rightarrow\varnothing$?.
-{{% /watch %}}
+{{% /exercise %}}
 
 
 {{% definition %}}
@@ -587,9 +595,9 @@ Veamos $\Rightarrow$. Supongamos pues que $f$ es biyectiva. Si excluimos la cond
 Veamos ahora $\Leftarrow$. Como ya hemos comentado, el enunciado de la derecha implicia la sobreyectividad de $f$ ya que incluso la condición de unicidad no sería necesaria para esto. Para ver que $f$ es inyectiva tomamos $a,a'\in A$ y suponemos que $f(a)=f(a')$. Tomando $b=f(a)$ tenemos que $f(a)=b$ y $f(a')=b$, así que por la unicidad $a=a'$, que es lo que teníamos que probar.
 {{% /proof %}}
 
-{{% watch %}}
+{{% exercise %}}
 Si $f\colon A\rightarrow B$ es biyectiva y $A$ es finito, ¿qué podemos decir de $B$?
-{{% /watch %}}
+{{% /exercise %}}
 
 El siguiente tema versará en buena parte sobre el estudio de las aplicaciones biyectivas de un conjunto finito en sí mismo.
 
@@ -612,7 +620,7 @@ Por la asociatividad de la composición $f((g\circ f)(a))=f(a)$ y por la inyecti
 {{% /proof %}}
 
 {{% remark %}}
-Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que las igualdades en el campo de los números, es por eso que se denotan  $$f\colon\stackrel{\cong}\longrightarrow B$$ o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
+Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que las igualdades en el campo de los números, es por eso que se denotan  $$f\colon A\stackrel{\cong}\longrightarrow B$$ o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
 $$
 \begin{array}{rcl}
 A\times B&\cong &B\times A,\cr
@@ -652,9 +660,9 @@ Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen d
 {{% /watch %}}
 
 
-{{% watch %}}
+{{% exercise %}}
 ¿Cuál es la imagen directa del subconjunto vacío? ¿Y su imagen inversa?
-{{% /watch %}}
+{{% /exercise %}}
 
 {{% watch %}}
 La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto. 
@@ -662,19 +670,14 @@ La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la n
 
 
 {{% remark %}}
-Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{Im}f=B$.
-{{% /remark %}}
+Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{Im}f=f(A)=B$.
 
-{{% watch %}}
-Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. Como acabamos de ver, el enunciado análogo para la imagen directa caracteriza las aplicaciones sobreyectivas, así que no es cierto en general.
-{{% /watch %}}
+Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
 
-
-{{% watch %}}
 A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\bar{f}\colon  A \to \Imag(f)$ como $\bar{f}(a)=f(a)$ para todo $a\in A$. ¿En qué se diferencian $f$ y $\bar{f}$?
 {{% /watch %}}
 
-{{% watch %}}
+{{% exercise %}}
 Prueba como ejercicio que las imágenes directa e inversa preservan inclusiones, es decir, 
 dada una aplicación $f\colon A\rightarrow B$: 
 
@@ -682,7 +685,7 @@ dada una aplicación $f\colon A\rightarrow B$:
 * $V \subset V'\subset B\Rightarrow f^{-1}(V)\subset f^{-1}(V')\subset A$.
 
 ¿Son ciertos los recíprocos?
-{{% /watch %}}
+{{% /exercise %}}
 
 
 {{% proposition %}}
@@ -725,9 +728,9 @@ La **restricción** de una aplicación $f\colon A \rightarrow B$ a un subconjunt
 $U\subset A$ es la aplicación $f|_U\colon U\rightarrow B$ definida como $f|_U(u)=f(u)$ para todo $u\in U$.
 {{% /definition %}}
 
-{{% watch %}}
+{{% exercise %}}
 ¿En qué se diferencian $f$ y su restricción $f|_U$?
-{{% /watch %}}
+{{% /exercise %}}
 
 
 {{% definition %}}
@@ -735,13 +738,13 @@ Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicacio
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% exercise %}}
 Si $A$ y $B$ son finitos, ¿puedes acotar el número de elementos de $B^A$?
-{{% /watch %}}
+{{% /exercise %}}
 
-{{% watch %}}
+{{% exercise %}}
 Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}$ y $\\{e\\}^A$.
-{{% /watch %}}
+{{% /exercise %}}
 
 
 
