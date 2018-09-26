@@ -43,7 +43,7 @@ También podemos considerar el anillo de **series formales** $R[[x]]$ en una var
 
 {{% definition %}}
  Un **anillo** es un conjunto \\(R\\) equipado con dos aplicaciones, llamadas *suma* y *multiplicación* o *producto*,
-\\[
+ \\[
 \begin{array}{ccc}
 R\times R\rightarrow R, &\qquad& R\times R\rightarrow R,\cr
 (a,b)\mapsto a+b;&&(a,b) \mapsto ab.
@@ -51,23 +51,40 @@ R\times R\rightarrow R, &\qquad& R\times R\rightarrow R,\cr
 \\]
 que satisfacen las siguientes propiedades:
 
-* Asociativa: $$a+(b+c)=(a+b)+c,\qquad a(bc)=(ab)c.$$
+* Asociativa: 
+$$
+\begin{array}{rcl}
+a+(b+c)&=&(a+b)+c,\cr 
+a(bc)&=&(ab)c.
+\end{array}
+$$
 
-* Conmutativa: $$a+b=b+a,\qquad ab=ba.$$
+* Conmutativa: 
+$$
+\begin{array}{rcl}
+a+b&=&b+a,\cr 
+ab&=&ba.
+\end{array}
+$$
 
 * Distributiva:
 $$a(b+c)=ab+ac.$$
 
 * Existencia de elementos neutros \\(0,1\in R\\) para la suma y el producto:
-$$0+a=a,\qquad 1a=a.$$
+$$
+\begin{array}{rcl}
+0+a&=&a,\cr 
+1a&=&a.
+\end{array}
+$$
 
 * Existencia de un elemento opuesto para la suma \\(-a\in R\\) para todo \\(a\in R\\) de modo que $$a+(-a)=0.$$
 {{% /definition %}}
 
 
-{{% watch %}}
-La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición ed anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.
-{{% /watch %}}
+{{% remark %}}
+La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición de anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.
+{{% /remark %}}
 
 
 {{% example name="El anillo trivial" %}}
@@ -108,9 +125,9 @@ Un subconjunto $S\subset R$ de un anillo $R$ es un **subanillo** si:
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Un subanillo $S\subset R$ es un anillo por derecho propio con la suma y la multiplicación heredadas de $S$. Observa que $0\in S$. También es un subgrupo para la suma. Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[x]\subset R[[x]]$.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% example name="Series convergentes" %}}
@@ -128,9 +145,13 @@ Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$
 {{% /definition %}}
 
 
-{{% watch %}}
-El elemento inverso $u^{-1}$ de una unidad $u$ es único. Dividir por una unidad es multiplicar por el elemento inverso $a/u=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. Intenta calcular las unidades de los ejemplos de anillos vistos hasta ahora. ¿Puede el cero ser una unidad? 
-{{% /watch %}}
+{{% remark %}}
+El elemento inverso $u^{-1}$ de una unidad $u$ es único. Dividir por una unidad es multiplicar por el elemento inverso $\frac{a}{u}=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. 
+{{% /remark %}}
+
+{{% exercise %}}
+Intenta calcular las unidades de los ejemplos de anillos vistos hasta ahora. ¿Puede el cero ser una unidad? 
+{{% /exercise %}}
 
 
 
@@ -144,9 +165,9 @@ Dados dos anillos $R$ y $S$, un **homomorfismo** $f\colon R\rightarrow S$ es una
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Los homomorfismos satisfacen $f(-a)=-f(a)$. Es más, si $u$ es una unidad entonces $f(u)$ también y $f(u^{-1})=f(u)^{-1}$. La identidad $\operatorname{id}_R\colon R\rightarrow R$ es un isomorfismo. Comprueba que si $$R\stackrel{f}\longrightarrow S\stackrel{g}\longrightarrow T$$ son homomorfismos entonces la composición $g\circ f\colon R\rightarrow T$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon R\rightarrow S$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon S\rightarrow R$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $R\cong S$. Prueba que esta relación es de equivalencia. 
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% example name="La inclusión" %}}
@@ -182,9 +203,9 @@ Si $f=i\circ g$ entonces tendríamos $$f(a)=(i\circ g)(a)=i(g(a))=g(a).$$ La uni
 {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
  En la proposición anterior podemos siempre tomar $U=\operatorname{im} f$. 
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% example name="La evaluación" %}}
@@ -231,7 +252,7 @@ Veamos que $n-1\Rightarrow n$. Suponiendo que hay un único homomorfismo $h\colo
 {{% /proof %}}
 
 
-El anillo de los enteros cumple la siguiente curiosa propiedad, que en términos técnicos se denomina ser inicial en la categoría de los anillos.
+El anillo de los enteros cumple la siguiente curiosa propiedad, que en términos categóricos se denomina ser *inicial* en la categoría de los anillos.
 
 {{% proposition %}}
 Para todo anillo $R$ existe un único homorfismo $f\colon \mathbb Z\rightarrow R$. 
@@ -268,10 +289,9 @@ Dado un anillo $R$, un **ideal** $I\subset R$ es un subconjunto tal que:
 {{% /definition %}}
 
 
-{{% watch %}}
-Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. 
-{{% /watch %}}
-
+{{% remark %}}
+Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. 
+{{% /remark %}}
 
 {{% proposition %}}
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;|\;f(a)=0\\},$$ es un ideal $\ker f\subset R$.
@@ -292,21 +312,21 @@ El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;
 {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
  Como ocurre con los grupos, un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
-{{% /watch %}}
+{{% /remark %}}
 
 
 Definimos ahora el ideal generado por un conjunto de elementos de un anillo, que es el menor ideal que los contiene.
 
 {{% definition %}}
-El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ se define como $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}.$$ Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$. 
+El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo:  $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}.$$ Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. 
 {{% /definition %}}
 
 
-{{% watch %}}
-Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_n\in (a_1,\dots, a_n)$. Es más, si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$. Intenta dar una definición razonable de ideal generado por un conjunto infinito de elementos que satisfaga las propiedades análogas al caso finito. 
-{{% /watch %}}
+{{% exercise %}}
+Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_n\in (a_1,\dots, a_n)$. Es más, demuestra que si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$. Intenta dar una definición razonable de ideal generado por un conjunto infinito de elementos que satisfaga las propiedades análogas al caso finito. 
+{{% /exercise %}}
 
 
 {{% proposition %}}
@@ -323,10 +343,7 @@ Por un lado $(a)\subset I$ pues $a\in I$.
 Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$, $$b=ca+r.$$ El resto satisface $|r|<|a|$. Además $r=b-ca\in I$, por tanto $r=0$ y $b=ca\in (a)$.  
 {{% /proof %}}
 
-
-{{% watch %}}
  La demostración de la proposición anterior solo usa la noción de división euclídea, por tanto es válida no solo para $\mathbb Z$ sino para cualquier *dominio euclídeo* (noción conocida que repasaremos más adelante). La siguiente proposición destaca otro caso particular de interés.
-{{% /watch %}}
 
 
 {{% proposition %}}
@@ -383,9 +400,9 @@ Dado un anillo $R$ y un ideal $I\subset R$, el **anillo cociente** $R/I$ es el c
 {{% /definition %}}
 
 
-{{% watch %}}
- Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente $$a+I=\bar a.$$ La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n\neq\pm1$ es primo.
-{{% /watch %}}
+{{% remark %}}
+ Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente $$a+I=\bar a.$$ La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n$ es primo.
+{{% /remark %}}
 
 
 {{% theorem %}}
@@ -423,9 +440,9 @@ Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
  En la proposición anterior podemos tomar siempre $I=\ker f$. 
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% theorem name="Primer Teorema de Isomorfía"%}}
@@ -520,7 +537,7 @@ La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede 
 {{% /watch %}}
 
 
-También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, si tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Veamos cómo añadir elementos que satisfagan ecuaciones.
+También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Veamos cómo añadir elementos que satisfagan ecuaciones.
 
 Dado un polinomio $p(x)=a\_nx^n+\cdots + a_1x+ a\_0\in R[x]$, consideramos el anillo $S=R[x]/(p(x))$. Por abuso de notación, la clase de una constante $a\in R$ en $S$ se denotará igual, $a\in S$, no $\bar a$. En este nuevo anillo $\bar x\in S$ es una raíz de $p(x)$ puesto que
 
@@ -529,31 +546,25 @@ $$ a_n\bar x^n+\cdots + a_1 \bar x+ a_0=\overline{p(x)}=\bar 0\in S.$$
 Este anillo posee una descripción similar a la de los números complejos.
 
 {{% proposition %}}
- Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ de grado $n$ la siguiente aplicación entre conjuntos es biyectiva, \\[\\begin{array}{rcl} R\times\stackrel{n}\cdots\times R&\stackrel{f}\longrightarrow& R[x]/(p(x))=S,\cr (b\_1,\dots,b\_{n-1}, b\_n)&\mapsto& b\_1\bar x^{n-1}+\cdots+b\_{n-1}\bar x+b\_n. \\end{array}\\]
+Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
-Veamos primero la inyectividad. Para ello comenzamos probando que los elementos no nulos de $(p(x))$ tienen grado $\geq n$. En efecto, si $q(x)=c_mx^m+\cdots$ tiene grado $m$ entonces $q(x)p(x)=c_mx^{m+n}+\cdots$ tiene grado $m+n$.
+En $R[x]/(p)$, $\bar x^n=-a\_{n-1}\bar{x}^{n-1}-\cdots- a\_1\bar{x}-a\_0$, luego
+$\bar x^{n+m}=-a\_{n-1}\bar{x}^{n+m-1}-\cdots- a\_1\bar{x}^{m+1}-a\_0\bar{x}^m$ para todo $m\geq 0$. Esto nos permite reducir el grado de cualquier representante de grado $\geq n$, llegando inductivamente a uno de grado $<n$. Hemos probado la existencia.
 
-Supongamos ahora que $f(b_1,\dots,b_n)=f(c_1,\dots,c_n)$, es decir $$b\_1\bar x^{n-1}+\cdots+b\_{n-1}\bar x+b\_n=c\_1\bar x^{n-1}+\cdots+c\_{n-1}\bar x+c\_n.$$
-Entonces
-$$(b\_1-c\_1)\bar x^{n-1}+\cdots+(b\_{n-1}-c\_{n-1})\bar x+(b\_n-c\_n)=0\in S,$$
-o equivalentemente 
-$$(b\_1-c\_1) x^{n-1}+\cdots+(b\_{n-1}-c\_{n-1}) x+(b\_n-c\_n)\in (p(x)).$$
-Como este polinomo tiene grado ${<} n$ deducimos que es trivial, luego $(b_1,\dots,b_n)=(c_1,\dots,c_n)$.
-
-Para la sobreyectividad, basta ver que todo elemento de $S=R[x]/(p(x))$ tiene un representante de grado ${<} n$. En particular basta comprobar que si $q(x)+(p(x))$ tiene un representante $q(x)=c_mx^m+\cdots$ de grado $m\geq n$ entonces también tiene otro representante de grado ${<} m$. El polinomio $$r(x)=q(x)-c_mx^{m-n}p(x)=(c_mx^m+\cdots)-c_mx^{m-n}(x^n+\cdots)$$ tiene grado ${<} m$ y $q(x)-r(x)=c_mx^{m-n}p(x)\in (p(x))$, luego $q(x)+(p(x))=r(x)+(p(x))$.  
+Veamos ahora la unicidad. Supongamos que $f,g\in R[x]$ tienen grado $<n$ y que ambos representan la misma clase en el cociente, es decir $f-g\in (p)$. Como el grado de $f-g$ es $<n$, para probar que $f=g$ basta comprobar que cualquier polinomio no nulo de $(p)$ tiene grado $\geq n$. Esto es sencillo ya que los elementos no nulos de $(p)$ son de la forma $q(x)p(x)$ con $q\in R[x]$ no nulo. Así,  $q(x)=c\_mx^m+\cdots$ con $c\_m\neq 0$ en $R$ y por tanto $q(x)p(x)=c\_mx^{m+1}+\cdots$, que no es nulo.
 {{% /proof %}}
 
 
 {{% watch %}}
-Ya hemos visto que las dos maneras de añadirle a $\mathbb R$ una raíz de $-1$, es decir $\mathbb C$ y $\mathbb R[x]/(x^2+1)$, coinciden (salvo isomorfismo). En las condiciones de la proposición anterior deducimos como consecuencia de su tesis que si $p(x)$ tiene grado ${\geq }1$ el homomorfismo $R\rightarrow S$ que manda cada elemento de $R$ a la clase del correspondiente polinomio constante es inyectivo, por lo que podemos considerarlo como la inclusión de un subanillo $R\subset S$.  También es posible en general añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
+Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
 {{% /watch %}}
 
 
 {{% example name="$\mathbb Z[x]/(x^3+3x+1)$" %}}
-Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x^2+ a_1 \bar x+ a_0$ para ciertos coeficientes $a_0,a_1,a_2\in\mathbb Z$. La suma es muy fácil de calcular, sumando coeficientes. El producto es más complejo porque suele ser necesario reducir el grado del representante obtenido. Esto se hace usando que $\bar x$ es una raíz del denominador. Concretamente en este caso $\bar x^3+3\bar x+1=0$, luego $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr\bar x^5&=& -3\bar x^3-\bar x^2\cr&=& -3(-3\bar x-1)-\bar x^2\cr&=&-\bar x^2+9\bar x+3,\cr\bar x^6&=&\dots\end{array}$$Usamos esto en el siguiente ejemplo de cálculo,$$\begin{array}{rcl}(- \bar x^2+ \bar x+ 2)(\bar x+ 1)&=& -\bar x^3+3\bar x+2\cr&=& -(-3\bar x-1)+3\bar x+2\cr&=&6\bar x+3.\end{array}$$
+Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x^2+ a_1 \bar x+ a_0$ para ciertos coeficientes $a_0,a_1,a_2\in\mathbb Z$. La suma se calcula sumando coeficientes. El producto es más complejo porque suele ser necesario reducir el grado del representante obtenido. Esto se hace usando que $\bar x$ es una raíz del denominador. Concretamente en este caso $\bar x^3+3\bar x+1=0$, luego $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr\bar x^5&=& -3\bar x^3-\bar x^2\cr&=& -3(-3\bar x-1)-\bar x^2\cr&=&-\bar x^2+9\bar x+3,\cr\bar x^6&=&\dots\end{array}$$Usamos esto en el siguiente ejemplo de cálculo,$$\begin{array}{rcl}(- \bar x^2+ \bar x+ 2)(\bar x+ 1)&=& -\bar x^3+3\bar x+2\cr&=& -(-3\bar x-1)+3\bar x+2\cr&=&6\bar x+3.\end{array}$$
 {{% /example %}}
 
 
@@ -673,7 +684,7 @@ Un ideal $I\subsetneq R$ es **maximal** si los únicos ideales que lo contienen 
 
 
 {{% watch %}}
-De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$.
+De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$. Todo anillo no trivial posee al menos un ideal maximal. ¿Cuál es en el caso de los cuerpos?
 {{% /watch %}}
 
 

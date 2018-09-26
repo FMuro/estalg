@@ -58,4 +58,8 @@ Cuatro horas semanales, de las cuales una hora será de problemas, de media a lo
 
 ### Tutorías
 
-Martes y viernes de 8:30 a 11:30.
+| Profesores                      | Días y horas                                                 |
+|---------------------------------|--------------------------------------------------------------|
+| Fernando Muro (coordinador)     | Martes, miércoles y jueves de 9:30 a 11:30                   |
+| Antonio Rojas                   | Lunes y martes de 11:00 a 13:00 y miércoles de 17:00 a 19:00 |
+| Jesús Soto                      | Martes, Jueves y Viernes de 15:30 a 17:30                    |
