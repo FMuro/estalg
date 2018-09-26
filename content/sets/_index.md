@@ -161,6 +161,11 @@ La **intersección** de una familia de conjuntos se define como $\bigcap_{i\in I
 
 Si $I$ es finito, esta definición coincide con la anterior, basta enumerar los elementos de $I$ para comprobarlo. Esta definición es también válida para $I$ infinito.
 
+{{% example name="Una intersección infinita" %}}
+Consideramos el conjunto de índices $I=\mathbb{N}$ y la familia de conjuntos $\\{A\_n\\}\_{n\in\mathbb{N}}$ dada por los intervalos $A\_n=[0,\frac{1}{2^n})$. Todos estos intervalos contienen una cantidad infinita de números, pero su intersección es simplemente
+$\bigcap_{n\in\mathbb{N}}[0,\frac{1}{2^n})=\\{0\\}$. En efecto, la inclusión $\supset$ es obvia porque $0\in [0,\frac{1}{2^n})$ para todo $n\in\mathbb{N}$. Por otro lado,  ningún número real positivo $x\in (0,\infty)$ puede pertenecer a la intersección ya que $x\notin [0,\frac{1}{2^n})$ para $n$ suficientemente grande. Esto prueba $\subset$.
+{{% /example %}}
+
 
 {{% definition %}}
 Dos conjuntos $A$ y $B$ son **disjuntos** si $A \cap B = \varnothing$.
@@ -219,6 +224,11 @@ La **unión** de una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ se define com
 
 Igual que antes, si $I$ es finito, esta definición coincide con la anterior, pero es también válida para $I$ infinito.
 
+{{% example name="Una unión infinita" %}}
+Si consideramos la familia $\\{[0,\frac{1}{2^n})\\}\_{n\in\mathbb{N}}$ del ejemplo de intersección infinita, tenemos que 
+$\bigcup_{n\in\mathbb{N}}[0,\frac{1}{2^n})=[0,\frac{1}{2})$ ya que $[0,\frac{1}{2})$ es uno de los conjuntos de esta familia y todos los demás $[0,\frac{1}{2^n})$ están contenidos en él.
+{{% /example %}}
+
 
 {{% definition %}}
 Dados dos conjuntos $A$ y $B$ se define la **diferencia** $A \setminus B$, como el conjunto formado por los elementos de $A$ que no están en $B$, $ A \setminus B = \\{x  |  x \in A  \wedge  x \notin B\\}$.
@@ -267,7 +277,7 @@ Dados tres conjuntos $A$, $B$ y $C$:
 {{% proof %}}
 Probaremos la segunda ley de De Morgan por doble inclusión. La primera queda como ejercicio.
 
-Comenzamos con $\supset$. Sea $x\in C\setminus A$. Tenemos entonces que $x\in C$ pero $x\notin A$, por tanto $x\notin A\cap B$ ya que $A\cap B\in A$. Esto demuestra que $x\in C \setminus (A \cap B)$, por tanto $C\setminus A\subset C \setminus (A \cap B)$. Los papeles de $A$ y $B$ son intercambiables, así que también $C\setminus B\subset C \setminus (A \cap B)$. Esto demuestra $\supset$.
+Comenzamos con $\supset$. Sea $x\in C\setminus A$. Tenemos entonces que $x\in C$ pero $x\notin A$, por tanto $x\notin A\cap B$ ya que $A\cap B\subset A$. Esto demuestra que $x\in C \setminus (A \cap B)$, por tanto $C\setminus A\subset C \setminus (A \cap B)$. Los papeles de $A$ y $B$ son intercambiables, así que también $C\setminus B\subset C \setminus (A \cap B)$. Esto demuestra $\supset$.
 
 Para probar $\subset$, tomamos $x\in C \setminus (A \cap B)$. Esto quiere decir que $x\in C$ pero $x\notin A\cap B$. Esto último equivale a que bien $x\notin A$ o bien $x\notin B$. Si $x\notin A$ entonces $x\in C\setminus A$ y si $x\notin B$ entonces $x\in C\setminus B$. Por tanto $x\in (C \setminus A) \cup (C \setminus B)$. Esto prueba $\subset$.
 {{% /proof %}}
@@ -301,7 +311,7 @@ En una situación concreta, un **conjunto universal** $U$ es el que contiene a t
 ![Conjunto universal](../images/universal_set.png)
 
 {{% definition %}}
-Fijado un conjunto universal $U$, el **complementario** de un conjunto $A$ se denota $\bar{A}$ o $A^c$ y se define como $\bar{A} = \\{ x\in U | x \notin A \\}$.
+Fijado un conjunto universal $U$, el **complementario** de un conjunto $A$ se denota $\bar{A}$ o $A^c$ y se define como $\bar{A} = U\setminus A$.
 {{% /definition %}}
 
 ![Complementario](../images/complement.png)
@@ -335,17 +345,18 @@ Dado un conjunto universal $U$:
 Como $A\subset U$, 
 $$
 \begin{array}{rcl}
-\bar{\bar{A}} &=& \\{ x  |  x \in U \wedge x \notin \overline{A} \\} \cr
+\bar{\bar{A}} &=& U\setminus \bar{A}\cr
+&=&\\{ x  |  x \in U \wedge x \notin \bar{A} \\} \cr
 &=& \\{ x  |  x \in U \wedge (x\notin U \vee x\in A) \\} \cr
 &=& \\{ x  |  x \in U \wedge x\in A \\} \cr
 &=& \\{ x  |  x\in A \\} \cr
-&=& A
+&=& A.
 \end{array}
 $$
 
 Por otro lado,
 $$
-\bar U=\\{x\in U|x\notin U\\}=\varnothing,
+\bar U=U\setminus U=\varnothing,
 $$
 así que $U=\bar{\bar{U}}=\bar\varnothing$.
 {{% /proof %}}
@@ -384,6 +395,10 @@ Análogamente, podemos definir el **producto cartesiano** de una cantidad finita
 {{% definition %}}
 Dados dos conjuntos $A$ y $B$, una **correspondencia** $C$ de $A$ en $B$ es un subconjunto $C\subset A \times B$.
 {{% /definition %}}
+
+{{% example name="Un producto infinito" %}}
+El producto infinito $\prod_{n\in\mathbb{N}}[0,\frac{1}{2^n})$ está formado por todas las sucesiones $(a\_n)\_{n\in\mathbb{N}}$ de números reales tales que $0\leq a\_n<\frac{1}{2^n}$ para todo $n\in\mathbb{N}$.
+{{% /example %}}
 
 Las correspondencias se suelen representar del siguiente modo
 
