@@ -383,7 +383,7 @@ Dados dos conjuntos $A$ y $B$, una **correspondencia** $C$ de $A$ en $B$ es un s
 
 Las correspondencias se suelen representar del siguiente modo
 
-![Correspondence](../images/correspondence.png)
+![Correspondencia](../images/correspondence.png)
 
 Esta correspondencia es $C=\\{(1,a), (1,b), (2,b), (3, b)\\}\subset A\times B$. Pensamos en las correspondencias como reglas que asocian elementos del segundo conjunto a elementos del primero. En este ejemplo al $1$ se le asocian el $a$ y el $b$, y al $2$ y al $3$ solo el $b$. Al $4$ no se le asocia ningún elemento de $B$ y $c\in B$ no está asociado a ningún elemento de $A$.
 
@@ -578,7 +578,7 @@ En una sobreyectiva está prohibida la siguiente situación:
 ![Aplicación no sobreyectiva](../images/nosurjective.png)
 
 {{% remark %}}
-En notación matemática, $f\colon A\rightarrow B$ es **inyectiva** si, dados $a,a'\in A$, $f(a)=f(a')\Rightarrow a=a'$, y $f$ es **sobreyectiva** si $\forall b\in B\;\exists a\in A|f(a)=b$.
+En notación matemática, $f\colon A\rightarrow B$ es **inyectiva** si, dados $a,a'\in A$, $f(a)=f(a')\Rightarrow a=a'$, y $f$ es **sobreyectiva** si $\forall b\in B\;\exists a\in A|f(a)=b$. Las flechas de las aplicaciones inyectivas se denotan $f\colon A\hookrightarrow B$ y las de las sobreyectivas $f\colon A\twoheadrightarrow B$.
 {{% /remark %}}
 
 {{% watch %}}
@@ -596,7 +596,7 @@ Veamos ahora $\Leftarrow$. Como ya hemos comentado, el enunciado de la derecha i
 {{% /proof %}}
 
 {{% exercise %}}
-Si $f\colon A\rightarrow B$ es biyectiva y $A$ es finito, ¿qué podemos decir de $B$?
+Si $f\colon A\rightarrow B$ es biyectiva y $A$ es finito, ¿qué podemos decir de $B$? ¿Y si $f$ es inyectiva? ¿Y si es sobreyectiva?
 {{% /exercise %}}
 
 El siguiente tema versará en buena parte sobre el estudio de las aplicaciones biyectivas de un conjunto finito en sí mismo.
@@ -670,21 +670,19 @@ La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la n
 
 
 {{% remark %}}
-Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{Im}f=f(A)=B$.
+* Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{Im}f=f(A)=B$.
 
-Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
+* Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
 
-A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\bar{f}\colon  A \to \Imag(f)$ como $\bar{f}(a)=f(a)$ para todo $a\in A$. ¿En qué se diferencian $f$ y $\bar{f}$?
-{{% /watch %}}
+* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\bar{f}\colon  A \to \Imag(f)$
 
-{{% exercise %}}
-Prueba como ejercicio que las imágenes directa e inversa preservan inclusiones, es decir, 
+* Las imágenes directa e inversa preservan inclusiones, es decir, 
 dada una aplicación $f\colon A\rightarrow B$: 
 
-* $U\subset U'\subset A\Rightarrow f(U)\subset f(U')\subset B$
-* $V \subset V'\subset B\Rightarrow f^{-1}(V)\subset f^{-1}(V')\subset A$.
+	- $U\subset U'\subset A\Rightarrow f(U)\subset f(U')\subset B$
+	- $V \subset V'\subset B\Rightarrow f^{-1}(V)\subset f^{-1}(V')\subset A$.
 
-¿Son ciertos los recíprocos?
+¿Son ciertos los recíprocos de estas últimas implicaciones?
 {{% /exercise %}}
 
 
@@ -739,16 +737,10 @@ Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicacio
 
 
 {{% exercise %}}
-Si $A$ y $B$ son finitos, ¿puedes acotar el número de elementos de $B^A$?
+* Si $A$ y $B$ son finitos, ¿puedes acotar el número de elementos de $B^A$?
+
+* Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}$ y $\\{e\\}^A$.
 {{% /exercise %}}
-
-{{% exercise %}}
-Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}$ y $\\{e\\}^A$.
-{{% /exercise %}}
-
-
-
-<!--
 
 
 
@@ -757,243 +749,131 @@ Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}
 ## Conjuntos cociente
 
 {{% definition %}}
-{Relación} {Sea $A$ un conjunto. Una {\bf relación} $R$ definida en $A$ es una
-correspondencia de $A$ en sí mismo.}
+Una **relación** $R$ en un conjunto $A$ es un subconjunto $R\subset A\times A$. Si $(a,b)\in R$ diremos que a **está relacionado con** $b$ y lo denotaremos $aRb$, o simplemente $a\sim b$ cuando la relación $R$ sea obvia por el contexto.
+
+Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades:
+
+* $aRa$ para todo $a \in A$ (**refleaiva**).
+* $aRb\Leftrightarrow bRa$ para $a,b\in A$ cualesquiera (**simétrica**).
+* $aRb\wedge bRc\Rightarrow aRc$ para $a,b,c\in A$ (**transitiva**).
 {{% /definition %}}
 
-Dos relaciones $R$ y $R'$ en el conjunto $A$ son iguales si y sólo si $aRb \Leftrightarrow aR'b$:
-$$ R = R' \Leftrightarrow ( aRb \Leftrightarrow aR'b).
-$$
+{{% example name="Relaciones de equivalencia" %}}
+* En el conjunto de los seres humanos, poseer el mismo grupo sanguíneo, es decir $x\sim y$ si $x$ tiene el mismo grupo sanguíneo que $y$.
 
-{{% example name="Ejemplo" %}}
- Sea $A= \\{ a,b,c \\}.$ Entonces $R= \\{(a,a), (a,c), (b,c)\\}$ es una relación en $A.$
+* En el conjunto de estudiantes del primer curso del Grado en Matemáticas de la Universidad de Sevilla, estar en el mismo grupo de Álgebra Básica.
+
+* En $\mathbb Z$, tener la misma paridad, o equivalentemente $x\sim_2 y$ si $x-y$ es par.
+
+* En $\mathbb Z$, dado $n\in \mathbb Z$, podemos definir la relación $\sim_n$ como $x\sim_n y$ si $x-y$ es divisible por $n$.
+
+* En un conjunto cualquiera $A$, la relación dada por la igualdad, $x\sim y$ si $x=y$.
+
+* En un conjunto cualquiera $A$, la relación definida como $x\sim y$ para todo $x,y\in A$.
 {{% /example %}}
 
-Si el par $(x,y) \in A \times A$ está en $R$, diremos que $x$
-está $R$--relacionado con $y$, o que $x$ está relacionado con $y$ por $R$. Esto
-se notará normalmente $xRy$ (nótese que el orden es
-importante).
+{{% exercise %}}
+Estudia si las siguientes relaciones en el conjunto de los seres humanos son de equivalencia:
+
+* Ser hermano de. Es decir, $x\sim y$ si $x$ es hermano de $y$.
+
+* Ser hijo de.
+
+* Ser la misma persona.
+
+* Tener la misma edad.
+
+* Llevarse menos de un año de edad.
+
+Pon más ejemplos, definidos sobre los conjuntos que desees, de relaciones que satisfagan exactamente uno o exactamente dos de las propiedades que se le demandan a las relaciones de equivalencia.
+{{% /exercise %}}
 
 {{% definition %}}
-{Algunas propiedades de una relación} {Sea $R$ una relación en $A$. Diremos que $R$ es:
-\begin{enumerate}
-\item[(a)] {\bf Reflexiva} cuando para todo $x \in A$ se tiene que $xRx$.
-\item[(b)] {\bf Simétrica} cuando $xRy$ siempre implica $yRx$ (y por tanto $xRy \Leftrightarrow yRx$).
-\item[(c)] {\bf Antisimétrica} cuando, si tenemos $xRy$ e $yRx$, entonces $x=y$
-necesariamente.
-\item[(d)] {\bf Transitiva} cuando, si tenemos $xRy$ e $yRz$, entonces se tiene $xRz$.
-\end{enumerate}}
+Dada una relación de equivalencia $R$ en un conjunto $A$, la **clase (de equivalencia)** de $a \in A$ es el conjunto de los elementos relacionados con $a$, es decir $R(a)=\\{b\in A| aRb\\}$. Los elementos de $R(a)$ se denominan **representantes** de esta clase. El conjunto **cociente** de $A$ por $R$ es el formado por las clases de equivalencia de los elementos de $A$. La **proyección canónica** es la aplicación sobreyectiva $\pi\colon A \twoheadrightarrow A/R$ definida como $a\mapsto R(a)$.
 {{% /definition %}}
 
-{{% definition %}}
-{Relaciones de orden y de equivalencia}
-{Las relaciones que son reflexivas, simétricas y transitivas se denominan
-{\bf relaciones de equivalencia}. Las relaciones que son reflexivas,
-antisimétricas y transitivas se denominan {\bf relaciones de orden}.}
-{{% /definition %}}
+{{% remark %}}
+Cuando la relación de equivalencia se denota simplemente $\sim$ por ser sobreentendida, la clase de un elemento $a\in A$ se denota simplemente como $[a]$ o $\bar{a}$. Observa que, en virtud de la reflexividad, $a\in R(a)$ en cualquier relación de equivalencia.
+{{% /remark %}}
 
-{{% example name="Ejemplo" %}}
+{{% watch %}}
+En las relaciones de equivalencia, y por tanto en los cocientes, el problema que más confusión genera es que una misma clase de equivalencia puede tener muchos representantes diferentes. Esto dificulta la definición de aplicaciones que parten de cocientes $f\colon A/R\rightarrow B$, ya que si quiero definir $f(R(a))$ basándome en la elección de un representante, por ejemplo $a\in R(a)$, debo comprobar que la definición es independiente de cualquier otra elección posible del representante $b\in R(a)$.
+{{% /watch %}}
 
-1) En el conjunto $\Z$ definimos las relaciones siguientes:
-$$ xRy \; \Longleftrightarrow \; x \leq y, \quad
-xSy \; \Longleftrightarrow \; x-y \mbox{ es par}, \quad xTy \;
-\Longleftrightarrow \;x \; \mbox{divide a } \; y
-$$
-\noindent a) $R$ es una relación de orden (de hecho, las relaciones de
-orden se denominan así por ser éste el ejemplo fundamental). En efecto:
-\begin{itemize}
-\item Reflexiva: $\forall n \in \Z$ se tiene que $ n \leq n,$ luego $nRn.$
-\item Antisimétrica: Si $nRm$ y $mRn$ se tiene que $n \leq m$ y $m \leq n,$ luego $n=m.$
-\item Transitiva: Si $nRm$ y $mRs$ es $n \leq m \leq s,$ luego $nRs.$
-\end{itemize}
+{{% example name="Conjuntos cociente" %}}
+Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos casos estableciendo una biyección con otro conjunto más sencillo.
 
-\noindent b) $S$ es una relación de equivalencia.
-\begin{itemize}
-\item Reflexiva: $\forall n \in \Z$ se tiene que $ n- n=0$ es par, luego $nSn.$
-\item Simétrica: si $nSm$ es $n-m$ par, luego $m-n$ es par y, por tanto, $mSn.$
-\item Transitiva: si $nSm$ y $mSp$ se tiene que $n-m$ y $m-p$ son pares. Sumando se tiene que $n-p$ es par, luego $nSp.$
-\end{itemize}
+* $\\{$Seres humanos$\\}/$poseer el mismo grupo sanguíneo $\cong \\{0, A,B,AB\\}\colon [x]\mapsto$ grupo sanguíneo de $x$.
 
-\noindent c) $T$ no es ni de orden ni de equivalencia, pues $T$ no verifica la propiedad antisimétrica ni la simétrica.
+* $\\{$Estudiantes de primero de Matemáticas$\\}/$estar en el mismo grupo de Álgebra Básica $\cong \\{A,B,C,D,E,F\\}\colon [x]\mapsto$ grupo al que pertenece $x$.
 
-Notemos que $S$ es de equivalencia si sustituimos la condición
-"$x-y$ es par" por la condición "$x-y$ es múltiplo de $p$",
-para cualquier número $p$ que fijemos con antelación.
-%Esta relación se estudiará en profundidad más adelante.
+* En $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$, tener la misma paridad, o equivalentemente $x\sim y$ si $x-y$ es par.
 
-\noindent 2) Sea $U$ un conjunto y $A \subset U$ un subconjunto fijo. En $\mathcal{P}(U)$ definimos la relación $\mathcal{R}_A:$
-$$ \forall B,C \in \mathcal{P}(U), \quad B \mathcal{R}_A C \quad \mbox{si} \quad A \cap B = A \cap C.$$
-Veamos que es una relación de equivalencia.
-\begin{itemize}
-\item Reflexiva: $\forall B \in \mathcal{P}(U)$, $A \cap B = A \cap B,$ es decir $B \mathcal{R}_A B.$
-\item Simétrica: si $B \mathcal{R}_A C,$ es $A\cap B = A \cap C,$ luego $A \cap C = A \cap B$ y $C \mathcal{R}_AB.$
-\item Transitiva: si $B \mathcal{R}_AC$ y $C \mathcal{R}_AD$ se tiene que $A\cap B = A \cap C = A \cap D,$ luego $B \mathcal{R}_A D.$
-\end{itemize}
+* En $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$. 
 
-\noindent 3) En el conjunto $\Z$ la relación definida por el menor estricto, $ xRy \; \Longleftrightarrow \; x < y,$ {\em verifica} la propiedad antisimétrica ya que {\em no existe ningún par de enteros $n,m$} tales que $nRm$ y $mRn.$ La relación es también transitiva, pero no es reflexiva ni simétrica.
+* En este caso la proyección natural es biyectiva $\pi\colon A\cong A/=$.
+
+* $A/\sim$ es unitario.
 {{% /example %}}
 
-{{% definition %}}
-{Clase de equivalencia} {Si $R$ es una relación de equivalencia en $A$, denominamos
-{\bf clase de equivalencia} de un elemento $x \in A$, que notaremos $R(x)$, o simplemente $\overline{x}$ (ó $[x]$) si no hay peligro de confusión y no es necesario precisar a $R$,  al conjunto de todos
-los elementos de $A$ relacionados con $x$, esto es,
-$$
-R(x) = \overline{x} = [x] :=  \\{ y \in A \; | \; xRy \\} \left( =\\{ y \in A \; | \; yRx \\}   \right).
-$$
-}
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
- Vamos a calcular las clases de equivalencia de las relaciones del ejemplo anterior.
-
-\noindent 1) En $\Z$ consideramos la relación de equivalencia $S$, $nSm$ si $n-m$ es par. Sea $n$ un número par. Entonces $m \in \Z$ está relacionado con $n$ si $m-n=2k$ es par, luego $m=n+2k$ es par. Luego todos los elementos de la clase de equivalencia de $n$ son pares. Recí procamente, si $m$ es par se tiene que $n-m$ es par. Por tanto, la clase de equivalencia de $n$, $S(n)$, es el conjunto de todos los números pares.
-
-Si $n$ es impar, es fácil ver que la clase de equivalencia $S(n)$ es el conjunto de todos los números impares.
-
-Notar que si $n_1$ y $n_2$ son ambos números pares (impares) entonces $S(n_1) = S(n_2).$ De aquí  se sigue que en este ejemplo sólo tenemos dos clases de equivalencia, por ejemplo $S(0) = \\{ \mbox{enteros pares}\\}$ y $S(1) = \\{\mbox{enteros impares} \\}.$ Nótese también que $S(0) \cap S(1) = \varnothing$ y que $\Z = S(0) \cup S(1).$ En el teorema siguiente se probará que estas propiedades se verifican en cualquier relación de equivalencia.
-
-\noindent 2) Calcularemos las clases de equivalencia de la relación, en $ \mathcal{P}(U)$, definida por: $\forall B, C \in \mathcal{P}(U)$, $B\mathcal{R}_A C$ si $A \cap B = A \cap C,$ siendo $A$ un conjunto fijo. Estudiaremos, primero, un caso particular que nos servirá para entender mejor el caso general. Supongamos que el conjunto $A$ que fijamos tiene sólo dos elementos, $A= \\{x,y\\}.$ Veamos que, en este caso, sólo existen 4 clases de equivalencia: $\mathcal{R}_A(\varnothing), \mathcal{R}_A(A), \mathcal{R}_A(\\{x\\})$ y $\mathcal{R}_A(\\{y\\}).$ En efecto: sea $B$ un conjunto cualquiera. Las posibilidades para $A \cap B$ son
-\begin{itemize}
-\item $A \cap B = \varnothing = A \cap \varnothing,$ de donde $B \mathcal{R}_A \varnothing$ y $B \in \mathcal{R}_A(\varnothing).$
-\item $A \cap B = A = A \cap A,$ de donde $B \mathcal{R}_A A$ y $B \in \mathcal{R}_A(A).$
-\item $A \cap B = \\{x\\} = A \cap \\{x\\},$ de donde $B \mathcal{R}_A \\{x\\}$ y $B \in \mathcal{R}_A(\\{x\\}).$
-\item $A \cap B = \\{y\\} = A \cap \\{y\\},$ de donde $B \mathcal{R}_A \\{y\\}$ y $B \in \mathcal{R}_A(\\{y\\}).$
-\end{itemize}
-
-Observemos que en este ejemplo también se tiene que las cuatro clases anteriores no tienen ningún elemento en común y que la unión de todas ellas es $\mathcal{P}(U).$
-
-Pasemos al caso general. Sea $A$ un conjunto cualquiera. Veamos que existen tantas clases de equivalencia como subconjuntos de $A$.
-
-2-1) Si $A_1, A_2 \subset A$ son distintos, entonces $\mathcal{R}_A(A_1) \not= \mathcal{R}_A(A_2).$ En efecto: $A_1$ y $A_2$ no están relacionados ya que $A \cap A_1 = A_1 \not= A_2 = A \cap A_2.$
-
-2-2) Todo conjunto $B$ pertenece a la clase de equivalencia de un subconjunto de $A.$ En efecto: basta tomar$A \cap B \subset A,$ entonces $A \cap (A \cap B)= (A \cap A) \cap B = A \cap B,$ luego $B \in \mathcal{R}_A(A \cap B).$
-{{% /example %}}
-
-Hemos visto en los ejemplos anteriores que las clases de equivalencia distintas no tienen ningún elemento
-en común, y que la unión de todas la clases es el conjunto total. Veamos que esta es una propiedad de cualquier relación de equivalencia, pero antes daremos una nueva noción.
 
 {{% definition %}}
-{Particiones de un conjunto}{Dado un conjunto $A\neq \varnothing$, una {\bf partición} de $A$ es un subconjunto $\mathcal{Q} \subset \mathcal{P}(A)$ (los elementos de $\mathcal{Q}$ son subconjuntos de $A$) que verifica las siguientes propiedades:
-\begin{enumerate}
-\item[(a)] Todos los elementos de $\mathcal{Q}$ son no vací os.
-\item[(b)] La unión de todos los elementos de $\mathcal{Q}$ es $A$.
-\item[(c)] Los elementos de $\mathcal{Q}$ son disjuntos entre sí.
-\end{enumerate}
-O expresado simbólicamente, 
-\begin{enumerate}
-\item[(a)] $\forall B\in \mathcal{Q}$ se tiene $B\neq \varnothing$ (ó equivalentemente: $\varnothing \notin \mathcal{Q}$).
-\item[(b)] $\bigcup \mathcal{Q} =A$ (ó escrito de otro modo: $\forall x\in A$, $\exists B\in \mathcal{Q}$ tal que $x\in B$)\footnote{Nótese que la inclusión $\bigcup \mathcal{Q} \subset A$ siempre se tiene puesto que $\mathcal{Q} \subset \mathcal{P}(A)$.}.
-\item[(c)] Si $B,C\in \mathcal{Q}$ y $B\neq C$, entonces $B\cap C=\varnothing$. 
-\end{enumerate}
-}
+Una **partición** de $A$ es un subconjunto $P \subset \mathcal{P}(A)$ tal que:
+
+* Los elementos de $P$ son subconjuntos no vacíos de $A$.
+* La unión de todos los elementos de $P$ es $A$.
+* Dos elementos distintos de $P$ son siempre disjuntos.
 {{% /definition %}}
 
-La idea que hay detrás de una partición de un conjunto $A$ (no vacío) es muy sencilla: se trata de una descomposición de $A$ en subconjuntos no vac\'ios y disjuntos.
+La siguiente es una partición de un conjunto $A$ formada por los subconjuntos $\\{E_1, E_2, E_3, E_4, E_5\\}$.
+
+![Partición](../images/partition.png)
+
+
+{{% proposition %}}
+Si $R$ una relación de equivalencia en un conjunto $A$, $aR b\Leftrightarrow R(a)=R(b)$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Leftarrow$ En este caso $aRb$ pues $a\in R(b)$.
+
+$\Rightarrow$ Probemos $\subset$. Si $c\in R(a)$ es porque $cR a$. Como $aRb$, por la transitividad tenemos que $cR b$, así que $a\in R(b)$. La inclusión $\supset$ también es cierta porque, por la simetría, los papeles de $a$ y $b$ son intercambiables en el argumento anterior.
+{{% /proof %}}
 
 {{% theorem %}}
- {Las clases de equivalencia como una partición}{Sea $A$ un conjunto y $R$ una relación de equivalencia en
-$A$. Entonces el conjunto de las clases de equivalencia de los elementos de $A$ es una partición de $A$.}
+Si $R$ es una relación de equivalencia en $A$, entonces $A/R$ es una partición de $A$. Es más, toda partición de $A$ proviene de una relación de equivalencia.
 {{% /theorem %}}
 
 {{% proof %}}
- La propiedad reflexiva implica que cada elemento $a\in A$ pertenece a su clase de equivalencia, por tanto cada clase de equivalencia es no vacía (propiedad (a)) y la unión de todas las clases de equivalencia es $A$ (propiedad (b)). Para
-probar (c) supongamos que tenemos dos clases de equivalencia $R(x)$
-y $R(y)$ de tal forma que existe $z \in R(x) \cap R(y)$. Tenemos que
-demostrar entonces que $R(x) = R(y)$, y lo haremos por doble
-inclusión. De hecho, sólo probaremos que $R(x) \subset R(y)$,
-porque la otra inclusión es absolutamente análoga.
+Las clases que forman $A/R$ no son vacías porque todas poseen algún representante. La unión de todas las clases es $A$, porque todo $a\in A$ pertenece a una clase, a la suya propia, $a\in R(a)$. Supongamos que dos clases $R(a)$ y $R(b)$ no fueran disjuntas. Entonces existe $c\in R(a)\cap R(b)$. Esto significa que $cRa$ y $cRb$. Por la simetría y la transitividad, $aRb$, luego por la proposición anterior $R(a)=R(b)$. 
 
-Tomamos entonces $a \in R(x)$. Como $z \in R(x)$, tenemos que $aRx$
-y $xRz$, por lo que $aRz$. De la misma forma, como $z \in R(y)$, se
-verifica que $zRy$. Así tenemos $aRy$, luego $a \in R(y)$.
-
-Observemos que para demostrar (c) hemos usado tanto la propiedad simétrica como la
-transitiva de $R$.
+Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalencia $a\sim_Pb$ si $a$ y $b$ pertenecen al mismo elemento de la partición. Es obvio que esta relación es simétrica. Es reflexiva porque, en virtud de la segunda propiedad de las particiones, todo elemento de $A$ pertenece a alguno de $P$. Veamos la transitividad. Si $a\sim_Pb\sim_Pc$ entonces existen $U,V\in P$ tales que $a,b\in U$ y $b,c\in V$. Como $b\in U\cap V$ la tercera propiedad de las particiones nos asegura que $U=V$, así que $a\sim_Pc$. Esta relación de equivalencia satisface $A/\sim_P=P$ por su propia definición, ya que el vacío no está en $P$.
 {{% /proof %}}
-
-{{% corollary %}}
- Sea $A$ un conjunto, $R$ una relación de equivalencia en
-$A,$ $x,y \in A.$ Se tiene que las clases de equivalencia de $x$ y de $y$ son iguales, $R(x) = R(y)$, si y sólo si $xRy.$
-{{% /corollary %}}
-
-{{% definition %}}
-{Conjunto cociente} {Dada una relación de equivalencia $R$ definida sobre un
-conjunto $A$, el conjunto cuyos elementos son las clases de
-equivalencia de $A$ por $R$ se denomina {\bf conjunto cociente} de $A$ por
-$R$. La notación usual es
-$$
-A/R = \\{ R(x) \; | \; x \in A \\}.
-$$
-El conjunto cociente va acompañado de la aplicación 
-$$\pi: X \to X/R,\quad \pi(x)=R(x)\  \mbox{ para todo }\ x\in X,$$
-que se denomina {\bf aplicación cociente}, o también {\bf proyección natural}, asociada a la relación R. 
-}
-{{% /definition %}}
-
-El conjunto cociente de $A$ por $R$ es por tanto una partición de $A$. En particular $A/R$ es un subconjunto de $\mathcal{P}(A)$. La proyección natural $\pi: X \to X/R$ es por construcción una aplicación sobreyectiva.
-
-
-{{% example name="Ejemplo" %}}
- Veamos los conjuntos cocientes de los ejemplos anteriores.
-
-a) Sea la relación de equivalencia $S$, en $\Z$, dada por $nSm$ si $n-m$ es par. Entonces $$\Z / S = \\{S(0), S(1) \\}$$
-
-En general, si fijamos un entero $p$ y consideramos
-$$
-xSy \; \Longleftrightarrow \; x-y \mbox{ es múltiplo de } p,
-$$
-se tiene que, para todo $x \in \Z$
-$$
-S(x) = \\{ y \in \Z \; | \; \mbox{ $x$ e $y$ dan el mismo resto al
-dividirlos entre $p$} \\},
-$$
-por lo que
-$$
-\Z/S = \\{ S(0),S(1),...,S(p-1) \\}.
-$$
-
-b) Consideremos la relación de equivalencia, en $\mathcal{P}(U)$, definida por: $$\forall B, C \in \mathcal{P}(U), \quad B\mathcal{R} C \quad \mbox{si} \quad A \cap B = A \cap C,$$ siendo $A$ un conjunto fijo. En este caso
-$$\mathcal{P}(U) / \mathcal{R} = \\{ \mathcal{R}(D) \; | \; D \in \mathcal{P}(A) \\}.$$
-
-{{% /example %}}
 
 
 ### Factorización canónica de una aplicación
 
-La proyección natural $\pi\colon X\to X/R$ verifica la siguiente "propiedad universal".
-
-{{% proposition %}}
- (Propiedad universal de la proyección canónica) Sean $X,Y$ conjuntos no vacíos, $R$ una relación de equivalencia en $X$ y $f\colon X\to Y$ una aplicación. Si se tiene 
-$$ a R b \Rightarrow f(a) =f(b),
+{{% theorem name="Propiedad universal de la proyección canónica" %}}
+Si $f\colon A\rightarrow B$ es una aplicación y $R$ es una relación de equivalencia en $A$ tal que
+$ a R b \Rightarrow f(a) =f(b)$, entonces
+existe una única aplicación $\bar{f}\colon A/R\to B$ tal que $f=\bar{f}\circ\pi$, 
 $$
-entonces \underline{existe una única aplicación} $F\colon X/R\to Y$ tal que $f=F\circ\pi$, es decir, tal que el siguiente diagrama es conmutativo:
-\[\xymatrix{X\ar[r]^-{f}\ar[d]_-\pi& Y.\\
-		X/R \ar@{-->}[ru]^-{F}}
-		\]   
-{{% /proposition %}}
-
-Hemos visto que toda relación de equivalencia $R$ en un conjunto $X$ da lugar a un nuevo conjunto, el conjunto cociente $X/R$, y a una aplicación, la proyección natural $\pi:X\longrightarrow X/R$. Ahora vamos a ver que cualquier aplicación entre dos conjuntos permite definir una relación de equivalencia especial en el conjunto de partida.
+f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\bar{f}}\longrightarrow B.
+$$
+{{% /theorem %}}
 
 {{% definition %}}
-{Relación asociada a una aplicación}
-{Dada una aplicación $f\colon X\to Y$, definimos la relación asociada a $f$, que notaremos $R_f$, de la siguiente forma: para $a, b\in X$
-$$a R_f b\Leftrightarrow f(a)=f(b).$$}
+Dada una aplicación $f\colon A\to B$, podemos definir relación de equivalencia $\sim_f$ en $A$ asociada a $f$ como $a\sim_fb$ si $f(a)=f(b)$.
 {{% /definition %}}
 
-Dejamos la demostración de la siguiente proposición como ejercicio.
+{{% exercise %}}
+Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe la partición asociada usando imágenes inversas. Demuestra también que si $R$ es una relación de equivalencia en $A$ y $\pi\colon A\rightarrow A/R$ es la proyección natural entonces $\sim\_\pi=R$.
+{{% /exercise %}}
 
-{{% proposition %}}
 
-La relación $R_f$ asociada a una aplicación es una relación de equivalencia.
-{{% /proposition %}}
-
-{{% watch %}}
- Nótese que toda relación de equivalencia $R$ en un conjunto $X$ es de hecho la relación de equivalencia asociada a una cierta aplicación, a saber, a la proyección natural $\pi: X \longrightarrow X/R$, pues sabemos que $xRy \Leftrightarrow R(x) = R(y) \Leftrightarrow \pi(x) = \pi(y)$, y por tanto $R = R_\pi$.
-{{% /watch %}}
-
+<!--
 
 {{% theorem %}}
-{Factorización canónica de una aplicación \label{factorcan}}
 {Toda aplicación $f\colon X\to Y$ se descompone de manera canónica como composición $f=i\circ {\bar f}\circ\pi$, 
 \[\xymatrix{X\ar[r]^-{f}\ar[d]_-\pi& Y\\
 		X/R_f\ar[r]^-{\bar f}& \Imag(f)\ar[u]_-i}\]
