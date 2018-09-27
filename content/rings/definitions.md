@@ -532,35 +532,64 @@ Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[
 {{% /definition %}}
 
 
-{{% watch %}}
-La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede expresar (aunque no de manera única) como $a_ns^n+\cdots+a_1s+a_0$ para ciertos $a_i\in R$. Por tanto, si $U\subset S$ es un subanillo tal qu $R\subset U$ y $s\in U$ entonces $R[s]\subset U$. En particular $\mathbb R[i]=\mathbb C$ y $\mathbb Z[i]\subset\mathbb C$ son los enteros de Gauss. Da una definición general del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. 
-{{% /watch %}}
+{{% remark %}}
+La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede expresar (aunque no de manera única) como $a_ns^n+\cdots+a_1s+a_0$ para ciertos $a_i\in R$. Por tanto, si $U\subset S$ es un subanillo tal qu $R\subset U$ y $s\in U$ entonces $R[s]\subset U$. En particular $\mathbb R[i]=\mathbb C$ y $\mathbb Z[i]\subset\mathbb C$ son los enteros de Gauss. 
+{{% /remark %}}
 
+{{% exercise %}}
+Da una definición general del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. 
+{{% /exercise %}}
 
 También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Veamos cómo añadir elementos que satisfagan ecuaciones.
 
 Dado un polinomio $p(x)=a\_nx^n+\cdots + a_1x+ a\_0\in R[x]$, consideramos el anillo $S=R[x]/(p(x))$. Por abuso de notación, la clase de una constante $a\in R$ en $S$ se denotará igual, $a\in S$, no $\bar a$. En este nuevo anillo $\bar x\in S$ es una raíz de $p(x)$ puesto que
 
-$$ a_n\bar x^n+\cdots + a_1 \bar x+ a_0=\overline{p(x)}=\bar 0\in S.$$
+$$ p(\bar{x})=a_n\bar x^n+\cdots + a_1 \bar x+ a_0=\overline{p(x)}=\bar 0\in S.$$
 
-Este anillo posee una descripción similar a la de los números complejos.
+Este anillo posee en ciertos casos una descripción similar a la de los números complejos.
 
-{{% proposition %}}
-Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
-{{% /proposition %}}
+Para demostrarlo usaremos el siguiente resultado que asegura que en $R[x]$ siempre podemos dividir por un polinomio mónico del modo habitual.
+
+{{% lemma %}}
+Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ 
+y otro polinomio cualquiera $f(x)\in R[x]$, existen dos únicos polinomios  
+$c(x), r(x)\in R[x]$ tales que $r(x)$ tiene grado $<n$ y $f=c\cdot p+r$. 
+{{% /lemma %}}
 
 
 {{% proof %}}
-En $R[x]/(p)$, $\bar x^n=-a\_{n-1}\bar{x}^{n-1}-\cdots- a\_1\bar{x}-a\_0$, luego
-$\bar x^{n+m}=-a\_{n-1}\bar{x}^{n+m-1}-\cdots- a\_1\bar{x}^{m+1}-a\_0\bar{x}^m$ para todo $m\geq 0$. Esto nos permite reducir el grado de cualquier representante de grado $\geq n$, llegando inductivamente a uno de grado $<n$. Hemos probado la existencia.
+Sea $f\_0=f$. Veamos primero que si grado $f_0\geq n$ entonces existen polinomios $c\_1,f\_1\in R[x]$ tales que grado $f\_1<$ grado $f\_0$ y $f\_0=c\_1\cdot p + f\_1$. En efecto, si $f\_0=b\_mx^m+\cdots$ tiene grado  $m\geq n$ podemos tomar $c_1(x)=b\_mx^{m-n}$, que tiene sentido pues estamos suponiendo que $m\geq n$. Si el grado de $f\_1$ sigue siendo $\geq n$,  podemos aplicar el mismo razonamiento a $f\_1$ obteniendo así polinomios $c\_2,f\_2\in R[x]$ tales que grado $f\_2<$ grado $f\_1$ y $f\_1=c\_2\cdot p + f\_2$. Podemos continuar
+$$
+\begin{array}{rcl}
+f\_0&=&c\_1\cdot p + f\_1,\cr
+&\vdots&\cr
+f\_{i-1}&=&c\_i\cdot p + f\_i,
+\end{array}
+$$
+hasta que grado $f_i<n$. De este modo
+$$f=(c\_1+\cdots+c\_i)\cdot p+f\_i$$
+y podemos tomar $c=c\_1+\cdots+c\_i$ y $r=f\_i$. Hemos probado la existencia.
 
-Veamos ahora la unicidad. Supongamos que $f,g\in R[x]$ tienen grado $<n$ y que ambos representan la misma clase en el cociente, es decir $f-g\in (p)$. Como el grado de $f-g$ es $<n$, para probar que $f=g$ basta comprobar que cualquier polinomio no nulo de $(p)$ tiene grado $\geq n$. Esto es sencillo ya que los elementos no nulos de $(p)$ son de la forma $q(x)p(x)$ con $q\in R[x]$ no nulo. Así,  $q(x)=c\_mx^m+\cdots$ con $c\_m\neq 0$ en $R$ y por tanto $q(x)p(x)=c\_mx^{m+1}+\cdots$, que no es nulo.
+Veamos la unicidad de $r$. Si $f=c\cdot p+r=c'\cdot p+r'$ en las condiciones del enunciado, tenemos entonces que $r-r'=(c'-c)\cdot p$. Por un lado $r-r'$ tiene grado $<n$. Supongamos por reducción al absurdo que $c'\neq c$. Entonces $c'-c=e\_kx^k+\cdots$ para cierto $k\geq 0$ y $e\_k\in R$ no nulo. Esto implica que $(c'-c)\cdot p=e\_kx^{k+n}+\cdots$ y por tanto tendría grado $\geq n$. Hemos llegado a una contradicción, así que $c=c'$, luego también $r=r'$.
 {{% /proof %}}
 
+{{% corollary %}}
+Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
+{{% /corollary %}}
 
-{{% watch %}}
+
+{{% proof %}}
+En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $f-r=c\cdot p$, es decir, $f=c\dot p+r$. Este resultado se deduce por tanto del lema anterior.
+{{% /proof %}}
+
+{{% remark %}}
+Si $p(x)\in R[x]$ es un polinomio mónico no constante entonces el la composición 
+$$R\stackrel{i}\hookrightarrow R[x]\stackrel{\pi}\twoheadrightarrow \frac{R[x]}{(p)}$$
+de la inclusión del anillo de coeficientes seguida de la proyección natural es inyectiva. Por eso, en adelante, la clase de $r\in R$ en $R[x]/(p)$ se denotará con frecuencia del mismo modo, es decir, simplemente $r\in R[x]/(p)$, como hemos hecho arriba, y no $\bar{r}$.
+{{% /remark %}}
+
+
 Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
-{{% /watch %}}
 
 
 {{% example name="$\mathbb Z[x]/(x^3+3x+1)$" %}}
@@ -569,7 +598,7 @@ Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x
 
 
 {{% example name="$(\mathbb Z/(4))[x]/(2x^2-1)$" %}}
-En este anillo la aplicación del enunciado de la proposición anterior no es inyectiva ni sobreyectiva. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque el ideal $(2x^2-1)\subset (\mathbb Z/(4))[x]$ no contiene polinomios mónicos de grado $2$.
+En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque el ideal $(2x^2-1)\subset (\mathbb Z/(4))[x]$ no contiene polinomios mónicos de grado $2$.
 {{% /example %}}
 
 
@@ -580,9 +609,9 @@ Dado un anillo $R$, un **divisor de cero** es un elemento $a\in R$ no nulo, $a\n
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $2\cdot 3=6=0$ pero $2\neq 0\neq 3$.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -607,9 +636,9 @@ Dado un dominio $R$, su **cuerpo de fracciones** $Q( R )$ es el cociente del con
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -647,9 +676,9 @@ Dado un cuerpo $k$, el **cuerpo de funciones racionales** en una variable se def
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% exercise %}}
 Da dos definiciones del cuerpo de funciones racionales en varias variables $k(x_1,\dots,x_n)$, una inductiva y otra directa, que sean aparentemente distintas pero isomorfas.
-{{% /watch %}}
+{{% /exercise %}}
 
 
 {{% definition %}}
@@ -657,9 +686,9 @@ Los ideales distintos del total se denominan **propios**. Un ideal $I\subsetneq 
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$. En general $(0)\subset R$ es primo si y solo si $R$ es un dominio.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -683,9 +712,9 @@ Un ideal $I\subsetneq R$ es **maximal** si los únicos ideales que lo contienen 
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$. Todo anillo no trivial posee al menos un ideal maximal. ¿Cuál es en el caso de los cuerpos?
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -708,9 +737,9 @@ Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
-{{% /watch %}}
+{{% /remark %}}
 
 
 
