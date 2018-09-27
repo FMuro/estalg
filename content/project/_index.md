@@ -36,7 +36,7 @@ Recomendamos repasar conceptos vistos en Álgebra Básica que se corresponden co
 
 * Capítulo 11, secciones de la 1 a la 4.
 
-* Capítulo 12, secciones 1 y 4.
+* Capítulo 12, secciones 1, 3 y 4.
 
 ### ¿Cómo vamos a evaluar?
 
