@@ -401,7 +401,7 @@ Dado un anillo $R$ y un ideal $I\subset R$, el **anillo cociente** $R/I$ es el c
 
 
 {{% remark %}}
- Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente $$a+I=\bar a.$$ La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n$ es primo.
+ Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente $$a+I=\bar a=[a].$$ La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n$ es primo.
 {{% /remark %}}
 
 
@@ -454,11 +454,11 @@ Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 
 Por un lado podemos factorizar $f\\colon R\\rightarrow S$ de manera única como $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$ donde $g(a)=f(a)$. En particular $$\ker g = \ker f.$$
 
-Por otro lado podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(a+\ker f)=g(a)=f(a)$. Veamos que $\bar f$ es un isomorfismo.
+Por otro lado podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(\bar{a})=g(a)=f(a)$. Veamos que $\bar f$ es un isomorfismo.
 
-Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es inyectiva. Sea $a+\ker f\in R/\ker f$ tal que $\bar f(a+\ker f)=0$. Como $\bar f(a+\ker f)=f(a)$, deducimos que $a\in \ker f$, por lo que $a+\ker f=0+\ker f$.
+Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es inyectiva. Sea $\bar{a}\in R/\ker f$ tal que $\bar f(\bar{a})=0$. Como $\bar f(\bar{a})=f(a)$, deducimos que $a\in \ker f$, por lo que $\bar{a}=\bar{0}$.
 
-Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es sobreyectiva. Dado $b\in\operatorname{im} f$ existe $a\in R$ tal que $f(a)=b$. Por tanto $\bar f(a+\ker f)=f(a)=b$.  
+Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es sobreyectiva. Dado $b\in\operatorname{im} f$ existe $a\in R$ tal que $f(a)=b$. Por tanto $\bar f(\bar{a})=f(a)=b$.  
 {{% /proof %}}
 
 
