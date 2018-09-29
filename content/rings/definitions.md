@@ -288,9 +288,11 @@ Dado un anillo $R$, un **ideal** $I\subset R$ es un subconjunto tal que:
 
 {{% /definition %}}
 
+En $\mathbb Z$ los números pares forman un ideal.
+
 
 {{% remark %}}
-Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. 
+Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. Además, si $R$ no es el anillo trivial, el ideal total es distinto del trivial.
 {{% /remark %}}
 
 {{% proposition %}}
@@ -311,6 +313,8 @@ El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;
  
 {{% /proof %}}
 
+Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$. También podríamos reemplazar $R[x]$ por otro de los anillos de funciones antes vistos.
+
 
 {{% remark %}}
  Como ocurre con los grupos, un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
@@ -323,6 +327,8 @@ Definimos ahora el ideal generado por un conjunto de elementos de un anillo, que
 El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo:  $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}.$$ Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. 
 {{% /definition %}}
 
+En $\mathbb Z$, el ideal de los números pares es $(2)$.
+
 
 {{% exercise %}}
 Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_n\in (a_1,\dots, a_n)$. Es más, demuestra que si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$. Intenta dar una definición razonable de ideal generado por un conjunto infinito de elementos que satisfaga las propiedades análogas al caso finito. 
@@ -330,7 +336,7 @@ Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_
 
 
 {{% proposition %}}
-Todos los ideales de $\mathbb Z$ son principales.
+Todos los ideales de $\mathbb Z$ son principales. Es más, todo ideal no nulo de $\mathbb Z$ está generado por cualquiera de sus elementos de valor absoluto mínimo.
 {{% /proposition %}}
 
 
@@ -343,11 +349,11 @@ Por un lado $(a)\subset I$ pues $a\in I$.
 Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$, $$b=ca+r.$$ El resto satisface $|r|<|a|$. Además $r=b-ca\in I$, por tanto $r=0$ y $b=ca\in (a)$.  
 {{% /proof %}}
 
- La demostración de la proposición anterior solo usa la noción de división euclídea, por tanto es válida no solo para $\mathbb Z$ sino para cualquier *dominio euclídeo* (noción conocida que repasaremos más adelante). La siguiente proposición destaca otro caso particular de interés.
+La demostración de la proposición anterior solo usa la noción de división euclídea, por tanto es válida no solo para $\mathbb Z$ sino para cualquier *dominio euclídeo* (noción conocida que repasaremos más adelante). La siguiente proposición destaca otro caso particular de interés.
 
 
 {{% proposition %}}
-Dado un cuerpo $k$, todos los ideales de $k[x]$ son principales.
+Dado un cuerpo $k$, todos los ideales de $k[x]$ son principales. Es más, todo ideal no nulo de $k[x]$ está generado por cualquiera de sus elementos de grado mínimo.
 {{% /proposition %}}
 
 
@@ -375,9 +381,9 @@ Un anillo es un cuerpo $\Leftrightarrow$ tiene solo dos ideales (necesariamente 
 
 {{% proof %}}
 
-$\Rightarrow$ Sea $k$ un cuerpo. Si $I\subset k$ es un ideal no trivial entonces existe un elemento $a\in I\subset k$ no nulo. Como $k$ es un cuerpo este elemento ha de ser una unidad, así que $I=k$.
+$\Rightarrow$ Sea $k$ un cuerpo. Los cuerpos, en tanto que anillos no triviales, tienen al menos dos ideales: el trivial y el total. Si $I\subset k$ es un ideal no trivial entonces existe un elemento $a\in I\subset k$ no nulo. Como $k$ es un cuerpo este elemento ha de ser una unidad, así que $I=k$.
 
-$\Leftarrow$ Sea $R$ un anillo cuyos dos únicos ideales son $\\{0\\}$ y $R$. Sea $a\in R$ un elemento no trivial. Como $a\in (a)$, este ideal no puede ser el trivial, así que ha de ser el total $(a)=R$. Al ser $1\in R=(a)$ ha de existir un elemento $r\in R$ tal que $ra=1$, así que $a$ es una unidad.  
+$\Leftarrow$ Sea $R$ un anillo cuyos dos únicos ideales son $\\{0\\}$ y $R$. En particular $R$ no es trivial. Sea $a\in R$ un elemento no trivial. Como $a\in (a)$, este ideal no puede ser el trivial, así que ha de ser el total $(a)=R$. Al ser $1\in R=(a)$ ha de existir un elemento $r\in R$ tal que $ra=1$, así que $a$ es una unidad.  
 {{% /proof %}}
 
 
@@ -446,7 +452,8 @@ Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 
 
 {{% theorem name="Primer Teorema de Isomorfía"%}}
- Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ Además $\bar f$ es un isomorfismo.
+ Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
+ Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
 
 
@@ -454,9 +461,19 @@ Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 
 Por un lado podemos factorizar $f\\colon R\\rightarrow S$ de manera única como $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$ donde $g(a)=f(a)$. En particular $$\ker g = \ker f.$$
 
-Por otro lado podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(\bar{a})=g(a)=f(a)$. Veamos que $\bar f$ es un isomorfismo.
+Por otro lado podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(\bar{a})=g(a)=f(a)$. 
 
-Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es inyectiva. Sea $\bar{a}\in R/\ker f$ tal que $\bar f(\bar{a})=0$. Como $\bar f(\bar{a})=f(a)$, deducimos que $a\in \ker f$, por lo que $\bar{a}=\bar{0}$.
+Por tanto $f=i\circ g= i\circ(\overline{f}\circ i)$, como queríamos. La unicidad de $\bar f$ se deduce de esta fórmula, ya que fuerza su definición:
+$$
+\begin{array}{rcl}
+f(a)&=&(i\circ\bar f\circ p)(a)\cr
+&=&i(\bar{f}(p(a)))\cr
+&=&i(\bar{f}(\bar{a}))\cr
+\bar{f}(\bar{a}).
+\end{array}
+$$
+
+Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es un isomorfismo. Comenzamos probando que es inyectivo. Sea $\bar{a}\in R/\ker f$ tal que $\bar f(\bar{a})=0$. Como $\bar f(\bar{a})=f(a)$, deducimos que $a\in \ker f$, por lo que $\bar{a}=\bar{0}$.
 
 Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es sobreyectiva. Dado $b\in\operatorname{im} f$ existe $a\in R$ tal que $f(a)=b$. Por tanto $\bar f(\bar{a})=f(a)=b$.  
 {{% /proof %}}
@@ -468,8 +485,7 @@ $\mathbb R[x]/(x^2+1)\cong\mathbb C$.
 
 
 {{% proof %}}
-
-Consideremos el homomorfismo $$f\colon \mathbb R[x]\rightarrow\mathbb C$$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $$f(bx+a)=a+ib,$$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. La inclusión $\supset$ es cierta porque $f(x^2+1)=i^2+1=0$. Por otro lado, dado $p(x)\in\ker f$ realizamos la división euclídea por $x^2+1$ en $\mathbb R[x]$, $$p(x)=c(x)(x^2+1)+r(x).$$ Aquí $r(x)=a_1x+a_0$ pues ha de tener grado ${<} 2$. Como $p(x)\in\ker f$, $$0=p(i)=c(i)(i^2+1)+r(i)=a\_1i+a\_0.$$ La única posibilidad de que esto ocurra es que $a_1=a_0=0$, luego $p(x)\in (x^2+1)$.  
+Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. Como $\mathbb R$ es un cuerpo, es suficiente comprobar que $x^2+1\in\ker f$ pero $\ker f$ no posee ningún polinomio no trivial de grado $<2$. Claramente $f(x^2+1)=i^2+1=0$. Si $bx+a\in\mathbb{R}[x]$ es un polinomio no trivial entonces $f(bx+a)=a+ib$ es un número complejo no trivial, con lo que queda demostrado.
 {{% /proof %}}
 
 
