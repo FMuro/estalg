@@ -119,7 +119,7 @@ que pertenecen a ambos conjuntos, $A \cap B = \\{ x  |  x \in A  \wedge  x  \in 
 ![Intersección](../images/intersection.png)
 
 {{% remark %}}
-Si $C\subset A$ y $C\subset B$ entonces $C\subset A\cap B$
+Si $C\subset A$ y $C\subset B$ entonces $C\subset A\cap B$.
 {{% /remark %}}
 
 {{% theorem %}}
@@ -663,10 +663,10 @@ $$
 {{% /remark %}}
 
 {{% definition %}}
-Sea $f \colon  A \longrightarrow B$ una aplicación. 
+Sea $f \colon  A \rightarrow B$ una aplicación. 
 
 * La **imagen directa** de un subconjunto del dominio $U\subset A$ 
-es el subconjunto del codominio $f(U)=\\{b\in B\:|\;\exists a\in U|f(a)=b\\}\subset B$. 
+es el subconjunto del codominio $f(U)=\\{b\in B\;|\;\exists a\in U|f(a)=b\\}\subset B$. 
 * La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}$.
 
 La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
@@ -675,7 +675,7 @@ La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
 La imagen inversa recible otros nombres como **contraimagen**, **preimagen** o **anti-imagen**. La imagen directa también se denomina simplemente **imagen**.
 
 {{% watch %}}
-Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen de un elemento de $A$ con la imagen directa de un subconjunto de $A$, aunque obviamente son conceptos relacionados. Observa que $f(\\{a\\})=\\{ f(a) \\}$.
+Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen de un elemento de $A$ con la imagen directa de un subconjunto de $A$, aunque obviamente son conceptos relacionados, $f(\\{a\\})=\\{ f(a) \\}$.
 {{% /watch %}}
 
 
@@ -693,7 +693,7 @@ La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la n
 
 * Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
 
-* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\overline{f}\colon  A \to \Imag(f)$
+* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\overline{f}\colon  A \to \Imag(f)$ como $\overline{f}(a)=f(a)$. ¿En qué se diferencia de la anterior?
 
 * Las imágenes directa e inversa preservan inclusiones, es decir, 
 dada una aplicación $f\colon A\rightarrow B$: 
