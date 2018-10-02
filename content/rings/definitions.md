@@ -525,9 +525,9 @@ En el segundo caso:
 {{% /proof %}}
 
 
-{{% proposition %}}
+{{% theorem name="de correspondencia" %}}
 Dado un anillo $R$ y un ideal $I$, si $p\colon R\twoheadrightarrow R/I$ denota la proyección natural tenemos la siguiente biyección $$\begin{array}{rcl}\left\\{\text{ideales de }R\text{ que contienen a }I\right\\}&\longleftrightarrow& \left\\{\text{ideales de }R/I\right\\},\cr I'&\mapsto&p(I'),\cr p^{-1}(J)&\leftarrow&J.\end{array}$$
-{{% /proposition %}}
+{{% /theorem %}}
 
 
 {{% proof %}}
@@ -544,16 +544,16 @@ La proyección natural es un homomorfismo sobreyectivo con núcleo $I$, por tant
 La siguiente definición nos da una receta para añadir nuevos elementos a un anillo contenido en otro mayor.
 
 {{% definition %}}
-Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen del homomorfismo $g\colon R[x]\rightarrow S$ definido como la inclusión $i\colon R\rightarrow S$ sobre $R$ tal que $g(x)=s$, $R[s]=\operatorname{im} g$.
+Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen del homomorfismo $g\colon R[x]\rightarrow S$ definido como la inclusión $i\colon R\hookrightarrow S$ sobre $R$ tal que $g(x)=s$, $R[s]=\operatorname{im} g$.
 {{% /definition %}}
 
 
 {{% remark %}}
-La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede expresar (aunque no de manera única) como $a_ns^n+\cdots+a_1s+a_0$ para ciertos $a_i\in R$. Por tanto, si $U\subset S$ es un subanillo tal qu $R\subset U$ y $s\in U$ entonces $R[s]\subset U$. En particular $\mathbb R[i]=\mathbb C$ y $\mathbb Z[i]\subset\mathbb C$ son los enteros de Gauss. 
+La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede expresar (aunque no de manera única) como $a_ns^n+\cdots+a_1s+a_0$ para ciertos $a_i\in R$. Por tanto, si $U\subset S$ es un subanillo tal que $R\subset U$ y $s\in U$ entonces $R[s]\subset U$. En particular $\mathbb R[i]=\mathbb C$ y $\mathbb Z[i]\subset\mathbb C$ son los enteros de Gauss. 
 {{% /remark %}}
 
 {{% exercise %}}
-Da una definición general del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. 
+Da una definición directa del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. 
 {{% /exercise %}}
 
 También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Veamos cómo añadir elementos que satisfagan ecuaciones.
@@ -601,9 +601,10 @@ En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y
 {{% remark %}}
 Si $p(x)\in R[x]$ es un polinomio mónico no constante entonces el la composición 
 $$R\stackrel{i}\hookrightarrow R[x]\stackrel{\pi}\twoheadrightarrow \frac{R[x]}{(p)}$$
-de la inclusión del anillo de coeficientes seguida de la proyección natural es inyectiva. Por eso, en adelante, la clase de $r\in R$ en $R[x]/(p)$ se denotará con frecuencia del mismo modo, es decir, simplemente $r\in R[x]/(p)$, como hemos hecho arriba, y no $\bar{r}$.
+de la inclusión del anillo de coeficientes seguida de la proyección natural es inyectiva. Por eso, en adelante, la clase de $r\in R$ en $R[x]/(p)$ se denotará con frecuencia del mismo modo, es decir, simplemente $r\in R[x]/(p)$, como hemos hecho arriba, y no $\bar{r}$. Así, podemos ver $R$ como un el subanillo $R\subset R[x]/(p)$ formado por las clases con representante constante. Esto refuerza la idea de que este cociente *añade* elementos a $R$.
 {{% /remark %}}
 
+En adelante, cuando hablemos de añadirle a un anillo $R$ una raíz $\alpha$ de un polinomio $p(x)\in R[x]$ de manera abstracta nos estaremos refiriendo al cociente $R[x]/(p)$ y a $\alpha=\bar{x}$, que como hemos visto es una raíz de $p(x)$ en este anillo.
 
 Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
 
@@ -614,7 +615,7 @@ Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x
 
 
 {{% example name="$(\mathbb Z/(4))[x]/(2x^2-1)$" %}}
-En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque el ideal $(2x^2-1)\subset (\mathbb Z/(4))[x]$ no contiene polinomios mónicos de grado $2$.
+En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset (\mathbb Z/(4))[x]$ tendría polinomios mónicos de grado $2$, pero no tiene.
 {{% /example %}}
 
 
@@ -652,9 +653,9 @@ Dado un dominio $R$, su **cuerpo de fracciones** $Q( R )$ es el cociente del con
 {{% /definition %}}
 
 
-{{% remark %}}
+
 El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.
-{{% /remark %}}
+
 
 
 {{% proposition %}}
@@ -752,10 +753,7 @@ Todo ideal maximal es primo.
 Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio donde todos los ideales son principales.
 {{% /definition %}}
 
-
-{{% remark %}}
 Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
-{{% /remark %}}
 
 
 
