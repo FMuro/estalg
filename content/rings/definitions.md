@@ -616,6 +616,7 @@ Veamos la unicidad de $r$. Si $f=c\cdot p+r=c'\cdot p+r'$ en las condiciones del
 Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
 {{% /corollary %}}
 
+Por tanto, en las condiciones anteriores todo elemento de $R[x]/(p)$ se puede escribir como $b\_{n-1}\bar{x}^{n-1}+\cdots+ b\_1\bar{x}+b\_0$, $b\_0,\dots, b\_{n-1}\in R$, de manera única.
 
 {{% proof %}}
 En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $f-r=c\cdot p$, es decir, $f=c\dot p+r$. Este resultado se deduce por tanto del lema anterior.
@@ -627,7 +628,7 @@ $$R\stackrel{i}\hookrightarrow R[x]\stackrel{\pi}\twoheadrightarrow \frac{R[x]}{
 de la inclusión del anillo de coeficientes seguida de la proyección natural es inyectiva. Por eso, en adelante, la clase de $r\in R$ en $R[x]/(p)$ se denotará con frecuencia del mismo modo, es decir, simplemente $r\in R[x]/(p)$, como hemos hecho arriba, y no $\bar{r}$. Así, podemos ver $R$ como un el subanillo $R\subset R[x]/(p)$ formado por las clases con representante constante. Esto refuerza la idea de que este cociente *añade* elementos a $R$.
 {{% /remark %}}
 
-En adelante, cuando hablemos de añadirle a un anillo $R$ una raíz $\alpha$ de un polinomio $p(x)\in R[x]$ de manera abstracta nos estaremos refiriendo al cociente $R[x]/(p)$ y a $\alpha=\bar{x}$, que como hemos visto es una raíz de $p(x)$ en este anillo.
+En adelante, cuando hablemos de añadirle a un anillo $R$ una raíz $\alpha$ de un polinomio $p(x)\in R[x]$ de manera abstracta nos estaremos refiriendo al cociente $R[x]/(p)$ y a $\alpha=\bar{x}$, que como hemos visto es una raíz de $p(x)$ en este anillo. Si $p$ es mónico de grado $n$, todo elemento de $R[x]/(p)$ se escribe de manera única como $b\_{n-1}\alpha^{n-1}+\cdots+ b\_1\alpha+b\_0$, con $b\_0,\dots, b\_{n-1}\in R$.
 
 Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
 
