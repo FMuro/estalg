@@ -110,6 +110,16 @@ $\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.
 Dado un conjunto $X$, el conjunto $\mathcal P(X)=\\{A|A \subset X\\}$ formado por los subconjuntos de $X$ es un anillo, denominado **anillo de Boole**, donde la suma es la *diferencia simétrica*, $$A+B=(A\cup B)\setminus (A\cap B)$$ ![symmetric_difference](../../images/symmetric_difference.png) y el producto es la intersección, $$AB=A\cap B.$$ ¿Cuál es el $0$? ¿Y el $1$? ¿Y $-A$? ¿Y $A^2$? Dibuja $A+B+C$ para tres conjuntos en posición general.
 {{% /example %}}
 
+{{% example name="Anillo producto" %}}
+Dados dos anillos $R$ y $S$, el producto cartesiano $R\times S$ es un anillo con las operaciones siguientes:
+$$
+\begin{array}{rcl}
+(r,s)+(r',s')&=&(r+r',s+s'),\cr
+(r,s)(r',s')&=&(rr',ss').
+\end{array}
+$$
+El cero es $(0,0)$ y el uno es $(1,1)$.
+{{% /example %}}
 
 {{% definition %}}
 Un subconjunto $S\subset R$ de un anillo $R$ es un **subanillo** si:
@@ -139,6 +149,9 @@ Si $R=\mathbb R$ o $\mathbb C$, podemos considerar el subanillo de **series conv
 Si $R$ es un anillo y $X$ es un conjunto, podemos considerar el anillo $R^X$ cuyos elementos son las aplicaciones $X\rightarrow R$. La suma y el producto de aplicaciones $f,g\colon X\rightarrow R$ se define punto a punto, $x\in X$, $$\begin{array}{rcl}(f+g)(x)&=&f(x)+g(x),\cr (f\cdot g)(x)&=&f(x)g(x).\end{array}$$ Si $R=\mathbb R$ o $\mathbb C$ y $X$ es un espacio topológico, tenemos el subanillo $\mathcal C(X)\subset R^X$ de funciones continuas.
 {{% /example %}}
 
+{{% exercise %}}
+Dados dos anillos $R$ y $S$, ¿es $R\times\\{0\\}\subset R\times S$ un subanillo? ¿Y $\\{0\\}\times S\subset R\times S$?
+{{% /exercise %}}
 
 {{% definition %}}
 Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$, denominado **inverso** de $u$, de modo que $uu^{-1}=1$. Un **cuerpo** es un anillo no trivial donde todos los elementos no nulos son unidades.
@@ -172,6 +185,10 @@ Los homomorfismos satisfacen $f(-a)=-f(a)$. Es más, si $u$ es una unidad entonc
 
 {{% example name="La inclusión" %}}
 Si $R$ es un anillo y $S\subset R$ es un subanillo, la **inclusión** $i\colon S\hookrightarrow R$, $i(a)=a$, es un homomorfismo. ¿Qué diferencia a la inclusión de la identidad?
+{{% /example %}}
+
+{{% example name="Las proyecciones" %}}
+Dados dos anillos $R$ y $S$, la proyección sobre la primera coordenada $p_1\colon R\times S\rightarrow R$, $p_1(r,s)=r$, es un homomorfismo. También lo es la proyección sobre la segunda coordenada $p_2\colon R\times S\rightarrow S$, $p_2(r,s)=s$.
 {{% /example %}}
 
 
@@ -320,6 +337,9 @@ Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal p
  Como ocurre con los grupos, un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
 {{% /remark %}}
 
+{{% exercise %}}
+Dados dos anillos $R$ y $S$, ¿es $R\times\\{0\\}\subset R\times S$ un ideal? ¿Y $\\{0\\}\times S\subset R\times S$?
+{{% /exercise %}}
 
 Definimos ahora el ideal generado por un conjunto de elementos de un anillo, que es el menor ideal que los contiene.
 
