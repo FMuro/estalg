@@ -616,11 +616,12 @@ Veamos la unicidad de $r$. Si $f=c\cdot p+r=c'\cdot p+r'$ en las condiciones del
 Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
 {{% /corollary %}}
 
-Por tanto, en las condiciones anteriores todo elemento de $R[x]/(p)$ se puede escribir como $b\_{n-1}\bar{x}^{n-1}+\cdots+ b\_1\bar{x}+b\_0$, con $b\_0,\dots, b\_{n-1}\in R$, de manera única.
 
 {{% proof %}}
 En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $f-r=c\cdot p$, es decir, $f=c\dot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
+
+Por tanto, en las condiciones anteriores todo elemento de $R[x]/(p)$ se puede escribir como $b\_{n-1}\bar{x}^{n-1}+\cdots+ b\_1\bar{x}+b\_0$, con $b\_0,\dots, b\_{n-1}\in R$, de manera única.
 
 {{% remark %}}
 Si $p(x)\in R[x]$ es un polinomio mónico no constante entonces el la composición 
