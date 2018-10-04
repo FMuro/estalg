@@ -488,7 +488,7 @@ se verifica que $h\circ (g\circ f)=(h\circ g)\circ f$ (**asociativa**).
 {{% /proposition %}}
 
 {{% proof %}}
-Las aplicaciones cuya igualdad se plantea tienen el mismo dominio y condominio, por tanto bastará comprobar que las imágenes de los elementos del dominio coinciden.
+Las aplicaciones cuya igualdad se plantea tienen el mismo dominio y codominio, por tanto bastará comprobar que las imágenes de los elementos del dominio coinciden.
 
 Dado $a\in A$, por un lado
 $$
@@ -513,7 +513,10 @@ $$
 
 {{% definition %}}
 Una aplicación $f \colon  A \rightarrow B$ es **invertible** si existe $g \colon B \rightarrow A$ tal que
-$g \circ f = 1_A$ y $f \circ g = 1_B$.
+$g \circ f = 1_A$ y $f \circ g = 1_B$,
+$$
+{}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}^f\_g B\circlearrowleft\_{1\_B}
+$$
 {{% /definition %}}
 
 {{% proposition %}}
@@ -521,7 +524,7 @@ La aplicación $g$ de la definición anterior, si existe, es única.
 {{% /proposition %}}
 
 {{% proof %}}
-Si hubiera otra $g' \colon B \rightarrow A$ entonces 
+Si hubiera otra $g' \colon B \rightarrow A$ tal que $g' \circ f = 1_A$ y $f \circ g' = 1_B$, entonces 
 $$
 \begin{array}{rcl}
 g&=&g\circ 1_B\cr
@@ -534,7 +537,10 @@ $$
 
 {{% definition %}}
 Si $f \colon  A \rightarrow B$ es invertible su aplicación **inversa**  $f^{-1} \colon B \rightarrow A$ es la única que satisface
-$f^{-1} \circ f = 1_A$ y $f \circ f^{-1} = 1_B$.
+$f^{-1} \circ f = 1_A$ y $f \circ f^{-1} = 1_B$,
+$$
+{}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}^f\_{f^{-1}} B\circlearrowleft\_{1\_B}
+$$
 {{% /definition %}}
 
 
@@ -627,15 +633,14 @@ Una aplicación $f\colon A \rightarrow B$ es invertible $\Leftrightarrow$ es biy
 {{% proof %}}
 Supongamos que $f$ es invertible. Veamos que es sobreyectiva. Dado $b\in B$ tenemos que $f(f^{-1}(b))=(f\circ f^{-1})(b)=1_B(b)=b$, con lo que $f$ es sobreyectiva. Si, dados $a,a'\in A$, $f(a)=f(a')$, entonces $f^{-1}(f(a))=f^{-1}(f(a'))$. Como $f^{-1}\circ f=1_A$ deducimos que $a=a'$, luego $f$ es inyectiva.
 
-Supongamos ahora que $f$ es biyectiva. Definimos $g\colon B\rightarrow A$ del siguiente modo. Dado $b\in B$, $g(b)\in A$ es el único elemento tal que $f(g(b))=a$. Esto implica que $f\circ g=1_B$. Veamos que $g\circ f=1_A$. Para ello tomamos $a\in A$ cualquiera y calculamos
+Supongamos ahora que $f$ es biyectiva. Definimos $g\colon B\rightarrow A$ del siguiente modo. Dado $b\in B$, definimos $g(b)\in A$ como el único elemento tal que $f(g(b))=b$, que está bien definido por el lema anterior. Esto implica que $f\circ g=1_B$. Veamos que $g\circ f=1_A$. Ambas aplicaciones tienen a $A$ como dominio y codominio, así que basta ver que toman los mismos valores, es decir que para todo $a\in A$, $(g\circ f)(a)=1_A(a)=a$. Como $f$ es inyectiva, esto equivale a probar que $f((g\circ f)(a))=f(a)$. Tenemos también que $f((g\circ f)(a))=(f\circ(g\circ f))(a)$. Usando la asociatividad de la composición y la identidad ya probada deducimos que en efecto
 $$
 \begin{array}{rcl}
-(f\circ(g\circ f))(a)&=&f((g\circ f)(a)),\cr
-((f\circ g)\circ f)(a)&=&(1_B\circ f)(a),\cr
-&=&f(a).
+f\circ(g\circ f)&=&(f\circ g)\circ f\cr
+&=&1_B\circ f\cr
+&=&f.
 \end{array}
 $$
-Por la asociatividad de la composición $f((g\circ f)(a))=f(a)$ y por la inyectividad de $f$ tenemos que $(g\circ f)(a)=a$. Esto es lo que había que probar.
 {{% /proof %}}
 
 {{% remark %}}
@@ -667,7 +672,7 @@ Sea $f \colon  A \rightarrow B$ una aplicación.
 
 * La **imagen directa** de un subconjunto del dominio $U\subset A$ 
 es el subconjunto del codominio $f(U)=\\{b\in B\;|\;\exists a\in U|f(a)=b\\}\subset B$. 
-* La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}$.
+* La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}\subset A$.
 
 La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
 {{% /definition %}}
@@ -680,7 +685,7 @@ Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen d
 
 
 {{% exercise %}}
-¿Cuál es la imagen directa del subconjunto vacío? ¿Y su imagen inversa?
+¿Cuál es la imagen directa del subconjunto vacío? ¿Y su imagen inversa? ¿Dependen las respuestas a estas preguntas de quién sea $f\colon A\rightarrow B$?
 {{% /exercise %}}
 
 {{% watch %}}
