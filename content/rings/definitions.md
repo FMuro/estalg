@@ -107,7 +107,10 @@ $\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.
 
 
 {{% example name="Anillos de Boole" %}}
-Dado un conjunto $X$, el conjunto $\mathcal P(X)=\\{A|A \subset X\\}$ formado por los subconjuntos de $X$ es un anillo, denominado **anillo de Boole**, donde la suma es la *diferencia simétrica*, $$A+B=(A\cup B)\setminus (A\cap B)$$ ![symmetric_difference](../../images/symmetric_difference.png) y el producto es la intersección, $$AB=A\cap B.$$ ¿Cuál es el $0$? ¿Y el $1$? ¿Y $-A$? ¿Y $A^2$? Dibuja $A+B+C$ para tres conjuntos en posición general.
+Dado un conjunto $X$, el conjunto $\mathcal P(X)=\\{A|A \subset X\\}$ formado por los subconjuntos de $X$ es un anillo, denominado **anillo de Boole**, donde la suma es la *diferencia simétrica*, 
+$$A+B=(A\cup B)\setminus (A\cap B)$$ 
+![symmetric_difference](../../images/symmetric_difference.png) 
+y el producto es la intersección, $$AB=A\cap B.$$ ¿Cuál es el $0$? ¿Y el $1$? ¿Y $-A$? ¿Y $A^2$? Dibuja $A+B+C$ para tres conjuntos en posición general.
 {{% /example %}}
 
 {{% example name="Anillo producto" %}}
