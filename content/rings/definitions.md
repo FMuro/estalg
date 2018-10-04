@@ -597,7 +597,7 @@ $c(x), r(x)\in R[x]$ tales que $r(x)$ tiene grado $<n$ y $f=c\cdot p+r$.
 
 
 {{% proof %}}
-Sea $f\_0=f$. Veamos primero que si grado $f_0\geq n$ entonces existen polinomios $c\_1,f\_1\in R[x]$ tales que grado $f\_1<$ grado $f\_0$ y $f\_0=c\_1\cdot p + f\_1$. En efecto, si $f\_0=b\_mx^m+\cdots$ tiene grado  $m\geq n$ podemos tomar $c_1(x)=b\_mx^{m-n}$, que tiene sentido pues estamos suponiendo que $m\geq n$. Si el grado de $f\_1$ sigue siendo $\geq n$,  podemos aplicar el mismo razonamiento a $f\_1$ obteniendo así polinomios $c\_2,f\_2\in R[x]$ tales que grado $f\_2<$ grado $f\_1$ y $f\_1=c\_2\cdot p + f\_2$. Podemos continuar
+Sea $f\_0=f$. Si grado $f_0<n$ entonces podemos tomar $c=0$ y $r=f_0$. Veamos ahora cómo proceder si grado $f_0\geq n$. En este caso existen polinomios $c\_1,f\_1\in R[x]$ tales que grado $f\_1<$ grado $f\_0$ y $f\_0=c\_1\cdot p + f\_1$. En efecto, si $f\_0=b\_mx^m+\cdots$ tiene grado  $m\geq n$ podemos tomar $c_1(x)=b\_mx^{m-n}$, que tiene sentido pues estamos suponiendo que $m\geq n$. Si el grado de $f\_1$ sigue siendo $\geq n$,  podemos aplicar el mismo razonamiento a $f\_1$ obteniendo así polinomios $c\_2,f\_2\in R[x]$ tales que grado $f\_2<$ grado $f\_1$ y $f\_1=c\_2\cdot p + f\_2$. Podemos continuar
 $$
 \begin{array}{rcl}
 f\_0&=&c\_1\cdot p + f\_1,\cr
@@ -618,7 +618,7 @@ Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, 
 
 
 {{% proof %}}
-En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $f-r=c\cdot p$, es decir, $f=c\dot p+r$. Este resultado se deduce por tanto del lema anterior.
+En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $f-r=c\cdot p$, es decir, $f=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
 
 {{% remark %}}
@@ -695,7 +695,7 @@ $$\begin{array}{rcl}
 &=&(a'^\prime b')b\cr
 &=&(a'^\prime b)b'.
 \end{array}$$
-Por la propiedad cancelativa de los dominios, $ab'^\prime=a'^\prime b$, es decir $\frac{a}{b}\sim \frac{a'^\prime}{b'^\prime}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar la buena definición de la suma y la multiplicación en $Q( R )$ es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por la propiedad cancelativa de nuevo, una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
+Por la propiedad cancelativa de los dominios, $ab'^\prime=a'^\prime b$, es decir $\frac{a}{b}\sim \frac{a'^\prime}{b'^\prime}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar que las definiciones de la suma y la multiplicación en $Q(R)$ no dependen de la elección de fracciones representantes es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. También es fácil probar que los axiomas que definen los anillos se verifican. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por tanto una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
 
 Es inmediato ver que $i$ es un homomorfismo. Es inyectivo porque $a\in\ker f$ si y solo si $\frac{a}{1}=\frac{0}{1}$, lo cual equivale a $a=0$.
 
