@@ -677,6 +677,11 @@ es el subconjunto del codominio $f(U)=\\{b\in B\;|\;\exists a\in U|f(a)=b\\}\sub
 La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
 {{% /definition %}}
 
+![Imagen directa](../images/direct_image.png)
+
+![Imagen inversa](../images/inverse_image.png)
+
+
 La imagen inversa recible otros nombres como **contraimagen**, **preimagen** o **anti-imagen**. La imagen directa también se denomina simplemente **imagen**.
 
 {{% watch %}}
@@ -739,7 +744,7 @@ Dado $y \in
 f(U_1 \cap U_2)$ existe $x \in U_1 \cap U_2$ tal que $y =
 f(x)$. Como $x\in U_1$ y $x\in U_2$ deducimos que $y \in f(U_1)$ e $y \in f(U_2)$, por tanto  $y\in f(U_1) \cap f(U_2)$.
 
-Tenemos que $x\in f^{-1}(V_1 \cup V_2)$ si y solo si $f(x)\in V_1\cup V_2$. Esto equivale a decir que $f(x)\in V_1$ o $f(x)\in U_2$, lo que es lo mismo, $x\in f^{-1}(V_1)$ o $x\in f^{-1}(V_2)$. Esto último es idéntico a afirmar que $x\in f^{-1}(V_1)\cup f^{-1}(V_1)$.
+Tenemos que $x\in f^{-1}(V_1 \cup V_2)$ si y solo si $f(x)\in V_1\cup V_2$. Esto equivale a decir que $f(x)\in V_1$ o $f(x)\in V_2$, lo que es lo mismo, $x\in f^{-1}(V_1)$ o $x\in f^{-1}(V_2)$. Esto último es idéntico a afirmar que $x\in f^{-1}(V_1)\cup f^{-1}(V_2)$.
 {{% /proof %}}
 
 
@@ -761,7 +766,9 @@ Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicacio
 
 
 {{% exercise %}}
-* Si $A$ y $B$ son finitos, ¿puedes acotar el número de elementos de $B^A$?
+* Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $B^A$?
+
+* ¿Cuántos elementos hay en $A^\varnothing$?
 
 * Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}$ y $\\{e\\}^A$.
 {{% /exercise %}}
