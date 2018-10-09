@@ -43,9 +43,9 @@ En un dominio $R$:
 {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Si $a\in R$ no es nulo ni una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ y $a'$ son irreducibles y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.
-{{% /watch %}}
+{{% /remark %}}
 
 
 
@@ -76,14 +76,13 @@ lo cual es una contradicción.
 $\Leftarrow$ Probaremos que si no existen factorizaciones entonces podemos encontrar una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Sea $a\_1\in R$ un elemento no nulo que no sea una unidad para el cual el proceso de factorización no termina. Entonces podemos descomponerlo como producto de divisores propios $a\_1=q\_2a\_2$ de modo que alguno de los dos no es irreducible. Como el producto es conmutativo podemos suponer que es $a_2$ el que no es irreducible. Por tanto este también se puede descomponer como producto de dos divisores propios $a\_2=q\_3a\_3$ alguno de los cuales no es irreducible. Una vez más podemos suponer que es $a\_3$ el no irreducible y continuar indefinidamente con el proceso. Por construcción, esto nos da una sucesión creciente $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$ que es estricta porque todas las descomposiciones anteriores son como producto de dos divisores propios. 
 {{% /proof %}}
 
-
-{{% watch %}}
 La condición de la derecha del enunciado de la proposición anterior se suele denominar **condición de cadena ascendente** para ideales principales. Las condiciones de cadena juegan un papel muy importante en el álgebra moderna. Los anillos que satisfacen la condición de cadena ascendente para ideales cualesquiera se denominan **noetherianos**, por [Emmy Noether](https://es.wikipedia.org/wiki/Emmy_Noether). Los que cumplen la **condición de cadena descendente** para ideales arbitrarios se llaman **artinianos**, por [Emil Artin](https://es.wikipedia.org/wiki/Emil_Artin), padre de Michael, el autor del libro que estamos siguiendo. 
-{{% /watch %}}
 
 
 {{% example name="Un dominio sin factorizaciones" %}}
 No es fácil construir dominios donde no existan factorizaciones. El ejemplo más sencillo es el cociente $R/I$, donde $$R=k[x\_1,x\_2,x\_3,\dots]$$ es un anillo de polinomios sobre un cuerpo $k$ en una sucesión infinita de variables $\\{x\_n\\}_{n\geq 1}$ e $$I=(x\_1-x\_2^2, x\_2-x\_3^2, x\_3-x\_4^2,\dots)$$ es un ideal infinitamente generado que fuerza las relaciones $\bar x\_n=\bar x\_{n+1}^2\in R/I$, $n\geq 1$. En este cociente $$(\bar x\_1)\subsetneq(\bar x\_2)\subsetneq(\bar x\_3)\subsetneq\cdots.$$ Más concretamente, el proceso $\bar x\_1=\bar x\_2\bar x\_2=\bar x\_2\bar x\_3\bar x\_3=\bar x\_2\bar x\_3\bar x\_4\bar x\_4=\cdots$ no termina.
+
+En rigor, es necesario probar que ningún $\bar{x}\_i$ es una unidad. Esto es cierto porque de lo contrario existiría algún polinomio $f\in R$ tal que $\bar{x}\_i\cdot\bar{f}=1$, equivalentemente $x_if-1\in I$. Esto es imposible porque los elementos de $I$, al ser combinación lineal de sus generadores, no tienen término independiente.
 {{% /example %}}
 
 
@@ -94,7 +93,7 @@ Un **dominio de factorización única** (también **DFU** o **UFD**) es un domin
 
 {{% example name="Un dominio con factorizaciones que no son únicas" %}}
 En $\mathbb Z[\sqrt{-5}]\subset\mathbb C$, $$9=3^2=(2+\sqrt{-5})(2-\sqrt{-5}).$$
-Todo elemento de $\mathbb Z[\sqrt{-5}]$ es de la forma $$z=a+b\sqrt{-5}=a+ib\sqrt{5}$$ donde $a,b\in\mathbb Z$. El cuadrado de la norma de tal elemento es $$|z|^2=|a+b\sqrt{-5}|=a^2+5b^2\in\mathbb Z.$$ Como $$|z_1z_2|^2=|z_1|^2\cdot|z_2|^2,$$ si $z\in \mathbb Z[\sqrt{-5}]$ es una unidad entonces $1=|z|^2\cdot|z^{-1}|^2$, así que $|z|^2\in\mathbb Z$ es invertible (y positivo), luego $|z|^2=1$. La única posibilidad de que esto ocurra es que $z=\pm 1$, por tanto las unidades de nuestro anillo son $\\{\pm1\\}$.
+Todo elemento de $\mathbb Z[\sqrt{-5}]$ es de la forma $$z=a+b\sqrt{-5}=a+ib\sqrt{5}$$ donde $a,b\in\mathbb Z$. El cuadrado de la norma de tal elemento es $$|z|^2=|a+b\sqrt{-5}|=a^2+5b^2\in\mathbb Z.$$ Como $$|z_1z_2|^2=|z_1|^2\cdot|z_2|^2,$$ si $z\in \mathbb Z[\sqrt{-5}]$ es una unidad entonces $1=|z|^2\cdot|z^{-1}|^2$, así que $|z|^2\in\mathbb Z$ es invertible (y positivo), luego $|z|^2=1$. La única posibilidad de que esto ocurra es que $z=\pm 1$, por tanto las unidades de nuestro anillo son $\\{\pm1\\}$. Es más, las no unidades tienen norma al cuadrado $>1$, así que si $z_1$ es un divisor propio de $z_2$ entonces $|z_1|^2<|z_2|^2$.
 
 En $\mathbb Z[\sqrt{-5}]$ existen factorizaciones. En efecto, si hubiera una cadena $(z_1)\subsetneq(z_2)\subsetneq(z_3)\subsetneq\cdots$ entonces tendríamos que $|z_1|^2>|z_2|^2>|z_3|^2>\cdots\geq 0$, pero esto es imposible, no hay sucesiones infinitas estrictamente decrecientes de enteros no negativos.
 
@@ -111,9 +110,9 @@ Un elemento de un dominio $p\in R$ es **primo** si no es nulo ni una unidad y ad
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 En términos de ideales, un elemento $p\in R$ no nulo es primo si y solo si $(p)\subset R$ es un ideal primo.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -184,9 +183,9 @@ Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo
 {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
  Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. Además, $\operatorname{mcd}(a,b)=0$ si y solo si $a=0=b$ ya que en un dominio no hay divisores de cero. A diferencia de los dominios euclídeos, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% corollary %}}
@@ -243,9 +242,8 @@ Como $a,b\in (a,b)=(d)$, $d$ es un divisor común. Si $d'|a$ y $d'|b$ entonces $
 {{% /proof %}}
 
 
-{{% watch %}}
-Acabamos de demostrat que en un DIP todo divisor común máximo satisface una identidad de Bézout.
-{{% /watch %}}
+Acabamos de demostrar que en un DIP todo divisor común máximo satisface una **identidad de Bézout**.
+
 
 
 {{% definition %}}
@@ -253,9 +251,9 @@ Un **dominio euclídeo** es un dominio $R$ equipado con una función $$\delta\co
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con función de tamaño el valor absoluto y el grado, respectivamente. En general, el cociente y el resto no están determinados de manera única por el dividendo y el divisor, por ejemplo $$13=4\cdot 3+1=5\cdot 3+(-2).$$ Los dominios euclídeos son dominios de ideales principales. Todo ideal no trivial está generado por cualquiera de sus elementos no nulos de menor tamaño.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% example name="Los enteros de Gauss" %}}
