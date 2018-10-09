@@ -697,8 +697,7 @@ Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen d
 La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto. 
 {{% /watch %}}
 
-
-{{% remark %}}
+{{% remark label="rem:directinverse" %}} 
 * Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{im}f=f(A)=B$.
 
 * Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
@@ -714,9 +713,8 @@ dada una aplicación $f\colon A\rightarrow B$:
 ¿Son ciertos los recíprocos de estas últimas implicaciones?
 {{% /exercise %}}
 
-
 {{% proposition %}}
-Dada una aplicaicón $f\colon A \rightarrow B$ y subconjuntos $U\subset
+Dada una aplicación $f\colon A \rightarrow B$ y subconjuntos $U\subset
 A$ y $V\subset B$, se verifican las siguientes propiedades:
 
 * $U \subset f^{-1}(f(U))$.
@@ -728,7 +726,7 @@ Probaremos la segunda propiedad y dejaremos la primera como ejercicio. Dado $y\i
 {{% /proof %}}
 
 {{% proposition %}}
-Dada una aplicaicón $f\colon A \rightarrow B$ y subconjuntos $U_1,U_2 \subset
+Dada una aplicación $f\colon A \rightarrow B$ y subconjuntos $U_1,U_2 \subset
 A$ y $V_1,V_2 \subset B$, se verifican las siguientes propiedades:
 
 1. $f(U_1 \cup U_2) = f(U_1) \cup f(U_2)$. 
