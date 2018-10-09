@@ -28,7 +28,7 @@ $$
 Los elementos de un conjunto *no están ordenados*, aunque vengan especificados como una lista, por tanto $A=\\{3,1,2,5,4\\}$. En una definición explícita *no se pueden repetir elementos*, así que $\\{1,1,2,3,4,5\\}$ sería una manera incorrecta de expresar el conjunto $A$.
 {{% /watch %}}
 
-{{% example name="Conjuntos de números" %}}
+{{% example name="Conjuntos de números" label="prueba" %}}
 
 * $\mathbb{N}$, los números **naturales**: 1, 2, 3, ...
 
