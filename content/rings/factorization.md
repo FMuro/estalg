@@ -64,7 +64,7 @@ En un dominio $R$ existen factorizaciones $\Leftrightarrow$ no existe ninguna su
 
 
 {{% proof %}}
-$\Rightarrow$ Lo haremos por reducción al absurdo. Tomamos pues una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Podemos suponer que $a\_1\neq 0$ ya que en caso contrario la inclusión estricta $(a\_1)\subsetneq(a\_2)$ implicaría que $a\_2\neq 0$ y bastaría reindexar. Observa que $(a\_n)\subsetneq (1)$ para todo $n\geq 1$, ya que la sucesión es estrictamente creciente y $(1)=R$ es el ideal total. Las inclusiones $(a\_n)\subsetneq (a\_{n+1})\subsetneq(1)$ nos dicen entonces que $a_n$ se puede descomponer como producto de divisores propios $a\_n=q\_{n+1}a\_{n+1}$, por tanto el proceso de factorización no termina para
+$\Rightarrow$ En lugar de A $\Rightarrow$ B demostraremos (no A) $\Leftarrow$ (no B). Tomamos pues una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Podemos suponer que $a\_1\neq 0$ ya que en caso contrario la inclusión estricta $(a\_1)\subsetneq(a\_2)$ implicaría que $a\_2\neq 0$ y bastaría reindexar. Observa que $(a\_n)\subsetneq (1)$ para todo $n\geq 1$, ya que la sucesión es estrictamente creciente y $(1)=R$ es el ideal total. Las inclusiones $(a\_n)\subsetneq (a\_{n+1})\subsetneq(1)$ nos dicen entonces que $a_n$ se puede descomponer como producto de divisores propios $a\_n=q\_{n+1}a\_{n+1}$, por tanto el proceso de factorización no termina para
 $$\begin{array}{rcl}
 a\_1&=& q\_2a\_2\cr
 &=& q\_2q\_3a\_3\cr
@@ -73,7 +73,7 @@ a\_1&=& q\_2a\_2\cr
 \end{array}$$
 lo cual es una contradicción.
 
-$\Leftarrow$ Probaremos que si no existen factorizaciones entonces podemos encontrar una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Sea $a\_1\in R$ un elemento no nulo que no sea una unidad para el cual el proceso de factorización no termina. Entonces podemos descomponerlo como producto de divisores propios $a\_1=q\_2a\_2$ de modo que alguno de los dos no es irreducible. Como el producto es conmutativo podemos suponer que es $a_2$ el que no es irreducible. Por tanto este también se puede descomponer como producto de dos divisores propios $a\_2=q\_3a\_3$ alguno de los cuales no es irreducible. Una vez más podemos suponer que es $a\_3$ el no irreducible y continuar indefinidamente con el proceso. Por construcción, esto nos da una sucesión creciente $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$ que es estricta porque todas las descomposiciones anteriores son como producto de dos divisores propios. 
+$\Leftarrow$ Como antes, en lugar de A $\Leftarrow$ B demostraremos (no A) $\Rightarrow$ (no B). Probaremos pues que si no existen factorizaciones entonces podemos encontrar una sucesión $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$. Sea $a\_1\in R$ un elemento no nulo que no sea una unidad para el cual el proceso de factorización no termina. Entonces podemos descomponerlo como producto de divisores propios $a\_1=q\_2a\_2$ de modo que alguno de los dos no es irreducible. Como el producto es conmutativo podemos suponer que es $a_2$ el que no es irreducible. Por tanto este también se puede descomponer como producto de dos divisores propios $a\_2=q\_3a\_3$ alguno de los cuales no es irreducible. Una vez más podemos suponer que es $a\_3$ el no irreducible y continuar indefinidamente con el proceso. Por construcción, esto nos da una sucesión creciente $(a_1)\subsetneq(a_2)\subsetneq(a_3)\subsetneq\cdots$ que es estricta porque todas las descomposiciones anteriores son como producto de dos divisores propios. 
 {{% /proof %}}
 
 La condición de la derecha del enunciado de la proposición anterior se suele denominar **condición de cadena ascendente** para ideales principales. Las condiciones de cadena juegan un papel muy importante en el álgebra moderna. Los anillos que satisfacen la condición de cadena ascendente para ideales cualesquiera se denominan **noetherianos**, por [Emmy Noether](https://es.wikipedia.org/wiki/Emmy_Noether). Los que cumplen la **condición de cadena descendente** para ideales arbitrarios se llaman **artinianos**, por [Emil Artin](https://es.wikipedia.org/wiki/Emil_Artin), padre de Michael, el autor del libro que estamos siguiendo. 
@@ -82,7 +82,7 @@ La condición de la derecha del enunciado de la proposición anterior se suele d
 {{% example name="Un dominio sin factorizaciones" %}}
 No es fácil construir dominios donde no existan factorizaciones. El ejemplo más sencillo es el cociente $R/I$, donde $$R=k[x\_1,x\_2,x\_3,\dots]$$ es un anillo de polinomios sobre un cuerpo $k$ en una sucesión infinita de variables $\\{x\_n\\}_{n\geq 1}$ e $$I=(x\_1-x\_2^2, x\_2-x\_3^2, x\_3-x\_4^2,\dots)$$ es un ideal infinitamente generado que fuerza las relaciones $\bar x\_n=\bar x\_{n+1}^2\in R/I$, $n\geq 1$. En este cociente $$(\bar x\_1)\subsetneq(\bar x\_2)\subsetneq(\bar x\_3)\subsetneq\cdots.$$ Más concretamente, el proceso $\bar x\_1=\bar x\_2\bar x\_2=\bar x\_2\bar x\_3\bar x\_3=\bar x\_2\bar x\_3\bar x\_4\bar x\_4=\cdots$ no termina.
 
-En rigor, es necesario probar que ningún $\bar{x}\_i$ es una unidad. Esto es cierto porque de lo contrario existiría algún polinomio $f\in R$ tal que $\bar{x}\_i\cdot\bar{f}=1$, equivalentemente $x_if-1\in I$. Esto es imposible porque los elementos de $I$, al ser combinación lineal de sus generadores, no tienen término independiente.
+En rigor, es necesario probar que ningún $\bar{x}\_i$ es una unidad. Esto es cierto porque de lo contrario existiría algún polinomio $f\in R$ tal que $\bar{x}\_i\bar{f}=1$, o equivalentemente $x_if-1\in I$. Esto es imposible porque los elementos de $I$, al ser combinaciones lineales de sus generadores, no tienen término independiente.
 {{% /example %}}
 
 
@@ -137,7 +137,7 @@ Un dominio $R$ es de factorización única $\Leftrightarrow$ existen factorizaci
 
 
 {{% proof %}}
-$\Rightarrow$ Sea $c\in R$ irreducible. Supongamos que $c|ab$. Entonces $ab=cd$ para cierto $d\in R$. Podemos excluir los casos en los que $a$, $b$ y $d$ son nulos o unidades ya que en estos casos sería obvio deducir que $c$ tendría que dividir a $a$ o a $b$. Descomponemos $a$, $b$ y $d$ como producto de irreducibles,
+$\Rightarrow$ Basta ver que los irreducibles son primos. Sea $c\in R$ irreducible. Para ver que es primo, supongamos que $c|ab$. Hay que probar que $c|a$ o $c|b$. Como $c|ab$, entonces $ab=cd$ para cierto $d\in R$. Si $a=0$ entonces $c|a$ y si $b=0$, $c|b$. Si $a$ es una unidad, entonces despejando vemos que $c|b$, y si $b$ es una unidad $c|a$. Supongamos en adelante que $a$ y $b$ no son nulos ni unidades. Entonces $d$ no puede ser una unidad, ya que de lo contrario podriamos despejarla y $c=(d^{-1}a)b$ no sería irreducible, pues estaría descompuesto como producto de dos divisores propios. Por tanto $a$, $b$ y $d$ factorizan como productos de irreducibles,
 $$\begin{array}{rcl}
 a&=&a\_1\cdots a\_r,\cr
 b&=&b\_1\cdots b\_s,\cr
@@ -146,13 +146,14 @@ d&=&d\_1\cdots d\_t.
 Tenemos pues que
 $$a\_1\cdots a\_rb\_1\cdots b\_s=cd\_1\cdots d\_t$$ son dos descomposiciones de un mismo elemento como producto de irreducibles. Por la unicidad, $c$ ha de ser asociado de algún $a_i$ o $b_j$, por tanto $c$ divide a $a$ o a $b$.
 
-$\Leftarrow$ Veamos primero que si un primo $p$ divide a un producto de irreducibles $a_1\cdots a_r$ entonces $p$ es asociado de algún $a_i$. Procedemos por inducción en $r$. Para $r=1$, como $p|a_1$ y ambos elementos son irreducibles, han de ser asociados, según hemos visto anteriormente. Para $r>1$, como $p|a_1(a_2\cdots a_r)$, bien $p|a_1$ o bien $p|a_2\cdots a_r$. El primer caso ya se ha tratado y en el segundo, por hipótesis de inducción, $p$ es asociado de algún otro $a_i$.
+$\Leftarrow$ Veamos primero que si un primo $p$ divide a un producto de irreducibles $a_1\cdots a_r$ entonces $p$ es asociado de algún $a_i$. Procedemos por inducción en $r$. Para $r=1$, como $p|a_1$ y ambos elementos son irreducibles, han de ser asociados, según hemos visto anteriormente. Para $r>1$, como $p|a_1(a_2\cdots a_r)$, bien $p|a_1$ o bien $p|a_2\cdots a_r$. En el primer caso, ya tratado, $p$ es asociado de $a_1$, y en el segundo, por hipótesis de inducción, $p$ es asociado de algún otro $a_i$.
 
 Consideramos ahora dos productos de irreducibles (primos) que son iguales
 $$a\_1\cdots a\_r=b\_1\cdots b\_s.$$
 Supongamos sin pérdida de generalidad que $1\leq r\leq s$. Procedemos por inducción en $r$. Si $r=1$ entonces $s=1$ puesto que un irreducible no tiene divisores propios. En este caso no hay nada que probar pues $a_1=b_1$. Sea $r>1$. Como $a_1|b_1\cdots b_s$ y $a_1$ es primo, $a_1$ es asociado de algún $b_i$, es decir $b_i=ua_1$ para cierta unidad $u\in R$. Por la propiedad cancelativa
 $$a\_2\cdots a\_r=ub\_1\cdots\widehat{b}_i\cdots b\_s.$$
-Por hipótesis de inducción, ambas factorizaciones coinciden salvo orden y asociados, por tanto las anteriores también. 
+Observa que $b_1$ y $ub_1$ son asociados. 
+Por hipótesis de inducción, las últimas factorizaciones coinciden salvo orden y asociados, por tanto las anteriores también. 
 {{% /proof %}}
 
 
@@ -162,7 +163,7 @@ En un DFU, un producto de irreducibles $a_1\cdots a_r$ divide a otro $b_1\cdots 
 
 
 {{% proof %}}
-Como el primer producto divide al segundo, existe $c\in R$ tal que $a_1\cdots a_rc=b_1\cdots b_s$. Si $c$ no es una unidad, lo factorizamos como producto de irreducibles $c=c_1\cdots c_t$, $$a_1\cdots a_rc_1\cdots c_t=b_1\cdots b_s.$$ Por la unicidad de las factorizaciones, cada $a_i$ es asociado a un $b_j$ distinto, y salvo reordenamiento podemos suponer que son los $r$ primeros. Si $c$ fuera una unidad la unicidad de las factorizaciones demostraría directamente que $r=s$ y que cada $a_i$ es asociado de un $b_j$ distinto.
+Como el primer producto divide al segundo, existe $c\in R$ tal que $a_1\cdots a_rc=b_1\cdots b_s$. Si $c$ no es una unidad, lo factorizamos como producto de irreducibles $c=c_1\cdots c_t$, $$a_1\cdots a_rc_1\cdots c_t=b_1\cdots b_s.$$ Por la unicidad de las factorizaciones, cada $a_i$ es asociado a un $b_j$ distinto, y salvo reordenamiento podemos suponer que son los $r$ primeros. Si $c$ fuera una unidad, la unicidad de las factorizaciones demostraría directamente que $r=s$ y que cada $a_i$ es asociado de un $b_j$ distinto.
 {{% /proof %}}
 
 
@@ -201,7 +202,7 @@ El múltiplo común mínimo es único salvo asociados y se denota $\operatorname
 
 
 {{% proof %}}
-Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia y la segunda se puede demostrar de manera análoga al caso de los números enteros, conocido por todos.
+Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia. Comprobemos la segunda. Si $a|m'$ y $b|m'$ entonces $d|m'$. Es más, $\frac{a}{d}|\frac{m'}{d}$ y $\frac{b}{d}|\frac{m'}{d}$. Como $\frac{a}{d}$ y $\frac{b}{d}$ no tienen factores primos asociados, su divisor común máximo es el producto $\frac{ab}{d^2}$, así que $\frac{ab}{d^2}|\frac{m'}{d}$. Multiplicando por $d$ deducimos que $m=\frac{ab}{d}|m'$. La unicidad salvo asociados se deduce como en el caso del divisor común máximo.
 {{% /proof %}}
 
 
@@ -263,10 +264,10 @@ Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclí
 
 
 {{% example name="Enteros cuadráticos" %}}
-Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la norma para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con la norma.
+Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar el cuadrado de la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la 'norma' $N(a+b\sqrt{n})=a^2-b^2n$ para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con una función de tamaño distinta de $N$.
 {{% /example %}}
 
-La siguiente aplicación interactiva te permite explorar la posibilidad de realizar divisiones euclídeas respecto del cuadrado del módulo complejo en el anillo de enteros cuadráticos imaginarios $R\subset\mathbb Q[\sqrt{-n}]$ para ciertos valores positivos de $n$. Para $n=1$ tenemos los enteros de Gauss. Puedes seleccionar los coeficientes del dividendo $D=a+b\sqrt{-n}$ y del divisor $d=x+y\sqrt{-n}$. Los coeficientes del dividendo pueden estar en $[-10,10]$ y los del divisor en $[-5,5]$. Aparece un círculo amarillo centrado en $D$ de radio $|d|$. Los puntos verdes son elementos del anillo y los azules son además múltiplos del divisor. Cada punto azul en el _interior_ del círculo representa una división euclídea. La aplicación da la lista de todos los pares $(c,r)$ que producen divisiones euclídeas $D=d\cdot c+r$.
+La siguiente aplicación interactiva te permite explorar la posibilidad de realizar divisiones euclídeas respecto del cuadrado del módulo complejo en el anillo de enteros cuadráticos imaginarios $R\subset\mathbb Q[\sqrt{-n}]$ para ciertos valores positivos de $n$. Para $n=1$ tenemos los enteros de Gauss. Puedes seleccionar los coeficientes del dividendo $D=a+b\sqrt{-n}$ y del divisor $d=x+y\sqrt{-n}$, si $-n\not\equiv 1$ mod $4$. Si $-n\equiv 1$ mod $4$, el dividendo y el divisor son de la forma $D=a+b\frac{1+\sqrt{-n}}{2}$ y $d=x+y\frac{1+\sqrt{-n}}{2}$, respectivamente. Los coeficientes del dividendo pueden estar en $[-10,10]$ y los del divisor en $[-5,5]$. Aparece un círculo amarillo centrado en $D$ de radio $|d|$. Los puntos verdes son elementos del anillo y los azules son además múltiplos del divisor. Cada punto azul en el _interior_ del círculo representa una división euclídea. La aplicación da la lista de todos los pares $(c,r)$ que producen divisiones euclídeas $D=d\cdot c+r$.
 
 <div class="sage">
   <script type="text/x-sage">
@@ -322,14 +323,10 @@ def _(parameter=selector([1,2,3,5,6,7,10,11], label="n=", buttons=True), dividen
 En este epígrafe demostraremos que los anillos de polinomios con coeficients en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
 
 {{% definition %}}
-Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
+Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
 {{% /definition %}}
 
-
-{{% watch %}}
-Los únicos polinomios primitivos constantes son las unidades de $R$.
-{{% /watch %}}
-
+Los únicos polinomios constantes primitivos son las unidades de $R$.
 
 {{% lemma %}}
 Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in k[x]$ no nulo existe una constante $c\in k$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in R[x]$ tal que $$f(x)=c\cdot f_0(x).$$ Además $c$ y $f_0(x)$ son únicos salvo producto por unidades de $R$. Denotaremos $c=\operatorname{cont}(f)$. 
@@ -348,9 +345,9 @@ Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ sien
    {{% /proof %}}
 
 
-{{% watch %}}
-Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f(x))\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$ (o cualquier unidad de $R$).
-{{% /watch %}}
+{{% remark %}}
+Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f(x))\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
+{{% /remark %}}
 
 
 {{% theorem name="Lema de Gauss" %}}
@@ -359,7 +356,7 @@ El producto de polinomios primitivos en $R[x]$ es primitivo.
 
 
 {{% proof %}}
- Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0,$$ el homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
+ Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0.$$ El homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
 {{% /proof %}}
 
 
@@ -396,9 +393,9 @@ $\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pue
 {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Una constante $a\in R$ es irreducible en $R[x]$ si y solo si lo es en $R$.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% theorem %}}
@@ -409,7 +406,7 @@ $R[x]$ es un DFU.
 {{% proof %}}
 
 Primero probamos que existen factorizaciones en $R[x]$. Supongamos por reducción al absurdo que tenemos una sucesión estrictamente creciente de ideales principales (que podemos suponer no nulos) en este anillo, $$(f\_1)\subsetneq (f\_2)\subsetneq (f\_3)\subsetneq\cdots.$$ Ningún $(f\_n)$ puede ser el ideal total porque la sucesión estabilizaría necesariamente a partir de este punto. Por tanto, cada $f\_{n+1}$ es un divisor propio de $f\_{n}$, $n\geq 1$. En particular grado de $0\leq$ grado de $f\_{n+1}\leq$ grado de $f\_{n}$, es decir, los grados de los generadores forman una sucesion decreciente de enteros no negativos. Esta sucesión de enteros no nulos ha de estabilizar a partir de cierto punto, es decir, ha de existir cierto $n\_0\geq 1$ tal que grado de $f\_{n+1}=$ grado de $f\_{n}$ para todo $n\geq n\_0$, o equivalentemente $f\_n=c\_{n+1}f\_{n+1}$ para cierto $c\_{n+1}\in R$ que no puede ser una unidad ni tampoco nulo.
-Si llamamos $d\_n$ al contenido de $f\_n$ tenemos que $d\_n=c\_{n+1}d\_{n+1}$. Ningún contenido $d\_n$ puede ser una unidad porque es divisible por $c\_{n+1}$ así que por tanto $d\_n=c\_{n+1}d\_{n+1}$ es una factorización como producto de divisores propios. Sustituyendo reiteradamente vemos que
+Si llamamos $d\_n=\operatorname{cont}(f\_n)$ tenemos que $d\_n=c\_{n+1}d\_{n+1}$. Ningún contenido $d\_n$ puede ser una unidad porque es divisible por $c\_{n+1}$ así que por tanto $d\_n=c\_{n+1}d\_{n+1}$ es una factorización como producto de divisores propios. Sustituyendo reiteradamente vemos que
 $$
 \begin{array}{rcl}
 d\_{n\_0}&=& c\_{n\_0+1}d\_{n\_0+1}\cr
@@ -422,9 +419,8 @@ Por tanto el proceso no termina para $d\_{n\_0}$, lo que contradice la existenci
 
 Veamos que todo elemento irreducible de $R[x]$ es primo. Consideraremos primero el caso en el que nuestro irreducible es un polinomio $f\in R[x]$ no constante. Supongamos que $f|gh$ en $R[x]$. Como $f$ también es irreducible en $k[x]$, que es un DFU, entonces $f$ es primo en $k[x]$ y por tanto $f|g$ o $f|h$ en $k[x]$. Los tres polinomios están en $R[x]$ y al ser $f$ irreducible en este anillo ha de ser primitivo, así que entonces $f|g$ o $f|h$ en $R[x]$.
 
-Supongamos ahora que  $a\in R\subset  R[x]$ es una constante irreducible y que $a|gh$ en $R[x]$. Esto último equivale adecir que $a$ divide al contenido de $gh$, es decir $a|cd$ donde $c,d\in R$ son los contenidos de $g$ y $h$, respectivamente. Como $R$ es un DFU, el irreducible $a$ es primo en $R$, así que $a|c$ o $a|d$, es decir, $a|g$ o $a|h$.
-
-   {{% /proof %}}
+Supongamos ahora que  $a\in R\subset  R[x]$ es una constante irreducible y que $a|gh$ en $R[x]$. Esto último equivale adecir que $a|\operatorname{cont}(gh)=\operatorname{cont}(g)\operatorname{cont}(h)$. Como $R$ es un DFU, el irreducible $a$ es primo en $R$, así que $a|\operatorname{cont}(f)$ o $a|\operatorname{cont}(g)$, es decir, $a|g$ o $a|h$.
+{{% /proof %}}
  
 
 {{% corollary %}}
@@ -453,19 +449,23 @@ $\subset$ Todo elemento $p \in (f )$ es de la forma $p =g\cdot f =(g \cdot c)\cd
 El siguiente resultado nos demuestra con rigor que las dos posibles maneras de añadirle a $R$ raíces de polinomios irreducibles dan resultados isomorfos.
 
 {{% theorem %}}
-Dado un polinomio irreducible $f\in R(x)$, un cuerpo $K$ que contiene al cuerpo de fracciones, $k\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $x$ en $\alpha$.
+Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ que contiene al cuerpo de fracciones, $k\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $x$ en $\alpha$.
 {{% /theorem %}}
 
 {{% proof %}}
 Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusón $R\subset k\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. Para ello, consideramos la extensión $\bar g\colon k[x]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[x]$.
  
-El ideal $\ker\bar{g}\subset k[x]$ está formado por todos los polinomios que tienen a $\alpha$ como raíz. Al ser $k[x]$ un dominio euclídeo, $\ker\bar{g}=(\tilde f)$ donde $\tilde f\in k[x]$ es cualquier polinomio no nulo de grado mínimo en este ideal. Realizamos la división euclídea an $k[x]$, $f(x)=c(x)\tilde{f}(x)+r(x)$. Si $r$ no fuera trivial, su grado sería menor que el de $\tilde{f}$, pero $r(x)=f(x)-c(x)\tilde{f}(x)$, por tanto $r(\alpha)=f(\alpha)-c(\alpha)\tilde{f}(\alpha)=0-c(\alpha)0=0$. Esto es imposible porque $\tilde{f}$ es de grado mínimo. Por tanto $r=0$ y $f(x)=c(x)\tilde{f}(x)$. El polinomio $c(x)$ ha de ser constante porque $f$ es también irreducible en $k[x]$, así que $f$ y $\tilde{f}$ son asociados, luego generan el mismo ideal, $\ker\bar{g}=(f)\subset k[x]$.
+El ideal $\ker\bar{g}\subset k[x]$ está formado por todos los polinomios que tienen a $\alpha$ como raíz. Al ser $k[x]$ un dominio euclídeo, $\ker\bar{g}=(\tilde f)$ donde $\tilde f\in k[x]$ es cualquier polinomio no nulo de grado mínimo en este ideal. Realizamos la división euclídea en $k[x]$, $f(x)=c(x)\tilde{f}(x)+r(x)$. Si $r$ no fuera trivial, su grado sería menor que el de $\tilde{f}$, pero $r(x)=f(x)-c(x)\tilde{f}(x)$, por tanto $r(\alpha)=f(\alpha)-c(\alpha)\tilde{f}(\alpha)=0-c(\alpha)0=0$. Esto es imposible porque $\tilde{f}$ es de grado mínimo. Por tanto $r=0$ y $f(x)=c(x)\tilde{f}(x)$. El polinomio $c(x)$ ha de ser constante porque $f$ es también irreducible en $k[x]$, así que $f$ y $\tilde{f}$ son asociados, luego generan el mismo ideal, $\ker\bar{g}=(f)\subset k[x]$.
 
 Como $g=\bar{g}|_{R[x]}$, $\ker g=\ker\bar{g}\cap R[x]=(f)\subset R[x]$ en virtud de la proposición anterior, pues $f\in R[x]$, al ser irreducible, es primitivo. Esto concluye la demostración.
 {{% /proof %}}
 
+{{% remark %}}
+Recuerda que, dado un cuerpo $k$, un polinomio $f\in k[x]$ de grado $\leq 3$ es irreducible si y solo si no tiene raíces en $k$.
+{{% /remark %}}
+
 {{% example name="Añadiendo elementos" %}}
-El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces. Por tanto el resultado anterior se aplica a la inclusión $\mathbb Q\subset\mathbb C$ y a la raíz compleja $i\in\mathbb C$ de $x^2+1$ y obtenemos un isomorfismo con los enteros de Gauss,
+El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Por tanto el resultado anterior se aplica a la inclusión $\mathbb Q\subset\mathbb C$ y a la raíz compleja $i\in\mathbb C$ de $x^2+1$ y obtenemos un isomorfismo con los enteros de Gauss,
 $$
 \begin{array}{rcl}
 \mathbb Z[x]/(x^2+1)&\cong&\mathbb Z[i],\cr
@@ -509,7 +509,8 @@ entonces $f$ es irreducible en $R[x]$.
 
 
 {{% proof %}}
- Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in R$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $R/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   {{% /theorem %}}
+ Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in R$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $R/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   
+{{% /proof %}}
 
 
 
