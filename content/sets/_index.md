@@ -866,7 +866,7 @@ Si $R$ una relación de equivalencia en un conjunto $A$, $aR b\Leftrightarrow R(
 {{% proof %}}
 $\Leftarrow$ En este caso $aRb$ pues $a\in R(b)$.
 
-$\Rightarrow$ Probemos $\subset$. Si $c\in R(a)$ es porque $cR a$. Como $aRb$, por la transitividad tenemos que $cR b$, así que $a\in R(b)$. La inclusión $\supset$ también es cierta porque, por la simetría, los papeles de $a$ y $b$ son intercambiables en el argumento anterior.
+$\Rightarrow$ Probemos $\subset$. Si $c\in R(a)$ es porque $cR a$. Como $aRb$, por la transitividad tenemos que $cR b$, así que $c\in R(b)$. La inclusión $\supset$ también es cierta porque, por la simetría, los papeles de $a$ y $b$ son intercambiables en el argumento anterior.
 {{% /proof %}}
 
 {{% theorem %}}
@@ -917,7 +917,7 @@ Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe el con
 
 
 {{% theorem name="Factorización canónica" %}}
-Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\cong\; \im f$ tal que el siguiente diagrama es conmutativo
+Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
 $$\require{AMScd}\begin{CD}A @>f>> B\cr @V{\pi}VV @AA{i}A\cr A/\sim_f @>>{\overline{f}}> \operatorname{im} f \end{CD}$$
 es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además, la aplicación $\overline{f}$ es biyectiva.
 {{% /theorem %}}

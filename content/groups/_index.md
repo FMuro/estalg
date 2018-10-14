@@ -3,275 +3,235 @@ title = "Grupos"
 weight = 20
 +++
 
-<!--
-
-## Introducción
-
-### Comencemos con un juego de cartas
-
-Tomemos 9 cartas de un mismo palo numeradas del 1 al 9. Empezamos con ellas ordenadas como se ve en la figura \ref{figura1}.
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=0.22]{permut1.eps}
- }
- \caption{Cartas ordenadas}
- \label{figura1}
-\end{figure}
-
-Ahora las separamos colocándolas alternativamente en dos montones boca abajo. Después montamos uno sobre otro y "cortamos" todas las veces que queramos y por donde queramos ("cortar" es pasar unas cuantas cartas de arriba a abajo sin desordenarlas ni mezclarlas).
-
-Después de hacer esto dos veces las cartas quedan bastante desordenadas, como
-puede verse en la figura \ref{figura2}.
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=0.22]{permut2.eps}
- }
- \caption{Cartas desordenadas}
- \label{figura2}
-\end{figure}
-
-Pero, para quedarnos más seguros del desorden, vamos a separarlas una tercera vez y, por supuesto, "cortar" cuantas veces queramos.
-
-Ahora miramos la carta de arriba
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=0.2]{permut3.eps}
- }
- \caption{Cartas de arriba}
- \label{figura3}
-\end{figure}
-
-\noindent
-y pasamos de arriba a abajo tantas cartas como indique el número (en el ejemplo de la figura \ref{figura3}, es el 4). Entonces, enseñamos las cartas y {\bf ¡todo está ordenado como al principio!}
-
-?`Qué es lo que ocurre? ?`Dónde está la magia?
-
-Lo que hemos visto es un juego de "magia" que no tiene ningún "truco". Es álgebra y nada más que álgebra lo que hay detrás de este juego. En las siguientes secciones vamos a profundizar en el modelo algebraico que nos va a permitir descubrir por qué se ordenan las cartas: {\bf El grupo de las permutaciones}. Y después volveremos al juego de cartas.
-
-### Permutaciones de un conjunto
-
-En cada paso del juego anterior "separamos" o "cortamos" las cartas, es decir, las cambiamos de orden. De esta manera estamos estableciendo una biyección
-entre las posiciones originales en las que se encuentran las cartas, aquellas que ocupan después de barajearlas. %A esto se llama una {\bf permutación}.
-Por ejemplo, en la figura \ref{figura2} se observa que la primera carta se ha quedado en su lugar, pero la segunda ahora está la octava, la tercera está la sexta, etcétera. 
-La biyección correspondiente es:
-$$\begin{array}{ccl} 1 & \rightarrow & 1\\ 2 & \rightarrow & 8\\ 3 & \rightarrow & 6\\ 4 & \rightarrow & 4\\ 5 & \rightarrow & 2\\ 6 & \rightarrow & 9\\ 7 & \rightarrow & 7\\ 8 & \rightarrow & 5\\ 9 & \rightarrow & 3.\end{array}$$.
-
-
+## Grupos
 
 {{% definition %}}
-{Permutación de un conjunto}
-{Sea $X$ un conjunto, se llama {\em permutación de }$X$ a cualquier aplicación biyectiva $\sigma\colon X\to X$.}
+Un **grupo** es un par $(G, \star )$,
+donde $G$ es un conjunto y $\star$ es una operación binaria en $G$, es decir una aplicación
+$$
+\begin{array}{rcl}
+G\times G&\stackrel{\star}{\longrightarrow}&G,\cr
+(x,y)&\mapsto&x\star y,
+\end{array}
+$$
+que ha de satisfacer las propiedades siguentes:
 
+* $(x\star y)\star z=x\star(y\star z)$ para todo $x,y,z\in G$ (**asociativa**).
 
+* Existe un elemento $e\in G$  tal que $x\star e=x=e\star x$ para todo  $x\in G$ (**elemento neutro**).
+
+* Para todo $x\in G$ existe $\inv{x}\in G$  tal que $x\star \inv{x}=e=\inv{x}\star x$ (elemento **simétrico** o **inverso**).
 {{% /definition %}}
 
+Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$.
 
-El conjunto de todas las permutaciones de un conjunto $X$ %se denomina {\em grupo simétrico de} $X$ y 
-se denota por $\Sim (X).$ Cuando trabajamos con permutaciones del conjunto $\\{1,2, \cdots, n\\}$, una manera concisa de representar una permutación es a través de una matriz con dos filas, la primera los números del $1$ al $n$, y la segunda sus imágenes . En nuestro ejemplo, la primera fila  indica la posición inicial y la segunda la nueva posición tras la permutación.
-\[
-\left(\begin{array}{ccccccccc}
-         1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
-         1 & 8 & 6 & 4 & 2 & 9 & 7 & 5 & 3
-        \end{array}\right)
-        \]
+{{% example name="Ejemplos de grupos" %}}
+Los siguientes son algunos grupos bien conocidos:
 
-Pero  $\Sim (X)$ es más que un conjunto. Las permutaciones son, en particular, aplicaciones, de manera que dadas dos permutaciones $\pi$ y $\sigma$ 
-podemos componerlas para obtener una nueva permutación $\pi \circ \sigma$.  (Recuerda que hemos visto que la composición de aplicaciones biyectivas es biyectiva)
-
-La composición de permutaciones satisface las siguientes propiedades.
-
-{{% proposition %}}
-{\label{grupo-permutaciones}}
-Sea $X$ un conjunto, se verifican las siguientes propiedades:
-\begin{enumerate}
-\item La composición de permutaciones  de $X$ es una permutación de $X$. Es decir,
-para cada par de permutaciones $\sigma ,\tau\in\Sim (X)$,  se tiene  que $\tau\circ\sigma\in\Sim (X).$
-\item La aplicación identidad en $X$, que denotaremos por $1_X$ es una permutación. Es decir,
-$1_X\in\Sim (X).$
-\item La inversa de cualquier permutación de $X$ es  una permutación de $X$. Es decir,
-para cada $ \sigma\in\Sim (X),$ su inversa $\sigma^{-1}$ también está en $\Sim (X).$
-\item La composición de permutaciones verifica la propiedad asociativa. Es decir,
-dadas $ \sigma ,\tau$ y $\rho\in\Sim (X)$, tenemos que  $\rho\circ (\tau\circ\sigma )=(\rho\circ\tau )\circ\sigma.$
-\end{enumerate}
-{{% /proposition %}}
-
-
-
-{{% proof %}}
-
-Ya hemos visto en el tema anterior que la composición de dos aplicaciones biyectivas es también biyectiva, como ambas van de $X$ en $X$, la composición de dos permutaciones es una permutación (1). Sabemos también que $1_X$ es una aplicación biyectiva de $X$ en $X$, luego $1_X\in\Sim (X)$ (2). Cada aplicación biyectiva tiene una aplicación inversa que es también biyectiva, si $\sigma$ es una aplicación biyectiva de $X$ en $X$ entonces $\sigma^{-1}\colon X\to X$ es una permutación (3). Por último, la composición de aplicaciones verifica la propiedad asociativa, en particular la composición de permutaciones también la verifica (4).
-{{% /proof %}}
-
-
-
-
-
-Sin duda nos hemos encontrado anteriormente con estas propiedades. Detengámonos a pensar cuándo. Los conjuntos $\Z$, $\Q$, $\R$ y $\C$ tienen definidos de manera natural dos operaciones, la suma y el producto. Con respecto a la suma, cada uno de ellos satisface las propiedades de la Proposición \ref{grupo-permutaciones}. (Los números naturales $\N$ no las hace ya que, por ejemplo, la inversa de $1$ con respecto a la suma es $-1$, que  no pertenece a $\N$).
-
-Con respecto al producto, ninguno de estos conjunto satisface la tercera propiedad de la Proposición \ref{grupo-permutaciones}, ya que el cero pertenece a todos ellos, pero el cero no tiene inversa. Por otra parte, si quitamos el cero de algunos de estos conjuntos, esto es, si consideramos  $\Q^*=\Q\setminus \\{0\\}$, $\R^*=\R\setminus \\{0\\}$ y $\C^*=\C\setminus \\{0\\}$, entonces se cumplen todas las propiedades de la  Proposición \ref{grupo-permutaciones}. Por otra parte, en el caso de $\Z$ junto con la operación de multiplicación, los único elementos que tienen inversa son $1$ y $-1$. La inversa de $2$ es $1/2$ que no pertenece a $\Z$. 
-
-Una pregunta al lector, ?`por qué no consideramos las operaciones de resta y división? ?`Satisfacen estas operaciones la propiedad asociativa?
-
-Para un ejemplo de naturaleza más geométrica que satisfaga las propiedades de la Proposición \ref{grupo-permutaciones}, el lector está invitado a verificar que el conjunto de las simetrí{}as de un cuadrado, (rotación de ángulo $\frac{\pi}{2}$, simetrí{}a con respecto a las diagonales, etc),  junto con la operación de composición.
-
-?`Qué es lo que ocurre? ?`Qué tienen en común estos ejemplos? Antes de empezar a investigar estas preguntas, introducimos una nueva definición, que nos evitará referirnos una y otra vez a la  Proposicion \ref{grupo-permutaciones}.
-
-Para esto, observemos que  en todos los ejemplos anteriores, tenemos tanto un conjunto $G$, como una operación (suma, producto, composición) entre sus elementos. Esto nos motiva a hacer la siguiente definición.
-
-{{% definition %}}
-{Operación} { 
-Una aplicación de $G\times G$ en $G$  tal que  a cada par ordenado $(a,b)\in G \times G$  le asocia un único elemento $a\star b$ de $G$
-se denomina {\bf{operación.}}}
-{{% /definition %}}
-
-Por ejemplo, en la discusión anterior, la operación  considerada para $Sim$ era la composición de aplicaciones, para $\Z$ la suma y para $\Q*$ el producto.
-
-En otros contextos es necesario trabajar con otros tipos de operaciones. Por esta razón, con frecuencia se dice que la  operación de grupo es binaria e interna.
- En este caso, el adjetivo binario se refiere a que el conjunto de partida es un producto cartesiano, y el adjetivo interno a que la aplicación se define entre $G \times G$ y $ G$. 
- Por ejemplo, la multiplicación de un vector por un escalar es una operación que no es interna.
-
-
-{{% definition %}}
-{Grupo} {Un {\bf grupo} es un par $(G, \star )$,
-donde $G$ es un conjunto y $\star$ es una operación 
- sobre $G$ verificando
- las siguentes propiedades:
- \begin{enumerate}
-  \item La operación es asociativa.
-  \item La operación tiene elemento neutro. Es decir, existe un elemento $ e\in G $  tal que  para todo  $x\in G$ se tiene que $ x\star e=e\star x=x.$
-  \item Cada elemento de $G$ posee un simétrico. Es decir,
-para cada $ x\in G$ existe un elemento $\inv{x}\in G$  tal que $x\star \inv{x}=\inv{x}\star x=e.$
- \end{enumerate}}
-{{% /definition %}}
-
-Una manera equivalente de presentar los resultados obtenidos en la Proposición \ref{grupo-permutaciones} es entonces la siguiente.
-
-{{% theorem %}}
-{El grupo simétrico}{El conjunto $\Sim (X)$ de las permutaciones de un conjunto $X$, junto con la composición de permutaciones, es un grupo.
-
-%Además, si $X$ tiene al menos tres elementos el grupo no es conmutativo.
-}
-{{% /theorem %}}
-
-
-
-Aprender matemáticas es un proceso activo. Cuando vemos una nueva definición es indispensable detenerse y pensar, buscar ejemplos, pensar en la motivación detrás de ella. ?`Por qué se introduce? ?`Qué nos dice? ?`Qué caracteristicas comparten (o no comparten) los diferentes ejemplos que lo satisfacen?
-
-
-
-{{% example name="Ejemplo" %}}
-\label{ejemplo-grupos} Hagamos una lista de algunos grupos que conocemos bien:
- \begin{enumerate}
-  \item $\Z$, $\Q$, $\R$ y $\C$ son grupos con la suma. En este caso el elemento neutro es el cero. El simétrico de un elemento $a$ es su opuesto $-a$. 
+* $\Z$, $\Q$, $\mathbb{R}$ y $\mathbb{C}$ son grupos con la operación suma $+$. En este caso el elemento neutro es el **cero** $0$. El simétrico de un elemento $x$ es su **opuesto** $-x$. Esta notación se denomina **aditiva** frente a la usada en la definición de grupo, que es la **multiplicativa**.
   
-  Es importante señalar esto porque en la definición de grupo se usa una {\bf notación multiplicativa} para el simétrico (el simétrico de $x$ es $\inv{x}$). Este debe ser modificado naturalmente cuando la operación del grupo es la suma (el simétrico de $a$ es $-a$).
+* $\Q\setminus\\{ 0\\}$, $\mathbb{R}\setminus\\{ 0\\}$ y $\mathbb{C}\setminus\\{ 0\\}$
+  son grupos  con la multiplicación. ¿Cuál es el elemento neutro?
   
-  \item $\Q^*=\Q\setminus\\{ 0\\}$, $\R^*=\R\setminus\\{ 0\\}$ y $\C^*=\C\setminus\\{ 0\\}$
-  son grupos  con la multiplicación.
-  \item El conjunto $\\{ -1,1\\}$ con el producto es un grupo con dos elementos.
-  \item El conjunto de las matrices $n\times n$, con elementos en un cuerpo $k$ y
-  determinante no nulo, GL$(n,k)$, es un grupo
-  con la multiplicación de matrices.
-  \item Las simetrí{}as de un poligono regular (triángulo, cuadrado, pentágono, etc), junto con la operación de composición es un grupo.
- \end{enumerate}
+* El conjunto $\\{ -1,1\\}$ con el producto.
+  
+* El conjunto $GL(n,k)$ de las matrices $n\times n$ con entradas en un cuerpo $k$ y  determinante no nulo, con la multiplicación de matrices.
 {{% /example %}}
 
-Una ventaja de trabajar con la definición de grupos, es que cualquier propiedad que podamos deducir de la definición será válida en cada uno de los ejemplos anteriores (y en cualquier otro grupo). Por ejemplo, algunas propiedades importantes que se deducen directamente de la definición de grupo son las siguientes:
 
 {{% proposition %}}
-
 El elemento neutro de un grupo $(G,\star)$ es único.
 {{% /proposition %}}
 
 {{% proof %}}
-
 Si $e$ y $e'$ son elementos neutros de $(G,\star)$, entonces se tiene:
 $$
    e = e\star e' = e',
 $$
-donde la primera igualdad se tiene por ser $e'$ elemento neutro, y la segunda se tiene por ser $e$ elemento neutro.
+donde la primera igualdad es cierta por ser $e'$ un elemento neutro, y la segunda por serlo $e$.
 {{% /proof %}}
 
 {{% proposition %}}
-
 En un grupo $(G,\star)$, el simétrico de un elemento $x\in G$ es único.
 {{% /proposition %}}
 
 {{% proof %}}
-
-Sea $x\in G$, y sean $y$, $z$ elementos simétricos de $x$. Se tiene:
+Sea $x\in G$, y sean $y$, $z$ elementos simétricos de $x$, es decir, que satisfacen
 $$
-    y= y\star e = y \star (x \star z) = (y \star x) \star z = e \star z = z.
+\begin{array}{rcl}
+x\star y=e=y\star x,\cr
+x\star z=e=z\star x.
+\end{array}
+$$
+Entonces,
+$$
+\begin{array}{rcl}
+    y&=& y\star e\cr
+     &=& y \star (x \star z)\cr
+      &=& (y \star x) \star z\cr
+       &=& e \star z\cr
+        &=& z.
+\end{array}
 $$
 {{% /proof %}}
 
-En el capí{}tulo 1 demostramos esta proposición para el ejemplo particular de las aplicaciones biyectivas. Ahora vemos que la propiedad la comparten todos los grupos. Gracias a este resultado, podemos denotar al simétrico de $x$ por $x^{-1}$ (o por $-x$ si estamos usando notación aditiva) sin ambig\"uedad, puesto que sólo hay un elemento simétrico. 
-Más aún, para comprobar que un elemento $y$ es el simétrico de un elemento $x$, no es necesario ver que $x\star y =e$ y que $y\star x=e$; bastará con comprobar una de estas dos condiciones:
+Gracias al resultado anterior, podemos denotar  $x^{-1}$ al simétrico de $x$ sin ambigüedad, o $-x$ si estamos usando notación aditiva. Cuando estudiamos los conjuntos demostramos un resultado análogo para aplicaciones biyectivas. 
 
 {{% proposition %}}
-
 Si $x$, $y$ son elementos de un grupo $(G,\star)$ tales que $x\star y=e$, entonces $y=x^{-1}$ y $x=y^{-1}$.
 {{% /proposition %}}
 
 {{% proof %}}
-
-A partir de $x\star y= e$, si multiplicamos esta igualdad desde la izquierda por $x^{-1}$, obtenemos $y = x^{-1}$.  Y si la multiplicamos desde la derecha por $y^{-1}$, obtenemos $x=y^{-1}$.
+A partir de $x\star y= e$, si multiplicamos por $x^{-1}$ por la izquierda, obtenemos 
+$$
+\begin{array}{rcl}
+y&=&e\star y\cr
+&=&x^{-1}\star x\star y\cr
+&=& x^{-1}\star e\cr
+&=&x^{-1}.
+\end{array}
+$$  
+Y si la multiplicamos por $y^{-1}$ por la derecha obtenemos 
+$$
+\begin{array}{rcl}
+x&=&x\star e\cr
+&=&x\star y\star y^{-1}\cr
+&=&e\star y^{-1}\cr
+&=&y^{-1}.
+\end{array}
+$$
 {{% /proof %}}
 
+{{% watch %}}
+¡Ojo! El resultado análogo a la proposición anterior para aplicaciones es falso. Es posible encontrar aplicaciones $f\colon X\rightarrow Y$ y $g\colon Y\rightarrow X$ que no son biyectivas tales que $g\circ f=1_X$ pero $f\circ g\neq 1_Y$. En cambio, si $f$ o $g$ es biyectiva y $g\circ f=1_X$ es fácil probar que ambas son biyectivas, $f=g^{-1}$ y $g=f^{-1}$.
+{{% /watch %}}
 
-Es imposible evitar preguntarse: ?`Qué sucede con la propiedad conmutativa? Ya que estamos en esto, ?`Todos los grupos satisfacen la propiedad conmutativa?
-La respuesta es un rotundo no, y esta es una observación muy importante. Por ejemplo, la composición de permutaciones no verifica la propiedad conmutativa.
+{{% proposition %}}
+Dados dos elementos $x,y$ en un grupo $(G,\star)$, $(x\star y)^{-1}=y^{-1}\star x^{-1}$.
+{{% /proposition %}}
 
-{{% example name="Ejemplo" %}}
-{\label{conmutativa}}
-Sea $X=\\{ 1,2,3\\}$ y sean las permutaciones de $X$
-$$\sigma\colon\left(\begin{array}{cccc}
-                     1 & 2 & 3\\
-                     2 & 1 & 3
-                    \end{array}\right)\mbox{ y }
-   \tau\colon\left(\begin{array}{cccc}
-                     1 & 2 & 3\\
-                     2 & 3 & 1
-                    \end{array}\right) .$$
-Es decir, $\sigma$ es la permutación que intercambia los números 1 y 2, dejando 3 invariante, y $\tau$ es la que lleva 1 en 2, 2 en 3 y 3 en 1.
+{{% proof %}}
+Basta comprobar que
+$$
+\begin{array}{rcl}
+(x\star y)\star(y^{-1}\star x^{-1})=
+x\star (y\star y^{-1})\star x^{-1}\cr
+=x\star e\star x^{-1}\cr
+=x\star x^{-1}\cr
+=e.
+\end{array}
+$$
+{{% /proof %}}
 
-Entonces las composiciones de $\sigma$ y $\tau$ son
-$$\tau\circ\sigma\colon\left(\begin{array}{cccc}
-                              1 & 2 & 3\\
-                              3 & 2 & 1
-                             \end{array}\right)\mbox{ y }
-  \sigma\circ\tau\colon\left(\begin{array}{cccc}
-                              1 & 2 & 3\\
-                              1 & 3 & 2
-                             \end{array}\right) .$$
-Como son permutaciones distintas, esto demuestra que la composición de permutaciones no es conmutativa {\em en general}\footnote{"En general" quiere decir que no negamos la posibilidad de que existan pares de permutaciones cuya composición sí conmute. Animamos al lector a buscar algún ejemplo de este hecho.}.
-
-
-De este ejemplo concluimos que  si $X$ tiene al menos tres elementos el grupo $Sim(X)$ no es conmutativo.
-
-{{% /example %}}
+También hemos probado con anterioridad una versión de la proposición anterior para aplicaciones biyectivas.
 
 {{% definition %}}
-{Grupo abeliano} {Dado un grupo $G$, si  la operación de grupo es conmutativa entonces se dice que el grupo es {\bf abeliano} o {\bf conmutativo}.}
+Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=x\star y$ para todo $x,y\in G$.
 {{% /definition %}}
 
-?`Cuáles de los grupos que aparecen en el Ejemplo 2.1.3 son abelianos?
 
-En esta breve introducción hemos observado que existen grupos finitos y grupos infinitos. Por otra parte, que existen grupos conmutativos (abelianos) y grupos no conmutativos. ?`Qué más podemos decir? La respuesta a esta pregunta es uno de los capí{}tulos más elegantes de las matemáticas, que empezaremos a estudiar ahora. 
-
+## El grupo simétrico
 
 
-%En el caso de las permutaciones de un conjunto $X$, la proposición \ref{grupo-permutaciones} demuestra que la composición es una operación   binaria sobre $\Sim (X)$, que verifica la propiedad asociativa, que $1_X$ es el elemento neutro, y que cada permutación $\sigma\in\Sim (X)$ tiene un elemento simétrico que es su inversa $\sigma^{-1}$. Además, si $X$ tiene al menos tres elementos, la composición no es conmutativa (ejemplo \ref{conmutativa}). Por tanto:
 
+{{% definition %}}
+Dado un conjunto $X$, una **permutación** de $X$ es una aplicación biyectiva $\sigma\colon X\to X$.
+{{% /definition %}}
+
+{{% proposition %}}
+El conjunto $\Sim(X)$ de todas las permutaciones de un conjunto $X$ es un grupo para la composición de aplicaciones, denominado **grupo simétrico**.
+{{% /proposition %}}
+
+{{% proof %}}
+Basta recordar que la composición de aplicaciones biyectivas es biyectiva. El elemento neutro es $1_X$. La existencia de inversas se probó también en el capítulo de conjuntos.
+{{% /proof %}}
+
+{{% remark %}}
+El **grupo simétrico de $n$ elementos** $S_n$ es el grupo simétrico del conjunto $\\{1,2, \cdots, n\\}$. Una manera concisa de representar una permutación de este conjunto es a través de una matriz con dos filas ($n=5$):
+$$
+\left(\begin{array}{ccccccccc}
+         1 & 2 & 3 & 4 & 5\cr
+         1 & 5 & 4 & 2 & 3
+        \end{array}\right)
+$$
+En la primera aparecen los números del $1$ al $n$. En la segunda fila, debajo de cada $i$ aparece $\sigma(i)$. En el ejemplo anterior $\sigma(1)=1$, $\sigma(2)=5$, $\sigma(3)=4$, etc. 
+
+El orden de las columnas no importa, es decir, la siguiente matriz denota la misma permutación que la anterior
+$$
+\left(\begin{array}{ccccccccc}
+         2 & 5 & 3 & 1 & 4\cr
+         5 & 3 & 4 & 1 & 4
+        \end{array}\right),
+$$
+si bien lo más común es que los números de la primera fila aparezcan ordenados, como en el primer caso.
+
+La permutación identidad es la que tiene ambas fila iguales
+$$
+\left(\begin{array}{ccccccccc}
+         1 & 2 & 3 & 4 & 5\cr
+         1 & 2 & 3 & 4 & 5
+        \end{array}\right).
+$$
+La permutación inversa se obtiene simplemente al intercambiar las filas
+$$
+\left(\begin{array}{ccccccccc}
+         1 & 5 & 4 & 2 & 3\cr
+         1 & 2 & 3 & 4 & 5
+        \end{array}\right)^{-1}
+        =
+        \left(\begin{array}{ccccccccc}
+         1 & 2 & 3 & 4 & 5\cr
+         1 & 4 & 5 & 3 & 2
+        \end{array}\right).
+$$
+{{% /remark %}}
+
+
+{{% example name="Grupos de permutaciones no abelianos" %}}
+Con la notación matricial, la composición de permutaciones en $S_n$ se puede realizar como en el siguiente ejemplo. Consideramos
+$$\sigma=\left(\begin{array}{ccc}
+                     1 & 2 & 3\cr
+                     2 & 1 & 3
+                    \end{array}\right),
+   \tau=\left(\begin{array}{ccc}
+                     1 & 2 & 3\cr
+                     2 & 3 & 1
+                    \end{array}\right)\in S_3.$$
+Para calcular $\sigma\circ\tau$ reordenamos las columnas de $\sigma$ de modo que su primera fila coincida con la segunda de $\tau$:
+$$\sigma=\left(\begin{array}{ccc}
+                     2 & 3 & 1\cr
+                     1 & 3 & 2
+                    \end{array}\right).$$
+La matriz de $\sigma\circ\tau$ consiste en la primera fila de $\tau$ seguida de la segunda de la última representación de $\sigma$,
+$$\sigma\circ\tau=\left(\begin{array}{ccc}
+                     1 & 2 & 3\cr
+                     1 & 3 & 2
+                    \end{array}\right).$$
+                    
+Calculamos ahora $\tau\circ\sigma$,
+$$
+   \tau=\left(\begin{array}{ccc}
+                     2 & 1 & 3\cr
+                     3 & 2 & 1
+                    \end{array}\right),
+$$
+y entonces
+$$
+   \tau\circ\sigma=\left(\begin{array}{ccc}
+                     1 & 2 & 3\cr
+                     3 & 2 & 1
+                    \end{array}\right).
+$$
+
+Observa que $\tau\circ\sigma\neq \sigma\circ\tau$. Esto demuestra que la composición de permutaciones no es conmutativa en general.
+
+Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres elementos el grupo $\Sim(X)$ no es abeliano.
+{{% /example %}}
+
+
+<!--
+
+## Introducción
 
 
 ## Ciclos y trasposiciones. El grupo $S_n$
