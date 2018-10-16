@@ -185,7 +185,7 @@ Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo
 
 
 {{% remark %}}
- Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. Además, $\operatorname{mcd}(a,b)=0$ si y solo si $a=0=b$ ya que en un dominio no hay divisores de cero. A diferencia de los dominios euclídeos, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
+ Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de los dominios euclídeos, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
 {{% /remark %}}
 
 
@@ -341,12 +341,12 @@ f_0&=&\frac{d}{e}\cdot f(x),\cr
 c&=&\frac{e}{d}.
 \end{array}$$
 
-Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in R[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in R$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del máximo común divisor, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in R$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
+Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in R[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in R$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del divisor común máximo, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in R$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
    {{% /proof %}}
 
 
 {{% remark %}}
-Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f(x))\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
+Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f)\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
 {{% /remark %}}
 
 
@@ -516,7 +516,7 @@ entonces $f$ es irreducible en $R[x]$.
 
 ## Enteros de Gauss
 
-Vamos a estudiar los primos y las factorizaciones en el anillo $\mathbb Z[i]$, que es un DFU por ser un DIP. En nuestros argumentos haremos uso de la conjugación, de la norma y de su cuadrado. Recordemos que el cero es el único elemento de norma cero y las unidades $\\{\pm1,\pm i\\}$ son los elementos de norma $1$.
+Vamos a estudiar los primos y las factorizaciones en el anillo $\mathbb Z[i]$, que es un DFU y un DIP por ser un DE. En nuestros argumentos haremos uso de la conjugación compleja, del módulo y de su cuadrado. Recordemos que el cero es el único elemento de módulo cero y las unidades $\\{\pm1,\pm i\\}$ son los elementos de módulo $1$.
 
 {{% proposition %}}
 Si $\pi\in\mathbb Z[i]$ es primo entonces su conjugado $\bar\pi$ también.
@@ -546,10 +546,11 @@ Todo entero primo $p\in\mathbb Z$ satisface una y solo una de las siguientes ecu
 Si $p\equiv 0$ mod $4$ entonces $p$ sería un múltiplo de $4$, con lo cual no sería primo. Si $p\equiv 2$ mod $4$ entonces $p=2+4n=2(1+2n)$ para cierto $n\in\mathbb Z$, que solo es primo si $1+2n$ es invertible en $\mathbb Z$, es decir si y solo si $p=\pm2$.
 {{% /proof %}}
 
+Los primos 5, 13, 17, 29, 37, 41, 53, 61... son 1 mod 4, y 3, 7, 11, 19, 23, 31, 43, 47... son 3 mod 4.
 
-{{% watch %}}
-Los primos 5, 13, 17, 29, 37, 41, 53, 61... son 1 mod 4, y 3, 7, 11, 19, 23, 31, 43, 47... son 3 mod 4. Demuestra que hay una cantidad infinita de primos que satisfacen tanto la primera como la segunda ecuación.
-{{% /watch %}}
+{{% exercise %}}
+Demuestra que hay una cantidad infinita de primos que satisfacen tanto la primera como la segunda ecuación.
+{{% /exercise %}}
 
 
 {{% proposition %}}
@@ -558,15 +559,13 @@ Si $\pi\in\mathbb Z[i]$ es tal que $|\pi|^2=p\in\mathbb Z$ es un entero primo en
 
 
 {{% proof %}}
-Probamos la primera parte por reducción al absurdo, supongamos que $\pi$ se descompone como producto de divisores propios $\pi=z_1z_2$ en $\mathbb Z[i]$. Entonces tenemos la ecuación $|z_1|^2|z_2|^2=|\pi|^2=p$ de números enteros. Como $p$ es primo en los enteros, necesariamente $|z_i|^2=1$ para algún $i\in\\{1,2\\}$, es decir, algún $z_i$ tendría que ser una unidad, lo cual es una contradicción.
+Supongamos que $\pi$ se descompone como $\pi=z_1z_2$ en $\mathbb Z[i]$. Entonces tenemos la ecuación $|z_1|^2|z_2|^2=|\pi|^2=p$ de números enteros. Como $p$ es primo en los enteros, necesariamente $|z_i|^2=1$ para algún $i\in\\{1,2\\}$, es decir, algún $z_i$ tendría que ser una unidad. Esto prueba que el entero de Gauss $\pi$ es irreducible, luego primo.
 
 Veamos la ecuación en congruencias. Si $\pi=a+ib$ entonces $p=|\pi|^2=a^2+b^2$. En $\mathbb Z/4$ los únicos elementos que son cuadrados de otros son $0,1\in\mathbb Z$, por tanto $p=a^2+b^2$ puede ser $0$, $1$ o $2$ módulo $4$. La primera posibilidad queda descartada por el lema anterior y la tercera solo se da cuando $p=2$.
 {{% /proof %}}
 
 
-{{% watch %}}
 De este modo vemos que $1+i$, $2+i$, $3+2i$, $4+i$, $5+2i$, $6+i$, $5+4i$, $7+2i$, $6+5i$... son primos en los enteros de Gauss, así como sus conjugados y asociados. En particular $5=(2+i)(2-i)$ es una factorización como producto de primos en $\mathbb Z[i]$.
-{{% /watch %}}
 
 
 {{% proposition %}}
@@ -581,7 +580,7 @@ Supongamos por reducción al absurdo que $p$ se descompone como producto de divi
 
 
 {{% proposition %}}
-Salvo asociados, $1+i\in\mathbb Z[i]$ es el único primo cuya norma al cuadrado es $2$.
+Salvo asociados, $1+i\in\mathbb Z[i]$ es el único primo cuyo módulo al cuadrado es $2$.
 {{% /proposition %}}
 
 
@@ -595,13 +594,11 @@ $$\begin{array}{rcl}
 \end{array}$$
   {{% /proof %}}
 
+{{% remark %}}
+La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(1-i)$. Los dos primos que aparecen en esta factorización son asociados.
+{{% /remark %}}
 
-{{% watch %}}
-La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(1-i)=(-i)(1+i)^2$.
-{{% /watch %}}
-
-
-Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como norma y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
+Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como móldulo al cuadrado y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
 
 {{% lemma %}}
 Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equiv -1$ mod $p$.
@@ -609,6 +606,7 @@ Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equ
 
 
 {{% proof %}}
+El resultado es obvio para $p=2$. Supongamos que $p>2$. 
 Observemos la definición del factorial $$(p-1)!=1\underbrace{2\cdots (p-2)}(p-1).$$ Como $p$ es primo, $\mathbb Z/(p)$ es un cuerpo y todo elemento no nulo es una unidad. Ningún factor de la definición de $(p-1)!$ es divisible por $p$, porque es menor. Por tanto todos son unidades módulo $p$. En $\mathbb Z/(p)$ las únicas unidades que son inversas de sí mismas son $\pm 1$ ya que estas son las únicas raíces del polinomio $x^2-1=(x-1)(x+1)$. El primer factor de $(p-1)!$ es $1$ y el último es $p-1\equiv -1$ mod $p$, por tanto, todos los factores de en medio tienen una inversa diferente, que es otro elemento del mismo producto. Dicho de otro modo, el producto de los $p-3$ factores centrales se puede dividir en $(p-3)/2$ pares de elementos mutuamente inversos módulo $p$, con lo que este producto es congruente con $1$ módulo $p$, así que $(p-1)!\equiv 1(p-1)\equiv -1$ mod $p$.
 {{% /proof %}}
 
@@ -620,13 +618,13 @@ Si $p\in\mathbb Z$ es un  entero primo tal que $p\equiv 1$ mod $4$ entonces $p|(
 
 {{% proof %}}
 Podemos suponer sin pérdida de genralidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces $$\begin{array}{rcl}(p-1)!&=&1\cdot 2\cdots (4n-1)\cdot (4n)\cr &=& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(2n+1)\cdot (2n+2)\cdots (4n-1)\cdot (4n)}.\end{array}$$ Para todo $1\leq i\leq 2n$, en $\mathbb Z/(p)$ el $i$-ésimo factor de la primera mitad es el opuesto por el signo del $i$-ésimo factor de la segunda mitad empezando por el final ya que ambos suman $4n+1=p\equiv 0$ mod $p$. Por tanto, módulo $p$, $$\begin{array}{rcl}(p-1)!&\equiv& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(-2n)\cdot (-2n-1)\cdots (-2)\cdot (-1)}\cr&\equiv&(-1)^{2n}\cdot 1^2\cdot 2^2\cdots (2n-1)^2 (2n)^2\cr &=&m^2\end{array}$$
-para $m=(2n)!$.
+para $m=(2n)!$. 
 {{% /proof %}}
 
 
-{{% watch %}}
-En la demostración hemos visto que si $p=4n+1\geq 0$ podemos tomar $m=(2n)!$, pero en general se pueden usar números más pequeños, concretamente siempre hay un $0{<}m{<}p$ adecuado ya que simplemente se trata de resolver la ecuación $x^2+1\equiv 0$ mod $p$. Por ejemplo, para $p=13=4\cdot 3+1$, $(2\cdot 3)!=720$ pero podemos tomar $m=5$.
-{{% /watch %}}
+{{% remark %}}
+En la demostración hemos visto que si $p=4n+1\geq 0$ podemos tomar $m=(2n)!$, pero en general se pueden usar números más pequeños, concretamente siempre hay un $0{<}m{<}p$ adecuado ya que simplemente se trata de resolver la ecuación $x^2+1\equiv 0$ mod $p$. Este $m$ es el resto de dividir $(2n)!$ por $p$. Por ejemplo, para $p=13=4\cdot 3+1$, $(2\cdot 3)!=720$ pero podemos tomar $m=5$.
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -641,7 +639,7 @@ Sabemos que $p|(m^2+1)$ para cierto $m\in\mathbb Z$, es decir $p|(m+i)(m-i)$ per
 
 
 {{% theorem %}}
-Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces, salvo asociados, hay exactamente dos primos en los enteros de Gauss cuya norma al cuadrado es $p$. Además estos dos primos son conjugados $\pi,\bar\pi\in\mathbb Z[i]$.
+Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces, salvo asociados, hay exactamente dos primos en los enteros de Gauss cuyo módulo al cuadrado es $p$. Además estos dos primos son conjugados $\pi,\bar\pi\in\mathbb Z[i]$.
 {{% /theorem %}}
 
 
@@ -657,16 +655,27 @@ i(a+ib)&=&-b+ia,\cr
 \end{array}$$
 Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera el primero tendríamos que $b=0$, pero entonces $p=|\pi|^2=a^2$, lo cual es una contradicción. Si fuera el segundo tendríamos que $a=0$ y llegaríamos a la contradicción $p=|\pi|^2=b^2$. Si fuera el tercero tendríamos que $a=-b$, con lo que $\pi=a(1-i)$, que solo es primo si $a$ es una unidad, pero en este caso $p=|\pi|^2=2\not\equiv 1$ mod $4$. Análogamiente si fuera el último tendríamos que $a=b$ y $\pi=a(1+i)$, incurriendo en la misma contradicción que en el caso anterior.
 
-Finalmente, comprobemos no puede haber más que estos primos de Gauss y sus asociados con norma al cuadrado $p$. En efecto, si $\pi'\in\mathbb Z[i]$ satisficiera $p=|\pi'|^2=\pi'\bar\pi'$ entonces como $\pi'|p=\pi\bar\pi$ tendríamos que bien $\pi'|\pi$ o bien $\pi'|\bar\pi$, es decir, como estos tres elementos son primos, $\pi'$ es asociado a $\pi$ o a $\bar\pi$.
+Finalmente, comprobemos no puede haber más que estos primos de Gauss y sus asociados con módulo al cuadrado $p$. En efecto, si $\pi'\in\mathbb Z[i]$ satisficiera $p=|\pi'|^2=\pi'\bar\pi'$ entonces como $\pi'|p=\pi\bar\pi$ tendríamos que bien $\pi'|\pi$ o bien $\pi'|\bar\pi$, es decir, como estos tres elementos son primos, $\pi'$ es asociado a $\pi$ o a $\bar\pi$.
   {{% /proof %}}
 
 
-{{% watch %}}
+{{% remark %}}
  En las condiciones del enunciado anterior, la factorización de $p$ en $\mathbb Z[i]$ es $p=\pi\bar\pi$. Para $p=5$ los dos primos de Gauss son $\pi=2+i$ y $\bar\pi=2-i$. Los asociados de $\pi$ son $2+i$, $-2-i$, $-1+2i$ y $1-2i$. Los asociados de $\bar\pi$ son los conjugados de los anteriores, $2-i$, $-2+i$, $-1-2i$ y $1+2i$.
-{{% /watch %}}
+{{% /remark %}}
 
 
-Hasta el momento hemos conseguido calcular aquellos primos de Gauss que son factores de un primo entero. Veamos que estos son todos los primos de Gauss posibles y que por tanto hemos dado ya una descripción completa de todos los primos en $\mathbb Z[i]$
+
+
+
+{{% example name="Factores de $p\equiv 1$ mod $4$" label="exm:prime1mod4" %}}
+Dado un entero primo $p\in\mathbb Z$ tal que $p\equiv 1$ mod $4$, podemos hallar su factorización como producto de primos $p=\pi\bar\pi$ en $\mathbb Z[i]$ del siguiente modo. Primero encontramos un $m\in\mathbb Z$ tal que $p|(m^2+1)$. Hemos visto en una demostración anterior que $p$ no divide a $m\pm i$, pero $\pi|p$ y $p|(m^2+1)=(m+i)(m-i)$, por tanto el primo de Gauss $\pi$ divide a $m+i$ o a su conjugado, y análogamente $\bar\pi$. Deducimos que $\pi$ y $\bar \pi$ son $\operatorname{mcd}(p,m+i)$ y $\operatorname{mcd}(p,m-i)$.
+
+Por ejemplo, para $p=13$ hemos visto que podemos tomar $m=5$. Calculamos $\operatorname{mcd}(13, 5+i)$, mediante el algoritmo de Euclides. Como el módulo de $13$ es mayor que el de $5+i$, comenzamos realizando la división euclídea del primero por el segundo, $$13=(5+i)\cdot 3+(-2-3i).$$ Ahora dividimos $5+i$ por el resto de la anterior división, $$(5+i)=(-2-3i)(-1+i)+0.$$
+El resto de esta división es $0$. El divisor común máximo es el último resto no nulo, $$\pi=-2-3i.$$
+{{% /example %}}
+
+
+Hasta el momento hemos conseguido factorizar los primos enteros en $\mathbb{Z}[i]$ y por tanto calcular aquellos primos de Gauss que son factores de un primo entero. Veamos que estos son todos los primos de Gauss posibles y que por tanto hemos dado ya una descripción completa de todos los primos en $\mathbb Z[i]$.
 
 {{% proposition %}}
 Todo primo en $\mathbb Z[i]$ divide a un primo en $\mathbb Z$.
@@ -677,45 +686,118 @@ Todo primo en $\mathbb Z[i]$ divide a un primo en $\mathbb Z$.
 Sea $\pi\in\mathbb Z[i]$ un primo. Factorizamos $|\pi|^2\in\mathbb Z$ como producto de primos enteros $|\pi|^2=p_1\cdots p_n$. Como $|\pi|^2=\pi\bar\pi$ entonces $\pi|p_1\cdots p_n$ así que $\pi|p_i$ para cierto $1\leq i\leq n$.
 {{% /proof %}}
 
+{{% remark %}}
+Recapitulando, los primos de Gauss son los siguientes, salvo asociados:
 
+* $1+i$.
 
-{{% example name="Factores de $p\equiv 1$ mod $4$" %}}
-Dado un entero primo $p\in\mathbb Z$ tal que $p\equiv 1$ mod $4$, podemos hallar su factorización como producto de primos $p=\pi\bar\pi$ en $\mathbb Z[i]$ del siguiente modo. Primero encontramos un $m\in\mathbb Z$ tal que $p|(m^2+1)$. Hemos visto en una demostración anterior que $p$ no divide a $m\pm i$, pero $\pi|p$ y $p|(m^2+1)=(m+i)(m-i)$, por tanto el primo de Gauss $\pi$ divide a $m+i$ o a su conjugado, y análogamente $\bar\pi$. Deducimos que $\pi$ y $\bar \pi$ son $\operatorname{mcd}(p,m+i)$ y $\operatorname{mcd}(p,m-i)$.
+* Los primos enteros $p\in \mathbb{Z}$, $p\geq 0$, tales que $p\equiv 3$ mod $4$.
 
-Por ejemplo, para $p=13$ hemos visto que podemos tomar $m=5$. Calculamos $\operatorname{mcd}(13, 5+i)$, mediante el algoritmo de Euclides. Como la norma de $13$ es mayor que la de $5+i$, comenzamos realizando la división euclídea del primero por el segundo, $$13=(5+i)\cdot 3+(-2-3i).$$ Ahora dividimos $5+i$ por el resto de la anterior división, $$(5+i)=(-2-3i)(-1+i)+0.$$
-El resto de esta división es $0$. El divisor común máximo es el último resto no nulo, $$\pi=-2-3i.$$
+* Para cada primo entero $p\in\mathbb{Z}$, $p\geq 0$, tal que $p\equiv 1$ mod $4$, dos primos de Gauss conjugados $\pi$ y $\bar{\pi}$ tales que $p=\pi\bar{\pi}$, cuyo cálculo se ha explicado en un [ejemplo anterior](#exm:prime1mod4).
 
+Hay una cantidad infinita de primos de Gauss tanto del segundo tipo como del tercer tipo. 
+En $\mathbb{Z}[i]$, los asociados de un elemento se obtienen multiplicándolo por las unidades $\\{\pm1,\pm i\\}$.
+{{% /remark %}}
+
+{{% example name="Factorizar un entero en $\mathbb Z[i]$" label="exm:integer" %}}
+Para factorizar $n\in\mathbb{Z}$, $n\neq 0,\pm1$, como producto de primos en $\mathbb{Z}[i]$, primero lo factorizamos como producto de primos en $\mathbb{Z}$, $n=p_1\cdots p_r$, y luego factorizamos cada $p_i\in\mathbb{Z}$ como producto de primos en $\mathbb{Z}[i]$. Recuerda que si $p_i\equiv 3$ mod $4$ entonces ya es primo de Gauss, la factorización del $2$  como producto de primos de Gauss es $2=(1+i)(1-i)$, y el caso $p_i\equiv 1$ mod $4$ se ha tratado [más arriba.](#exm:prime1mod4) Por ejemplo, 
+$$
+\begin{array}{rcl}
+n&=&1350\cr
+&=&2\cdot 3^3\cdot 5^2\cr
+&=&(1+i)\cdot(1-i)\cdot 3^3\cdot(2+i)^2\cdot(2-i)^2.
+\end{array}
+$$
 {{% /example %}}
 
+{{% definition %}}
+Diremos que un entero de Gauss $z=a+ib$ no tiene *parte entera* si $a\neq 0\neq b$ y $\operatorname{mcd}(a,b)=1$. 
+{{% /definition %}}
+
+{{% remark %}}
+Un entero de Gauss no tiene parte entera si y solo no es nulo, ni una unidad, y no tiene divisores propios enteros.
+{{% /remark %}}
+
+{{% lemma %}}
+Sea $z$ un entero de Gauss sin parte entera y $\pi$ un primo de Gauss tal que $|\pi|^2=p$ es un entero primo $p\equiv 1$ mod $4$. Si $\pi|z$ entonces $\bar{\pi}\nmid z$.
+{{% /lemma %}}
+
+{{% proof %}}
+Por reducción al absurdo, si también $\bar{\pi}\nmid p$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
+{{% /proof %}}
+
+{{% example name="Factorización de enteros de Gauss sin parte entera" label="exm:nointeger" %}}
+Sea $z\in\mathbb{Z}[i]$ sin parte entera. Supongamos que $z=\pi_1\cdots\pi_r$ es su factorización como producto de primos de Gauss. Como $z$ no tiene parte entera, ningún $\pi_i$ es un primo entero $p\equiv 3$ mod $4$, así que $|\pi_i|^2=2$, y en dicho caso $\pi_i$ es asociado de $1+i$, o bien $|\pi_i|^2=p$ es un primo entero $p\equiv 1$ mod $4$. Es más, en este último caso ni $\bar{\pi}_i$ ni ninguno de sus asociados puede aparecer en la factorización.
+
+Por tanto, para factorizar $z$ en $\mathbb{Z}[i]$ podemos proceder del siguiente modo. Primero, factorizamos $|z|^2$, salvo asociados, como producto de potencias de primos enteros no asociados, 
+$$|z|^2=\pm p_1^{n_1}\cdots p_s^{n_s}.$$
+Entonces 
+$$z=u\pi_1^{n_1}\cdots \pi_s^{n_s}$$
+donde:
+
+* Si $p_i=2$ entonces $\pi_i=1+i$.
+
+* Si $p_i\equiv 1$ mod $4$, entonces $\pi_i|p$. Para calcularlo, factorizamos $p$ como producto de primos de Gauss, $p=\pi\bar{\pi}$, según el [ejemplo anterior](#exm:prime1mod4) y dividimos $\frac{z}{\pi}$ en $\mathbb{C}$. Si $\frac{z}{\pi}$ resulta ser un entero de Gauss entonces $\pi_i=\pi$, y si no $\pi_i=\bar{\pi}$.
+
+* $u$ es una unidad, $u\in\\{\pm1,\pm i\\}$, que se determina a posteriori.
+
+Veámoslo en el caso particular $z=201-43i$. En este caso
+$$|z|^2=17^2+122^2=21125=2\cdot 5^3 \cdot 13^2.$$
+Las factorizaciones de $5$ y de $13$ en $\mathbb{Z}[i]$ son $3=(2+i)(2-i)$ y $13=(3+2i)(3-2i)$, por tanto
+$$z=u(1+i)(2\pm i)^3(3\pm 2i)^2.$$
+Para determinar qué factor del $5$ aparece realmente, dividimos $z$ por uno de ellos en $\mathbb{C}$, por ejemplo
+$$
+\begin{array}{rcl}
+\frac{z}{2+i}&=&\frac{(201-43i)(2-i)}{(2+i)(2-i)}\cr
+&=&\frac{359}{5}-\frac{287}{5}i.
+\end{array}
+$$
+Como no es un entero de Gauss, $2+i\nmid z$, sino que $2-i\mid z$, así que
+$$z=u(1+i)(2-i)^3(3\pm 2i)^2.$$
+Ahora, para hallar qué factor del $13$ aparece realmente, dividimos $z$ por uno de ellos en $\mathbb{C}$,
+$$
+\begin{array}{rcl}
+\frac{z}{3-2i}&=&\frac{(201-43i)(3+2i)}{(3-2i)(3+2i)}\cr
+&=&23+21i.
+\end{array}
+$$
+Este sí es un entero de Gauss, así que $3-2i\mid z$, luego
+$$z=u(1+i)(2-i)^3(3- 2i)^2.$$
+Para hallar la unidad, calculamos el producto de la derecha
+$$
+(1+i)(2-i)^3(3- 2i)^2=-43-201i,
+$$
+así que $u=i$,
+$$z=i(1+i)(2+i)^3(3\pm 2i)^2.$$
+La unidad $i$ se puede incorporar a cualquier factor primo, por ejemplo al primero, $i(1+i)=-1+i$, así que
+$$z=(-1+i)(2+i)^3(3\pm 2i)^2$$
+es una factorización de $z$ como producto de primos de Gauss.
+{{% /example %}}
 
 {{% example name="Factorización en $\mathbb Z[i]$" %}}
-Factorizar $n\in\mathbb Z$ en los enteros de Gauss es muy sencillo. Basta factorizarlo en $\mathbb Z$ y luego factorizar sus factores primos enteros en $\mathbb Z[i]$. Factorizar un entero de Gauss genérico $a+ib\in\mathbb Z[i]$ es más complejo. Primero factorizamos su norma al cuadrado $a^2+b^2$ en $\mathbb Z$. Analizando esta factorización obtenemos una de $a+ib\in\mathbb Z$ del siguiente modo:
+En general, todo entero de Gauss $z=a+ib\in\mathbb{Z}[i]$ se puede descomponer como $z=n\cdot z$, con $n=\operatorname{mcd}(a,b)$ y $z'\in\mathbb{Z}[i]$ sin parte entera. La factorización de $z$ como producto de primos de Gauss se obtiene multiplicando las correspondientes factorizaciones de $n$ y $z'$, que se realizan según indicamos [aquí](#exm:integer) y [aquí](#exm:nointeger).
 
-
-* Por cada $p^2$ con $p\equiv 3$ mod $4$ que aparezca en la factorización de $a^2+b^2$ tenemos un $p$ en la factorización de $a+ib$.
-
-* Por cada $2$ que aparezca en la factorización de $a^2+b^2$ tenemos un $1+i$ en la factorización de $a+ib$.
-
-* Si algún entero primo $p\equiv 1$ mod $4$ aparece en la factorización de $a^2+b^2$, miramos cuál es la máxima potencia $p^n$ que divide a $a+ib$ y de ahí extraemos otros tantos factores $\pi$ y $\bar\pi$ de $a+ib$.
-
-* Continuando con el apartado anterior, al dividir $a+ib$ por $p^n$ el cuadrado de su norma se nos divide por $p^{2n}$. Los factores $p$ que puedan quedar en el cuadrado de la norma después de hacer esta división se corresponden todos con el mismo divisor primo de $p$ en $\mathbb Z[i]$. Para comprobar de qué factor de $p$ se trata basta con dividir en $\mathbb C$ por uno de ellos $\pi$. Si el cociente es un entero de Gauss entonces se trata de este $\pi$ y si no del conjugado $\bar\pi$.
-
-Como los factores primos son únicos salvo asociados, es posible que al final tengamos que multiplicar por alguna unidad en $\mathbb Z[i]$ para recuperar el $a+ib$ con el que empezamos.
-
-Pongamos en práctica el método anterior tomando $15-45i\in\mathbb Z[i]$, $$|15-45i|^2=2250=2\cdot 3^2\cdot 5^3.$$
-
-* El $3^2$ nos dice que $3$ es un factor de $15-45i$.
-
-* El $2$ nos dice que $1+i$ es un factor de $15-45i$.
-
-* La mayor potencia de $5$ que didvide a $15-45i$ es simplemente $5^1$. Los factorización del $5$ en $\mathbb Z[i]$ es $5=(2+i)(2-i)$. Por tanto otros dos factores de $15-45i$ son $2+i$ y $2-i$.
-
-* El cociente de $15-45i$ por $5$ es $3-9i$, cuya norma al cuadrado es la de $15-45i$ dividida por $5^2$, es decir $|3-9i|^2=2\cdot 3^2\cdot 5$. Este último factor $5$ se corresponde con un factor $2+i$ o $2-i$ de $3-9i$ y de $15-45i$. Dividimos $3-9i$ por el primero en $\mathbb C$, $$\frac{3-9i}{2+i}=\frac{(3-9i)(2-i)}{5}=\frac{-3-21i}{5}.$$
-El resultado no es un entero de Gauss, por tanto el factor es $2-i$.
-
-Este cálculo nos dice que, salvo asociados, la factorización de $15-45i\in\mathbb Z[i]$ es $$3\cdot (1+i)\cdot (2+i)\cdot (2-i)\cdot (2-i)=45+15i=i(15-45i).$$
-Pasando la unidad $i$ al otro lado de la igualdad obtenemos una verdadera factorización de $15-45i\in\mathbb Z[i]$ como producto de primos, $$15-45i=(-3i)\cdot (1+i)\cdot (2+i)\cdot (2-i)\cdot (2-i).$$
-
+Por ejemplo, $z=15+45i=15(1+3i)$. Por un lado $n=15=3\cdot 5=3\cdot(2+i)\cdot (2-i)$. Por otro lado $z'=1+3i$, $|z'|^2=1^2+3^2=10=2\cdot 5$. Por tanto 
+$$z'=u(1+i)(2\pm i).$$
+Para saber qué factor de $5=(2+i)\cdot (2-i)$ divide a $z'$ realizamos la siguiente operación en $\mathbb{C}$,
+$$
+\begin{array}{rcl}
+\frac{1+3i}{2+i}&=&\frac{(1+3i)(2-i)}{(2+i)(2-i)}\cr
+&=&1+i.
+\end{array}
+$$
+Por tanto
+$$z'=u(1+i)(2+ i).$$
+De hecho, el cálculo anterior nos demuestra que la unidad es $u=1$, así que
+$$z'=(1+i)(2+ i).$$
+Por tanto
+$$
+\begin{array}{rcl}
+z&=&n\cdot z'\cr
+&=&3\cdot(2+i)\cdot (2-i)\cdot(1+i)\cdot (2+ i)\cr
+&=&3\cdot(2+i)^2\cdot (2-i)\cdot(1+i).
+\end{array}
+$$
 {{% /example %}}
 
 
@@ -749,15 +831,15 @@ def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
 
 A modo de ejemplo, vamos a estudiar aquí un par de ecuaciones diofánticas cuyas soluciones pasa por el estudio de los enteros de Gauss realizado anteriormente.
 
-Al comienzo del tema de anillos nos habíamos planteado como motivación el solucionar la ecuación diofántica $$x^2+y^2=5.$$ Ahora consideraremos más generalmente esta ecuación con un término independiente entero $n\geq 2$ cualquiera, $$x^2+y^2=n.$$
+Al comienzo del tema de anillos nos habíamos planteado como motivación el solucionar la ecuación diofántica $$x^2+y^2=5.$$ Ahora reemplazaremos el término independiente con un entero positivo $>1$ cualquiera.
 
 {{% theorem %}}
-La ecuación diofántica $$x^2+y^2=n$$ tiene solución si y solo si cualquier primo $p\equiv 3$ mod $4$ tiene exponente par en la factorización de  $n$.
+Dado $n\geq 2$, la ecuación diofántica $$x^2+y^2=n$$ tiene solución si y solo si cualquier primo $p\equiv 3$ mod $4$ tiene exponente par en la factorización de  $n$. Además, en dicho caso el número de soluciones es finito.
 {{% /theorem %}}
 
 
 {{% proof %}}
-La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales que $|x+iy|^2=n$, pues $|x+iy|^2=x^2+y^2$. Si $x+iy=\pi_1\cdots\pi_n$ es una factorización en $\mathbb Z[i]$ entonces $|x+iy|^2=|\pi_1|^2\cdots|\pi_n|^2$. Sabemos además que $|\pi_i|^2$ puede ser $2$, un primo $p\equiv 1$ mod $4$ o $p^2$ donde $p\equiv 3$ mod $4$. Esto demuestra la necesidad de la condición del enunciado. También la suficiencia porque, si se cumple, basta tomar $x+iy$ como el producto de:
+La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales que $|x+iy|^2=n$. Si $x+iy=\pi_1\cdots\pi_n$ es una factorización en $\mathbb Z[i]$ entonces $|x+iy|^2=|\pi_1|^2\cdots|\pi_n|^2$. Sabemos además que $|\pi_i|^2$ puede ser $2$, un primo $p\equiv 1$ mod $4$ o $p^2$ donde $p\equiv 3$ mod $4$. Esto demuestra la necesidad de la condición del enunciado. También la suficiencia porque, si se cumple, basta tomar $x+iy$ como el producto de:
 
 * Un factor $1+i$ por cada $2$ que aparezca en la factorización de $n$.
 
@@ -772,7 +854,7 @@ El conjunto de todas las soluciones se obtiene permitiendo reemplazar los $\pi$ 
 {{% example name="$x^2+y^2=1170$" %}}
 En este caso concreto $1170=2\cdot 3^2\cdot 5\cdot 13$. El único primo que vale $3$ módulo $4$ y que aparece en esta factorización es el propio $3$, con exponente par, por lo que la ecuación tiene solución. Una solución se corresponde con el entero de Gauss $x+iy$ obtenido al multiplicar los siguientes factores:
 
-* $1+i$ por aparecer el $2$ como factor de $90$.
+* $1+i$ por aparecer un $2$.
 
 * $2+i$ por haber un $5$ y $2+3i$ por haber un $13$.
 
@@ -802,23 +884,23 @@ $$
 La otra ecuación diofántica que vamos a considerar en este epígrafe es la **ecuación de Pitágoras** $$x^2+y^2=z^2.$$
 Sus soluciones positivas $x,y,z>0$ se denominan **ternas pitagóricas** y parametrizan los triángulos rectángulos con lados de medida entera.
 
-![symmetric_difference](../../images/pythagorean.png)
+![Terna pitagórica](../../images/pythagorean.png)
 
 Los papeles de $x$ e $y$ en la ecuación de Pitágoras son intercambiables, por lo que $(x,y,z)$ es una solución si y solo si lo es
 $$(y,x,z).$$
 Los signos de las soluciones son irrelevantes, es decir si $(x,y,z)$ es una solución entonces también lo son $$(\pm x,\pm y,\pm z).$$
-Las soluciones triviales son todas de la forma $(x,0,\pm x)$ o $(0,y,\pm y)$. Por tanto basta estudiar las ternas pitagóricas.
+Las soluciones triviales las de la forma $(x,0,\pm x)$ o $(0,y,\pm y)$. Por tanto basta estudiar las ternas pitagóricas.
 
 No hay ternas pitagóricas con $x$ e $y$ impares porque en ese caso $x\equiv\pm 1$ e $y\equiv \pm1$ mod $4$, así que $z^2=x^2+y^2\equiv 1+1=2$ mod $4$. Esto es imposible porque los únicos cuadrados en $\mathbb Z/(4)$ son $0$ y $1$.
 
-Si $(x,y,z)$ es una terna pitagórica y $d=\operatorname{mcd}(x,y)$ entonces $d^2|x^2$ y $d^2|y^2$ por lo que $d^2|z^2$. Por tanto $d|z$ y $$\left(\frac{x}{d},\frac{y}{d},\frac{z}{d}\right)$$ es otra terna pitagórica con $\operatorname{mcd}(\frac{x}{d},\frac{y}{d})=1$. En definitiva, podemos centrarnos en buscar las ternas pitagóricas $(x,y,z)$ tales $\operatorname{mcd}(x,y)=1$. Estas se denominan **ternas pitagóricas primitivas**. Las que no son primitivas se obtienen a partir de las primitivas multiplicando por enteros positivos. En una terna pitagórica primitiva $x$ e $y$ no pueden ser ambos pares. A la luz del párrafo anterior, $$x\not\equiv y \mod 2.$$
-Podemos pues suponer que en una terna pitagórica primitiva $(x,y,z)$, $x$ es impar e $y$ es par.
+Si $(x,y,z)$ es una terna pitagórica y $d=\operatorname{mcd}(x,y)$ entonces $d^2|x^2$ y $d^2|y^2$ por lo que $d^2|z^2$. Por tanto $d|z$ y $$\left(\frac{x}{d},\frac{y}{d},\frac{z}{d}\right)$$ es otra terna pitagórica con $\operatorname{mcd}(\frac{x}{d},\frac{y}{d})=1$. En definitiva, podemos centrarnos en buscar las ternas pitagóricas $(x,y,z)$ tales $\operatorname{mcd}(x,y)=1$. Estas se denominan **ternas pitagóricas primitivas**. Las que no son primitivas se obtienen a partir de las primitivas multiplicando por enteros positivos. En una terna pitagórica primitiva $x$ e $y$ no pueden ser ambos pares. A la luz del párrafo anterior, $x$ ha de ser par e $y$ impar, o viceversa, es decir, $$x\not\equiv y \mod 2.$$
+Podemos pues suponer que $x$ es impar e $y$ es par, el resto de ternas pitagóricas primitivas se obtendrán intercambiando la $x$ y la $y$.
 
 La conexión de la ecuación de Pitágoras con los enteros de Gauss proviene de que esta ecuación equivale a
 $$(x+iy)(x-iy)=z^2.$$
 
 {{% lemma %}}
-Dados $x,y\in\mathbb Z$ tenemos que $x\equiv y$ mod $2$ $\Leftrightarrow$ $(1+i)|(x+iy)$.
+Dados $x,y\in\mathbb Z$ no nulos, tenemos que $x\equiv y$ mod $2$ $\Leftrightarrow$ $(1+i)|(x+iy)$.
 {{% /lemma %}}
 
 
@@ -831,8 +913,8 @@ $\Leftarrow$ Si $(1+i)|(x+iy)$ entonces  $$x+iy=(1+i)(x'+iy')=(x'-y')+(x'+y')i$$
 
 En el siguiente lema caracterizamos en términos de los enteros de Gauss la condición sobre $x$ e $y$ que caracteriza las ternas pitagóricas que son primitivas.
 
-{{% lemma %}}
-Dados $x,y\in\mathbb Z$ tenemos que $\operatorname{mcd}(x,y)=1$ y $x\not\equiv y$ mod $2$ $\Leftrightarrow$ $\operatorname{mcd}(x+iy,x-iy)=1$.
+{{% lemma label="lem:mcdconj" %}}
+Dados $x,y\in\mathbb Z$ no nulos, tenemos que $\operatorname{mcd}(x,y)=1$ y $x\not\equiv y$ mod $2$ $\Leftrightarrow$ $\operatorname{mcd}(x+iy,x-iy)=1$.
 {{% /lemma %}}
 
 
@@ -843,13 +925,13 @@ $\Leftarrow$ Cualquier divisor común de $x$ e $y$ divide tanto a $x+iy$ como a 
   {{% /proof %}}
 
 
-{{% lemma %}}
-En un DFU $R$, las soluciones de la ecuación $xy=z^2$ con $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.
+{{% lemma label="lem:DFU" %}}
+En un DFU $R$, las soluciones de la ecuación $xy=z^2$ tales que $x,y,z$ no son nulos ni unidades y $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.
 {{% /lemma %}}
 
 
 {{% proof %}}
- Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2=1$.
+ Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $1=\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2$.
 {{% /proof %}}
 
 
@@ -860,7 +942,21 @@ Las ternas pitagóricas primitivas son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$
 
 
 {{% proof %}}
-La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el lema anterior, tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, en primera instancia $x+iy=(a+ib)^2$ y $x-iy=(a-ib)^2$. En particular $$\begin{array}{rcl} x&=&a^2-b^2,\cr y&=&2ab. \end{array}$$ Además, de nuevo por el lema anterior, $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$. La positividad de las ternas pitagóricas equivale a $a>b>0$. Además, claramente la primera coordenada es impar y la segunda par. Es sencillo comprobar que todas estas ternas satisfacen en efecto la ecuación de Pitágoras. En segunda instancia tendríamos que considerar más generalmente soluciones de la forma $x+iy=u(a+ib)^2$ y $x-iy=\bar u (a-ib)^2$, donde $u$ es una unidad en $\mathbb Z[i]$, pero se puede comprobar como ejercicio que por esta vía acabaríamos dando exactamente con las mismas ternas pitagóricas primitivas que antes.
+La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ 
+A la hora de hallar las ternas pitagóricas primitivas con $x$ impar e $y$ par, ni $x\pm iy$ ni $z$ pueden ser nulos o unidades en $\mathbb{Z}[i]$ porque eso produciría soluciones triviales. 
+Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el [lema anterior](#lem:DFU), tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, $x+iy=u(a+ib)^2$, $u=1,-1,i,-i$. Esto da lugar a las siguientes posibilidades:
+$$
+(x,y)=\left\\{\begin{array}{l}
+(a^2-b^2,2ab),\cr
+(b^2-a^2,-2ab),\cr
+(-2ab,a^2-b^2),\cr
+(2ab,b^2-a^2).
+\end{array}\right.
+$$
+Las dos últimas no dan lugar al tipo de terna pitagórica primitiva que estamos considerando, pues $x$ sería par. La primera sí, siempre que $a>b>0$, pues $x,y>0$. También si $ a < b < 0$, pero por este camino llegaríamos a las mismas ternas. La segunda posibilidad también da lugar a las mismas ternas que la primera. Así que podemos suponer que $x+iy=(a+ib)^2$ con $a>b>0$ y por tanto $x-iy=(a-ib)^2$.
+
+De nuevo por el [lema anterior](#lem:DFU), $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$, por el [lema de más arriba](#lem:mcdconj). Esto reduce todas las posibilidades a las que aparecen en el enunciado del teorema. Todas ellas son en efecto ternas pitagóricas primitivas como las que andamos buscando ya que sus tres coordenadas son positivas, la segunda es par, la primera impar pues $a\not\equiv b$ mod $2$, la primera y la segunda son comprimas, y además estas ternas resuleven la ecuación, puesto que
+$$(a^2-b^2)^2+(2ab)^2=(a^2+b^2)^2.$$
 {{% /proof %}}
 
 
