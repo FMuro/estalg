@@ -3,7 +3,7 @@ title = "Grupos"
 weight = 20
 +++
 
-## Grupos
+## Definiciones básicas
 
 {{% definition %}}
 Un **grupo** es un par $(G, \star )$,
@@ -23,7 +23,7 @@ que ha de satisfacer las propiedades siguentes:
 * Para todo $x\in G$ existe $\inv{x}\in G$  tal que $x\star \inv{x}=e=\inv{x}\star x$ (elemento **simétrico** o **inverso**).
 {{% /definition %}}
 
-Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$.
+Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$.
 
 {{% example name="Ejemplos de grupos" %}}
 Los siguientes son algunos grupos bien conocidos:
@@ -33,7 +33,9 @@ Los siguientes son algunos grupos bien conocidos:
 * $\Q\setminus\\{ 0\\}$, $\mathbb{R}\setminus\\{ 0\\}$ y $\mathbb{C}\setminus\\{ 0\\}$
   son grupos  con la multiplicación. ¿Cuál es el elemento neutro?
   
-* El conjunto $\\{ -1,1\\}$ con el producto.
+* El conjunto $\\{ 1,-1\\}$ con el producto.
+
+* El conjunto $\\{ 1,-1, i, -i\\}$ con el producto.
   
 * El conjunto $GL(n,k)$ de las matrices $n\times n$ con entradas en un cuerpo $k$ y  determinante no nulo, con la multiplicación de matrices.
 {{% /example %}}
@@ -52,7 +54,7 @@ donde la primera igualdad es cierta por ser $e'$ un elemento neutro, y la segund
 {{% /proof %}}
 
 {{% proposition %}}
-En un grupo $(G,\star)$, el simétrico de un elemento $x\in G$ es único.
+El simétrico de un elemento de un grupo $x\in G$ es único.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -66,11 +68,11 @@ $$
 Entonces,
 $$
 \begin{array}{rcl}
-    y&=& y\star e\cr
-     &=& y \star (x \star z)\cr
-      &=& (y \star x) \star z\cr
-       &=& e \star z\cr
-        &=& z.
+y&=& y\star e\cr
+&=& y \star (x \star z)\cr
+&=& (y \star x) \star z\cr
+&=& e \star z\cr
+&=& z.
 \end{array}
 $$
 {{% /proof %}}
@@ -78,11 +80,11 @@ $$
 Gracias al resultado anterior, podemos denotar  $x^{-1}$ al simétrico de $x$ sin ambigüedad, o $-x$ si estamos usando notación aditiva. Cuando estudiamos los conjuntos demostramos un resultado análogo para aplicaciones biyectivas. 
 
 {{% proposition %}}
-Si $x$, $y$ son elementos de un grupo $(G,\star)$ tales que $x\star y=e$, entonces $y=x^{-1}$ y $x=y^{-1}$.
+Si $x,y\in G$ son elementos de un grupo tales que $x\star y=e$, entonces $y=x^{-1}$ y $x=y^{-1}$.
 {{% /proposition %}}
 
 {{% proof %}}
-A partir de $x\star y= e$, si multiplicamos por $x^{-1}$ por la izquierda, obtenemos 
+A partir de $x\star y= e$,
 $$
 \begin{array}{rcl}
 y&=&e\star y\cr
@@ -91,7 +93,7 @@ y&=&e\star y\cr
 &=&x^{-1}.
 \end{array}
 $$  
-Y si la multiplicamos por $y^{-1}$ por la derecha obtenemos 
+Análogamente,
 $$
 \begin{array}{rcl}
 x&=&x\star e\cr
@@ -106,24 +108,103 @@ $$
 ¡Ojo! El resultado análogo a la proposición anterior para aplicaciones es falso. Es posible encontrar aplicaciones $f\colon X\rightarrow Y$ y $g\colon Y\rightarrow X$ que no son biyectivas tales que $g\circ f=1_X$ pero $f\circ g\neq 1_Y$. En cambio, si $f$ o $g$ es biyectiva y $g\circ f=1_X$ es fácil probar que ambas son biyectivas, $f=g^{-1}$ y $g=f^{-1}$.
 {{% /watch %}}
 
+{{% corollary %}}
+Todo elemento de un grupo $x\in G$ satisface $(x^{-1})^{-1}=x$.
+{{% /corollary %}}
+
 {{% proposition %}}
-Dados dos elementos $x,y$ en un grupo $(G,\star)$, $(x\star y)^{-1}=y^{-1}\star x^{-1}$.
+Dados dos elementos $x,y\in G$ en un grupo, $(x\star y)^{-1}=y^{-1}\star x^{-1}$.
 {{% /proposition %}}
 
 {{% proof %}}
 Basta comprobar que
 $$
 \begin{array}{rcl}
-(x\star y)\star(y^{-1}\star x^{-1})=
+(x\star y)\star(y^{-1}\star x^{-1})&=&
 x\star (y\star y^{-1})\star x^{-1}\cr
-=x\star e\star x^{-1}\cr
-=x\star x^{-1}\cr
-=e.
+&=&x\star e\star x^{-1}\cr
+&=&x\star x^{-1}\cr
+&=&e.
 \end{array}
 $$
 {{% /proof %}}
 
 También hemos probado con anterioridad una versión de la proposición anterior para aplicaciones biyectivas.
+
+Las **potencias** positivas de un elemento de un grupo $x\in G$ se definen como $$x^n=x\star\stackrel{n}{\cdots}\star x,\quad n>0.$$
+Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^mx^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera.
+
+
+{{% definition %}}
+Diremos que un elemento de un grupo $x\in G$ tiene **orden finito** si existe un entero positivo $n>0$ tal que $x^n=e$. En este caso, el **orden** de $x$, que denotaremos $o(x)$, es el menor entero positivo que cumple esta propiedad.
+{{% /definition %}}
+
+{{% example name="Elementos de orden finito" %}}
+En cualquier grupo, el elemento neutro es el único que tiene orden $1$.
+
+En el grupo $\\{1,-1,i,-i\\}$ con el producto, el orden de $-1$ es $2$, mientras que el orden de $i$ y de $-i$ es $4$.
+{{% /example %}}
+
+{{% proposition %}}
+Un elemento de un grupo $x\in G$ tiene orden infinito si y solo si todas sus potencias $x^k$ con $k\in \mathbb Z$ son distintas.
+{{% /proposition %}}
+
+{{% proof %}}
+En lugar de demostrar $A\Leftrightarrow B$ probaremos NO $A$ $\Leftrightarrow$ NO $B$.
+
+Si $x$ es de orden $n>0$ entonces $x^n=e=x^0$.
+
+Si $x$ tiene dos potencias iguales, digamos $x^r=x^s$ con $r>s$, entonces 
+$$
+\begin{array}{rcl}
+x^{r-s}&=&x^r\star x^{-s}\cr
+&=&x^s\star x^{-s}\cr
+&=&x^0\cr
+&=&e.
+\end{array}$$ 
+Como $r-s>0$, esto prueba que $x$ tiene orden finito.
+{{% /proof %}}
+
+{{% corollary %}}
+Si $G$ es un grupo finito, todo elemento tiene orden finito.
+{{% /corollary %}}
+
+{{% proposition %}}
+Dado un elemento de un grupo $x\in G$, si $o(x)=m$ y $x^n=e$, entonces $m$ divide a $n$.
+{{% /proposition %}}
+
+{{% proof %}}
+Por definición de orden $n\geq m$. Sean $c$ y $r$ el cociente y el resto de la división de $n$ por $m$, $n=m\cdot c+r$. El resto es $0\leq r<m$. Basta probar que $r=0$. Por reducción al absurdo, si $r>0$ entonces
+$$
+\begin{array}{rcl}
+x^r&=&x^{n-m\cdot c}\\
+&=&x^n\star (x^m)^{-c}\\
+&=&e\star e^{-c}\\
+&=&e.
+\end{array}
+$$
+Como $0<r<m$, esto contradice $o(x)=m$.
+{{% /proof %}}
+
+{{% proposition %}}
+Un elemento de un grupo $x\in G$ tiene orden finito si y solo si $\inv{x}$ también. En este caso $o(x)=o(\inv{x})$.
+{{% /proposition %}}
+
+{{% proof %}}
+Si $o(x)=n$ entonces 
+$$
+\begin{array}{rcl}
+(x^{-1})^m&=&x^{-n}\cr
+&=&(x*^n)^{-1}\cr
+&=&e^{-1}\cr
+&=&e.
+\end{array}
+$$
+Por tanto $x^{-1}$ es de orden finito y además $o(x^{-1})\leq o(x)$.
+
+Usando que $(x^{-1})^{-1}=x$, deducimos la otra implicación y la otra desigualdad $o(x)\leq o(x^{-1})$.
+{{% /proof %}}
+
 
 {{% definition %}}
 Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=x\star y$ para todo $x,y\in G$.
@@ -131,8 +212,6 @@ Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=x\star y$ p
 
 
 ## El grupo simétrico
-
-
 
 {{% definition %}}
 Dado un conjunto $X$, una **permutación** de $X$ es una aplicación biyectiva $\sigma\colon X\to X$.
@@ -156,6 +235,8 @@ $$
 $$
 En la primera aparecen los números del $1$ al $n$. En la segunda fila, debajo de cada $i$ aparece $\sigma(i)$. En el ejemplo anterior $\sigma(1)=1$, $\sigma(2)=5$, $\sigma(3)=4$, etc. 
 
+![Permutación](../images/permutation.png)
+
 El orden de las columnas no importa, es decir, la siguiente matriz denota la misma permutación que la anterior
 $$
 \left(\begin{array}{ccccccccc}
@@ -174,20 +255,26 @@ $$
 $$
 La permutación inversa se obtiene simplemente al intercambiar las filas
 $$
+\begin{array}{rcl}
+\left(\begin{array}{ccccccccc}
+         1 & 2 & 3 & 4 & 5\cr
+         1 & 5 & 4 & 2 & 3
+        \end{array}\right)^{-1}&=&
 \left(\begin{array}{ccccccccc}
          1 & 5 & 4 & 2 & 3\cr
          1 & 2 & 3 & 4 & 5
-        \end{array}\right)^{-1}
-        =
+        \end{array}\right)\cr
+        &=&
         \left(\begin{array}{ccccccccc}
          1 & 2 & 3 & 4 & 5\cr
          1 & 4 & 5 & 3 & 2
         \end{array}\right).
+\end{array}
 $$
 {{% /remark %}}
 
 
-{{% example name="Grupos de permutaciones no abelianos" %}}
+{{% example name="Composición de permutaciones" %}}
 Con la notación matricial, la composición de permutaciones en $S_n$ se puede realizar como en el siguiente ejemplo. Consideramos
 $$\sigma=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
@@ -228,278 +315,172 @@ Observa que $\tau\circ\sigma\neq \sigma\circ\tau$. Esto demuestra que la composi
 Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres elementos el grupo $\Sim(X)$ no es abeliano.
 {{% /example %}}
 
+## Ciclos y trasposiciones
+
+{{% definition %}}
+Dado un conjunto $X$ el **soporte** de una permutación $\sigma\colon X\rightarrow X$ es el subconjunto
+$$\sop (\sigma )=\\{ x\in X\mid \sigma (x)\ne x\\} .$$
+
+Decimos que $\sigma\in \Sim(X)$ es un **ciclo** de **longitud** $r$, o un **$r$-ciclo**, si su soporte es un conjunto finito de $r$ elementos $$\sop (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$ y además
+$$
+\left\\{
+\begin{array}{ll}
+\sigma(x\_i)=x\_{i+1},& 1\leq i<n,\cr 
+\sigma (x\_n)=x\_1.
+\end{array}\right.
+$$
+Este ciclo se denotará también $$\sigma=(x\_1\; x\_2\;\cdots\; x\_n).$$
+
+Una **trasposición** es un ciclo de longitud 2.
+{{% /definition %}}
+
+Un ejemplo de ciclo donde el soporte es el total:
+
+![Un ciclo](../images/cycle.png)
+
+Otro donde el soporte es un subconjunto propio:
+
+![Otro ciclo](../images/cycle2.png)
+
+Un ejemplo de trasposición entre elementos consecutivos:
+
+![Un ciclo](../images/transposition.png)
+
+Un ejemplo de trasposición entre elementos *no* consecutivos:
+
+![Otro ciclo](../images/transposition2.png)
+
+
+{{% watch %}}
+La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \; x\_1 \; x\_2)=(x\_2 \; x\_3 \; x\_1)$. 
+{{% /watch %}} 
+
+{{% remark %}}
+Dada una permutación $\sigma\in\Sim(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\sop(\sigma)=\sop(\sigma^{-1})$.
+{{% /remark %}}
+
+Cualquier notación bidimensional para los ciclos es intrínsecamente mala, lo ideal sería algo así:
+![Ciclos circulares](../images/circular_cycle.png)
+
+{{% proposition %}}
+Todo ciclo es producto de trasposiciones.
+{{% /proposition %}}
+
+{{% proof %}}
+Es fácil comprobar que $(x\_1\;\cdots\; x\_n)=(x\_1\; x\_2)\cdots (x\_{n-1}\; x\_n)$.
+{{% /proof %}}
+
+
+{{% definition %}}
+Dos permutaciones $\sigma ,\tau\in\Sim (X)$ son **disjuntas** si sus soportes son disjuntos, $\sop(\sigma)\cap \sop(\tau)=\varnothing$.
+{{% /definition %}}
+
+{{% lemma label="lem:soporte" %}}
+Dada $\sigma\in\Sim (X)$, si $x\in\sop(\sigma)$ entonces $\sigma(x)\in\sop(\sigma)$.
+{{% /lemma %}}
+
+{{% proof %}}
+En vez de $A\Rightarrow B$ probaremos NO $A$ $\Leftarrow$ NO $B$.
+
+Si $\sigma(x)\notin\sop(\sigma)$ entonces $\sigma(\sigma(x))=\sigma(x)$. Como $\sigma$ es inyectiva, esto implica que $\sigma(x)=x$, con lo que $x\notin\sop(x)$.
+{{% /proof %}}
+
+{{% corollary label="cor:soporte" %}}
+Dada $\sigma\in\Sim (X)$, si $x\in\sop(\sigma)$ entonces $\sigma^{n}(x)\in\sop(\sigma)$ para todo $n\in\mathbb{Z}$.
+{{% /corollary %}}
+
+{{% proof %}}
+Para $n=0$ es obvio. Si $n>0$, es consecuencia del [lema anterior](#lem:soporte), por inducción. Si $n=-1$, se sigue también del lema anterior ya que $\sop(\sigma)=\sop(\sigma^{-1})$. De aquí se deduce también por inducción para todo $n<0$.
+{{% /proof %}}
+
+{{% proposition %}}
+Si $\sigma,\tau\in\Sim (X)$ son permutaciones disjuntas entonces $\tau\sigma =\sigma\tau$.
+{{% /proposition %}}
+
+{{% proof %}}
+Tenemos que demostrar que $\tau\sigma (x)=\sigma\tau (x)$ para todo  $x\in X$. 
+
+Si $x\notin\sop (\sigma )\cup\sop (\tau )$ entonces $\sigma(x)=x=\tau(x)$, luego
+$$
+\begin{array}{rcl}
+\tau\sigma (x)&=&\tau(x)\cr
+&=&x\cr
+&=&\sigma(x)\cr
+&=&\sigma\tau (x).
+\end{array}
+$$
+
+Si $x\in\sop (\sigma )$, como las permutaciones son disjuntas entonces $x\notin\sop (\tau )$, luego $\tau (x)=x$, así que $\sigma\tau (x)=\sigma(x)$. Es más, por el [lema anterior](#lem:soporte) $\sigma(x)\in\sop (\sigma )$, luego $\sigma(x)\notin\sop (\tau )$ y por tanto también $\tau\sigma (x)=\sigma(x)$.
+
+Como los papeles de $\sigma$ y $\tau$ son intercambiables, el argumento anterior también demuestra que $\tau\sigma (x)=\sigma \tau(x)$ si $x\in\sop (\tau)$.
+{{% /proof %}}
+
+{{% watch %}}
+El recíproco no es cierto.
+{{% /watch %}}
+
+{{% proposition %}}
+El orden de un ciclo coincide con su longitud.
+{{% /proposition %}}
+
+{{% proof %}}
+Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \Sim(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
+{{% /proof %}}
+
+{{% theorem %}}
+Toda permutación con soporte finito se puede descomponer como producto de ciclos disjuntos. Esta descomposición es única salvo orden.
+{{% /theorem %}}
+
+{{% proof %}}
+Sea $\sigma\in\Sim (X)$ una permutación. Definimos una relación de equivalencia $\sim$ en $X$ del siguiente modo: $x\sim y$ si existe $n\in\mathbb{Z}$ tal que $y=\sigma^n(x)$. Esta relación es de equivalencia: 
+
+* Reflexividad: $x\sim x$ es cierto para todo $x\in X$ ya que $x=1_X(x)=\sigma^0(x)$.
+
+* Simetría: $x\sim y\Leftrightarrow y\sim$ pues $y=\sigma^n(x)$ es equivalente a $\sigma^{-n}(y)=x$.
+
+* Transitividad: si $x\sim y\sim z$ entonces $y=\sigma^n(x)$ y $z=\sigma^m(y)$ para ciertos $n,m\in\mathbb{Z}$, luego $z=\sigma^m(\sigma^n(x))=\sigma^{m+n}(x)$, así que $x\sim z$.
+
+Las clases de equivalencia de esta relación se denominan **órbitas**. La órbita de $x\in X$ es 
+$$\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}.$$
+Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito. Veamos que en general $\bar{x}=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ para cierto $m\geq 0$. Sea $m\geq 0$ el mínimo tal que $\sigma^m(x)=x$, que ha de existir porque las órbitas son finitas. Basta comprobar que, para todo $n\in\mathbb {Z}$, $\sigma^n(x)=\sigma^r(x)$ donde $r$ es el resto no negativo de la división de $n$ por $m$, $n=m\cdot c+r$, $0\leq r<m$. En efecto,
+$$
+\begin{array}{rcl}
+\sigma^n(x)&=&\sigma^{r+m\cdot c}(x)\cr
+&=&\sigma^r(\sigma^m)^c(x).
+\end{array}
+$$
+Como $\sigma^m(x)=x$ entonces $x=\sigma^{-m}(x)$, y $(\sigma^m)^c(x)=0$ sea cual sea $c\in\mathbb{Z}$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
+
+Por construcción, $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y su la relación de equivalencia asociada.
+{{% /proof %}}
+
+
+{{% corollary %}}
+Toda permutación con soporte finito puede descomponerse como producto de trasposiciones.
+{{% /corollary %}}
+
+{{% watch %}}
+La descomposición de una permutación como producto de trasposiciones no satisface ninguna propiedad de unicidad.
+{{% /watch %}}
+
+{{% example name="Descomposición como producto de ciclos" %}}
+Consideremos la permutación
+$$\sigma=\left(\begin{array}{ccccccc}
+                     1 & 2 & 3 & 4 & 5 & 6 & 7\cr
+                     3 & 6 & 5 & 1 & 4 & 2 & 7
+                    \end{array}\right)\in S_7 .$$
+Las órbitas son:
+$$\begin{array}{rcl}
+\overline{1}&=&\\{ 1,3,5,4\\},\cr
+\overline{2}&=&\\{ 2,6\\},\cr
+\overline{7}&=&\\{ 7\\}.
+\end{array}$$
+Por tanto $\sigma =(1\;3\;5\;4)(2\;6)=(2\;6)(1\;3\;5\;4)=(1\;3)(3\;5)(5\;4)(2\;6)$.
+{{% /example %}}
+
 
 <!--
 
-## Introducción
-
-
-## Ciclos y trasposiciones. El grupo $S_n$
-
-### Ciclos y trasposiciones
-Sean $X$ un conjunto y $\sigma$ una permutación de $\Sim (X)$. Llamamos {\em soporte} de $\sigma$ al conjunto
-$$\sop (\sigma )=\\{ x\in X\mid \sigma (x)\ne x\\} .$$
-
-{{% definition %}}
-{Ciclos y trasposiciones}
-{Se dice que $\sigma\in \Sim(X)$  es un {\bf ciclo de longitud $0$}, o un {\bf $0$-ciclo}, si es la identidad.
-
-
-Se dice que $\sigma\in \Sim(X)$ es un {\bf ciclo de longitud $r$}, o un {\bf $r$-ciclo} (con $r\geq 2$), si su soporte es un conjunto finito de $r$ elementos
-$$\sop (\sigma )=\\{ i_1,i_2,\ldots ,i_r\\}$$
-donde $\sigma (i_1)=i_2$, $\sigma (i_2)=i_3$, $\ldots$, $\sigma (i_{r-1})=i_r$ y $\sigma (i_r)=i_1$.
-
-
-
-Decimos que $\sigma\in\Sim (X)$ es una {\bf trasposición} si es un ciclo de longitud 2.}
-{{% /definition %}}
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics[scale=0.5]{Ciclo.eps}
- }
- \caption{Ciclo}
- \label{ciclo}
-\end{figure}
-
-{{% watch %}}
-{\label{nota231}}
-Sea $\sigma\in\Sim (X)$ un ciclo tal que $\sop (\sigma )=\\{ i_1,i_2,\ldots ,i_r\\}$ donde $\sigma (i_1)=i_2$, $\sigma (i_2)=i_3$, $\ldots$, $\sigma (i_r)=i_1$. Entonces escribiremos $\sigma$ de la siguiente forma
-$$\sigma =(i_1i_2\ldots i_r)$$
-sabiendo que si $x\in X$ no aparece en la lista entonces $\sigma (x)=x$.
-
-Obsérvese que con esta notación tenemos diferentes representaciones de un mismo ciclo:
-$$\sigma =(i_1i_2\ldots i_r)=(i_2i_3\ldots i_ri_1)=\cdots =(i_ri_1\ldots i_{r-1}).$$
-
-Siguiendo esta notación podemos escribir el ciclo identidad como
-$$1_X=(),$$
-pues $\sop (1_X)=\varnothing$ y todos los elementos que no aparecen entre los paréntesis (o sea, todos los elementos de $X$) quedan invariantes.
-{{% /watch %}}
-
-{{% example name="Ejemplo" %}}
-
-\begin{enumerate} Veamos algunos ejemplos:
-\item La permutación del conjunto $\\{ 1,2,3,4,5\\}$ definida por
-$$\sigma\colon \left(\begin{array}{ccccc}
-                     1 & 2 & 3 & 4 & 5\\
-                     2 & 5 & 3 & 4 & 1
-                    \end{array}\right)$$
-es el $3$-ciclo $(1\ 2\ 5)$.
-\item La permutación del conjunto $\\{ 1,2,3,4,5,6,7,8\\}$ definida por
-$$\sigma\colon \left(\begin{array}{cccccccc}
-                     1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
-                     6 & 1 & 5 & 8 & 7 & 2 & 3 & 4
-                    \end{array}\right)$$
-no es un ciclo. Sin embargo $\tau =(1\ 6\ 2)\circ (3\ 5\ 7)\circ (4\ 8)$ es composición de ciclos, veremos más adelante que este es un hecho general para permutaciones de conjuntos finitos.
-\end{enumerate}
-{{% /example %}}
-
-{{% watch %}}
-
-En adelante, siempre que no haya posibilidad de equívoco, prescindiremos en un grupo $(G,\star )$ del símbolo "$\star$" para la operación de dos (o más) elementos. Escribiremos por yuxtaposición $xy$ en lugar de $x\star y$.
-
-\noindent En particular, en el caso de permutaciones, escribiremos $\tau\sigma$ en lugar de $\tau\circ\sigma$.
-{{% /watch %}}
-
-{{% definition %}}
-{Permutaciones disjuntas}
-{Dos permutaciones $\sigma ,\tau\in\Sim (X)$ se dicen {\bf disjuntas} si sus soportes son disjuntos.}
-{{% /definition %}}
-
-{{% theorem %}}
-{Permutaciones disjuntas y conmutatividad}
-{Si $\sigma,\tau\in\Sim (X)$ son permutaciones disjuntas entonces $$\tau\sigma =\sigma\tau.$$}
-{{% /theorem %}}
-
-{{% proof %}}
-
-Dado $x\in X$ tenemos que demostrar que $\tau\sigma (x)=\sigma\tau (x)$. Si $x\notin\sop (\sigma )\cup\sop (\tau )$ entonces
-$$\tau\sigma (x)=x=\sigma\tau (x).$$
-Si $x\in\sop (\tau )$ entonces $x\notin\sop (\sigma )$, luego $\tau\sigma (x)=\tau (x)$.
-Por otra parte, como $\tau(x)\neq x$ y $\tau$ es biyectiva, tenemos $\tau(\tau(x))\neq \tau(x)$. Es decir, $\tau(x)\in\sop (\tau )$. Por tanto, $\tau(x)\not\in\sop (\sigma)$, lo que implica $\sigma\tau(x)=\tau(x)$.
-%Tenemos que demostrar que $\sigma\tau (x)=\tau (x)$, si no es así entonces $\tau (x)\in\sop (\sigma )$ y por tanto $\tau (x)\notin\sop (\tau )$, lo cual lleva a $\tau (\tau (x))=\tau (x)$. Aplicando $\tau^{-1}$ en la expresión anterior obtenemos $\tau (x)=x$. Pero esto es contradictorio, pues $x\in\sop (\tau )$.
-Luego
-$$\tau\sigma (x)=\tau (x)=\sigma\tau (x).$$
-Análogamente, si $x\in\sop (\sigma )$ se demuestra que
-$$\sigma\tau (x)=\sigma (x)=\tau\sigma (x).$$
-{{% /proof %}}
-
-El recíproco no es cierto, es decir, si dos permutaciones conmutan no tienen por qué ser disjuntas. Veámoslo con un ejemplo.
-
-{{% example name="Ejemplo" %}}
-
-Sea $X=\\{ 1,2,3,4,5\\}$ y sean las permutaciones de $\Sim (X)$
-$$\sigma\colon\left(\begin{array}{ccccc}
-                     1 & 2 & 3 & 4 & 5\\
-                     3 & 4 & 5 & 2 & 1
-                    \end{array}\right)\mbox{ y }
-   \tau\colon\left(\begin{array}{ccccc}
-                     1 & 2 & 3 & 4 & 5\\
-                     5 & 2 & 1 & 4 & 3
-                    \end{array}\right) .$$
-Ambas permutaciones no son disjuntas, pues $\sop (\sigma )\cap\sop (\tau )=\\{ 1,3,5\\}$. Sin embargo, no es difícil comprobar que
-$$\tau\sigma=\sigma\tau\colon \left(\begin{array}{ccccc}
-                                     1 & 2 & 3 & 4 & 5\\
-                                     1 & 4 & 3 & 2 & 5
-                                    \end{array}\right) .$$
-{{% /example %}}
-
-{{% watch %}}
-
-De igual manera que hemos decidido usar la yuxtaposición, $xy$, para expresar la operación de dos elementos de un grupo $(G,\star )$, es natural definir potencias de elementos de $G$. Sean $x\in G$ e $i$ un entero no negativo. La $i$-ésima potencia de $x$, $x^i$, se define mediante la siguiente regla recursiva:
-$$x^0=e,\ x^{i}=x^{i-1}x.$$
-Esta definición la podemos extender a potencias negativas poniendo
-$$x^{-i}=(x^{-1})^{i}.$$
-En adelante se usará esta notación también para permutaciones.
-{{% /watch %}}
-
-Aprovecharemos que estamos hablando de potencias de permutaciones para definir, en general, el concepto de orden de un elemento de un grupo.
-
-
-{{% definition %}}
-{Orden de un elemento}
-{Sea $(G,\star )$ un grupo.
-
-Diremos que un elemento $x\in G$ tiene {\bf orden finito} si existe un número entero positivo $m$ tal que $x^m=e$. En este caso, el {\bf orden de $x$}, que denotaremos $o(x)$, es el menor entero positivo que cumple esta propiedad.
-
- Diremos que $x\in G$ tiene {\bf orden infinito} si $x^m\neq e$ para todo $m>0$.}
-{{% /definition %}}
-
-
-{{% proposition %}}
-
-Un elemento $x\in G$ tiene orden infinito si y sólo si todas sus potencias $x^k$ con $k\in \mathbb Z$ son distintas.
-{{% /proposition %}}
-
-{{% proof %}}
-
-Si $x$ tiene dos potencias iguales, digamos $x^r=x^s$ con $r<s$, entonces podemos multiplicar esta igualdad por $x^{-s}$ (desde la izquierda o desde la derecha) y obtendremos $x^{r-s}=e$, por lo que $x$ tendrá orden finito. Recíprocamente, si todas sus potencias son distintas, entonces $x^m\neq x^0 = e$ para todo $m>0$, luego $x$ tendrá orden infinito.
-{{% /proof %}}
-
-
-El orden de un elemento satisface las siguientes propiedades cuya demostración dejaremos como ejercicio:
-
-{{% proposition %}}
- Sean $G$ un grupo y $x\in G$. Se tienen las siguientes propiedades:
- \begin{enumerate}
-  \item $o(x)=1$ si y solamente si $x=e$.
-  \item Si $x\in G$ tiene orden finito, entonces $\inv{x}$ también y $o(x)=o(\inv{x})$.
-  \item Si $x\in G$ tiene orden infinito, $\inv{x}$ tiene orden infinito.
-  \item Si $G$ es finito, todo elemento de $G$ tiene orden finito.
-  \item Si $o(x)=m$ y $x^n=e$, entonces $m$ es un divisor de $n$.
-        Dicho de otra forma, las potencias de $x$ iguales a $e$ son exactamente las de la forma $x^{km}$ con $k\in \mathbb Z$.
- \end{enumerate}
-{{% /proposition %}}
-
-En el caso de permutaciones, es fácil comprobar que el orden de un ciclo coincide con su longitud.
-
-{{% theorem %}}
-{Orden de un ciclo}
-{El orden de un ciclo de longitud $m\geq 1$ es $m$.}
-{{% /theorem %}}
-
-El siguiente resultado
-%dice que toda permutación con soporte finito se puede escribir como producto de ciclos disjuntos. Este resultado
-será muy importante para el estudio de las permutaciones de conjuntos finitos.
-
-{{% theorem %}}
-{Expresión en ciclos disjuntos}
-{Toda permutación con soporte finito puede expresarse como producto de ciclos disjuntos, además esta descomposición es única salvo el orden de los ciclos.}
-{{% /theorem %}}
-
-%{{% proof %}}
-
-%Sean $X$ un conjunto y $\sigma\in\Sim (X)$ una permutación con soporte finito. Si $\sigma =1_X$ es un ciclo, luego ya está. Supongamos que $\sigma\ne 1_X$ y que
-%$$\sop (\sigma )=\\{ i_1,\ldots ,i_n\\} .$$
-%Tomemos ahora los elementos $i_1$, $\sigma (i_1)$, $\sigma^2(i_1)$,... pertenecientes al conjunto finito $\\{ i_1,\ldots ,i_n\\}$. Luego no todos pueden ser diferentes, digamos $\sigma^r(i_1)=\sigma^s(i_1)$ con $r>s\geq 0$. Aplicando $(\sigma^{-1})^s$ a ambos miembros de la igualdad anterior tenemos $\sigma^{r-s}(i_1)=i_1$. Sea $m_1$ el menor entero positivo tal que $\sigma^{m_1}(i_1)=i_1$.
-%
-%Los elementos $i_1$, $\sigma (i_1)$, $\sigma^2(i_1)$,... $\sigma^{m_1-1}(i_1)$ son todos diferentes. En efecto, si ocurriera $\sigma^r(i_1)=\sigma^s(i_1)$ con $m_1>r>s\geq 0$, tendríamos $\sigma^{r-s}(i_1)=i_1$ donde $r-s<m_1$. Pero esto es una contradicción, pues $m_1$ es el menor tal que $\sigma^{m_1}(i_1)=i_1$. Luego el $m_1$-ciclo $(i_1\ \sigma (i_1)\ \sigma^2(i_1)\cdots \sigma^{m_1-1}(i_1))$ es un factor de $\sigma$.
-%
-%Si $\sop (\sigma )=\\{ i_1,\sigma (i_1),\sigma^2(i_1),\ldots\sigma^{m_1-1}(i_1)\\}$ entonces $\sigma$ debe ser el $m_1$-ciclo $\left( i_1\ \sigma (i_1)\ \sigma^2(i_1)\cdots \sigma^{m_1-1}(i_1)\right)$. En otro caso, existe un elemento $i_2\in\sop (\sigma )\setminus\\{ i_1,\sigma (i_1),\sigma^2(i_1),\ldots\sigma^{m_1-1}(i_1)\\}$. Procediendo como arriba, obtenemos un $m_2$-ciclo $(i_2\ \sigma (i_2)\ \sigma^2(i_2)\cdots \sigma^{m_2-1}(i_2))$ disjunto con el anterior y que también es un factor de $\sigma$.
-%
-%Dado que el soporte de $\sigma$ es finito, repitiendo el procedimiento, en un número finito de pasos obtenemos una descomposición de $\sigma$ en $\ell$ ciclos disjuntos:
-%$$\sigma = \left( i_1\ \sigma (i_1)\ \sigma^2(i_1)\cdots \sigma^{m_1-1}(i_1)\right) \left( i_2\ \sigma (i_2)\ \sigma^2(i_2)\cdots \sigma^{m_2-1}(i_2)\right)\cdots$$
-%$$\cdots\left( i_\ell\ \sigma (i_\ell)\ \sigma^2(i_\ell)\cdots \sigma^{m_\ell -1}(i_\ell)\right) .$$
-%
-%Demostremos ahora la unicidad. Sean
-%$$\sigma = \left( i_1\ \sigma (i_1)\ \sigma^2(i_1)\cdots \sigma^{m_1-1}(i_1)\right) \cdots\left( i_\ell\ \sigma (i_\ell)\ \sigma^2(i_\ell)\cdots \sigma^{m_\ell -1}(i_\ell)\right) =$$
-%$$=\left( j_1\ \sigma (j_1)\ \sigma^2(j_1)\cdots \sigma^{n_1-1}(j_1)\right) \cdots\left( j_p\ \sigma (j_p)\ \sigma^2(j_p)\cdots \sigma^{n_p-1}(j_p)\right)$$
-%dos representaciones de $\sigma$ como producto de ciclos disjuntos. Dado que $i_1\in\sop (\sigma )$, debe pertenecer a alguno de los ciclos de la segunda expresión de $\sigma$. Dado que el producto de ciclos disjuntos conmuta podemos suponer, sin pérdida de generalidad, que está en el primer ciclo. Además, por lo dicho al final de la nota \ref{nota231}, cada ciclo se puede escribir de diferentes formas. Luego podemos suponer, escogiendo la representación adecuada del ciclo $\left( j_1\ \sigma (j_1)\ \sigma^2(j_1)\cdots \sigma^{n_1-1}(j_1)\right)$, que $i_1=j_1$. Automáticamente se obtiene que $\sigma (i_1)=\sigma (j_1)$, $\sigma^2(i_1)=\sigma^2(j_1)$,... de donde se deduce $m_1=n_1$ y
-%$$ \left( i_1\ \sigma (i_1)\ \sigma^2(i_1)\cdots \sigma^{m_1-1}(i_1)\right) = \left( j_1\ \sigma (j_1)\ \sigma^2(j_1)\cdots \sigma^{n_1-1}(j_1)\right) .$$
-%Haciendo lo mismo con $i_2$,...,$i_\ell$ se concluye que $\ell =p$ y que ambas descomposiciones coinciden.
-%{{% /proof %}}
-
-{{% proof %}}
-
-Sea $\sigma\in\Sim (X)$ una permutación. Definimos la {\bf órbita} de un elemento $x\in X$ respecto de $\sigma$ como
-$$\overline{x}=\\{\sigma^n(x); n\geq 0\\}.$$
-Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ es un conjunto finito. Es decir, existe un (primer) $m>0$ tal que $\sigma^m(x)=x$ y a partir de ahí los elementos $\sigma^n (x)$ se van repitiendo.
-
-%  Como $\sigma$ tiene soporte finito, una potencia de $\sigma$ es la identidad, luego las potencias de $\sigma$ se van repitiendo y $\overline{x}$ es siempre un conjunto finito.
-
-Ahora podemos definir la siguiente relación en $X$: $x$ está relacionado con $y$ si $y\in \overline{x}$. Se demuestra fácilmente que ésta es una relación de equivalencia, y que las clases de equivalencia son las órbitas de los elementos de $X$.
-
-Observamos ahora que cada clase de equivalencia, cada órbita $\overline{x}$, corresponde a un ciclo que es, bien $()$ si $\overline{x}=\\{ x\\}$, bien $(x\ \sigma (x)\cdots\sigma^{m-1}(x))$ si $m>1$ es el menor tal que $\sigma^m(x)=x$. Estos ciclos son disjuntos, pues son clases de equivalencia. Además, si $\sigma\ne ()$, debe ser la composición de estos ciclos disjuntos no triviales. El número de ciclos de orden $>1$ es finito, porque el soporte de $\sigma$ es finito.
-
-Por otra parte, si descomponemos $\sigma$ como producto de ciclos disjuntos, cada ciclo es una órbita, luego es una clase de equivalencia para la relación anterior. Y deben estar todas las órbitas, o el producto de los ciclos no sería igual a $\sigma$. Luego esta descomposición debe coincidir con la descomposición anterior, que es por tanto única.
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-En $X=\\{ 1,2,3,4,5,6,7\\}$ consideremos la permutación
-$$\sigma\colon\left(\begin{array}{ccccccc}
-                     1 & 2 & 3 & 4 & 5 & 6 & 7\\
-                     3 & 6 & 5 & 1 & 4 & 2 & 7
-                    \end{array}\right) .$$
-Calculando las órbitas de los elementos de $X$ se obtiene:
-$$\overline{1}=\\{ 1,3,5,4\\} =\overline{3}=\overline{5}=\overline{4}\rightsquigarrow (1354),$$
-$$\overline{2}=\\{ 2,6\\} =\overline{6}\rightsquigarrow (26),$$
-$$\overline{7}=\\{ 7\\}\rightsquigarrow ().$$
-La expresión de $\sigma$ como producto de ciclos disjuntos es
-$$\sigma =(1354)(26).$$
-{{% /example %}}
-
-{{% corollary %}}
-
-Sea $X$ un conjunto con al menos dos elementos. Toda permutación de $\Sim (X)$ con soporte finito puede expresarse como producto de trasposiciones.
-{{% /corollary %}}
-
-{{% proof %}}
-
-La permutación identidad se puede escribir como $()=\tau\tau$, siendo $\tau$ cualquier trasposición. Si la permutación no es la identidad, dado que toda permutación con soporte finito puede expresarse como producto de ciclos disjuntos, es suficiente demostrar que los ciclos  de longitud $\geq 2$ pueden expresarse como producto de trasposiciones. Es fácil comprobar que se satisface la siguiente igualdad:
-$$ (i_1i_2\ldots i_{r-1}i_r)=(i_1i_2)(i_2i_3)\cdots (i_{r-1}i_r).$$
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-En el ejemplo anterior, donde $\sigma =(1354)(26)$, se tiene que
-$$(1354)=(13)(35)(54).$$
-Luego $\sigma =(13)(35)(54)(26)$. Aprovechamos este ejemplo para comprobar además que {\bf la descomposición en producto de trasposiciones no es única}, pues también se verifica
-$$\sigma =(14)(23)(15)(23)(13)(26) .$$
-{{% /example %}}
-
-{{% corollary %}}
-
-Toda permutación con soporte finito tiene orden finito.
-{{% /corollary %}}
-
-{{% proof %}}
-
-Sea $\sigma\in\Sim (X)$ una permutación con soporte finito. Si $\sigma =()$ su orden es $1$. Si $\sigma\ne ()$ se descompone como producto de $r\geq 1$ ciclos disjuntos
-$$\sigma =\sigma_r\cdots\sigma_1.$$
-Cada ciclo $\sigma_i$ tiene orden finito $n_i$. Además, como el producto de ciclos disjuntos es conmutativo
-$$\sigma^p=(\sigma_r\cdots\sigma_1)^p=\sigma_r^p\cdots\sigma_1^p.$$
-Sea $n=\prod_{i=1}^r n_i$, entonces
-$$\sigma^n=\sigma_r^n\cdots\sigma_1^n=().$$
-Luego el orden de $\sigma$ es finito.
-{{% /proof %}}
-
-{{% watch %}}
-
-¡Ojo! En la demostración anterior {\bf no hemos probado} que el orden de $\sigma$ sea el producto de los órdenes de los ciclos en los que se descompone. De hecho es un buen ejercicio para el próximo tema (El anillo de los números enteros) demostrar que el orden de $\sigma$ es el {\bf mínimo común múltiplo de los $n_i$}.
-{{% /watch %}}
 
 ### El grupo $S_n$
 
@@ -522,7 +503,7 @@ $$\sigma\colon\left(\begin{array}{cccccc}
                      1 & 2 & \cdots & n\\
                      i_1 & i_2 & \cdots & i_n
                     \end{array}\right) .$$
-Hay $n$ posibles elecciones para $i_1$, pero sólo $n-1$ posibilidades para $i_2$, pues $i_1$ no puede ser elegido de nuevo. Fijados $i_1$ e $i_2$ hay $n-2$ posibles elecciones para $i_3,\ldots$ y así sucesivamente hasta llegar a $i_n$, cuya elección ya está fijada por la de los elementos anteriores. Luego contando todas las posibilidades el número de permutaciones distintas de $S_n$ es
+Hay $n$ posibles elecciones para $i_1$, pero solo $n-1$ posibilidades para $i_2$, pues $i_1$ no puede ser elegido de nuevo. Fijados $i_1$ e $i_2$ hay $n-2$ posibles elecciones para $i_3,\ldots$ y así sucesivamente hasta llegar a $i_n$, cuya elección ya está fijada por la de los elementos anteriores. Luego contando todas las posibilidades el número de permutaciones distintas de $S_n$ es
 $$n(n-1)\cdots 1=n!$$
 {{% /proof %}}
 
@@ -712,7 +693,7 @@ Sean $\sigma ,\tau\in S_n$. Se satisfacen las siguientes propiedades:
 
 \item Consideremos el diagrama que se obtiene dibujando el diagrama de cruces de $\tau$ encima del de $\sigma$. Este diagrama representa a la permutación $\sigma\tau$, aunque hay pares de líneas que se pueden cruzar dos veces (una en $\tau$ y otra en $\sigma$).
 
-    Un par $(i,j)$ será una inversión de $\sigma\tau$ si y sólo si las líneas correspondientes se cruzan sólo en $\sigma$ o sólo en $\tau$, pero no en ambas. Por tanto, para obtener el número de inversiones de $\sigma\tau$, sólo hay que sumar los cruces del diagrama de $\sigma$ y los cruces del diagrama de $\tau$, y a continuación restar un número par de cruces (los que aparecen en los dos). Por tanto, el número de inversiones de $\sigma\tau$ tiene la misma paridad que la suma del número de inversiones de $\sigma$ y el número de inversiones de $\tau$. Así, $\sigma\tau$ es par si $\sigma$ y $\tau$ son ambos pares o ambos impares, y es impar en caso contrario. Esto equivale a decir que $\signo(\sigma\tau)=\signo(\sigma)\signo(\tau)$.
+    Un par $(i,j)$ será una inversión de $\sigma\tau$ si y solo si las líneas correspondientes se cruzan solo en $\sigma$ o solo en $\tau$, pero no en ambas. Por tanto, para obtener el número de inversiones de $\sigma\tau$, solo hay que sumar los cruces del diagrama de $\sigma$ y los cruces del diagrama de $\tau$, y a continuación restar un número par de cruces (los que aparecen en los dos). Por tanto, el número de inversiones de $\sigma\tau$ tiene la misma paridad que la suma del número de inversiones de $\sigma$ y el número de inversiones de $\tau$. Así, $\sigma\tau$ es par si $\sigma$ y $\tau$ son ambos pares o ambos impares, y es impar en caso contrario. Esto equivale a decir que $\signo(\sigma\tau)=\signo(\sigma)\signo(\tau)$.
 
 \item Esto se deduce de la propiedad anterior, tomando $\tau=\sigma^{-1}$, aunque se puede ver directamente: los diagramas de cruces de $\sigma$ y $\sigma^{-1}$ son simétricos, luego el número de cruces es el mismo en ambos diagramas. Por tanto $\sigma$ y $\sigma^{-1}$ tienen el mismo número de inversiones, y por ello el mismo signo.
 \end{enumerate}
@@ -720,7 +701,7 @@ Sean $\sigma ,\tau\in S_n$. Se satisfacen las siguientes propiedades:
 
 {{% corollary %}}
 
-Una permutación $\sigma\in S_n$ es par (impar) si y sólo si es producto de un número par (impar) de trasposiciones.
+Una permutación $\sigma\in S_n$ es par (impar) si y solo si es producto de un número par (impar) de trasposiciones.
 {{% /corollary %}}
 
 {{% proof %}}
@@ -1032,7 +1013,7 @@ G\vert$.}
 
 {{% proof %}}
  Consideremos la relación $\sim_H$
-sobre $G$. Como $G$ es finito, habrá sólo un número finito de
+sobre $G$. Como $G$ es finito, habrá solo un número finito de
 clases de equivalencia distintas. Sean éstas $a_1 H,\ldots,
 a_r H$. Como $G$ es unión disjunta de estas clases, será
 $$
@@ -1250,9 +1231,9 @@ La demostración de la siguiente propiedad la dejamos como ejercicio:
 
 	Dado un homomorfismo $f\colon (G,\star)\to (H,\ast)$, se tiene:
 \begin{enumerate}
-  \item $f$ es inyectivo si y sólo si $\ker(f)=\\{e\\}$.
+  \item $f$ es inyectivo si y solo si $\ker(f)=\\{e\\}$.
 
-  \item $f$ es sobreyectivo si y sólo si $\im(f)=H$.
+  \item $f$ es sobreyectivo si y solo si $\im(f)=H$.
 \end{enumerate}
 {{% /proposition %}}
 
@@ -1300,10 +1281,10 @@ El grupo $x^{-1}Kx$ podría ser el propio $K$, o podría ser distinto. Diremos q
 
 {{% watch %}}
 
-Del lema anterior se deduce que un subgrupo $K$ es normal en $G$ si y sólo si $aK=Ka$ para todo $a\in G$. En otras palabras, un subgrupo $K$ es normal en $G$ si y sólo si las clases a izquierda (definidas para $K$) coinciden con las clases a derecha.
+Del lema anterior se deduce que un subgrupo $K$ es normal en $G$ si y solo si $aK=Ka$ para todo $a\in G$. En otras palabras, un subgrupo $K$ es normal en $G$ si y solo si las clases a izquierda (definidas para $K$) coinciden con las clases a derecha.
 {{% /watch %}}
 
-Es importante observar que la igualdad $x^{-1}Kx=K$ no implica que los elementos de $K$ quedan fijos al conjugarlos por $x$. Lo que queda fijo es el conjunto $K$, pero sus elementos pueden permutarse. Por tanto, $K$ es normal si y sólo si conjugar $K$ por $x$ corresponde a una {\it permutación} de $K$, para todo $x\in G$.
+Es importante observar que la igualdad $x^{-1}Kx=K$ no implica que los elementos de $K$ quedan fijos al conjugarlos por $x$. Lo que queda fijo es el conjunto $K$, pero sus elementos pueden permutarse. Por tanto, $K$ es normal si y solo si conjugar $K$ por $x$ corresponde a una {\it permutación} de $K$, para todo $x\in G$.
 
 Esta permutación puede ser trivial o no. En el siguiente caso, la permutación sí es trivial para todo $x$:
 

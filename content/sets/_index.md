@@ -762,6 +762,10 @@ $U\subset A$ es la aplicación $f|_U\colon U\rightarrow B$ definida como $f|_U(u
 Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicaciones $A\rightarrow B\\}$.
 {{% /definition %}}
 
+{{% example name="Un conjunto exponencial pequeño" %}}
+El conjunto exponencial $\\{a,b\\}^{\\{1,2\\}}=\\{f\_1,f\_2,f\_3,f\_4\\}$ está formado por las cuatro aplicaciones siguientes:
+![Conjunto exponencial](../images/exponential.png)
+{{% /example %}}
 
 {{% exercise %}}
 * Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $B^A$?
@@ -1070,8 +1074,8 @@ que dichas definiciones modelizan correctamente las ideas intuitivas previas que
 \item[3)] Si $X$ es un conjunto infinito y $f:X \to Y$ es una aplicación inyectiva, entonces $Y$ también es un conjunto infinito.
 \item[4)] Si $Y$ es un conjunto infinito y $f:X \to Y$ es una aplicación sobreyectiva, entonces $X$ también es un conjunto infinito.
 \item[5)] El producto cartesiano de dos conjuntos finitos es un conjunto finito.
-\item[6)] $X$ es un conjunto finito si y sólo si $\mathcal{P}(X)$ es un conjunto finito.
-\item[7)] $X$ es un conjunto infinito si y sólo si $\mathcal{P}(X)$ es un conjunto infinito.
+\item[6)] $X$ es un conjunto finito si y solo si $\mathcal{P}(X)$ es un conjunto finito.
+\item[7)] $X$ es un conjunto infinito si y solo si $\mathcal{P}(X)$ es un conjunto infinito.
 \end{enumerate}
 {{% /proposition %}}
 

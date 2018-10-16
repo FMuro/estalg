@@ -164,7 +164,7 @@ Dejamos como ejercicio la demostración de la siguiente propiedad.
 
 {{% proposition %}}
 
-Sea $S$ un subconjunto de una anillo $R$. Entonces $S$ es subanillo si y sólo si es un subgrupo de $R$ para la suma y el producto es interno en $S$, es decir, si y sólo si satisface las siguientes propiedades:
+Sea $S$ un subconjunto de una anillo $R$. Entonces $S$ es subanillo si y solo si es un subgrupo de $R$ para la suma y el producto es interno en $S$, es decir, si y solo si satisface las siguientes propiedades:
 \begin{enumerate}
 \item $S\ne\varnothing$.
 \item $\forall x,y\in S, x-y\in S$.
@@ -278,7 +278,7 @@ Sea $(R,+,\cdot )$ un anillo (conmutativo) y sea $I\subset R$ un subconjunto. De
 \quad
 \begin{enumerate}
 \item Si $R$ es un anillo conmutativo, los subgrupos triviales $\\{ 0\\}$ y $R$ son ideales de $R$. Llamaremos {\bf ideales propios} de $R$ a los no triviales.
-\item Un ideal $I$ de un anillo $R$ es el total, si y sólo si $1\in I$.
+\item Un ideal $I$ de un anillo $R$ es el total, si y solo si $1\in I$.
 \item Si $\phi: R\to S$ es un homomorfismo de anillos, entonces $\ker(\phi)$ es un ideal de $R$.
 \item Sea $R$ un anillo conmutativo y $x\in R$ un elemento. Sea el subconjunto
 $$Rx=\\{ rx\mid r\in R\\}$$
@@ -303,7 +303,7 @@ $$x_1+I=x_2+I\Longleftrightarrow x_1-x_2\in I.$$
 
 De manera análoga el producto en $R$ define una operación interna y binaria en el cociente:
 $$(x+I)(y+I)=(xy)+I\ \forall x,y\in R.$$
-Veamos que esta operación está bien definida. Sean $x_1,x_2,y_1,y_2\in R$ tales que $x_1+I=x_2+I$ y $y_1+I=y_2+I$, tenemos que probar que la operación no depende de los representantes elegidos en cada clase, es decir, que $x_1y_1+I=x_2y_2+I$. Lo cual ourre si y sólo si $x_1y_1-x_2y_2\in I$.
+Veamos que esta operación está bien definida. Sean $x_1,x_2,y_1,y_2\in R$ tales que $x_1+I=x_2+I$ y $y_1+I=y_2+I$, tenemos que probar que la operación no depende de los representantes elegidos en cada clase, es decir, que $x_1y_1+I=x_2y_2+I$. Lo cual ourre si y solo si $x_1y_1-x_2y_2\in I$.
 $$x_1y_1-x_2y_2=x_1y_1-x_2y_1+x_2y_1-x_2y_2=(x_1-x_2)y_1+x_2(y_1-y_2).$$
 Como $x_1+I=x_2+I$, se tiene que $x_1-x_2\in I$. Al ser $I$ ideal, también tenemos que $(x_1-x_2)y_1\in I$. Análogamente $x_2(y_1-y_2)\in I$. Luego
 $$x_1y_1-x_2y_2\in I.$$
@@ -319,7 +319,7 @@ Sean $(R,+,\cdot )$ un anillo conmutativo e $I\subset R$ un ideal. Entonces el c
 {{% watch %}}
  Si $I$ es un ideal del anillo $R$, la proyección natural $p: R \longrightarrow R/I$ es un epimorfismo de anillos cuyo núcleo es el ideal $I$.
 
-Nótese que el anillo cociente $R/I$ es nulo si y sólo si $I=R$.
+Nótese que el anillo cociente $R/I$ es nulo si y solo si $I=R$.
 {{% /watch %}}
 
 {{% example name="Ejemplo" %}}
@@ -480,13 +480,13 @@ Un {\bf dominio de integridad} (DDI) es un anillo conmutativo no nulo ($1\neq 0$
 \quad
 \begin{enumerate}
 \item Los anillos $\Z$, $\Q$, $\R$ y $\C$ son dominios de integridad.
-\item Los anillos cociente $\Z /\Z n$ con $n>0$ son dominio de integridad si y sólo si $n$ es un número primo\footnote{Esto se demostrará más adelante.}.
+\item Los anillos cociente $\Z /\Z n$ con $n>0$ son dominio de integridad si y solo si $n$ es un número primo\footnote{Esto se demostrará más adelante.}.
 \end{enumerate}
 {{% /example %}}
 
 {{% theorem %}}
 {Dominio de integridad y propiedad cancelativa}{
-Sea $R$ un anillo conmutativo. Entonces $R$ es un dominio de integridad si y sólo si se satisface en $R$ la {\em propiedad cancelativa}, es decir, 
+Sea $R$ un anillo conmutativo. Entonces $R$ es un dominio de integridad si y solo si se satisface en $R$ la {\em propiedad cancelativa}, es decir, 
 $$xy=xz \wedge x\ne 0\Rightarrow y=z.$$
 }
 {{% /theorem %}}
@@ -551,7 +551,7 @@ Si un ideal $I\subset R$ contiene una unidad en $R$ entonces $I=R$.
 
 {{% corollary %}}
 
-Un anillo conmutativo no nulo es un cuerpo si y sólo si no tiene ideales propios no nulos.
+Un anillo conmutativo no nulo es un cuerpo si y solo si no tiene ideales propios no nulos.
 {{% /corollary %}}
 
 ### Ideales primos y maximales
@@ -600,7 +600,7 @@ Asimismo, las propiedades siguientes también son equivalentes:
 
 Sean $R$ un anillo conmutativo e $I\subset R$ un ideal propio de $R$. Entonces:
 \begin{enumerate}
-\item $I$ es un ideal primo de $R$ si y sólo si el anillo $R/I$ es un dominio de integridad.
+\item $I$ es un ideal primo de $R$ si y solo si el anillo $R/I$ es un dominio de integridad.
 \item $I$ es un ideal maximal de $R$ si y solo si el anillo $R/I$ es un cuerpo.
 \end{enumerate}
 {{% /proposition %}}
@@ -641,7 +641,7 @@ Veamos que $I$ es un ideal primo que no es maximal.
 
 Consideremos la aplicación $\phi\colon R\to\Q [y]$ dada por $\phi (f(x,y))=f(0,y)$. Se comprueba fácilmente que $\phi (f+g)=\phi (f)+\phi (g)$, $\phi (fg)=\phi (f)\phi (g)$ y que $\phi (1)=1$. Además $\phi$ es sobreyectiva. Luego $\phi$ es un homomorfismo sobreyectivo de anillos.
 
-Como $f(0,y)=0$ si y sólo si $f(x,y)$ es un múltiplo de $x$, se tiene que $\ker (\phi )=I$. Por el corolario \ref{epimorfismo} es $R/I\cong\Q [y]$. Como $\Q[y]$ es un dominio de integridad que no es un cuerpo, $I$ es ideal primo que no es maximal.
+Como $f(0,y)=0$ si y solo si $f(x,y)$ es un múltiplo de $x$, se tiene que $\ker (\phi )=I$. Por el corolario \ref{epimorfismo} es $R/I\cong\Q [y]$. Como $\Q[y]$ es un dominio de integridad que no es un cuerpo, $I$ es ideal primo que no es maximal.
 {{% /example %}}
 
 ### La característica de un dominio de integridad
@@ -803,7 +803,7 @@ contra de ser $r$ el mínimo.
 %
 Probemos ahora la unicidad. Supongamos que existen $q', r' \in \Z$
 tales que $a = q'b+r', 0 \leq r < |b|$. Si $q \geq q'$, restando
-obtenemos que $0\leq (q-q')b = r'-r < |b|$, igualdad que sólo se puede dar
+obtenemos que $0\leq (q-q')b = r'-r < |b|$, igualdad que solo se puede dar
 si $q=q'$ y $r=r'.$ \hfill {{% /proof %}}
 
 
@@ -1175,7 +1175,7 @@ factorización se puede extender a enteros $n<0$ poniendo
 $$
 n=(-1)\, \prod_{p>0\; \mathrm{primo}} p^{\nu_{-n}(p)}\, .
 $$
-Considerando sólo números primos positivos, como hemos hecho antes.
+Considerando solo números primos positivos, como hemos hecho antes.
 {{% /watch %}}
 
 No es difícil comprobar la veracidad de la siguiente proposición, que nos da las definiciones de {\em máximo común divisor} y {\em mínimo común múltiplo} tal y como se trabajan en {\em secundaria}.
@@ -1227,14 +1227,14 @@ Una propiedad fundamental de las congruencias es la siguiente:
 
 
 {{% proposition %}}
- Sean $a,b\in\Z$. Entonces \co{a}{b}{m} si y sólo si $a$ y $b$ dan
+ Sean $a,b\in\Z$. Entonces \co{a}{b}{m} si y solo si $a$ y $b$ dan
 el mismo resto en la división euclídea por $m$.
 {{% /proposition %}}
 
 %
 {{% proof %}}
  En efecto, si \co{a}{b}{m}, entonces $m|(b-a)$. Sean
-$a=qm+r$ $b=q'm+r'$,$0 \leq r,r'<m,$ entonces $a-b=(q-q')m+(r-r')$, igualdad que sólo es posible cuando $r'-r=0$ ya que $|r'-r|<m$.
+$a=qm+r$ $b=q'm+r'$,$0 \leq r,r'<m,$ entonces $a-b=(q-q')m+(r-r')$, igualdad que solo es posible cuando $r'-r=0$ ya que $|r'-r|<m$.
  Recíprocamente, si $a=qm+r$, $b=q'm+r$ es $a-b=(q-q')m,$ luego \co{a}{b}{m}.
 
 {{% /proof %}}
@@ -1277,7 +1277,7 @@ Sean $x,m\in\Z$, $m>0$, se verifica la propiedad
 $$
 \forall a,b\in\Z ,\ \cop{ax}{bx}{m} \Longrightarrow \cop{a}{b}{m}
 $$
-si y sólo si $x$ y $m$ son primos entre si.
+si y solo si $x$ y $m$ son primos entre si.
 }
 {{% /theorem %}}
 
@@ -1298,14 +1298,14 @@ que es múltiplo de $m$. Por tanto, \co{a}{b}{m}.
 {{% /proof %}}
 
 Veamos ahora que ocurre con la ecuación $ax=b, \; a,b\in \Z.$ Sabemos que la ecuación anterior tiene
-solución entera si y sólo si $a|b$ y su solución es $x= \frac{b}{a} \in \Z.$ En el caso de las congruencias tenemos
+solución entera si y solo si $a|b$ y su solución es $x= \frac{b}{a} \in \Z.$ En el caso de las congruencias tenemos
 
 {{% proposition %}}
  La ecuación en congruencias
 
 \begin{center} \co{ax}{b}{m}  \end{center}
 
-\noindent tiene solución si y sólo si $d=\mbox{mcd}(a,m)$ divide a
+\noindent tiene solución si y solo si $d=\mbox{mcd}(a,m)$ divide a
 $b.$
 {{% /proposition %}}
 
@@ -1425,7 +1425,7 @@ m=(ra+sm)+  \Z m=(ra+  \Z m)+(sm+  \Z m)=(a+ \Z m)(r+  \Z m).$ Es decir, $a+  \Z
 {{% /proof %}}
 
 {{% watch %}}
- El anillo $\Z / \Z p$ es un cuerpo si y sólo si $p$ es primo. De hecho
+ El anillo $\Z / \Z p$ es un cuerpo si y solo si $p$ es primo. De hecho
 $$U_p=\\{ 1+\Z p,\ldots (p-1)+\Z p\\}$$
 y $|U_p|=p-1$.
 {{% /watch %}}
@@ -1453,7 +1453,7 @@ $$\phi (m) =|U_m|.$$}
 {{% /definition %}}
 
 {{% watch %}}
-Sea $p\in\N$, $p$ es primo si y sólo si $\phi (p)=p-1$.
+Sea $p\in\N$, $p$ es primo si y solo si $\phi (p)=p-1$.
 {{% /watch %}}
 
 {{% proposition %}}
