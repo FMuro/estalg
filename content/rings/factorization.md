@@ -93,11 +93,11 @@ Un **dominio de factorización única** (también **DFU** o **UFD**) es un domin
 
 {{% example name="Un dominio con factorizaciones que no son únicas" %}}
 En $\mathbb Z[\sqrt{-5}]\subset\mathbb C$, $$9=3^2=(2+\sqrt{-5})(2-\sqrt{-5}).$$
-Todo elemento de $\mathbb Z[\sqrt{-5}]$ es de la forma $$z=a+b\sqrt{-5}=a+ib\sqrt{5}$$ donde $a,b\in\mathbb Z$. El cuadrado de la norma de tal elemento es $$|z|^2=|a+b\sqrt{-5}|=a^2+5b^2\in\mathbb Z.$$ Como $$|z_1z_2|^2=|z_1|^2\cdot|z_2|^2,$$ si $z\in \mathbb Z[\sqrt{-5}]$ es una unidad entonces $1=|z|^2\cdot|z^{-1}|^2$, así que $|z|^2\in\mathbb Z$ es invertible (y positivo), luego $|z|^2=1$. La única posibilidad de que esto ocurra es que $z=\pm 1$, por tanto las unidades de nuestro anillo son $\\{\pm1\\}$. Es más, las no unidades tienen norma al cuadrado $>1$, así que si $z_1$ es un divisor propio de $z_2$ entonces $|z_1|^2<|z_2|^2$.
+Todo elemento de $\mathbb Z[\sqrt{-5}]$ es de la forma $$z=a+b\sqrt{-5}=a+ib\sqrt{5}$$ donde $a,b\in\mathbb Z$. El cuadrado del módulo de tal elemento es $$|z|^2=|a+b\sqrt{-5}|=a^2+5b^2\in\mathbb Z.$$ Como $$|z_1z_2|^2=|z_1|^2\cdot|z_2|^2,$$ si $z\in \mathbb Z[\sqrt{-5}]$ es una unidad entonces $1=|z|^2\cdot|z^{-1}|^2$, así que $|z|^2\in\mathbb Z$ es invertible (y positivo), luego $|z|^2=1$. La única posibilidad de que esto ocurra es que $z=\pm 1$, por tanto las unidades de nuestro anillo son $\\{\pm1\\}$. Es más, las no unidades tienen módulo al cuadrado $>1$, así que si $z_1$ es un divisor propio de $z_2$ entonces $|z_1|^2<|z_2|^2$.
 
 En $\mathbb Z[\sqrt{-5}]$ existen factorizaciones. En efecto, si hubiera una cadena $(z_1)\subsetneq(z_2)\subsetneq(z_3)\subsetneq\cdots$ entonces tendríamos que $|z_1|^2>|z_2|^2>|z_3|^2>\cdots\geq 0$, pero esto es imposible, no hay sucesiones infinitas estrictamente decrecientes de enteros no negativos.
 
-Veamos que $3$ es irreducible. Si $3=z_1z_2$ es una factorización como producto de divisores propios entonces $3^2=|z_1|^2|z_2|^2$. No puede ser que $|z_i|^2=1$ ya que $z_i$ no es una unidad para ningún $i\in\\{1,2\\}$, luego, por el teorema fundamental de la aritmética para números enteros, $|z_1|^2=|z_2|^2=3$, pero no hay ningún elemento en $\mathbb Z[\sqrt{-5}]$ que tenga este cuadrado de norma. Análogamente, $2\pm\sqrt{-5}$ es irreducible pues si $2\pm\sqrt{-5}=z_1z_2$ entonces de nuevo $|2\pm\sqrt{-5}|^2=3^2=|z_1|^2|z_2|^2$.
+Veamos que $3$ es irreducible. Si $3=z_1z_2$ es una factorización como producto de divisores propios entonces $3^2=|z_1|^2|z_2|^2$. No puede ser que $|z_i|^2=1$ ya que $z_i$ no es una unidad para ningún $i\in\\{1,2\\}$, luego, por el teorema fundamental de la aritmética para números enteros, $|z_1|^2=|z_2|^2=3$, pero no hay ningún elemento en $\mathbb Z[\sqrt{-5}]$ que tenga este cuadrado de módulo. Análogamente, $2\pm\sqrt{-5}$ es irreducible pues si $2\pm\sqrt{-5}=z_1z_2$ entonces de nuevo $|2\pm\sqrt{-5}|^2=3^2=|z_1|^2|z_2|^2$.
 
 Por último, el $3$ no es un asociado de $2\pm\sqrt{-5}$ porque las únicas unidades de $\mathbb Z[\sqrt{-5}]$ son $\pm1$, luego las dos factorizaciones anteriores de $9$ como producto de irreducibles son esencialmente distintas.
 {{% /example %}}
@@ -202,7 +202,7 @@ El múltiplo común mínimo es único salvo asociados y se denota $\operatorname
 
 
 {{% proof %}}
-Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia. Comprobemos la segunda. Si $a|m'$ y $b|m'$ entonces $d|m'$. Es más, $\frac{a}{d}|\frac{m'}{d}$ y $\frac{b}{d}|\frac{m'}{d}$. Como $\frac{a}{d}$ y $\frac{b}{d}$ no tienen factores primos asociados, su divisor común máximo es el producto $\frac{ab}{d^2}$, así que $\frac{ab}{d^2}|\frac{m'}{d}$. Multiplicando por $d$ deducimos que $m=\frac{ab}{d}|m'$. La unicidad salvo asociados se deduce como en el caso del divisor común máximo.
+Si $d$ es un divisor común máximo entonces $m=\frac{ab}{d}=a\frac{b}{d}=\frac{a}{d}b$ es un múltiplo común mínimo. En efecto, la primera propiedad es obvia. Comprobemos la segunda. Si $a|m'$ y $b|m'$ entonces $d|m'$. Es más, $\frac{a}{d}|\frac{m'}{d}$ y $\frac{b}{d}|\frac{m'}{d}$. Como $\frac{a}{d}$ y $\frac{b}{d}$ no tienen factores primos asociados, su múltiplo común mínimo es el producto $\frac{ab}{d^2}$, así que $\frac{ab}{d^2}|\frac{m'}{d}$. Multiplicando por $d$ deducimos que $m=\frac{ab}{d}|m'$. La unicidad salvo asociados se deduce como en el caso del divisor común máximo.
 {{% /proof %}}
 
 
@@ -258,13 +258,13 @@ Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con
 
 
 {{% example name="Los enteros de Gauss" %}}
-Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado de la norma como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su norma es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ 
+Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado del módulo como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$ Encontrar un cociente euclídeo se reduce a hallar un múltiplo de $d$ en el interior del círculo de centro $D$ y radio $|d|$. Vamos a ver cómo hacerlo de manera analítica. Consideramos el número complejo $$\frac{D}{d}=u+iv.$$ Aquí $u$ y $v$ son números reales, de hecho racionales, pero no necesariamente enteros. Aproximamos el anterior número complejo por un entero de Gauss $$c=u_0+iv_0\in\mathbb Z[i]$$ de modo que sus partes real e imaginaria estén lo más cerca posible de las del complejo $\frac{D}{d}$, $$\begin{array}{rcl} |u-u_0|&\leq &\frac{1}{2},\cr |v-v_0|&\leq &\frac{1}{2}. \end{array}$$ De este modo $$\left|\frac{D}{d}-c\right|=\sqrt{(u-u_0)^2+(v-v_0)^2}\leq \frac{1}{\sqrt{2}}.$$ Veamos que $c$ es el cociente de una división euclídea. El resto sería $r=D-dc$ y su módulo es $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$ 
 {{% /example %}}
 
 
 
 {{% example name="Enteros cuadráticos" %}}
-Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar el cuadrado de la norma como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la 'norma' $N(a+b\sqrt{n})=a^2-b^2n$ para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con una función de tamaño distinta de $N$.
+Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$ De estos, son dominios euclídeos para $$n=−1, −2, −3, −7, −11.$$ En todos estos casos podemos además tomar el cuadrado del módulo como función de tamaño. El resto de anillos de enteros cuadráticos imaginarios no son ni siquiera DFUs. Para $n{>}0$, obtenemos dominios euclídeos con la 'norma' $N(a+b\sqrt{n})=a^2-b^2n$ para $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$ Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con una función de tamaño distinta de $N$.
 {{% /example %}}
 
 La siguiente aplicación interactiva te permite explorar la posibilidad de realizar divisiones euclídeas respecto del cuadrado del módulo complejo en el anillo de enteros cuadráticos imaginarios $R\subset\mathbb Q[\sqrt{-n}]$ para ciertos valores positivos de $n$. Para $n=1$ tenemos los enteros de Gauss. Puedes seleccionar los coeficientes del dividendo $D=a+b\sqrt{-n}$ y del divisor $d=x+y\sqrt{-n}$, si $-n\not\equiv 1$ mod $4$. Si $-n\equiv 1$ mod $4$, el dividendo y el divisor son de la forma $D=a+b\frac{1+\sqrt{-n}}{2}$ y $d=x+y\frac{1+\sqrt{-n}}{2}$, respectivamente. Los coeficientes del dividendo pueden estar en $[-10,10]$ y los del divisor en $[-5,5]$. Aparece un círculo amarillo centrado en $D$ de radio $|d|$. Los puntos verdes son elementos del anillo y los azules son además múltiplos del divisor. Cada punto azul en el _interior_ del círculo representa una división euclídea. La aplicación da la lista de todos los pares $(c,r)$ que producen divisiones euclídeas $D=d\cdot c+r$.
@@ -449,7 +449,7 @@ $\subset$ Todo elemento $p \in (f )$ es de la forma $p =g\cdot f =(g \cdot c)\cd
 El siguiente resultado nos demuestra con rigor que las dos posibles maneras de añadirle a $R$ raíces de polinomios irreducibles dan resultados isomorfos.
 
 {{% theorem %}}
-Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ que contiene al cuerpo de fracciones, $k\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $x$ en $\alpha$.
+Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ que contiene al cuerpo de fracciones, $k\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $\bar{x}$ a $\alpha$.
 {{% /theorem %}}
 
 {{% proof %}}
@@ -469,7 +469,7 @@ El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irredu
 $$
 \begin{array}{rcl}
 \mathbb Z[x]/(x^2+1)&\cong&\mathbb Z[i],\cr
- x&\mapsto& i.
+ \bar{x}&\mapsto& i.
 \end{array}
 $$
 
@@ -477,7 +477,7 @@ Análogamente obtenemos por ejemplo
 $$
 \begin{array}{rcl}
 \mathbb Z[x]/(x^2-2)&\cong&\mathbb Z[\sqrt{2}],\cr
- x&\mapsto& \sqrt{2}.
+ \bar{x}&\mapsto& \sqrt{2}.
 \end{array}
 $$
 Vimos que todo elemento de $\mathbb Z[x]/(x^2-2)$ se podía expresar de manera única como $a\_1\bar x+a\_0$, $a\_0,a\_1\in\mathbb Z$, así que todo elemento de $\mathbb Z[\sqrt{2}]$ se puede escribir de manera única como $a\_1 \sqrt{2}+a\_0$, $a\_0,a\_1\in\mathbb Z$.
@@ -789,8 +789,8 @@ $$
 Por tanto
 $$z'=u(1+i)(2+ i).$$
 De hecho, el cálculo anterior nos demuestra que la unidad es $u=1$, así que
-$$z'=(1+i)(2+ i).$$
-Por tanto
+$$z'=(1+i)(2+ i),$$
+luego
 $$
 \begin{array}{rcl}
 z&=&n\cdot z'\cr
@@ -805,7 +805,7 @@ El siguiente gráfico nos muestra la distribución de los primos cercanos al ori
 
 ![gaussian_primes](../../images/gaussian_primes.png)
 
-Puedes también usar la siguiente aplicación interactiva para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen. Los lados del cuadrado tienen tamaño $2n$. Los puntos rojos son los primos de Gauss de norma 2. En azul están los que son enteros. El resto, en verde.
+Puedes también usar la siguiente aplicación interactiva para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen. Los lados del cuadrado tienen tamaño $2n$. Los puntos rojos son los primos de Gauss de módulo al cuadrado 2. En azul están los que son enteros. El resto, en verde.
 
 <div class="sage">
   <script type="text/x-sage">
@@ -826,6 +826,8 @@ def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
     return show(lattice1_plot+lattice2_plot+lattice3_plot, aspect_ratio=1)
   </script>
 </div>
+
+
 
 ## Ecuaciones diofánticas
 
@@ -926,12 +928,12 @@ $\Leftarrow$ Cualquier divisor común de $x$ e $y$ divide tanto a $x+iy$ como a 
 
 
 {{% lemma label="lem:DFU" %}}
-En un DFU $R$, las soluciones de la ecuación $xy=z^2$ tales que $x,y,z$ no son nulos ni unidades y $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.
+En un DFU $R$, las soluciones no nulas de la ecuación $xy=z^2$ tales $\operatorname{mcd}(x,y)=1$ son, salvo asociados, todas de la forma $x=a^2$, $y=b^2$ y $z=ab$ con $a,b\in R$, $\operatorname{mcd}(a,b)=1$.
 {{% /lemma %}}
 
 
 {{% proof %}}
- Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$ y $\operatorname{mcd}(x,y)=1$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$ de modo que los de un lado no sean asociados de los del otro. En particular los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$, salvo asociados, son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$. Además $\operatorname{mcd}(a,b)=1$ porque $1=\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2$.
+Si $z$ fuera una unidad, entonces también lo tendrían que ser $z^2$, $x$ e $y$, por tanto, salvo asociados, $x=y=z=1=1^2$. Supongamos ahora que $z$ no es una unidad. Sea $z=p_1\cdots p_n$ una factorización como producto de primos. Como $xy=z^2=p_1^2\cdots p_n^2$, por la unicidad de las factorizaciones en $R$ los factores primos de $z^2$ se han de repartir entre $x$ e $y$, salvo asociados. Además, como $\operatorname{mcd}(x,y)=1$, los dos factores de cada $p_i^2$ tienen que quedar del mismo lado, por lo que tanto $x$ como $y$ son cuadrados, $x=a^2$ e $y=b^2$, y $z=ab$, de nuevo salvo asociados. Además $\operatorname{mcd}(a,b)=1$ porque $1=\operatorname{mcd}(x,y)=\operatorname{mcd}(a,b)^2$.
 {{% /proof %}}
 
 
@@ -943,8 +945,7 @@ Las ternas pitagóricas primitivas son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$
 
 {{% proof %}}
 La ecuación de Pitágoras, vista en $\mathbb Z[i]$, es $$(x+iy)(x-iy)=z^2.$$ 
-A la hora de hallar las ternas pitagóricas primitivas con $x$ impar e $y$ par, ni $x\pm iy$ ni $z$ pueden ser nulos o unidades en $\mathbb{Z}[i]$ porque eso produciría soluciones triviales. 
-Según hemos visto, la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el [lema anterior](#lem:DFU), tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, $x+iy=u(a+ib)^2$, $u=1,-1,i,-i$. Esto da lugar a las siguientes posibilidades:
+Según hemos visto [mas arriba](#lem:mcdconj), la condición de que una terna pitagórica sea primitiva equivale a $\operatorname{mcd}(x+iy,x-iy)=1$. Por el [lema anterior](#lem:DFU), tanto $x+iy$ como $x-iy$ son cuadrados, o asociados de cuadrados, necesariamente conjugados. Es decir, $x+iy=u(a+ib)^2$ para cierto $u=1,-1,i,-i$. Esto da lugar a las siguientes posibilidades:
 $$
 (x,y)=\left\\{\begin{array}{l}
 (a^2-b^2,2ab),\cr
@@ -959,7 +960,26 @@ De nuevo por el [lema anterior](#lem:DFU), $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\ope
 $$(a^2-b^2)^2+(2ab)^2=(a^2+b^2)^2.$$
 {{% /proof %}}
 
+La siguiente aplicación muestra los pares $(x,y)$ que forman parte de una terna pitagórica primitiva con $x$ impar y $x,y\leq n$, donde $n$ puede ser cualquier múltiplo de $10$ comprendido entre $10$ y $3000$.
 
-El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica con $x,y\leq 4500$.
+<div class="sage">
+  <script type="text/x-sage">
+@interact
+def _(n=slider(10,3000, step_size=10, default = 100, label="n=")):
+    octant = [[a,b] for a in [1..floor(n/2)] for b in [1..(a-1)]]
+    parameters = []
+    for x in octant:
+        if gcd(x[0],x[1]) == 1 and x[0].mod(2) != x[1].mod(2):
+            parameters.append(x)
+    big_list = [[y[0]^2-y[1]^2,2*y[0]*y[1]] for y in parameters]
+    small_list = []
+    for z in big_list:
+        if z[0] <= n and z[1] <= n and z[0] > 0:
+            small_list.append(z)
+    return show(point(small_list, rgbcolor='green', size=min(max(30,2*3000/n),100), aspect_ratio=1))
+  </script>
+</div>
+
+El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica cualquiera con $x,y\leq 4500$.
 
 ![symmetric_difference](../../images/Pythagorean_triple_scatterplot.png)
