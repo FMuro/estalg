@@ -7,7 +7,7 @@ weight = 20
 
 {{% definition %}}
 Un **grupo** es un par $(G, \star )$,
-donde $G$ es un conjunto y $\star$ es una operación binaria en $G$, es decir una aplicación
+donde $G$ es un conjunto y $\star$ es una **operación binaria** en $G$, es decir una aplicación
 $$
 \begin{array}{rcl}
 G\times G&\stackrel{\star}{\longrightarrow}&G,\cr
@@ -23,7 +23,7 @@ que ha de satisfacer las propiedades siguentes:
 * Para todo $x\in G$ existe $\inv{x}\in G$  tal que $x\star \inv{x}=e=\inv{x}\star x$ (elemento **simétrico** o **inverso**).
 {{% /definition %}}
 
-Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$.
+Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$. Observa que $e^{-1}=e$.
 
 {{% example name="Ejemplos de grupos" %}}
 Los siguientes son algunos grupos bien conocidos:
@@ -38,6 +38,8 @@ Los siguientes son algunos grupos bien conocidos:
 * El conjunto $\\{ 1,-1, i, -i\\}$ con el producto.
   
 * El conjunto $GL(n,k)$ de las matrices $n\times n$ con entradas en un cuerpo $k$ y  determinante no nulo, con la multiplicación de matrices.
+
+* El **grupo trivial** $\\{e\\}$, con el producto definido como $e\star e=e$, que es el único posible.
 {{% /example %}}
 
 
@@ -112,6 +114,10 @@ $$
 Todo elemento de un grupo $x\in G$ satisface $(x^{-1})^{-1}=x$.
 {{% /corollary %}}
 
+{{% proof %}}
+Basta usar que $x\star x^{-1}=e$.
+{{% /proof %}}
+
 {{% proposition %}}
 Dados dos elementos $x,y\in G$ en un grupo, $(x\star y)^{-1}=y^{-1}\star x^{-1}$.
 {{% /proposition %}}
@@ -132,7 +138,7 @@ $$
 También hemos probado con anterioridad una versión de la proposición anterior para aplicaciones biyectivas.
 
 Las **potencias** positivas de un elemento de un grupo $x\in G$ se definen como $$x^n=x\star\stackrel{n}{\cdots}\star x,\quad n>0.$$
-Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^mx^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera.
+Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^mx^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera. Además $x^{1}=x$ y $x^{-1}$ su inverso.
 
 
 {{% definition %}}
@@ -140,10 +146,38 @@ Diremos que un elemento de un grupo $x\in G$ tiene **orden finito** si existe un
 {{% /definition %}}
 
 {{% example name="Elementos de orden finito" %}}
-En cualquier grupo, el elemento neutro es el único que tiene orden $1$.
+* En cualquier grupo, el elemento neutro es el único que tiene orden $1$.
 
-En el grupo $\\{1,-1,i,-i\\}$ con el producto, el orden de $-1$ es $2$, mientras que el orden de $i$ y de $-i$ es $4$.
+* En el grupo $\\{1,-1,i,-i\\}$ con el producto, el orden de $-1$ es $2$, mientras que el orden de $i$ y de $-i$ es $4$.
+
+* En $GL(n,\mathbb{Q})$, la siguiente matriz tiene orden $n$,
+$$
+\left(
+\begin{array}{cccc}
+0 & \cdots & 0 & 1 \cr
+1 &        &   & 0 \cr
+  & \ddots &   & \vdots \cr
+  &        & 1 & 0
+\end{array}
+\right)
+{=} 
+\left(
+\begin{array}{c|c}
+0 & 1\cr
+\hline
+I_{n-1} & 0
+\end{array}
+\right).
+$$
 {{% /example %}}
+
+{{% remark %}}
+Cuando el grupo es aditivo, la notación exponencial se cambia por una multiplicativa, es decir,
+$$n\cdot x=x+\stackrel{n}{\cdots}+ x,\quad n>0.$$
+Definimos además $0\cdot x=0$ y $n\cdot x=-(-n)\cdot x$ si $n<0$. De este modo, se satisface $m\cdot x+n\cdot x=(m+n)\cdot x$ y $n\cdot(m\cdot x)=(n\cdot m)\cdot x$ para todo $m,n\in\mathbb{Z}$. Además $1\cdot x=x$ y $(-1)\cdot x=-x$.
+
+Por tanto, en un grupo aditivo $x\in G$ tiene orden finito si $n\cdot x=0$ para cierto $n>0$ y el orden $o(x)$ es el mínimo.
+{{% /remark %}}
 
 {{% proposition %}}
 Un elemento de un grupo $x\in G$ tiene orden infinito si y solo si todas sus potencias $x^k$ con $k\in \mathbb Z$ son distintas.
@@ -170,16 +204,30 @@ Si $G$ es un grupo finito, todo elemento tiene orden finito.
 {{% /corollary %}}
 
 {{% proposition %}}
-Dado un elemento de un grupo $x\in G$, si $o(x)=m$ y $x^n=e$, entonces $m$ divide a $n$.
+Si $x\in G$ es un elemento de orden $o(x)=m$ en un grupo $G$, $x^n=e$ si y solo si $m$ divide a $n$.
 {{% /proposition %}}
 
 {{% proof %}}
-Por definición de orden $n\geq m$. Sean $c$ y $r$ el cociente y el resto de la división de $n$ por $m$, $n=m\cdot c+r$. El resto es $0\leq r<m$. Basta probar que $r=0$. Por reducción al absurdo, si $r>0$ entonces
+$\Leftarrow$ Si $m$ divide a $n$ entonces $n=m\cdot k$ para cierto entero $k$, así que 
 $$
 \begin{array}{rcl}
-x^r&=&x^{n-m\cdot c}\\
-&=&x^n\star (x^m)^{-c}\\
-&=&e\star e^{-c}\\
+x^n&=&x^{m\cdot k}\cr
+&=&(x^m)^k\cr
+&=&e^k\cr
+&=&e.
+\end{array}
+$$
+
+
+$\Rightarrow$ 
+Si $n=0$ el resultado se tiene porque todo entero divide al $0$. Si no, podemos suponer que $n$ es positivo ya que el signo no afecta a la divisibilidad y además, si $n$ fuera negativo,  $x^{-n}=(x^n)^{-1}=e^{-1}=e$. 
+
+Por definición de orden $n\geq m$. Sean $c$ y $r$ el cociente y el resto de la división de $n$ por $m$, $n=m\cdot c+r$. El resto satisface $0\leq r < m$. Basta probar que $r=0$. Por reducción al absurdo, si $r>0$ entonces
+$$
+\begin{array}{rcl}
+x^r&=&x^{n-m\cdot c}\cr
+&=&x^n\star (x^m)^{-c}\cr
+&=&e\star e^{-c}\cr
 &=&e.
 \end{array}
 $$
@@ -194,20 +242,20 @@ Un elemento de un grupo $x\in G$ tiene orden finito si y solo si $\inv{x}$ tambi
 Si $o(x)=n$ entonces 
 $$
 \begin{array}{rcl}
-(x^{-1})^m&=&x^{-n}\cr
-&=&(x*^n)^{-1}\cr
+(x^{-1})^n&=&x^{-n}\cr
+&=&(x^n)^{-1}\cr
 &=&e^{-1}\cr
 &=&e.
 \end{array}
 $$
 Por tanto $x^{-1}$ es de orden finito y además $o(x^{-1})\leq o(x)$.
 
-Usando que $(x^{-1})^{-1}=x$, deducimos la otra implicación y la otra desigualdad $o(x)\leq o(x^{-1})$.
+Usando que $(x^{-1})^{-1}=x$, deducimos que $o(x)=o((x^{-1})^{-1})\leq o(x^{-1})$, con lo que se tiene la igualdad, y también la otra implicación.
 {{% /proof %}}
 
 
 {{% definition %}}
-Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=x\star y$ para todo $x,y\in G$.
+Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=y\star x$ para todo $x,y\in G$.
 {{% /definition %}}
 
 
@@ -241,7 +289,7 @@ El orden de las columnas no importa, es decir, la siguiente matriz denota la mis
 $$
 \left(\begin{array}{ccccccccc}
          2 & 5 & 3 & 1 & 4\cr
-         5 & 3 & 4 & 1 & 4
+         5 & 3 & 4 & 1 & 2
         \end{array}\right),
 $$
 si bien lo más común es que los números de la primera fila aparezcan ordenados, como en el primer caso.
@@ -436,22 +484,39 @@ Sea $\sigma\in\Sim (X)$ una permutación. Definimos una relación de equivalenci
 
 * Reflexividad: $x\sim x$ es cierto para todo $x\in X$ ya que $x=1_X(x)=\sigma^0(x)$.
 
-* Simetría: $x\sim y\Leftrightarrow y\sim$ pues $y=\sigma^n(x)$ es equivalente a $\sigma^{-n}(y)=x$.
+* Simetría: $x\sim y\Leftrightarrow y\sim x$ pues $y=\sigma^n(x)$ es equivalente a $\sigma^{-n}(y)=x$.
 
 * Transitividad: si $x\sim y\sim z$ entonces $y=\sigma^n(x)$ y $z=\sigma^m(y)$ para ciertos $n,m\in\mathbb{Z}$, luego $z=\sigma^m(\sigma^n(x))=\sigma^{m+n}(x)$, así que $x\sim z$.
 
 Las clases de equivalencia de esta relación se denominan **órbitas**. La órbita de $x\in X$ es 
 $$\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}.$$
-Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito. Veamos que en general $\bar{x}=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ para cierto $m\geq 0$. Sea $m\geq 0$ el mínimo tal que $\sigma^m(x)=x$, que ha de existir porque las órbitas son finitas. Basta comprobar que, para todo $n\in\mathbb {Z}$, $\sigma^n(x)=\sigma^r(x)$ donde $r$ es el resto no negativo de la división de $n$ por $m$, $n=m\cdot c+r$, $0\leq r<m$. En efecto,
+Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito. 
+Veamos que en general $\bar{x}=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ para cierto $m> 0$. Esto nos va a llevar la mayor parte de esta prueba.
+
+
+Probemos que existe $m> 0$ tal que $\sigma^m(x)=x$. En efecto, como $\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}\subset\sop (\sigma)$, que es finito, todos los $\sigma^n(x)$ no pueden ser distintos, así que han de existir $p,q\in\mathbb{Z}$, $p\neq q$, tales que $\sigma^p(x)=\sigma^q(x)$. Podemos suponer sin pérdida de generalidad que $p < q$, así que, aplicando $\sigma^{-p}$ a la anterior igualdad deducimos que 
+$$
+\begin{array}{rcl}
+x&=&\sigma^{-p}(\sigma^p(x))\cr
+&=&\sigma^{-p}(\sigma^q(x))\cr
+&=&\sigma^{q-p}(x),
+\end{array}
+$$
+por tanto podemos tomar $m=q-p> 0$.
+
+Sea $m> 0$ el mínimo tal que $\sigma^m(x)=x$. Los elementos de $\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ son todos distintos. Lo veremos por reducción al absurdo. De lo contrario existirían $0\leq p<q<m$ tales que $\sigma^p(x)=\sigma^q(x)=\sigma^{p}(\sigma^{q-p}(x))$. La aplicación $\sigma^p$ es inyectiva por ser una permutación, así que esto implicaría que $x=\sigma^{q-p}(x)$, pero $0 < q-p < m$, lo que contradice la minimalidad de $m$.
+
+Ahora tenemos que ver que, para todo $n\in\mathbb {Z}$, $\sigma^n(x)\in  \\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$. 
+Basta comprobar que, $\sigma^n(x)=\sigma^r(x)$ donde $r$ es el resto no negativo de la división de $n$ por $m$, $n=m\cdot c+r$, $0\leq r<m$. En efecto,
 $$
 \begin{array}{rcl}
 \sigma^n(x)&=&\sigma^{r+m\cdot c}(x)\cr
-&=&\sigma^r(\sigma^m)^c(x).
+&=&\sigma^r((\sigma^m)^c(x)).
 \end{array}
 $$
-Como $\sigma^m(x)=x$ entonces $x=\sigma^{-m}(x)$, y $(\sigma^m)^c(x)=0$ sea cual sea $c\in\mathbb{Z}$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
+Como $\sigma^m(x)=x$, entonces $(\sigma^m)^c(x)=0$ si $c\geq 0$. Es más, $\sigma^m(x)=x$ también implica que $x=\sigma^{-m}(x)$, así que $(\sigma^m)^c(x)=0$ también si $c<0$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
 
-Por construcción, $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y su la relación de equivalencia asociada.
+Por construcción, $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\sop(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
 {{% /proof %}}
 
 
