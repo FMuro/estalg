@@ -691,9 +691,9 @@ Recapitulando, los primos de Gauss son los siguientes, salvo asociados:
 
 * $1+i$.
 
-* Los primos enteros $p\in \mathbb{Z}$, $p\geq 0$, tales que $p\equiv 3$ mod $4$.
+* Los primos enteros $p\in \mathbb{Z}$, $p > 0$, tales que $p\equiv 3$ mod $4$.
 
-* Para cada primo entero $p\in\mathbb{Z}$, $p\geq 0$, tal que $p\equiv 1$ mod $4$, dos primos de Gauss conjugados $\pi$ y $\bar{\pi}$ tales que $p=\pi\bar{\pi}$, cuyo cálculo se ha explicado en un [ejemplo anterior](#exm:prime1mod4).
+* Para cada primo entero $p\in\mathbb{Z}$, $p > 0$, tal que $p\equiv 1$ mod $4$, dos primos de Gauss conjugados $\pi$ y $\bar{\pi}$ tales que $p=\pi\bar{\pi}$, cuyo cálculo se ha explicado en un [ejemplo anterior](#exm:prime1mod4).
 
 Hay una cantidad infinita de primos de Gauss tanto del segundo tipo como del tercer tipo. 
 En $\mathbb{Z}[i]$, los asociados de un elemento se obtienen multiplicándolo por las unidades $\\{\pm1,\pm i\\}$.
@@ -715,7 +715,7 @@ Diremos que un entero de Gauss $z=a+ib$ no tiene *parte entera* si $a\neq 0\neq 
 {{% /definition %}}
 
 {{% remark %}}
-Un entero de Gauss no tiene parte entera si y solo no es nulo, ni una unidad, y no tiene divisores propios enteros.
+Un entero de Gauss no tiene parte entera si y solo no es divisible por ningún entero distinto de $\pm1$.
 {{% /remark %}}
 
 {{% lemma %}}
@@ -723,26 +723,26 @@ Sea $z$ un entero de Gauss sin parte entera y $\pi$ un primo de Gauss tal que $|
 {{% /lemma %}}
 
 {{% proof %}}
-Por reducción al absurdo, si también $\bar{\pi}\nmid p$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
+Por reducción al absurdo, si también $\bar{\pi}\mid p$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
 {{% /proof %}}
 
 {{% example name="Factorización de enteros de Gauss sin parte entera" label="exm:nointeger" %}}
 Sea $z\in\mathbb{Z}[i]$ sin parte entera. Supongamos que $z=\pi_1\cdots\pi_r$ es su factorización como producto de primos de Gauss. Como $z$ no tiene parte entera, ningún $\pi_i$ es un primo entero $p\equiv 3$ mod $4$, así que $|\pi_i|^2=2$, y en dicho caso $\pi_i$ es asociado de $1+i$, o bien $|\pi_i|^2=p$ es un primo entero $p\equiv 1$ mod $4$. Es más, en este último caso ni $\bar{\pi}_i$ ni ninguno de sus asociados puede aparecer en la factorización.
 
-Por tanto, para factorizar $z$ en $\mathbb{Z}[i]$ podemos proceder del siguiente modo. Primero, factorizamos $|z|^2$, salvo asociados, como producto de potencias de primos enteros no asociados, 
-$$|z|^2=\pm p_1^{n_1}\cdots p_s^{n_s}.$$
+Por tanto, para factorizar $z$ en $\mathbb{Z}[i]$ podemos proceder del siguiente modo. Primero, factorizamos $|z|^2$ como producto de potencias de primos enteros positivos, 
+$$|z|^2 = p_1^{n_1}\cdots p_s^{n_s}.$$
 Entonces 
 $$z=u\pi_1^{n_1}\cdots \pi_s^{n_s}$$
 donde:
 
 * Si $p_i=2$ entonces $\pi_i=1+i$.
 
-* Si $p_i\equiv 1$ mod $4$, entonces $\pi_i|p$. Para calcularlo, factorizamos $p$ como producto de primos de Gauss, $p=\pi\bar{\pi}$, según el [ejemplo anterior](#exm:prime1mod4) y dividimos $\frac{z}{\pi}$ en $\mathbb{C}$. Si $\frac{z}{\pi}$ resulta ser un entero de Gauss entonces $\pi_i=\pi$, y si no $\pi_i=\bar{\pi}$.
+* Si $p_i\equiv 1$ mod $4$, entonces $\pi_i|p$. Para calcularlo, factorizamos $p_i$ como producto de primos de Gauss, $p_i=\pi\bar{\pi}$, según el [ejemplo anterior](#exm:prime1mod4) y dividimos $\frac{z}{\pi}$ en $\mathbb{C}$. Si $\frac{z}{\pi}$ resulta ser un entero de Gauss entonces $\pi_i=\pi$, y si no $\pi_i=\bar{\pi}$.
 
 * $u$ es una unidad, $u\in\\{\pm1,\pm i\\}$, que se determina a posteriori.
 
 Veámoslo en el caso particular $z=201-43i$. En este caso
-$$|z|^2=17^2+122^2=21125=2\cdot 5^3 \cdot 13^2.$$
+$$|z|^2=201^2+43^2=42250=2\cdot 5^3 \cdot 13^2.$$
 Las factorizaciones de $5$ y de $13$ en $\mathbb{Z}[i]$ son $3=(2+i)(2-i)$ y $13=(3+2i)(3-2i)$, por tanto
 $$z=u(1+i)(2\pm i)^3(3\pm 2i)^2.$$
 Para determinar qué factor del $5$ aparece realmente, dividimos $z$ por uno de ellos en $\mathbb{C}$, por ejemplo
@@ -752,7 +752,7 @@ $$
 &=&\frac{359}{5}-\frac{287}{5}i.
 \end{array}
 $$
-Como no es un entero de Gauss, $2+i\nmid z$, sino que $2-i\mid z$, así que
+Como no es un entero de Gauss, $2+i\nmid z$, así que $2-i\mid z$, luego
 $$z=u(1+i)(2-i)^3(3\pm 2i)^2.$$
 Ahora, para hallar qué factor del $13$ aparece realmente, dividimos $z$ por uno de ellos en $\mathbb{C}$,
 $$
@@ -761,7 +761,7 @@ $$
 &=&23+21i.
 \end{array}
 $$
-Este sí es un entero de Gauss, así que $3-2i\mid z$, luego
+Este sí es un entero de Gauss, por tanto $3-2i\mid z$ y
 $$z=u(1+i)(2-i)^3(3- 2i)^2.$$
 Para hallar la unidad, calculamos el producto de la derecha
 $$
@@ -769,13 +769,13 @@ $$
 $$
 así que $u=i$,
 $$z=i(1+i)(2+i)^3(3\pm 2i)^2.$$
-La unidad $i$ se puede incorporar a cualquier factor primo, por ejemplo al primero, $i(1+i)=-1+i$, así que
+La unidad $i$ se puede incorporar a cualquier factor primo, por ejemplo al primero, $i(1+i)=-1+i$, y en conclusión
 $$z=(-1+i)(2+i)^3(3\pm 2i)^2$$
 es una factorización de $z$ como producto de primos de Gauss.
 {{% /example %}}
 
 {{% example name="Factorización en $\mathbb Z[i]$" %}}
-En general, todo entero de Gauss $z=a+ib\in\mathbb{Z}[i]$ se puede descomponer como $z=n\cdot z$, con $n=\operatorname{mcd}(a,b)$ y $z'\in\mathbb{Z}[i]$ sin parte entera. La factorización de $z$ como producto de primos de Gauss se obtiene multiplicando las correspondientes factorizaciones de $n$ y $z'$, que se realizan según indicamos [aquí](#exm:integer) y [aquí](#exm:nointeger).
+En general, todo entero de Gauss $z=a+ib\in\mathbb{Z}[i]$ se puede descomponer como $z=n\cdot z'$, con $n=\operatorname{mcd}(a,b)$ y $z'\in\mathbb{Z}[i]$ sin parte entera. La factorización de $z$ como producto de primos de Gauss se obtiene multiplicando las correspondientes factorizaciones de $n$ y $z'$, que se realizan según indicamos [aquí](#exm:integer) y [aquí](#exm:nointeger).
 
 Por ejemplo, $z=15+45i=15(1+3i)$. Por un lado $n=15=3\cdot 5=3\cdot(2+i)\cdot (2-i)$. Por otro lado $z'=1+3i$, $|z'|^2=1^2+3^2=10=2\cdot 5$. Por tanto 
 $$z'=u(1+i)(2\pm i).$$
@@ -831,7 +831,7 @@ def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
 
 ## Ecuaciones diofánticas
 
-A modo de ejemplo, vamos a estudiar aquí un par de ecuaciones diofánticas cuyas soluciones pasa por el estudio de los enteros de Gauss realizado anteriormente.
+A modo de ejemplo, vamos a estudiar aquí un par de ecuaciones diofánticas cuyas soluciones pasan por el estudio de los enteros de Gauss realizado anteriormente.
 
 Al comienzo del tema de anillos nos habíamos planteado como motivación el solucionar la ecuación diofántica $$x^2+y^2=5.$$ Ahora reemplazaremos el término independiente con un entero positivo $>1$ cualquiera.
 
@@ -841,13 +841,13 @@ Dado $n\geq 2$, la ecuación diofántica $$x^2+y^2=n$$ tiene solución si y solo
 
 
 {{% proof %}}
-La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales que $|x+iy|^2=n$. Si $x+iy=\pi_1\cdots\pi_n$ es una factorización en $\mathbb Z[i]$ entonces $|x+iy|^2=|\pi_1|^2\cdots|\pi_n|^2$. Sabemos además que $|\pi_i|^2$ puede ser $2$, un primo $p\equiv 1$ mod $4$ o $p^2$ donde $p\equiv 3$ mod $4$. Esto demuestra la necesidad de la condición del enunciado. También la suficiencia porque, si se cumple, basta tomar $x+iy$ como el producto de:
+La ecuación planteada equivale a encontrar los enteros de Gauss $x+iy$ tales que $|x+iy|^2=n$. Si $x+iy=\pi_1\cdots\pi_n$ es una factorización en $\mathbb Z[i]$ entonces $|x+iy|^2=|\pi_1|^2\cdots|\pi_n|^2$. Sabemos además, por la clasificación de los primos de Gauss, que $|\pi_i|^2$ puede ser $2$, un entero primo $p\equiv 1$ mod $4$ o $p^2$ donde $p\equiv 3$ mod $4$. Esto demuestra la necesidad de la condición del enunciado. También la suficiencia porque, si se cumple, basta tomar $x+iy$ como el producto de:
 
 * Un factor $1+i$ por cada $2$ que aparezca en la factorización de $n$.
 
 * Si $p\equiv 1$ mod $4$, un factor $\pi$ con $|\pi|^2=p$ por cada factor $p$ de $n$.
 
-* Si $p\equiv 3$ mod $4$, un factor $p$ por cada dos factores $p$ de $n$.
+* Si $p\equiv 3$ mod $4$, un factor $p$ por *cada dos* factores $p$ de $n$.
 
 El conjunto de todas las soluciones se obtiene permitiendo reemplazar los $\pi$ del segundo apartado por sus conjugados y tomando los asociados de todas las soluciones particulares así obtenidas. En particular hay un número finito de soluciones.
 {{% /proof %}}
@@ -891,7 +891,7 @@ Sus soluciones positivas $x,y,z>0$ se denominan **ternas pitagóricas** y parame
 Los papeles de $x$ e $y$ en la ecuación de Pitágoras son intercambiables, por lo que $(x,y,z)$ es una solución si y solo si lo es
 $$(y,x,z).$$
 Los signos de las soluciones son irrelevantes, es decir si $(x,y,z)$ es una solución entonces también lo son $$(\pm x,\pm y,\pm z).$$
-Las soluciones triviales las de la forma $(x,0,\pm x)$ o $(0,y,\pm y)$. Por tanto basta estudiar las ternas pitagóricas.
+Las soluciones triviales son las de la forma $(x,0,\pm x)$ o $(0,y,\pm y)$. Por tanto basta estudiar las ternas pitagóricas.
 
 No hay ternas pitagóricas con $x$ e $y$ impares porque en ese caso $x\equiv\pm 1$ e $y\equiv \pm1$ mod $4$, así que $z^2=x^2+y^2\equiv 1+1=2$ mod $4$. Esto es imposible porque los únicos cuadrados en $\mathbb Z/(4)$ son $0$ y $1$.
 
@@ -939,7 +939,7 @@ Si $z$ fuera una unidad, entonces también lo tendrían que ser $z^2$, $x$ e $y$
 
 
 {{% theorem %}}
-Las ternas pitagóricas primitivas son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$ con $a,b\in\mathbb Z$, $a>b>0$, $\operatorname{mcd}(a,b)=1$, $a\not\equiv b$ mod $2$.
+Las ternas pitagóricas primitivas con segunda coordenada par son las de la forma $(a^2-b^2, 2ab, a^2+b^2)$ con $a,b\in\mathbb Z$, $a>b>0$, $\operatorname{mcd}(a,b)=1$, $a\not\equiv b$ mod $2$.
 {{% /theorem %}}
 
 
@@ -959,6 +959,11 @@ Las dos últimas no dan lugar al tipo de terna pitagórica primitiva que estamos
 De nuevo por el [lema anterior](#lem:DFU), $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$, por el [lema de más arriba](#lem:mcdconj). Esto reduce todas las posibilidades a las que aparecen en el enunciado del teorema. Todas ellas son en efecto ternas pitagóricas primitivas como las que andamos buscando ya que sus tres coordenadas son positivas, la segunda es par, la primera impar pues $a\not\equiv b$ mod $2$, la primera y la segunda son comprimas, y además estas ternas resuleven la ecuación, puesto que
 $$(a^2-b^2)^2+(2ab)^2=(a^2+b^2)^2.$$
 {{% /proof %}}
+
+
+El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica cualquiera con $x,y\leq 4500$.
+
+![symmetric_difference](../../images/Pythagorean_triple_scatterplot.png)
 
 La siguiente aplicación muestra los pares $(x,y)$ que forman parte de una terna pitagórica primitiva con $x$ impar y $x,y\leq n$, donde $n$ puede ser cualquier múltiplo de $10$ comprendido entre $10$ y $3000$.
 
@@ -980,6 +985,3 @@ def _(n=slider(10,3000, step_size=10, default = 100, label="n=")):
   </script>
 </div>
 
-El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica cualquiera con $x,y\leq 4500$.
-
-![symmetric_difference](../../images/Pythagorean_triple_scatterplot.png)
