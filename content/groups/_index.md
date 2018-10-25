@@ -369,7 +369,7 @@ Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres 
 Dado un conjunto $X$ el **soporte** de una permutación $\sigma\colon X\rightarrow X$ es el subconjunto
 $$\sop (\sigma )=\\{ x\in X\mid \sigma (x)\ne x\\} .$$
 
-Decimos que $\sigma\in \Sim(X)$ es un **ciclo** de **longitud** $r$, o un **$r$-ciclo**, si su soporte es un conjunto finito de $r$ elementos $$\sop (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$ y además
+Decimos que $\sigma\in \Sim(X)$ es un **ciclo** de **longitud** $n$, o un **$n$-ciclo**, si su soporte es un conjunto finito de $n$ elementos $$\sop (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$ y además
 $$
 \left\\{
 \begin{array}{ll}
@@ -382,19 +382,27 @@ Este ciclo se denotará también $$\sigma=(x\_1\; x\_2\;\cdots\; x\_n).$$
 Una **trasposición** es un ciclo de longitud 2.
 {{% /definition %}}
 
-Un ejemplo de ciclo donde el soporte es el total:
+Un ejemplo de ciclo $(1\; 2\; 3\; 4\; 5)$ donde el soporte es el total:
 
 ![Un ciclo](../images/cycle.png)
 
-Otro donde el soporte es un subconjunto propio:
+Otro $(1\; 3\; 4\; 5)$ donde el soporte es un subconjunto propio:
 
 ![Otro ciclo](../images/cycle2.png)
 
-Un ejemplo de trasposición entre elementos consecutivos:
+Otro ciclo más $(1\; 4\; 3\; 5\; 2)$ que ofrece un aspecto diferente debido al orden de sus entradas:
+
+![Otro ciclo más](../images/cycle3.png)
+
+¡El primer ejemplo de permutación que vimos también es un ciclo! Concretamente el $(2\; 5\; 3\; 4)$:
+
+![Permutación](../images/permutation.png)
+
+Un ejemplo de trasposición $(3\; 4)$ entre elementos consecutivos:
 
 ![Un ciclo](../images/transposition.png)
 
-Un ejemplo de trasposición entre elementos *no* consecutivos:
+Un ejemplo de trasposición $(2\; 4)$ entre elementos *no* consecutivos:
 
 ![Otro ciclo](../images/transposition2.png)
 
@@ -403,12 +411,17 @@ Un ejemplo de trasposición entre elementos *no* consecutivos:
 La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \; x\_1 \; x\_2)=(x\_2 \; x\_3 \; x\_1)$. 
 {{% /watch %}} 
 
-{{% remark %}}
-Dada una permutación $\sigma\in\Sim(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\sop(\sigma)=\sop(\sigma^{-1})$.
-{{% /remark %}}
-
-Cualquier notación bidimensional para los ciclos es intrínsecamente mala, lo ideal sería algo así:
+Cualquier notación para los ciclos que quepa en una línea es intrínsecamente mala, lo ideal sería algo así:
 ![Ciclos circulares](../images/circular_cycle.png)
+
+{{% proposition %}}
+El orden de un ciclo coincide con su longitud.
+{{% /proposition %}}
+
+{{% proof %}}
+Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \Sim(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
+{{% /proof %}}
+
 
 {{% proposition %}}
 Todo ciclo es producto de trasposiciones.
@@ -432,6 +445,10 @@ En vez de $A\Rightarrow B$ probaremos NO $A$ $\Leftarrow$ NO $B$.
 
 Si $\sigma(x)\notin\sop(\sigma)$ entonces $\sigma(\sigma(x))=\sigma(x)$. Como $\sigma$ es inyectiva, esto implica que $\sigma(x)=x$, con lo que $x\notin\sop(x)$.
 {{% /proof %}}
+
+{{% remark %}}
+Dada una permutación $\sigma\in\Sim(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\sop(\sigma)=\sop(\sigma^{-1})$.
+{{% /remark %}}
 
 {{% corollary label="cor:soporte" %}}
 Dada $\sigma\in\Sim (X)$, si $x\in\sop(\sigma)$ entonces $\sigma^{n}(x)\in\sop(\sigma)$ para todo $n\in\mathbb{Z}$.
@@ -467,13 +484,6 @@ Como los papeles de $\sigma$ y $\tau$ son intercambiables, el argumento anterior
 El recíproco no es cierto.
 {{% /watch %}}
 
-{{% proposition %}}
-El orden de un ciclo coincide con su longitud.
-{{% /proposition %}}
-
-{{% proof %}}
-Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \Sim(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
-{{% /proof %}}
 
 {{% theorem %}}
 Toda permutación con soporte finito se puede descomponer como producto de ciclos disjuntos. Esta descomposición es única salvo orden.
@@ -516,7 +526,7 @@ $$
 $$
 Como $\sigma^m(x)=x$, entonces $(\sigma^m)^c(x)=0$ si $c\geq 0$. Es más, $\sigma^m(x)=x$ también implica que $x=\sigma^{-m}(x)$, así que $(\sigma^m)^c(x)=0$ también si $c<0$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
 
-Por construcción, $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\sop(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
+Hemos probado que $\sigma$ se comporta sobre cada órbita $\bar x=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ como un ciclo de longitud $m$, ya que $\sigma^m(x)=x$, de hecho $m$ era el menor entero positivo que satisfacía esta propiedad. Esto demuestra que $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\sop(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
 {{% /proof %}}
 
 
