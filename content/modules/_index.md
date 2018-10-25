@@ -39,17 +39,17 @@ que satisfacen las siguientes propiedades, donde $a,b,c\in M$ y $r,s\in R$:
 * Distributiva:
 $$r(a+b)=ra+rb,\qquad (r+s)a=ra+sa.$$
 
-* Existencia de elemento neutro $0\in M$ para la suma y comportamiento del $1\in R$ como elemento neutro para el producto por escalares:
+* Existencia de *elemento neutro* $0\in M$ para la suma y comportamiento del $1\in R$ como elemento neutro para el producto por escalares:
 $$0+a=a,\qquad 1a=a.$$
 
-* Existencia de un elemento opuesto para la suma $-a\in M$ para todo $a\in M$ de modo que $$a+(-a)=0.$$
+* Existencia de un *elemento opuesto* para la suma $-a\in M$ para todo $a\in M$ de modo que $$a+(-a)=0.$$
 
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
  Cuando quede claro por el contexto o no sea relevante especificarlo, omitiremos $R$ de la notación. La suma en un módulo lo dota de estructura de grupo abeliano. Recordemos que el elemento neutro de un grupo es único, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Además $0a=0=r0$ y $r(-a)=-ra=(-r)a$. Si $R=k$ es un cuerpo la noción de $R$-módulo coincide con la de $k$-espacio vectorial.
-{{% /watch %}}
+{{% /remark %}}
 
 
 
@@ -98,17 +98,13 @@ Un subconjunto $N\subset M$ de un $R$-módulo $M$ es un **submódulo** si:
 * $-a\in N$ para todo $a\in N$.
 
 * $ra\in N$ para todo $r\in R$ y $a\in N$.
-
-
 {{% /definition %}}
 
 
 
-{{% watch %}}
-
+{{% remark %}}
 Un submódulo $N\subset M$ es un módulo por derecho propio con la suma y el producto por escalares heredados de $M$. El módulo trivial $\\{0\\}$ es un submódulo de cualquier otro. Los submódulos de $R$ coinciden con los ideales del anillo. 
-
-{{% /watch %}}
+{{% /remark %}}
 
 
 
@@ -121,9 +117,9 @@ Dados dos $R$-módulos $M$ y $N$, un **homomorfismo** $f\colon M\rightarrow N$ e
 {{% /definition %}}
 
 
-{{% watch %}}
+{{% remark %}}
 Los homomorfismos satisfacen $f(-a)=-f(a)$ y $f(0)=0$. La identidad $\operatorname{id}_M\colon M\rightarrow M$ es un isomorfismo. Comprueba que si $$M\stackrel{f}\longrightarrow N\stackrel{g}\longrightarrow P$$ son homomorfismos entonces la composición $g\circ f\colon M\rightarrow P$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon M\rightarrow N$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon N\rightarrow M$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $M\cong N$. Prueba que esta relación es de equivalencia. 
-{{% /watch %}}
+{{% /remark %}}
 
 
 
@@ -158,20 +154,31 @@ El producto de $R$-módulos es conmutativo salvo isomorfismo. Dados dos $R$-mód
 
 
 {{% example name="Matrices" %}}
-Toda matriz $B$ de tamaño $m\times n$ con entradas en $R$ da lugar a un homomorfismo definido por la multiplicación de matrices: $$\begin{array}{rcl} R^n&\longrightarrow&R^m,\cr \left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right)&\mapsto& B\left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right). \end{array}$$ La composición de este tipo de homomorfismos es el producto de matrices. En particular $B$ define un isomorfismo si y solo si es una matriz invertible. Cualquier homomorfismo $f\colon R^n\rightarrow R^m$ es de este tipo. En efecto, si para cada $1\leq i\leq n$ consideramos el elemento $$e\_i=\left(\begin{smallmatrix}0\cr\vdots\cr1\cr\vdots\cr0\end{smallmatrix}\right)\in R^n$$ cuya única coordenada no trivial es la $i$-ésima, que vale $1$, puedes comprobar la matriz que define $f\colon R^n\rightarrow R^m$ es aquella cuyas columnas son los $f(e\_i)$, $$\left(f(e\_1)|\cdots|f(e\_n)\right).$$
+Toda matriz $B$ de tamaño $m\times n$ con entradas en $R$ da lugar a un homomorfismo definido por la multiplicación de matrices: $$\begin{array}{rcl} R^n&\longrightarrow&R^m,\cr \left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right)&\mapsto& B\left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right). \end{array}$$ La composición de este tipo de homomorfismos es el producto de matrices. En particular $B$ define un isomorfismo si y solo si es una matriz invertible. Cualquier homomorfismo $f\colon R^n\rightarrow R^m$ es de este tipo. En efecto, si para cada $1\leq i\leq n$ consideramos el elemento $$e\_i=\left(\begin{smallmatrix}0\cr\vdots\cr1\cr\vdots\cr0\end{smallmatrix}\right)\in R^n$$ cuya única coordenada no trivial es la $i$-ésima, que vale $1$, puedes comprobar la matriz que define $f\colon R^n\rightarrow R^m$ es aquella cuyas columnas son los $f(e\_i)$, $$\left(f(e\_1)\mid\cdots\mid f(e\_n)\right).$$
 {{% /example %}}
 
 
-{{% watch %}}
+{{% exercise %}}
  Demuestra que si $M\cong M'$ y $N\cong N'$ entonces $M\times N\cong M'\times N'$.
-{{% /watch %}}
+{{% /exercise %}}
 
 
 
-{{% example name="Homomorfismos desde $R^n$" %}}
-Si $M$ es un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ es un subconjunto cualquiera, comprueba que la aplicación $$\phi_S=\phi\_{\\{a\_1,\dots,a\_n\\}}\colon R^n\longrightarrow M$$ definida por $$\phi\_{\\{a\_1,\dots,a\_n\\}}(r\_1,\dots,r\_n)=r\_1a\_1+\cdots +r\_na\_n$$ es un homomorfismo que satisface  $$\phi\_{\\{a\_1,\dots,a\_n\\}}(e\_i)=a\_i.$$  Comprueba también que cualquier homomorfismo $f\colon R^n\rightarrow M$ es de esta forma, concretamente $f=\phi\_{\\{f(e\_1),\dots,f(e\_n)\\}}$.
-{{% /example %}}
+{{% proposition %}}
+Si $M$ es un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto cualquiera, existe un único homomorfismo $\phi=\phi_{S}\colon R^n\rightarrow M$ tal quie $\phi(e_i)=a_i$.
+{{% /proposition %}}
 
+{{% proof %}}
+Todo $x=(x\_1,\dots,x\_n)\in R^n$ se puede escribir como $x=\sum\_{i=1}^nx\_ie\_i$. Por tanto, si existiera $\phi$ tendría que cumplir que 
+$$
+\begin{array}{rcl}
+\phi(x)&=&\phi(\sum\_{i=1}^nx\_ie\_i)\cr
+&=&\sum\_{i=1}^nx\_i\phi(e\_i)\cr
+&=&\sum\_{i=1}^nx\_ia\_i.
+\end{array}
+$$
+Esto demostraría la unicidad, caso de que existiera. Es más, es fácil comprobar que la fórmula $\phi(x)=\sum_{i=1}^nx_ia_i$ define un homomorfismo, luego existe.
+{{% /proof %}}
 
 {{% proposition %}}
 Dado un homomorfismo $f\colon M\rightarrow N$, su imagen $\operatorname{im} f\subset N$ es un submódulo. 
@@ -193,7 +200,7 @@ Dado un homomorfismo $f\colon M\rightarrow N$, su imagen $\operatorname{im} f\su
 
 
 {{% proposition %}}
-El **núcleo** de un homomorfismo $f\colon M\rightarrow N$, $$\ker f=\\{a\in M\;|\;f(a)=0\\},$$ es un submódulo $\ker f\subset M$.
+El **núcleo** de un homomorfismo $f\colon M\rightarrow N$, $$\ker f=\\{a\in M\mid f(a)=0\\},$$ es un submódulo $\ker f\subset M$.
 {{% /proposition %}}
 
 
@@ -210,9 +217,9 @@ El **núcleo** de un homomorfismo $f\colon M\rightarrow N$, $$\ker f=\\{a\in M\;
 {{% /proof %}}
 
 
-{{% watch %}}
- Como ocurre con los grupos, un homomorfismo de módulos $f\colon M\rightarrow N$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in M$ es tal que $f(a)=0$ entonces $a=0$.
-{{% /watch %}}
+{{% remark %}}
+ Como ocurre con los grupos y con los anillos, un homomorfismo de módulos $f\colon M\rightarrow N$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in M$ es tal que $f(a)=0$ entonces $a=0$.
+{{% /remark %}}
 
 
 ## Módulos libres
@@ -223,9 +230,9 @@ Sea $M$ un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto. Deci
 
 
 
-{{% watch %}}
+{{% remark %}}
  Si $R=k$ es un cuerpo todo $R$-módulo es libre puesto que todo $k$-espacio vectorial posee una base. Los $k$-espacios vectoriales finitamente generados se denominan también de dimensión finita.
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% example name="$R^n$ es libre" %}}
