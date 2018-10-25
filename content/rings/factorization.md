@@ -921,7 +921,8 @@ Dados $x,y\in\mathbb Z$ no nulos, tenemos que $\operatorname{mcd}(x,y)=1$ y $x\n
 
 
 {{% proof %}}
-$\Rightarrow$ Por reducción al absurdo. Si $\pi\in\mathbb Z[i]$ es un primo de Gauss tal que $\pi|(x+iy)$ y $\pi|(x-iy)$ entonces $$\begin{array}{rcl}\pi\;|\;[(x+iy)+(x-iy)]&=&2x,\cr \pi\;|\;[(x+iy)-(x-iy)]&=&2yi.\end{array}$$ Como $\operatorname{mcd}(x,y)=1$ entonces $\pi|2$, es decir $\pi=1+i$ (o un asociado). Por tanto $(1+i)|(x+iy)$, así que por el lema anterior $x\equiv y$ mod $2$, lo cual es una contradicción.
+$\Rightarrow$ Por reducción al absurdo. Si $\pi\in\mathbb Z[i]$ es un primo de Gauss tal que $\pi|(x+iy)$ y $\pi|(x-iy)$ entonces $$\begin{array}{rcl}\pi\;|\;[(x+iy)+(x-iy)]&=&2x,\cr \pi\;|\;[(x+iy)-(x-iy)]&=&2yi.\end{array}$$ 
+El primo $\pi$ no puede dividir simultáneamente a $x$ y a $y$ ya que $\operatorname{mcd}(x,y)=1$, y el divisor común máximo de dos enteros es el mismo calculado en $\mathbb{Z}$ o en $\mathbb{Z}[i]$. De aquí deducimos que $\pi|2$, es decir $\pi=1+i$ (o un asociado). Por tanto $(1+i)|(x+iy)$, así que por el lema anterior $x\equiv y$ mod $2$, lo cual es una contradicción.
 
 $\Leftarrow$ Cualquier divisor común de $x$ e $y$ divide tanto a $x+iy$ como a $x-iy$, por tanto $\operatorname{mcd}(x,y)=1$. Además $x\not\equiv y$ mod $2$ ya que en caso contrario, por el lema anterior, $(1+i)|(x+iy)$ y por tanto $(1-i)|(x-iy)$. Como $1+i$ y $1-i$ son asociados, ambos dividirían tanto a $x+iy$ como a $x-iy$, que no podrían ser coprimos.
   {{% /proof %}}
@@ -956,8 +957,11 @@ $$
 $$
 Las dos últimas no dan lugar al tipo de terna pitagórica primitiva que estamos considerando, pues $x$ sería par. La primera sí, siempre que $a>b>0$, pues $x,y>0$. También si $ a < b < 0$, pero por este camino llegaríamos a las mismas ternas. La segunda posibilidad también da lugar a las mismas ternas que la primera. Así que podemos suponer que $x+iy=(a+ib)^2$ con $a>b>0$ y por tanto $x-iy=(a-ib)^2$.
 
-De nuevo por el [lema anterior](#lem:DFU), $$z^2=(a+ib)(a-ib)=a^2+b^2,$$ y $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$, por el [lema de más arriba](#lem:mcdconj). Esto reduce todas las posibilidades a las que aparecen en el enunciado del teorema. Todas ellas son en efecto ternas pitagóricas primitivas como las que andamos buscando ya que sus tres coordenadas son positivas, la segunda es par, la primera impar pues $a\not\equiv b$ mod $2$, la primera y la segunda son comprimas, y además estas ternas resuleven la ecuación, puesto que
+De nuevo por el [lema anterior](#lem:DFU), $$z=u(a+ib)(a-ib)=u(a^2+b^2)$$ para cierta unidad $u\in\\{\pm1,\pm i\\}$. Como la ecuación $(x+iy)(x-iy)=z^2$ ha de satisfacerse, la unidad ha de ser tal que $u^2=1$, con lo que $u=\pm 1$. El caso $u=-1$ lo excluimos ya que entonces $z=-(a^2+b^2)<0$, por tanto $z=a^2+b^2$. Además, una vez más por el [lema anterior](#lem:DFU), $\operatorname{mcd}(a+ib,a-ib)=1$, es decir $\operatorname{mcd}(a,b)=1$ y $a\not\equiv b$ mod $2$, usando el [lema de más arriba](#lem:mcdconj). Esto reduce todas las posibilidades a las que aparecen en el enunciado del teorema. Veamos que todas ellas son en efecto ternas pitagóricas primitivas. 
+
+Claramente, las ternas del enunciado resuelven la ecuación de Pitágoras, es decir,
 $$(a^2-b^2)^2+(2ab)^2=(a^2+b^2)^2.$$
+Las tres coordenadas son positivas, pues $a>b>0$. La segunda coordenada es claramente par. Solo queda comprobar que las dos primeras son coprimas. Para ello, demostraremos que la primera no es divisible por $2$ ni por ningún factor primo de $a$ o de $b$. Como $n\equiv n^2$ mod $2$ para todo $n\in\mathbb{Z}$, $a^2-b^2\equiv a-b\not\equiv 0$ mod $2$, pues $a\not\equiv b$ mod $2$, así que $a^2-b^2$ es impar. Sea $p\in\mathbb{Z}$ un primo. Si $p\mid a$ entonces $p\mid a^2$. Si fuera cierto que $p\mid (a^2-b^2)$ entonces tendriamos que $p\mid b^2$ y por tanto $p\mid b$. Esto contradeciría que $\operatorname{mcd}(a,b)=1$, luego en realidad  $p\nmid (a^2-b^2)$. Análogamente se prueba que si $p\mid b$ entonces $p\nmid (a^2-b^2)$. Esto concluye la demostración.
 {{% /proof %}}
 
 
