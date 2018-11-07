@@ -4,7 +4,8 @@ DefaultContentLanguage = "es"
 
 title = "Estructuras algebraicas"
 theme = "hugo-theme-lecturenotes"
-disableLiveReload = false
+disableLiveReload = true
+ignoreFiles = ["\\.kate\\-swp"]
 
 creatordisplayname = "Valere JEANTET"
 creatoremail = "valere.jeantet@gmail.com"

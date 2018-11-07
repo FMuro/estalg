@@ -212,13 +212,12 @@ Dado un homomorfismo $f\colon R\rightarrow S$, su imagen $\operatorname{im} f\su
 {{% /proof %}}
 
 
-{{% proposition %}}
+{{% proposition label="factorimage" %}}
 Dado un homomorfismo $f\colon R\rightarrow S$ y un subanillo $U\subset S$, si $\operatorname{im} f\subset U$ entonces $f$ factoriza de manera única a través de la inclusión, es decir, existe un único homomorfismo $g\colon R\rightarrow U$ tal que $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow U\stackrel{i}\hookrightarrow S.$$ 
 {{% /proposition %}}
 
 
 {{% proof %}}
- 
 Si $f=i\circ g$ entonces tendríamos $$f(a)=(i\circ g)(a)=i(g(a))=g(a).$$ La unicidad de $g$ sería consecuencia de esta fórmula ya que fuerza su definición. Definimos pues la aplicación $g\colon R\rightarrow U$ como $g(a)=f(a)$. Tiene sentido porque $\operatorname{im}f\subset U$. La aplicación $g$ es un homomorfismo pues está definida por la misma fórmula que el homomorfismo $f$.  
 {{% /proof %}}
 
@@ -346,8 +345,8 @@ Dados dos anillos $R$ y $S$, ¿es $R\times\\{0\\}\subset R\times S$ un ideal? ¿
 
 Definimos ahora el ideal generado por un conjunto de elementos de un anillo, que es el menor ideal que los contiene.
 
-{{% definition %}}
-El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo:  $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}.$$ Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. 
+{{% definition label="generators" %}}
+El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo:  $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}\subset R.$$ Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. 
 {{% /definition %}}
 
 En $\mathbb Z$, el ideal de los números pares es $(2)$.
@@ -456,7 +455,7 @@ El núcleo de la proyección natural es $$\ker p =\\{a\in R\;|\; p(a)=0\\},$$ pe
 {{% /proof %}}
 
 
-{{% proposition %}}
+{{% proposition label="factorquotient" %}}
 Dado un ideal $I\subset R$ y un homomorfismo $f\colon R\rightarrow S$ tal que $I\subset \ker f$, $f$ factoriza de manera única a través de la proyección natural, es decir existe un único homomorfismo $g\colon R/I\rightarrow S$ tal que $f=g\circ p$, $$f\colon R\stackrel{p}\twoheadrightarrow R/I\stackrel{g}\rightarrow S.$$
 {{% /proposition %}}
 
@@ -474,17 +473,16 @@ Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 {{% /remark %}}
 
 
-{{% theorem name="Primer Teorema de Isomorfía"%}}
- Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
+{{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
+Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
  Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
 
 
 {{% proof %}}
+[Por un lado](#factorimage) podemos factorizar $f\\colon R\\rightarrow S$ de manera única como $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$ donde $g(a)=f(a)$. En particular $$\ker g = \ker f.$$
 
-Por un lado podemos factorizar $f\\colon R\\rightarrow S$ de manera única como $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$ donde $g(a)=f(a)$. En particular $$\ker g = \ker f.$$
-
-Por otro lado podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(\bar{a})=g(a)=f(a)$. 
+[Por otro lado](#factorquotient) podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(\bar{a})=g(a)=f(a)$. 
 
 Por tanto $f=i\circ g= i\circ(\overline{f}\circ i)$, como queríamos. La unicidad de $\bar f$ se deduce de esta fórmula, ya que fuerza su definición:
 $$
