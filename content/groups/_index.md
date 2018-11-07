@@ -137,6 +137,28 @@ $$
 
 También hemos probado con anterioridad una versión de la proposición anterior para aplicaciones biyectivas.
 
+Los grupos poseen las siguientes **propiedades cancelativas** a izquierda y derecha.
+
+{{% proposition %}}
+Dados tres elementos de un grupo $x,y,z\in G$:
+
+* Si $x\star y=x\star z$ entonces $y=z$.
+
+* Si $y\star x=z\star x$ entonces $y=z$.
+{{% /proposition %}}
+
+{{% proof %}}
+Si $x\star y=x\star z$ entonces 
+$$
+\begin{array}{rcl}
+y&=&x^{-1}\star(x\star y)\cr
+&=&x^{-1}\star(x\star z)\cr
+&=&x.
+\end{array}
+$$
+La otra propiedad se prueba de manera análoga.
+{{% /proof %}}
+
 Las **potencias** positivas de un elemento de un grupo $x\in G$ se definen como $$x^n=x\star\stackrel{n}{\cdots}\star x,\quad n>0.$$
 Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^mx^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera. Además $x^{1}=x$ y $x^{-1}$ su inverso.
 
@@ -274,7 +296,7 @@ Basta recordar que la composición de aplicaciones biyectivas es biyectiva. El e
 {{% /proof %}}
 
 {{% remark %}}
-El **grupo simétrico de $n$ elementos** $S_n$ es el grupo simétrico del conjunto $\\{1,2, \cdots, n\\}$. Una manera concisa de representar una permutación de este conjunto es a través de una matriz con dos filas ($n=5$):
+El **grupo simétrico de $n$ elementos** $S_n$ es el grupo simétrico del conjunto $\\{1,2, \cdots, n\\}$. Este grupo posee $n!$ elementos. Una manera concisa de representar una permutación de este conjunto es a través de una matriz con dos filas ($n=5$):
 $$
 \left(\begin{array}{ccccccccc}
          1 & 2 & 3 & 4 & 5\cr
@@ -323,30 +345,34 @@ $$
 
 
 {{% example name="Composición de permutaciones" %}}
-Con la notación matricial, la composición de permutaciones en $S_n$ se puede realizar como en el siguiente ejemplo. Consideramos
+La composición de permutaciones se puede realizar de manera gráfica del siguiente modo,
+
+![Composición](../images/composition.png)
+
+Con la notación matricial, la composición en $S_n$ se puede llevar a cabo como en el siguiente ejemplo. Consideramos
 $$\sigma=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
-                     2 & 1 & 3
+                     1 & 3 & 2
                     \end{array}\right),
    \tau=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
-                     2 & 3 & 1
+                     3 & 1 & 2
                     \end{array}\right)\in S_3.$$
 Para calcular $\sigma\circ\tau$ reordenamos las columnas de $\sigma$ de modo que su primera fila coincida con la segunda de $\tau$:
 $$\sigma=\left(\begin{array}{ccc}
-                     2 & 3 & 1\cr
-                     1 & 3 & 2
+                     3 & 1 & 2\cr
+                     2 & 1 & 3
                     \end{array}\right).$$
 La matriz de $\sigma\circ\tau$ consiste en la primera fila de $\tau$ seguida de la segunda de la última representación de $\sigma$,
 $$\sigma\circ\tau=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
-                     1 & 3 & 2
+                     2 & 1 & 3
                     \end{array}\right).$$
                     
 Calculamos ahora $\tau\circ\sigma$,
 $$
    \tau=\left(\begin{array}{ccc}
-                     2 & 1 & 3\cr
+                     1 & 3 & 2\cr
                      3 & 2 & 1
                     \end{array}\right),
 $$
@@ -414,6 +440,12 @@ La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \;
 Cualquier notación para los ciclos que quepa en una línea es intrínsecamente mala, lo ideal sería algo así:
 ![Ciclos circulares](../images/circular_cycle.png)
 
+
+{{% remark %}}
+Dada una permutación $\sigma\in\Sim(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\sop(\sigma)=\sop(\sigma^{-1})$.
+{{% /remark %}}
+
+
 {{% proposition %}}
 El orden de un ciclo coincide con su longitud.
 {{% /proposition %}}
@@ -423,7 +455,7 @@ Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \Sim(X)$. Es fácil ver que $\sigma^k(x\_1)
 {{% /proof %}}
 
 
-{{% proposition %}}
+{{% proposition label="cicletransp" %}}
 Todo ciclo es producto de trasposiciones.
 {{% /proposition %}}
 
@@ -447,7 +479,7 @@ Si $\sigma(x)\notin\sop(\sigma)$ entonces $\sigma(\sigma(x))=\sigma(x)$. Como $\
 {{% /proof %}}
 
 {{% remark %}}
-Dada una permutación $\sigma\in\Sim(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\sop(\sigma)=\sop(\sigma^{-1})$.
+El soporte de una permutación $\sigma$, si no es vacío, ha de tener al menos dos elementos ya que si $\sop(\sigma)=\\{x\\}$, como $\sigma(x)\in\sop(\sigma)$ tendríamos que $\sigma(x)=x$, así que $x\notin\sop(\sigma)$, que es una contradicción. Por tanto los ciclos de soporte no vació tienen como poco longitud $2$. El ciclo de longitud $0$, denotado $()$, es la identidad. De hecho la identidad es la única permutación de soporte vacío.
 {{% /remark %}}
 
 {{% corollary label="cor:soporte" %}}
@@ -553,364 +585,574 @@ $$\begin{array}{rcl}
 Por tanto $\sigma =(1\;3\;5\;4)(2\;6)=(2\;6)(1\;3\;5\;4)=(1\;3)(3\;5)(5\;4)(2\;6)$.
 {{% /example %}}
 
+{{% proposition %}}
+Si $\sigma\in S_n$ se descompone como producto de $c$ ciclos disjuntos de longitudes respectivas $l_1,\dots, l_c$ entonces el orden de $\sigma$ es el múltiplo común mínimo de $l_1,\dots, l_c$.
+{{% /proposition %}}
+
+{{% proof %}}
+Sea $\sigma=\sigma_1\cdots\sigma_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos, donde cada $\sigma_i$ es un ciclo de longitud $l_i$. Como las permutaciones disjuntas conmutan, 
+$$\sigma^k=\sigma_1^k\cdots\sigma_c^k$$
+para todo $k\geq 1$. Aquí estamos usando que el soporte de cada $\sigma_i^k$ está contenido en el de $\sigma_i$ pues si $\sigma_i(x)=x$ entonces $\sigma_i^k(x)=x$ para todo $k\geq 1$. Por tanto, la descomposición de $\sigma^k$ como producto de ciclos disjuntos se obtendrá descomponiendo cada $\sigma_i^k$ y haciendo el producto de todas estas descomposiciones. Por la unicidad de la descomposición de una permutación como producto de ciclos disjuntos, $\sigma^k=1$ si y solo si $\sigma_i^k=1$ para todo $i=1,\dots, c$. Si esto ocurre, es que $k$ es divisible por el orden de $\sigma_i$ para todo $i$, es decir $l_i|k$ para todo $i$. El mínimo valor de $k$ para el que esto pasa es, por definición, el múltiplo común mínimo de $l_1,\dots, l_c$.
+{{% /proof %}}
+
+
+
+## El signo de una permutación
+
+
+{{% definition %}}
+Un par $(i,j)$ de números $1\leq i,j \leq n$ es una **inversión** de $\sigma\in S_n$, si
+$i < j$ pero $\sigma (i) > \sigma (j)$.
+{{% /definition %}}
+
+{{% example name="Inversiones" %}}
+Las inversiones se corresponden con los cruces en la representación de la permutación como diagrama de flechas:
+
+![Inversiones](../images/permutation_sign.png)
+
+Las inversiones de esta permutación son $(2,3)$, $(2,4)$, $(2,5)$, $(3,4)$ y $(3, 5)$.
+
+Esto es así siempre que dibujemos el diagrama respetando las dos reglas siguientes:
+
+* Dos flechas se cruzan como máximo en un punto.
+
+* En un prunto de cruce nunca concurren más de dos flechas.
+
+Estas configuraciones prohibidas se comprenden mejor con diagramas que muestran lo que *no* puede pasar:
+
+![Configuraciones prohibidas](../images/forbidden_permutations.png)
+
+Siempre podemos evitarlas moviendo un poco las flechas.
+{{% /example %}}
+
+
+{{% definition %}}
+El **signo** de una permutación $\sigma\in S_n$ se define como
+$$
+\signo(\sigma)=(-1)^{\text{nº de inversiones de }\sigma}.
+$$
+Decimos que $\sigma$ es **par** si $\signo(\sigma)=+1$ e **impar** si $\signo(\sigma)=-1$.
+{{% /definition %}}
+
+Obviamente, $\sigma$ es par si tiene un número par de inversiones, e igualmente en el caso impar. La permutación del ejemplo anterior es impar.
+
+
+{{% example name="$S_3$" %}}
+El grupo $S_3$ tiene $3!=6$ elementos, que son los siguientes:
+$$
+S_3=\\{(), (12), (13), (23), (123), (132)\\}.
+$$
+Las permutaciones pares de $S_3$ son $()$, $(123)$ y $(132)$ y las impares son $(12)$, $(13)$ y $(23)$.
+![S3](../images/s3.png)
+{{% /example %}}
+
+{{% proposition %}}
+Todas las trasposiciones son impares.
+{{% /proposition %}}
+
+{{% proof %}}
+Las inversiones de una trasposición $(i\; j)\in S_n$ con $i<j$ son:
+$$
+\begin{array}{l}
+(i,j),\cr
+(i,i+1),\dots, (i, j-1),\cr
+(i+1,j),\dots, (j-1, j).
+\end{array}
+$$
+En total hay $1+2(j-i-1)$ inversiones, y este es un número impar.
+![Inversiones de una trasposición](../images/transsign.png)
+{{% /proof %}}
+
+{{% proposition %}}
+Dadas dos permutaciones  $\sigma ,\tau\in S_n$:
+
+* $\signo (\sigma\tau )=\signo (\sigma )\signo (\tau )$.
+
+* $\signo (\sigma^{-1})=\signo (\sigma )$.
+{{% /proposition %}}
+
+{{% proof %}}
+Consideremos el diagrama de $\sigma\tau$ que se obtiene dibujando el diagrama de $\tau$ encima del de $\sigma$. Este diagrama representa a la permutación $\sigma\tau$, aunque haya pares de flechas que se crucen dos veces, una en la parte de $\tau$ y otra en la de $\sigma$.
+
+![Composición](../images/composition.png)
+
+Las inversiones de $\sigma\tau$ se corresponden con los cruces de flechas que se cruzan solo en la parte de $\sigma$ o solo en la de $\tau$, pero no en ambas. Por tanto, para obtener el número de inversiones de $\sigma\tau$, hay que sumar los cruces de los diagramas de $\sigma$ y $\tau$ y restarle el número par de cruces entre flechas que se cruzan dos veces, una en la parte de $\sigma$ y otra en la de $\tau$. Esto prueba que el número de inversiones de $\sigma\tau$ tiene la misma paridad que la suma del número de inversiones de $\sigma$ y de $\tau$. De aquí se deduce la primera fórmula.
+
+La segunda fórmula es obvia porque el diagrama de $\sigma^{-1}$ se obtiene a partir del de $\sigma$ haciendo una simetría horizontal. El número de cruces es el mismo.
+{{% /proof %}}
+
+{{% corollary %}}
+Una permutación $\sigma\in S_n$ es par si y solo si es producto de un número par de trasposiciones.
+{{% /corollary %}}
+
+{{% proof %}}
+En efecto, si $\sigma =\tau\_1\cdots\tau\_r$ donde cada $\tau\_i$ es una trasposición, entonces
+$$\signo (\sigma )=\signo (\tau\_1)\cdots\signo (\tau\_r)=(-1)^r.$$
+{{% /proof %}}
+
+Este corolario es también cierto cambiando *par* por *impar*.
+
+{{% corollary %}}
+El signo de un cliclo de longutud $l$ es $(-1)^{l-1}$.
+{{% /corollary %}}
+
+Este corolario, que es consecuencia de la descomposición de un ciclo como producto de trasposiciones [vista antes,](#cicletransp) nos dice que un ciclo de longitud par es impar y un ciclo de longitud impar es par.
+
+
+{{% theorem name="Fórmula de Cauchy" %}}
+Si $\sigma\in S_n$ se descompone como producto de $c$ ciclos disjuntos y $\sop(\sigma)$ tiene $s$ elementos entonces
+$$\signo (\sigma )=(-1)^{s-c}.$$
+{{% /theorem %}}
+
+{{% proof %}}
+Sea $\sigma =\sigma\_1\cdots\sigma\_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos. Sea $l\_i$ la longitud del ciclo $\sigma\_i$, $i=1,\dots, c$. El número de elementos del soporte de $\sigma$ es $s=\sum\_{i=1}^{c}l\_i$ y 
+$$
+\begin{array}{rcl}
+\signo(\sigma)&=&\signo(\sigma\_1)\cdots\signo(\sigma\_c)\cr
+&=&(-1)^{l\_1-1}\cdots (-1)^{l\_c-1}\cr
+&=&(-1)^{\sum\_{i=1}^{c}(l\_i-1)}\cr
+&=&(-1)^{s-c}.
+\end{array}
+$$
+{{% /proof %}}
+
+
+
+## Subgrupos
+
+{{% definition %}}
+Un subconjunto $H\subset G$ de un grupo $G$ es un **subgrupo** de
+$G$ si se dan las siguientes condiciones:
+
+* $e\in H$, es decir, el elemento neutro de $G$ está en $H$.
+
+* Si $x,y\in H$ entonces $xy\in H$.
+
+* Si $x\in H$ entonces $x^{-1}\in H$.
+{{% /definition %}}
+
+{{% remark %}}
+Un subgrupo $H\subset G$ es un grupo por derecho propio con la operación binaria heredada de $G$.
+{{% /remark %}}
+
+{{% example name="Ejemplo" %}}
+
+* El subgrupo **trivial** $\\{e\\}\subset G$ y el **total** $G\subset G$.
+
+* Los subgrupos aditivos $\Z\subset\Q\subset\mathbb{R}\subset\mathbb{C}$.
+
+* Los subgrupos multiplicativos $\\{\pm 1\\}\subset\Q\setminus\\{ 0\\}\subset\mathbb{R}\setminus\\{ 0\\}\subset\mathbb{C}\setminus\\{ 0\\}$.
+
+* $(0,+\infty)\subset\mathbb{R}\setminus\\{ 0\\}$.
+
+* El subgrupo $SL(n,k)=\\{A\mid |A|=1\\}\subset GL(n,k)$ de matrices $n\times n$ sobre un cuerpo $k$ de determinante $1$.
+
+* El subrgupo de Klein $\\{(), (1\;2)(3\;4), (1\;3)(2\;4), (1\;4)(2\;3)\\}\subset S_4$.
+{{% /example %}}
+
+
+{{% proposition %}}
+Dado un grupo $G$, $H\subset G$ es un subgrupo si y solo si se satisfacen las dos condiciones siguientes:
+
+* $H\neq\varnothing$ 
+
+* Si $x,y\in H$ entonces $x^{-1}y\in H$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ Como $e\in H$, $H$ no es vacío. Si $x,y\in H$, tenemos que también $x^{-1}\in H$, así que $x^{-1}y\in H$.
+
+$\Leftarrow$ Como $H\neq \varnothing$ ha de existir algún $z\in H$, así que $e=z^{-1}z\in H$. Dado $x\in H$, como $e\in H$ tenemos que $x^{-1}=x^{-1}e\in H$. Es más, dados $x,y\in H$, como también $x^{-1}\in H$ deducimos que $xy=(x^{-1})^{-1}y\in H$.
+{{% /proof %}}
+
+{{% definition %}}
+Dado un grupo $G$ y un subconjunto $X\subset G$, si definimos $X^{-1}=\\{x^{-1}\mid x\in X\\}$, el **subgrupo generado por $X$** se define como
+$$\langle X\rangle =\\{y\in G\mid \exists n\geq 0, x_1,\dots, x_n\in X\cup X^{-1}; y=x_1\cdots x_n\\}\subset G.$$
+{{% /definition %}}
+
+{{% proposition %}}
+Para cualquier subconjunto $X\subset G$ de un grupo $G$, $\langle X\rangle\subset G$ es un subgrupo.
+{{% /proposition %}}
+
+{{% proof %}}
+Tenemos que $e\in G$ ya que $e$ es el producto de una cantidad nula de elementos ($n=0$). Por otro lado, dados $y,\bar{y}\in \langle X\rangle$, tenemos que $y=x\_1\cdots x\_p$ e $\bar{y}=\bar{x}\_1\cdots \bar{x}\_q$ donde $x\_i,\bar{x}\_j\in X\cup X^{-1}$. Por definición, si $x\in X$ entonces $x^{-1}\in X^{-1}$. Es más, si $z\in X^{-1}$ entonces $z=x^{-1}$ para algún $x\in X$, por tanto $z^{-1}=(x^{-1})^{-1}=x\in X$. Esto prueba que los inversos de los elementos de $X\cup X^{-1}$ están también en $X\cup X^{-1}$, por tanto el elemento
+$$
+\begin{array}{rcl}
+y^{-1}\bar{y}&=&(x_1\cdots x_p)^{-1}(\bar{x}\_1\cdots \bar{x}\_q)\cr
+&=&x_p^{-1}\cdots x_1^{-1}\bar{x}\_1\cdots \bar{x}\_q
+\end{array}
+$$
+también está en $\langle X\rangle$.
+{{% /proof %}}
+
+En general, $\langle\varnothing\rangle =\\{e\\}$ es el subgrupo trivial.
+
+{{% example name="Generadores de $S_n$" %}}
+$$
+\begin{array}{rcl}
+S_n&=&\langle \text{ciclos} \rangle\cr
+&=&\langle \text{trasposiciones} \rangle\cr
+&=&\langle (1\;2),\dots,(n-1\; n) \rangle\cr
+&=&\langle (1\;2),\dots, (1\; n) \rangle\cr
+&=&\langle (1\;2),(1\;\dots\; n) \rangle.
+\end{array}
+$$
+Observa que hemos omitido las llaves en los conjuntos anteriores, es decir, no hemos escrito $\langle\\{ (1\;2),(1\;\dots\; n) \\}\rangle$. Lo hacemos para no sobrecargar la notación.
+{{% /example %}}
+
+{{% definition %}}
+Un grupo $G$ es **cíclico** si existe $x\in G$ tal que $G=\langle x\rangle$.
+{{% /definition %}}
+
+{{% remark %}}
+Observa que en general $\langle x\rangle=\\{x^n\mid n\in\mathbb{Z}\\}$. ¡Ojo! 
+Si $x$ tiene orden infinito, todas estas potencias son distintas, luego $\langle x\rangle$ es infinito. Sin embargo, si $x$ tiene orden finito habrá potencias de $x$ con exponente distinto que sean iguales . En cualquier caso $\langle x\rangle$ es abeliano ya que $$x^px^q=x^{p+q}=x^{q+p}=x^qx^p.$$
+{{% /remark %}}
+
+{{% proposition %}}
+Si $x\in G$ es de orden $n$ entonces $\langle x\rangle = \\{e,x,\dots, x^{n-1}\\}$ es un subgrupo de $n$ elementos.
+{{% /proposition %}}
+
+{{% proof %}}
+Veamos por reducción al absurdo que todos los elementos de $\\{e,x,\dots, x^{n-1}\\}$ son diferentes. Supongamos que dos de ellos fueran iguales $x^p=x^q$, $p\neq q$. Podemos suponer sin pérdida de generalidad que $p > q$. Entonces 
+$$
+\begin{array}{rcl}
+x^{p-q}&=&x^px^{-q}\cr
+&=&x^qx^{-q}\cr
+&=&e.
+\end{array}
+$$
+Esto es imposible porque $1\leq p-q\leq n-1$ y $o(x)=n$.
+
+La inclusión  $\langle x\rangle \supset \\{e,x,\dots, x^{n-1}\\}$ es obvia. Para probar la otra $\subset$, tomamos una potencia cualquiera $x^d$ y realizamos la división de $d$ por $n$, $d=cn+r$, $0\leq r<n$. Entonces
+$$
+\begin{array}{rcl}
+x^d&=&x^{cn+r}\cr
+&=&(x^n)^cx^r\cr
+&=&e^cx^r\cr
+&=&ex^r\cr
+&=&x^r,
+\end{array}
+$$
+y $x^r\in \\{e,x,\dots, x^{n-1}\\}$. Esto termina la demostración.
+{{% /proof %}}
+
+
+{{% example name="¿Es $S_n$ cíclico?" %}}
+Tenemos que $S_2=\langle (1\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que 
+$$o(\sigma)=\operatorname{mcd}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
+excepto si $n=2$, $c=1$ y $l_1=2$. Por tanto $|\langle\sigma\rangle|=o(\sigma) < n!=|S_n|$, así que la inclusión $\langle\sigma\rangle\subset S_n$ ha de ser siempre estricta si $n>2$.
+{{% /example %}}
+
+## El teorema de Lagrange
+
+{{% definition %}} 
+Dado un grupo  $G$ y un subgrupo $H\subset G$, definimos la siguiente relación en $G$:
+$$
+x\sim_H y \Leftrightarrow \inv{x} y\in H.
+$$
+{{% /definition %}} 
+
+{{% proposition %}}
+La relación $\sim_H$ es de equivalencia.
+{{% /proposition %}}
+
+{{% proof %}}
+
+* Reflexiva: $x\sim_H x$ pues $x^{-1}x=e\in H$.
+
+* Simétrica: si $x\sim_H y$ es porque $x^{-1}y\in H$, entonces $(x^{-1}y)^{-1}\in H$ y 
+$$
+\begin{array}{rcl}
+(x^{-1}y)^{-1}&=&y^{-1}(x^{-1})^{-1}\cr
+&=&y^{-1}x,
+\end{array}
+$$
+luego $y^{-1}x\in H$, es decir $y\sim_H x$.
+
+* Transitiva: si $x\sim_H y\sim_H z$ es porque $x^{-1}y, y^{-1}z\in H$, luego $x^{-1}z=(x^{-1}y)(y^{-1}z)\in H$, así que $x\sim_H z$.
+{{% /proof %}}
+
+{{% remark %}}
+El conjunto cociente de $G$ por la relación de equivalencia $\sim_H$ se denota
+$G/H:=G/\sim_H$.
+{{% /remark %}}
+
+{{% proposition %}}
+Dado un grupo  $G$, un subgrupo $H\subset G$ y un elemento $x\in G$, la clase de equivalencia de $x$ para la relación $\sim_H$ es
+$$
+[x]=x H:=\\{ x h\mid h\in H\\}.
+$$
+{{% /proposition %}}
+
+{{% proof %}}
+$\supset$ Dado $xh\in xH$, como $x^{-1}(xh)=h\in H$, $x\sim_H xh$, luego $xh\in [x]$.
+
+$\subset$ Dado $y\in[x]$, como $x\sim_H y$ tenemos que $x^{-1}y\in H$ así que $y=x(x^{-1}y)\in x H$.
+{{% /proof %}}
+
+{{% remark %}}
+La clase de equivalencia $xH$ se denomina **clase a izquierda**. Podemos definir otra relación de equivalencia en $G$:
+$$
+  x\; {}\_H\\!\sim y \Leftrightarrow xy^{-1}\in H.
+$$ 
+En este caso las clases de equivalencia son de la forma $Hx=\\{hx\mid h\in H\\}$, $x\in G$, y se llaman **clases a derecha**. 
+En general, las relaciones $\sim_H$ y ${}_H\\!\sim$ son diferentes, por tanto las clases a izquierda no tienen por qué coincidir con las clases a la derecha. Ambas relaciones son iguales si $G$ es abeliano, y en ese caso las clases a izquierda y a derecha de cada elemento de $G$ coinciden.
+{{% /remark %}}
+
+
+{{% definition %}}
+El **orden** $|G|$ de un grupo $G$ es su número de elementos.
+
+Dado un grupo $G$, el **índice** de un subgrupo $H\subset G$, denotado $[G:H]$, es el número de clases de equivalencia para la relación $\sim_H$, es decir, el número de elementos de $G/H$.
+{{% /definition %}}
+
+{{% theorem name="de Lagrange" %}}
+ Si $G$ es un grupo finito y
+$H\subset G$ es un subgrupo, entonces $\vert H\vert$ divide a $\vert
+G\vert$ y $[G:H]=|G|/|H|$.
+{{% /theorem %}}
+
+{{% proof %}}
+Como $G$ es finito, habrá solo un número finito de
+clases de equivalencia $[G:H]=n$,  $$G/H=\\{x\_1 H,\ldots,
+x\_n H\\}.$$ Al ser $G$ unión disjunta de estas clases, 
+$$
+ | G| = \\# (x\_1 H)+\cdots +\\# (x\_n H).
+$$
+Para cualquier $x\in G$, la aplicación $f\colon H\rightarrow xH$ definida como $f(h)=xh$ es biyectiva. En efecto, es sobreyectiva por definición de $xH$. Además es inyectiva porque si $f(h_1)=f(h_2)$ entonces $xh_1=xh_2$ y por la propiedad cancelativa $h_1=h_2$. Por tanto $\\# (xH)=|H|$ para todo $x\in G$, así que deducimos de la ecuación anterior que $|G|=n|H|$.
+{{% /proof %}}
+
+
+{{% corollary %}}
+Dado un grupo finito $G$ y $x\in G$, el orden de $x$ divide al orden de $G$.
+{{% /corollary %}}
+
+{{% proof %}}
+Como el orden de $x$ es el número de elementos del subgrupo $\langle x\rangle\subset G$, se deduce del teorema de Lagrange.
+{{% /proof %}}
+
+
+{{% corollary %}}
+Si $G$ es un grupo cuyo orden es un número primo $p$, entonces $G$ es cíclico.
+{{% /corollary %}}
+
+{{% proof %}}
+Sea $x\in G$ un elemento no trivial, como $\langle x\rangle\subset G$ no es el subgrupo trivial y $o(x)=|\langle x\rangle|$ divide a $|G|=p$, no queda más remedio que $o(x)=|\langle x\rangle|=p$, así que $\langle x\rangle =G$ ya que ambos tienen el mismo número de elementos.
+{{% /proof %}}
+
+{{% exercise %}}
+Hemos visto que el orden de cualquier subgrupo de $G$ divide a $|G|$. Dado un divisor $n$ de $|G|$, ¿existe algún subgrupo de $G$ de orden $n$? Considera los casos $G=S_2, S_3, S_4$.
+{{% /exercise %}}
+
+
+
+## Homomorfismos
+
+{{% definition %}}
+Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una aplicación tal que $f(xy)=f(x)f(y)$ para todo $x,y\in G$.
+{{% /definition %}}
+
+
+{{% example name="Homomorfismos" label="homomorphisms" %}}
+
+1. La **identidad** $\id{G}\colon G\rightarrow G$.
+
+2. La **inclusión** de un subgrupo $H\subset G$, $i\colon H\hookrightarrow G$.
+
+3. El **signo** de una permutación, $\sign\colon\perm{n}\to\\{\pm1\\}$.
+
+4. El **determinante** $GL(n,k)\rightarrow k\setminus\\{0\\}$, $A\mapsto |A|$.
+
+5. Dado un grupo $G$ y un elemento $x\in G$, la **conjugación** por $x$, $c_x\colon G\rightarrow G$, $c_x(y)=x^{-1}yx$.
+
+6. Dado $n\in\mathbb Z$, la **multiplicación** por $n$, es decir, la aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=n x$.
+
+7. Si $G$ es un grupo abeliano multiplicativo, la **exponenciación** $f\colon G\to G$, $f(x)=x^n$, es un homomorfismo ya que $$f(xy)=(xy)^n=(xy)\stackrel{n}{\cdots}(xy)=x^ny^n=f(x)f(y).$$
+
+8. La aplicación **exponencial** $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$, 
+es un homomorfismo del grupo aditivo $\mathbb{R}$ en el grupo multiplicativo $(0,+\infty)$.
+{{% /example %}}
+
+Los homomorfismos preservan el elemento neutro y los simétricos.
+
+{{% proposition %}}
+Si $f\colon G\rightarrow H$ es un homomorfismo, entonces: 
+
+* $f(e)=e$.
+
+* $f(\inv{x})=\inv{f(x)}$ para todo $x\in G$.
+{{% /proposition %}}
+
+{{% proof %}}
+Como $e=e e$,
+\\[f(e)=f(e e)=f(e) f(e).\\]
+Usando la propiedad cancelativa deducimos que $e=f(e)$.
+
+Al ser $e=x \inv{x}$ deducimos que
+\\[e=f(e)=f(x \inv{x})=f(x) f(\inv{x}),\\]
+por tanto $f(\inv{x})=\inv{f(x)}$.
+{{% /proof %}}
+
+{{% corollary %}}
+La imagen de un homomorfismo $f\colon G\rightarrow H$ es un subgrupo $\im f\subset H$.
+{{% /corollary %}}
+
+{{% proof %}}
+Por definición de homomorfismo, el producto de dos elementos de $\im f$ está en $\im f$. Es más, por la proposición anterior $e\in\im f$ y el inverso de un elemento de $\im f$ están en $\im f$.
+{{% /proof %}}
+
+La composición de homomorfismos es un homomomorfismo.
+
+{{% proposition %}}
+Dados dos homomorfismos como en el siguiente diagrama,
+\\[G\stackrel{f}\To H\stackrel{g}\To K,\\]
+la composición
+$g\circ f\colon G\rightarrow K$
+es un homomorfismo.
+{{% /proposition %}}
+
+{{% proof %}}
+Basta observar que, dados $x,y\in G$,
+\begin{align*}
+(g\circ f)(x y)&=g(f(x y))\\
+&=g(f(x) f(y))\\
+&=g(f(x)) g(f(y))\\
+&=(g\circ f)(x) (g\circ f)(y).
+\end{align*}
+{{% /proof %}}
+
+{{% definition %}}
+Un **monomorfismo** $f\colon G\hookrightarrow H$ es un homomorfismo inyectivo. Un **epimorfismo** $f\colon G\twoheadrightarrow H$ es un homomorfismo sobreyectivo. Un **isomorfismo** 
+$$f\colon G\stackrel{\cong}{\longrightarrow} H$$
+es un homomorfismo biyectivo.
+{{% /definition %}}
+
+De los homomorfismos del [ejemplo](#homomorphisms) anterior,
+son isomorfismos los siguientes: 1, 3 para $n=2$, 4 para $n=1$, 5 ya que $c\_x$ tiene inverso $c\_{x^{-1}}$, 6 y 7 si $n=\pm1$, y 8. Además, 2 es un monomorfismo, y 3 y 4 son epimorfismos para todo $n\geq 1$.
+
+
+{{% proposition %}}
+La composición de isomorfismos es un isomorfismo.
+{{% /proposition %}}
+
+{{% proof %}}
+Se deduce de que ya sabemos que la composición de homomorfismos es un homomorfismo y que la composición de aplicaciones biyectivas es biyectiva.
+{{% /proof %}}
+
+
+{{% proposition %}}
+Si $f\colon G\to H$ es un isomorfismo entonces la aplicación inversa $f^{-1}\colon H\to G$ también.
+{{% /proposition %}}
+
+{{% proof %}}
+Dados $x,y\in H$ cualesquiera, hemos de probar que
+\\[f^{-1}(x y)=f^{-1}(x) f^{-1}(y).\\]
+Como $f$ es inyectivo, bastará comprobar que
+\\[f(f^{-1}(x y))=f(f^{-1}(x) f^{-1}(y)).\\]
+Por un lado, por ser $f^{-1}$ la inversa de $f$,
+\\[f(f^{-1}(x y))=(f\circ f^{-1})(x y)=1_H(xy)=x y.\\]
+Por otro lado, como $f$ es un homomorfismo,
+$$\begin{array}{rcl}
+f(f^{-1}(x) f^{-1}(y))&=&f(f^{-1}(x)) f(f^{-1}(y))\cr
+&=&(f\circ f^{-1})(x)(f\circ f^{-1})(y)\cr
+&=&1_H(x)1_H(y)\cr
+&=&x y.
+\end{array}$$
+{{% /proof %}}
+
+{{% example name="Isomorfismos inversos" %}}
+Los inversos de los isomorfismos 1, 5 y 8 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\id{G}^{-1}=\id{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
+{{% /example %}}
+
+{{% definition %}}
+Dos grupos $G$ y $H$ son **isomorfos**, y lo denotamos $G\cong H$, si existe un isomorfismo $$f\colon G\stackrel{\cong}\To H.$$
+{{% /definition %}}
+
+{{% proposition %}}
+La relación de ser isomorfos es de equivalencia.
+{{% /proposition %}}
+
+{{% proof %}}
+Es reflexiva $G\cong G$ porque la identidad es un isomorfismo $1\_G\colon G\to G$. La simetría se sigue de que si $G\cong H$ es por que hay algún isomorfismo
+$$f\colon G\stackrel{\cong}\To H.$$
+El isomorfismo inverso
+$$f^{-1}\colon H\stackrel{\cong}\To G$$
+prueba que $H\cong G$. La transitividad es consecuencia de que si $G\cong H\cong K$ es porque hay isomorfismos
+\\[G\mathop{\To}\limits^f\_\cong H\mathop{\To}\limits^g\_\cong K.\\]
+Entonces la composición es un isomorfismo
+\\[g\circ f\colon G\stackrel{\cong}\To K,\\]
+así que $G\cong K$.
+{{% /proof %}}
+
+{{% definition %}}
+Dado un homomorfismo $f\colon G\to H$, su **núcleo** es
+\\[\ker f=\\{x\in G\mid f(x)=e\\}\subset G.\\]
+{{% /definition %}}
+
+
+{{% proposition %}}
+El núcleo de un homomorfismo $f\colon G\to H$ es un subgrupo $\ker f\subset G$.
+{{% /proposition %}}
+
+{{% proof %}}
+Como $f(e)=e$, $e\in \ker f$. Si $x,y\in\ker f$ entonces
+$$f(xy)=f(x)f(y)=ee=e,$$
+luego $xy\in\ker f$. Es más, si $x\in\ker f$ entonces
+$$f(x^{-1})=f(x)^{-1}=e^{-1}=e,$$
+así que $x^{-1}\in\ker f$.
+{{% /proof %}}
+
+{{% proposition %}}
+Un homomorfismo $f\colon G\to H$ es inyectivo si y solo si $\ker f=\\{e\\}$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ La inclusión $\supset$ es obvia. Para ver $\subset$ tomamos $x\in\ker f$. Como $f(x)=e=f(e)$ y $f$ es inyectivo deducimos que $x=e$.
+
+$\Leftarrow$. Sean $x,y\in G$ tales que $f(x)=f(y)$. Entonces
+$$
+\begin{array}{rcl}
+f(x^{-1}y)&=&f(x^{-1})f(y)\cr
+&=&f(x)^{-1}f(x)\cr
+&=&e,
+\end{array}
+$$
+es decir, $x^{-1}y\in\ker f=\\{e\\}$, por tanto $x^{-1}y=e$ y despejando vemos que $y=x$.
+{{% /proof %}}
+
+{{% remark %}}
+Esta proposición demuestra que para probar que un homomorfismo $f\colon G\rightarrow H$ es inyectivo basta demostrar que si $f(x)=e$ entonces $x=e$.
+{{% /remark %}}
+
+
+## Cocientes
+
+
+<!--
+
+{{% example name="Ejemplo" %}}
+
+Volviendo al ejemplo en el que el subgrupo de $S_4$, $\langle (123),(234)\rangle$, resulta ser $A_4$, el teorema de Lagrange nos evita algún cálculo. Conforme van apareciendo nuevos elementos del subgrupo, en cuanto aparezca el noveno elemento, como el orden debe ser un divisor de $24$, sabemos que $\langle (123),(234)\rangle$ tiene 12 o 24 elementos. Al tratarse de permutaciones pares exclusivamente, se deduce que el subgrupo es $A_4$.
+
+Es más, sabiendo que $\langle (123),(234)\rangle\subset A_4$, como el orden de $A_4$ es 12, basta con llegar al séptimo elemento para decidir que $\langle (123),(234)\rangle = A_4$
+{{% /example %}}
+
+{{% watch %}}
+Terminamos el estudio del teorema de Lagrange proponiendo el ejercicio siguiente. Sabemos que el orden de cualquier subgrupo de $G$ divide a su orden. Recíprocamente, si $m$ divide a $|G|$, ?`existe algún subgrupo de $G$ de orden $m$? Te animamos a reflexionar esta cuestión en el grupo $S_4$ o en sus subgrupos.
+{{% /watch %}}
+
+
 
 <!--
 
 
-### El grupo $S_n$
-
-En este apartado vamos a estudiar las permutaciones de conjuntos finitos. Sea entonces el conjunto $X=\\{ 1,2,\ldots ,n\\}$, y denotemos por $S_n$ al grupo $\Sim(X)$ de permutaciones de estos $n$ elementos.
-
-{{% definition %}}
-{Orden de un grupo} {Sea $(G,\star)$ un grupo. Definimos su {\bf orden}, que notaremos por $|G|$, como el cardinal
-del conjunto $G$.}
-{{% /definition %}}
-
-{{% theorem %}}
-{Orden de $S_n$}
-{El orden del grupo $S_n$ es $|S_n|=n!$}
-{{% /theorem %}}
-
-{{% proof %}}
-
-Sea $\sigma$ una permutación cualquiera de $S_n$, podemos escribir
-$$\sigma\colon\left(\begin{array}{cccccc}
-                     1 & 2 & \cdots & n\\
-                     i_1 & i_2 & \cdots & i_n
-                    \end{array}\right) .$$
-Hay $n$ posibles elecciones para $i_1$, pero solo $n-1$ posibilidades para $i_2$, pues $i_1$ no puede ser elegido de nuevo. Fijados $i_1$ e $i_2$ hay $n-2$ posibles elecciones para $i_3,\ldots$ y así sucesivamente hasta llegar a $i_n$, cuya elección ya está fijada por la de los elementos anteriores. Luego contando todas las posibilidades el número de permutaciones distintas de $S_n$ es
-$$n(n-1)\cdots 1=n!$$
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-Siguiendo el procedimiento anterior podemos dar la lista de todas las permutaciones de $S_3$:
-$$\left(\begin{array}{ccc}
-         1 & 2 & 3\\
-         1 & 2 & 3
-        \end{array}\right) ,\ \ \ \
-  \left(\begin{array}{ccc}
-         1 & 2 & 3\\
-         1 & 3 & 2
-        \end{array}\right) ,
-$$
-$$\left(\begin{array}{ccc}
-         1 & 2 & 3\\
-         2 & 1 & 3
-        \end{array}\right) ,\ \ \ \
-  \left(\begin{array}{ccc}
-         1 & 2 & 3\\
-         2 & 3 & 1
-        \end{array}\right),
-$$
-$$\left(\begin{array}{ccc}
-         1 & 2 & 3\\
-         3 & 2 & 1
-        \end{array}\right) ,\ \ \ \
-  \left(\begin{array}{ccc}
-         1 & 2 & 3\\
-         3 & 1 & 2
-        \end{array}\right) .
-$$
-Expresadas como productos de ciclos las permutaciones de $S_3$ son
-$$S_3=\\{ (), (23), (12), (123), (13), (132)\\} .$$
-{{% /example %}}
-
-%{{% watch %}}
-
-%En adelante para el conjunto $X=\\{ 1,2,\ldots ,n\\}$ notaremos $1_X=(1)$, como el ciclo que deja invariante al $1$ y a todos los demás elementos.
-%{{% /watch %}}
-
-Dado que $X=\\{ 1,2,\ldots ,n\\}$ es un conjunto finito, todas las permutaciones de $S_n$ tienen soporte finito y los resultados enunciados anteriormente se aplican a $S_n$, es decir,
-
-{{% theorem %}}
-{Descomposición en ciclos disjuntos y trasposiciones}
-{Toda permutación de $S_n$ se descompone de manera única, salvo orden, como producto conmutativo de ciclos disjuntos. Además toda permutación de $S_n$ se puede expresar como producto de trasposiciones, esta vez {\bf no} de manera única.}
-{{% /theorem %}}
-
-### Explicación del juego inicial
-
-Llegados a este punto podemos explicar cuál es la "magia" del juego de cartas. Teníamos cartas del mismo palo numeradas del 1 al 9 y las vamos "desordenando" hasta llegar a la posición inicial. Se trata por tanto de una combinación de permutaciones de $S_9$ que, "mágicamente", llegan a la identidad.
-
-La {\bf separación de cartas} es la siguiente permutación\footnote{En realidad hay dos posibles separaciones, pues nosotros decidimos qué montón ponemos encima del otro, habría que estudiar varios casos que serían análogos a éste y que concluyen de igual forma.}:
-$$\sigma\colon\left(\begin{array}{ccccccccc}
-                     1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
-                     9 & 4 & 8 & 3 & 7 & 2 & 6 & 1 & 5
-                    \end{array}\right) .$$
-Que es $\sigma =(195762438)$ un ciclo de longitud $9$. Si no cortáramos, separar dos veces es
-$$\sigma^2=(156489723).$$
-Y separar tres veces
-$$\sigma^3=(174)(285)(396).$$
-
-%Cortar una carta es la permutación
-$$\kappa\colon\left(\begin{array}{ccccccccc}
-                     1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
-                     2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 1
-                    \end{array}\right) .$$
-Que en forma de ciclo es $\kappa =(123456789)$. Cortar dos cartas es igual a cortar una carta y luego otra, es decir,
-$$\kappa^2=(135792468).$$
-Y cortar varias cartas es:
-$$\kappa^3=(147)(258)(369),\ \kappa^4=(159483726),\ \kappa^5=(162738495),$$
-$$\kappa^6=(174)(285)(396),\ \kappa^7=(186429753),\ \kappa^8=(198765432)\mbox{ y }\kappa^9=().$$
-
-\noindent {\bf Primer "hechizo mágico":} Separar tres veces seguidas es igual a cortar seis cartas\footnote{Es aquí donde sí tiene influencia relativa el hecho de poder decidir qué montón ponemos encima del otro. En cualquier caso, hagamos la elección que hagamos, separar tres veces es igual a cortar varias cartas.}.
-$$\sigma^3=\kappa^6.$$
-
-Sabemos que en el caso de las permutaciones el orden de los factores sí altera el producto. Cortar y separar no es lo mismo que separar y cortar:
-$$\sigma\kappa =(147)(285),$$
-$$\kappa\sigma =(258)(396).$$
-Si embargo, cortar siete cartas y separar es
-$$\sigma\kappa^7=(195762438)(186429753)=(258)(396)=\kappa\sigma .$$
-
-\noindent {\bf Segundo "hechizo mágico":} Cortar siete cartas y separar es lo mismo que separar y después cortar una carta\footnote{Al igual que anteriormente, si al separar elegimos poner otro montón encima, siempre obtendremos una relación parecida en la que cortar varias cartas y separar equivale a separar y después cortar una carta.}.
-$$\kappa\sigma =\sigma\kappa^7.$$
-Por lo tanto, si bien es cierto que la composición no es conmutativa, sí tenemos ciertas reglas que nos permiten cambiar de posición "separar" y "cortar". En efecto:
-$$\kappa^2\sigma =\kappa (\kappa\sigma )= \kappa \sigma \kappa^7 = (\kappa\sigma )\kappa^7=\sigma\kappa^7\kappa^7=\sigma\kappa^5.$$
-$$\kappa^3\sigma =\kappa (\kappa^2\sigma )=\kappa \sigma \kappa^5=(\kappa\sigma )\kappa^5=\sigma\kappa^7\kappa^5=\sigma\kappa^3.$$
-$$\kappa^4\sigma =\kappa (\kappa^3\sigma )=\kappa\sigma\kappa^3=(\kappa\sigma )\kappa^3=\sigma\kappa^7\kappa^3=\sigma\kappa.$$
-$$\kappa^5\sigma =\cdots =\sigma\kappa^8.$$
-$$\kappa^6\sigma =\cdots =\sigma\kappa^6.$$
-$$\kappa^7\sigma =\cdots =\sigma\kappa^4 .$$
-$$\kappa^8\sigma =\cdots =\sigma\kappa^2.$$
-
-Ya tenemos las herramientas y "hechizos" necesarios para la explicación del juego. Inicialmente tenemos las $9$ cartas ordenadas y lo que hacemos en el juego es separar las cartas, cortar varias veces, separar otra vez las cartas, cortar varias veces y separar por tercera vez las cartas y cortar varias veces. Esto es:
-$$(\kappa^r\sigma )(\kappa^q\sigma )(\kappa^p\sigma )= (\sigma\kappa^{r'})(\sigma\kappa^{q'})(\sigma\kappa^{p'})=\sigma (\kappa^{r'}\sigma )(\kappa^{q'}\sigma )\kappa^{p'}=$$
-$$=\sigma (\sigma\kappa^{r"})(\sigma\kappa^{q"})\kappa^{p'} =\sigma^2(\kappa^{r"}\sigma )\kappa^{q"+p'}=\sigma^2(\sigma\kappa^{r"'})\kappa^{q"+p'}=\sigma^3\kappa^{r"'+q"+p'}=$$
-$$=\kappa^6\kappa^{r"'+q"+p'}=\kappa^{6+r"'+q"+p'}.$$
-Por tanto, después de realizar el juego lo que nos queda es {\bf un simple corte}. Al mirar la primera carta sabemos cuántas cartas tenemos que cortar para dejar nuestras nueve cartas ordenadas como al principio.
-
-### Permutaciones pares e impares
-
-Si $\sigma$ es una permutación de $S_n$ entonces $\sigma$ sustituye el orden natural de los enteros $1,2,\ldots ,n$ por el nuevo orden $\sigma (1),\sigma (2),\ldots ,\sigma (n)$. Así que la acción de $\sigma$ puede causar {\em inversiones} del orden natural.
-
-{{% definition %}}
-{Inversiones en una permutación}
-{Se dice que un par $(i,j)$ es una {\bf inversión} de $\sigma\in S_n$, si
-$$i<j \qquad y \qquad \sigma (i)>\sigma (j).$$}
-{{% /definition %}}
-
-
-{{% definition %}}
-{Signo de una permutación}
-{Si $\sigma\in S_n$ tiene un número par de inversiones, diremos que $\sigma$ es {\bf par}, y que $\signo(\sigma)=1$.
-
-
-Si $\sigma\in S_n$ tiene un número impar de inversiones, diremos que $\sigma$ es {\bf impar}, y que $\signo(\sigma)=-1$.
-}
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
-
-Las permutaciones pares de $S_3$ son $()$, $(123)$ y $(132)$, mientras que las impares son $(12)$, $(13)$ y $(23)$.
-{{% /example %}}
-
-Para decidir si una permutación (no demasiado grande) es par o impar es útil hacer un diagrama de cruces. Veamos esto con un ejemplo:
-
-{{% example name="Ejemplo" %}}
-
-?`Es la permutación
-$$\sigma\colon\left(\begin{array}{ccccccc}
-                     1 & 2 & 3 & 4 & 5 & 6 & 7\\
-                     6 & 3 & 1 & 5 & 4 & 7 & 2
-                    \end{array}\right) $$
-par o impar?
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics{diagrama_inversiones.eps}
- }
- \caption{Inversiones de $\sigma$}
- \label{inversiones}
-\end{figure}
-
-Simplemente ponemos en dos filas los números del 1 al 7, y unimos el número $i$ de la fila superior al número $\sigma(i)$ de la fila inferior, teniendo cuidado de evitar intersecciones múltiples o innecesarias. Un cruce indica una inversión del orden natural.
-
-Hay $11$ cruces, luego $\signo (\sigma )=-1$ y $\sigma$ es una permutación impar.
-{{% /example %}}
-
-El próximo resultado es es una propiedad significativa de las trasposiciones.
-
-{{% proposition %}}
- Las trasposiciones son siempre impares.
-{{% /proposition %}}
-
-{{% proof %}}
-
-Consideremos el diagrama de cruces (figura \ref{trasposicion-cruces}) para la trasposición $\tau =(ij)$ donde $i<j$. Contando obtenemos $2(j-i-1)+1$ cruces, que siempre es impar. Luego $\tau =(ij)$ es una permutación impar.
-{{% /proof %}}
-
-\begin{figure}[htbp]
- \centering
- {
- %\includegraphics*[bb=0mm 0mm 109mm 103mm, scale=.5, angle=-90]{kakuro01.eps}
- \includegraphics{diagrama_trasposicion.eps}
- }
- \caption{Diagrama de cruces de $\tau =(ij)$}
- \label{trasposicion-cruces}
-\end{figure}
-
-Las siguientes son propiedades básicas de la función $\signo$.
-
-{{% proposition %}}
-
-Sean $\sigma ,\tau\in S_n$. Se satisfacen las siguientes propiedades:
-\begin{enumerate}
-\item $\signo (\sigma\tau )=\signo (\sigma )\signo (\tau )$.
-\item $\signo (\sigma^{-1})=\signo (\sigma )$.
-\end{enumerate}
-{{% /proposition %}}
-
-{{% proof %}}
-
-\begin{enumerate}
-
-\item Consideremos el diagrama que se obtiene dibujando el diagrama de cruces de $\tau$ encima del de $\sigma$. Este diagrama representa a la permutación $\sigma\tau$, aunque hay pares de líneas que se pueden cruzar dos veces (una en $\tau$ y otra en $\sigma$).
-
-    Un par $(i,j)$ será una inversión de $\sigma\tau$ si y solo si las líneas correspondientes se cruzan solo en $\sigma$ o solo en $\tau$, pero no en ambas. Por tanto, para obtener el número de inversiones de $\sigma\tau$, solo hay que sumar los cruces del diagrama de $\sigma$ y los cruces del diagrama de $\tau$, y a continuación restar un número par de cruces (los que aparecen en los dos). Por tanto, el número de inversiones de $\sigma\tau$ tiene la misma paridad que la suma del número de inversiones de $\sigma$ y el número de inversiones de $\tau$. Así, $\sigma\tau$ es par si $\sigma$ y $\tau$ son ambos pares o ambos impares, y es impar en caso contrario. Esto equivale a decir que $\signo(\sigma\tau)=\signo(\sigma)\signo(\tau)$.
-
-\item Esto se deduce de la propiedad anterior, tomando $\tau=\sigma^{-1}$, aunque se puede ver directamente: los diagramas de cruces de $\sigma$ y $\sigma^{-1}$ son simétricos, luego el número de cruces es el mismo en ambos diagramas. Por tanto $\sigma$ y $\sigma^{-1}$ tienen el mismo número de inversiones, y por ello el mismo signo.
-\end{enumerate}
-{{% /proof %}}
-
-{{% corollary %}}
-
-Una permutación $\sigma\in S_n$ es par (impar) si y solo si es producto de un número par (impar) de trasposiciones.
-{{% /corollary %}}
-
-{{% proof %}}
-
-En efecto, si $\sigma =\tau_1\cdots\tau_r$ donde cada $\tau_i$ es una trasposición, entonces
-$$\signo (\sigma )=\prod_{i=1}^r\signo (\tau_i)=(-1)^r.$$
-{{% /proof %}}
-
-Finalizamos esta sección con la fórmula de {\em Cauchy} que relaciona el signo de una permutación con su descomposición en ciclos disjuntos.
-
-{{% theorem %}}
-{Fórmula de Cauchy}
-{Sea $\sigma\in S_n$ el producto de $c$ ciclos disjuntos entonces
-$$\signo (\sigma )=(-1)^{m-c},$$
-siendo $m=\#(\sop (\sigma ))$ el número de elementos del soporte de $\sigma$.}
-{{% /theorem %}}
-
-{{% proof %}}
-
-Sea $\sigma =\sigma_1\cdots\sigma_c$ la descomposición de $\sigma$ en ciclos disjuntos, supongamos que cada $\sigma_j$ tiene longitud $\ell_j$. Sabemos que $\sigma_j$ es producto de $\ell_j-1$ trasposiciones. Luego $\signo (\sigma_j)=(-1)^{\ell_j-1}$ y
-$$\signo (\sigma )=\prod_{j=1}^c\signo (\sigma_j)=\prod_{j=1}^c(-1)^{\ell_j-1}=(-1)^{m-c},$$
-pues $\sum_{j=1}^c\ell_j=m$.
-{{% /proof %}}
-
-{{% watch %}}
-
-En particular, el signo de un ciclo de longitud $m$ es $(-1)^{m-1}$. Luego la paridad del ciclo está cambiada respecto de su longitud: {\bf un ciclo de longitud par es impar y un ciclo de longitud impar es par}.
-{{% /watch %}}
-
-## Subgrupos. Teorema de Lagrange
-
-{{% definition %}}
-{Subgrupo} {Sea $(G,\star)$ un grupo. Un subconjunto $H$ de $G$ se dice que es un {\bf subgrupo} de
-$(G,\star)$ si  $(H,\star)$ es un grupo. Es decir, si el conjunto $H$, y la operación definida en $G$, cumplen las propiedades de la definición de grupo.
-
-
-Un subgrupo es, por tanto, un grupo dentro de otro grupo con la misma operación.}
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
-
-Veamos algunos ejemplos de subgrupos:
-\begin{enumerate}
-\item Vimos en el ejemplo \ref{ejemplo-grupos} que los conjuntos de números $\Z ,\Q ,\R$ y $\C$ son grupos abelianos con la suma. De hecho es una cadena de subgrupos $\Z\subset\Q\subset\R\subset\C$.
-\item Lo mismo ocurre con los grupos $\Q^*=\Q\setminus\\{ 0\\}$, $\R^*=\R\setminus\\{ 0\\}$ y $\C^*=\C\setminus\\{ 0\\}$ con la multiplicación. Es también una cadena de subgrupos $\Q^*\subset\RR^*\subset\C^*$.
-\item Sabemos que GL$(n,k)$, el conjunto de las matrices $n\times n$, con elementos en un cuerpo $k$ y determinante no nulo, es un grupo con la multiplicación de matrices. Sea $\text{SL}(n,k)$ el subconjunto de GL$(n,k)$ formado por las matrices con determinante igual a $1$. Comprobemos que $\text{SL}(n,k)$ es un subgrupo de GL$(n,k)$. En efecto, si $A,B\in \text{SL}(n,k)$ entonces $\det (AB)=\det (A)\det (B)=1$, luego $AB\in \text{SL}(n,k)$. La matriz identidad, $I_n$ tiene determinante igual a $1$, luego pertenece a $\text{SL}(n,k)$. Si $A\in \text{SL}(n,k)$, como $\det (A^{-1})=\det (A)^{-1}$ se tiene que $A^{-1}\in \text{SL}(n,k)$. Por último, como el producto en GL$(n,k)$ verifica la propiedad asociativa, en particular, también la satisface en $\text{SL}(n,k)$. Así que la multiplicación de matrices en $\text{SL}(n,k)$ es una operación  asociativa, con elemento neutro y cada matriz de $\text{SL}(n,k)$ tiene su inversa en el conjunto, luego es un grupo.
-\item El subconjunto de $S_4$, $C=\\{ (), (1234), (13)(24), (1432)\\}$, es un subgrupo con la composición de permutaciones. Para comprobar que se satisfacen todas las propiedades de grupo, vamos a hacer la tabla de multiplicar de los elementos de $C$:
-\begin{center}
- \begin{tabular}{|c||c|c|c|c|}
-   \hline
-   $\circ$ & $()$ & $(1234)$ & $(13)(24)$ & $(1432)$\\
-   \hline\hline
-   $()$ &  $()$ & $(1234)$ & $(13)(24)$ & $(1432)$\\
-   \hline
-   $(1234)$ & $(1234)$ & $(13)(24)$ & $(1432)$ & $()$\\
-   \hline
-   $(13)(24)$ & $(13)(24)$ & $(1432)$ & $()$ & $(1234)$\\
-   \hline
-   $(1432)$ & $(1432)$ & $()$ & $(1234)$ & $(13)(24)$\\
-   \hline
- \end{tabular}
-\end{center}
-En la tabla se observa que la multiplicación es una operación de $C\times C \to C$, que está el elemento neutro $()$ y que cada elemento tiene un simétrico. Además, el producto en $C$ es asociativo, pues lo es en $S_4$. Luego es subgrupo. El hecho de que la tabla sea simétrica nos permite deducir que en este caso el subgrupo $C$ es conmutativo. Se da así la circunstancia de que un subgrupo de un grupo no conmutativo, como $S_4$, puede ser conmutativo.
-\end{enumerate}
-{{% /example %}}
-
-{{% watch %}}
-
-Si $G$ es un grupo y $H\subset G$ es finito, para comprobar que es subgrupo es suficiente hacer la tabla de multiplicar y razonar como en el ejemplo anterior. Si $H$ es infinito hay que demostrar que la operación entre elementos de $H$ está bien definida, que el elemento neutro pertenece a $H$ y que el simétrico de cada elemento de $H$ está también en $H$. En cualquier caso, la propiedad asociativa se "hereda" de $G$.
-{{% /watch %}}
-
-El siguiente resultado nos permite "ahorrarnos" verificar alguna propiedad a la hora de demostrar que un subconjunto es subgrupo.
-
-{{% proposition %}}
-{\label{subgrupo}}  Sean $(G,\star)$ un grupo y $H\subset G$ un subconjunto no vacío. Las condiciones siguientes son equivalentes:
- \begin{itemize}
-  \item[$(1)$] $H$ es un subgrupo de $(G,\star)$.
-  \item[$(2)$] Para cada par de elementos $x,y\in H$, tenemos que $x \inv{y}\in H$.
- \end{itemize}
-{{% /proposition %}}
-
-{{% proof %}}
- Veamos primero $(1)\Rightarrow (2)$. Sean $x,y\in H$. Como $H$ es subgrupo, contiene los simétricos de todos sus elementos. En particular $\inv{y}\in H$. De nuevo como $H$ es subgrupo la operación esta bien definida, de donde $x\inv{y}\in H$, como queríamos.
-
-
-
-Probemos ahora $(2)\Rightarrow (1)$. Como $H \subset G$, los elementos
-de $H$ verifican la propiedad asociativa. Como $H$ es no vacío, sea
-$a\in H$. Aplicando (2) con $x=a$ e $y=a$, obtenemos
-$$
-a\inv{a}=e\in H,
-$$
-luego $H$ tiene un elemento neutro (el mismo que $G$).
-
-Si $a\in H$, aplicando de nuevo (2) con $x=e$ e $y=a$, tenemos
-$$
-e \inv{a} =\inv{a}\in H,
-$$
-luego $H$ contiene los simétricos de todos sus elementos.
-
-Sólo falta demostrar que la operación de $G$ es una operación en $H$. Sean
-$a,b\in H$. Aplicando (2) esta vez con $x=a$ e $y=\inv{b}$ se tiene
-$$
- a\inv{(\inv{b})}=a b\in H.
-$$
-Luego $H$ es subgrupo de $G$.
-{{% /proof %}}
-
-{{% watch %}}
-
-Sea $(G,\star )$ un grupo y sea $x=x_1\cdots x_n$ un elemento de $G$, entonces el simétrico de $x$ es
-$$\inv{x}=\inv{x_n}\cdots\inv{x_1}.$$
-Así, si $\sigma =\rho_1\cdots\rho_n$ es una permutación, entonces su inversa es
-$$\sigma^{-1}=\rho_n^{-1}\cdots\rho_1^{-1}.$$
-Por otro lado, como el inverso de una trasposición es la misma trasposición, si $\delta =\tau_1\cdots\tau_m$ es una permutación producto de trasposiciones, su inversa es
-$$\delta^{-1}=\tau_m\cdots\tau_1.$$
-{{% /watch %}}
 
 {{% theorem %}}
 {El grupo alternado $A_n$}
 {El conjunto $A_n$ de las permutaciones pares de $S_n$ es un subgrupo llamado {\bf grupo alternado}.}
 {{% /theorem %}}
 
-{{% proof %}}
-
-Desde luego $()$ es una permutación par, luego $A_n$ es no vacío.
-%Por otro lado, si la permutación $\sigma$ se escribe $\sigma =\tau_1\cdots\tau_r$ como producto de trasposiciones, entonces $\sigma^{-1}=\tau_r\cdots\tau_1$. Por tanto, la permutación inversa de una permutación par también es par.
-
-Si $\sigma =\tau_1\cdots \tau_{2r}$ y $\rho=\pi_1\cdots \pi_{2s}$ son permutaciones pares, donde $\tau_i$ y $\pi_j$ son trasposiciones, entonces
-$$\sigma\rho^{-1}=\tau_1\cdots \tau_{2r}\pi_{2s}\cdots\pi_1$$
-es también una permutación par.
-
-Luego por la proposición \ref{subgrupo} se concluye que $A_n$ es un subgrupo de $S_n$.
-{{% /proof %}}
 
 {{% proposition %}}
 
@@ -926,7 +1168,7 @@ $$\begin{array}{rcl}
   \end{array}$$
 Efectivamente $\varphi$ es una aplicación bien definida, pues si $\sigma$ es una permutación par, como $\rho$ es impar, el producto $\rho\sigma$ es también impar.
 
-Si $\varphi (\sigma )=\varphi (\tau )$ entonces $\rho\sigma =\rho\tau$, multiplicando desde la izquierda por $\rho^{-1}$ obtenemos $\sigma =\tau$. Luego $\varphi$ es una aplicación inyectiva.
+Si $\varphi (\sigma )=\varphi (\tau )$ entonces $\rho\sigma =\rho\tau$, y por la propiedad cancelativa $\sigma =\tau$. Luego $\varphi$ es una aplicación inyectiva.
 
 Por otro lado, si $\sigma\in I$, como $\rho^{-1}$ es impar, entonces $\rho^{-1}\sigma \in P$ y además $\varphi (\rho^{-1}\sigma )=\rho\rho^{-1}\sigma =\sigma$. Luego $\varphi$ es sobreyectiva.
 
@@ -943,386 +1185,6 @@ Si $n\geq 2$, el número de elementos de $A_n$ es $|A_n|=n!/2$, es decir, en $S_
 $S_n$ es un subgrupo de $S_n$ que, como $n\geq 2$, contiene a la permutación impar $(12)$. Luego podemos aplicar la proposición anterior para deducir que hay tantas permutaciones pares como impares.
 {{% /proof %}}
 
-{{% theorem %}}
-{Subgrupo generado}
-{Sean $(G,\star )$ un grupo y $A\subset G$ un subconjunto no vacío. Sea $\inv{A}=\\{\inv{x}\in G\mid x\in A\\}$ el conjunto de los elementos simétricos a los de $A$. Entonces el conjunto que se obtiene al operar sucesiones arbitrarias de elementos de $A$ y $\inv{A}$,
-$$\langle A\rangle =\\{ x_1\cdots x_n\mid x_i\in A\cup \inv{A},n\geq 1\\} ,$$
-es un subgrupo de $G$ llamado {\bf subgrupo generado por $A$}.}
-{{% /theorem %}}
-
-{{% proof %}}
-
-Como $A\ne\varnothing$, entonces $\langle A\rangle$ también es no vacío.
-
-Por otro lado, sean $x=x_1\cdots x_n$ e $y=y_1\cdots y_m$ dos elementos de $\langle A\rangle$, es decir, tales que $x_i,y_j\in A\cup \inv{A}$. Es evidente que cada $\inv{y_j}$ también pertenece a $A\cup \inv{A}$. Luego
-$$x\inv{y}=(x_1\cdots x_n) \inv{(y_1\cdots y_m)}=x_1\cdots x_n \inv{y_m}\cdots \inv{y_1}$$
-es un elemento de $\langle A\rangle$.
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-En el grupo $S_4$ calcular todos los elementos del subgrupo $H=\langle (124),(12)\rangle$. Hay que ir operando los elementos $(123)$, $(12)$ y sus inversos, adjuntando a la lista los nuevos elementos que se obtengan. Hasta estar seguros de haberlos encontrado todos. Una buena forma de hacer esto es ir haciendo la tabla de multiplicar del conjunto, hasta que no se incorpore ningún nuevo elemento:
-\begin{center}
-\begin{tabular}{|c||c|c|c|c|c|c|}
-\hline
-$\circ$ & $()$ & $(124)$ & $(142)$ & $(12)$ & $(14)$ & $(24)$\\
-\hline\hline
-$()$ & $()$ & $(124)$ & $(142)$ & $(12)$ & $(14)$ & $(24)$\\
-\hline
-$(124)$ & $(124)$ & $(142)$ & $()$ & $(14)$ & $(24)$ & $(12)$\\
-\hline
-$(142)$ & $(142)$ & $()$ & $(124)$ & $(24)$ & $(12)$ & $(14)$\\
-\hline
-$(12)$ & $(12)$ & $(24)$ & $(14)$ & $()$ & $(142)$ & $(124)$\\
-\hline
-$(14)$ & $(14)$ & $(12)$ & $(24)$ & $(124)$ & $()$ & $(142)$\\
-\hline
-$(24)$ & $(24)$ & $(14)$ & $(12)$ & $(142)$ & $(124)$ & $()$\\
-\hline
-\end{tabular}
-\end{center}
-En este caso $H=\\{ (), (124), (142), (12), (14), (24)\\}$.
-
-Claro que este método es operativo si el grupo no es demasiado grande. Por ejemplo, si calculamos los elementos de $\langle (123),(234)\rangle$, obtenemos el grupo alternado $A_4$. Este grupo tiene $12$ elementos, como hemos visto, luego su tabla de multiplicar tiene ¡$144$ entradas! Sin embargo, usando las propiedades que conocemos de permutaciones podemos ahorrar algunos cálculos. En este último caso sabemos que las permutaciones $(123)$ y $(234)$ son pares, así que lo serán también todas las permutaciones que calculemos a partir de ellas, esto quiere decir que el grupo $\langle (123),(234)\rangle$ tiene como mucho $12$ elementos. Así que en cuanto obtengamos $12$ distintos ya sabemos que hemos terminado.
-
-Otra propiedad que podemos usar si es pertinente, aunque en este último ejemplo no, es que sabemos que si un grupo tiene elementos impares entonces tiene la misma cantidad de pares que de impares.
-{{% /example %}}
-
-{{% definition %}}
-{Grupo cíclico} {Se dice que un grupo $G$ es {\bf cíclico} si existe $a\in G$ tal que
- $$
-G=\langle a \rangle =\langle\\{ a\\}\rangle =\\{ a^m\mid m\in \Z\\} .
-$$}
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
-
-El grupo $S_3$ no es cíclico, pues no existe ninguna permutación que genere todo el grupo. El grupo alternado $A_3=\\{ (),(123),(132)\\}$ es cíclico, pues $A_3=\langle (123)\rangle =\langle (132)\rangle$.
-
-De hecho, para comprobar si un grupo finito de orden $m$ es o no cíclico, hay que verificar si existe o no en el grupo algún elemento de orden $m$. En $S_3$ no hay elementos de orden $6$ mientras que en $A_3$ hay un par de elementos de orden $3$,
-
-El grupo de los enteros con la suma, $(\Z , +)$, es cíclico infinito, pues $\Z =\langle 1\rangle =\langle -1\rangle$.
-{{% /example %}}
-
-### El teorema de Lagrange
-
-Para finalizar vamos a demostrar el teorema de Lagrange, que también puede ser de utilidad a la hora de calcular los elementos de un subgrupo de $S_n$, pues acota los posibles órdenes de los subgrupos de un grupo finito. Si $G$ es un grupo finito el teorema dice que el orden de cualquier subgrupo de $G$ divide al orden de $G$.
-
-\begin{defn}{\label{relizq}} Sean $G$ un grupo y $H\subset G$ un subgrupo. Sobre $G$ definimos la relación
- $\sim_H$ de la manera siguiente: Dados $x,y\in G$,
-$$
-x\sim_H y \; \Leftrightarrow \; \inv{x} y\in H.
-$$
-\end{defn}
-
-{{% proposition %}}
- En las condiciones de la definición anterior, las relación $\sim_H$ es de equivalencia.
-{{% /proposition %}}
-
-{{% proof %}}
- Se comprueba que la relación $\sim_H$ verifica las siguientes propiedades:
-\begin{enumerate}
- \item Reflexiva: Para cada elemento $x\in G,\ x\sim_H x$ ya  que $\inv{x} x = e \in H$.
- \item Simétrica: Dados  $x,y\in G,\ x\sim_H y$ implica que $ y\sim_H x$, ya que $\inv{y} x = \inv{(\inv{x} y)} \in H$.
- \item Transitiva: Dados $x,y,z\in G$ si se tiene que $\ x\sim_H$  y que $y\sim_H z$, entonces se tiene que $x\sim_H z$. Esto se debe a que  $\inv{x} z = (\inv{x} y)(\inv{y} z)\in H$.
-\end{enumerate}
-{{% /proof %}}
-
-{{% watch %}}
-
-Lo usual es notar al conjunto cociente de $G$ por la relación de equivalencia $\sim_H$ como
-$$G/H:=G/\sim_H.$$
-Más adelante veremos que para algunos subgrupos $H$ (los {\em subgrupos normales}), la operación $\star$ de $G$ induce una operación $\bar{\star}$ que dota al conjunto cociente $G/H$ de estructura de grupo.
-{{% /watch %}}
-
-{{% proposition %}}
-  Sean $G$ un grupo y $x\in G$. El conjunto
- $$
-x H=\\{ x h\mid h\in H\\}
-$$
-es la clase de equivalencia de $x$ para la relación $\sim_H$.
-{{% /proposition %}}
-
-{{% proof %}}
- Sea $x\in G$ y llamemos $\bar{x}$ a su
-clase de equivalencia por $\sim_H$, es decir,
-$$
- \bar{x}=\\{ y\in G\mid x\sim_H y\\} =\\{ y\in G\mid \inv{x} y\in H\\} .
-$$
-
-Probaremos por doble inclusión que $\bar{x}=x H$. Si $y\in\bar{x}$,
-entonces $\inv{x} y\in H$, es decir, existe $h\in H$ tal que $\inv{x} y=h$, de donde
-$$
-y=x h\in x H.
-$$
-
-Si $y\in x H$, existe $h\in H$ tal que $y=x h$, de donde
-$$
-\inv{x} y=h\in H\Rightarrow x\sim_H y.
-$$
-{{% /proof %}}
-
-{{% watch %}}
-
-Las clases de equivalencia para $\sim_H$, de la forma $xH$, se llaman {\it clases a izquierda}. Observemos que podríamos haber definido otra relación de equivalencia $\prescript{}{H}\sim$ de la siguiente forma:  
-$$
-  x \prescript{}{H}\sim y \Leftrightarrow yx^{-1}\in H.
-$$ 
-En este caso las clases de equivalencia son de la forma $Hx$, con $x\in G$, y se llaman {\it clases a derecha}.  En principio, las clases a izquierda no tienen por qué coincidir con las clases a la derecha (salvo en el caso evidente $1H=H1=H$). Cuando coinciden, se dice que el grupo $H$ es {\it normal}: esto se estudiará al final de este tema. 
-{{% /watch %}}
-
-
-{{% definition %}}
-{\'Indice de un subgrupo} {Dado un grupo $G$ y un subgrupo $H\subset G$, el {\bf índice} de $H$ en $G$, denotado $|G:H|$, es el número de clases de equivalencia, en $G$, para la relación $\sim_H$. Es decir:
-$$
-    |G:H|=\#(G/H)
-$$
-}
-{{% /definition %}}
-
-{{% theorem %}}
- {Teorema de Lagrange} {Si $G$ es un grupo finito y
-$H\subset G$ es un subgrupo, entonces $\vert H\vert$ divide a $\vert
-G\vert$.}
-{{% /theorem %}}
-
-{{% proof %}}
- Consideremos la relación $\sim_H$
-sobre $G$. Como $G$ es finito, habrá solo un número finito de
-clases de equivalencia distintas. Sean éstas $a_1 H,\ldots,
-a_r H$. Como $G$ es unión disjunta de estas clases, será
-$$
- \vert G\vert =\# (a_1 H)+\cdots +\# (a_r H).
-$$
-Sea $H=\\{ h_1,\ldots ,h_n\\}$. Para todo $i=1,\ldots,r$, tendremos $a_i H = \\{a_i h_1, \dots, a_i h_n \\}$. Estos elementos son todos distintos, ya que si $a_i h_j=a_i h_l$, multiplicando desde la izquierda por el simétrico de $a_i$ se obtiene $h_j=h_l$. Por tanto $\#(a_i H)= n =\vert H\vert$ para todo $i=1,\ldots,r$. Luego $\vert G\vert=r\cdot n=r\cdot\vert
-H\vert$.
-{{% /proof %}}
-
-Hemos visto que si $G$ es un grupo finito y $H$ es un subgrupo, las clases de equivalencia $aH$ tienen todas el mismo tamaño. Por tanto, tenemos:
-
-{{% theorem %}}
- {\'Indice de un subgrupo en un grupo finito} {Si $G$ es un grupo finito y
-$H\subset G$ es un subgrupo, entonces
-$$
- |G:H|=\frac{|G|}{|H|}
-$$}
-{{% /theorem %}}
-
-
-
-{{% corollary %}}
-
-Sea $G$ un grupo finito y sea $x\in G$, entonces el orden de $x$ divide al orden de $G$.
-{{% /corollary %}}
-
-{{% proof %}}
-
-El orden del elemento $x$ coincide con el del subgrupo $\langle x\rangle$, que a su vez divide al de $G$.
-{{% /proof %}}
-
-Del siguiente resultado dejamos la demostración como ejercicio.
-
-{{% corollary %}}
-
-Si $G$ es un grupo cuyo orden es un número primo, entonces $G$ es cíclico.
-{{% /corollary %}}
-
-{{% example name="Ejemplo" %}}
-
-Volviendo al ejemplo en el que el subgrupo de $S_4$, $\langle (123),(234)\rangle$, resulta ser $A_4$, el teorema de Lagrange nos evita algún cálculo. Conforme van apareciendo nuevos elementos del subgrupo, en cuanto aparezca el noveno elemento, como el orden debe ser un divisor de $24$, sabemos que $\langle (123),(234)\rangle$ tiene 12 o 24 elementos. Al tratarse de permutaciones pares exclusivamente, se deduce que el subgrupo es $A_4$.
-
-Es más, sabiendo que $\langle (123),(234)\rangle\subset A_4$, como el orden de $A_4$ es 12, basta con llegar al séptimo elemento para decidir que $\langle (123),(234)\rangle = A_4$
-{{% /example %}}
-
-{{% watch %}}
-Terminamos el estudio del teorema de Lagrange proponiendo el ejercicio siguiente. Sabemos que el orden de cualquier subgrupo de $G$ divide a su orden. Recíprocamente, si $m$ divide a $|G|$, ?`existe algún subgrupo de $G$ de orden $m$? Te animamos a reflexionar esta cuestión en el grupo $S_4$ o en sus subgrupos.
-{{% /watch %}}
-
-## Homomorfismos de grupos
-
-{{% definition %}}
-{Homomorfismo de grupos}{
-	Dados dos grupos $(G,\star)$ y $(H,\ast)$, un {\bf homomorfismo}
-	\[f\colon (G,\star)\To (H,\ast)\]
-	es una aplicación $f\colon G\to H$ que satisface
-que para cada  $x_1,x_2\in G$, 
-\[ f(x_1\star x_2)=f(x_1)\ast f(x_2).\]}
-{{% /definition %}}
-
-{{% watch %}}
-
-Mientras no haya equívocos seguiremos usando la yuxtaposición para expresar la operación entre dos elementos. Aunque ahora intervienen dos grupos con operaciones que pueden ser distintas, normalmente por el contexto sabremos si los elementos que intervienen están en el primer grupo o en el segundo. Así, escribiremos por ejemplo
-$$f(x_1 x_2)=f(x_1) f(x_2),\qquad  \text{ para cada } x_1,x_2\in G.$$
-Igualmente, mientras no haya equívocos, se notará por $e$ tanto al elemento neutro de $G$ como al de $H$. Si hiciera falta distinguir, para evitar confusiones, se usará $e_G$ y $e_H$ respectivamente.
-{{% /watch %}}
-
-{{% example name="Ejemplo" %}}
-\label{ejemplosdehomomorfismos}
-	Ejemplos de homomorfismos:
-	\begin{enumerate}
-		\item La \emph{identidad}, $\id{G}\colon (G,\star)\to (G,\star)$.
-		\item La inclusión de un subgrupo $K\subset G$, $i\colon (K,\star)\to (G,\star)$.
-		\item El signo de una permutación, $\sign\colon\perm{n}\to\\{\pm1\\}$.
-		\item La aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=n\cdot x$ es un homomorfismo  $f\colon (\mathbb Z,+)\to (\mathbb Z,+)$ para todo entero $n$.
-		\item Si $(G,\ast)$ es un grupo abeliano, la exponenciación $f\colon G\to G$, definida como $f(g)=g^n$ es un homomorfismo $f\colon (G,\ast)\to (G,\ast)$ para todo entero $n$.
-		\item Si $\gl{n}{\mathbb R}$ es el grupo de matrices invertibles $n\times n$ de números reales, el determinante $\det\colon \gl{n}{\mathbb R}\to \mathbb R\setminus\\{0\\}$ es un homomorfismo (donde la operación en ambos grupos es la multiplicación).
-		\item La aplicación exponencial $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$, es un homomorfismo $f\colon(\mathbb R,+)\to ((0,+\infty),\cdot)$.
-        \item Dado un grupo $(G,\star)$ y un elemento $x\in G$, la aplicación $c_x\colon G\rightarrow G$ dada por $c_x(y)=x^{-1}yx$ es un homomorfismo, llamado {\it conjugación por $x$}.	\end{enumerate}
-	Ejemplos de aplicaciones que no son homomorfismos:
-	\begin{enumerate}
-		\item Si $(G,\ast)$ no es abeliano, la exponenciación $f\colon G\to G$ definida en el anterior punto 5 no es un homomorfismo, al menos para $n=2$.
-		\item La aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=x^n$ no es un homomorfismo  $f\colon (\mathbb Z,+)\to (\mathbb Z,+)$ para ningún $n\geq 2$.
-	\end{enumerate}
-{{% /example %}}
-
-Los homomorfismos preservan el elemento neutro y los simétricos.
-
-{{% proposition %}}
-
-	Si $f\colon (G,\star)\to (H,\ast)$ es un homomorfismo, entonces $	f(e)=e$, y además para cada $ x \in G$,
-		$f(\inv{x})=\inv{f(x)}$.
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Como $e=e e$,
-	\[f(e)=f(e e)=f(e) f(e).\]
-	Cancelando un $f(e)$ de cada lado deducimos que $e=f(e)$.
-%	Multiplicando por la izquierda por $\inv{f(e)}$ obtenemos
-%	\[e=f(e)\ast\inv{f(e)}=f(e)\ast f(e)\ast\inv{f(e)}=f(e).\]
-
-	Ahora que hemos probado la primera ecuación, deducimos la segunda de $e=x \inv{x}$ del siguiente modo,
-	\[e=f(e)=f(x \inv{x})=f(x) f(\inv{x}).\]
-	Despejando de aquí deducimos que $\inv{f(x)}=f(\inv{x})$.
-%	Multiplicando por $\inv{f(x)}$ por la izquierda obtenemos,
-%	\[\inv{f(x)}=\inv{f(x)}\ast e=\inv{f(x)}\ast f(x)\ast f(\inv{x})=f(\inv{x}).\]
-{{% /proof %}}
-
-La composición de dos homomorfismos es un homomomorfismo.
-
-{{% proposition %}}
-
-	Dados tres grupos y dos homomorfismos como en el siguiente diagrama,
-	\[(G,\star)\stackrel{f}\To (H,\ast)\stackrel{g}\To (K,\bullet),\]
-	la composición
-	\[g\circ f\colon (G,\star)\To (K,\bullet)\]
-	también es un homomorfismo.
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Basta observar que, aplicando las definiciones, dados $x_1,x_2\in G$,
-	\begin{align*}
-		(g\circ f)(x_1 x_2)&=g(f(x_1 x_2))\\
-		&=g(f(x_1) f(x_2))\\
-		&=g(f(x_1)) g(f(x_2))\\
-		&=(g\circ f)(x_1) (g\circ f)(x_2).
-	\end{align*}
-{{% /proof %}}
-
-{{% definition %}}
-{Monomorfismos, epimorfismos e isomorfismos}{
-	Decimos que un homomorfismo $f\colon (G,\star)\to (H,\ast)$ es un {\bf monomorfismo}, {\bf epimorfismo} o {\bf isomorfismo} si la aplicación $f$ es inyectiva, sobreyectiva o biyectiva, respectivamente. Los isomorfismos se denotan del siguiente modo
-	 \[f\colon (G,\star)\stackrel{\cong}\To (H,\ast).\]}
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
-
-	De los homomorfismos del Ejemplo \ref{ejemplosdehomomorfismos}, 2 y 4 son  monomorfismos, 3 y 6 son epimorfismos y 1, 7 y 8 son isomorfismos. En general 5 no es un monomorfismo ni un epimorfismo.
-{{% /example %}}
-
-{{% proposition %}}
-
-	La composición de dos isomorfismos es un isomorfismo.
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Se deduce de que ya sabemos que la composición de dos homomorfismos es un homomorfismo y que la composición de dos aplicaciones biyectivas es biyectiva.
-{{% /proof %}}
-
-
-{{% proposition %}}
-
-	Si $f\colon (G,\star)\to (H,\ast)$ es un isomorfismo la aplicación inversa $f^{-1}\colon H\to G$ es un isomorfismo
-	\[f^{-1}\colon (H,\ast) \To  (G,\star).\]
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Queremos demostrar que para cada $ y_1,y_2\in H$ se cumple que 
-	\[f^{-1}(y_1 y_2)=f^{-1}(y_1) f^{-1}(y_2).\]
-	Como $f$ es inyectivo, bastará comprobar que
-	\[f(f^{-1}(y_1 y_2))=f(f^{-1}(y_1) f^{-1}(y_2)).\]
-	Por un lado, por ser $f^{-1}$ la inversa de $f$,
-	\[f(f^{-1}(y_1 y_2))=(f\circ f^{-1})(y_1 y_2)=y_1 y_2.\]
-	Por otro lado, usando además que $f$ es un homomorfismo,
-	\begin{align*}
-	f(f^{-1}(y_1) f^{-1}(y_2))&=f(f^{-1}(y_1)) f(f^{-1}(y_2))\\
-	&=(f\circ f^{-1})(y_1)(f\circ f^{-1})(y_2)\\
-	&=y_1 y_2.
-	\end{align*}
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-	Los inversos de los isomorfismos 1, 7 y 8 del Ejemplo \ref{ejemplosdehomomorfismos} son, respectivamente, $\id{G}^{-1}=\id{G}$, el isomorfismo $f^{-1}\colon((0,+\infty),\cdot)\to(\mathbb R,+)$ definido por $f^{-1}(x)=\log(x)$, y el isomorfismo $(c_x)^{-1}=c_{x^{-1}}$ definido por $c_{x^{-1}}(y)=xyx^{-1}$.
-{{% /example %}}
-
-{{% definition %}}
-{Grupos isomorfos}
-{	Dos grupos $(G,\star)$ y $(H,\ast)$ son {\bf isomorfos} si existe un isomorfismo \[f\colon (G,\star)\stackrel{\cong}\To (H,\ast).\]}
-{{% /definition %}}
-
-{{% corollary %}}
-
-	La relación de ser isomorfos es de equivalencia.
-{{% /corollary %}}
-
-{{% proof %}}
-
-	Es reflexiva porque la identidad es un homomorfismo de todo grupo en sí mismo. Es transitiva porque la composición de dos isomorfismos es un isomorfismo. Es simétrica porque el inverso de un isomorfismo es un isomorfismo.
-{{% /proof %}}
-
-{{% definition %}}
-{Núcleo de un homomorfismo}
-{	Dado un homomorfismo $f\colon (G,\star)\to (H,\ast)$, el {\bf núcleo} de $f$ es
-	\[\ker(f)=\\{x\in G\,;\,f(x)=e\\}\subset G.\]}
-{{% /definition %}}
-
-{{% example name="Ejemplo" %}}
-
-	El núcleo de $\sign\colon\perm{n}\to\\{\pm1\\}$ es el grupo alternado.
-{{% /example %}}
-
-La demostración de la siguiente propiedad la dejamos como ejercicio:
-
-{{% proposition %}}
-
- Dado un homomorfismo $f\colon (G,\star)\to (H,\ast)$, su núcleo $(\ker(f),\star)$ es un subgrupo de $(G, \star)$, y su imagen $(\im(f),\ast)$ es un subgrupo de $(H,\ast)$.
-{{% /proposition %}}
-
-{{% proposition %}}
-
-	Dado un homomorfismo $f\colon (G,\star)\to (H,\ast)$, se tiene:
-\begin{enumerate}
-  \item $f$ es inyectivo si y solo si $\ker(f)=\\{e\\}$.
-
-  \item $f$ es sobreyectivo si y solo si $\im(f)=H$.
-\end{enumerate}
-{{% /proposition %}}
-
-{{% proof %}}
-
-    La segunda propiedad es simplemente la definición de aplicación sobreyectiva, así que basta demostrar la primera propiedad.
-
-	Supongamos que $f$ es inyectivo. En primer lugar, como $f(e)=e$ se tiene $\\{e\\}\subset \ker(f)$. Por otra parte, dado $x\in \ker f$ se tiene \[f(x)=e=f(e).\]
-	Pero entones, como $f$ es inyectivo, se sigue que $x=e$. Por tanto $\ker(f)\subset \\{e\\}$, luego $\ker(f)=\\{e\\}$.
-
-	Recíprocamente, supongamos que $\ker(f)=\\{e\\}$. Si $x, y\in G$ son tales que $f(x)=f(y)$ entonces, por ser $f$ un homomorfismo,
-	\[f(x\inv{y})=f(x) f(\inv{y})=f(x) \inv{f(y)}=f(y) \inv{f(y)}=e.\]
-	Luego $x\inv{y}\in \ker(f)=\\{e\\}$, es decir $x\inv{y}=e$. Multiplicando desde la derecha por $y$, obtenemos $x=y$. Por tanto $f$ es inyectiva.
-{{% /proof %}}
 
 
 

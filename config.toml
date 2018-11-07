@@ -4,7 +4,7 @@ DefaultContentLanguage = "es"
 
 title = "Álgebra básica"
 theme = "hugo-theme-lecturenotes"
-disableLiveReload = false
+disableLiveReload = true
 
 creatordisplayname = "Valere JEANTET"
 creatoremail = "valere.jeantet@gmail.com"
