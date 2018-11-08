@@ -368,14 +368,14 @@ Dado un $R$-módulo $M$, decimos que $a\in M$ es un elemento de **torsion** si e
 
 
 {{% remark %}}
-El $0\in M$ es siempre un elemento de torsión ya que $1\neq 0$ y $1\cdot 0 = 0$. Dado un entero no nulo $0\neq n\in\mathbb Z$, todo elemento $\bar a$ del $\mathbb Z$-módulo $\mathbb Z/(n)$ es de torsión puesto que $n\bar a=\overline{na}=\bar 0$. Más generalmente, si $0\neq d\in R$ entonces todo elemento de $R/(d)$ es de torsión pues se anula al multiplicarlo por $d$. En cambio $R$, visto como $R$-módulo, no tiene elementos no nulos de torsión ya que es un dominio.
+El $0\in M$ es siempre un elemento de torsión ya que $1\neq 0$ y $1\cdot 0 = 0$. Dado un entero no nulo $0\neq n\in\mathbb Z$, todo elemento $\bar a$ del $\mathbb Z$-módulo $\mathbb Z/(n)$ es de torsión puesto que $n\bar a=\overline{na}=\bar 0$. Más generalmente, si $I\subset R$ es un ideal no nulo entonces todo elemento de $R/I$ es de torsión, pues existe $0\neq a\in I$ y dado $\bar r\in R/I$, $a\bar r=\overline{ar}=0$. Como $R$ no tiene divisores de cero, $T( {R} )=\\{0\\}$, y más generalmente $T(R^n)=\\{0\\}$, $n\geq 0$.
 {{% /remark %}}
 
 
 Veamos una condición suficiente, aunque no necesaria, para que un módulo no sea libre.
 
 {{% proposition %}}
- Si $M$ es un $R$-módulo que tiene elementos no triviales de torsión entonces $M$ no es libre. 
+Si $M$ es un $R$-módulo que tiene elementos no triviales de torsión entonces $M$ no es libre. 
 {{% /proposition %}}
 
 
@@ -422,14 +422,14 @@ Dado $a\in T(M)$ existe $0\neq r\in R$ tal que $ra=0$ luego $rf(a)=f(ra)=f(0)=0$
 {{% /proof %}}
 
 
-{{% corollary %}}
- Si dos módulos son isomorfos $M\cong N$ entonces sus submódulos de torsión también $T(M)\cong T(N)$. 
+{{% corollary label="torsionquotient" %}}
+Si dos módulos son isomorfos $M\cong N$ entonces sus submódulos de torsión también $T(M)\cong T(N)$, y los correspondientes cocientes $M/T(M)\cong N/T(N)$.
 {{% /corollary %}}
 
 
 La torsión preserva productos.
 
-{{% proposition %}}
+{{% proposition label="torsionproduct" %}}
  Dados dos $R$-módulos $M$ y $N$, tenemos que $T(M\times N)=T(M)\times T(N)$ .
 {{% /proposition %}}
 
@@ -438,7 +438,7 @@ La torsión preserva productos.
  Veamos primero $\subset$. Si $(a,b)\in T(M\times N)$ existe $0\neq r\in R$ tal que $r(a,b)=(ra,rb)=(0,0)$, es decir $ra=0$ y $rb=0$, por lo que $a\in T(M)$ y $b\in T(N)$, o dicho de otro modo $(a,b)\in T(M)\times T(N)$. 
 
 Veamos ahora $\supset$. Si $(a,b)\in T(M)\times T(N)$, es decir $a\in T(M)$ y $b\in T(N)$, entonces existen $r,s\in R$ no nulos tales que $ra=0$ y $sb=0$, por tanto $rs\neq 0$ y $rs(a,b)=(s(ra),r(sb))=(0,0)$, luego $(a,b)\in T(M\times N)$.
-  {{% /proof %}}
+{{% /proof %}}
 
 
   
@@ -460,8 +460,15 @@ El $R$-módulo cociente $M/N$ está bien definido. Su estructura es la única qu
 
 
 {{% proof %}}
-
-Para ver que la producto por escalares está bien definido hay que comprobar que $$a+N=a'+N\Rightarrow(ra)+N=(ra')+N.$$ Esto equivale a $$a-a'\in N\Rightarrow ra-ra'= r(a-a')\in N.$$ Las propiedades que la suma y el producto por escalares deben satisfacer se cumplen obviamente pues se derivan de las correspondientes propiedades de $M$.
+Para ver que la producto por escalares está bien definido hay que comprobar que 
+$$
+a+N=a'+N\Rightarrow(ra)+N=(ra')+N.
+$$ 
+Esto equivale a 
+$$
+a-a'\in N\Rightarrow ra-ra'= r(a-a')\in N.
+$$ 
+Las propiedades que la suma y el producto por escalares deben satisfacer se cumplen obviamente pues se derivan de las correspondientes propiedades de $M$.
 
 Probemos la unicidad. Si $p\colon M\rightarrow M/N$ es un homomorfismo entonces
 $$\begin{array}{rcl}
@@ -652,7 +659,7 @@ $$g(a\_i)=b\_i,\quad 1\leq i\leq m,$$
 que es la factorización de $\phi\_{\\{b\_1,\dots,b\_m\\}}\colon R^m\rightarrow N$ a través de la proyección natural al cociente $M=R^m/\operatorname{im}A$. Las hipótesis de la [proposición](#factorquotientmodules) mencionada se cumplen porque $\operatorname{im}A\subset \ker \phi\_{\\{b\_1,\dots,b\_m\\}}$ ya que $\operatorname{im}A$ está generado por los $Ae_i$ y $\phi\_{\\{b\_1,\dots,b\_m\\}}(Ae_i)=0$ debido a que los $b_i$ satisfacen las mismas ecuaciones (relaciones) que los $a_i$.
 
 {{% definition %}}
-Una **presentación** de un $R$-módulo $M$ consiste en dos homomorfismos $$R^n\stackrel{A}\longrightarrow R^m\stackrel{f}\twoheadrightarrow M$$ tales que $f$ es sobreyectivo e $\operatorname{im} A=\ker f$. Esto, en virtud del primer [teorema](#isomodules) de isomorfía, equivale a dar una matriz $A$ y un isomorfismo $$\bar{f}\colon \frac{R^n}{\operatorname{im} A}\stackrel{\cong}\longrightarrow M.$$ Decimos que un módulo es **finitamente presentado** si admite una presentación. 
+Una **presentación** de un $R$-módulo $M$ consiste en dos homomorfismos $$R^n\stackrel{A}\longrightarrow R^m\stackrel{f}\twoheadrightarrow M$$ tales que $f$ es sobreyectivo e $\operatorname{im} A=\ker f$. Esto, en virtud del primer [teorema](#isomodules) de isomorfía, equivale a dar una matriz $A$ y un isomorfismo $$\bar{f}\colon \frac{R^m}{\operatorname{im} A}\stackrel{\cong}\longrightarrow M.$$ Decimos que un módulo es **finitamente presentado** si admite una presentación. 
 {{% /definition %}}
 
 
@@ -793,7 +800,7 @@ También deducimos que el determinante de una matriz no varía cuando se realiza
 
 
 {{% theorem name="Forma normal de Smith" label="smith" %}}
-Dada una matriz $A$ sobre un dominio euclídeo $R$, existen matrices invertibles $P$ y $Q$, que son de hecho productos de matrices elementales, tales que $$QAP^{-1}=D=\left( \begin{array}{ccc|c} d\_1&&&\cr &\ddots&&0\cr &&d\_k&\cr \hline &0&&0 \end{array} \right)$$ es una matriz con una descomposición de tamaño $2\times 2$ por cajas cuya única caja no trivial es la superior izquierda, que es diagonal con entradas diagonales no nulas y satisface $d\_i|d\_{i+1}$ para todo $1\leq i {<} k$. Esta matriz $D$ se denomina **forma normal de Smith** de $A$. <!--- el número $k$ de entradas no nulas es único y los $d_i$ son únicos salvo asociados. --> 
+Dada una matriz $A$ de tamaño $m\times n$ sobre un dominio euclídeo $R$, existen matrices invertibles $P$ y $Q$, que son de hecho productos de matrices elementales, tales que $$QAP^{-1}=D=\left( \begin{array}{ccc|c} d\_1&&&\cr &\ddots&&0\cr &&d\_k&\cr \hline &0&&0 \end{array} \right)$$ es una matriz con una descomposición de tamaño $2\times 2$ por cajas cuya única caja no trivial es la superior izquierda, que es diagonal con entradas diagonales no nulas y satisface $d\_i|d\_{i+1}$ para todo $1\leq i {<} k$. Esta matriz $D$ se denomina **forma normal de Smith** de $A$. <!--- el número $k$ de entradas no nulas es único y los $d_i$ son únicos salvo asociados. --> 
 {{% /theorem %}}
 
 
@@ -815,9 +822,11 @@ d_1&0\cr \hline 0&B
 \end{array}\right)$$
 y $d_1$ divide a todas las entradas de $B$.
 
-Este procedimiento termina porque cada vez que realizamos una división euclídea, el mínimo de los tamaños de los elementos no nulos disminuye. Como este número es un entero no negativo, no puede disminuir indefinidamente. Esto asegura que el procedimiento acaba tras un número finito de pasos.
+Este procedimiento termina porque cada vez que realizamos una división euclídea con resto no nulo, el mínimo de los tamaños de los elementos no nulos disminuye. Como este número es un entero no negativo, no puede disminuir indefinidamente. Esto asegura que el procedimiento acaba tras un número finito de pasos.
 
 Este método para llegar a la forma normal de Smith se conoce como  **algoritmo de diagonalización** de matrices con entradas en $R$.
+
+En virtud de la correspondencia entre operaciones y matrices elementales, la matriz $Q$ del enunciado se obtiene al realizar sobre la matriz identidad $I_m$ de tamaño $m\times m$ todas las operaciones elementales por filas que hemos usado para hallar $D$, en el mismo orden. Análogamente, $P^{-1}$ se obtiene al aplicarle a $I_n$ todas las operaciones elementales por columnas realizadas para calcular $D$.
 
 <!--- La unicidad de la forma normal de Smith se observa del siguiente modo. Si $d$ divide a todas las entradas de una matriz $A$ entonces también dividirá a todas las entradas de cualquier otra matriz obtenida a partir de $A$ mediante una operación elemental. Las operaciones elementales son reversibles, por tanto el divisor máximo común de las entradas de una matriz no varía al realizar operaciones elementales. La forma normal de Smith se obtiene a partir de $A$ mediante operaciones elementales y el divisor máximo común de sus entradas es $d\_1$, por tanto $d\_1$ también es el divisor máximo común de las entradas de $A$, que es único salvo asociados.
 
@@ -879,23 +888,53 @@ también presenta $M\cong R^m/\operatorname{im}D$. Es más, podemos eliminar las
 
 La descomposición anterior de un $R$-módulo $M$ como producto de $R$-módulos cíclicos se puede agrupar en dos factores, la **parte libre** y la **parte de torsión**,
 $$\underbrace{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}}\_{\text{parte de torsión}}\times \underbrace{R^{r}}\_{\text{parte libre}}.$$
-Como los isomorfismos [preservan](#homotorsion) la torsión, la parte de torsión es isomorfa a $T(M)$. El siguiente resultado demuestra que el rango de la parte libre solo depende del módulo $M$, no de la descomposición escogida.
+Veamos que $T(M)$ es isomorfo a la parte de torsión y $M/T(M)$ a la parte libre.
 
-{{% corollary %}}
- Si $M$ es un módulo finitamente generado sobre un dominio de ideales principales, el cociente $M/T(M)$ es libre. Es más, si $M\cong N$ entonces $M/T(M)\cong N/T(N)$ y tienen el mismo rango.
-{{% /corollary %}}
+{{% proposition label="partsoffg" %}}
+Si $M$ es un $R$-módulo isomorfo a 
+$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}$$
+con $d_i\neq 0$ para todo $i$, entonces $T(M)$ es isomorfo a 
+$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}$$
+y $M/T(M)\cong R^r$. En particular, el $R$-módulo $M/T(M)$ es libre de rango $r$.
+{{% /proposition %}}
 
 
 {{% proof %}}
-Como los isomorfismos preservan la torsión, basta probarlo para un producto como el de la proposición anterior. En ese caso $$T\left(\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\right)=\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times \\{0\\},$$ 
-pues la torsión preserva productos. Por lo tanto $$\begin{array}{rcl}
-\frac{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}}{T\left(\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\right)}&\cong& \frac{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}}{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times\\{0\\}}\cr
-&=&R^r.
+Hemos visto antes que la torsión se preserva por [isomorfismos](#torsionquotient) y además preserva [productos](#torsionproduct), así que, por un lado,
+$$
+\begin{array}{rcl}
+T(M)&\cong&T\left(\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\right)\cr
+&=&\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times \\{0\\}\cr
+&\cong&\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}.
+\end{array}
+$$ 
+Por otro lado,
+$$
+\begin{array}{rcl}
+\frac{M}{T(M)}&\cong&
+\frac{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}}{T\left(\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\right)}\cr
+&=& \frac{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}}{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times\\{0\\}}\cr
+&\cong&R^r.
 \end{array}$$    
-Por el mismo resultado de preservación de la torsión, $M/T(M)\cong N/T(N)$, luego ambos tienen el mismo rango.
 {{% /proof %}}
 
+Veamos que el rango de la parte libre de la descomposición del teorema de structura solo depende del módulo $M$.
 
+{{% corollary label="equalrank" %}}
+Supongamos que $M\cong N$, donde
+$$
+\begin{array}{rcl}
+M&\cong&\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r},
+\cr
+N&\cong &\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}\times R^{s},
+\end{array}
+$$
+y los $d_i$ y los $e_j$ son no nulos para todos los $i$ y $j$. Entonces $r=s$.
+{{% /corollary %}}
+
+{{% proof %}}
+Como acabamos de ver, $M/T(M)$  es libre de rango $r$ y $N/T(N)$ es libre de rango $s$. También hemos [visto](#torsionquotient) que $M/T(M)\cong N/T(N)$. Deducimos que $r=s$, ya que el rango de un módulo libre es invariante por isomorfismos, pues los isomorfismos preservan bases.
+{{% /proof %}}
 
 Los $d_i$ del teorema de estructura también son únicos salvo asociados. Esto es cierto en general pero aquí nos limitaremos a probarlo más abajo para $R=\mathbb{Z}$ y a esbozarlo para $R=k[x]$ con $k$ un cuerpo. 
 
@@ -913,9 +952,9 @@ $$
 y este isomorfismo está definido como $\bar r\mapsto f( r )=(\bar r,\bar r)$. Por tanto bastará probar que $\ker f=(ab)$ y que $f$ es sobreyectivo.
 
 
-Veamos primero que $\ker f=(ab)$.  En efecto $ab\in\ker f$ ya que $ab\equiv 0$ módulo $(a)$ y módulo $(b)$. Por lo tanto, $(ab)\subset R$. Por otro lado, si $f( r )=(\bar r,\bar r)=(\bar 0,\bar 0)$, es decir si $r\equiv 0$  módulo $(a)$ y módulo $(b)$, entonces $a|r$ y $b|r$ luego $ab=\operatorname{mcm}(a,b)|r$, esto es $r\in (ab)$. 
+Veamos primero que $\ker f=(ab)$.  En efecto $ab\in\ker f$ ya que $ab\equiv 0$ módulo $(a)$ y módulo $(b)$. Por lo tanto, $(ab)\subset \ker f$. Por otro lado, si $f( r )=(\bar r,\bar r)=(\bar 0,\bar 0)$, es decir si $r\equiv 0$  módulo $(a)$ y módulo $(b)$, entonces $a|r$ y $b|r$ luego $ab=\operatorname{mcm}(a,b)|r$, esto es $r\in (ab)$. 
 
-Veamos ahora que $f$ es sobreyectivo. Esto equivale a resolver el sistema de ecuaciones $$\left\\{\begin{array}{rcl}x&\equiv& c\mod (a),\cr x&\equiv& d\mod (b),\end{array}\right.$$ para $c,d\in R$ cualesquiera. Tomamos una identidad de Bézout $sa+tb=1$ y observamos que $x=sad+tbc$ resuelve la ecuación.
+Veamos ahora que $f$ es sobreyectivo, es decir, que dado cualquier $(\bar c,\bar d)\in \frac{R}{(a)}\times \frac{R}{(b)}$ existe $x\in R$ tal que $f(x)=(\bar{c},\bar{d})$. Esto equivale a resolver el sistema de ecuaciones $$\left\\{\begin{array}{rcl}x&\equiv& c\mod (a),\cr x&\equiv& d\mod (b),\end{array}\right.$$ para $c,d\in R$ cualesquiera. Tomamos una identidad de Bézout $sa+tb=1$ y observamos que $x=sad+tbc$ resuelve la ecuación.
 {{% /proof %}}
 
 
@@ -925,26 +964,38 @@ Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generad
 
 
 {{% proof %}}
- Es consecuencia de la primera forma del teorema de estructura y del teorema chino del resto, el cual permite probar por inducción que si $q\_{1}^{s\_1}\cdots q\_{t}^{s\_t}$ es un producto de potencias de primos no asociados entonces $$\frac{R}{(q\_{1}^{s\_1}\cdots q\_{t}^{s\_t})}\cong \frac{R}{(q\_{1}^{s\_1})}\times\cdots\times \frac{R}{(q\_{t}^{s\_t})}.$$  
+En virtud de la primera forma del teorema de estructura, basta ver que si $d\in R$ no es nulo ni una unidad, entonces $R/(d)$ es isomorfo a un producto de módulos cíclicos de la forma $R(p^m)$ con $p$ primo.
+
+Todo DIP es un DFU, así que $d$ se puede descomponer, salvo asociados, como producto de potencias de primos no asociados, $p\_{1}^{m\_1}\cdots p\_{n}^{m\_n}$. Entonces, aplicando reiteradamente el teorema chino del resto, obtenemos que $$\frac{R}{(d)}=\frac{R}{(p\_{1}^{m\_1}\cdots p\_{n}^{m\_n})}\cong \frac{R}{(p\_{1}^{m\_1})}\times\cdots\times \frac{R}{(p\_{n}^{m\_n})}.$$
+El isomorfismo está definido simplemente como $\bar r\mapsto (\bar r,\dots,\bar r)$.  
 {{% /proof %}}
 
 
-Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes. 
+Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes. El teorema chino del resto también nos permite pasar de la segunda a la primera.
 
 
 
 {{% example name="Grupos abelianos con el mismo número de elementos" %}}
- Los grupos abelianos $$\mathbb{Z}/(4)\times \mathbb{Z}/(4),\qquad\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4),$$ tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos. Para verlo jugaremos con la noción de **orden** de un elemento de torsión $a\in A$ de un grupo abeliano $A$, que es el menor entero positivo $n\in\mathbb Z$ tal que $na=0$. El $0\in A$ es el único elemento de orden $1$. Si $A$ es finito, el orden de cualquier $a\in A$ divide al número de elementos de $A$ (este número se conoce como orden de $A$). En particular, todo elemento de $\mathbb Z/(m)$ tiene un orden divisor de $m$. El orden de $-a\in A$ coincide con el de $a\in A$ y el orden de la suma de dos elementos de torsión $a+b\in A$ divide al múltiplo común mínimo de los órdenes de los factores. En particular, para cada entero $n$ el subconjunto $T\_n(A)\subset A$ formado por los elementos cuyo orden divide a $n$ es un subgrupo. Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$, y si $A\cong B$ entonces $T\_n(A)\cong T\_n(B)$, por tanto $t\_n(A)=t\_n(B)$. El orden de $\bar a\in\mathbb Z/(m)$ es $m/\operatorname{mcd}(a,m)$ si $m\neq 0$. Usando esto podemos comprobar que, si $d=\operatorname{mcd}(m,n)$, $$T\_n(\mathbb{Z}/(m))=\left\\{1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\}$$ luego $$t\_n(\mathbb{Z}/(m))=\operatorname{mcd}(n,m).$$ Aplicando esto a los dos grupos del principio, vemos que el primero cumple $$t\_2(\mathbb{Z}/(4)\times \mathbb{Z}/(4))=2\cdot 2=4,$$ mientras que el segundo satisface $$t\_2(\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4))=2\cdot 2\cdot 2=8,$$ con lo cual no pueden ser isomorfos.
+ Los grupos abelianos $$\mathbb{Z}/(4)\times \mathbb{Z}/(4),\qquad\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4),$$ tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos. Para verlo jugaremos con la noción de **orden** de un elemento de torsión $a\in A$ de un grupo abeliano $A$, que es el menor entero positivo $n\in\mathbb Z$ tal que $na=0$. El $0\in A$ es el único elemento de orden $1$. Si $A$ es finito, el orden de cualquier $a\in A$ divide al número de elementos de $A$ (este número se conoce como orden de $A$). En particular, todo elemento de $\mathbb Z/(m)$ tiene un orden divisor de $m$. El orden de $-a\in A$ coincide con el de $a\in A$ y el orden de la suma de dos elementos de torsión $a+b\in A$ divide al múltiplo común mínimo de los órdenes de los factores. En particular, para cada entero $n$, el subconjunto $T\_n(A)\subset A$ formado por los elementos cuyo orden divide a $n$ es un subgrupo. Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$, y si $A\cong B$ entonces $T\_n(A)\cong T\_n(B)$, por tanto $t\_n(A)=t\_n(B)$. El orden de $\bar a\in\mathbb Z/(m)$ es $m/\operatorname{mcd}(a,m)$ si $m\neq 0$. Usando esto podemos comprobar que, si $d=\operatorname{mcd}(m,n)$, $$T\_n(\mathbb{Z}/(m))=\left(\overline{\frac{m}{d}}\right)=\left\\{1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
+ pues $\overline{\frac{m}{d}}$ tiene orden $d$. Luego $$t\_n(\mathbb{Z}/(m))=\operatorname{mcd}(n,m).$$ Aplicando esto a los dos grupos del principio, vemos que el primero cumple $$t\_2(\mathbb{Z}/(4)\times \mathbb{Z}/(4))=2\cdot 2=4,$$ mientras que el segundo satisface $$t\_2(\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4))=2\cdot 2\cdot 2=8,$$ con lo cual no pueden ser isomorfos.
 {{% /example %}}
 
+El siguiente teorema, combinado con la [proposición](#partsoffg) y el [corolario](#equalrank) anterior, demuestra que la descomposición de un $\mathbb Z$-módulo finitamente generado $M$ dada por el primer teorema de estructura es única. La del segundo también lo será, salvo cambio de orden de los factores de la parte de torsión, pues ambos son equivalentes.
 
-{{% theorem name="Unicidad en el teorema de estructura" %}}
- La descomposición de un $\mathbb Z$-módulo finitamente generado $M$ dada por cualquiera de las dos formas del teorema de estructura es única. 
+{{% theorem %}}
+Dados dos $\mathbb Z$-módulos
+$$
+\begin{array}{rlc}
+A&=&\frac{\mathbb Z}{(d\_1)}\times \cdots \times\frac{\mathbb Z}{(d\_n)},\cr
+B&=&\frac{\mathbb Z}{(e\_1)}\times \cdots \times\frac{\mathbb Z}{(e\_m)},
+\end{array}
+$$
+donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i|d\_{i+1}$ y $e\_j|e\_{j+1}$, entonces $n=m$ y cada $d\_i$ es asociado de $e\_i$.
 {{% /theorem %}}
 
 
 {{% proof %}}
- Basta verlo para una de las dos formas, pues son equivalentes. Consideremos la primera. Ya hemos visto que el valor de $r\geq 0$ estaba determinado por $M$. Como los isomorfismos preservan la torsión, solo nos queda ver que si $$A=\frac{\mathbb Z}{(d\_1)}\times \cdots \times\frac{\mathbb Z}{(d\_n)}\cong \frac{\mathbb Z}{(e\_1)}\times \cdots \times\frac{\mathbb Z}{(e\_m)}=B,$$ donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i|d\_{i+1}$ y $e\_j|e\_{j+1}$, entonces $n=m$ y cada $d\_i$ es asociado de $e\_i$. Podemos suponer sin pérdida de generalidad que los $d\_i$ y los $e\_j$ son positivos. Como ambos grupos son finitos y tienen el mismo orden, $$d\_1\cdots d\_n=e\_1\cdots e\_m.$$
+Podemos suponer sin pérdida de generalidad que los $d\_i$ y los $e\_j$ son positivos. Como ambos grupos son finitos e isomorfos, tienen el mismo orden, es decir, $$d\_1\cdots d\_n=e\_1\cdots e\_m.$$
 
 En $A$, el orden de cualquier elemento divide a $d\_n$, y en $B$ a $e\_m$. Ambos grupos son isomorfos, por tanto el orden de cualquier elemento de $A$ o de $B$ divide a $d\_n$ y a $e\_m$. En $A$ hay un elemento de orden $d\_n$, el $(\bar 0,\dots,\bar 0,\bar 1)$, por tanto $d\_n|e\_m$. En $B$ hay otro con orden $e\_m$, por tanto $e\_m|d\_n$, así que $d\_n=e\_m$. De aquí deducimos también que $$d\_1\cdots d\_{n-1}=e\_1\cdots e\_{m-1}.$$
 
@@ -966,7 +1017,7 @@ Este argumento se puede iterar, probando así que los últimos $d\_i$ coinciden 
 
 
 {{% example name="$k[x]$-módulos de torsión con la misma dimensión" %}}
- Si $p(x)\in k[x]$ tiene grado $n$, el cociente $k[x]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[x]$-módulos $$\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)},\qquad \frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}$$ tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con de **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)$ formado por los elementos de orden que divide a $p(x)\in k[x]$. En este caso $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Además $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. Los dos $k[x]$-módulos anteriores no pueden ser isomorfos porque $$\begin{array}{rcl} t\_{x}\left(\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$ La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[x]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[x]$ los números $t\_{p(x)}(M)$ y el orden de un $k[x]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
+ Si $p(x)\in k[x]$ tiene grado $n$, el cociente $k[x]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[x]$-módulos $$\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)},\qquad \frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}$$ tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con de **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)$ formado por los elementos cuyo orden divide a $p(x)\in k[x]$. En este caso, $T\_{p(x)}(M\times N)=T\_{p(x)}(M)+ T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Además podemos comprobar que $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. Los dos $k[x]$-módulos anteriores no pueden ser isomorfos porque $$\begin{array}{rcl} t\_{x}\left(\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$ La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[x]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[x]$ los números $t\_{p(x)}(M)$ y el orden de un $k[x]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
 {{% /example %}}
 
 
