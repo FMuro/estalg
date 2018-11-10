@@ -839,22 +839,28 @@ a\_{i\_rj\_1}&\cdots & a\_{i\_rj\_r}
 Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamiento anterior es igualmente cierto si reemplazamos entradas por menores, es decir, el divisor máximo común de los menores de orden $r$ no varía al hacer operaciones elementales. Para la forma normal de Smith, dicho divisor máximo común es $d\_1\cdots d\_r$ si $1\leq r\leq k$ y $0$ si $r>k$. De aquí se deduce la unicidad de $k$ y de los $d\_i$ salvo asociados. -->
 {{% /proof %}}
 
-La siguiente aplicación es una calculadora de la forma normal de Smith paso a paso. El dato de entrada es una matriz expresada como lista de filas.
+La siguiente aplicación es una calculadora de la forma normal de Smith paso a paso. El dato de entrada es una matriz con entradas en $\mathbb{Z}$ expresada como lista de filas.
 
 <div class="sage">
   <script type="text/x-sage">
 @interact
-def _(A = input_box('[[0,1,2],[3,4,5]]', width = 40, type = matrix, label='Matriz: '), auto_update=False):
-    def smallest(M,l): # Find the smallest non-zero element in the bottom right corner stating at (l,l)
+def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matriz: '), auto_update=False):
+    def qr(a,b): # euclidean division of a by b with smallest abs(remainder)
+        quotient, remainder = a.quo_rem(b)
+        if abs(remainder) > abs(b/2): # if the remainder is too big, take the other Euclidean division
+            quotient = quotient+sign(b)*sign(remainder)
+            remainder = remainder-abs(b)*sign(remainder)
+        return [quotient,remainder]
+    def smallest(M,l): # find the smallest non-zero element in the bottom right corner starting at (l,l)
         answer = [0] # initialize with trivial answer
         for i in [l .. (M.nrows() - 1)]: # Parse entries
             for j in [l .. (M.ncols() - 1)]:
-                if M[i,j] != 0: # Check whether entry is non-zero
-                    if answer == [0]:
+                if M[i,j] != 0: # check whether entry is non-zero
+                    if answer == [0]: # if no non-zero entry had been stored, store this entry
                         answer = [M[i,j],i,j]
-                    else:
-                        if abs(M[i,j]) < abs(answer[0]): # Check whether the entry is smaller than the stored value
-                            answer = [M[i,j],i,j] # Take entry as new answer
+                    else: # if some non-zero entry had been stored
+                        if abs(M[i,j]) < abs(answer[0]): # check whether the new entry is smaller than the stored value
+                            answer = [M[i,j],i,j] # take new entry as new answer
         return answer # it yields the smallest value and its coordinates, or the trivial answer if the submatrix was trivial
     def row_modular(M,l): # find the first element M[l,j] not divisible by M[l,l]
         j = l+1
@@ -866,12 +872,21 @@ def _(A = input_box('[[0,1,2],[3,4,5]]', width = 40, type = matrix, label='Matri
         return [0] # return this trivial answer if M[l,l] divides all elements to its right
     def nondivisible(M,l): # find in the submatrix below right (l,l) an element which is not divisible by  M[l,l]
         answer = [0] # initialize with trivial answer
-        for i in [l .. (M.nrows() - 1)]: # Parse entries
-            for j in [l .. (M.ncols() - 1)]:
-                if M[i,j].mod(M[l,l]) != 0: # Check whether entry is non-zero
-                    answer = [M[i,j],i,j]
+        rows = M.nrows() # number of rows
+        cols = M.ncols() # number of columns
+        i = l # we start checking M[l,l+1]
+        j = l+1
+        while answer == [0] and i < rows: # we will stop as soon as we find one or we exhaust all entries
+            if j < cols: # j is a valid column number
+                if M[i,j].mod(M[l,l]) != 0: # check whether entry is not divisible by M[l,l]
+                    answer = [M[i,j],i,j] # store entry and coordinates
+                else:
+                    j = j+1 # next column
+            else:
+                i = i+1 # next row
+                j = l # column l
         return answer # it yields the smallest value and its coordinates, or the trivial answer if the submatrix was trivial
-    def format_scalar(r):
+    def format_scalar(r): # display nice multiplying integer
         if r == 1:
             return ' + '
         if r == - 1:
@@ -880,19 +895,19 @@ def _(A = input_box('[[0,1,2],[3,4,5]]', width = 40, type = matrix, label='Matri
             return ' + '+str(r)
         if r < 0 and r != -1:
             return ' - '+str(-r)
-    def type1rows(M,i,j,r): # type 1 row operation statement
+    def type1rows(M,i,j,r): # type 1 row operation with statement
         M.add_multiple_of_row(i,j,r)
         show('(Fila '+str(i+1)+')'+format_scalar(r)+'(Fila '+str(j+1)+')')
-    def type1cols(M,i,j,r): # type 1 column operation statement
+    def type1cols(M,i,j,r): # type 1 column operation with statement
         M.add_multiple_of_column(i,j,r)
         show('(Columna '+str(i+1)+')'+format_scalar(r)+'(Columna '+str(j+1)+')')
-    def type2rows(M,i,j): # type 2 row operation on M
+    def type2rows(M,i,j): # type 2 row operation with statement
         M.swap_rows(i,j)
-        show('Fila',i+1,'<-> Fila',j+1)
-    def type2cols(M,i,j): # type 2 column operation statement
+        show('Fila '+str(i+1)+' <-> Fila '+str(j+1))
+    def type2cols(M,i,j): # type 2 column operation with statement
         M.swap_columns(i,j)
-        show('Columna',i+1,'<-> Columna',j+1)
-    def smith(M): # Compute Smith normal form
+        show('Columna '+str(i+1)+' <-> Columna '+str(j+1))
+    def smith(M): # compute Smith normal form
         Keep = matrix(M) # keep the original argument
         M = matrix(M) # turn M into a matrix in case it where just a list of rows
         show(M)
@@ -900,70 +915,67 @@ def _(A = input_box('[[0,1,2],[3,4,5]]', width = 40, type = matrix, label='Matri
         i = 0 # start with the whole matrix
         rows = M.nrows() # number of rows
         cols = M.ncols() # number of columns
-        Q = identity_matrix(rows)
-        Pm = identity_matrix(cols)
+        Q = identity_matrix(rows) # invertible matrix on the left
+        Pm = identity_matrix(cols) # invertible matrix on the right
         while i < min(rows,cols) and abs(d) > 0: # Row/column where we start operating (the submatrix) 
             small = smallest(M,i) # smallest non-zero element of the submatrix
             d = small[0]
-            if d != 0: # Place the smallest element at (i,i) if non-zero
-                if small[1] > i: # The row operation, if necessary
+            if d != 0: # check whether the submatrix is non-trivial, and then place the smallest element at (i,i) if non-zero
+                if small[1] > i: # the row operation, if necessary
                     type2rows(M,i,small[1])
                     Q.swap_rows(i,small[1])
                     show(M)
-                if small[2] > i: # The column operation, if necessary
+                if small[2] > i: # the column operation, if necessary
                     type2cols(M,i,small[2])
                     Pm.swap_columns(i,small[2])
                     show(M)
-                nondivrow = row_modular(M,i) # Find non-divisible element to the right
-                if nondivrow[0] != 0: # Column operation for division with remainder, if necessary
-                    scalar = -(nondivrow[0].quo_rem(M[i,i]))[0] # minus the quotient
-                    d = (nondivrow[0].quo_rem(M[i,i]))[1] # the remainder, new smallest non-zero element
-                    type1cols(M,nondivrow[1],i,scalar)
-                    Pm.add_multiple_of_column(nondivrow[1],i,scalar)
+                nondivrow = row_modular(M,i) # find non-divisible element to the right
+                if nondivrow[0] != 0: # column operation for division with remainder, if necessary
+                    scalar,d = qr(nondivrow[0],M[i,i]) # the quotient and the remainder, new smallest non-zero element
+                    type1cols(M,nondivrow[1],i,-scalar)
+                    Pm.add_multiple_of_column(nondivrow[1],i,-scalar)
                     show(M)
                 else:
-                    nondivcol = row_modular(M.transpose(),i) # Find non-divisible element below
+                    nondivcol = row_modular(M.transpose(),i) # find non-divisible element below
                     if nondivcol[0] != 0: # Row operation for division with remainder, if necessary
-                        scalar = -(nondivcol[0].quo_rem(M[i,i]))[0] # minus the quotient
-                        d = (nondivcol[0].quo_rem(M[i,i]))[1] # the remainder, new smallest non-zero element
-                        type1rows(M,nondivcol[1],i,scalar)
-                        Q.add_multiple_of_row(nondivcol[1],i,scalar)
+                        scalar,d = qr(nondivcol[0],M[i,i]) # the quotient and the remainder, new smallest non-zero element
+                        type1rows(M,nondivcol[1],i,-scalar)
+                        Q.add_multiple_of_row(nondivcol[1],i,-scalar)
                         show(M)
                     else: # kill elements to the right and bottom of M[i,i]
-                        test = False # test to check if there's really something to kill to the right
+                        test = False # >test to check if something (non-zero) will be killed to the right
                         for col in [(i+1) .. (cols-1)]: # kill all elements to the right of M[i,i]
                             if M[i,col] != 0:
-                                scalar = -(M[i,col].quo_rem(M[i,i]))[0] # minus the quotient
-                                type1cols(M,col,i,scalar)
-                                Pm.add_multiple_of_column(col,i,scalar)
-                                test = True # there's something to kill!
-                        if test: # show the modified matrix if it has been modified
+                                scalar = M[i,col]/M[i,i] # the quotient
+                                type1cols(M,col,i,-scalar)
+                                Pm.add_multiple_of_column(col,i,-scalar)
+                                test = True # if something has been killed
+                        if test: # show the modified matrix if it has been modified at all
                             show(M)
-                        test = False # test to check if there's really something to kill at the bottom
+                        test = False # test to check if something (non-zero) will be killed at the bottom
                         for row in [(i+1) .. (rows-1)]: # kill all elements below M[i,i]
                             if M[row,i] != 0:
-                                scalar = -(M[row,i].quo_rem(M[i,i]))[0] # minus the quotient
-                                type1rows(M,row,i,scalar)
-                                Q.add_multiple_of_row(row,i,scalar)
-                                test = True # there's something to kill!
-                        if test: # show the modified matrix if it has been modified
+                                scalar = M[row,i]/M[i,i] # the quotient
+                                type1rows(M,row,i,-scalar)
+                                Q.add_multiple_of_row(row,i,-scalar)
+                                test = True # if something has been killed
+                        if test: # show the modified matrix if it has been modified at all
                             show(M)
                         nondiv = nondivisible(M,i) # find in the submatrix below right (i,i) an element which is not divisible by  M[i,i]
                         if nondiv[0] != 0: # if it exists...
                             type1rows(M,i,nondiv[1],1) # perform a row operation to fuck up row i
                             Q.add_multiple_of_row(i,nondiv[1],1)
                             show(M) # below, perform a column operation for division with remainder
-                            scalar = -(M[i,nondiv[2]].quo_rem(M[i,i]))[0] # minus the quotient
-                            d = (M[i,nondiv[2]].quo_rem(M[i,i]))[1] # the remainder, new smallest non-zero element
-                            type1cols(M,nondiv[2],i,scalar)
-                            Pm.add_multiple_of_column(nondiv[2],i,scalar)
+                            scalar,d = qr(M[i,nondiv[2]],M[i,i]) # the quotient and the remainder, new smallest non-zero element
+                            type1cols(M,nondiv[2],i,-scalar)
+                            Pm.add_multiple_of_column(nondiv[2],i,-scalar)
                             show(M)
                         else:
                             i = i+1
         show("""
-        Las matrices invertibles que 
-        relacionan la matriz original 
-        con su forma normal de Smith 
+        Las matrices invertibles que
+        relacionan la matriz original
+        con su forma normal de Smith
         son las que aparecen en la
         siguiente ecuación:
         """)
