@@ -839,7 +839,143 @@ a\_{i\_rj\_1}&\cdots & a\_{i\_rj\_r}
 Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamiento anterior es igualmente cierto si reemplazamos entradas por menores, es decir, el divisor máximo común de los menores de orden $r$ no varía al hacer operaciones elementales. Para la forma normal de Smith, dicho divisor máximo común es $d\_1\cdots d\_r$ si $1\leq r\leq k$ y $0$ si $r>k$. De aquí se deduce la unicidad de $k$ y de los $d\_i$ salvo asociados. -->
 {{% /proof %}}
 
-El teorema anterior es cierto más generalmente para dominios de ideales principales. La demostración es análoga pero hace uso de la identidad de Bézout en lugar de la división euclídea y de un tipo más general de operación elemental. La forma normal de Smith es única salvo asociados, aunque no lo hemos probado. <!--- Si $R=\mathbb Z$ hay una única forma normal de Smith que donde todos los $d\_i$ son positivos, ya que todo entero no nulo es asociado de un único entero positivo. A esta forma normal de Smith se que llega usando también operaciones elementales de tipo $3$. Análogamente, si $R=k[x]$, con $k$ un cuerpo, hay una única forma normal de Smith que donde todos los polinomios $d\_i$ son mónicos. -->
+La siguiente aplicación es una calculadora de la forma normal de Smith paso a paso. El dato de entrada es una matriz expresada como lista de filas.
+
+<div class="sage">
+  <script type="text/x-sage">
+@interact
+def _(A = input_box('[[0,1,2],[3,4,5]]', width = 40, type = matrix, label='Matriz: '), auto_update=False):
+    def smallest(M,l): # Find the smallest non-zero element in the bottom right corner stating at (l,l)
+        answer = [0] # initialize with trivial answer
+        for i in [l .. (M.nrows() - 1)]: # Parse entries
+            for j in [l .. (M.ncols() - 1)]:
+                if M[i,j] != 0: # Check whether entry is non-zero
+                    if answer == [0]:
+                        answer = [M[i,j],i,j]
+                    else:
+                        if abs(M[i,j]) < abs(answer[0]): # Check whether the entry is smaller than the stored value
+                            answer = [M[i,j],i,j] # Take entry as new answer
+        return answer # it yields the smallest value and its coordinates, or the trivial answer if the submatrix was trivial
+    def row_modular(M,l): # find the first element M[l,j] not divisible by M[l,l]
+        j = l+1
+        while j < M.ncols():
+            if M[l,j].mod(M[l,l]) != 0:
+                return [M[l,j],j] # return the first one and its column coordinate
+            else:
+                j = j+1
+        return [0] # return this trivial answer if M[l,l] divides all elements to its right
+    def nondivisible(M,l): # find in the submatrix below right (l,l) an element which is not divisible by  M[l,l]
+        answer = [0] # initialize with trivial answer
+        for i in [l .. (M.nrows() - 1)]: # Parse entries
+            for j in [l .. (M.ncols() - 1)]:
+                if M[i,j].mod(M[l,l]) != 0: # Check whether entry is non-zero
+                    answer = [M[i,j],i,j]
+        return answer # it yields the smallest value and its coordinates, or the trivial answer if the submatrix was trivial
+    def format_scalar(r):
+        if r == 1:
+            return ' + '
+        if r == - 1:
+            return ' - '
+        if r > 0 and r != 1:
+            return ' + '+str(r)
+        if r < 0 and r != -1:
+            return ' - '+str(-r)
+    def type1rows(M,i,j,r): # type 1 row operation statement
+        M.add_multiple_of_row(i,j,r)
+        show('(Fila '+str(i+1)+')'+format_scalar(r)+'(Fila '+str(j+1)+')')
+    def type1cols(M,i,j,r): # type 1 column operation statement
+        M.add_multiple_of_column(i,j,r)
+        show('(Columna '+str(i+1)+')'+format_scalar(r)+'(Columna '+str(j+1)+')')
+    def type2rows(M,i,j): # type 2 row operation on M
+        M.swap_rows(i,j)
+        show('Fila',i+1,'<-> Fila',j+1)
+    def type2cols(M,i,j): # type 2 column operation statement
+        M.swap_columns(i,j)
+        show('Columna',i+1,'<-> Columna',j+1)
+    def smith(M): # Compute Smith normal form
+        Keep = matrix(M) # keep the original argument
+        M = matrix(M) # turn M into a matrix in case it where just a list of rows
+        show(M)
+        d = infinity # initialize smallest non-zero element size with infinity
+        i = 0 # start with the whole matrix
+        rows = M.nrows() # number of rows
+        cols = M.ncols() # number of columns
+        Q = identity_matrix(rows)
+        Pm = identity_matrix(cols)
+        while i < min(rows,cols) and abs(d) > 0: # Row/column where we start operating (the submatrix) 
+            small = smallest(M,i) # smallest non-zero element of the submatrix
+            d = small[0]
+            if d != 0: # Place the smallest element at (i,i) if non-zero
+                if small[1] > i: # The row operation, if necessary
+                    type2rows(M,i,small[1])
+                    Q.swap_rows(i,small[1])
+                    show(M)
+                if small[2] > i: # The column operation, if necessary
+                    type2cols(M,i,small[2])
+                    Pm.swap_columns(i,small[2])
+                    show(M)
+                nondivrow = row_modular(M,i) # Find non-divisible element to the right
+                if nondivrow[0] != 0: # Column operation for division with remainder, if necessary
+                    scalar = -(nondivrow[0].quo_rem(M[i,i]))[0] # minus the quotient
+                    d = (nondivrow[0].quo_rem(M[i,i]))[1] # the remainder, new smallest non-zero element
+                    type1cols(M,nondivrow[1],i,scalar)
+                    Pm.add_multiple_of_column(nondivrow[1],i,scalar)
+                    show(M)
+                else:
+                    nondivcol = row_modular(M.transpose(),i) # Find non-divisible element below
+                    if nondivcol[0] != 0: # Row operation for division with remainder, if necessary
+                        scalar = -(nondivcol[0].quo_rem(M[i,i]))[0] # minus the quotient
+                        d = (nondivcol[0].quo_rem(M[i,i]))[1] # the remainder, new smallest non-zero element
+                        type1rows(M,nondivcol[1],i,scalar)
+                        Q.add_multiple_of_row(nondivcol[1],i,scalar)
+                        show(M)
+                    else: # kill elements to the right and bottom of M[i,i]
+                        test = False # test to check if there's really something to kill to the right
+                        for col in [(i+1) .. (cols-1)]: # kill all elements to the right of M[i,i]
+                            if M[i,col] != 0:
+                                scalar = -(M[i,col].quo_rem(M[i,i]))[0] # minus the quotient
+                                type1cols(M,col,i,scalar)
+                                Pm.add_multiple_of_column(col,i,scalar)
+                                test = True # there's something to kill!
+                        if test: # show the modified matrix if it has been modified
+                            show(M)
+                        test = False # test to check if there's really something to kill at the bottom
+                        for row in [(i+1) .. (rows-1)]: # kill all elements below M[i,i]
+                            if M[row,i] != 0:
+                                scalar = -(M[row,i].quo_rem(M[i,i]))[0] # minus the quotient
+                                type1rows(M,row,i,scalar)
+                                Q.add_multiple_of_row(row,i,scalar)
+                                test = True # there's something to kill!
+                        if test: # show the modified matrix if it has been modified
+                            show(M)
+                        nondiv = nondivisible(M,i) # find in the submatrix below right (i,i) an element which is not divisible by  M[i,i]
+                        if nondiv[0] != 0: # if it exists...
+                            type1rows(M,i,nondiv[1],1) # perform a row operation to fuck up row i
+                            Q.add_multiple_of_row(i,nondiv[1],1)
+                            show(M) # below, perform a column operation for division with remainder
+                            scalar = -(M[i,nondiv[2]].quo_rem(M[i,i]))[0] # minus the quotient
+                            d = (M[i,nondiv[2]].quo_rem(M[i,i]))[1] # the remainder, new smallest non-zero element
+                            type1cols(M,nondiv[2],i,scalar)
+                            Pm.add_multiple_of_column(nondiv[2],i,scalar)
+                            show(M)
+                        else:
+                            i = i+1
+        show("""
+        Las matrices invertibles que 
+        relacionan la matriz original 
+        con su forma normal de Smith 
+        son las que aparecen en la
+        siguiente ecuación:
+        """)
+        show(Q,Keep,Pm,'=',M)
+        if Q*Keep*Pm != M: # perform a test
+            show('LOS RESULTADOS SON ERRÓNEOS')
+        return (M, Q, Pm) # it gives the Smith normal form and the two matrices Q and Pm such that Q*M*Pm is the Smith
+    smith(A)
+ </script>
+</div>
+
+El teorema de la forma normal de Smith es cierto más generalmente para dominios de ideales principales. La demostración es análoga pero hace uso de la identidad de Bézout en lugar de la división euclídea y de un tipo más general de operación elemental. La forma normal de Smith es única salvo asociados, aunque no lo hemos probado. <!--- Si $R=\mathbb Z$ hay una única forma normal de Smith que donde todos los $d\_i$ son positivos, ya que todo entero no nulo es asociado de un único entero positivo. A esta forma normal de Smith se que llega usando también operaciones elementales de tipo $3$. Análogamente, si $R=k[x]$, con $k$ un cuerpo, hay una única forma normal de Smith que donde todos los polinomios $d\_i$ son mónicos. -->
 
 
 
