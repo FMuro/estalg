@@ -153,7 +153,7 @@ $$
 \begin{array}{rcl}
 y&=&x^{-1}\star(x\star y)\cr
 &=&x^{-1}\star(x\star z)\cr
-&=&x.
+&=&z.
 \end{array}
 $$
 La otra propiedad se prueba de manera análoga.
@@ -1014,12 +1014,14 @@ es un homomorfismo.
 
 {{% proof %}}
 Basta observar que, dados $x,y\in G$,
-\begin{align*}
-(g\circ f)(x y)&=g(f(x y))\\
-&=g(f(x) f(y))\\
-&=g(f(x)) g(f(y))\\
-&=(g\circ f)(x) (g\circ f)(y).
-\end{align*}
+$$
+\begin{array}{rcl}
+(g\circ f)(x y)&=&g(f(x y))\cr
+&=&g(f(x) f(y))\cr
+&=&g(f(x)) g(f(y))\cr
+&=&(g\circ f)(x) (g\circ f)(y).
+\end{array}
+$$
 {{% /proof %}}
 
 {{% definition %}}
@@ -1085,6 +1087,41 @@ Entonces la composición es un isomorfismo
 así que $G\cong K$.
 {{% /proof %}}
 
+{{% proposition %}}
+Si $X$ e $Y$ son conjuntos cualesquiera y $f\colon X\rightarrow Y$ es una aplicación biyectiva, entonces
+$$
+\begin{array}{rcl}
+\phi_f\colon \Sim (X)&\longrightarrow &\Sim (Y),\cr
+\sigma&\mapsto&f\circ \sigma\circ f^{-1},
+\end{array}
+$$
+es un isomorfismo.
+{{% /proposition %}}
+
+{{% proof %}}
+Si $\sigma\colon X\rightarrow X$ es biyectiva entonces $f\circ\sigma\circ f^{-1}\colon Y\rightarrow Y$ también, por ser composición de aplicaciones biyectivas. Por tanto $\phi\_f$ es una aplicación bien definida. Veamos que es un homomorfismo. Dados $\tau,\sigma\in\Sim(X)$:
+$$
+\begin{array}{rcl}
+\phi\_f(\tau)\circ \phi\_f(\sigma)&=&(f\circ \tau\circ f^{-1})\circ(f\circ \sigma\circ f^{-1})\cr
+&=&f\circ (\tau\circ\sigma)\circ f^{-1}\cr
+&=&\phi\_f(\tau\circ \sigma).
+\end{array}
+$$
+Para ver que $\phi\_f$ es un isomorfismo, basta comprobar que $\phi\_{f^{-1}}\colon \Sim(Y)\rightarrow \Sim(X)$ es su inversa. En efecto, $\phi\_{f^{-1}}\circ \phi\_{f}=\id{\Sim(X)}$ ya que ambas son aplicaciones que parten de $\Sim(X)$ y llegan a $\Sim(X)$ y además toman el mismo valor en cualquier $\sigma\in \Sim(X)$, pues
+$$
+\begin{array}{rcl}
+(\phi\_{f^{-1}}\circ \phi\_{f})(\sigma)&=&
+\phi\_{f^{-1}}(\phi\_{f}(\sigma))\cr
+&=&\phi\_{f^{-1}}(f\circ\sigma\circ f^{-1})\cr
+&=&f^{-1}\circ(f\circ\sigma\circ f^{-1})\circ (f^{-1})^{-1}\cr
+&=& \sigma\cr
+&=&\id{\Sim(X)}(\sigma).
+\end{array}
+$$
+Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}$ son intercambiables, así que también está probada la otra igualdad, $\phi\_{f}\circ \phi\_{f^{-1}}=\id{\Sim(Y)}$.
+{{% /proof %}}
+
+
 {{% definition %}}
 Dado un homomorfismo $f\colon G\to H$, su **núcleo** es
 \\[\ker f=\\{x\in G\mid f(x)=e\\}\subset G.\\]
@@ -1102,6 +1139,12 @@ luego $xy\in\ker f$. Es más, si $x\in\ker f$ entonces
 $$f(x^{-1})=f(x)^{-1}=e^{-1}=e,$$
 así que $x^{-1}\in\ker f$.
 {{% /proof %}}
+
+{{% definition %}}
+El **grupo alternado** es el subgrupo $A_n\subset S_n$ formado por las permutaciones pares. 
+{{% /definition %}}
+
+El grupo alternado es un subgrupo porque es el núcleo del homomorfismo $\signo\colon S_n\rightarrow\\{\pm1\\}$.
 
 {{% proposition %}}
 Un homomorfismo $f\colon G\to H$ es inyectivo si y solo si $\ker f=\\{e\\}$.
@@ -1126,7 +1169,237 @@ Esta proposición demuestra que para probar que un homomorfismo $f\colon G\right
 {{% /remark %}}
 
 
-## Cocientes
+
+
+
+## Grupos cociente
+
+{{% definition %}}
+Dado un grupo $G$, un subgrupo $K\subset G$ es **normal** $g^{-1}kg\in K$ para todo $g\in G$ y $k\in K$.
+{{% /definition %}}
+
+{{% warning %}}
+La noción de subrgupo normal $K\subset G$ depende tanto de $K$ como de $G$. Si variamos alguno de los dos, la situación puede cambiar.
+{{% /warning %}}
+
+{{% example name="Subgrupos (no) normales" %}}
+Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\; 2)\\}\subset \perm{3}$ no es normal puesto que
+$$\inv{(1\;3)}(1\;2)(1\;3)=(1\;3)(1\;2)(1\;3)=(2\;3)\notin K.$$
+{{% /example %}}
+
+{{% proposition %}}
+Si $G$ es abeliano, todo subgrupo $K\subset G$ es normal.
+{{% /proposition %}}
+
+{{% proof %}}
+Dados $g\in G$ y $k\in K$, 
+$$
+\begin{array}{rcl}
+g^{-1}kg&=&g^{-1}gk\cr
+&=&ek\cr
+&=&k\in K.
+\end{array}
+$$
+{{% /proof %}}
+
+{{% proposition %}}
+Dado un grupo $G$ y un subrgupo $K\subset G$, los siguientes enunciados son equivalentes:
+
+1. $K\subset G$ es normal.
+
+2. $gK=Kg$ para todo $g\in G$.
+
+3. Las relaciones $\sim_K$ y ${}_K\\!\sim$ coinciden
+{{% /proposition %}}
+
+{{% proof %}}
+Las propiedades segunda y tercera coinciden porque la correspondencia existente entre relaciones de equivalencia y particiones. Veamos pues que las dos primeras también coinciden.
+
+$1.\Rightarrow 2.$ Veamos primero $\supset$. Todo elemento de $Kg$ es de la forma $kg$ con $k\in K$. Por ser $K\subset G$ normal, $g^{-1}kg\in K$, así que $kg=g(g^{-1}kg)\in gK$. 
+
+Veamos $\subset$. Todo elemento de $gK$ es de la forma $gk$ con $k\in K$. Por ser $K\subset G$ normal y $g^{-1}\in G$, $gkg^{-1}=(g^{-1})^{-1}kg^{-1}\in K$, así que
+$gk=(gkg^{-1})g\in Kg$.
+
+$2.\Rightarrow 1.$ Dados $k\in K$ y $g\in G$, como $kg\in Kg=gK$, existe $k'\in K$ tal que $kg=gk'$, así que $g^{-1}kg=k'\in K$. Por tanto $K\subset G$ es normal.
+{{% /proof %}}
+
+Como veremos a lo largo de este epígrafe, los subgrupos normales de $G$ coinciden con aquellos que son el núcleo de algún homomorfismo que parte de $G$.
+
+{{% proposition %}}
+El núcleo de un homomorfsimo $f\colon G\to H$ es un subgrupo normal  $\ker f\subset G$.
+{{% /proposition %}}
+
+{{% proof %}}
+Dados $g\in G$ y $k\in\ker f$, 
+$$
+\begin{array}{rcl}
+f(g^{-1}kg)&=&f(g)^{-1}f(k)f(g)\cr
+&=&f(g)^{-1}ef(g)\cr
+&=&f(g)^{-1}f(g)\cr
+&=&e.
+\end{array}
+$$
+Por tanto $g^{-1}kg\in \ker f$.
+{{% /proof %}}
+
+La propiedad más importante de los subgrupos normales $K\subset G$ es que sirven para dotar de estructura de grupo al cociente $G/K$.
+
+
+{{% theorem %}}
+Dado un grupo $G$ y un subgrupo normal $K\subset G$, entonces el conjunto cociente $G/K$ posee una única estructura de grupo tal que la proyección natural $\pi\colon G\twoheadrightarrow G/K$ es un homomorfismo.
+{{% /theorem %}}
+
+{{% proof %}}
+Comenzamos viendo que si $G/K$ es un grupo y $\pi$ es un homomorfismo, entonces hay una única elección posible para la operación binaria que dota a $G/K$ de estructura de grupo. En efecto, dados $xK, yK\in G/K$, como $\pi(x)=xK$ y $\pi(y)=yK$, tenemos que
+$$
+(xK)(yK)=\pi(x)\pi(y)=\pi(xy)=(xy)K.
+$$
+Basta por tanto demostrar que la fórmula
+$$
+(xK)(yK)=(xy)K
+$$
+define una operación binaria en $G/K$ que satisface las propiedades requeridas. Lo más difícil es ver que la aplicación
+$$
+\begin{array}{rcl}
+(G/K)\times(G/K)&\longrightarrow& G/K,\cr
+(xK,yK)&\mapsto&(xy)K,
+\end{array}
+$$
+está bien definida. Observa que la imagen de un par podría depender de la elección de representantes de las clases a izquierda. Veamos que esto no ocurre. Para ello, dados $x,y\in G$ cualesquiera, debemos comprobar que si $xK=\bar{x}K$ e $yK=\bar{y}K$ entonces $(xy)K=(\bar{x}y)=(x\bar{y})K$, ya que de aquí se deduce que $(xy)K=(\bar{x}\bar{y})K$.
+
+Por un lado, si $yK=\bar{y}K$ entonces $y\sim_K \bar{y}$, es decir $y^{-1}\bar{y}\in K$, 
+por tanto
+$$
+\begin{array}{rcl}
+(xy)^{-1}(x\bar{y})&=&y^{-1}x^{-1}x\bar{y}\cr
+&=&y^{-1}e\bar{y}\cr
+&=&y^{-1}\bar{y}\in K,
+\end{array}
+$$
+así que $xy\sim_K x\bar{y}$, es decir $(xy)K=(x\bar{y})K$. 
+
+Por otro lado, si $xK=\bar{x}K$ entonces $x\sim_K \bar{x}$, es decir $x^{-1}\bar{x}\in K$. Como $K\subset G$ es normal, esto implica que
+$y^{-1}x^{-1}\bar{x}y\in K$, luego
+$$(xy)^{-1}(\bar{x}y)=y^{-1}x^{-1}\bar{x}y\in K,$$
+esto es, $xy\sim_K\bar{x}y$, o lo que es lo mismo, $(xy)K=(\bar{x}y)K$.
+
+Este producto en $G/K$ satisface la propiedad asociativa porque, a nivel de representantes, está definido como en $G$, y el producto del grupo $G$ satisface la propiedad asociativa. Por la misma razón $eK$ es un elemento neutro en $G/K$ y el inverso de $xK$ es $(xK)^{-1}=x^{-1}K$.
+{{% /proof %}}
+
+Antes vimos que el núcleo de un homomorfismo es un subgrupo normal. Ahora veremos que todo subgrupo normal es núcleo de un homomorfismo.
+
+{{% proposition %}}
+Si $G$ es un grupo, $K\subset G$ es un subgrupo normal, y $\pi\colon G\twoheadrightarrow G/K$ es la proyección natural, entonces $\ker\pi= K$.
+{{% /proposition %}}
+
+{{% proof %}}
+Basta observar que, dado $x\in G$, $\pi(x)=x K=e K$ si y solo si $e\sim_K x$, lo cual ocurre si y solo si $x=e^{-1}x\in K$.
+{{% /proof %}}
+
+
+{{% remark %}}
+La proposición anterior demuestra que $xK$ es el elemento neutro de $G/K$ si y solo si $x\in K$.
+{{% /remark %}}
+
+{{% corollary %}}
+Para cualquier grupo $G$, la proyección natural $\pi\colon G\stackrel{\cong}\twoheadrightarrow G/\\{e\\}$ es un isomorfismo.
+{{% /corollary %}}
+
+Hemos identificado entonces subgrupos normales con núcleos de homomorfismos. No podemos hacer lo mismo con las imágenes de homomorfismos.
+
+{{% warning %}}
+Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\im\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
+{{% /warning %}}
+
+Veamos ahora una vesión del teorema de factorización de aplicaciones para grupos y homomorfismos.
+
+{{% theorem name="Primer teorema de isomorfía" %}}
+Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\ker f\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
+$$\require{AMScd}\begin{CD}G @>f>> H\cr @V{\pi}VV @AA{i}A\cr G/\ker f @>>{\overline{f}}> \operatorname{im} f \end{CD}$$
+es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además,  $\overline{f}$ es un isomorfismo.
+{{% /theorem %}}
+
+{{% proof %}}
+La factorización es la del homomorfismo $f$ visto solo como apicación. Basta ver que la relación de equivalencia en $G$ definida por la aplicación $f$ es la misma que la que define el subgrupo $\ker f$. Por comodidad, llamaremos $K=\ker f$. Dados $x,y\in G$, $x\sim_K y$ $\Leftrightarrow$ $x^{-1}y\in K$ $\Leftrightarrow$ $f(x^{-1}y)=e$. Como $f(x^{-1}y)=f(x)^{-1}f(y)$ esto es el elemento neutro si y solo si $f(x)= f(y)$, lo que equivale a $x\sim_f y$. Habría que comprobar también que $\overline{f}$ es un homomorfismo. Esto es cierto porque, recordemos, esta aplicación se define como $f$ sobre los representantes, es decir, $\overline{f}(xK)=f(x)$ y $f$ es un homomorfismo, así que
+$$
+\begin{array}{rcl}
+\overline{f}((xK)(yK))&=&\overline{f}((xy)K)\cr
+&=&f(xy)\cr
+&=&f(x)f(y)\cr
+&=&\overline{f}(xK)\overline{f}(yK).
+\end{array}
+$$
+{{% /proof %}}
+
+
+
+
+{{% corollary %}}
+Dado $n\geq 2$, el orden del correspondiente grupo alternado es $A_n$ es $|A_n|=\frac{n!}{2}$, por tanto en $S_n$ hay tantas permutaciones pares como impares.
+{{% /corollary %}}
+
+{{% proof %}}
+El homomorfismo $\signo\colon S_n\rightarrow\\{\pm1\\}$ es sobreyectivo, luego $\im\signo=\\{\pm 1\\}$. Como $A_n=\ker \signo$, el primer teorema de isomorfía proporciona un isomorfismo $\frac{S_n}{A_n}\cong \\{\pm 1\\}$. Usando el teorema de Lagrange, vemos que
+$$
+\begin{array}{rcl}
+2&=&|\\{\pm1\\}|\cr
+&=&[S_n:G_n]\cr
+&=&\frac{|S_n|}{|A_n|}\cr
+&=&\frac{n!}{|A_n|}.
+\end{array}
+$$
+De aquí se deduce el resultado despejando.
+{{% /proof %}}
+
+{{% theorem name="de Cayley" %}}
+Todo grupo $G$ es isomorfo a un subgrupo de un grupo de permutaciones. Si $G$ es finito de orden $n$, entonces $G$ isomorfo a un subgrupo de $S_n$.
+{{% /theorem %}}
+
+{{% proof %}}
+Definimos la aplicación $$f\colon G\to\Sim (G)$$ del siguiente modo. Dado $g\in G$, $$f(g)\colon G\longrightarrow G$$ es la aplicación definida como $$f(g)(x)=gx.$$ Esta aplicación es biyectiva, por tanto es una permutación del conjunto $G$. Para comprobarlo, demostraremos que $f(g^{-1})\colon G\longrightarrow G$ es su inversa, es decir, que $$f(g)\circ f(g^{-1})=\id{G}=f(g^{-1})\circ f(g).$$ Las tres aplicaciones parten de $G$ y llegan a $G$, así que basta probar que toman los mismos valores sobre cada $x\in G$. En efecto, por un lado,
+$$
+\begin{array}{rcl}
+(f(g)\circ f(g^{-1}))(x)&=&
+f(g)(f(g^{-1})(x))\cr
+&=&f(g)(g^{-1}x)\cr
+&=&g(g^{-1}x)\cr
+&=&(gg^{-1})x\cr
+&=&ex\cr
+&=&x\cr
+&=&\id{G}(x).
+\end{array}
+$$
+Esto demuestra que $f(g)\circ f(g^{-1})=\id{G}$. La otra igualdad, $f(g^{-1})\circ f(g)=\id{G}$, se sigue ahora del hecho de que los papeles de $g$ y $g^{-1}$ son intercambiables, ya que $(g^{-1})^{-1}=g$.
+
+Veamos que $f$ es un homomorfismo. En efecto, dados $g_1,g_2\in G$, $f(g_1g_2)=f(g_1)\circ f(g_2)$ ya que ambas son permutaciones de $G$ y, para todo $x\in G$,
+$$
+\begin{array}{rcl}
+(f(g_1)\circ f(g_2))(x)&=&
+f(g_1)(f(g_2)(x))\cr
+&=&f(g_1)(g_2x)\cr
+&=&g_1(g_2x)\cr
+&=&(g_1g_2)x\cr
+&=&f(g_1g_2)(x).
+\end{array}
+$$
+
+Veamos que $f$ es inyectiva, es decir, que $\ker f=\\{e\\}$. En efecto, si $g\in\ker f$ entonces $f(g)=\id{G}$ luego
+$$
+\begin{array}{rcl}
+g&=&ge\cr
+&=&f(g)(e)\cr
+&=&\id{G}(e)\cr
+&=&e.
+\end{array}
+$$
+
+Como $\ker f=\\{e\\}$, el primer teorema de isomorfía nos dice que
+$$G\cong\frac{G}{\\{e\\}}\cong\im f\subset \Sim (G).$$
+Esto demuestra la primera parte del teorema.
+
+Para la segunda parte, basta observar que, como $G$ tiene $n$ elementos, cualquier enumeración de los mismos $G=\\{x\_1,\dots, x\_n\\}$ da lugar a una aplicación biyectiva $\psi\colon G\rightarrow \\{1,\dots, n\\}$ definida como $\psi(x\_i)= i$ para todo $i$. Según hemos visto antes, esta biyección da lugar a un isomorfismo $\phi\_\psi\colon\Sim(G)\cong S\_n$. Argumentando como antes, vemos que $G\cong\im (\phi_\psi \circ f)\subset S_n$.
+{{% /proof %}}
+
 
 
 <!--
@@ -1138,225 +1411,9 @@ Volviendo al ejemplo en el que el subgrupo de $S_4$, $\langle (123),(234)\rangle
 Es más, sabiendo que $\langle (123),(234)\rangle\subset A_4$, como el orden de $A_4$ es 12, basta con llegar al séptimo elemento para decidir que $\langle (123),(234)\rangle = A_4$
 {{% /example %}}
 
-{{% watch %}}
-Terminamos el estudio del teorema de Lagrange proponiendo el ejercicio siguiente. Sabemos que el orden de cualquier subgrupo de $G$ divide a su orden. Recíprocamente, si $m$ divide a $|G|$, ?`existe algún subgrupo de $G$ de orden $m$? Te animamos a reflexionar esta cuestión en el grupo $S_4$ o en sus subgrupos.
-{{% /watch %}}
-
-
-
-<!--
-
-
-
-{{% theorem %}}
-{El grupo alternado $A_n$}
-{El conjunto $A_n$ de las permutaciones pares de $S_n$ es un subgrupo llamado {\bf grupo alternado}.}
-{{% /theorem %}}
-
-
-{{% proposition %}}
-
-Sea $H\in S_n$ un subgrupo que tiene alguna permutación impar, entonces $H$ posee tantas permutaciones pares como impares.
-{{% /proposition %}}
-
-{{% proof %}}
-
-Sean $P$ e $I$ los subconjuntos de $H$ formados por las permutaciones pares e impares, respectivamente. Sea $\rho\in H$ una permutación impar. Consideremos la aplicación
-$$\begin{array}{rcl}
-   \varphi\colon P&\to&I\\
-   \sigma & \mapsto & \rho\sigma  .
-  \end{array}$$
-Efectivamente $\varphi$ es una aplicación bien definida, pues si $\sigma$ es una permutación par, como $\rho$ es impar, el producto $\rho\sigma$ es también impar.
-
-Si $\varphi (\sigma )=\varphi (\tau )$ entonces $\rho\sigma =\rho\tau$, y por la propiedad cancelativa $\sigma =\tau$. Luego $\varphi$ es una aplicación inyectiva.
-
-Por otro lado, si $\sigma\in I$, como $\rho^{-1}$ es impar, entonces $\rho^{-1}\sigma \in P$ y además $\varphi (\rho^{-1}\sigma )=\rho\rho^{-1}\sigma =\sigma$. Luego $\varphi$ es sobreyectiva.
-
-Por tanto la aplicación $\varphi$ es biyectiva y hay tantas permutaciones pares como impares en $H$.
-{{% /proof %}}
-
-{{% corollary %}}
-
-Si $n\geq 2$, el número de elementos de $A_n$ es $|A_n|=n!/2$, es decir, en $S_n$ hay tantas permutaciones pares como impares.
-{{% /corollary %}}
-
-{{% proof %}}
-
-$S_n$ es un subgrupo de $S_n$ que, como $n\geq 2$, contiene a la permutación impar $(12)$. Luego podemos aplicar la proposición anterior para deducir que hay tantas permutaciones pares como impares.
-{{% /proof %}}
-
-
-
-
-## Subgrupos normales. Grupo cociente
-
-Dado un grupo $(G,\star)$ y un elemento $x\in G$, recordemos el isomorfismo $c_x\colon G\rightarrow G$ que {\it conjuga por $x$} a los elementos de $G$, es decir, $c_x(y)=x^{-1}yx$ para todo $y\in G$.
-
-Dado un subgrupo $K\subset G$, podemos aplicarle el isomorfismo $c_x$ a todos sus elementos y obtendremos un subgrupo de $G$ (el conjugado de $K$ por $x$):
-$$
-    c_x(K)=x^{-1}Kx =\\{x^{-1}yx;\ y\in K\\}.
-$$
-El grupo $x^{-1}Kx$ podría ser el propio $K$, o podría ser distinto. Diremos que $K$ es {\it normal en $G$} cuando obtenemos siempre el propio $K$, sea cual sea el elemento $x\in G$ escogido:
-
-
-{{% definition %}}
-{Subgrupos normales}
-{	Dado un grupo $(G,\star)$ y un subgrupo $K\subset G$, decimos que $K$ es {\bf normal} en $G$ si para todo $x\in G$ se tiene que 
-	\[\inv{x} K x\subset K.\]}
-{{% /definition %}}
-
-
-
-\begin{lema}
-	Si $K\subset G$ es un subgrupo normal, la inclusión de la definición anterior es de hecho una igualdad.
-\end{lema}
-
-{{% proof %}}
-
-    Fijemos un elemento cualquiera $a\in G$. Como $K$ es normal, tomando $x=a$ tenemos $a^{-1}Ka\subset K$. Pero también, tomando $x=a^{-1}$ tenemos $aKa^{-1}\subset K$. Esto quiere decir que dado cualquier $k\in K$ se tiene $aka^{-1}=k'\in K$, es decir, $k=a^{-1}k'a$, luego $k\in a^{-1}Ka$. Por tanto $K\subset a^{-1}Ka$, luego $a^{-1}Ka=K$. Como esto lo hemos hecho para todo $a\in G$, el resultado queda demostrado.
-{{% /proof %}}
-
-{{% watch %}}
-
-Del lema anterior se deduce que un subgrupo $K$ es normal en $G$ si y solo si $aK=Ka$ para todo $a\in G$. En otras palabras, un subgrupo $K$ es normal en $G$ si y solo si las clases a izquierda (definidas para $K$) coinciden con las clases a derecha.
-{{% /watch %}}
-
-Es importante observar que la igualdad $x^{-1}Kx=K$ no implica que los elementos de $K$ quedan fijos al conjugarlos por $x$. Lo que queda fijo es el conjunto $K$, pero sus elementos pueden permutarse. Por tanto, $K$ es normal si y solo si conjugar $K$ por $x$ corresponde a una {\it permutación} de $K$, para todo $x\in G$.
-
-Esta permutación puede ser trivial o no. En el siguiente caso, la permutación sí es trivial para todo $x$:
-
-
-{{% proposition %}}
-
-Si $(G,\star)$ es abeliano, todo subgrupo $K\subset G$ es normal.
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Si $G$ es abeliano, $x^{-1}kx=k$ para todo $k\in K$ y para todo $x\in G$. Por tanto, conjugar un subgrupo $K$ por un elemento $x$ induce la permutación trivial en $K$. Luego todo subgrupo de $G$ es normal en $G$.
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-	Los subgrupos trivial y total $\\{e\\}$ y $G$, son normales en cualquier grupo $G$. El subgrupo $K=\\{\id{},(1\; 2)\\}\subset \perm{3}$ no es normal puesto que
-	\[\inv{(1\;3)}(1\;2)(1\;3)=(1\;3)(1\;2)(1\;3)=(2\;3)\notin K.\]
-{{% /example %}}
-
-Hay una relación muy estrecha entre {\it subgrupos normales} de un grupo $G$ y {\it núcleos} de homomorfismos que parten de $G$. De hecho, todo núcleo es un subgrupo normal, y todo subgrupo normal es el núcleo de un homomorfismo. Veamos lo primero:
-
-{{% proposition %}}
-
-	El núcleo de un homomorfsimo $f\colon (G,\star)\to (H,\ast)$ es un subgrupo normal de $G$.
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Dado $x\in G$, veamos que $\inv{x} \ker(f) x\subset \ker(f)$. Dado un elemento del primer conjunto, será de la forma $x^{-1}yx$ con $y\in\ker(f)$. Y tendremos:
-	\[f(\inv{x} y x)=f(\inv{x}) f(y) f(x)=\inv{f(x)} e f(x)=\inv{f(x)}  f(x)=e,\]
-	luego $\inv{x} y x\in\ker(f)$.
-{{% /proof %}}
-
-
-La propiedad más importante de los subgrupos normales $K\subset G$ es que sirven para definir una operación de grupo, de la forma más natural posible, en el conjunto cociente $G/K$.
-
-
-{{% theorem %}}
-{Grupo cociente}
-{	Si $(G,\star)$ es un grupo y $K\subset G$ es un subgrupo normal, entonces el conjunto cociente $G/K$ posee una única estructura de grupo $(G/K,\bar \star)$ tal que la proyección natural $p\colon G\to G/K$ es un homomorfismo
-	\[p\colon (G,\star)\To (G/K,\bar \star).\]}
-{{% /theorem %}}
-
-{{% proof %}}
-
-	Definimos el producto de dos clases como \[(x K)\bar\star(y K)=(x y) K.\]
-	Tenemos que demostrar que $\bar{\star}$ está bien definido, es decir que esta definición de $\bar{\star}$ no depende de los representantes tomados. Para ello hemos de probar que si $x K=\tilde x K$ e $y K=\tilde y K$ entonces
-	\[(x K)\bar\star(y K)=(\tilde x  K)\bar\star(\tilde y K).\]
-Es decir, debemos probar que
-	\[x y K=\tilde x \tilde y K,\]
-  os lo que es lo mismo, que $y^{-1}x^{-1}\tilde x \tilde y\in K$.
-
-	Por un lado, como $xK=\tilde xK$, tenemos $x^{-1}\tilde x = z_1 \in K$, y como $yK=\tilde yK$, tenemos $y^{-1}\tilde y = z_2 \in K$. Por otro lado, como $K$ es normal en $G$ y $z_1\in K$, se tiene $y^{-1}z_1 y\in K$. Por tanto,
-   $$
-      y^{-1}x^{-1}\tilde x \tilde y= y^{-1} x^{-1} x z_1 y z_2 = (y^{-1} z_1 y) z_2\in K,
-   $$
-  como queríamos demostrar.
-
-	Con la definición anterior de $\bar{\star}$ es inmediato comprobar que $\bar{\star}$ es asociativo por serlo $\star$, que el elemento neutro del cociente es $e K$ y que el inverso de un elemento del cociente es $\inv{(x K)}=\inv{x} K$. Es más, $p$ es un homomorfismo puesto que dados $x_1,x_2\in G$,
-	\[p(x_1 x_2)=(x_1 x_2) K=(x_1\ K)\bar{\star}(x_2 K)=p(x_1)\bar \star p(x_2).\]
-	Además $\bar \star$ es el único producto que satisface esta propiedad puesto que la proyección natural $p$ es sobreyectiva.
-{{% /proof %}}
-
-
-Observemos que, en el grupo cociente $G/K$, el elemento neutro es la clase $eK$, es decir, el propio $K$. Además, el inverso del elemento $xK$ es el elemento $x^{-1}K$.
-
-
-Como vimos antes, el núcleo de un homomorfismo es un subgrupo normal. Ahora ya podemos demostrar que todo subgrupo normal es núcleo de un homomorfismo.
-
-{{% proposition %}}
-
-	Sea $K$ un subgrupo normal en $G$. El núcleo de la proyección natural $p\colon (G,\star)\to (G/K,\bar \star)$ es precisamente $\ker(p)=K$.
-{{% /proposition %}}
-
-{{% proof %}}
-
-	Basta observar que $p(x)=x K=e K$ si y solo si $x\in K$.
-{{% /proof %}}
-
-Hemos identificado entonces subgrupos normales con núcleos de homomorfismos. No podemos hacer lo mismo con las imágenes de homomorfismos:
-
-{{% example name="Ejemplo" %}}
-
-	Si $(G,\star)$ es un grupo y $F\subset G$ es un subgrupo \emph{cualquiera}, la imagen de la inclusión $i\colon (F,\star)\to (G,\star)$ es $\im(i)=F$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
-{{% /example %}}
-
-{{% theorem %}}
-{Factorización canónica}
-{	Todo homomorfismo $f\colon (G,\star)\to (H,\ast)$ factoriza como la composición $f=i\circ\bar f\circ p$ de un epimorfismo $p$,  un isomorfismo $\bar f$ y un monomorfismo $i$ del siguiente modo
-	\[\xymatrix{(G,\star)\ar[r]^-{f}\ar[d]_-p& (H,\ast)\\
-		(G/\ker(f),\bar \star)\ar[r]^-\cong_-{\bar f}& (\im(f),\ast)\ar[u]_-i}\]
-	Aquí $p$ es la proyección natural sobre el cociente e $i$ es la inclusión del subgrupo imagen.}
-{{% /theorem %}}
-
-{{% proof %}}
-
-	La factorización es la misma que la de una aplicación cualquiera. Ya sabemos que $p$ e $i$ son homomorfismos. Sabemos también que $p$ es sobreyectiva, $i$ es inyectiva y que $\bar f$, definida por ${\bar f}(x \ker(f))=f(x)$, es biyectiva. Basta por tanto ver que $\bar f$ es un homomorfismo. Por comodidad, llamaremos $K=\ker(f)$. Al ser $f$ un homomorfismo,
-	\begin{align*}
-		\bar f((x_1  K )\bar \star (x_2  K ))&= \bar f(x_1 x_2  K )\\
-		&=f(x_1 x_2) \\
-		&=f(x_1)\ast f(x_2) \\
-		&=\bar f(x_1  K )\ast\bar f(x_2  K ).
-	\end{align*}
-	Luego $\bar f$ es también un homomorfismo.
-{{% /proof %}}
-
-{{% corollary %}}
-
-	Si $f\colon (G,\star)\to (H,\ast)$ es un epimorfismo entonces $\bar f\colon (G/\ker(f),\bar \star)\to (H,\ast)$ es un isomorfismo.
-{{% /corollary %}}
-
-{{% corollary %}}
-
-	Si $f\colon (G,\star)\to (H,\ast)$ es un monomorfismo entonces $\bar f\colon (G,\star)\to (\im(f),\ast)$ es un isomorfismo.
-{{% /corollary %}}
-
-{{% theorem %}}
-{Teorema de Cayley}
-{	Todo grupo $G$ es isomorfo a un subgrupo de un grupo de permutaciones. Si $G$ es finito de orden $n$, es isomorfo a un subgrupo de $S_n$.}
-{{% /theorem %}}
-
-{{% proof %}}
-
-	Por el corolario anterior, basta construir un homomorfismo inyectivo $f\colon G\to\Sim (G)$.
-	
-	Dado $y\in G$ definimos $f(y)\in \Sim (G)$ como la aplicación $m_y\colon G\to G$ definida como $m_y(x)=y x$. Esta aplicación es biyectiva y su inversa es $m_y^{-1}=m_{y^{-1}}$. Así definido, $f$ es un homomorfismo pues dados $x,y,z\in G$,
-	\[m_{zy}(x)=(zy) x=z (y x)=z m_y(x)=m_z(m_y(x))=(m_z\circ m_y)(x),\]
-	luego $f(zy)=f(z)\circ f(y)$.
-	
-	Además $f$ es inyectivo pues si $f(y)=m_y=1$, la permutación identidad en $\Sim(G)$, entonces $y=ye=m_y(e)=1(e)=e$, luego $\ker(f)=\\{e\\}$.
-	
-	Si $G$ es finito de orden $n$, etiquetamos los elementos de $G=\\{ x_1,\ldots ,x_n\\}$ para identificar cada aplicación $m_{x_i}\in\Sim (G)$ con una permutación de los índices de los elementos de $G$.
-{{% /proof %}}
-
-Con esto vemos que los grupos simétricos no son un simple ejemplo particular de grupos, sino {\it el caso general}, puesto que todo grupo puede verse como subgrupo de un grupo de permutaciones.
-
 -->
+
+
+
+
+
