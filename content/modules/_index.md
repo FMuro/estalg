@@ -697,13 +697,13 @@ A=\left(
 \right).
 $$
 
-* Si la $j$-ésima columna de $A$ es $e_i$ y $A'$ se obtiene borrando la $i$-ésima fila y la $j$-ésima columna de $A$,
+* Si la $j$-ésima columna de $A$ es $ue_i$, donde $u\in R^\times$ es una unidad, y $A'$ se obtiene borrando la $i$-ésima fila y la $j$-ésima columna de $A$,
 $$
 A=\left(
 \begin{array}{cccc}
 &&0&\cr
 &&\vdots&\cr
-\cdots&\cdots&1&\cdots\cr
+\cdots&\cdots&u&\cdots\cr
 &&\vdots&\cr
 &&0&\cr
 \end{array}
@@ -719,19 +719,27 @@ Usando el primer [teorema](#isomodules) de isomorfía, podemos comprobar que est
 
 * Una columna de ceros se corresponde con la relación $0=0$, que no aporta nada, con lo cual puede eliminarse.
 
-* En este caso la $j$-ésima columna se corresponde con la relación $a\_i=0$, así que podemos simplemente eliminar $a\_i$ de la lista de generadores y $a\_i=0$ de la de relaciones. Esto se corresponde con la eliminación de la $i$-ésima fila y la $j$-ésima columna de $A$.
+* En este caso la $j$-ésima columna se corresponde con la relación $ua_i=0$, que equivale a $a\_i=0$, pues $u$ es una unidad, así que podemos simplemente eliminar $a\_i$ de la lista de generadores y $a\_i=0$ de la de relaciones. Esto se corresponde con la eliminación de la $i$-ésima fila y la $j$-ésima columna de $A$.
 {{% /proof %}}
 
 
 Cuando una matriz es especialmente sencilla resulta fácil identificar el módulo que presenta.
 
 {{% proposition label="easy" %}}
-El $R$-módulo $R^m/\operatorname{im}A$ presentado por la matriz $$A=\left( \begin{array}{ccc} d\_1&&\cr &\ddots&\cr &&d\_n\cr \hline &0& \end{array} \right)$$ de tamaño $m\times n$ con una caja superior diagonal de tamaño $n\times n$ y una caja inferior trivial de tamaño $(m-n)\times n$, es isomorfo a $$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{m-n}.$$ 
+El $R$-módulo $R^m/\operatorname{im}D$ presentado por la matriz $$D=\left( \begin{array}{ccc} d\_1&&\cr &\ddots&\cr &&d\_n\cr \hline &0& \end{array} \right)$$ de tamaño $m\times n$ con una caja superior diagonal de tamaño $n\times n$ y una caja inferior trivial de tamaño $(m-n)\times n$, es isomorfo a $$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{m-n}.$$ 
 {{% /proposition %}}
 
 
 {{% proof %}}
-Es obvio, ya que este módulo está generado por $\\{a\_1,\dots,a\_m\\}$, donde $a\_i=\bar e\_i$, y las relaciones correspondientes a la matriz $A$ son $$d\_ia\_i=0,\quad 1\leq i\leq n.$$ Por tanto las únicas relaciones existentes nos dicen que hemos de considerar la $i$-ésima coordenada módulo $(d\_i)$, $1\leq i\leq n$.
+Es obvio, ya que este módulo está generado por $\\{a\_1,\dots,a\_m\\}$, donde $a\_i=\bar e\_i$, y las relaciones correspondientes a la matriz $D$ son $$d\_ia\_i=0,\quad 1\leq i\leq n.$$ Por tanto las únicas relaciones existentes nos dicen que hemos de considerar la $i$-ésima coordenada módulo $(d\_i)$, $1\leq i\leq n$. El isomorfismo está simplemente definido por
+$$
+\begin{array}{rcl}
+\frac{R^m}{\operatorname{im} D}
+&\stackrel{\cong}\longrightarrow&
+\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{m-n},\cr
+{[(a\_1,\dots,a\_m)]}&\mapsto&(\bar{a}\_1,\dots, \bar{a}\_n,a\_{n+1},\dots,a\_m).
+\end{array}
+$$
 {{% /proof %}}
 
 
@@ -1022,7 +1030,7 @@ está también generada por sus columnas. Claramente, para generar $\operatornam
 
 Veamos que sobre un dominio de ideales principales todo módulo finitamente generado se descompone salvo isomorfismo como producto de módulos cíclicos.
 
-{{% theorem name="Estructura de módulos finitamente generados sobre un DIP" %}}
+{{% theorem name="Estructura de módulos finitamente generados sobre un DIP, 1ª forma" %}}
 Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generado $M$ es isomorfo a uno de la forma $$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}$$ donde $d\_1,\dots,d\_n\in R$ no son cero ni unidades y satisfacen $d\_i|d\_{i+1}$, $1\leq i{<}n$. <!--- Además los enteros $k,r\geq 0$ son únicos y los $d_i$ son únicos salvo asociados. -->
 {{% /theorem %}}
 
@@ -1030,20 +1038,45 @@ Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generad
 {{% proof %}}
 Hemos visto en una [proposición](#fgfp) anterior que $M$ es finitamente presentado. Sea la matriz $A$ una presentación de $M\cong R^m/\operatorname{im}A$. En virtud de [otra](#simplify), su forma normal de [Smith](#smith)
 $D=QAP^{-1}$
-también presenta $M\cong R^m/\operatorname{im}D$. Es más, podemos eliminar las columnas de ceros. Más aún, algún $d\_i$ podría ser una unidad (los anteriores también tendrían que serlo, pues lo dividen). Podemos suponer sin pérdida de generalidad que esta unidad es $d\_i=1$, multiplicando por una matriz elemental tipo 3 si fuera necesario, así que podemos eliminar la $i$-ésima fila y la $i$-ésima columna. De este modo acabamos con una matriz $$\left( \begin{array}{ccc} d\_1&&\cr &\ddots&\cr &&d\_n\cr \hline &0& \end{array} \right)$$ donde los $d\_i$ no son nulos ni unidades, y además satisfacen $d\_i|d\_{i+1}$, $1\leq i{<}n$. El módulo presentado por esta matriz es el del enunciado, en virtud de una [proposición](#easy) anterior más.
+también presenta $M\cong R^m/\operatorname{im}D$. Es más, podemos eliminar las columnas de ceros. Más aún, algún $d\_i$ podría ser una unidad (los anteriores también tendrían que serlo, pues lo dividen). En este caso, podríamos eliminar la $i$-ésima fila y la $i$-ésima columna. De este modo acabamos con una matriz $$\left( \begin{array}{ccc} d\_1&&\cr &\ddots&\cr &&d\_n\cr \hline &0& \end{array} \right)$$ donde los $d\_i$ no son nulos ni unidades, y además satisfacen $d\_i|d\_{i+1}$, $1\leq i{<}n$. El módulo presentado por esta matriz es el del enunciado, en virtud de una [proposición](#easy) anterior más.
 {{% /proof %}}
-
 
 La descomposición anterior de un $R$-módulo $M$ como producto de $R$-módulos cíclicos se puede agrupar en dos factores, la **parte libre** y la **parte de torsión**,
 $$\underbrace{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}}\_{\text{parte de torsión}}\times \underbrace{R^{r}}\_{\text{parte libre}}.$$
-Veamos que $T(M)$ es isomorfo a la parte de torsión y $M/T(M)$ a la parte libre.
+
+{{% remark %}}
+Este primer teorema de estructura demuestra que todo $R$-módulo finitamente generado sobre un DIP $R$ es isomorfo a un producto de módulos cíclicos de un tipo muy particular. Este producto es de hecho único en el siguiente sentido. Si
+$$
+\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}
+\cong  
+\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}\times R^{s},
+$$
+donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i\mid d\_{i+1}$ y $e\_j\mid e\_{j+1}$, entonces $r=s$, $n=m$ y cada $d\_i$ es asociado de $e\_i$. 
+
+La demostración de que $r=s$ la veremos en general, pero el resto solo lo probaremos para $R=\mathbb{Z}$ y lo esbozaremos par $R=k[x]$ con $k$ un cuerpo. 
+{{% /remark %}}
+
+{{% warning %}}
+A pesar de la unicidad de la forma del primer teorema de estructura, el isomorfismo no es único. Por ejemplo, de $\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}$ en sí mismo tenemos dos isomorfismos, la identidad y el intercambio de coordenadas $(a,b)\mapsto (b,a)$.
+{{% /warning %}}
+
+{{% remark %}}
+Todo módulo cíclico $R/(d)$ sobre un DIP $R$ está en la forma del primer teorema de estructura, por tanto la unicidad antes mencionada demuestra que un $R$-módulo es cíclico si y solo si la descomposición dada por el teorema de estructura posee un único factor.
+{{% /remark %}}
+
+Dado un módulo $M$ finitamente generado sobre un DIP, vamos a ver que $T(M)$ es isomorfo a la parte de torsión de la descomposición del teorema de estructura y que $M/T(M)$ es isomorfo a la parte libre.
 
 {{% proposition label="partsoffg" %}}
-Si $M$ es un $R$-módulo isomorfo a 
-$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}$$
-con $d_i\neq 0$ para todo $i$, entonces $T(M)$ es isomorfo a 
-$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}$$
-y $M/T(M)\cong R^r$. En particular, el $R$-módulo $M/T(M)$ es libre de rango $r$.
+Si $M$ es un $R$-módulo sobre un dominio $R$ tal que
+$$M\cong \frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}$$
+con $d_i\neq 0$ para todo $i$, entonces 
+$$
+\begin{array}{rcl}
+T(M)&\cong&\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)},\cr
+M/T(M)&\cong& R^r.
+\end{array}
+$$
+En particular, el $R$-módulo $M/T(M)$ es libre de rango $r$.
 {{% /proposition %}}
 
 
@@ -1069,7 +1102,7 @@ $$
 Veamos que el rango de la parte libre de la descomposición del teorema de structura solo depende del módulo $M$.
 
 {{% corollary label="equalrank" %}}
-Supongamos que $M\cong N$, donde
+Dado un dominio $R$ y dos $R$-módulos isomorfos $M\cong N$ tales que 
 $$
 \begin{array}{rcl}
 M&\cong&\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r},
@@ -1084,7 +1117,6 @@ y los $d_i$ y los $e_j$ son no nulos para todos los $i$ y $j$. Entonces $r=s$.
 Como acabamos de ver, $M/T(M)$  es libre de rango $r$ y $N/T(N)$ es libre de rango $s$. También hemos [visto](#torsionquotient) que $M/T(M)\cong N/T(N)$. Deducimos que $r=s$, ya que el rango de un módulo libre es invariante por isomorfismos, pues los isomorfismos preservan bases.
 {{% /proof %}}
 
-Los $d_i$ del teorema de estructura también son únicos salvo asociados. Esto es cierto en general pero aquí nos limitaremos a probarlo más abajo para $R=\mathbb{Z}$ y a esbozarlo para $R=k[x]$ con $k$ un cuerpo. 
 
 {{% theorem name="Teorema chino del resto" %}}
  Si $R$ es un DIP y $\operatorname{mcd}(a,b)=1$ entonces tenemos un isomorfismo $$\begin{array}{rcl}g\colon \frac{R}{(ab)}&\stackrel{\cong}\longrightarrow&\frac{R}{(a)}\times \frac{R}{(b)},\cr\bar r&\mapsto &(\bar r,\bar r).\end{array}$$
@@ -1107,7 +1139,7 @@ Veamos ahora que $f$ es sobreyectivo, es decir, que dado cualquier $(\bar c,\bar
 
 
 {{% theorem name="2ª forma del teorema de estructura" %}}
-Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generado $M$ es isomorfo a uno de la forma $$\frac{R}{(p\_1^{m\_1})}\times \cdots \times\frac{R}{(p\_n^{m\_n})}\times R^{r}$$ donde $p\_1,\dots,p\_n\in R$ son primos y $r\_i\geq 1$.
+Dado un dominio de ideales principales $R$, todo $R$-módulo finitamente generado $M$ es isomorfo a uno de la forma $$\frac{R}{(p\_1^{m\_1})}\times \cdots \times\frac{R}{(p\_n^{m\_n})}\times R^{r}$$ donde $p\_1,\dots,p\_n\in R$ son primos y $m\_i\geq 1$.
 {{% /theorem %}}
 
 
@@ -1119,26 +1151,63 @@ El isomorfismo está definido simplemente como $\bar r\mapsto (\bar r,\dots,\bar
 {{% /proof %}}
 
 
-Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes. El teorema chino del resto también nos permite pasar de la segunda a la primera.
+Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes, se puede pasar de una a otra mediante el isomorfismo dado por el teorema chino del resto. La segunda forma del teorema de estructura es por tanto también única, esta vez salvo reordenamiento de los factores de la parte de torsión.
+
+{{% example name="Las dos formas del teorema de estructura" %}}
+El $\mathbb{Z}$-módulo
+$$\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2^2)}\times \frac{\mathbb{Z}}{(3)}\times \frac{\mathbb{Z}}{(5)}\times\frac{\mathbb{Z}}{(5^2)}$$
+está descompuesto según la segunda forma del teorema de estructura. Para descomponerlo según la primera, comenzamos agrupando los factores que en su denominador tiene las potencias de mayor grado de todos los primos que aparecen, usando el teorema chino del resto, 
+$$ \frac{\mathbb{Z}}{(2^2)}\times \frac{\mathbb{Z}}{(3)}\times\frac{\mathbb{Z}}{(5^2)}\cong 
+\frac{\mathbb{Z}}{(2^2\cdot 3\cdot 5^2)}=\frac{\mathbb{Z}}{(300)}.$$
+Seguidamente, agrupamos las potencias del segundo (si lo hubiere) mayor grado al que aparecen elevados los primos,
+$$\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(5)}\cong \frac{\mathbb{Z}}{(2\cdot 5)}=\frac{\mathbb{Z}}{(10)}.$$
+Observamos que aquí ya no aparece ninguna potencia de 3, ya que la única que había ha sido incluida en el grupo anterior. 
+Así seguiríamos hasta agotar todos los factores. En este ejemplo solo quedaría uno más, 
+$$\frac{\mathbb{Z}}{(2)}.$$
+El resultado es 
+$$\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(10)}\times \frac{\mathbb{Z}}{(300)}.$$
+Un isomorfismo concreto entre este grupo abeliano y el del comienzo viene dado como composición de dos, primero
+$$
+\begin{array}{rcl}
+\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(10)}\times \frac{\mathbb{Z}}{(300)}&\stackrel{\cong}\longrightarrow&
+\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(5)}\times \frac{\mathbb{Z}}{(2^2)}\times \frac{\mathbb{Z}}{(3)}\times \frac{\mathbb{Z}}{(5^2)},\cr
+(\bar a,\bar b, \bar c)&\mapsto&
+(\bar a,\bar b,\bar b, \bar c, \bar c, \bar c),
+\end{array}
+$$
+que es un isomorfismo por el teorema chino del resto, y luego
+$$
+\begin{array}{rcl}
+\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(5)}\times \frac{\mathbb{Z}}{(2^2)}\times \frac{\mathbb{Z}}{(3)}\times \frac{\mathbb{Z}}{(5^2)}
+&\\!\\!\\!\\!\stackrel{\cong}\rightarrow\\!\\!\\!\\!&
+\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2^2)}\times \frac{\mathbb{Z}}{(3)}\times \frac{\mathbb{Z}}{(5)}\times\frac{\mathbb{Z}}{(5^2)},\cr
+(\bar{a}\_1,\bar{a}\_2,\bar{a}\_3,\bar{a}\_4,\bar{a}\_5,\bar{a}\_6)&\\!\\!\\!\\!\mapsto\\!\\!\\!\\!&
+(\bar{a}\_1,\bar{a}\_2,\bar{a}\_4,\bar{a}\_5,\bar{a}\_3,\bar{a}\_6),
+\end{array}
+$$
+que es un isomorfismo por la conmutatividad del producto salvo isomorfismo.
+{{% /example %}}
 
 
 
 {{% example name="Grupos abelianos con el mismo número de elementos" %}}
- Los grupos abelianos $$\mathbb{Z}/(4)\times \mathbb{Z}/(4),\qquad\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4),$$ tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos. Para verlo jugaremos con la noción de **orden** de un elemento de torsión $a\in A$ de un grupo abeliano $A$, que es el menor entero positivo $n\in\mathbb Z$ tal que $na=0$. El $0\in A$ es el único elemento de orden $1$. Si $A$ es finito, el orden de cualquier $a\in A$ divide al número de elementos de $A$ (este número se conoce como orden de $A$). En particular, todo elemento de $\mathbb Z/(m)$ tiene un orden divisor de $m$. El orden de $-a\in A$ coincide con el de $a\in A$ y el orden de la suma de dos elementos de torsión $a+b\in A$ divide al múltiplo común mínimo de los órdenes de los factores. En particular, para cada entero $n$, el subconjunto $T\_n(A)\subset A$ formado por los elementos cuyo orden divide a $n$ es un subgrupo. Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$, y si $A\cong B$ entonces $T\_n(A)\cong T\_n(B)$, por tanto $t\_n(A)=t\_n(B)$. El orden de $\bar a\in\mathbb Z/(m)$ es $m/\operatorname{mcd}(a,m)$ si $m\neq 0$. Usando esto podemos comprobar que, si $d=\operatorname{mcd}(m,n)$, $$T\_n(\mathbb{Z}/(m))=\left(\overline{\frac{m}{d}}\right)=\left\\{1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
- pues $\overline{\frac{m}{d}}$ tiene orden $d$. Luego $$t\_n(\mathbb{Z}/(m))=\operatorname{mcd}(n,m).$$ Aplicando esto a los dos grupos del principio, vemos que el primero cumple $$t\_2(\mathbb{Z}/(4)\times \mathbb{Z}/(4))=2\cdot 2=4,$$ mientras que el segundo satisface $$t\_2(\mathbb{Z}/(2)\times \mathbb{Z}/(2)\times \mathbb{Z}/(4))=2\cdot 2\cdot 2=8,$$ con lo cual no pueden ser isomorfos.
+Los grupos abelianos $$\frac{\mathbb{Z}}{(4)}\times \frac{\mathbb{Z}}{(4)},\qquad\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(4)},$$ tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos. Para verlo jugaremos con la noción de **orden** de un elemento de torsión $a\in A$ de un grupo abeliano $A$, que es el menor entero positivo $n\in\mathbb Z$ tal que $na=0$. El orden de $a$ divide a $n$ si y solo si $na=0$. En particular, para cada entero $n$, el subconjunto $T\_n(A)\subset A$ formado por los elementos cuyo orden divide a $n$ es un subgrupo, que se puede describir como 
+$$T_n(A)=\\{a\in A\mid n\cdot a=0\\}.$$
+Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$. Es más, todo isomorfismo $A\cong B$ se restringe a $T\_n(A)\cong T\_n(B)$, por tanto en este caso $t\_n(A)=t\_n(B)$. Dado $m\neq 0$, el orden de $\bar a\in\mathbb Z/(m)$ divide a $n$ si y solo si $m\mid na$. Si denotamos $d=\operatorname{mcd}(n,m)$, esto equivale a decir que $\frac{m}{d}\mid a$, por tanto $$T\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\left(\overline{\frac{m}{d}}\right)=\left\\{1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
+pues $\overline{\frac{m}{d}}$ tiene orden $d$. Luego $$t\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\operatorname{mcd}(n,m).$$ Aplicando esto a los dos grupos del principio, vemos que el primero cumple $$t\_2\left(\frac{\mathbb{Z}}{(4)}\times \frac{\mathbb{Z}}{(4)}\right)=2\cdot 2=4,$$ mientras que el segundo satisface $$t\_2\left(\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(4)}\right)=2\cdot 2\cdot 2=8,$$ con lo cual no pueden ser isomorfos.
 {{% /example %}}
 
 El siguiente teorema, combinado con la [proposición](#partsoffg) y el [corolario](#equalrank) anterior, demuestra que la descomposición de un $\mathbb Z$-módulo finitamente generado $M$ dada por el primer teorema de estructura es única. La del segundo también lo será, salvo cambio de orden de los factores de la parte de torsión, pues ambos son equivalentes.
 
 {{% theorem %}}
-Dados dos $\mathbb Z$-módulos
+Dados dos $\mathbb Z$-módulos 
 $$
 \begin{array}{rlc}
 A&=&\frac{\mathbb Z}{(d\_1)}\times \cdots \times\frac{\mathbb Z}{(d\_n)},\cr
 B&=&\frac{\mathbb Z}{(e\_1)}\times \cdots \times\frac{\mathbb Z}{(e\_m)},
 \end{array}
 $$
-donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i|d\_{i+1}$ y $e\_j|e\_{j+1}$, entonces $n=m$ y cada $d\_i$ es asociado de $e\_i$.
+donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i|d\_{i+1}$ y $e\_j|e\_{j+1}$, si $A\cong B$ entonces $n=m$ y cada $d\_i$ es asociado de $e\_i$.
 {{% /theorem %}}
 
 
@@ -1165,7 +1234,11 @@ Este argumento se puede iterar, probando así que los últimos $d\_i$ coinciden 
 
 
 {{% example name="$k[x]$-módulos de torsión con la misma dimensión" %}}
- Si $p(x)\in k[x]$ tiene grado $n$, el cociente $k[x]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[x]$-módulos $$\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)},\qquad \frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}$$ tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con de **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)$ formado por los elementos cuyo orden divide a $p(x)\in k[x]$. En este caso, $T\_{p(x)}(M\times N)=T\_{p(x)}(M)+ T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Además podemos comprobar que $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. Los dos $k[x]$-módulos anteriores no pueden ser isomorfos porque $$\begin{array}{rcl} t\_{x}\left(\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$ La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[x]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[x]$ los números $t\_{p(x)}(M)$ y el orden de un $k[x]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
+Si $p(x)\in k[x]$ tiene grado $n$, el cociente $k[x]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[x]$-módulos $$\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)},\qquad \frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}$$ tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con de **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico no nulo $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Por ejemplo, al orden de $a$ divide a un polinomio $p(x)\in k[x]$ si y solo si $p(x)\cdot a=0$. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)\subset M$ formado por los elementos cuyo orden divide a $p(x)\in k[x]$,
+$$T\_{p(x)}(M)=\\{a\in M\mid p(x)\cdot a=0\\}.$$
+Tenemos que $T\_{p(x)}(M\times N)=T\_{p(x)}(M)+ T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Es más, todo isomorfismo de $k[x]$-módulos $M\cong N$ se restringe a $T\_{p(x)}(M)\cong T\_{p(x)}(N)$, así que en este caso $t\_{p(x)}(M)= t\_{p(x)}(N)$. Además podemos comprobar que $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. 
+
+Los dos $k[x]$-módulos del comienzo no pueden ser isomorfos porque $$\begin{array}{rcl} t\_{x}\left(\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$ La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[x]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[x]$ los números $t\_{p(x)}(M)$ y el orden de un $k[x]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
 {{% /example %}}
 
 
@@ -1201,63 +1274,84 @@ d\_kx\_k&=&b\_k,\cr
 \end{array}
 \right.$$
 Este sistema claramente tiene solución si y solo si $d\_i|b\_i$ para todo $1\leq i\leq k$ y $b_i=0$ para $k{<}i\leq m$. En dicho caso las soluciones son 
-$$x\_i=\frac{b\_i}{d\_i},\quad 1\leq i\leq k;\qquad x\_{k+1},\dots,x\_n\in\mathbb Z;$$ estos últimos valores paramétricos cualesquiera. Observa que la solución es única si además $k=n$.
+$$x\_i=\frac{b\_i}{d\_i},\quad 1\leq i\leq k;\qquad x\_{k+1},\dots,x\_n\in\mathbb Z;$$ siendo estos últimos valores paramétricos cualesquiera. Observa que la solución es única si además $k=n$.
 
 En general, $A$ tiene una forma normal de Smith $D$ que satisface $QAP^{-1}=D$, es decir $A=Q^{-1}DP$. Tenemos que
 $$A\vec{x}=\vec{b}\Leftrightarrow DP\vec{x}=Q\vec{b}.$$
-Llamando $$\vec{y}=P\vec{x},$$ lo cual es un simple cambio de veriables, podemos resolver esta ecuación en $\vec{y}$ como arriba. Las soluciones de la ecuación original se obtienen deshaciendo el cambio de variables $$\vec{x}=P^{-1}\vec{y}.$$
+Llamando $$\vec{y}=P\vec{x},$$ lo cual es un simple cambio de veriables, podemos resolver esta ecuación en $\vec{y}$ como arriba, 
+$$D\vec{y}=Q\vec{b}.$$
+Las soluciones de la ecuación original se obtienen deshaciendo el cambio de variables $$\vec{x}=P^{-1}\vec{y}.$$
+
 
 
 ## Operadores lineales
 
-Dado un cuerpo $k$ y un $k$-espacio vectorial $V$, un **operador lineal** en $V$ es un endomorfismo $T\colon V\rightarrow V$.
+Dado un cuerpo $k$ y un $k$-espacio vectorial $V$, un **operador lineal** en $V$ es un endomorfismo $f\colon V\rightarrow V$.
 
 
 {{% proposition %}}
- Un $k[x]$-módulo es lo mismo que un $k$-espacio vectorial equipado con un operador lineal.
+Un $k[x]$-módulo es lo mismo que un $k$-espacio vectorial equipado con un operador lineal.
 {{% /proposition %}}
 
 
 {{% proof %}}
- Un $k[x]$-módulo $M$ es también un $k$-módulo, restringiendo el producto por escalares a $k\subset k[x]$. La multiplicación por $x$ es un homomorfismo de $k[x]$-módulos 
+Un $k[x]$-módulo $M$ es también un $k$-módulo, es decir, un $k$-espacio vectorial, restringiendo el producto por escalares a $k\subset k[x]$. La multiplicación por $x$ es un homomorfismo de $k[x]$-módulos 
 $$\begin{array}{rcl}M&\stackrel{x\cdot}\longrightarrow& M,\cr a&\mapsto &x\cdot a,\end{array}$$
 en particular también es un homomorfismo de $k$-módulos, es decir, es un operador lineal en el $k$-espacio vectorial $M$.
 
-Recíprocamente, dado un $k$-espacio vectorial $V$ y un operador lineal $T\colon V\rightarrow V$, podemos definir una estructura de $k[x]$-módulo en $V$ del siguiente modo. Dado $v\in V$ y $p(x)=a\_nx^n+\cdots+a\_1x+a\_0\in k[x]$, definimos el producto por escalares como
-$$p(x)\cdot v=a\_nT^n(v)+\cdots+a\_1T(v)+a\_0v.$$ Dejamos como ejercicio comprobar que este producto por escalares satisface las propiedades requeridas.
+Recíprocamente, dado un $k$-espacio vectorial $V$ y un operador lineal $f\colon V\rightarrow V$, podemos definir una estructura de $k[x]$-módulo en $V$ del siguiente modo. Dado $v\in V$ y $p(x)=a\_nx^n+\cdots+a\_1x+a\_0\in k[x]$, definimos el producto por escalares como
+$$p(x)\cdot v=a\_nff^n(v)+\cdots+a\_1f(v)+a\_0v.$$ Dejamos como ejercicio comprobar que este producto por escalares satisface las propiedades requeridas.
 {{% /proof %}}
 
 
+{{% remark %}}
+Si $V=k^n$ y consideramos el operador lineal $A\colon k^n\rightarrow k^n$ definido por una matriz $A$ de tamaño $n\times n$ con entradas en $k$, entonces la estructura de $k[x]$-módulo en $k^n$ viene dada por $p(x)\cdot v=p(A)v$ para todo $p(x)\in k[x]$ y $v\in k^n$.
+{{% /remark %}}
+
 {{% proposition %}}
- Un $k[x]$-módulo $M$ finitamente generado es de torsión, $M=T(M)$, si y solo si tiene dimensión finita como $k$-espacio vectorial.
+Dado un operador lineal $A\colon k^n\rightarrow k^n$, el $k[x]$-módulo asociado $k^n$ está presentado por la matriz $A-xI$.
+{{% /proposition %}}
+
+{{% proof %}}
+Hemos de construir un isomorfismo entre el $k[x]$-modulo $k^n$ y el $k[x]$-modulo cociente $$\frac{k[x]^n}{\operatorname{im} (A-xI)}.$$ Para ello, comenzamos considerando el homomorfismo de $k[x]$-modulos
+$$\phi=\phi_{\\{e_1,\dots,e_n\\}}\colon k[x]^n\longrightarrow k^n,$$
+que está definido por $\phi(e_i)=e_i$. Aquí estamos usando la notación $e_i$ tanto para los elementos de la base canónica del $k[x]$-módulo $k[x]^n$ como para los de la base canónica del $k$-espacio vectorial $k^n$. El homomorfismo $\phi$ es sobreyectivo porque su imagen contiene un conjunto de generadores de $k^n$.
+
+Veamos que $\operatorname{im} (A-xI)\subset\ker \phi$. Como $\operatorname{im} (A-xI)$ está generado por las columnas de la matriz $B=A-xI$, basta ver que estas columnas están en el $\ker \phi$. La $j$-ésima columna es $$b\_{*j}=(a\_{ij})\_{i=1}^n-xe\_j=\sum\_{i=1}^na\_{ij}e\_i-xe\_j.$$ Por tanto, 
+$$\phi(b\_{*j})=\sum\_{i=1}^na\_{ij}e\_i-Ae\_j=0,$$
+puesto que $\sum\_{i=1}^na\_{ij}e\_i=Ae\_j$ es la $j$-ésima columna de $A$. Esto demuestra que $\phi$ factoriza de manera única a través de la proyección natural, $\phi=g\circ p$,
+$$k[x]^n\stackrel{p}\twoheadrightarrow \frac{k[x]^n}{\operatorname{im} (A-xI)}\stackrel{g}\longrightarrow k^n.$$
+Como $\phi$ y $p$ son sobreyectivos, $g$ también lo será. 
+
+Queremos probar que $g$ es un isomorfismo. Este homomorfismo sobreyectivo de $k[x]$-módulos también lo es de $k$-modulos, es decir, de $k$-espacios vectoriales. Si demostramos que la dimensión del cociente como $k$-espacio vectorial es $\leq n$, entonces $g$ será necesariamente biyectivo. Sabemos que  $S=\\{\bar{e}\_1,\dots, \bar{e}\_n\\}$ es un conjunto de generadores del cociente como $k[x]$-módulo. Veamos que también lo es como $k$-espacio vectorial. Para ello basta ver que $x \bar{e}\_j$ es siempre una combinación lineal de $S$ con coeficientes constantes. La $j$-ésima columna de $A-xI$ es $\sum\_{i=1}^na\_{ij}e\_i-xe\_j$, así que en efecto
+$$x\bar{e}\_j=\sum\_{i=1}^na\_{ij}\bar{e}\_i.$$
+{{% /proof %}}
+
+
+
+{{% proposition %}}
+Un $k[x]$-módulo $M$ finitamente generado es de torsión, $M=T(M)$, si y solo si tiene dimensión finita como $k$-espacio vectorial.
 {{% /proposition %}}
 
 
 {{% proof %}}
- $\Rightarrow$ Si $M$ es de torsión entonces por el teorema de estructura de $k[x]$-módulos finitamente generados, $M$ es isomorfo a un producto de una cantidad finita de $k[x]$-módulos cíclicos $k[x]/(p(x))$ con $p(x)\in k[x]$ un polinomio no trivial. Como $k[x]/(p(x))$ tiene dimensión finita como $k$-espacio vectorial (su dimensión es el grado de $p(x)$), deducimos que $M$ también tiene dimensión finita como $k$ espacio vectorial (la suma de las dimensiones de los factores cíclicos del producto). 
+$\Rightarrow$ Si $M$ es de torsión entonces por el teorema de estructura de $k[x]$-módulos finitamente generados, $M$ es isomorfo a un producto de una cantidad finita de $k[x]$-módulos cíclicos $k[x]/(p(x))$ con $p(x)\in k[x]$ un polinomio no trivial. Como $k[x]/(p(x))$ tiene dimensión finita como $k$-espacio vectorial (su dimensión es el grado de $p(x)$), deducimos que $M$ también tiene dimensión finita como $k$ espacio vectorial (la suma de las dimensiones de los factores cíclicos del producto). 
 
 $\Leftarrow$ Recíprocamente, si $M$ tiene dimensión finita como $k$ espacio vectorial, entonces no puede tener parte libre en su descomposición como producto de $k[x]$-módulos cíclicos ya que $k[x]$ no tiene dimensión finita como $k$-espacio vectorial.
+{{% /proof %}}
 
- {{% /proof %}}
 
+Una **caja de Jordan** es una matriz cuadrada con una constante $\alpha \in k$, denominada **autovalor**, en todas las entradas diagonal principal, $1$ en todas las entradas de la diagonal que está justo por encima de la principal y $0$ en el resto, 
 
-Una **caja de Jordan** es una matriz cuadrada con una constante $\alpha \in k$, denominada **autovalor**, en todas las entradas diagonal principal, $1$ en todas las entradas de la diagonal que está justo por debajo de la principal y $0$ en el resto, 
-$$\left(\begin{array}{cccc}
-\alpha&&&\cr
-1&\ddots&&\cr
-&\ddots&\ddots&\cr
-&&1&\alpha
-\end{array}\right).$$
-
+![Caja de Jordan](../images/jordanblock.png)
 
 {{% theorem name="Forma normal de Jordan" %}}
- Sea $k$ un cuerpo algebraicamente cerrado. Dado un $k$-espacio vectorial de dimensión finita $V$ equipado con un operador lineal $T\colon V\rightarrow V$ existe una base de $V$ respecto de la cual la matriz de $T$ es una matriz diagonal por cajas de Jordan. Esta matriz diagonal por cajas es única salvo permutación de las cajas y se denomina **forma normal de Jordan**.
+Sea $k$ un cuerpo algebraicamente cerrado. Dado un $k$-espacio vectorial de dimensión finita $V$ equipado con un operador lineal $f\colon V\rightarrow V$ existe una base de $V$ respecto de la cual la matriz de $f$ es una matriz diagonal por cajas de Jordan. Esta matriz diagonal por cajas es única salvo permutación de las cajas y se denomina **forma normal de Jordan**.
 {{% /theorem %}}
 
 
 {{% proof %}}
- 
-Como $k$ es algebraicamente cerrado, los primos en $k[x]$ son los polinomios mónicos de grado $1$ y sus asociados. Sabemos que una base de $$\frac{k[x]}{(x^m)}$$ como $k$-espacio vectorial es  $\\{1,\bar x,\dots,\bar x^{m-1}\\}$. Haciendo un cambio de variables es fácil ver que una base de $$\frac{k[x]}{((x-\alpha)^m)}$$ como $k$-espacio vectorial es  $\\{1,\bar x-\alpha,\dots,(\bar x-\alpha)^{m-1}\\}$. Como 
+Como $k$ es algebraicamente cerrado, los primos en $k[x]$ son los polinomios mónicos de grado $1$ y sus asociados. Sabemos que una base de $$\frac{k[x]}{(x^m)}$$ como $k$-espacio vectorial es  $\\{\bar x^{m-1},\dots,\bar x,1\\}$. Haciendo un cambio de variables es fácil ver que una base de $$\frac{k[x]}{((x-\alpha)^m)}$$ como $k$-espacio vectorial es  $\\{(\bar x-\alpha)^{m-1},\dots,\bar x-\alpha,1\\}$. Como 
 $$\begin{array}{rcl}
 x\cdot(\bar x-\alpha)^j&=&(x-\alpha+\alpha)\cdot(\bar x-\alpha)^j\cr
 &=&(x-\alpha)\cdot(\bar x-\alpha)^j+\alpha\cdot(\bar x-\alpha)^j\cr
@@ -1267,14 +1361,17 @@ la matriz de la multiplicación por $x$,
 $$\frac{k[x]}{((x-\alpha)^m)}\stackrel{x\cdot}\longrightarrow \frac{k[x]}{((x-\alpha)^m)}$$
 respecto de la base anterior es la caja de Jordan de tamaño $m\times m$ y autovalor $\alpha$.
 
-Podemos suponer que $V$ es un producto finito de $k[x]$-módulos cíclicos, cocientes por potencias de primos, y $T$ es la multiplicación por $x$, $T(a)=xa$,
-$$V=\frac{k[x]}{((x-\alpha\_1)^{m\_1})}\times\cdots\times \frac{k[x]}{((x-\alpha\_n)^{m\_n})}.$$
-Como $k$-espacio vectorial, $V$ tiene base $$\bigcup\_{i=1}^n\\{(\bar x-\alpha_i)^j\\}\_{j=0}^{m\_i-1}.$$ 
-Respecto de esta base, la matriz de $T$ es la matriz diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha\_i$, $1\leq i\leq n$. 
+Usando la primera proposición, consideramos $V$ como un $k[x]$-módulo de torsión con $x\cdot a=f(a)$. En virtud del segundo teorema de estructura, $V$ se descompone como un producto finito de $k[x]$-módulos cíclicos, cocientes por potencias de primos,
+$$V\cong\frac{k[x]}{((x-\alpha\_1)^{m\_1})}\times\cdots\times \frac{k[x]}{((x-\alpha\_n)^{m\_n})}.$$
+Como $k$-espacio vectorial, el $k[x]$-módulo de la derecha tiene base 
+$$\bigcup\_{i=1}^n\\{(0,\dots,(\bar x-\alpha_i)^j,\dots,0)\\}\_{j=m\_i-1}^0,$$ 
+donde la coordenada no trivial $(\bar x-\alpha_i)^j$ es la $i$-ésima.
+Respecto de esta base, la matriz del homomorfismo de multiplicación por $x$ es la matriz
+diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha\_i$, $1\leq i\leq n$. 
+![Matriz de Jordan](../images/jordanmatrix.png)
+Traslandando esta base a $V$ por el isomorfismo dado por el segundo teorema de estructura, obtenemos una base de $V$ respecto de la cual la matriz de $f$ es esta misma.
 
-La unicidad de la forma normal de Jordan se corresponde con la de la segunda forma del teorema de estructura. Observa que, sin embargo, la base respecto de la cual la matriz de $T$ está en forma normal de Jordan no es única.
-  {{% /proof %}}
-
-
+La unicidad de la forma normal de Jordan se corresponde con la de la segunda forma del teorema de estructura. Observa que, sin embargo, la base respecto de la cual la matriz de $f$ está en forma normal de Jordan no es única en general.
+{{% /proof %}}
 
 
