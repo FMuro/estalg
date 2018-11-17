@@ -201,7 +201,7 @@ Definimos además $0\cdot x=0$ y $n\cdot x=-(-n)\cdot x$ si $n<0$. De este modo,
 Por tanto, en un grupo aditivo $x\in G$ tiene orden finito si $n\cdot x=0$ para cierto $n>0$ y el orden $o(x)$ es el mínimo.
 {{% /remark %}}
 
-{{% proposition %}}
+{{% proposition label="different" %}}
 Un elemento de un grupo $x\in G$ tiene orden infinito si y solo si todas sus potencias $x^k$ con $k\in \mathbb Z$ son distintas.
 {{% /proposition %}}
 
@@ -806,8 +806,10 @@ Un grupo $G$ es **cíclico** si existe $x\in G$ tal que $G=\langle x\rangle$.
 
 {{% remark %}}
 Observa que en general $\langle x\rangle=\\{x^n\mid n\in\mathbb{Z}\\}$. ¡Ojo! 
-Si $x$ tiene orden infinito, todas estas potencias son distintas, luego $\langle x\rangle$ es infinito. Sin embargo, si $x$ tiene orden finito habrá potencias de $x$ con exponente distinto que sean iguales . En cualquier caso $\langle x\rangle$ es abeliano ya que $$x^px^q=x^{p+q}=x^{q+p}=x^qx^p.$$
+Si $x$ tiene orden infinito, todas estas potencias son distintas según hemos visto [antes](#different), luego $\langle x\rangle$ es infinito. Sin embargo, si $x$ tiene orden finito habrá potencias de $x$ con exponente distinto que sean iguales . En cualquier caso $\langle x\rangle$ es abeliano ya que $$x^px^q=x^{p+q}=x^{q+p}=x^qx^p.$$
 {{% /remark %}}
+
+
 
 {{% proposition %}}
 Si $x\in G$ es de orden $n$ entonces $\langle x\rangle = \\{e,x,\dots, x^{n-1}\\}$ es un subgrupo de $n$ elementos.
@@ -877,6 +879,17 @@ luego $y^{-1}x\in H$, es decir $y\sim_H x$.
 El conjunto cociente de $G$ por la relación de equivalencia $\sim_H$ se denota
 $G/H:=G/\sim_H$.
 {{% /remark %}}
+
+{{% example name="Cocientes de grupos" %}}
+
+* Si $G\subset G$ es el subgrupo total, $x\sim_{G} y$ siempre, para todo $x,y\in G$, así que $G/G$ es unitario, pues hay una única clase de equivalencia.
+
+* Si consideramos el subgrupo trivial $\\{e\\}\subset G$, $x\sim_{\\{e\\}} y$ si y solo si $x=y$. Por tanto todas las clases de equivalencia son unitarias y la proyección natural $\pi\colon G\rightarrow G/\\{e\\}$ es biyectiva.
+
+* Sea $\langle n\rangle\subset\mathbb{Z}$ el subgrupo cíclico generado por un entero $n\in\mathbb{Z}$ no trivial $n\neq 0$. Los elementos de $\langle n\rangle$ son los múltiplos de $n$. En este caso, $x\sim_{\langle n\rangle} y$ si y solo si $n|(x-y)$, por tanto se trata de la relación $\sim_n$ considerada en el tema de conjuntos, cuyo cociente, según vimos, es
+$$\mathbb{Z}/\langle n\rangle = \\{[0],\dots,[n-1]\\}.$$
+{{% /example %}}
+
 
 {{% proposition %}}
 Dado un grupo  $G$, un subgrupo $H\subset G$ y un elemento $x\in G$, la clase de equivalencia de $x$ para la relación $\sim_H$ es
@@ -966,11 +979,13 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 5. Dado un grupo $G$ y un elemento $x\in G$, la **conjugación** por $x$, $c_x\colon G\rightarrow G$, $c_x(y)=x^{-1}yx$.
 
-6. Dado $n\in\mathbb Z$, la **multiplicación** por $n$, es decir, la aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=n x$.
+6. Dado un grupo $G$ y un elemento $x\in G$, la aplicación $f_x\colon \mathbb{Z}\rightarrow G$ definida como $f_x(n)=x^n$ es un homomorfismo.
 
-7. Si $G$ es un grupo abeliano multiplicativo, la **exponenciación** $f\colon G\to G$, $f(x)=x^n$, es un homomorfismo ya que $$f(xy)=(xy)^n=(xy)\stackrel{n}{\cdots}(xy)=x^ny^n=f(x)f(y).$$
+7. Dado $n\in\mathbb Z$, la **multiplicación** por $n$, es decir, la aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=n x$.
 
-8. La aplicación **exponencial** $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$, 
+8. Si $G$ es un grupo abeliano multiplicativo, la **exponenciación** $f\colon G\to G$, $f(x)=x^n$, es un homomorfismo ya que $$f(xy)=(xy)^n=(xy)\stackrel{n}{\cdots}(xy)=x^ny^n=f(x)f(y).$$
+
+9. La aplicación **exponencial** $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$, 
 es un homomorfismo del grupo aditivo $\mathbb{R}$ en el grupo multiplicativo $(0,+\infty)$.
 {{% /example %}}
 
@@ -1031,7 +1046,7 @@ es un homomorfismo biyectivo.
 {{% /definition %}}
 
 De los homomorfismos del [ejemplo](#homomorphisms) anterior,
-son isomorfismos los siguientes: 1, 3 para $n=2$, 4 para $n=1$, 5 ya que $c\_x$ tiene inverso $c\_{x^{-1}}$, 6 y 7 si $n=\pm1$, y 8. Además, 2 es un monomorfismo, y 3 y 4 son epimorfismos para todo $n\geq 1$.
+son isomorfismos los siguientes: 1, 3 para $n=2$, 4 para $n=1$, 5 ya que $c\_x$ tiene inverso $c\_{x^{-1}}$, 7 y 8 si $n=\pm1$, y 9. Además, 2 es un monomorfismo, y 3 y 4 son epimorfismos para todo $n\geq 1$.
 
 
 {{% proposition %}}
@@ -1064,7 +1079,7 @@ f(f^{-1}(x) f^{-1}(y))&=&f(f^{-1}(x)) f(f^{-1}(y))\cr
 {{% /proof %}}
 
 {{% example name="Isomorfismos inversos" %}}
-Los inversos de los isomorfismos 1, 5 y 8 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\id{G}^{-1}=\id{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
+Los inversos de los isomorfismos 1, 5 y 9 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\id{G}^{-1}=\id{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
 {{% /example %}}
 
 {{% definition %}}
@@ -1085,6 +1100,16 @@ prueba que $H\cong G$. La transitividad es consecuencia de que si $G\cong H\cong
 Entonces la composición es un isomorfismo
 \\[g\circ f\colon G\stackrel{\cong}\To K,\\]
 así que $G\cong K$.
+{{% /proof %}}
+
+{{% proposition %}}
+Un grupo $G$ es cíclico infinito si y solo si es isomorfo a $\mathbb{Z}$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$. Como el orden de $x$ es infinito, todas las potencias de $x$ son distintas según hemos visto [antes](#different), luego $f_x$ es inyectivo, así que $f_x$ es el isomorfismo que andábamos buscando.
+
+$\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
 {{% /proof %}}
 
 {{% proposition %}}
@@ -1350,6 +1375,18 @@ $$
 $$
 De aquí se deduce el resultado despejando.
 {{% /proof %}}
+
+{{% corollary %}}
+Un grupo $G$ es cíclico de orden $n$ si y solo si es isomorfo a $\mathbb{Z}/\langle n\rangle$.
+{{% /corollary %}}
+
+{{% proof %}}
+$\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$, así que $\im f_x=G$. Como el orden de $x$ coincide con el de $G$, que es $n$, sabemos que $m\in\ker f_x$ $\Leftrightarrow$ $f_x(x^m)=e$ $\Leftrightarrow$ $n|m$, así que $\ker f_x=\langle n\rangle$. Por tanto el primer teorema de isomorfía nos da el isomorfismo deseado $\overline{f_x}\colon \mathbb{Z}/\langle n\rangle\cong G$.
+
+$\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
+{{% /proof %}}
+
+
 
 {{% theorem name="de Cayley" %}}
 Todo grupo $G$ es isomorfo a un subgrupo de un grupo de permutaciones. Si $G$ es finito de orden $n$, entonces $G$ isomorfo a un subgrupo de $S_n$.
