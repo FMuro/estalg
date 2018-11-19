@@ -1296,7 +1296,7 @@ $$\begin{array}{rcl}M&\stackrel{x\cdot}\longrightarrow& M,\cr a&\mapsto &x\cdot 
 en particular también es un homomorfismo de $k$-módulos, es decir, es un operador lineal en el $k$-espacio vectorial $M$.
 
 Recíprocamente, dado un $k$-espacio vectorial $V$ y un operador lineal $f\colon V\rightarrow V$, podemos definir una estructura de $k[x]$-módulo en $V$ del siguiente modo. Dado $v\in V$ y $p(x)=a\_nx^n+\cdots+a\_1x+a\_0\in k[x]$, definimos el producto por escalares como
-$$p(x)\cdot v=a\_nff^n(v)+\cdots+a\_1f(v)+a\_0v.$$ Dejamos como ejercicio comprobar que este producto por escalares satisface las propiedades requeridas.
+$$p(x)\cdot v=a\_nf^n(v)+\cdots+a\_1f(v)+a\_0v.$$ Dejamos como ejercicio comprobar que este producto por escalares satisface las propiedades requeridas.
 {{% /proof %}}
 
 

@@ -162,7 +162,7 @@ Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$
 
 
 {{% remark %}}
-El elemento inverso $u^{-1}$ de una unidad $u$ es único. Dividir por una unidad es multiplicar por el elemento inverso $\frac{a}{u}=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. 
+El elemento inverso $u^{-1}$ de una unidad $u$ es único. Si $u$ es una unidad entonces $u^{-1}$ también y $(u^{-1})^{-1}=u$. Dividir por una unidad es multiplicar por el elemento inverso $\frac{a}{u}=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. 
 {{% /remark %}}
 
 {{% exercise %}}
@@ -279,7 +279,6 @@ Para todo anillo $R$ existe un único homorfismo $f\colon \mathbb Z\rightarrow R
 
 
 {{% proof %}}
-
 Cualquier homomorfismo $f\colon \mathbb Z\rightarrow R$ satisface $f(0)=0$ y $f(1)=1$. Por tanto, si $n>0$ en $\mathbb Z$,
 $$\begin{array}{rcl}
 f(n)&=&f(1+\stackrel{n}{\cdots}+1)\cr&=&f(1)+\stackrel{n}{\cdots}+f(1)\cr&=&1+\stackrel{n}{\cdots}+1,\cr
