@@ -825,7 +825,7 @@ Sea $A$ una matriz no nula (si fuera nula no habría nada que hacer). Para llega
 
 2. Dada una entrada no nula de la primera columna $a\_{i1}$, $i>1$, realiza la división euclídea $a\_{i1}=c\cdot a\_{11}+r$ y la operación $F\_{i}-c\cdot F\_1$. La entrada $(i,1)$ de la nueva matriz es el resto $r$. Si este resto es no nulo entonces tiene tamaño menor que $a\_{11}$, así que volvermos al paso 1. Si no, continuamos con otra entrada no nula de la primera columna. Si el resto de entradas de la primera columna son $0$, pasamos a hacer lo análogo con la primera fila, es decir, buscamos una entrada $a\_{1j}$ no nula, $j>1$, realizamos la división euclídea $a\_{1j}=c\cdot a\_{11}+r$ y la operación $C\_{j}-c\cdot C\_1$. La entrada $(1,j)$ de la nueva matriz es el resto $r$. Si este resto no es nulo entonces tiene tamaño menor que el de $a\_{11}$ y pasamos al paso 1. Si no, realizamos el mismo procedimiento con otra entrada no nula de la primera fila.
 
-3. Cuando lleguemos aquí es porque el único elemento no nulo de la primera fila y de la primera columna es el $a\_{11}$. Si hay algún elemento no nulo $a\_{ij}$ que no es divisible por $a\_{11}$ realizamos la operación $F\_{1}+F\_{i}$. La matriz resultante tiene el mismo $a\_{11}$, pero en la entrada $(1,j)$ nos encontramos con $a\_{ij}$, que no es múltiplo de $a\_{11}$, así que volvemos al paso 2. (También podríamos hacer la operación $C\_{1}+C\_{j}$ y pasar al paso 2.) Si no lo hay, es porque nuestra matriz ya es de la forma $$\left(\begin{array}{c|c}
+3. Cuando lleguemos aquí es porque el único elemento no nulo de la primera fila y de la primera columna es el $a\_{11}$. Si hay algún elemento no nulo $a\_{ij}$ que no es divisible por $a\_{11}$ realizamos la operación $F\_{1}+F\_{i}$. La matriz resultante tiene el mismo $a\_{11}$, pero en la entrada $(1,j)$ nos encontramos con $a\_{ij}$, que no es múltiplo de $a\_{11}$, así que volvemos al paso 1. (También podríamos hacer la operación $C\_{1}+C\_{j}$ y pasar al paso 1.) Si no lo hay, es porque nuestra matriz ya es de la forma $$\left(\begin{array}{c|c}
 d_1&0\cr \hline 0&B
 \end{array}\right)$$
 y $d_1$ divide a todas las entradas de $B$.
@@ -974,10 +974,6 @@ def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matr
                             type1rows(M,i,nondiv[1],1) # perform a row operation to fuck up row i
                             Q.add_multiple_of_row(i,nondiv[1],1)
                             show(M) # below, perform a column operation for division with remainder
-                            scalar,d = qr(M[i,nondiv[2]],M[i,i]) # the quotient and the remainder, new smallest non-zero element
-                            type1cols(M,nondiv[2],i,-scalar)
-                            Pm.add_multiple_of_column(nondiv[2],i,-scalar)
-                            show(M)
                         else:
                             i = i+1
         show("""
@@ -985,7 +981,7 @@ def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matr
         relacionan la matriz original
         con su forma normal de Smith
         son las que aparecen en la
-        siguiente ecuación:
+        siguiente ecuacio'n:
         """)
         show(Q,Keep,Pm,'=',M)
         if Q*Keep*Pm != M: # perform a test
