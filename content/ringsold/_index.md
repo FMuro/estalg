@@ -1,13 +1,11 @@
 +++
 title = "Enteros"
-weight = 30
+weight = 35
+hidden = true
 +++
 
-<!--
 
-## Introducción: anillos e ideales
-
-### Anillos y cuerpos
+## Anillos y cuerpos
 
 Un anillo es un conjunto con dos operaciones binarias internas, llamadas {\em suma} y {\em producto}, que satisfacen ciertas propiedades:
 
@@ -122,7 +120,7 @@ Por tanto $(R^*,\cdot )$ es grupo.
 $\Q$, $\R$ y $\C$ son cuerpos.
 {{% /example %}}
 
-### Subanillos
+## Subanillos
 
 {{% definition %}}
 {Subanillo}{
@@ -173,7 +171,7 @@ Sea $S$ un subconjunto de una anillo $R$. Entonces $S$ es subanillo si y solo si
 {{% /proposition %}}
 \endinhibe
 
-### Homomorfismos de anillos
+## Homomorfismos de anillos
 
 De manera análoga a lo que se hizo con los grupos, podemos introducir el concepto de homomorfismo de anillo, que será una aplicación compatible con la suma (homomorfismo de grupos) y con el producto.
 
@@ -263,7 +261,7 @@ Además, $\phi^{-1}(1_S) = \phi^{-1}(\phi(1_R)) = 1_R$.
 Por tanto $\phi^{-1}$ es isomorfismo de anillos.
 {{% /proof %}}
 
-### Ideales
+## Ideales
 
 {\bf A partir de este momento, todos los anillos que consideremos serán conmutativos.}
 
@@ -290,7 +288,7 @@ Esto es debido a que en el anillo $\Z$, el producto viene determinado por la sum
 \end{enumerate}
 {{% /example %}}
 
-### Anillos cociente
+## Anillos cociente
 
 Sean $R$ un anillo (conmutativo) e $I$ un ideal de $R$. Como el grupo $(R,+)$ es abeliano, el subgrupo $I$ de $(R,+)$ es normal. Sabemos entonces (tema 2, grupos cocientes) que la operación
 $$(x+I)+(y+I)=(x+y)+I\ \forall x,y\in R$$
@@ -378,7 +376,7 @@ Además, cada elemento no nulo $(ax+b)+I$ posee un inverso multiplicativo, luego
 \end{enumerate}
 {{% /example %}}
 
-### Factorización canónica
+## Factorización canónica
 
 Hay un teorema de factorización canónica para homomorfismos de anillos.
 
@@ -554,7 +552,7 @@ Si un ideal $I\subset R$ contiene una unidad en $R$ entonces $I=R$.
 Un anillo conmutativo no nulo es un cuerpo si y solo si no tiene ideales propios no nulos.
 {{% /corollary %}}
 
-### Ideales primos y maximales
+## Ideales primos y maximales
 
 {{% definition %}}
 {Ideal maximal}{
@@ -644,7 +642,7 @@ Consideremos la aplicación $\phi\colon R\to\Q [y]$ dada por $\phi (f(x,y))=f(0,
 Como $f(0,y)=0$ si y solo si $f(x,y)$ es un múltiplo de $x$, se tiene que $\ker (\phi )=I$. Por el corolario \ref{epimorfismo} es $R/I\cong\Q [y]$. Como $\Q[y]$ es un dominio de integridad que no es un cuerpo, $I$ es ideal primo que no es maximal.
 {{% /example %}}
 
-### La característica de un dominio de integridad
+## La característica de un dominio de integridad
 
 {{% proposition %}}
 
@@ -676,6 +674,9 @@ $\F_p$ y $\F_p[x]$ tienen característica $p$. Sin embargo $\Z$, $\Q$, $\R$ y $\
 Si $R$ es un dominio de integridad finito entonces existe un primo $p>0$ tal que $R$ tiene característica $p$. El recíproco no es cierto, existen dominios de integridad infinitos con característica positiva, por ejemplo $\F_p[x]$.
 {{% /watch %}}
 
+
+<!--
+
 ## Divisibilidad en $\Z$
 
 Hemos visto que el conjunto $\Z$ de los números enteros, con la suma y el producto, es un dominio de integridad. Aunque esta estructura esté fuertemente ligada a la de grupo con la suma. Enunciamos a continuación una propiedad de los números
@@ -701,7 +702,7 @@ $ac=b$. En este caso se escribe $a|b$. También se dice que $b$ es
 
 {{% watch %}}
  Dos elementos especiales de $\Z$ son $1$ y $-1$. Para empezar,
-obviamente di\-vi\-den a todos los números enteros. Pero además son
+obviamente dividen a todos los números enteros. Pero además son
 los únicos enteros con esta propiedad.
 
 Supongamos que $a \in \Z$

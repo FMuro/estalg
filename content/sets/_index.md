@@ -798,7 +798,7 @@ Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades
 
 * En $\mathbb Z$, tener la misma paridad, o equivalentemente $x\sim_2 y$ si $x-y$ es par.
 
-* En $\mathbb Z$, dado $n\in \mathbb Z$, podemos definir la relación $\sim_n$ como $x\sim_n y$ si $x-y$ es divisible por $n$.
+* En $\mathbb Z$, dado $n\in \mathbb Z$, podemos definir la relación $\sim_n$ como $x\sim_n y$ si $x-y$ es divisible por $n$. Observa que $\sim_n=\sim_{-n}$.
 
 * En un conjunto cualquiera $A$, la relación dada por la igualdad, $x\sim y$ si $x=y$.
 
@@ -840,9 +840,9 @@ Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos cas
 
 * $\\{$Estudiantes de primero de Matemáticas$\\}/$estar en el mismo grupo de Álgebra Básica $\cong \\{A,B,C,D,E,F\\}\colon [x]\mapsto$ grupo al que pertenece un representante cualquiera.
 
-* En $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$.
+* $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$.
 
-* En $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$. 
+* $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$ si $n>0$. 
 
 * En este caso la proyección natural es biyectiva $\pi\colon A\cong A/=$.
 

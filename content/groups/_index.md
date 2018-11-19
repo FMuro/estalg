@@ -43,7 +43,7 @@ Los siguientes son algunos grupos bien conocidos:
 {{% /example %}}
 
 
-{{% proposition %}}
+{{% proposition label="eunique" %}}
 El elemento neutro de un grupo $(G,\star)$ es único.
 {{% /proposition %}}
 
@@ -55,7 +55,7 @@ $$
 donde la primera igualdad es cierta por ser $e'$ un elemento neutro, y la segunda por serlo $e$.
 {{% /proof %}}
 
-{{% proposition %}}
+{{% proposition label="inverseunique" %}}
 El simétrico de un elemento de un grupo $x\in G$ es único.
 {{% /proposition %}}
 
@@ -888,6 +888,7 @@ $G/H:=G/\sim_H$.
 
 * Sea $\langle n\rangle\subset\mathbb{Z}$ el subgrupo cíclico generado por un entero $n\in\mathbb{Z}$ no trivial $n\neq 0$. Los elementos de $\langle n\rangle$ son los múltiplos de $n$. En este caso, $x\sim_{\langle n\rangle} y$ si y solo si $n|(x-y)$, por tanto se trata de la relación $\sim_n$ considerada en el tema de conjuntos, cuyo cociente, según vimos, es
 $$\mathbb{Z}/\langle n\rangle = \\{[0],\dots,[n-1]\\}.$$
+Este cociente se denomina $\mathbb{Z}$ **módulo** $n$.
 {{% /example %}}
 
 
@@ -1058,7 +1059,7 @@ Se deduce de que ya sabemos que la composición de homomorfismos es un homomorfi
 {{% /proof %}}
 
 
-{{% proposition %}}
+{{% proposition label="inverseisogroup" %}}
 Si $f\colon G\to H$ es un isomorfismo entonces la aplicación inversa $f^{-1}\colon H\to G$ también.
 {{% /proposition %}}
 
@@ -1100,6 +1101,14 @@ prueba que $H\cong G$. La transitividad es consecuencia de que si $G\cong H\cong
 Entonces la composición es un isomorfismo
 \\[g\circ f\colon G\stackrel{\cong}\To K,\\]
 así que $G\cong K$.
+{{% /proof %}}
+
+{{% proposition %}}
+Si $f\colon G\twoheadrightarrow H$ es un epimorfismo y $G$ es cíclico entonces $H$ también.
+{{% /proposition %}}
+
+{{% proof %}}
+Sea $x\in G$ un generador, $G=\langle x\rangle$. Veamos que $f(x)\in H$ es también un generador, es decir $H=\langle f(x)\rangle$. Para ello, tenemos que probar que todo elemento $y\in H$ es una potencia de $f(x)$. Como $f$ es sobreyectivo, existe $z\in G$ tal que $f(z)=y$. Como $G=\langle x\rangle$, existe $n\in\mathbb{Z}$ tal que $z=x^n$, luego $y=f(z)=f(x)^n$.
 {{% /proof %}}
 
 {{% proposition %}}
@@ -1270,8 +1279,8 @@ Por tanto $g^{-1}kg\in \ker f$.
 La propiedad más importante de los subgrupos normales $K\subset G$ es que sirven para dotar de estructura de grupo al cociente $G/K$.
 
 
-{{% theorem %}}
-Dado un grupo $G$ y un subgrupo normal $K\subset G$, entonces el conjunto cociente $G/K$ posee una única estructura de grupo tal que la proyección natural $\pi\colon G\twoheadrightarrow G/K$ es un homomorfismo.
+{{% theorem label="groupquotient" %}}
+Dado un grupo $G$ y un subgrupo normal $K\subset G$, entonces el conjunto cociente $G/K$ posee una única estructura de grupo tal que la proyección natural $\pi\colon G\twoheadrightarrow G/K$ es un homomorfismo. El núcleo de esta proyección es $\ker\pi= K$
 {{% /theorem %}}
 
 {{% proof %}}
@@ -1309,21 +1318,12 @@ $$(xy)^{-1}(\bar{x}y)=y^{-1}x^{-1}\bar{x}y\in K,$$
 esto es, $xy\sim_K\bar{x}y$, o lo que es lo mismo, $(xy)K=(\bar{x}y)K$.
 
 Este producto en $G/K$ satisface la propiedad asociativa porque, a nivel de representantes, está definido como en $G$, y el producto del grupo $G$ satisface la propiedad asociativa. Por la misma razón $eK$ es un elemento neutro en $G/K$ y el inverso de $xK$ es $(xK)^{-1}=x^{-1}K$.
+
+Con respecto al núcleo, basta observar que, dado $x\in G$, $\pi(x)=x K=e K$ si y solo si $e\sim_K x$, lo cual ocurre si y solo si $x=e^{-1}x\in K$.
 {{% /proof %}}
-
-Antes vimos que el núcleo de un homomorfismo es un subgrupo normal. Ahora veremos que todo subgrupo normal es núcleo de un homomorfismo.
-
-{{% proposition %}}
-Si $G$ es un grupo, $K\subset G$ es un subgrupo normal, y $\pi\colon G\twoheadrightarrow G/K$ es la proyección natural, entonces $\ker\pi= K$.
-{{% /proposition %}}
-
-{{% proof %}}
-Basta observar que, dado $x\in G$, $\pi(x)=x K=e K$ si y solo si $e\sim_K x$, lo cual ocurre si y solo si $x=e^{-1}x\in K$.
-{{% /proof %}}
-
 
 {{% remark %}}
-La proposición anterior demuestra que $xK$ es el elemento neutro de $G/K$ si y solo si $x\in K$.
+El grupo cociente $G/K$ se denomina $G$ **módulo** $K$ y las clase $xK$ también se llama $x$ módulo $K$. El teorema anterior demuestra que $xK$ es el elemento neutro de $G/K$ si y solo si $x\in K$. También prueba que todo subgrupo normal es el núcleo del algún homomorfismo.
 {{% /remark %}}
 
 {{% corollary %}}
@@ -1338,7 +1338,7 @@ Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de 
 
 Veamos ahora una vesión del teorema de factorización de aplicaciones para grupos y homomorfismos.
 
-{{% theorem name="Primer teorema de isomorfía" %}}
+{{% theorem name="Primer teorema de isomorfía" label="groupsisomorph" %}}
 Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\ker f\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
 $$\require{AMScd}\begin{CD}G @>f>> H\cr @V{\pi}VV @AA{i}A\cr G/\ker f @>>{\overline{f}}> \operatorname{im} f \end{CD}$$
 es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además,  $\overline{f}$ es un isomorfismo.
