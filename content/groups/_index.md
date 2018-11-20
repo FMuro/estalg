@@ -1381,7 +1381,7 @@ Un grupo $G$ es cíclico de orden $n$ si y solo si es isomorfo a $\mathbb{Z}/\la
 {{% /corollary %}}
 
 {{% proof %}}
-$\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$, así que $\im f_x=G$. Como el orden de $x$ coincide con el de $G$, que es $n$, sabemos que $m\in\ker f_x$ $\Leftrightarrow$ $f_x(x^m)=e$ $\Leftrightarrow$ $n|m$, así que $\ker f_x=\langle n\rangle$. Por tanto el primer teorema de isomorfía nos da el isomorfismo deseado $\overline{f_x}\colon \mathbb{Z}/\langle n\rangle\cong G$.
+$\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$, así que $\im f_x=G$. Como el orden de $x$ coincide con el de $G$, que es $n$, sabemos que $m\in\ker f_x$ $\Leftrightarrow$ $f_x(m)=x^m=e$ $\Leftrightarrow$ $n|m$ $\Leftrightarrow$ $m\in\langle n\rangle$, así que $\ker f_x=\langle n\rangle$. Por tanto el primer teorema de isomorfía nos da el isomorfismo deseado $\overline{f_x}\colon \mathbb{Z}/\langle n\rangle\cong G$.
 
 $\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
 {{% /proof %}}
