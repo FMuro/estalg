@@ -981,7 +981,7 @@ def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matr
         relacionan la matriz original
         con su forma normal de Smith
         son las que aparecen en la
-        siguiente ecuacio'n:
+        siguiente ecuación:
         """)
         show(Q,Keep,Pm,'=',M)
         if Q*Keep*Pm != M: # perform a test
