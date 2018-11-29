@@ -482,6 +482,10 @@ $$\begin{array}{rcl}
 El núcleo de la proyección natural es $$\ker p =\\{a\in M\;|\; p(a)=0\\},$$ pero $p(a)=a+N$ y $a+N=0+N$ si y solo si $a\in N$, luego $\ker p=N$.  
 {{% /proof %}}
 
+{{% example name="$R[x]/(p(x))$ como $R$-módulo" %}}
+Sea $R$ un anillo y $p(x)\in R[x]$ un polinomio mónico de grado $n$. El $R[x]$-módulo cociente $R[x]/(p(x))$ es también un $R$-módulo, restringiendo el producto por escalares al subanillo $R\subset R[x]$. Hemos [visto](../rings/definitions/#uniquerep) que todo elemento del cociente está representado por un único polinomio de grado $<n$. Es decir, todo elemento de $R[x]/(p(x))$ se puede escribir como combinación lineal de $S=\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ de manera única. Por tanto, $R[x]/(p(x))$ es libre como $R$-módulo y $S$ es una base. Recuerda que, sin embargo, cuando estudiamos la torsión vimos que, si $R$ es un dominio, $R[x]/(p(x))$ no es libre como $R[x]$-módulo.
+{{% /example %}}
+
 La siguiente proposición también tiene un análogo para anillos [ya demostrado](/estalg/rings/definitions/#factorquotient).
 
 {{% proposition label="factorquotientmodules" %}}
@@ -852,7 +856,7 @@ La siguiente aplicación es una calculadora de la forma normal de Smith paso a p
 <div class="sage">
   <script type="text/x-sage">
 @interact
-def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matriz: '), auto_update=False):
+def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matriz $A=$'), showQ=checkbox(False, label='Calcula $Q$'), showPm=checkbox(False, label='Calcula $P^{-1}$'), auto_update=False):
     def qr(a,b): # euclidean division of a by b with smallest abs(remainder)
         quotient, remainder = a.quo_rem(b)
         if abs(remainder) > abs(b/2): # if the remainder is too big, take the other Euclidean division
@@ -903,90 +907,94 @@ def _(A = input_box('[[0,4,6],[5,8,10]]', width = 40, type = matrix, label='Matr
             return ' + '+str(r)
         if r < 0 and r != -1:
             return ' - '+str(-r)
-    def type1rows(M,i,j,r): # type 1 row operation with statement
+    def type1rows(M,i,j,r): # type 1 row operation with statement (without arrow)
         M.add_multiple_of_row(i,j,r)
-        show('(Fila '+str(i+1)+')'+format_scalar(r)+'(Fila '+str(j+1)+')')
-    def type1cols(M,i,j,r): # type 1 column operation with statement
+        return 'F_{'+str(i+1)+'}'+format_scalar(r)+'F_{'+str(j+1)+'}'
+    def type1cols(M,i,j,r): # type 1 column operation with statement (without arrow)
         M.add_multiple_of_column(i,j,r)
-        show('(Columna '+str(i+1)+')'+format_scalar(r)+'(Columna '+str(j+1)+')')
-    def type2rows(M,i,j): # type 2 row operation with statement
+        return 'C_{'+str(i+1)+'}'+format_scalar(r)+'C_{'+str(j+1)+'}'
+    def type2rows(M,i,j): # type 2 row operation with statement over an arrow
         M.swap_rows(i,j)
-        show('Fila '+str(i+1)+' <-> Fila '+str(j+1))
-    def type2cols(M,i,j): # type 2 column operation with statement
+        return ' \\stackrel{F_{'+str(i+1)+'} \\leftrightarrow F_{'+str(j+1)+'}}{\\longrightarrow} '
+    def type2cols(M,i,j): # type 2 column operation with statement over an arrow
         M.swap_columns(i,j)
-        show('Columna '+str(i+1)+' <-> Columna '+str(j+1))
-    def smith(M): # compute Smith normal form
+        return ' \\stackrel{C_{'+str(i+1)+'} \\leftrightarrow C_{'+str(j+1)+'}}{\\longrightarrow} '
+    def smith(M): # compute Smith normal form D and invertible matrices Q and Pm such that Q*M*Pm = D
         Keep = matrix(M) # keep the original argument
         M = matrix(M) # turn M into a matrix in case it where just a list of rows
-        show(M)
         d = infinity # initialize smallest non-zero element size with infinity
         i = 0 # start with the whole matrix
         rows = M.nrows() # number of rows
         cols = M.ncols() # number of columns
         Q = identity_matrix(rows) # invertible matrix on the left
         Pm = identity_matrix(cols) # invertible matrix on the right
+        L = latex(M) # initialize LaTeX output for algorithm computing D
+        LQ = latex(Q) # initialize LaTeX output for algorithm computing Q
+        LPm = latex(Pm) # initialize LaTeX output for algorithm computing Pm
         while i < min(rows,cols) and abs(d) > 0: # Row/column where we start operating (the submatrix) 
             small = smallest(M,i) # smallest non-zero element of the submatrix
             d = small[0]
             if d != 0: # check whether the submatrix is non-trivial, and then place the smallest element at (i,i) if non-zero
                 if small[1] > i: # the row operation, if necessary
-                    type2rows(M,i,small[1])
-                    Q.swap_rows(i,small[1])
-                    show(M)
+                    L = L + type2rows(M,i,small[1]) + latex(M)
+                    LQ = LQ + type2rows(Q,i,small[1]) + latex(Q)
                 if small[2] > i: # the column operation, if necessary
-                    type2cols(M,i,small[2])
-                    Pm.swap_columns(i,small[2])
-                    show(M)
+                    L = L + type2cols(M,i,small[2]) + latex(M)
+                    LPm = LPm + type2cols(Pm,i,small[2]) + latex(Pm)
                 nondivrow = row_modular(M,i) # find non-divisible element to the right
                 if nondivrow[0] != 0: # column operation for division with remainder, if necessary
                     scalar,d = qr(nondivrow[0],M[i,i]) # the quotient and the remainder, new smallest non-zero element
-                    type1cols(M,nondivrow[1],i,-scalar)
-                    Pm.add_multiple_of_column(nondivrow[1],i,-scalar)
-                    show(M)
+                    L = L + ' \\stackrel{' + type1cols(M,nondivrow[1],i,-scalar) + '}{\\longrightarrow} ' + latex(M)
+                    LPm = LPm + ' \\stackrel{' + type1cols(Pm,nondivrow[1],i,-scalar) + '}{\\longrightarrow} ' + latex(Pm)
                 else:
                     nondivcol = row_modular(M.transpose(),i) # find non-divisible element below
                     if nondivcol[0] != 0: # Row operation for division with remainder, if necessary
                         scalar,d = qr(nondivcol[0],M[i,i]) # the quotient and the remainder, new smallest non-zero element
-                        type1rows(M,nondivcol[1],i,-scalar)
-                        Q.add_multiple_of_row(nondivcol[1],i,-scalar)
-                        show(M)
+                        L = L + ' \\stackrel{' + type1rows(M,nondivcol[1],i,-scalar) + '}{\\longrightarrow} ' + latex(M)
+                        LQ = LQ + ' \\stackrel{' + type1rows(Q,nondivcol[1],i,-scalar) + '}{\\longrightarrow} ' + latex(Q)
                     else: # kill elements to the right and bottom of M[i,i]
                         test = False # >test to check if something (non-zero) will be killed to the right
+                        L1 = '' # initialize set of stacked column operations
+                        LPm1 = '' # idem
                         for col in [(i+1) .. (cols-1)]: # kill all elements to the right of M[i,i]
                             if M[i,col] != 0:
                                 scalar = M[i,col]/M[i,i] # the quotient
-                                type1cols(M,col,i,-scalar)
-                                Pm.add_multiple_of_column(col,i,-scalar)
+                                L1 = L1 + type1cols(M,col,i,-scalar) + ' \\cr '
+                                LPm1 = LPm1 + type1cols(Pm,col,i,-scalar) + ' \\cr '
                                 test = True # if something has been killed
-                        if test: # show the modified matrix if it has been modified at all
-                            show(M)
+                        if test: # add new steps if the matrix has been modified
+                            L = L + ' \\stackrel{\\substack{' + L1 + '}}{\\longrightarrow} ' + latex(M)
+                            LPm = LPm + ' \\stackrel{\\substack{' + LPm1 + '}}{\\longrightarrow} ' + latex(Pm)
                         test = False # test to check if something (non-zero) will be killed at the bottom
+                        L2 = '' # initialize set of stacked row operations
+                        LQ2 = '' # idem
                         for row in [(i+1) .. (rows-1)]: # kill all elements below M[i,i]
                             if M[row,i] != 0:
                                 scalar = M[row,i]/M[i,i] # the quotient
-                                type1rows(M,row,i,-scalar)
-                                Q.add_multiple_of_row(row,i,-scalar)
+                                L2 = L2 + type1rows(M,row,i,-scalar) + ' \\cr '
+                                LQ2 = LQ2 + type1rows(Q,row,i,-scalar) + ' \\cr '
                                 test = True # if something has been killed
-                        if test: # show the modified matrix if it has been modified at all
-                            show(M)
+                        if test: # add new steps if the matrix has been modified
+                            L = L + ' \\stackrel{\\substack{' + L2 + '}}{\\longrightarrow} ' + latex(M)
+                            LQ = LQ + ' \\stackrel{\\substack{' + LQ2 + '}}{\\longrightarrow} ' + latex(Q)
                         nondiv = nondivisible(M,i) # find in the submatrix below right (i,i) an element which is not divisible by  M[i,i]
                         if nondiv[0] != 0: # if it exists...
-                            type1rows(M,i,nondiv[1],1) # perform a row operation to fuck up row i
-                            Q.add_multiple_of_row(i,nondiv[1],1)
-                            show(M) # below, perform a column operation for division with remainder
+                            L = L + ' \\stackrel{' + type1rows(M,i,nondiv[1],1) + '}{\\longrightarrow} ' + latex(M) # perform a row operation to fuck up row i
+                            LQ = LQ + ' \\stackrel{' + type1rows(Q,i,nondiv[1],1) + '}{\\longrightarrow} ' + latex(Q)  
                         else:
                             i = i+1
-        show("""
-        Las matrices invertibles que
-        relacionan la matriz original
-        con su forma normal de Smith
-        son las que aparecen en la
-        siguiente ecuación:
-        """)
-        show(Q,Keep,Pm,'=',M)
+        show(html('Este programa, apartir de una matriz de enteros $A$ introducida como lista de filas, calcula paso a paso su forma normal de Smith $D$ y matrices invertibles $Q$ y $P^{-1}$ tales que $QAP^{-1}=D$.'))
+        show(html('C&aacute;lculo de $D$:'))
+        show('A='+latex(L)+'=D')
+        if showQ:
+            show(html('C&aacute;lculo de $Q$:'))
+            show('I='+latex(LQ)+'=Q')
+        if showPm:
+            show(html('C&aacute;lculo de $P^{-1}$:'))
+            show('I='+latex(LPm)+'=P^{-1}')
         if Q*Keep*Pm != M: # perform a test
             show('LOS RESULTADOS SON ERRÓNEOS')
-        return (M, Q, Pm) # it gives the Smith normal form and the two matrices Q and Pm such that Q*M*Pm is the Smith
+        return (M, Q, Pm) # it gives the Smith normal form and two invertible matrices Q and Pm such that Q*M*Pm is the Smith normal form
     smith(A)
  </script>
 </div>

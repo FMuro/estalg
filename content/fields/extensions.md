@@ -9,6 +9,10 @@ weight = 10
 Una **extensión (de cuerpos)** $$F\subset K$$ es un par formado por un cuerpo $K$ y un subanillo $F$ que también es un cuerpo. Decimos en este caso que $K$ es una extensión de $F$. Observa que $K$ es un $F$-espacio vectorial con la suma y el producto por escalares de $F$. La extensión es **finita** si $\dim\_FK<\infty$, en dicho caso definimos el **grado** de la extensión como $$[K:F]=\dim\_FK.$$ 
 {{% /definition %}}
 
+{{% remark %}}
+El grado de una extensión $F\subset K$ es $[K:F]\geq 1$. No hay extensiones de grado $0$ ya que todo cuerpo $K\neq \{0\}$.
+{{% /remark %}}
+
 
 
 {{% example name="Ejemplos de extensiones" %}}
@@ -30,6 +34,7 @@ $$[F[x]/(p(x)):F]=\text{grado }p(x).$$
 Dadas dos extensiones $F\subset K$ y $F\subset L$ de un mismo cuerpo $F$, un **homomorfismo** de extensiones $f\colon K\rightarrow L$ es un homomorfismo de anillos que deja fijo a $F$, es decir, que satisface $f(\alpha)=\alpha$ para todo $\alpha\in F$. Un **endomorfismo** de una extensión $F\subset K$ un homomorfismo de extensiones $f\colon K\rightarrow K$. Un **isomorfismo** de extensiones es un homomorfismo biyectivo. Un **automorfismo** de una extensión $F\subset K$ es un endomorfismo biyectivo. 
 {{% /definition %}}
 
+La conjugación $\mathbb{C}\rightarrow \mathbb{C}$, $z\mapsto\bar{z}$, es un homomorfismo de extensiones de $\mathbb{R}$ ya que $x=\bar{x}$ para todo $x\in\mathbb{R}$.
 
 {{% remark %}}
 La identidad es un homomorfismo de extensiones y la composición de homomorfismos de extensiones es también un homomorfismo de extensiones. Lo mismo ocurre con isomorfismos y automorfismos. Además, la aplicación inversa de un isomorfismo de extensiones es otro isomorfismo de extensiones, e igual para los automorfismos. Los homorfismos de cuerpos son inyectivos, así que los homomorfismos de extensiones también. 
@@ -44,7 +49,7 @@ Como $f$ es un homomorfismo de anillos, preserva sumas. Dado $\alpha\in F\subset
 {{% /proof %}}
 
 {{% corollary %}}
-Si $f\colon K\rightarrow L$ es un isomorfismo de extensiones de $F$ entonces $[K:L]\cong [L:K]$.
+Si $f\colon K\rightarrow L$ es un isomorfismo de extensiones de $F$ entonces $[K:F]\cong [L:F]$.
 {{% /corollary %}}
 
 Más adelante veremos ejemplos de extensions no isomorfas del mismo grado.
@@ -62,7 +67,7 @@ Dadas dos extensiones $\mathbb Q\subset K$ y $\mathbb Q\subset L$ de $\mathbb Q$
 {{% /proposition %}}
 
 {{% proof %}}
-Por ser $f$ un homomorfismo de anillos, $f(0)=0$. Es más, como $f(1)=1$ y $f$ preserva sumas, es fácil ver que $f(n)=n$ para cualquier $n\in\mathbb Z$, $n>0$. Además $f$ preserva opuestos, luego $f(-n)=-f(n)=n$. Esto prueba que $f$ deja fijo a $\mathbb Z$. Todo racional se puede expresar como $\frac{p}{q}=pq^{-1}$ para $p,q\in\mathbb Z$, $q\neq 0$. Los homomorfismos de anillos preservan productos e inversos, así que $$\begin{array}{rcl}f\left(\frac{p}{q}\right)&=&f(pq^{-1})\cr &=&f(p)f(q^{-1})\cr &=&f(p)f(q)^{-1}\cr &=&pq^{-1}\cr &=&\frac{p}{q}.\end{array}$$   
+Por ser $f$ un homomorfismo de anillos, $f(0)=0$. Es más, como $f(1)=1$ y $f$ preserva sumas, es fácil ver que $f(n)=n$ para cualquier $n\in\mathbb Z$, $n>0$. Además $f$ preserva opuestos, luego $f(-n)=-f(n)=-n$. Esto prueba que $f$ deja fijo a $\mathbb Z$. Todo racional se puede expresar como $\frac{p}{q}=pq^{-1}$ para $p,q\in\mathbb Z$, $q\neq 0$. Los homomorfismos de anillos preservan productos e inversos, así que $$\begin{array}{rcl}f\left(\frac{p}{q}\right)&=&f(pq^{-1})\cr &=&f(p)f(q^{-1})\cr &=&f(p)f(q)^{-1}\cr &=&pq^{-1}\cr &=&\frac{p}{q}.\end{array}$$   
 {{% /proof %}}
 
 {{% corollary %}}
@@ -75,8 +80,11 @@ Dada una extensión $F\subset K$, decimos que $\alpha\in K$ es **algebraico** si
 {{% /definition %}}
 
 {{% remark %}}
-Si tenemos dos extensiones sucesivas $F\subset K\subset L$ y $\alpha\in L$ es algebraico sobre $F$ entonces también es algebraico sobre $K$ ya que $F[x]\subset K[x]$. ¡Ojo! El recíproco no es cierto. 
+Si tenemos dos extensiones sucesivas $F\subset K\subset L$ y $\alpha\in L$ es algebraico sobre $F$ entonces también es algebraico sobre $K$ ya que $F[x]\subset K[x]$. ¡Ojo! El recíproco no es cierto. Todo $\alpha\in F$ es algebraico sobre $F$ ya que es raíz de $x-\alpha\in F[x]$.
 {{% /remark %}}
+
+El elemento $\sqrt{2}\in\mathbb{R}$ es algebraico sobre $\mathbb{Q}$, aunque $\sqrt{2}\notin\mathbb{Q}$. Análogamente $i\in\mathbb{C}$ es algebraico sobre $\mathbb{R}$ ya que es raíz de $x^2+1\in\mathbb{R}[x]$, y también sobre $\mathbb{Q}$.
+
 
 {{% example name="Existencia de elementos trascendentes en $\mathbb Q\subset\mathbb C$" %}}
 Como $\mathbb Q$ es numerable, $\mathbb Q[x]$ también. Además, todo polinomio tiene una cantidad finita de soluciones en $\mathbb C$. Por tanto hay una cantidad numerable de elementos algebraicos para la extensión $\mathbb Q\subset\mathbb C$. Como $\mathbb C$ no es numerable, han de existir elementos trascendentes, de hecho una cantidad no numerable de ellos. Lo mismo se aplica a la extensión $\mathbb Q\subset\mathbb R$. Dar un ejemplo concreto de número trascendente es sin embargo bastante complicado. Es conocido que $\pi$ es trascendente sobre $\mathbb Q$ pero no es fácil probarlo. 
@@ -87,43 +95,32 @@ Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, su **po
 {{% /definition %}}
 
 {{% remark %}}
-La condición de ser mónico es solo para garantizar su unicidad. Si encontramos un polinomio irreducible con coeficientes en $F$ que tiene a $\alpha$ como raíz, basta dividirlo por su coeficiente líder para convertirlo en mónico.
+La existencia del polinomio irreducible de un elemento algebraico no es obvia y la veremos como consecuencia del siguiente teorema. También es posible probarla usando que $F[x]$ es un DFU. La condición de ser mónico es solo para garantizar su unicidad. Si encontramos un polinomio irreducible en $F[x]$ que tiene a $\alpha$ como raíz, basta dividirlo por su coeficiente líder para convertirlo en mónico.
 {{% /remark %}}
 
 {{% theorem %}}
-Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, el polinomio irreducible de $\alpha$ es el generador mónico del núcleo del homomorfismo $f\colon F[x]\rightarrow K$, $f(p(x))=p(\alpha)$. Es más, hay un isomorfismo de extensiones de $F$,
+Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, el polinomio irreducible de $\alpha$ es el generador mónico del núcleo del homomorfismo $f\colon F[x]\rightarrow K$, $f(p(x))=p(\alpha)$. Es más, $F[\alpha]$ es un cuerpo y $f$ induce un isomorfismo de extensiones de $F$,
 $$\frac{F[x]}{(p(x))}\cong F[\alpha].$$
 En particular, 
 $$[F[\alpha]:F]=\text{grado }\alpha.$$ 
 {{% /theorem %}}
 
 {{% proof %}}
-Ser algebraico equivale a $\ker f\neq (0)$, pues los elementos de $\ker f$ son los polinomios con coeficientes en $F$ que tienen a $\alpha$ como raíz. En particular, $\ker f\neq F[x]$ ya que los polinomios constantes no nulos no tienen raíces. 
+El homomorfismo $f$ está bien definido por el principio de sustitución, ya que es el único tal que $f_{|_F}\colon F\hookrightarrow K$ es la inclusión y $f(x)=\alpha$.
+
+Ser $\alpha$ algebraico equivale a $\ker f\neq (0)$, pues los elementos de $\ker f$ son los polinomios en $F[x]$ que tienen a $\alpha$ como raíz. En particular, $\ker f\subsetneq F[x]$ ya que los polinomios constantes no nulos no tienen raíces. 
 
 Supongamos que $\alpha$ tiene polinomio irreducible $p(x)$. Entonces $p(x)\in\ker f$, así que $(p(x))\subset\ker f$. Como $F[x]$ es un DIP, $(p(x))$ es maximal por ser $p(x)$ irreducible, así que $(p(x))=\ker f$. 
 
-Recíprocamente, supongamos que $\ker f=(p(x))$. Por el primer teorema de isomorfía, $f$ induce un isomorfismo
+Recíprocamente, supongamos que $\ker f=(p(x))$ (este ideal es principal porque $F[x]$ es un DIP). Por el primer teorema de isomorfía, $f$ induce un isomorfismo
 $$\overline{f}\colon\frac{F[x]}{(p(x))}\stackrel{\cong}\longrightarrow F[\alpha].$$
-Como $F[\alpha]\subset K$ es un dominio, así que el ideal $(p(x))\subset F[x]$ es primo. Como $F[x]$ es un DFU, esto equivale a decir que $p(x)$ es irreducible. Podemos además suponer que es mónico, dividiendo por su coeficiente líder si fuera necesario.
-
-Cabe destacar que todos los generadores de $\ker f$ son asociados, así que, de entre ellos, hay uno único que es mońico. Este es el polinomio irreducible de la definición.
-
-Por ser $F[x]$ un DIP, el ideal primo no nulo $\ker f=(p(x))\subset F[x]$ es maximal, por tanto el cociente $F[x]/(p(x))$ es un cuerpo, así que $F[\alpha]$ también, por ser isomorfos. Además, $\overline{f}$ es un isomorfismo de extensiones ya que está definido como $$\overline{f}([q(x)])=f(q(x))=q(\alpha),$$ así que, dado $\beta\in F$, 
-$$
-\begin{array}{rcl}
-\overline{f}(\beta\cdot[q(x)])&=&\overline{f}([\beta\cdot q(x)])\cr
-&=&\beta\cdot q(\alpha)\cr
-&=&\beta\cdot\overline{f}([q(x)]).
-\end{array}
-$$
-
-La segunda ecuación se deduce de que extensiones isomorfas tienen el mismo grado.
+Como $F[\alpha]\subset K$ es un dominio, el ideal $(p(x))\subset F[x]$ es primo. Como $F[x]$ es un DFU, esto equivale a decir que $p(x)$ es irreducible. Podemos además suponer que es mónico, dividiendo por su coeficiente líder si fuera necesario. En estas condiciones hemos visto arriba que el cociente es un cuerpo, más cocretamente una extensión de $F$ del mismo grado que $p(x)$. Esto implica que el anillo $F[\alpha]$ es también un cuerpo, por ser isomorfo al cociente. Es más, según vimos en el tema de factorización, el isomorfismo $\overline{f}$ se comporta sobre $F$ como la identidad, por tanto es un isomorfismo de extensiones, así que el grado de $F[\alpha]$ sobre $F$ es también el de $p(x)$.
 {{% /proof %}}
 
 El siguiente corolario se basa en el hecho de que $F[x]$ es un dominio euclídeo. Su importancia estriba en que da un método para calcular el polinomio irreducible de un elemento algebraico sin necesidad de  comprobar la irreducibilidad por otros métodos.
 
 {{% corollary %}}
-Dada una extensión $F\subset K$, el polinomio irreducible de un elemento algebraico $\alpha\in K$ es el polinomio no nulo de menor grado en $F[x]$ que tiene a $\alpha$ como raíz.
+Dada una extensión $F\subset K$, el polinomio irreducible de un elemento algebraico $\alpha\in K$ es el polinomio mónico no nulo de menor grado en $F[x]$ que tiene a $\alpha$ como raíz.
 {{% /corollary %}}
 
 {{% corollary %}}
@@ -131,19 +128,15 @@ Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$ de grado
 {{% /corollary %}}
 
 {{% proof %}}
-El isomorfismo de extensiones del teorema anterior es también un isomorfismo de $F$-espacios vectoriales. Sabemos que $\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ es una base de $F[x]/(p(x))$, así que su imagen, $\\{1,\alpha,\dots,\alpha^{n-1}\\}$, es una base de $F[\alpha]$.
+El isomorfismo de extensiones del teorema anterior es también un isomorfismo de $F$-espacios vectoriales. Sabemos que $\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ es una base de $F[x]/(p(x))$, donde $p(x)$ es el polinomio irreducible de $\alpha$, así que su imagen, $\\{1,\alpha,\dots,\alpha^{n-1}\\}$, es una base de $F[\alpha]$.
 {{% /proof %}}
 
-{{% corollary %}}
-Dada una extensión $F\subset K$ y elementos algebraicos $\alpha\_1,\dots,\alpha\_n\in K$, la extensión $F\subset F[\alpha\_1,\dots,\alpha\_n]$ es finita. 
-{{% /corollary %}}
-
 {{% proposition %}}
-Si $F\subset K$ es una extensión, $\alpha\in K$ y $q(x)\in F[x]$ es un polinomio no nulo que tiene a $\alpha$ como raíz, entonces el grado de $\alpha$ sobre $F$ es menor o igual que el grado de $q(x)$. 
+Si $F\subset K$ es una extensión, $\alpha\in K$ y $q(x)\in F[x]$ es un polinomio no nulo que tiene a $\alpha$ como raíz, entonces el polinomio irreducible de $\alpha$ divide a $q(x)$, en particular el grado de $\alpha$ sobre $F$ es menor o igual que el grado de $q(x)$. 
 {{% /proposition %}}
 
 {{% proof %}}
-Consideramos el homomorfismo $f\colon F[x]\rightarrow K$ del teorema anterior. Si $p(x)$ es el polinomio irreducible de $\alpha$, $\ker f=(p(x))$. Como $\alpha$ es una raíz de $q(x)$, $q(x)\in\ker f$, así que $q(x)$ es un multiplo no nulo de $p(x)$, de donde se deduce la desigualdad de grados.
+Consideramos el homomorfismo $f\colon F[x]\rightarrow K$ del teorema anterior. Si $p(x)$ es el polinomio irreducible de $\alpha$, $\ker f=(p(x))$. Como $\alpha$ es una raíz de $q(x)$, $q(x)\in\ker f$, así que $q(x)$ es un multiplo no nulo de $p(x)$.
 {{% /proof %}}
 
 {{% example name="Grado de algunos elementos" %}}
@@ -157,7 +150,7 @@ Sea $F\subset K$ una extensión y $\alpha\in K$ un elemento algebraico.
 
 * Dado $\alpha\in K$ tal que $\alpha\notin F$ pero $\alpha^2\in F$, el grado de $\alpha$ es $2$ y su polinomio irreducible es $x^2-\alpha^2\in F[x]$.
 
-* Si $F\subset\mathbb R$, el grado de $i\in\mathbb C$ sobre $F$ es $2$ pues $i\notin F$ pero es raíz de $x^2+1\in F[x]$, que es su polinomio mínimo.
+* Si $F\subset\mathbb R$, el grado de $i\in\mathbb C$ sobre $F$ es $2$ pues $i\notin F$ pero es raíz de $x^2+1\in F[x]$, que es su polinomio irreducible.
 
 * Si $n\in\mathbb Z$ es libre de cuadrados, el grado de $\sqrt{n}\in\mathbb C$ sobre $\mathbb Q$ es $2$ pues $\sqrt{n}\notin\mathbb Q$ pero es raíz de $x^2-n\in\mathbb Q[x]$.
 
@@ -238,8 +231,16 @@ definido por la misma fórmula $p(x)\mapsto p(\alpha)$. Este isomorfismo obviame
 
 
 {{% remark %}}
-En las condiciones del enunciado anterior, decimos que $K$ es una **extensión intermedia** de $F\subset L$.
+En las condiciones del enunciado anterior, decimos que $K$ es una **extensión intermedia** de $F\subset L$. Decimos que es **estricta** si ninguna de las dos inclusiones es una igualdad.
 {{% /remark %}}
+
+{{% corollary %}}
+Dada una extensión $F\subset K$ y elementos algebraicos $\alpha\_1,\dots,\alpha\_n\in K$, la extensión $F\subset F[\alpha\_1,\dots,\alpha\_n]$ es finita. 
+{{% /corollary %}}
+
+{{% proof %}}
+Por inducción en $n$. Para $n=1$ está probado en el teorema anterior. Supongamos que $F\subset F[\alpha\_1,\dots,\alpha\_{n-1}]=L$ es finita. Como $\alpha\_n$ es algebraico sobre $F$, también lo es sobre $L$, así que $L\subset L[\alpha\_n]=F[\alpha\_1,\dots,\alpha\_n]$ es finita. El corolario se deduce ahora de la proposición anterior.
+{{% /proof %}}
 
 {{% example name="$\mathbb Q[\sqrt[3]{2},i]$" %}}
 Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos que $$\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i].$$ Ya hemos visto que la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]$  tiene grado $3$. Además, como $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$, la extensión $\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$ tiene grado $2$. Por tanto $$\begin{array}{rcl}[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q]&=&[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q[\sqrt[3]{2}]][\mathbb Q[\sqrt[3]{2}]:\mathbb Q]\cr &=&2\cdot 3=6.\end{array}$$
@@ -265,7 +266,7 @@ Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos q
 
 
 {{% corollary %}}
- Si $F\subset K$ es una extensión de grado $[K:F]=p$ primo entonces no posee extensiones intermedias. 
+ Si $F\subset K$ es una extensión de grado $[K:F]=p$ primo entonces no posee extensiones intermedias estrictas. 
 {{% /corollary %}}
 
 
@@ -280,7 +281,7 @@ Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos q
 
 
 {{% proof %}}
- Basta observar que tenemos extensiones sucesivas $F\subset F[\alpha]\subset K$ y por tanto $[K:F]=[K:F[\alpha]][F[\alpha]:F]$.  
+ Basta observar que tenemos extensiones sucesivas $F\subset F[\alpha]\subset K$ y por tanto $[K:F]=[K:F[\alpha]][F[\alpha]:F]$.
 {{% /proof %}}
 
 
@@ -290,7 +291,7 @@ Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos q
 
 
 {{% proof %}}
- Por inducción en el grado. Si $[K:F]=1$ no hay nada que demostrar pues $K=F$. Sea $n>1$ y supongamos que $[K:F]=n$ y que el resultado es cierto para extensiones de grado ${<}n$. Entonces, como la inclusión $F\subsetneq K$ es estricta ha de existir $\alpha\in K$ tal que $\alpha\_1\notin F$. Por tanto $F\subsetneq F[\alpha\_1]\subset K$. Esto implica que $[F[\alpha\_1]:F]>1$ así que $$\begin{array}{rcl}n&=&[K:F]\cr &=&[K:F[\alpha\_1]][F[\alpha\_1]:F]\cr &>&[K:F[\alpha\_1]].\end{array}$$ Entonces, por hipótesis de inducción, han de existir $\alpha\_2,\dots,\alpha\_n\in K$ tales que $$\begin{array}{rcl}K&=&F[\alpha\_1][\alpha\_2,\dots,\alpha\_n]\cr &=&F[\alpha\_1,\dots,\alpha\_n].\end{array}$$   
+Por inducción en el grado. Si $[K:F]=1$ no hay nada que demostrar pues $K=F$. Supongamos que $[K:F]=n>1$ y que el resultado es cierto para extensiones de grado ${<}n$. Entonces, como la inclusión $F\subsetneq K$ es estricta ha de existir $\alpha\_1\in K$ tal que $\alpha\_1\notin F$. Por tanto $F\subsetneq F[\alpha\_1]\subset K$. Esto implica que $[F[\alpha\_1]:F]>1$ así que $$\begin{array}{rcl}n&=&[K:F]\cr &=&[K:F[\alpha\_1]][F[\alpha\_1]:F]\cr &>&[K:F[\alpha\_1]].\end{array}$$ Entonces, por hipótesis de inducción, han de existir $\alpha\_2,\dots,\alpha\_n\in K$ tales que $$\begin{array}{rcl}K&=&F[\alpha\_1][\alpha\_2,\dots,\alpha\_n]\cr &=&F[\alpha\_1,\dots,\alpha\_n].\end{array}$$   
 {{% /proof %}}
 
 
@@ -310,7 +311,7 @@ Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos q
 
 ![constructible-12](../../images/constructible-12.png)
 
-* Las circunferencias de centro un punto construido que pasan por otro punto construido, ya esté este punto dentro o fuera de la recta.
+* Las circunferencias de centro un punto construido que pasan por otro punto construido.
 
 ![constructible-13](../../images/constructible-13.png)
 
@@ -360,7 +361,7 @@ Deducimos que además podemos construir:
 {{% proof %}}
  $\Rightarrow$ Trazando paralelas y perpendiculares por puntos constructibles, podemos construir los ejes de coordenadas y las proyecciones de $(a,b)$ sobre los mismos. La distancia de las proyecciones al origen son $|a|$ y $|b|$, así que las coordenadas son constructibles. ![constructible-3](../../images/constructible-3.png) 
 
-$\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir los puntos sobre los ejes de coordenadas que están a distancia $|a|$ y $|b|$ del origen y obtener $(a,b)$ como el punto de intersección de las paralelas a los ejes que pasan por estos puntos.
+$\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir los puntos sobre los ejes de coordenadas que están a distancia $|a|$ y $|b|$ del origen, es decir, $(\pm a,0)$ y $(0,\pm b)$, y obtener $(a,b)$ como punto de intersección de las paralelas a los ejes que pasan por $(a,0)$ y $(0,b)$.
 {{% /proof %}}
 
 
@@ -389,9 +390,9 @@ Por tanto $(-a)^{-1}=-a^{-1}$ también es constructible. Esto demuestra que el a
 
 
 
-{{% watch %}}
+{{% remark %}}
  El cuerpo de los números constructibles contiene a $\mathbb Q$ ya que está contenido en $\mathbb R$ y cualquier racional se puede obtener a partir del $1$ sumando, tomando opuestos y dividiendo por números no nulos. Esto se aplica también a cualquier cuerpo contenido en $\mathbb C$ pero obviamente no es válido para los cuerpos finitos $\mathbb Z/(p)$. 
-{{% /watch %}}
+{{% /remark %}}
 
 
 {{% proposition %}}
@@ -430,9 +431,8 @@ Para intersecar dos circunferencias, observamos que la diferencia de ambas ecuac
 {{% /proof %}}
 
 
-{{% watch %}}
- Recuerda que antes hemos visto que $[F[\sqrt{r}]:F]=2$. 
-{{% /watch %}}
+Recuerda que antes hemos visto que $[F[\sqrt{r}]:F]=2$ si $r\in F$ y $\sqrt{r}\notin F$. 
+
 
 
 {{% theorem %}}
@@ -466,7 +466,7 @@ En particular $[K:\mathbb Q]=2^n$.
 
 
 {{% proof %}}
- Por el teroema anterior, si $a\in \mathbb R$ es constructible entonces $a\in K$ para cierta extensión finita $\mathbb Q\subset\mathbb K$ de grado $2^n$. En particular $a$ es algebraico sobre $\mathbb Q$ y su grado divide a $2^n$, así que ha de ser una potencia de $2$.
+ Por el teroema anterior, si $a\in \mathbb R$ es constructible entonces $a\in K$ para cierta extensión finita $\mathbb{Q}\subset K$ de grado $2^n$. En particular $a$ es algebraico sobre $\mathbb Q$ y su grado divide a $2^n$, así que ha de ser una potencia de $2$.
 {{% /proof %}}
 
 

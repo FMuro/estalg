@@ -609,7 +609,7 @@ y podemos tomar $c=c\_1+\cdots+c\_i$ y $r=f\_i$. Hemos probado la existencia.
 Veamos la unicidad de $r$. Si $f=c\cdot p+r=c'\cdot p+r'$ en las condiciones del enunciado, tenemos entonces que $r-r'=(c'-c)\cdot p$. Por un lado $r-r'$ tiene grado $<n$. Supongamos por reducción al absurdo que $c'\neq c$. Entonces $c'-c=e\_kx^k+\cdots$ para cierto $k\geq 0$ y $e\_k\in R$ no nulo. Esto implica que $(c'-c)\cdot p=e\_kx^{k+n}+\cdots$ y por tanto tendría grado $\geq n$. Hemos llegado a una contradicción, así que $c=c'$, luego también $r=r'$.
 {{% /proof %}}
 
-{{% corollary %}}
+{{% corollary label="uniquerep" %}}
 Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
 {{% /corollary %}}
 
@@ -672,11 +672,7 @@ Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, tod
 Dado un dominio $R$, su **cuerpo de fracciones** $Q( R )$ es el cociente del conjunto $$\left\\{\frac{a}{b}\;\bigg|\; a,b\in R,\,b\neq 0\right\\}$$ por la relación de equivalencia $$\frac{a}{b}\sim\frac{a'}{b'}\Leftrightarrow ab'=a'b$$ dotado de las operaciones $$\begin{array}{rcl}\displaystyle \frac{a}{b}+\frac{c}{d}&\displaystyle =&\displaystyle  \frac{ad+bc}{bd},\cr\displaystyle \frac{a}{b}\cdot\frac{c}{d}&\displaystyle =&\displaystyle \frac{a c}{b d}.\end{array}$$
 {{% /definition %}}
 
-
-
 El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.
-
-
 
 {{% proposition %}}
 El cuerpo de fracciones $Q( R )$ de un dominio $R$ está bien definido. La aplicación $i\colon R\rightarrow Q( R )$, $i(a)=\frac{a}{1}$, es un homomorfismo inyectivo. Todo homomorfismo inyectivo $f\colon R\rightarrow k$ donde $k$ es un cuerpo factoriza de manera única a través de $i$, es decir, existe un único homomorfismo $g\colon Q( R )\rightarrow k$ tal que $f=g\circ i$, $$f\colon R\stackrel{i}\rightarrow Q( R )\stackrel{g}\rightarrow k.$$
@@ -705,6 +701,16 @@ $$g\left(\frac{a}{b}\right)=g\left(\frac{a}{1}\left(\frac{b}{1}\right)^{-1}\righ
 Esto demuestra que, caso de existir, $g$ sería único.
 
 Ahora basta definir $g\colon Q( R )\rightarrow k$ como $g\left(\frac{a}{b}\right)=f(a)f(b)^{-1}$. Esta definición tiene sentido porque, como $b\neq 0$ y $f$ es inyectivo, $f(b)\neq 0$, y al ser $k$ un cuerpo todo elemento no nulo tiene inverso, luego $f(b)^{-1}$ existe. Con esta definición es un ejercicio comprobar que $g$ es un homomorfismo.  
+{{% /proof %}}
+
+{{% corollary %}}
+Dado un homomorfismo inyectivo entre dominios $f\colon R\rightarrow S$, existe un único homomorfismo entre sus cuerpos de fracciones $g\colon Q( R )\rightarrow Q(S)$ que extiende $f$, en el sentido de que el siguiente cuadrado es conmutativo
+$$\require{AMScd}\begin{CD}R @>f>> S\cr @V{i_R}VV @VV{i_S}V\cr Q( R ) @>>{g}> Q(S) \end{CD}$$ 
+es decir, $g\circ i_R=i_S\circ f$, donde $i_R$ e $i_S$ son las inclusiones de $R$ y $S$ en sus cuerpos de fracciones.
+{{% /corollary %}}
+
+{{% proof %}}
+Basta aplicar la proposición anterior a $i_S\circ f\colon R\rightarrow Q(S)$, que es inyectivo por ser composición de inyectivos. El homomorfismo $g$ estará por tanto definido como $g\left(\frac{a}{b}\right)=\frac{g(a)}{g(b)}$.
 {{% /proof %}}
 
 
