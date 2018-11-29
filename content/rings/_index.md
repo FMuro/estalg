@@ -34,7 +34,7 @@ $$
 1a=a=a1.
 $$
 
-Un anillo es **conmutativo** si además el producto satisface la siguiente propiedad.
+Un anillo es **conmutativo** si además el producto satisface la siguiente propiedad adicional:
 
 * Conmutativa: 
 $$
@@ -132,33 +132,33 @@ El subconjunto $\\{0\\}\subset R$ no es un subanillo, a menos que sean iguales.
 
 Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[x]$.
 
-{{% example name="Subanillos de $\mathbb{Q}$" %}}
-Dado un entero primo $p\in\mathbb{Z}$, el subconjunto $$S=\left\\{\frac{a}{b}\in\mathbb{Q}\mid p\nmid b\right\\}\subset \mathbb{Q}$$ es un subanillo.
-{{% /example %}}
+{{% exercise %}}
+Dado un entero primo $p\in\mathbb{Z}$, comprueba que $$S=\left\\{\frac{a}{b}\in\mathbb{Q}\mid p\nmid b\right\\}\subset \mathbb{Q}$$ es un subanillo.
+{{% /exercise %}}
 
-{{% example name="Los complejos como matrices" label="complexesasmatrices" %}}
-En $M(2,\mathbb{R})$, el siguiente subconjunto es un subanillo,
-$$S=\left\\{\left(\begin{array}{rr}a&b\cr -b&a\end{array}\right)\mid a,b\in\mathbb{R}\right\\}.$$
-Compruébalo.
-{{% /example %}}
+{{% exercise label="complexesasmatrices" %}}
+Comprueba que 
+$$S=\left\\{\left(\begin{array}{rr}a&b\cr -b&a\end{array}\right)\mid a,b\in\mathbb{R}\right\\}\subset M(2,\mathbb{R})$$
+es un subanillo.
+{{% /exercise %}}
 
 
 {{% definition %}}
-Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$, denominado **inverso** de $u$, de modo que $uu^{-1}=1=u^{-1}u$. Un **cuerpo** es un anillo conmutativo no trivial donde todos los elementos no nulos son unidades.
+Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$, denominado **inverso** de $u$, de modo que $$uu^{-1}=1=u^{-1}u.$$ Un **cuerpo** es un anillo conmutativo no trivial donde todos los elementos no nulos son unidades.
 {{% /definition %}}
 
+Las unidades de $\mathbb{Z}$ son $\\{1,-1\\}$, mientras que $\mathbb{Q}$, $\mathbb{R}$ y $\mathbb{C}$ son cuerpos. Dado un cuerpo $k$, las unidades de $M(n,k)$ son el grupo $GL(n,k)$ de matrices $n\times n$ de determinante no nulo.
 
 {{% remark %}}
-El elemento inverso $u^{-1}$ de una unidad $u$ es único. Esto se demuestra igual que la unicidad de los inversos en un [grupo](../groups/#inverseunique). Si $u$ es una unidad entonces $u^{-1}$ también y $(u^{-1})^{-1}=u$. Dividir por una unidad es multiplicar por el elemento inverso $\frac{a}{u}=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. El grupo multiplicativo $R^\times$ es abeliano si el anillo $R$ es conmutativo.
+El elemento inverso $u^{-1}$ de una unidad $u$ es único. Esto se demuestra igual que la unicidad de los inversos en un [grupo](../groups/#inverseunique). Si $u$ es una unidad entonces $u^{-1}$ también y $(u^{-1})^{-1}=u$. Dividir por una unidad es multiplicar por el inverso $\frac{a}{u}=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. El grupo multiplicativo $R^\times$ es abeliano si el anillo $R$ es conmutativo. La propiedad de ser un cuerpo se preserva por isomorfismos.
 {{% /remark %}}
 
-Las unidades de $\mathbb{Z}$ son $\\{1,-1\\}$, mientras que $\mathbb{Q}$, $\mathbb{R}$ y $\mathbb{C}$ son cuerpos. Dado un cuerpo $k$, las unidades de $M(n,k)$ son el grupo $GL(n,k)$ de matrices $n\times n$ de determinante no nulo.
 
 
 
 ## Homomorfismos
 
-Los homomorfismos de anillos son aplicaciones entre anillos que preservan la estructura, es decir, la suma, la multiplicación, el $0$ y el $1$.
+Los homomorfismos de anillos son aplicaciones entre anillos que preservan la estructura.
 
 {{% definition %}}
 Dados dos anillos $R$ y $S$, un **homomorfismo** $f\colon R\rightarrow S$ es un homomorfismo entre los correspondientes grupos aditivos tal que, además, para todo $a,b\in R$, 
@@ -185,7 +185,7 @@ Dado un anillo conmutativo $R$ y $a\in R$ está definido el homomorfismo de **ev
 
 
 {{% example name="Los complejos como matrices" %}}
-Si $S\subset M(2,\mathbb{R})$ es el subanillo del ejemplo [anterior](#complexesasmatrices), podemos definir un isomorfismo $f\colon\mathbb{C}\cong S$ como 
+Si $S\subset M(2,\mathbb{R})$ es el subanillo del ejercicio [anterior](#complexesasmatrices), podemos definir un isomorfismo $f\colon\mathbb{C}\cong S$ como 
 $$f(a+ib)=\left(\begin{array}{rr}a&b\cr -b&a\end{array}\right).$$
 Compruébalo.
 {{% /example %}}
@@ -221,7 +221,7 @@ El resultado se deduce de estas ecuaciones.
 {{% /proof %}}
 
 {{% corollary %}}
-Todo homomorfismo de anillos $f\colon R\rightarrow S$ se restringe a un homomorfismo entre sus subgrupos multiplicativos de unidades $R^\times\rightarrow S^\times$.
+Todo homomorfismo de anillos $f\colon R\rightarrow S$ se restringe a un homomorfismo entre sus grupos de unidades $f\_{|\_{R^\times}}\colon R^\times\rightarrow S^\times$.
 {{% /corollary %}}
 
 {{% proposition %}}
@@ -231,7 +231,7 @@ la composición $g\circ f\colon R\rightarrow T$ también es un homomorfismo. Lo 
 
 {{% proof %}}
 Comenzamos probando la primera parte. 
-La composición $g\circ f$ es un homomorfismo de grupos aditivos. Basta por tanto observar que 
+La composición $g\circ f$ es un homomorfismo de grupos aditivos. Tenemos que 
 $$
 \begin{array}{rcl}
 (g\circ f)(1)&=&g(f(1))\cr
@@ -239,15 +239,7 @@ $$
 &=&1.
 \end{array}
 $$
-Es más, dados $a,b\in R$,
-$$
-\begin{array}{rcl}
-(g\circ f)(ab)&=&g(f(ab))\cr
-&=&g(f(a)f(b))\cr
-&=&g(f(a))g(f(b))\cr
-&=&(g\circ f)(a)(g\circ f)(b).
-\end{array}
-$$
+Es más, dados $a,b\in R$, $(g\circ f)(ab)=(g\circ f)(a)(g\circ f)(b)$. Esto se comprueba igual que se hizo para los [grupos](../groups/#homocomp).
 
 El enunciado para isomorfismos se deduce de que la composición de aplicaciones biyectivas es biyectiva.
 {{% /proof %}}
@@ -301,7 +293,7 @@ Dado un anillo cualquiera $R$, los siguientes son ejemplos de ideales:
 
 * El trivial $\\{0\\}\subset R$.
 
-* Dado $a\in R$, el **ideal principal** generador por $a$ está formado por sus múltiplos $$(a)=\\{ra\mid r\in R\\}\subset R.$$ Observa que, si $R=\mathbb{Z}$, dado $n\in\mathbb{Z}$, $(n)=\langle n\rangle$. 
+* Dado $a\in R$, el **ideal principal** generado por $a$ está formado por sus múltiplos $$(a)=\\{ra\mid r\in R\\}\subset R.$$ Observa que, si $R=\mathbb{Z}$, dado $n\in\mathbb{Z}$, $(n)=\langle n\rangle$. 
 {{% /example %}}
 
 Más adelante veremos que no hay más subgrupos de $\mathbb{Z}$ que estos y que por tanto coinciden con los ideales.
@@ -314,7 +306,7 @@ El **núcleo** de un homomorfismo $f\colon R\rightarrow S$, $$\ker f=\\{a\in R\;
 Sabemos que $\ker f\subset R$ es un subgrupo aditivo. Queda probar la condición de ideal. Si $a\in\ker f$ y $r\in R$ entonces $f(ra)=f( r )f(a)=f( r )0=0$ luego $ra\in \ker f$.
 {{% /proof %}}
 
-Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$. 
+Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo $ev_1\colon R[x]\rightarrow R$ de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$. 
 
 {{% remark %}}
 Un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$, ya que esto es cierto a nivel de grupos. Dicho de otro modo, para probar la inyectividad de $f$ basta ver que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
@@ -382,8 +374,8 @@ Es más, dado $m\in\mathbb{Z}$, $[m]=[r]$, donde $r$ es el resto no negativo de 
 {{% /example %}}
 
 {{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
-Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
- Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
+Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{\pi}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
+ Aquí $\pi$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
 
 
@@ -395,10 +387,18 @@ $$
 &=&1,\cr
 \overline{f}((a+I)(b+I))&=&\overline{f}((ab)+I)\cr
 &=&f(ab)\cr
-&=&f(a)f(b)\cr
+&=&f(a)f(b)\crhttp://localhost:1313/algbas/
 &=&\overline{f}(a+I)\overline{f}(b+I).
 \end{array}
 $$
+{{% /proof %}}
+
+{{% corollary %}}
+Dado un anillo cualquiera $R$, la proyección natural $\pi\colon R\cong R/(0)$ es un isomorfismo.
+{{% /corollary %}}
+
+{{% proof %}}
+Basta aplicarle el primer teorema de isomorfía a la identidad $\id{R}\colon R\rightarrow R$.
 {{% /proof %}}
 
 {{% corollary %}}
@@ -406,9 +406,9 @@ $\mathbb{R}/(x^2+1)\cong\mathbb{C}$.
 {{% /corollary %}}
 
 {{% proof %}}
-Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido como $f(p(x))=p(i)$. Este homomorfismo está bien definido porque es la composición de la inclusión $\mathbb{R}[x]\subset \mathbb{C}[x]$ y la evaluación $ev_i\colon\mathbb{C}[x]\rightarrow\mathbb{C}$. Es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. La inclusión $\supset$ es sencilla porque todo elemento $p(x)\in (x^2+1)$ es múltiplo del polinomio $x^2+1$, es decir, de la forma $p(x)=(x^2+1)q(x)$ y entonces $f(p(x))=p(i)=(i^2+1)q(i)=0$. Para ver $\subset, tomamos ahora un elemento $q(x)\in \ker f$, es decir, tal que $p(i)=0$. Dividimos $p(x)$ entre $x^2+1$, obteniendo así una expresión en $\mathbb{R}[x]$ de la forma
-$$p(q)=c(x)(x^2+1)+r(x).$$
-Como $x^2+1$ tiene grado $2$, el resto $r(x)$ tendrá grado $<2$, es decir, $r(x)=ax+b$ para ciertos $a,b\in\mathbb{R}$. Entonces,
+Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido como $f(p(x))=p(i)$. Este homomorfismo está bien definido porque es la composición de la inclusión $\mathbb{R}[x]\subset \mathbb{C}[x]$ y la evaluación $ev_i\colon\mathbb{C}[x]\rightarrow\mathbb{C}$. Es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Usando el primer teorema de isomorfía, basta ahora ver que $\ker f=(x^2+1)\subset\mathbb{R}[x]$. La inclusión $\supset$ es sencilla porque todo elemento $p(x)\in (x^2+1)$ es múltiplo del polinomio $x^2+1$, es decir, de la forma $p(x)=(x^2+1)q(x)$ y entonces $f(p(x))=p(i)=(i^2+1)q(i)=0$. Para ver $\subset$, tomamos ahora un elemento arbitrario $p(x)\in \ker f$, es decir, tal que $p(i)=0$. Dividimos $p(x)$ entre $x^2+1$, obteniendo así una expresión en $\mathbb{R}[x]$ de la forma
+$$p(x)=c(x)(x^2+1)+r(x).$$
+Como $x^2+1$ tiene grado $2$, el resto $r(x)$, si no es trivial, tendrá grado $<2$, es decir, en cualquier caso  $r(x)=ax+b$ para ciertos $a,b\in\mathbb{R}$. Entonces,
 $$
 \begin{array}{rcl}
 0&=&p(i)\cr
@@ -416,22 +416,42 @@ $$
 &=&b+ia.
 \end{array}
 $$
-Un número complejo es cero si y solo si su parte real y su parte imaginaria son cero, $b=a=0$. Por tanto $r(x)=0$ y $p(q)=c(x)(x^2+1)\in (x^2+1)$.
+Un número complejo es cero si y solo si su parte real y su parte imaginaria son cero, $b=a=0$. Por tanto $r(x)=0$ y $p(x)=c(x)(x^2+1)\in (x^2+1)$.
 {{% /proof %}}
 
 
 
-## Dominios y fracciones 
+## Dominios
 
 {{% definition %}}
 Dado un anillo $R$, un **divisor de cero** es un elemento $a\in R$ no nulo, $a\neq 0$, tal que existe otro $b\in R$, $b\neq 0$, de modo que $ab=0$. Un anillo no trivial $R$ es un **dominio (de integridad)** si no posee divisores de cero.
 {{% /definition %}}
 
+El anillo $\mathbb{Z}$ y los cuerpos son dominios.
 
 {{% remark %}}
-Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $2\cdot 3=6=0$ pero $2\neq 0\neq 3$.
+Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los subanillos de un dominio también son dominios. El $1$ y el $-1$ nunca son divisores de cero. La propiedad de ser un dominio se preserva por isomorfismos.
 {{% /remark %}}
 
+{{% example name="Un anillo que no es un dominio" %}}
+Como conjunto, el anillo $\mathbb{Z}/(4)$ es
+$$\mathbb{Z}/(4)=\\{\bar{0},\bar{1},\bar{2},\bar{3}\\}.$$
+El elemento neutro para la suma es $\bar{0}$, por tanto $\bar{2}\neq\bar{0}$. Sin embargo $\bar{2}\cdot\bar{2}=\bar{4}=\bar{0}$ ya que $4\in (4)$. Esto prueba que $\bar{2}$ es un divisor de cero en este anillo. ¿Hay algún otro?
+{{% /example %}}
+
+{{% exercise %}}
+Da mas ejemplos de anillos $\mathbb{Z}/(n)$ que **no** sean dominios.
+{{% /exercise %}}
+
+La siguiente propiedad de los dominios se conoce como **propiedad cancelativa**.
+
+{{% proposition %}}
+En un dominio, si $ab=ac$ y $a\neq 0$ entonces $b=c$.
+{{% /proposition %}}
+
+{{% proof %}}
+En un anillo $R$, la ecuación $ab=ac$ equivale a $a(b-c)=0$. Si $a\neq 0$ y $R$ es un dominio entonces no queda otra opción que $b-c=0$, lo cual equivale a $b=c$.
+{{% /proof %}}
 
 {{% proposition %}}
 Si $R$ es un dominio entonces $R[x]$ también.
@@ -442,144 +462,261 @@ Si $R$ es un dominio entonces $R[x]$ también.
 Dados dos polinomios no nulos $p(x)=a_nx^n+\cdots$ y $q(x)=b_mx^m+\cdots$ de grados respectivos $n$ y $m$ ($a_n\neq 0\neq b_m$), su producto $p(x)q(x)=a_nb_mx^{n+m}+\cdots$ es no nulo de grado $n+m$ ya que $a_nb_m\neq 0$ por ser $R$ un dominio.
 {{% /proof %}}
 
-
 {{% corollary %}}
 Si $R$ es un dominio entonces $R[x_1,\dots, x_n]$ también.
 {{% /corollary %}}
 
-
-Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, todo dominio se puede incluir en un cuerpo.
-
-{{% definition %}}
-Dado un dominio $R$, su **cuerpo de fracciones** $Q( R )$ es el cociente del conjunto $$\left\\{\frac{a}{b}\;\bigg|\; a,b\in R,\,b\neq 0\right\\}$$ por la relación de equivalencia $$\frac{a}{b}\sim\frac{a'}{b'}\Leftrightarrow ab'=a'b$$ dotado de las operaciones $$\begin{array}{rcl}\displaystyle \frac{a}{b}+\frac{c}{d}&\displaystyle =&\displaystyle  \frac{ad+bc}{bd},\cr\displaystyle \frac{a}{b}\cdot\frac{c}{d}&\displaystyle =&\displaystyle \frac{a c}{b d}.\end{array}$$
-{{% /definition %}}
-
-
-
-El ejemplo principal es $Q(\mathbb Z)=\mathbb Q$.
-
-
-
 {{% proposition %}}
-El cuerpo de fracciones $Q( R )$ de un dominio $R$ está bien definido. La aplicación $i\colon R\rightarrow Q( R )$, $i(a)=\frac{a}{1}$, es un homomorfismo inyectivo. Todo homomorfismo inyectivo $f\colon R\rightarrow k$ donde $k$ es un cuerpo factoriza de manera única a través de $i$, es decir, existe un único homomorfismo $g\colon Q( R )\rightarrow k$ tal que $f=g\circ i$, $$f\colon R\stackrel{i}\rightarrow Q( R )\stackrel{g}\rightarrow k.$$
+Todo dominio finito $R$ es un cuerpo.
 {{% /proposition %}}
 
-
 {{% proof %}}
-La relación es simétrica y reflexiva porque el producto en $R$ es conmutativo. Veamos la transitividad. Si $$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a'^\prime}{b'^\prime}$$ entonces $$\begin{array}{rcĺ}ab'&=&a'b,\cr a'b'^\prime&=&a'^\prime b'.\end{array}$$ En particular, 
-$$\begin{array}{rcl}
-(a b'^\prime) b'&=&(ab')b'^\prime\cr
-&=&(a'b)b'^\prime\cr
-&=&(a'b'^\prime)b\cr
-&=&(a'^\prime b')b\cr
-&=&(a'^\prime b)b'.
-\end{array}$$
-Por la propiedad cancelativa de los dominios, $ab'^\prime=a'^\prime b$, es decir $\frac{a}{b}\sim \frac{a'^\prime}{b'^\prime}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar que las definiciones de la suma y la multiplicación en $Q(R)$ no dependen de la elección de fracciones representantes es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. También es fácil probar que los axiomas que definen los anillos se verifican. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por tanto una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
-
-Es inmediato ver que $i$ es un homomorfismo. Es inyectivo porque $a\in\ker f$ si y solo si $\frac{a}{1}=\frac{0}{1}$, lo cual equivale a $a=0$.
-
-Dado $f\colon R\rightarrow k$ como en el enunciado, si existiera una descomposición $f=g\circ i$ entonces tendríamos que
-$$f(a)=(g\circ i)(a)=g(i(a))=g\left(\frac{a}{1}\right).$$
-Toda fracción de $Q( R )$ se puede descomponer como
-$$\frac{a}{b}=\frac{a}{1}\cdot\frac{1}{b}=\frac{a}{1}\left(\frac{b}{1}\right)^{-1},$$
-por tanto tendríamos que
-$$g\left(\frac{a}{b}\right)=g\left(\frac{a}{1}\left(\frac{b}{1}\right)^{-1}\right)=g\left(\frac{a}{1}\right)g\left(\frac{b}{1}\right)^{-1}=f(a)f(b)^{-1}.$$
-Esto demuestra que, caso de existir, $g$ sería único.
-
-Ahora basta definir $g\colon Q( R )\rightarrow k$ como $g\left(\frac{a}{b}\right)=f(a)f(b)^{-1}$. Esta definición tiene sentido porque, como $b\neq 0$ y $f$ es inyectivo, $f(b)\neq 0$, y al ser $k$ un cuerpo todo elemento no nulo tiene inverso, luego $f(b)^{-1}$ existe. Con esta definición es un ejercicio comprobar que $g$ es un homomorfismo.  
+Sea $a\in R$ un elemento no nulo. Por ser $R$ un dominio, la propiedad cancelativa demuestra que la aplicación
+$$
+\begin{array}{rcl}
+R&\longrightarrow&R,\cr
+x&\mapsto&a\cdot x,
+\end{array}
+$$
+es inyectiva. Toda aplicación inyectiva entre conjuntos finitos con el mismo número de elementos es biyectiva. Por tanto, existe $b\in R$ tal que $a\cdot b=1$. Como $R$ es conmutativo, esto implica que $a$ es una unidad con inversa $a^{-1}=b$.
 {{% /proof %}}
 
-
-{{% definition %}}
-Dado un cuerpo $k$, el **cuerpo de funciones racionales** en una variable se define como $k(x)=Q(k[x])$.
-{{% /definition %}}
-
+{{% example name="Cuerpos finitos" %}}
+Si $p\in\mathbb{Z}$ es un primo entonces $\mathbb{Z}/(p)$ es un cuerpo con $p$ elementos. En efecto, sabemos que este anillo tiene $p$ elementos, así que en virtud de la proposición anterior basta comprobar que es un dominio. Dados $\bar{m},\bar{n}\in\mathbb{Z}/(p)$, si $\bar{m}\cdot \bar{n}=\overline{mn}=\bar{0}$ entonces $mn\in (p)$, es decir, $p$ divide a $mn$. Pero como $p$ es primo, para que esto ocurra $p$ ha de dividir a $m$ o bien a $n$. En el primero de los casos $\bar{m}=\bar{0}$ y en el segundo $\bar{n}=\bar{0}$, así que no puede haber divisores de $0$ en $\mathbb{Z}/(p)$. Este cuerpo también se denota $\mathbb{F}_p$.
+{{% /example %}}
 
 {{% exercise %}}
-Da dos definiciones del cuerpo de funciones racionales en varias variables $k(x_1,\dots,x_n)$, una inductiva y otra directa, que sean aparentemente distintas pero isomorfas.
+¿Hay cuerpos finitos cuyo número de elementos no sea primo?
 {{% /exercise %}}
 
+
+## Ideales primos 
 
 {{% definition %}}
 Los ideales distintos del total se denominan **propios**. Un ideal $I\subsetneq R$ es **primo** si dados $a,b\in R$ tales que $ab\in I$ entonces $a\in I$ o $b\in I$.
 {{% /definition %}}
 
-
 {{% remark %}}
-Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$. En general $(0)\subset R$ es primo si y solo si $R$ es un dominio.
+Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. La propiedad de ser un dominio se preserva por isomorfismos.
 {{% /remark %}}
-
 
 {{% proposition %}}
 Un ideal $I\subset R$ es primo $\Leftrightarrow$ $R/I$ es un dominio.
 {{% /proposition %}}
 
-
 {{% proof %}}
-
 Ser un ideal propio se corresponde con tener un cociente no trivial. Veamos la equivalencia del resto de propiedades.
 
-$\Rightarrow$ Dados $\bar a,\bar b\in R/I$, si $\bar a\bar b =\overline{ab}=\bar 0$ entonces $ab\in I$, luego $a\in I$ o $b\in I$, es decir $\bar a=\bar 0$ o $\bar b=\bar 0$.
+$\Rightarrow$ Veamos que no hay divisores de cero en $R/I$. Dados $\bar a,\bar b\in R/I$, si $\bar a\bar b =\overline{ab}=\bar 0$ entonces $ab\in I$. Como $I$ es primo, esto implica que $a\in I$ o $b\in I$, es decir $\bar a=\bar 0$ o $\bar b=\bar 0$. Por tanto no hay divisores de cero en $R/I$
 
-$\Leftarrow$ Dados $a,b\in R$, si $ab\in I$ entonces $\bar a\bar b=\overline{ab}=\bar 0$, luego $\bar a=\bar 0$ o $\bar b=\bar 0$, es decir $a\in I$ o $b\in I$.
- 
+$\Leftarrow$ Veamos que $I$ es primo. Dados $a,b\in R$, si $ab\in I$ entonces $\bar a\bar b=\overline{ab}=\bar 0$, así que por ser $R/I$ un dominio, entonces $\bar a=\bar 0$ o $\bar b=\bar 0$, es decir $a\in I$ o $b\in I$. Esto prueba que $I$ es primo.
 {{% /proof %}}
+
+{{% corollary %}}
+El ideal trivial $(0)\subset R$ es primo $\Leftrightarrow$ $R$ es un dominio.
+{{% /corollary %}}
+
+{{% proof %}}
+Esto es consecuencia de que hay un isomorfismo de anillos $R\cong R/(0)$.
+{{% /proof %}}
+
+{{% proposition %}}
+Un ideal principal $(n)\subset\mathbb{Z}$ es primo $\Leftrightarrow$ $n=0$ o $n$ es un entero primo.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Leftarrow$ El ideal $(0)$ es primo porque $\mathbb{Z}$ es un dominio, y si $n$ es un entero primo ya hemos visto antes que entonces $\mathbb{Z}/(n)$ es un dominio, así que $(n)$ también sería primo en este caso.
+
+$\Rightarrow$ Por reducción al absurdo, si $n\neq 0$ no fuera un entero primo, entonces factorizaría $n=ab$ como producto de dos enteros $a,b\in\mathbb{Z}$, $a,b\neq\pm1$. Por tanto, $1<|a|,|b|<|n|$, así que $n$ no divide a $a$ ni a $b$, luego $\bar{a}\neq\bar{0}\neq\bar{b}$ en $\mathbb{Z}/(n)$. Sin embargo $\bar{a}\bar{b}=\overline{ab}=\bar{n}=\bar{0}$ pues $n\in (n)$.
+{{% /proof %}}
+
+{{% definition %}}
+La **característica** de un dominio de integridad $R$ es el orden de $1\in R$ en el grupo aditivo, es decir, el menor entero $n\geq 1$ tal que
+$$1+\stackrel{n}{\cdots}+1=0.$$
+Si no existe tal $n$ decimos que $R$ es de característica $0$.
+{{% /definition %}}
+
+Los dominios $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ y $\mathbb{C}$ tienen característica $0$ mientras que $\mathbb{Z}/(p)$ tiene característica $p$ para $p\in\mathbb{Z}$ primo. Más adelante veremos que la característica de un dominio cualquiera es $0$ o un número entero primo.
+
+
+
+## Divisibilidad en $\Z$
+
+En esta sección formalizaremos propiedades de los números enterios relacionadas con la divisibilidad. La mayor parte son bien conocidas. Usaremos sin demostrarlo el siguiente resultado básico de la teoría de conjuntos.
+
+{{% theorem name="Principio de buena ordenación" %}}
+Todo subconjunto no vacío de $\Z$ acotado inferiormente posee un mínimo, necesariamente único. 
+{{% /theorem %}}
+
 
 
 {{% definition %}}
-Un ideal $I\subsetneq R$ es **maximal** si los únicos ideales que lo contienen son el total $R$ y el propio $I$.
+Dados $a,b\in\mathbb{Z}$, decimos que $a$ **divide** a $b$, y escribimos $a |  b$, si existe $c\in\Z$ tal que
+$ac=b$. También se dice que $b$ es
+**divisible** por $a$.
 {{% /definition %}}
 
+{{% remark %}}
+Todos los enteros dividen al $0$, pero el $0$ solo se divide a sí mismo. El $1$ solo es divisible por $\pm1$. Obsverva que si $a |  b$ y $b\neq 0$ entonces $|a|\leq |b|$.
+{{% /remark %}}
+
+{{% proposition %}}
+Las unidades de $\mathbb{Z}$, $1$ y $-1$, son los dos únicos enteros que dividen a todos los demás. 
+{{% /proposition %}}
+
+{{% proof %}}
+Es obvio que $1$ y $-1$ dividen a cualquier otro $a\in\mathbb{Z}$ ya que $1a=a$ y $(-1)(-a)=a$. Si $b\in\mathbb{Z}$ divide a cualquier otro entero, en particular divide a $1\in\mathbb{Z}$. El $1$ solo es divisible por sí mismo y por $-1$, luego $b=\pm1$.
+{{% /proof %}}
+
+
+
+{{% proposition %}}
+Dados $a,b,c\in\mathbb{Z}$, se satisfacen las siguientes propiedades.
+
+1. $a |  a$  (**reflexiva**) y $-a |  a$.
+
+2. si $a |  b$ y $b |  c$ entonces $a |  c$ (**transitiva**).
+
+3. $a |  b$ y $b |  a$ si y solo si $a=\pm b$.
+
+4. Si $a |  b$ y $a |  c$ entonces $a |  (b + c)$.
+
+5. Si $a |  b$ entonces $a |  bc$, para todo $c\in\Z$.
+
+{{% /proposition %}}
+
+{{% proof %}}
+El primer apartado se satisface porque $a1=a$ y $(-a)(-1)=a$.
+
+En el supuesto de 2, $ar=b$ y $bs=c$ para ciertos $r,s\in\mathbb{Z}$, luego $a(rs)=(ar)s=bs=c$, así que $a |  c$.
+
+Con respecto a 3, $\Leftarrow$ se ha probado en 1. Veamos $\Rightarrow$. Bajo estas hipótesis, $ar=b$ y $bs=a$ para ciertos $r,s\in\mathbb{Z}$, luego $a(rs)=(ar)s=bs=a$. Por la propiedad cancelativa del dominio $\mathbb{Z}$, $rs=1$, así que $r$ y $s$ son unidades mutuamente inversas, por lo tanto $r=s=\pm1$ y en consecuencia $a=\pm b$.
+
+En las condiciones de 4, $ar=b$ y $as=c$ para ciertos $r,s\in\mathbb{Z}$, luego $a(r+s)=ar+as=b+c$, y por tanto $a |  (b+c)$.
+
+Por último, en 5, $ar=b$ para cierto $r\in\mathbb{Z}$, así que $a(rc)=(ar)c=bc$, luego $a |  c$.
+{{% /proof %}}
+
+A estas alturas de la vida, vamos a aprender a dividir.
+
+{{% theorem name="División euclídea" %}}
+Dados $D,d \in \Z$, $d\ne 0$, existen $c,r\in \Z$ únicos tales que:
+
+* $D=dc+r$.
+
+* $0\leq r < |d|$.
+{{% /theorem %}}
+
+
+{{% proof %}}
+El subconjunto $$S=\\{ D-dx \mid (x \in \Z) \wedge (D-dx \geq 0) \\}\subset\mathbb{Z}$$
+no es vacío. En efecto, si $D\geq 0$ tomamos $x=-dD$ y entonces $D-dx=D+d^2D=D(1+d^2)\geq 0$, y si $D<0$ tomamos $x=dD$ y $D-dx=D-d^2D=D(1-d^2)\geq 0$ ya que, como $d\neq 0$, $d^2\geq 1$.
+
+Como $S$ está acotado inferiormente por $0$, ha de tener un mínimo $r\in S$ por el principio de buena ordenación. Este mínimo se alcanzará para cierto valor de $x=c\in\mathbb{Z}$, y por tanto $r=D-dc\geq 0$, es decir, $D=dc+r$. Veamos que $r<|d|$. Por reducción al absurdo, si $r\geq |d|$ entonces $r'=r-|d|\geq 0$. Es más, como $d\neq 0$, $r'>r$, pero $r'\in S$ ya que $r'=r\pm d=D-dc\pm d=D-d(c\mp 1)$. Esto contradice la minimalidad de $r\in S$.
+
+Veamos ahora la unicidad del cociente y del resto. Supongamos que también $D=dc'+r'$ para ciertos $c',r'\in\mathbb{Z}$ con $0\leq r'<|d|$. Entonces $dc+r=dc'+r'$. Si $r=r'$ entonces $dc=dc'$. Como $d\neq 0$ podemos aplicar la propiedad cancelativa y deducimos que $c=c'$. Veamos que es imposible que $r\neq r'$. De lo contrario, podemos suponer sin pérdida de generalidad que $r>r'$. Como $0\leq r,r'<|d|$ entonces $0<r-r'<|d|$, pero $r-r'=d(c'-c)$, que es divisible por $d$, así que $|d|\leq |r-r'|$, lo cual entra en contradicción.
+{{% /proof %}}
 
 {{% remark %}}
-De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$. Todo anillo no trivial posee al menos un ideal maximal. ¿Cuál es en el caso de los cuerpos?
+En las circunstancias anteriores, decimos que $D$ es el **dividendo**, $d$ es el **divisor**, $c$ es el **cociente** y $r$ es el **resto** de la **división euclídea** de $D$ entre $d$.  Es frecuente relajar la segunda condición del teorema y pedir solo que $0\leq |r|<|d|$. En este caso, el cociente y el resto no tienen por qué ser únicos. Más concretamente, si la división no es exacta siempre hay dos restos posibles, uno positivo y otro negativo, por ejemplo $14=3\cdot 4+2=3\cdot 5+(-1)$.
+{{% /remark %}}
+
+{{% proposition %}}
+Dados $D,d\in\mathbb{Z}$, $d\neq 0$, $d|D$ si y solo si el resto de la división de $D$ entre $d$ es $r=0$.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ Si $d|D$ entonces existe $c\in\mathbb{Z}$ tal que $dc=D$, luego $D=dc+0$ es una división euclídea con resto $r=0$. 
+
+$\Leftarrow$ Recíprocamente, si en la división euclídea $D=dc+r$ tenemos que $r=0$, entonces $d|D$.
+{{% /proof %}}
+
+{{% remark %}}
+Cuando las condiciones equivalentes de la proposición anterior se dan, decimos que la división euclídea de $D$ entre $d$ es **exacta**. Es frecuente relajar la segunda condición del teorema y pedir solo que $0\leq |r|<|d|$. En este caso, el cociente y el resto no tienen por qué ser únicos. Más concretamente, si la división no es exacta siempre hay dos restos posibles, uno positivo y otro negativo, por ejemplo $14=3\cdot 4+2=3\cdot 5+(-1)$.
 {{% /remark %}}
 
 
-{{% proposition %}}
-Un ideal $I\subset R$ es maximal $\Leftrightarrow$ $R/I$ es un cuerpo.
-{{% /proposition %}}
 
+Ahora podemos demostrar que todos los subgrupos de $\mathbb{Z}$ son cíclicos.
+
+{{% theorem label="subgruposZ" %}}
+Todos los subgrupos de $\mathbb{Z}$ son cíclicos.
+{{% /theorem %}}
 
 {{% proof %}}
-Recordemos que un cuerpo es un anillo no trivial con dos ideales. El anillo $R/I$ es no trivial si y solo si $I\subsetneq R$, que es la primera condición de maximalidad. Es más $R/I$ tiene solo dos ideales si y solo si solo hay dos ideales de $R$ que contengan a $I$ (necesariamente el total y el propio $I$). Esta es la segunda condición de maximalidad.  
+Sea $H\subset\mathbb{Z}$ un subrgupo cualquiera. El subgrupo trivial $H=\\{0\\}$ es cíclico pues está generado por el elemento neutro $H=\langle 0\rangle$. Supongamos que $H\neq\\{0\\}$ entonces existe algún elemento $m\in H$ no nulo $m\neq 0$. De hecho existe algún elemento positivo, ya que si $m<0$ entonces $-m\in H$, por ser $H$ un subgrupo, y $-m>0$. 
+
+Sea $$S=\\{m\in H\mid m>0\\}\subset\mathbb{Z}.$$
+Por el principio de buena ordenación, hay un mínimo $n\in S$. Veamos que $\langle n\rangle = H$. Por definición, $\langle n\rangle$ está formado por los múltiplos de $n$. La inclusión $\subset$ es cierta ya que $n\in H$, $H$ es un subgrupo y cualquier múltiplo de $n$ se obtiene sumando $n$ o $-n$ consigo mismo un número determinado de veces. Para ver $\supset$, tenemos que comprobar que todos los elementos de $H$ son múltiplos de $n$. Sea $a\in H$. Realizamos la división euclídea de $a$ por $n$: $a=nc+r$, $0\leq r<n$. Si $r=0$ entonces $a=nc\in \langle n\rangle$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. De lo contrario, $0<r<n$. Es más, $r=a-nc\in H$ pues $a\in H$, $nc\in\langle n\rangle \subset H$ y $H$ es un subgrupo. Por tanto $r\in S$, pero $r<n$, y esto contradeciría la minimalidad de $n$.
 {{% /proof %}}
 
+{{% remark %}}
+En la demostración hemos visto que todo subgrupo $H\subset \mathbb{Z}$ está generado por el menor $n\in H$, $n>0$.
+{{% /remark %}}
 
 {{% corollary %}}
-Todo ideal maximal es primo.
+Todo subgrupo de $\mathbb{Z}$ es un ideal principal y todo ideal de $\mathbb{Z}$ es principal.
 {{% /corollary %}}
 
-
-{{% definition %}}
-Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio donde todos los ideales son principales.
-{{% /definition %}}
-
-Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
-
-
-
-{{% proposition %}}
-En un dominio de ideales principales $R$ todos los ideales primos no nulos son maximales.
-{{% /proposition %}}
-
-
 {{% proof %}}
+Hemos visto que todo subgrupo $H\subset \mathbb{Z}$ es cíclico, es decir $H=\langle n\rangle$ para cierto $n\in\mathbb{Z}$. Anteriormente habíamos observado que $\langle n\rangle=(n)$ coincide con el ideal principal formado por los múltiplos de $n$.
 
-Supongamos que $(a)\subset (b)\subset R$, con $(a)$ primo y $a\neq0$. Entonces $a=cb$ para cierto $c\in R$. En particular $cb\in (a)$, que es primo, luego $c\in (a)$ o $b\in (a)$.
-
-Si $b\in (a)$ entonces $(b)\subset (a)$, luego $(a)=(b)$.
-
-Si $c\in (a)$ entonces $c=da$ para cierto $d\in R$, por tanto $a=dab=dba$. Por la propiedad cancelativa $db=1$, así que $b$ es una unidad, luego $(b)=R$. 
+Si $I\subset\mathbb{Z}$ es un ideal, en particular es un subgrupo, así que existe $n\in\mathbb{Z}$ tal que $I=\langle n\rangle = (n)$.
 {{% /proof %}}
 
+<!--
 
-{{% example name="Ideales maximales y geometría" %}}
-Dado un cuerpo $k$, todo punto $\mathbf{a}=(a\_1,\dots,a\_n)\in k^n$ del espacio afín $n$-dimensional define un ideal maximal de $k[x\_1,\dots,x\_n]$, $$I_{\mathbf{a}}=(x\_1-a\_1,\dots,x\_n-a\_n).$$ Es en efecto maximal porque es el núcleo del homomorfismo sobreyectivo de evaluación $$\begin{array}{rcl} k[x\_1,\dots,x\_n]&\longrightarrow& k,\cr p(x\_1,\dots,x\_n)&\mapsto&p(a\_1,\dots,a\_n). \end{array}$$ Por tanto $k[x\_1,\dots,x\_n]/I_{\mathbf{a}}\cong k$ es un cuerpo por el primer teorema de isomorfía. El **Teorema de los Ceros de Hilbert** dice que si $k=\mathbb C$ o cualquier otro cuerpo algebraicamente cerrado, entonces estos son los únicos ideales maximales de $k[x\_1,\dots,x\_n]$, con lo que tendríamos una biyección, $$\\{\text{Ideales maximales de }k[x\_1,\dots,x\_n]\\}\longleftrightarrow k^n.$$ Como consecuencia de esto y de la caracterización de ideales de un cociente deducimos que si $X\subset k^n$ es el conjunto de soluciones de unas ecuaciones polinómicas, $p_i(x\_1,\dots,x\_n)\in k[x\_1,\dots,x\_n]$, $1\leq i\leq m$, $$X\colon\left\\{ \begin{array}{c} p_1(x\_1,\dots,x\_n)=0,\cr \vdots\quad\cr p_m(x\_1,\dots,x\_n)=0, \end{array} \right.$$ entonces tenemos una biyección $$\\{\text{Ideales maximales de }k[x\_1,\dots,x\_n]/(p_1,\dots,p_m)\\}\longleftrightarrow X.$$ El álgebra del anillo cociente $k[x\_1,\dots,x\_n]/(p_1,\dots,p_m)$ no solo captura el conjunto de puntos de $X$ sino toda su geometría. Por desgracia, otros resultados más precisos al respecto se escapan del alcance de la asignatura.
-{{% /example %}}
+{{% definition %}}
+{Máximo común divisor} {Dados dos enteros
+$a$ y $b$, diremos que $d$ es {\bf un máximo común divisor} de $a$ y $b$ y
+denotaremos $d=\mbox{\bf mcd}(a,b)$, si se verifica:
+\begin{enumerate}
+
+\item $d|a$ y $d|b$.
+
+\item Si $d'$ es tal que $d'|a$ y $d'|b$ entonces $d'|d$.
+\end{enumerate}
+Si $1$ es un máximo común divisor de $a$ y $b$, se dice que $a$ y $b$ son {\bf primos entre sí}.}
+{{% /definition %}}
+
+{{% watch %}}
+Demostraremos más adelante la existencia de máximo común divisor para cualquier par de enteros $a$ y $b$. Si $d$ y $d'$ son dos máximos comunes divisores de $a$ y $b$, entonces debe verificarse que $d|d'$ y $d'|d$, luego $d'=\pm d$. Es decir, el máximo común divisor, si existe, {\bf es único salvo el signo}.
+{{% /watch %}}
+
+{{% proposition %}}
+
+Se verifican las siguientes propiedades:
+\begin{enumerate}
+\item ${\rm mcd}(a,b)=b\Leftrightarrow b|a$.
+\item $\mcd (a,b)=\mcd (-a,b)=\mcd (a,-b)=\mcd (-a,-b)$.
+\item $\mcd (a,b)=\mcd (b,a)$.
+\end{enumerate}
+{{% /proposition %}}
+
+{{% definition %}}
+{Mínimo común múltiplo} {Sean $a$ y $b$ enteros. Diremos que $m$ es un {\bf mínimo común múltiplo} de $a$
+y $b$ y denotaremos $m=\mbox{\bf mcm}(a,b)$, si se verifica:
+\begin{enumerate}
+
+\item $a|m$ y $b|m$.
+
+\item Si $m'$ es tal que $a|m'$ y $b|m'$ entonces $m|m'$.
+\end{enumerate}}
+{{% /definition %}}
 
 
-{{% example name="Ideales maximales, análisis y topología" %}}
-Dado un espacio topológico compacto de Hausdorff $X$, denotamos $\mathcal C(X)$ al anillo de funciones continuas $X\rightarrow \mathbb C$. Cualquier punto $x\in X$ define un homomorfismo sobreyectivo $$\begin{array}{rcl} ev_x\colon\mathcal C(X)&\longrightarrow& \mathbb C,\cr f&\mapsto&f(x), \end{array}$$ cuyo núcleo $\ker ev_x\subset\mathcal C(X)$ es un ideal maximal por el primer teorema de isomorfía. La **Teoría de Representación de Gelfand** dice que todos los ideales maximales de $\mathcal C(X)$ son de esta forma, con lo que tenemos una biyección $$\\{\text{Ideales maximales de }\mathcal C(X)\\}\longleftrightarrow X.$$ Esta correspondencia da lugar a una equivalencia de categorías entre los espacios compactos de Hausdorff y las $C^{\ast}$-álgebras conmutativas unitarias, que es una clase de anillos a la que $\mathcal C(X)$ pertenece. Esto permite estudiar la topología desde el punto de vista del álgebra y del análisis funcional. 
-{{% /example %}}
+{{% watch %}}
+ También demostraremos más adelante la existencia de mínimo común múltiplo para cualquier par de enteros $a$ y $b$. Si $m$ y $m'$ son dos mínimos comunes múltiplos de $a$ y $b$, entonces debe verificarse que $m|m'$ y $m'|m$, luego $m'=\pm m$. Es decir, el mínimo común múltiplo, si existe, {\bf es único salvo el signo}.
+{{% /watch %}}
 
+{{% proposition %}}
+
+Se verifican las siguientes propiedades:
+\begin{enumerate}
+\item ${\rm mcm}(a,b)=b\Leftrightarrow a|b$.
+\item $\mcm (a,b)=\mcm (-a,b)=\mcm (a,-b)=\mcm (-a,-b)$.
+\item $\mcm (a,b)=\mcm (b,a)$.
+\end{enumerate}
+{{% /proposition %}}
+
+-->

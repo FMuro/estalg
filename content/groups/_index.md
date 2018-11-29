@@ -1020,7 +1020,7 @@ Por definición de homomorfismo, el producto de dos elementos de $\im f$ está e
 
 La composición de homomorfismos es un homomomorfismo.
 
-{{% proposition %}}
+{{% proposition label="homocomp" %}}
 Dados dos homomorfismos como en el siguiente diagrama,
 \\[G\stackrel{f}\To H\stackrel{g}\To K,\\]
 la composición
