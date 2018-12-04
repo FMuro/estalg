@@ -249,13 +249,10 @@ Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos q
 
 
 {{% corollary %}}
- Dadas extensiones $F\subset K\subset L$: 
+Dadas extensiones $F\subset K\subset L$: 
 
 * $[K:F]=[L:F]\Rightarrow K=L$.
-
 * $[L:F]=[L:K]\Rightarrow F=K$.
-
-
 {{% /corollary %}}
 
 
@@ -294,7 +291,73 @@ Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos q
 Por inducción en el grado. Si $[K:F]=1$ no hay nada que demostrar pues $K=F$. Supongamos que $[K:F]=n>1$ y que el resultado es cierto para extensiones de grado ${<}n$. Entonces, como la inclusión $F\subsetneq K$ es estricta ha de existir $\alpha\_1\in K$ tal que $\alpha\_1\notin F$. Por tanto $F\subsetneq F[\alpha\_1]\subset K$. Esto implica que $[F[\alpha\_1]:F]>1$ así que $$\begin{array}{rcl}n&=&[K:F]\cr &=&[K:F[\alpha\_1]][F[\alpha\_1]:F]\cr &>&[K:F[\alpha\_1]].\end{array}$$ Entonces, por hipótesis de inducción, han de existir $\alpha\_2,\dots,\alpha\_n\in K$ tales que $$\begin{array}{rcl}K&=&F[\alpha\_1][\alpha\_2,\dots,\alpha\_n]\cr &=&F[\alpha\_1,\dots,\alpha\_n].\end{array}$$   
 {{% /proof %}}
 
+En la siguiente sección veremos que, para extensiones contenidas en $\mathbb{C}$ basta uno.
 
+
+## Elementos primitivos
+
+Recuerda que $\alpha\in\mathbb{C}$ es una **raíz múltiple** de $f(x)\in\mathbb{C}[x]$ si $(x-\alpha)^2|f$.
+
+{{% proposition %}}
+Un polinomio $f(x)\in\mathbb{C}[x]$ tiene una raíz múltiple $\alpha\in\mathbb{C}$ si y solo si $\alpha$ es raíz de $f$ y de su derivada $f'$.
+{{% /proposition %}}
+
+{{% proof %}}
+Sabemos que $\alpha$ es raíz de $f$ si y solo si $(x-\alpha)|f$, es decir, si y solo si $f(x)=g(x)(x-a)$ para cierto $g(x)\in\mathbb{C}[x]$. Por tanto, $\alpha$ es una raíz múltiple de $f(x)$ si y solo si $(x-\alpha)|g$, es decir, si y solo si $\alpha$ es también una raíz de $g$. La derivada de $f$ es
+$$f'(x)=g'(x)(x-\alpha)+g(x),$$
+luego $f'(\alpha)=g(\alpha)$, así que $\alpha$ es una raíz de $f'$ si y solo si es raíz de $g$.
+{{% /proof %}}
+
+{{% proposition %}}
+Un polinomio $f(x)\in\mathbb{C}[x]$ tiene alguna raíz múltiple si y solo si $f$ y $f'$ no son coprimos.
+{{% /proposition %}}
+
+{{% proof %}}
+$\Rightarrow$ Si $\alpha$ es una raíz múltiple de $f$, hemos visto antes que también es raíz de $f'$, por tanto $x-\alpha$ divide tanto a $f$ como a $f'$.
+
+$\Leftarrow$ Si $f$ y $f'$ no son coprimos, entonces $\operatorname{mcd}(f,f')=g(x)$ es un polinomio no constante. Como $\mathbb{C}$ es algebraicamente cerrado, $g(x)$ tiene alguna raíz $\alpha\in\mathbb{C}$. Es más, como $g|f$ y $g|f'$, $\alpha$ también es raíz de $f$ y de $f'$, luego es una raíz múltiple de $f$.
+{{% /proof %}}
+
+{{% proposition %}}
+Dada una extensión $F\subset\mathbb{C}$, si $f(x)\in F[x]$ es irreducible entonces $f$ y $f'$ son coprimos, en particular $f$ no tiene raíces múltiples en $\mathbb{C}$.
+{{% /proposition %}}
+
+{{% proof %}}
+Como $f$ es irreducible, no es constante, así que $f'\neq 0$. Sea $g=\operatorname{mcd}(f,f')$. Si $g$ no es constante, entonces $g$ y $f$ son asociados, ya que $g|f$ y $f$ es irreducible. Podemos pues suponer que $g=f$. Entonces $f|f'$, pero esto es imposible porque $f'\neq 0$, así que el grado de $f'$ es $<$ el grado de $f$.
+{{% /proof %}}
+
+{{% definition %}}
+Dada una extensión finita $F\subset K$, decimos que $\alpha\in K$ es un **elemento primitivo** si $K=F[\alpha]$.
+{{% /definition %}}
+
+Como de costumbre, en el enunciado del siguiente resultado "casi todo" significa "todo menos una cantidad finita".
+
+{{% lemma %}}
+Dada una extensión finita $F\subset K$ tal que $K\subset\mathbb{C}$ y $K=F[\alpha,\beta]$, $\gamma=\beta+c\alpha$ es un elemento primitivo para casi todo $c\in F$.
+{{% /lemma %}}
+
+{{% proof %}}
+Sean $f(x),g(x)\in F[x]$ los polinomios irreducibles de $\alpha,\beta\in K$, respectivamente. Supongamos que sus grados respectivos son $m,n\geq 1$. Sean $\alpha\_1,\dots,\alpha\_m$ y $\beta\_1,\dots,\beta\_n$ sus raíces en $\mathbb{C}$, con $\alpha=\alpha\_1$ y $\beta=\beta\_1$. Como $f$ y $g$ no tienen raíces múltiples por ser irreducibles, los $\alpha\_i$ son todos distintos, y también los $\beta\_j$. Dado $c\in F$, denotemos
+$$\gamma\_{ij}=\beta\_j+c\alpha\_i.$$
+Veamos que, si $(i,j)\neq (k,l)$, la igualdad $\gamma\_{ij}=\gamma\_{kl}$ solo puede ser cierta para un único valor de $c\in F$. En efecto, esto es cierto pues equivale a 
+$$c(\alpha\_i-\alpha\_k)=\beta\_l-\beta\_j.$$
+Si $i\neq k$ entonces $\alpha\_i\neq \alpha\_k$ y podemos despejar $c$, que sería única. Si $i=k$ entonces $j\neq l$, luego $\beta\_l\neq \beta\_j$ y no hay ningún valor de $c$ que satisfaga la ecuación. Por tanto, para casi todos los $c\in F$, los $\gamma\_{ij}$ son todos distintos. Fijemos tal $c\in F$, necesariamente no nula, y demostremos que $\gamma=\gamma_{11}$ es un elemento primitivo.
+
+Consideramos la extensión intermedia $F\subset F[\gamma]\subset F[\alpha,\beta]$. Bastará demostrar que $\alpha\in F[\gamma]$, ya que entonces también $\beta=\gamma-c\alpha\in F[\gamma]$, y por tanto tendríamos la otra inclusión $F[\gamma]\supset F[\alpha,\beta]$. 
+
+Como $g(x)\in F[x]$, $h(x)=g(\gamma-cx)\in F[\gamma][x]$. Tenemos que $\alpha\in \mathbb{C}$ es raíz de $h$ ya que $h(\alpha)=g(\gamma-c\alpha)=g(\beta)=0$. También es raíz de $f\in F[x]$, que es su polinomio mínimo. Veamos que no poseen más raíces complejas en común. En efecto, si algún otro $\alpha\_i$, $i>0$, fuera raíz de $h$, entonces $0=h(\alpha\_i)=g(\gamma-c\alpha\_i)$. Como las raíces de $g$ son los $\beta\_j$, tendríamos que $\gamma-c\alpha\_i=\beta\_j$, así que $\gamma\_{11}=\beta\_j+c\alpha\_i=\gamma_{ij}$, lo cual es imposible porque $i\neq 1$. De aquí deducimos que $\operatorname{mcd}(f,h)=x-\alpha$ en $\mathbb{C}[x]$. El divisor común máximo de dos polinomios está bien definido salvo producto por constantes no nulas. Es más, divisor común máximo de dos polinomios en $F[\gamma][x]$ lo es también en $\mathbb{C}[x]$, ya que toda división euclídea en el primero lo es también en el segundo, así que que el resultado de aplicar el arlgoritmo de Euclides en el primero es también válido en el segundo. Esto demuestra que $x-\alpha\in F[\gamma][x]$, así que en efecto $ \alpha\in F[\gamma]$.
+{{% /proof %}}
+
+
+{{% theorem name="del elemento primitivo" %}}
+Toda extensión finita contenida en $\mathbb{C}$ posee un elemento primitivo.
+{{% /theorem %}}
+
+{{% proof %}}
+Sea $F\subset K$ una extensión finita. Vimos al final de la sección anterior que estaba generada por una cantidad finita de elementos $\alpha\_1,\dots,\alpha\_n\in K$, $K=F[\alpha\_1,\dots,\alpha\_n]$. Demostraremos este teorema por inducción en el número $n$ de generadores. Para $n=1$ no hay nada que demostrar. Probémoslo para $n$ generadores suponiendo el resultado cierto para $n-1$. Aplicando la hipótesis de inducción, $F[\alpha\_1,\dots,\alpha\_{n-1}]=F[\beta]$, así que $K=F[\beta,\alpha\_n]$, que por el lema anterior posee un elemento primitivo.
+{{% /proof %}}
+
+Este teorema es cierto bajo hipótesis mucho más generales, pero la prueba se complica.
 
 
 
