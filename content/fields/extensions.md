@@ -246,6 +246,14 @@ Por inducción en $n$. Para $n=1$ está probado en el teorema anterior. Supongam
 Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos que $$\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i].$$ Ya hemos visto que la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]$  tiene grado $3$. Además, como $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$, la extensión $\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$ tiene grado $2$. Por tanto $$\begin{array}{rcl}[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q]&=&[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q[\sqrt[3]{2}]][\mathbb Q[\sqrt[3]{2}]:\mathbb Q]\cr &=&2\cdot 3=6.\end{array}$$
 {{% /remark %}}
 
+{{% corollary %}}
+Dada una extensión $F\subset K$, el subconjunto $L\subset K$ formado por los elementos de $K$ que son algebraicos sobre $F$ es un subcuerpo tal que $F\subset L$.
+{{% /corollary %}}
+
+{{% proof %}}
+Los elementos de $F$ son algebraicos de grado $1$ sobre $F$, así que $F\subset L$. Veamos que $L\subset K$ es un subanillo. Tenemos que $0,1\in F\subset L$. Dados $\alpha,\beta\in L$, por el corolario anterior $F\subset F[\alpha,\beta]$ es una extensión finita, así que todos sus elementos son algebraicos. Como $\alpha+\beta,\alpha\beta,-\alpha\in F[\alpha,\beta]$, deducimos que estos tres elementos son en efecto algebraicos. Esto prueba que $L\subset K$ es un subanillo. Además, si $\alpha\neq 0$ entonces $\alpha^{-1}\in F[\alpha,\beta]$, que por lo mismo será también algebraico, por tanto $L$ es un cuerpo.
+{{% /proof %}}
+
 
 
 {{% corollary %}}
@@ -518,9 +526,7 @@ En particular $[K:\mathbb Q]=2^n$.
 {{% /proof %}}
 
 
-{{% watch %}}
- La cantidad de raíces cuadradas que hemos de añadir a $\mathbb Q$ para construir $K$ ($n$ según la notación del teorema) no tiene relación con la cantidad de números constructibles $a\_1,\dots,a\_m$ que queremos que $K$ posea. 
-{{% /watch %}}
+La cantidad de raíces cuadradas que hemos de añadir a $\mathbb Q$ para construir $K$ ($n$ según la notación del teorema) no tiene relación con la cantidad de números constructibles $a\_1,\dots,a\_m$ que queremos que $K$ posea. 
 
 
 {{% corollary %}}
@@ -529,13 +535,17 @@ En particular $[K:\mathbb Q]=2^n$.
 
 
 {{% proof %}}
- Por el teroema anterior, si $a\in \mathbb R$ es constructible entonces $a\in K$ para cierta extensión finita $\mathbb{Q}\subset K$ de grado $2^n$. En particular $a$ es algebraico sobre $\mathbb Q$ y su grado divide a $2^n$, así que ha de ser una potencia de $2$.
+ Por el teorema anterior, si $a\in \mathbb R$ es constructible entonces $a\in K$ para cierta extensión finita $\mathbb{Q}\subset K$ de grado $2^n$. En particular $a$ es algebraico sobre $\mathbb Q$ y su grado divide a $2^n$, así que ha de ser una potencia de $2$.
 {{% /proof %}}
 
 
 {{% example name="Números constructibles de grado $2^m$ cualquiera" %}}
  Si $p\in\mathbb Z$ es un primo positivo, $\sqrt[n]{p}$ es constructible si y solo si $n$ es una potencia de $2$. Sabemos que este número tiene grado $n$ sobre $\mathbb Q$, así que solo puede ser constructible si $n=2^m$. Además en este caso podemos ver por inducción en $m$ que de hecho es constructible. Para $m=0$ es obvio porque es entero y si $\sqrt[2^{m-1}]{p}$ es constructible entonces $$\sqrt[2^m]{p}=\sqrt{\sqrt[2^{m-1}]{p}}$$ también, por ser la raíz cuadrada de un número constructible. 
 {{% /example %}}
+
+{{% remark %}}
+Más adelante veremos que hay números cuyo grado es una potencia de $2$ pero que no son constructibles, por ejemplo, las raíces reales del polinomio $x^4−6x+3\in\mathbb{Q}[x]$, que al ser irreducible tienen grado $4=2^2$.
+{{% /remark %}}
 
 
 {{% definition %}}
@@ -554,7 +564,7 @@ Veamos que en general es imposible trisecar un ángulo cualquiera con regla y co
 {{% /proposition %}}
 
 
-{{% proof %}}
+{{% proof %}}z
  Este ángulo se puede construir porque $\cos  60º=\frac{1}{2}$ es constructible. Cada ángulo de su trisección tendría $20º$ y el ángulo de $20º$ no es constructible. En efecto, la siguiente fórmula trigonométrica es cierta en general $$\cos 3\theta=4\cos^3\theta-3\cos\theta.$$ Tomando $\theta= 20º$ deducimos que $\alpha=\cos 20º$ es una raíz del polinomio $8x^3-6x-1$. Vamos a ver que este polinomio es irreducible sobre $\mathbb Q$, por tanto $\alpha$ tendrá grado $3$ sobre $\mathbb Q$, así que no podrá ser constructible. El polinomio $8x^3-6x-1$ es primitivo, por tanto es irreducible sobre $\mathbb Q$ si y solo si lo es sobre $\mathbb Z$. Sobre $\mathbb Z$ es irreducible por el criterio de reducción módulo $5$, ya que $3x^3-x-1\in\mathbb Z/(5)[x]$ tiene grado $\leq 3$ pero no tiene raíces.
 {{% /proof %}}
 
@@ -565,13 +575,22 @@ Veamos que en general es imposible trisecar un ángulo cualquiera con regla y co
 
 
 {{% proof %}}
- Esto equivale a la constructibilidad del ángulo de $\frac{2\pi}{p}$ radianes. 
+Esto equivale a la constructibilidad del ángulo de $\frac{2\pi}{p}$ radianes. 
 
 $\Leftarrow$  Es un resultado de Gauss que no probaremos.
 
-$\Rightarrow$ El número complejo $z=\cos\frac{2\pi}{p}+i\sin \frac{2\pi}{p}$ es una raíz $p$-ésima de la unidad, es decir, una raíz del polinomio $x^p-1$. Este polinonimio factoriza como $$(x-1)(x^{p-1}+\cdots+x+1)$$ y como $z\neq 1$, $z$ es raíz del segundo, que se denomina $p$-ésimo **polinomio ciclotómico** $$p(x)=x^{p-1}+\cdots+x+1.$$ Veamos que este polinomio es irreducible sobre $\mathbb Q$. Para ello hacemos el cambio de variable $x=y+1$, que se corresponde con el isomorfismo $$f\colon \mathbb Q[x]\longrightarrow \mathbb Q[y]$$ definido $f(p(x))=p(y+1)$, cuyo inverso viene dado por $f^{-1}(q(y))=q(x-1)$. Bastará por tanto comprobar que $p(y+1)$ es irreducible. Como $x^p-1=(x-1)p(x)$ entonces 
+$\Rightarrow$ El número complejo $\zeta=e^{\frac{2\pi i}{p}}=\cos\frac{2\pi}{p}+i\sin \frac{2\pi}{p}$ es una raíz $p$-ésima de la unidad, es decir, una raíz del polinomio $x^p-1$. Este polinonimio factoriza como $$(x-1)(x^{p-1}+\cdots+x+1)$$ y como $\zeta\neq 1$, $\zeta$ es raíz del segundo, que se denomina $p$-ésimo **polinomio ciclotómico** $$f(x)=x^{p-1}+\cdots+x+1.$$ Veamos que este polinomio es irreducible sobre $\mathbb Q$. Para ello hacemos el cambio de variable $x=y+1$, que se corresponde con el isomorfismo $g$ que pasamos a definir. 
+
+Consideramos el único homomorfismo de anillos
+$$g\colon \mathbb Q[x]\longrightarrow \mathbb Q[y]$$ 
+tal que $g\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[y]$ y $g(x)=y+1$, que está bien definido por el principio de sustitución. El homomorfismo $g$ está definido sobre un polinomio cualquiera $h(x)\in\mathbb{Q}[x]$ como $g(h(x))=h(y+1)$.
+Análogamente, consideramos el único homomorfismo
+$$g'\colon \mathbb Q[y]\longrightarrow \mathbb Q[x]$$ 
+tal que $g'\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[x]$ y $g'(y)=x-1$. Sobre un polinomio cualquiera $h'(y)\in\mathbb{Q}[y]$, el homomorfismo $g'$ está definido como $g'(h'(y))=h'(x-1)$. Es fácil comprobar que $g'\circ g=1\_{\mathbb{Q}[x]}$ y $g\circ g'=1\_{\mathbb{Q}[y]}$, por tanto $g$ es un isomorfismo con inverso $g^{-1}=g'$. En particular, $f(x)$ es irreducible en $\mathbb{Q}[x]$ si y solo si $g(f(x))=f(y+1)$ es irreducible en $\mathbb{Q}[y]$. Vamos a probar esto último.
+
+Como $x^p-1=(x-1)f(x)$ entonces 
 $$\begin{array}{rcl}
-yp(y+1)&=&(y+1)^p-1\cr
+yf(y+1)&=&(y+1)^p-1\cr
 &=& \sum\_{n=1}^{p}\binom{p}{n}y^n.
 \end{array}$$
 Aplicando la propiedad cancelativa en el dominio $\mathbb Q[y]$ obtenemos que
@@ -580,7 +599,7 @@ p(y+1)&=&\sum\_{n=1}^{p}\binom{p}{n}y^{n-1}.
 \end{array}$$
 Este polinomio es irreducible por el criterio de Eisenstein para el primo $p$ ya que el coeficiente líder es $1$, el término independiente es $p$, y $p$ divide a $\binom{p}{n}$ para todo $0{<}n{<}p$. 
 
-Por ser el polinomio ciclotómico irreducible y tener a $z$ como raíz, deducimos que $z$ tiene grado $p-1$ sobre $\mathbb Q$. Si $\theta$ fuera constructible, tendríamos un cuerpo $K\subset\mathbb R$ tal que $\cos\frac{2\pi}{p}, \sin\frac{2\pi}{p}\in K$ y $[K:\mathbb Q]=2^n$. Como $K$ está contenido en los reales, $[K[i]:K]=2$, luego $[K[i]:\mathbb Q]=[K[i]:K][K:\mathbb Q]=2^{n+1}$. Además, $z\in K[i]$ luego el grado de $z$, que es $p-1$, ha de ser una potencia de $2$.
+Por ser el polinomio ciclotómico $f(x)$ irreducible y tener a $\zeta$ como raíz, deducimos que $\zeta$ tiene grado $p-1$ sobre $\mathbb Q$. Si $\frac{2\pi}{p}$ fuera constructible, tendríamos un cuerpo $K\subset\mathbb R$ tal que $\cos\frac{2\pi}{p}, \sin\frac{2\pi}{p}\in K$ y $[K:\mathbb Q]=2^n$. Como $K$ está contenido en los reales, $[K[i]:K]=2$, luego $[K[i]:\mathbb Q]=[K[i]:K][K:\mathbb Q]=2^{n+1}$. Además, $\zeta\in K[i]$ luego el grado de $z$, que es $p-1$, ha de ser una potencia de $2$.
 {{% /proof %}}
 
 

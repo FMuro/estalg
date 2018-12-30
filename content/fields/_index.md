@@ -3,7 +3,6 @@ title = "Cuerpos"
 weight = 30
 +++
 
-
 ¿Sabías que es imposible construir un hepágono regular con una regla y un compás? ¿Sabías que también es imposible construir de este modo un cuadrado con la misma área que un círculo dado? Este último problema se conoce como la **cuadratura del círculo**. Fue planteado en la antigüedad y permaneció abierto hasta finales del siglo XIX.
 
 Seguro que sabes que la única raíz de un polinomio de grado 1, $ax+b$, es $$x=-\frac{b}{a}.$$ También sabes que las raíces de uno de grado 2, $ax^2+bx+c$, son
