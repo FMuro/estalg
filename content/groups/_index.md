@@ -280,6 +280,14 @@ Usando que $(x^{-1})^{-1}=x$, deducimos que $o(x)=o((x^{-1})^{-1})\leq o(x^{-1})
 Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=y\star x$ para todo $x,y\in G$.
 {{% /definition %}}
 
+{{% example name="Grupo producto" label="productgroup" %}}
+Dados dos grupos $(G,\star)$ y $(H,\ast)$, el **producto cartesiano** $G\times H$ es un grupo con la siguiente operación binaria:
+$$
+(g\_1,h\_1)(g\_2,h\_2)=(g\_1\star g\_2,h\_1\ast h\_2).
+$$
+El elemento neutro para el producto es $(e_G,e_H)$, es decir, el elemento neutro de cada grupo en cada una de las coordenadas.
+{{% /example %}}
+
 
 ## El grupo simétrico
 

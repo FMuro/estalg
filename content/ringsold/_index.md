@@ -682,7 +682,7 @@ Si $R$ es un dominio de integridad finito entonces existe un primo $p>0$ tal que
 
 
 Veamos un procedimiento, el algoritmo de Euclides, para el cálculo
-del máximo común divisor.
+del divisor común máximo.
 
 %
 {{% proposition %}}
@@ -724,7 +724,7 @@ Pues al ser los restos enteros mayores o iguales que cero cada vez más pequeño
 %
 {{% proposition %}}
  En la situación anterior se tiene que $\mbox{mcd}(a,b)=r_{n+1}$.
-Es decir, el máximo común divisor de $a$ y $b$ es el último resto no
+Es decir, el divisor común máximo de $a$ y $b$ es el último resto no
 nulo al aplicar sucesivamente el algoritmo de división.
 {{% /proposition %}}
 
@@ -740,18 +740,18 @@ $$
 lo cual demuestra el resultado.
 {{% /proof %}}
 
-Con este algoritmo hemos demostrado la existencia del máximo común divisor.
+Con este algoritmo hemos demostrado la existencia del divisor común máximo.
 
 {{% theorem %}}
-{Existencia del máximo común divisor} {Dados
-dos enteros no nulos $a$ y $b$, existe el máximo común divisor de $a$ y $b$, ${\rm mcd}(a,b)$, que es único salvo el signo.}
+{Existencia del divisor común máximo} {Dados
+dos enteros no nulos $a$ y $b$, existe el divisor común máximo de $a$ y $b$, $\operatorname{mcd}(a,b)$, que es único salvo el signo.}
 {{% /theorem %}}
 
 {{% watch %}}
  Sean $a,b$ enteros y sea $d=\mbox{mcd}(a,b)$. Obsérvese que para cualesquiera enteros $\gamma, \delta$ se verifica que $\gamma a + \delta b$ es un múltiplo de $d$.
 {{% /watch %}}
 
-Asociada al máximo común divisor está la identidad de Bézout, cuya
+Asociada al divisor común máximo está la identidad de Bézout, cuya
 existencia teórica viene afirmada por el siguiente teorema:
 
 
@@ -964,7 +964,7 @@ $$
 Considerando solo números primos positivos, como hemos hecho antes.
 {{% /watch %}}
 
-No es difícil comprobar la veracidad de la siguiente proposición, que nos da las definiciones de {\em máximo común divisor} y {\em mínimo común múltiplo} tal y como se trabajan en {\em secundaria}.
+No es difícil comprobar la veracidad de la siguiente proposición, que nos da las definiciones de {\em divisor común máximo} y {\em mínimo común múltiplo} tal y como se trabajan en {\em secundaria}.
 
 {{% proposition %}}
 
@@ -979,7 +979,7 @@ d=\prod_{p>0\; \mathrm{primo}} p^{\min({\nu_{a}(p),\nu_{b}(p))}}\,\mbox{ y }\,
 m=\prod_{p>0\; \mathrm{primo}}
 p^{\max({\nu_{a}(p),\nu_{b}(p))}}.
 $$
-Entonces $d={\rm mcd}(a,b)$ y $m={\rm mcm}(a,b)$.
+Entonces $d=\operatorname{mcd}(a,b)$ y $m={\rm mcm}(a,b)$.
 {{% /proposition %}}
 
 

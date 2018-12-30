@@ -992,7 +992,7 @@ Además, si $m=n$, las propiedades siguientes son equivalentes:
 \begin{enumerate}
 \item[(a)] $f$ es inyectiva.
 \item[(b)] $f$ es sobreyectiva.
-\item[(c)] $f$ es biyectiva.
+\item[( c )] $f$ es biyectiva.
 \end{enumerate}
 {{% /proposition %}} 
 

@@ -3,1068 +3,433 @@ title = "Polinomios"
 weight = 40
 +++
 
-<!--
-
-## Introducción
 
 
-
+## Anillos de polinomios
 
 {{% definition %}}
-{Polinomios con coeficientes en $A$}
-{Sea $A$ un anillo. Llamaremos {\bf conjunto de polinomios con coe\-fi\-cien\-tes en $A$}, y lo denotaremos por $A[x]$, al conjunto de las expresiones de la forma
-$$a(x)=a_mx^m+a_{m-1}x^{m-1}+\ldots+a_1x+a_0,$$
-con los $a_i \in A$ y $m \in \N$.}
+Dado un anillo $R$ un **polinomio** en una **variable** $x$ con **coeficientes** en $R$ es una expresión de la forma
+$$f=f(x)=a\_nx^n+a\_{n-1}x^{n-1}+\cdots+a\_1x+a\_0$$
+donde los **coeficientes** $a\_0,\dots,a\_n\in R$ y $n\geq 0$. También se puede denotar como si fuera una serie
+$$p(x)=\sum_{n\geq 0}a\_nx^n$$
+dando por supuesto que **casi todos** los coeficientes son cero, es decir, todos excepto una cantidad finita. El **polinomio trivial** $0$ es aquel cuyos coeficientes son todos nulos. El **monomio** de **grado** $i$ de $f(x)$ es $a\_ix^i$ y su coeficiente es $a\_i$. El **grado** de un polinomio no trivial $f(x)$ es el mayor $n\geq 0$ tal que su coeficiente de grado $n$ es no nulo $a\_n\neq 0$. En este caso decimos que $a\_nx^n$ es su **monomio líder** y $a\_n$ su **coeficiente líder**. Su **término independiente** es $a\_0$. Un polinomio es **mónico** si su coeficiente líder es $1\in R$. Los **polinomios constantes** son los de grado $0$ y el nulo. El conjunto de los polinomios en una variable $x$ con coeficientes en $R$ se denota $R[x]$.
 {{% /definition %}}
 
-%Sea $k$ un cuerpo (por ejemplo, $\Q, \RR, \C, \F_p$). Denotaremos por $k[x]$ al conjunto de todas las expresiones de la forma
-%$$a(x)=a_mx^m+a_{m-1}x^{m-1}+\ldots+a_1x+a_0,$$
-%con los $a_i \in k$. De esta manera, $k[x]$ es el conjunto de todos los {\em{\bf polinomios con coeficientes en $k$}}. Dos polinomios son iguales si lo son coeficiente a coeficiente.
+{{% remark %}}
+El polinomio trivial no tiene asignado ningún grado según esta definición, pero podemos considerar que su grado es $-\infty$, ya que esta convención es compatible con fórmulas posteriores.
+{{% /remark %}}
 
-{{% definition %}}
-{Grado}{
-El {\em{\bf grado}} de un polinomio no nulo $a(x)$, notado $\mbox{grado}(a(x))$, es el mayor entero $n$ tal que $a_n\neq0$. El polinomio cuyos coeficientes son todos nulos se llama {\bf polinomio nulo} y se denota por $0$. Por convención, su grado es $\mbox{grado}(0)=-\infty$.}
-{{% /definition %}}
-
-{{% definition %}}
-{Definiciones}{
-Sea $a(x)=\sum_{i=0}^na_ix^i\in k[x]$ un polinomio no nulo con $a_n\neq0$ (de grado $n$). 
-
-Llamaremos {\em{\bf término líder}} de $a(x)$ al término $a_nx^n$, {\em{\bf coeficiente líder}} a $a_n$ y {\em{\bf término constante}} a $a_0$. 
-
-Un polinomio es {\em{\bf mónico}} si su coeficiente líder es $1$. Los polinomios se dicen {\em{\bf constantes}} cuando su grado es cero, así como el polinomio nulo.}
-{{% /definition %}}
-
-{{% watch %}}
- Los polinomios se pueden sumar y multiplicar, extendiendo las operaciones de $A$:
-
-Si $a(x)=\sum_{i=0}^na_ix^i$, $b(x)=\sum_{i=0}^mb_ix^i$, suponiendo sin pérdida de generalidad que $m\geq n$, podemos definir la suma como
-$$a(x)+b(x)=\sum_{i=0}^n(a_i+b_i)x^i+b_{n+1}x^{n+1}+\ldots+b_mx^m.$$
-Cuando $m=n$, basta quedarnos con el primer sumando de la expresión anterior.
-
-Tomando de nuevo $a(x)$ y $b(x)$, su producto está definido como:
-$$d(x)=a(x)b(x)=\sum_{l=0}^{m+n}d_lx^l,\quad\text{donde}\quad d_l=\sum_{i+j=l}a_ib_j.$$
-
-Estando así definidas las operaciones, es claro que extienden las de $A$; basta tomar $m=n=0$. Por otro lado, también es evidente que tenemos\footnote{Para ser estrictos, esto es cierto siempre y cuando asumamos que $-\infty<n$ y $-\infty+n=-\infty$ para cualquier $n\geq0$.} 
-\begin{itemize}
-\item $\mbox{grado}(a(x)+b(x))\leq\max\\{\mbox{grado}(a(x)),\mbox{grado}(b(x))\\}$, no dándose la igualdad solamente cuando $m=n$ y $a_m+b_n=0$.
-\item $\mbox{grado}(a(x)b(x))\leq\mbox{grado}(a(x))+\mbox{grado}(b(x))$ (se da la igualdad cuando $A$ es dominio de integridad).
-\end{itemize}
-{{% /watch %}}
-
-Es fácil comprobar que la suma y el producto de polinomios verifican las propiedades asociativa y distributiva, además de poseer la suma elemento neutro, elemento opuesto y ser conmutativa. En otras palabras:
+Recordemos que el conjunto $R[x]$ es un anillo con la suma y el producto definidos en un ejemplo [anterior](../rings/#polynomials). Además $R\subset R[x]$ es un subanillo formado por los polinomios constantes. Hemos visto en la prueba de una [proposición](../rings/#polydomain) anterior que si $R$ es un dominio entonces $R[x]$ también y dados $f,g\in R[x]$ se tiene que $$\deg(fg)=\deg(f)+\deg(g).$$ Además, 
+$$\deg(f+g)\leq\max\\{\deg(f),\deg(g)\\}$$
+dándose la igualdad si $\deg(f)\neq deg(g)$, ya que entonces el coeficiente líder de la suma será el mismo que el del polinomio de mayor grado. 
 
 {{% theorem %}}
-{El anillo $A[x]$}
-{El conjunto $A[x]$ con la suma y producto definidos anteriormente es un anillo. Además:
-\begin{itemize}
-\item Si $A$ es un anillo conmutativo, $A[x]$ es conmutativo.
-\item Si $A$ es un anillo con elemento unidad, $A[x]$ tiene elemento unidad.
-\item Si $A$ es dominio de integridad, $A[x]$ es dominio de integridad.
-\end{itemize}
-}
+Si $R$ es un dominio entonces $R[x]^\times=R^\times$.
 {{% /theorem %}}
 
-{{% theorem %}}
-{Unidades de $A[x]$}
-{Si $A$ es un dominio de integridad, un polinomio de $A[x]$ es una {\bf unidad} si y sólo si es una constante y es una unidad en $A$. Es decir, el grupo multiplicativo $A[x]^*$ de las unidades de $A[x]$ es el grupo $A^*$ de las unidades de $A$.}
-{{% /theorem %}}
-
-## El anillo $k[x]$. Divisibilidad
-
-En adelante consideraremos principalmente el anillo de polinomios $k[x]$, donde $k$ es un cuerpo (por ejemplo, $\Q, \RR, \C, \F_p$). Este anillo de polinomios es un dominio de integridad, conmutativo y unitario. Sus unidades son las de $k$, es decir, $k^*=k\setminus\\{ 0\\}$. El grado de los polinomios puede ser usado como una medida que, a modo del valor absoluto en los enteros, nos permite realizar la división euclídea. Veremos que ésta no es la única similitud con $\Z$.
-
-{{% theorem %}}
-{Teorema de división}
-{Sean $f(x),g(x)\in k[x]$ dos polinomios, con $g(x)\neq0$. Entonces, existen dos únicos polinomios $q(x),r(x)\in k[x]$ tales que
-$$f(x)=q(x)g(x)+r(x)$$
-y $\mbox{grado}(r(x))<\mbox{grado}(g(x))$.}
-{{% /theorem %}}
 {{% proof %}}
-
-La demostración es constructiva, indicando cómo se calculan cociente y resto de la división euclídea.\\
-Si $\mbox{grado}(f(x))<\mbox{grado}(g(x))$ tomamos $q(x)=0$, $r(x)=f(x)$, y ya hemos terminado nuestra construcción.
-
-
-
-Supongamos ahora que $\mbox{grado}(f(x))\geq\mbox{grado}(g(x))$ y sean $ax^m,bx^n$ los términos líder de $f(x),g(x)$ respectivamente. Escribamos
-$$f_1(x)=f(x)-(a/b)x^{m-n}g(x);$$
-así pues $f_1(x)$ es un polinomio de grado estrictamente inferior al de $f(x)$ y escogiendo $q_1(x)=(a/b)x^{m-n}$, tenemos que $f(x)=q_1(x)g(x)+f_1(x)$.
-
-Aplicando el mismo razonamiento a $f_1(x)$ y así sucesivamente, logramos crear un conjunto finito de igualdades del tipo
-$$\begin{array}{rcl}
-f(x) & = & q_1(x)g(x)+f_1(x)\\
-f_1(x) & = & q_2(x)g(x)+f_2(x)\\
-\vdots & & \vdots\\
-f_{t-1}(x) & = & q_t(x)g(x)+f_t(x),
-\end{array}$$
-donde
-$$\mbox{grado}(f_1(x))>\mbox{grado}(f_2(x))>\ldots>\mbox{grado}(f_t(x))$$
-y como vamos descendiendo al menos una unidad el grado en cada $f_i(x)$, o bien $f_t(x)=0$ o bien es de grado inferior al de $g(x)$, y de ahí la finitud del proceso. Poniendo
-$$q(x)=\sum_{i=1}^t q_i(x), \; r(x)=f_t(x)$$
-se tiene $f(x)=q(x)g(x)+r(x)$.
-
-
-
-Hemos probado la existencia. Probemos ahora la unicidad. Consideremos pues dos expresiones para $f(x)$ que verifiquen las propiedades que establece el teorema de división:
-$$f(x)=q(x)g(x)+r(x)=q'(x)g(x)+r'(x);$$
-entonces
-$$r(x)-r'(x)=(q'(x)-q(x))g(x),$$
-con lo que $r(x)-r'(x)$ debe ser nulo, ya que todo múltiplo no nulo de $g(x)$ tiene que ser de grado mayor o igual que él.
+Las unidades de $R$ también son unidades de $R[x]$ vistas como polinomios constantes ya que $R\subset R[x]$ es un subanillo. Recíprocamente, si $f\in R[x]$ es una unidad y $f^{-1}$ es su inversa, $ff^{-1}=1$ entonces 
+$$
+\begin{array}{rcl}
+0&=&\deg(1)\cr
+&=&\deg(ff^{-1})\cr
+&=&\deg(f)+\deg(f^{-1}).
+\end{array}
+$$
+Por tanto 
+$$\deg(f)=-\deg(f^{-1}).$$
+Como el grado de un polinomio es siempre $\geq 0$, los grados que aparecen a ambos lados de la última ecuación han de ser $0$, así que $f$ es una unidad de $R$.
 {{% /proof %}}
 
-\begin{metodocolor}{Algoritmo de división}
-{Para calcular el cociente y el resto de la división entre $f(x)$ y $g(x)$, de grados respectivos $m$ y $n$.\\
-Si $m\geq n$ tome
-$$f_1(x)=f(x)-(a/b)x^{m-n}g(x)\text{ ,  }q_1(x)=(a/b)x^{m-n}.$$
-Repita con $f_1(x)$ y $g(x)$ hasta que $\mbox{grado}(f_t(x))<\mbox{grado}(g(x))$. El cociente y el resto son
-$$q(x)=q_1(x)+\ldots+q_{t-1}(x)\text{, }r(x)=f_t(x).$$
-Si $m<n$, el cociente es 0 y el resto el propio $f(x)$.}
-\end{metodocolor}
+En adelante consideraremos casi siempre el anillo de polinomios $k[x]$ con coeficientes en un cuerpo $k$, que es un dominio. Sus unidades son $k^\times=k\setminus\\{0\\}$. El grado de un polinomio se puede usar como una medida de tamaño, al igual que el valor absoluto en los enteros. Esto nos permite realizar divisiones euclídeas en $k[x]$.
 
-Veamos cómo funciona esto último con un ejemplo, que nos acompañará por nuestra lectura de las próximas secciones.
+{{% remark %}}
+La definición de **divisibilidad** vista en $\mathbb{Z}$ tiene también sentido en $k[x]$ y satisface las mismas propiedades elementales, excepto las que aquí reseñamos. El polinomio $1$ es divisible por cualquier unidad, no solo por $\pm1$. Además, $f|g$ y $g|f$ si y solo si existe una unidad $\alpha\in k^\times$ tal que $f=\alpha\cdot g$. Esta unidad no tiene por qué ser $\pm 1$.
+{{% /remark %}}
 
-{{% example name="Ejemplo" %}}
+{{% theorem name="División euclídea" %}}
+Dados $D,d\in k[x]$, $d\neq0$, existen $c,r\in k[x]$ únicos tales que
+
+* $D=d\cdot c+r$,
+
+* $\deg( r )<\deg(d)$.
+{{% /theorem %}}
+
+{{% proof %}}
+Probamos primero la existencia. Si $\deg(D)<\deg(d)$ podemos tomar $c=0$, $r=D$. Supongamos ahora que $\deg(D)\geq\deg(d)$. Denotamos $\deg(D)=n$ y $\deg(d)=m$. Sean y sean $a\_nx^n$ y $b\_mx^m$ los monomios líderes de $D$ y $d$, respectivamente. Llamamos 
+$$c\_1=\frac{a\_n}{b\_m}x^{n-m}.$$
+El polinomio
+$$D_1=D-d\cdot c\_1$$
+es de grado estrictamente menor que $D$ ya que los monomios líderes de los polinomios de la derecha cancelan al restarlos. Al despejar en la ecuación anterior obtenemos
+$$D=d\cdot c\_1+D\_1.$$
+Si $\deg(D\_1)<\deg(d)$ entonces podemos tomar  y $r=D\_1$. Si $\deg(D\_1)\geq \deg(d)$, construimos polinomios $c\_2$ y $D\_2$ por el mismo procedimiento, de modo que 
+$$D\_1=d\cdot c\_2+D\_2,$$
+y si fuera necesario continuamos hasta que $\deg(D\_n)<\deg(d)$. Este procedimiento termina en un número finito de pasos porque $\deg(D\_{i+1})<\deg(D\_{i})$ por construcción. Llegados a este punto 
+$$\begin{array}{rcl}
+D & = & d\cdot c\_1+D\_1,\cr
+D\_1 & = & d\cdot c\_2+D\_2,\cr
+ &\vdots & \cr
+D\_{n-1} & = & d\cdot c\_n+D\_n,
+\end{array}$$
+podemos tomar
+$c=c\_1+\cdots+c\_n$ y $r=D\_n$.
+
+Veamos ahora la unicidad. Supongamos que
+$$D=d\cdot c+r=d\cdot c'+r'$$
+con $\deg( r ),\deg(r')<\deg(d)$. Entonces
+$$r-r'=(c'-c)d.$$
+Si $c\neq c'$ entonces el polinomio de la derecha tiene grado $\geq \deg(d)$, pero el de la izquierda tiene grado $\leq\max\\{\deg( r ),\deg(r')\\}<\deg(d)$, así que la única posibilidad es que $c=c'$ y por tanto $r=r'$.
+{{% /proof %}}
+
+{{% remark %}}
+En las circunstancias anteriores, decimos que $D$ es el **dividendo**, $d$ es el **divisor**, $c$ es el **cociente** y $r$ es el **resto** de la **división euclídea** de $D$ entre $d$.
+{{% /remark %}}
+
+{{% example name="Una división euclídea" label="unadiv" %}}
 
 Sean 
 $$
-f(x)=x^5-\frac{1}{2}x^3+2x^2-3x+3, \quad 
-g(x)=2x^3-\frac{2}{3}x^2+3x-1
+\begin{array}{rcl}
+D&=&x^5-\frac{1}{2}x^3+2x^2-3x+3, \cr
+d&=&2x^3-\frac{2}{3}x^2+3x-1,
+\end{array}
 $$ 
-dos polinomios de $\Q[x]$. Si queremos calcular el cociente y el resto de la división de $f(x)$ entre $g(x)$, tomamos en primer lugar
-$$f_1(x)=f(x)-\frac{1}{2}x^2g(x)=\frac{1}{3}x^4-2x^3+\frac{5}{2}x^2-3x+3.$$
-Como $\mbox{grado}(f_1(x))=4$, seguimos. Sea ahora
-$$f_2(x)=f_1(x)-\frac{1}{6}xg(x)=-\frac{17x^3}{9}+2x^2-\frac{17x}{6}+3.$$
-Tenemos que seguir, pues todavía no hemos bajado de grado 3, pero este será el último paso. Así,
-$$f_3(x)=f_2(x)+\frac{17}{18}g(x)=\frac{37 x^2}{27}+\frac{37}{18}.$$
-Ahora ya hemos terminado. El cociente y el resto de la división son
-$$q(x)=\frac{1}{2}x^2+\frac{1}{6}x-\frac{17}{18}, \quad r(x)=\frac{37}{27}x^2+\frac{37}{18}.$$
+dos polinomios de $\Q[x]$. Comenzamos tomando
+$$D\_1=D-\frac{1}{2}x^2\cdot d=\frac{1}{3}x^4-2x^3+\frac{5}{2}x^2-3x+3.$$
+Como $\deg(D\_1)\geq\deg (d)$, tomamos ahora
+$$D\_2=D\_1-\frac{1}{6}x\cdot d=-\frac{17}{9}x^3+2x^2-\frac{17}{6}x+3.$$
+De nuevo $\deg(D\_2)\geq\deg (d)$, así que tomamos
+$$D\_3=D\_2+\frac{17}{18}\cdot d=\frac{37}{27} x^2+\frac{37}{18}.$$
+Como finalmente $\deg(D\_3)<\deg(d)$, podemos tomar
+$$
+\begin{array}{rcl}
+c&=&\frac{1}{2}x^2+\frac{1}{6}x-\frac{17}{18}, \cr 
+r&=&D\_3=\frac{37}{27}x^2+\frac{37}{18}.
+\end{array}$$
 {{% /example %}}
 
-
-
-La división euclídea establece un paralelismo claro entre $k[x]$ y $\Z$ que tiene su reflejo más inmediato en el siguiente corolario.
-
-{{% corollary %}}
-
-Sea $I \subset k[x]$ un ideal. Entonces $I$ es un ideal principial. Eso es, existe $m(x) \in k[x]$ tal que 
-$$
-I = (m(x)) = \\{ f(x)m(x) \; | \; f(x) \in k[x] \\}.
-$$
-{{% /corollary %}}
-
-{{% proof %}}
-
-Queda como ejercicio, al ser similar a la equivalente para enteros.
-{{% /proof %}}
-
-Algunos otros resultados, circunscritos en este caso al anillo $k[x]$ son los suiguientes.
-
-{{% corollary %}}
-{\bf (Teorema del resto)}
-Sea un polinomio $f(x)\in k[x]$, y sea un elemento del cuerpo $a\in k$. Entonces $f(a)$ es el
-resto de dividir $f(x)$ por $x-a$.
-{{% /corollary %}}
-{{% proof %}}
-
-Por el teorema de división,
-$$f(x)=(x-a)q(x)+r(x)\text{, con }\mbox{grado}(r(x))<\mbox{grado}(x-a)=1.$$
-Por tanto, $r(x)$ debe ser constante, digamos $r$, luego $f(a)=(a-a)q(a)+r=r$.
-{{% /proof %}}
-
-{{% definition %}}
-{Raíz de un polinomio}
-{Sea $f(x)\in A[x]$ un polinomio, se dice que $a\in A$ es una {\bf raíz de $f(x)$} si $f(a)=0$.}
-{{% /definition %}}
-
-{{% corollary %}}
-{\bf (Teorema de la raíz)}
-Sea un polinomio $f(x)\in k[x]$ de grado positivo. Entonces $f(x)$ tiene una {\em\bf{raíz}} $a\in k$ si y sólo si es divisible por $x-a$.
-{{% /corollary %}}
-
-{{% proof %}}
-
-En efecto, podemos escribir $f(x)=q(x)(x-a)+r$ con $r\in k$. Así $f(a)=0$ si y sólo si $r=0$, lo que equivale a que $(x-a)|f(x)$.
-{{% /proof %}}
-
-{{% definition %}}
-{Multiplicidad de una raíz}
-{Sean $f(x)\in A[x]$ un polinomio y $a\in A$ una raíz. Se llama multiplicidad de $a$ al mayor entero positivo $m$ tal que $(x-a)^m$ divide a $f(x)$.}
-{{% /definition %}}
-
-{{% corollary %}}
-{\bf (D'Alembert)}
-Un polinomio no nulo $f(x)\in k[x]$ de grado $n$ tiene a lo sumo $n$ raíces distintas en $k$.
-{{% /corollary %}}
-{{% proof %}}
-
-Lo probaremos por inducción en $n$, el grado de $f(x)$.
-
-
-
-Si $\mbox{grado}(f(x))=0$, entonces $f(x)$ es un polinomio constante no nulo, luego no tiene raíces en $k$. Nuestra hipótesis de inducción es que si $h(x)$ es polinomio no nulo de grado $n-1$ con $r$ raíces distintas, entonces $r\leq n-1$.
-
-
-
-Supongamos ahora que $f(x)$ es un polinomio de grado $n>0$ y que tiene $r$ raíces distintas $a_1,\ldots,a_r$ en $k$. Veamos que $r\leq n$.
-
-
-
-Tenemos que $f(a_r)=0$, luego por el teorema de la raíz $f(x)=(x-a_r)g(x)$, con $\mbox{grado}(g(x))=n-1$. Para cada $i$ con $1\leq i\leq r-1$, $$
-f(a_i)=0=(a_i-a_r)g(a_i).
-$$ 
-Como $a_i\neq a_r$, por fuerza $g(a_i)=0$. En consecuencia $a_1,\ldots,a_{r-1}$ son raíces de $g(x)$ y $\mbox{grado}(g(x))=n-1$. Por inducción, $r-1\leq n-1$, así que $r\leq n.$
-{{% /proof %}}
-
-{{% watch %}}
-
-Hay que hacer notar que este corolario no implica el aserto de que todo polinomio posee tantas raíces como su grado. Este teorema es mucho más profundo e interesante y necesita conceptos que no veremos hasta más tarde.
-{{% /watch %}}
-
-
-
-## Máximo común divisor
-
-Continuan los parecidos razonables entre $k[x]$ y $\Z$, pues al igual que cuando manejamos los enteros, con el teorema de división para polinomios podemos trabajar la divisibilidad de polinomios, el algoritmo de Euclides y la identidad de Bézout.
-
-{{% definition %}}
-{Máximo común divisor}{
-Sean dos polinomios $f(x),g(x)\in k[x]$. Un polinomio $p(x)\in k[x]$ es un {\em{\bf máximo común divisor}} de $f(x)$ y $g(x)$ si verifica:
-\begin{enumerate}
-\item $p(x)|f(x)$ y $p(x)|g(x)$
-\item Si $q(x)$ es otro polinomio que divide a $f(x)$ y a $g(x)$ entonces $q(x)|p(x)$.
-\end{enumerate}}
-{{% /definition %}}
-
-{{% watch %}}
-
-El máximo común divisor de dos polinomios no es único. Si $p(x)=\mbox{mcd}(f(x),g(x))$, entonces, para cualquier $a\in k\setminus\\{0\\}$, $ap(x)=\mbox{mcd}(f(x),g(x))$. Por eso cuando hablamos de un máximo común divisor, podremos acordar que estamos tomando un polinomio mónico y, en esas condiciones, sí que es único.
-{{% /watch %}}
-
-Como en los enteros, podemos calcular un máximo común divisor de dos polinomios usando el teorema de división. Consideremos para ello dos polinomios $f(x),g(x)\in k[x]$. Sabemos que existen $q(x),r(x)\in k[x]$ con $\mbox{grado}(r(x))<\mbox{grado}(g(x))$ tales que 
-$$f(x)=q(x)g(x)+r(x).$$
+La siguiente proposición se prueba igual que para $\mathbb{Z}$.
 
 {{% proposition %}}
-
-Con las notaciones anteriores, se tiene que
-$$\mbox{\em mcd}(f(x),g(x))=\mbox{\em mcd}(g(x),r(x))$$
+Dados $D,d\in k[x]$, $d\neq 0$, $d|D$ si y solo si el resto de la división de $D$ entre $d$ es $r=0$.
 {{% /proposition %}}
-{{% proof %}}
-
-Supongamos que
-$$a(x)=\mbox{mcd}(g(x),r(x)), \; b(x)=\mbox{mcd}(f(x),g(x)).$$
-Como $f(x)=q(x)g(x)+r(x)$, $a(x)$ no puede sino dividir a $f(x)$ y así $a(x)$ es un divisor común de $f(x)$ y $g(x)$, luego por ser $b(x)$ el máximo entre ellos, $a(x)|b(x)$.
 
 
-
-Análogamente, como
-$$r(x)=f(x)-q(x)g(x),$$
-se tiene que  $b(x)|r(x)$ y así $b(x)$ es un divisor común de $g(x)$ y $r(x)$, luego $b(x)|a(x)$.
-{{% /proof %}}
+El siguiente teorema es análogo del que decía que todos los subgrupos de $\mathbb{Z}$ son cíclicos.
 
 {{% theorem %}}
-{Algoritmo de Euclides}
-{Sean $f(x),g(x)\in k[x]$ dos polinomios no nulos, con $\mbox{grado}(f(x))>\mbox{grado}(g(x))$. Entonces, si haciendo divisiones sucesivas obtenemos
-$$\begin{array}{lcl}
-  f(x) &=& q(x)g(x)+r(x)\\
-  g(x) &=& q_0(x)r(x)+r_1(x)\\
-  r(x) &=& q_1(x)r_1(x)+r_2(x)\\
-  & \vdots\\
-  r_{n-2}(x) &=& q_{n-1}(x)r_{n-1}(x)+r_n(x)\\
-  r_{n-1}(x) &=& q_n(x)r_n(x),
-\end{array}$$
-este proceso es finito y, con las notaciones anteriores, $\mbox{mcd}(f(x),g(x))=r_n(x)$.}
+Todo ideal $I \subset k[x]$ es principal.
 {{% /theorem %}}
 
 {{% proof %}}
-
-Consideremos la sucesión $\\{\mbox{grado}(r_i(x))\\}$, que es una sucesión estrictamente decreciente de enteros no negativos, pues el resto de la división polinómica es de menor grado que el divisor. Como el primer elemento es $\mbox{grado}(f(x))$, la sucesión puede tener a lo más $\mbox{grado}(f(x))+1$ elementos. Por tanto, existe un $n \geq 1$ tal que $r_{n+1}(x)=0$. Esto prueba la finitud del proceso.
-
-
-
-Ahora queda preguntarse si realmente obtenemos el máximo común divisor de $f(x)$ y $g(x)$. Para la respuesta basta con aplicar el resultado anterior para obtener que
-$$\mbox{mcd}(f(x),g(x))=\mbox{mcd}(g(x),r(x))=\ldots=\mbox{mcd}(r_{n-1}(x),r_{n}(x))=r_n(x).$$
+El ideal trivial es principal $\\{0\\}=(0)$ generado por el $0$. Si $I\neq\\{0\\}$, consideramos el conjunto
+Sea $$S=\\{\deg(f)\mid 0\neq f\in I \\}\subset\mathbb{Z}.$$
+Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\deg(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[x]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, $\deg( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\deg( r )\in S$, pero $\deg( r )<n$, y esto contradeciría la minimalidad de $n$.
 {{% /proof %}}
 
-Así pues, con este teorema hemos probado que el siguiente algoritmo es correcto:
+{{% definition %}}
+Una **raíz** de un polinomio $f\in R[x]$ es un elemento $a\in R$ tal que $f(a)=0$. 
+{{% /definition %}}
 
-\begin{metodocolor}{Algoritmo de Euclides}
-{Para hallar el máximo común divisor de dos polinomios no nulos $f(x),g(x)\in k[x]$.\\
-Efectúe la división $f(x)=q(x)g(x)+r(x)$ y tome $f_0(x)=f(x)$, $g_0(x)=g(x)$ y $r_0(x)=r(x)$. Mientras $r_i(x)\neq0$, repita con $f_{i+1}(x)=g_i(x)$ y $g_{i+1}(x)=r_i(x)$.\\
-Si $r_{n+1}(x)=0$, $\mbox{mcd}(f(x),g(x))=r_n(x)$, notando $r_{-1}(x)=g(x)$.}
-\end{metodocolor}
+Un resultado específico del anillo que nos ocupa es el siguiente.
 
-Como en la sección anterior, ilustremos el método de arriba con los mismos polinomios:
+{{% corollary %}}
+El elemento $a\in k$ es una raíz de $f\in k[x]$ si y solo si $(x-a)|f$.
+{{% /corollary %}}
 
-{{% example name="Ejemplo" %}}
+{{% proof %}}
+Realizamos la división euclídea
+$$f(x)=(x-a)\cdot q+r.$$
+Como $\deg( r )<\deg(x-a)=1$, el polinomio $r$ es constante $r\in k$, así que 
+$$f(a)=(a-a)\cdot q(a)+r=r,$$
+y sabemos que $r=f(a)=0$ si y solo si $(x-a)|f$.
+{{% /proof %}}
 
-Queremos hallar el máximo común divisor de 
+{{% remark %}}
+En general, los divisores de grado $1$ de un polinomio $f\in k[x]$ se corresponden con sus raíces, ya que $(ax-b)|f$, $a\neq 0$, si y solo si $(x-\frac{b}{a})|f$, pues para la relación de divisibilidad es irrelevante el producto por unidades.
+{{% /remark %}}
+
+El corolario anterior justifica la siguiente definición, que se usará más adelante.
+
+{{% definition %}}
+La **multiplicidad** de una raíz $a$ de $f\in k[x]$ es el máximo $n\geq 1$ tal que $(x-a)^n|f$.
+{{% /definition %}}
+
+{{% corollary %}}
+Un polinomio no nulo $f\in k[x]$ de grado $n$ tiene a lo sumo $n$ raíces distintas en $k$.
+{{% /corollary %}}
+
+{{% proof %}}
+Por inducción en $n=\deg(f)$. Si $n=0$, entonces $f$ es un polinomio constante no nulo, luego no tiene raíces. Sea ahora $n>0$. Suponemos, por hipótesis de inducción, que todo polinomio de grado $n-1$ tiene a lo sumo $n-1$ raíces distintas. Si $f$ no tuviera raíces no habría nada que probar. Si $f$ tiene una raíz $a\in k$ entonces $f=(x-a)g$ para cierto polinomio $g$, necesariamente de grado $n-1$. Bastará probar que las raíces de $f$ son las raíces de $g$ y además $a$. En efecto, $b\in k$ es una raíz de $f$ si y solo si $f(b)=(b-a)g(b)=0$. Como $k$ es un dominio, para que esto ocurra ha de suceder bien que $g(b)=0$ o bien que $b=a$.
+{{% /proof %}}
+
+
+{{% remark %}}
+Los conceptos de **divisor común máximo** y **múltiplo común mínimo** en $k[x]$ se definen como en $\mathbb{Z}$ y satisfacen las mismas propieades, excepto las que ahora señalamos. Estos conceptos están bien definidos salvo producto por unidades. Si $d$ y $d'$ son dos divisores comunes máximos de $f,g\in k[x]$ entonces existe $\alpha\in k^\times$ tal que $d'=\alpha\cdot d$, e igual para los múltiplos comunes mínimos. Además, $\mcd(f,g)=\mcd(\alpha\cdot f,\beta\cdot g)$ para todo $\alpha,\beta\in k^\times$. Destacamos que el divisor común máximo se puede calcular medialte el **algoritmo de Euclides** y que satisface la **identidad de Bézout**.
+{{% /remark %}}
+
+{{% example name="Algoritmo de Euclides" %}}
+Hallemos el divisor común máximo de los siguientes polinomios de $\Q[x]$, consideramos en el [ejemplo](#unadiv) anterior:
 $$
-f(x)=x^5-\frac{1}{2}x^3+2x^2-3x+3, \quad g(x)=2x^3-\frac{2}{3}x^2+3x-1
+\begin{array}{rcl}
+f&=&x^5-\frac{1}{2}x^3+2x^2-3x+3, \cr 
+g&=&2x^3-\frac{2}{3}x^2+3x-1.
+\end{array}
 $$ 
-en $\Q[x]$. Siguiendo el algoritmo, dividimos el primero entre el segundo, y tomamos
-$$f_0(x)=f(x)\text{,  }g_0(x)=g(x)\text{,  }r_0(x)=\frac{37}{27}x^2 +\frac{37}{18}.$$
-Como $r_0(x)\neq0$, dividimos $g(x)$ entre $r_0(x)$, tomando
-$$f_1(x)=g(x)\text{,  }g_1(x)=r_0(x)\text{,  }r_1(x)=0.$$
-La división anterior era exacta de cociente $(18/37)(3x-1)$, con lo que $\mbox{mcd}(f(x),g(x))=r_0(x)$, o tomando el polinomio mónico asociado,
-$$\mbox{mcd}(f(x),g(x))=x^2+\frac{3}{2}.$$
+Allí vimos que la división euclídea de $f$ por $g$ es
+$$f=g\cdot\left(\frac{1}{2}x^2+\frac{1}{6}x-\frac{17}{18}\right)+\left(\frac{37}{27}x^2 +\frac{37}{18}\right).$$
+Ahora tenemos que dividir $g$ por el resto. Esta división resulta ser exacta,
+$$g=\left(\frac{37}{27}x^2 +\frac{37}{18}\right)\left(\frac{54}{37}x-\frac{18}{37}\right)+0,$$
+por tanto el divisor común máximo es el último resto no nulo,
+$$\mcd(f,g)=\frac{37}{27}x^2 +\frac{37}{18}$$
+y una identidad de Bézout se obtiene simplemente despejando de la primera división euclídea,
+$$\frac{37}{27}x^2 +\frac{37}{18}=f\cdot 1+g\cdot\left(-\frac{1}{2}x^2-\frac{1}{6}x+\frac{17}{18}\right).$$
+podemos conseguir otro divisor común máximo con coeficientes enteros multiplicando por la unidad $\frac{54}{37}\in\mathbb{Q}^\times$,
+$$2x^2 +3=f\cdot \frac{54}{37}+g\cdot \left(-\frac{27}{37}x^2-\frac{9}{37}x+\frac{51}{37}\right).$$
 {{% /example %}}
 
 
 
-Hemos demostrado la validez del algoritmo de Euclides. Como pasaba en la primera sección, a pesar de ser un resultado aparentemente trivial, esconde algunas aplicaciones, siendo la primera de ellas la identidad de Bézout.
-
-{{% theorem %}}
-{Identidad de Bézout}
-{Sean $f(x),g(x)\in k[x]$ dos polinomios no nulos. Si denotamos $\mbox{mcd}(f(x),g(x))=d(x)$ entonces existen elementos $a(x),b(x)\in k[x]$ tales que
-$$d(x)=a(x)f(x)+b(x)g(x).$$}
-{{% /theorem %}}
-
-{{% proof %}}
-
-La demostración es consecuencia de aplicar el algoritmo de Euclides al revés.\\
-En efecto, si con la notación del teorema, llamamos $r_n(x)=d(x)$, tendremos que
-$$\begin{array}{rl}
-r_n(x)=&r_{n-2}(x)-q_{n-1}(x)r_{n-1}=\\
-      =&r_{n-2}(x)-q_{n-1}(x)(r_{n-3}(x)-q_{n-2}(x)r_{n-2}(x))=\\
-       &\vdots\\
-      =&\tilde{a}(x)r(x)+\tilde{b}(x)g(x)=\\
-      =&\tilde{a}(x)f(x)+(\tilde{b}(x)-\tilde{a}(x)q(x))g(x).
-\end{array}$$
-Tomando $a(x)=\tilde{a}(x)$ y $b(x)=(\tilde{b}(x)-\tilde{a}(x)q(x))$, tenemos lo que queríamos.
-
-Es posible dar una prueba distinta (no efectiva), siguiendo la expuesta en el tema anterior para los enteros, ya que solo se usa que todos los ideales del anillo son principales, y este es un hecho que también se verifica en $k[x]$.
-{{% /proof %}}
-
-{{% example name="Ejemplo" %}}
-
-Sabemos que 
-$$
-\mbox{mcd} \left( x^5-\frac{1}{2}x^3+2x^2-3x+3, 2x^3-\frac{2}{3}x^2+3x-1 \right)=x^2+\frac{3}{2}. 
-$$
-?`Cuáles son los polinomios $a(x)$ y $b(x)$ de la identidad de Bézout para ellos? Siguiendo el algoritmo de Euclides realizado anteriormente para ellos,
-$$d(x)=\frac{27}{37}f(x)-\frac{27}{37}\left(\frac{1}{2}x^2+\frac{1}{6}x-\frac{17}{18}\right)g(x),$$
-luego 
-$$
-a(x)=\frac{27}{37}, \quad b(x)=-\frac{27}{37}q(x).
-$$
-{{% /example %}}
-
-
-
-## Factorización. Factores múltiples
-
-Continuando con las analogías con el anillo de los enteros, vamos a ver qué elementos juegan el papel en el anillo de polinomios $k[x]$ de los números primos, y una vez que los hayamos identificado, trabajaremos un poco con ellos y con la noción de factorización.
+## Irreducibles
 
 {{% definition %}}
 {Polinomio irreducible}
-{Un polinomio $p(x)\in k[x]$ es {\em{\bf irreducible}} si no es una constante, y si el que podamos escribir $p(x)=f(x)g(x)$ implica que uno de los dos factores sea una unidad (una constante).}
+Sea $f\in k[x]$. Decimos que $f$ es **primo** si solo es divisible por $\alpha$ y $\alpha\cdot f$, $\alpha\in k^\times$. Decimos que $f$ es **irreducible** si no es nulo y además, si $f=gh$ entonces bien $g$ o bien $h$ es una unidad.
 {{% /definition %}}
 
+{{% remark %}}
+El $0$ no es primo y $f\in k[x]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Los polinomios de grado $1$ son todos irreducibles por la fórmula del grado de un producto. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[x]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
+{{% /remark %}}
+
 {{% proposition %}}
-
-Sea $p(x)\in k[x]$ un polinomio irreducible. Si $f(x)$ es un polinomio que no es divisible por $p(x)$, entonces $\mbox{mcd}(f(x),p(x))=1$.
+Un polinomio $f\in k[x]$ de grado $2$ o $3$ es irreducile si y solo si no tiene raíces en $k$.
 {{% /proposition %}}
-{{% proof %}}
 
-Sea $d(x)=\mbox{mcd}(p(x),f(x))$. Como $d(x)|p(x)$, existirá cierto polinomio $p_0(x)$ de modo que podamos escribir $p(x)=d(x)p_0(x)$. Ahora bien, por la definición de irreducibilidad, o bien $d(x)$ o bien $p_0(x)$ es constante. Si el polinomio constante es $d(x)$, tendríamos el resultado.\\
-Veamos pues qué pasa cuando el que fuera constante fuera $p_0(x)$. En ese caso $p(x) |d(x),$ 
-%$\mbox{grado}(d(x))=\mbox{grado}(p(x))>0$ y existiría un polinomio $f'(x)$ cumpliendo que $f(x)=d(x)f'(x)=p(x)(f'(x)/p'(x))$,
-por lo que $p(x)$ dividiría a $f(x)$, que no es posible. Por consiguiente $d(x)$ no puede ser nada más que una constante.
+{{% proof %}}
+Demostraremos ambas implicaciones por reducción al absurdo.
+
+$\Rightarrow$ Si $a\in k$ es una raíz de $f$ entonces $f=(x-a)g$, luego $2\leq \deg(f)=1+\deg(g)$, así que $g$ no puede ser una unidad, pues tendría grado $0$, luego $f$ sería reducible.
+
+$\Leftarrow$ Supongamos que $f$ es reducible y por tanto se descompone como $f=gh$, donde $g$ y $h$ no son unidades y por tanto $\deg(g),\deg(h)\geq 1$. Entonces $3\geq \deg{f}=\deg{g}+\deg(h)$, por tanto bien $\deg(g)=1$ o bien $\deg(h)=1$, así que $f$ tiene alguna raíz en $k$.
 {{% /proof %}}
 
-Veremos a continuación algunos resultados que dejaremos sin demostrar, pues sus pruebas se pueden escribir de una manera completamente análoga a las de sus semejantes del ámbito de los enteros.
-
 {{% proposition %}}
-{\bf (Teorema de Euclides)}
-Sea $p(x)\in k[x]$ un polinomio irreducible. Dados dos polinomios $f(x),g(x)\in k[x]$, si $p(x)|f(x)g(x)$, entonces $p(x)$ divide a alguno de los dos.
+Un polinomio no nulo $f\in k[x]$ es primo si y solo si es irreducible.
 {{% /proposition %}}
 
-{{% theorem %}}
-{Descomposición en factores irreducibles}
-{Cualquier polinomio no constante de $k[x]$ es irreducible o factoriza en producto de polinomios irreducibles. Este producto es único en tanto que si tenemos dos factorizaciones de $f(x)$ en producto de polinomios irreducibles en $k[x]$ de la forma 
-$$
-f(x)=p_1(x)\cdots p_s(x)=q_1(x)\cdots q_t(x)
-$$ 
-necesariamente $s=t$ y existe una correspondencia uno a uno entre los factores $p_1(x),\ldots,p_s(x)$ y $q_1(x),\dots,q_t(x)$ donde si $p_i(x)$ se corresponde con $q_j(x)$, existe un $\alpha\in k\setminus\\{0\\}$ tal que $p_i(x)=\alpha q_j(x)$.}
+{{% proof %}}
+$\Rightarrow$ Si $f=gh$, como $f|gh$ entonces $f|g$ o $f|h$. Como los papeles de $g$ y $h$ son intercambiables, podemos suponer que $f|g$, es decir $g=fc$. Entonces $f=gh=fc h$. Como $f$ no es nulo, el resto de polinomios tampoco. Tenemos que $\deg(f)=\deg(f)+\deg( c )+\deg(h)$. Al ser el grado de un polinomio no nulo $\geq 0$ deducimos que $\deg( c )=\deg(h)=0$. Es decir, $h$ es una constante no nula, y por tanto una unidad.
+
+$\Leftarrow$ Supongamos que $g|f$, es decir, $f=gc$ para cierto $c\in k[x]$. Como $f$ no es nulo, $g$ y $c$ tampoco. Si $\deg(g)=0$ entonces $g$ es una constante no nula, es decir una unidad. Si $\deg(g)=\deg(f)$ entonces $c$ es una unidad, $c\in k^\times$, por el mismo argumento, así que $g=c^{-1}f$. Queda por analizar qué ocurre si $0<\deg (g)<\deg(f)$. Como $\deg(f)=\deg(g)+\deg( c )$, entonces también $0<\deg ( c )<\deg(f)$, por lo que $g$ y $c$ no serían unidades. Esto contradeciría la irreducibilidad de $f$.
+{{% /proof %}}
+
+El siguiente teorema se prueba igual que para $\mathbb{Z}$, reemplazando el valor absoluto por el grado.
+
+{{% theorem name="fundamental de la aritmética" %}}
+Todo polinomio no constante de $k[x]$ se descompone como producto finito de polinomios irreducibles de manera única salvo orden y producto por unidades.
 {{% /theorem %}}
 
-{{% proposition %}}
+{{% corollary %}}
+Todo polinomio no constante de $k[x]$ se descompone como producto de una unidad y una cantidad finita de polinomios mónicos irreducibles de manera única salvo orden.
+{{% /corollary %}}
 
-Sea $I = (f(x)) \subset k[x]$ un ideal. Entonces son equivalentes las siguientes condiciones:
-\begin{enumerate}
-\item $I$ es maximal.
-\item $I$ es primo.
-\item $f(x)$ es irreducible.
-\end{enumerate}
-{{% /proposition %}}
-
-Vamos a presentar una herramienta específica y útil de los polinomios, que no tiene paralelismo en los enteros: la derivada (formal), que coincide con el concepto usual de análisis.
+{{% proof %}}
+Basta tomar una factorización dada por el teorema anterior y sacar factor común todos los coeficientes líderes.
+{{% /proof %}}
 
 
+La demostración del siguiente teorema también es igual que su versión entera.
 
-Usaremos la notación habitual:
-\begin{itemize}
-\item $f'(x)$ es el polinomio que se obtiene al derivar $f(x)$; \\
-\item $D:k[x]\rightarrow k[x]$ es la función que a cada polinomio le asocia su derivada. Esto es, $D(f(x)) = f'(x).$
-\end{itemize}
+{{% theorem  %}}
+En $k[x]$ hay infinitos polinomios mónicos irreducibles.
+{{% /theorem %}}
 
+Si $k$ es infinito, los polinomios $x-a$, $a\in k$, son un conjunto infinito de irreducibles, pero el teorema es también cierto cuando $k$ es finito.
 
+<!--
 
 {{% definition %}}
-{Derivada de un polinomio}
-{La {\em{\bf derivada}} de un polinomio $f(x)$ viene definida por las siguientes reglas:
-\begin{enumerate}
-\item Si $f(x)=ax^n$ con $a\in k$, entonces $D(ax^n)=nax^{n-1}$. (Si $n=0$, $D(a)=0$.)
-\item Si $f(x)=g(x)+h(x)$, entonces $D(f(x))=D(g(x))+D(h(x))$. Esto es, la derivada es un homomorfismo de grupos aditivos.
-\end{enumerate}}
+La **derivación** es el homomorfismo de $k$-espacios vectoriales $D\colon k[x]\rightarrow k[x]$ definidos sobre la base $\\{x^n\\}_{n\geq 0}$ como $D(1)=0$ y $D(x^n)=nx^{n-1}$ si $n>0$. En particular
+$$D(a\_nx^n+\cdots+a\_1x+a\_0)=na\_nx^{n-1}+\cdots+a\_1.$$
 {{% /definition %}}
 
-{{% proposition %}}
-
-Para cualesquiera polinomios $f(x),g(x)\in k[x]$ y para todo natural $s>1$ se verifica que:
-\begin{enumerate}
-\item $D(f(x)g(x))=f(x)D(g(x))+g(x)D(f(x)).$
-\item $D(f(x)^s)=sf(x)^{s-1}D(f(x)).$
-\end{enumerate}
-{{% /proposition %}}
-{{% proof %}}
-
-La prueba es puramente efectiva.
-%Sean $f(x)=\sum_{i=0}^na_ix^i$ y $g(x)=\sum_{j=0}^mb_jx^j$. Sabemos que $f(x)g(x)=\sum_{l=0}^{m+n}d_lx^l$, donde los coeficientes últimos vienen dados por $d_l=\sum_{i+j=l}a_ib_j$. Así, usando la definición,
-%$$D(f(x)g(x))=\sum_{l=1}^{m+n}ld_lx^{l-1}.$$
-%Por otro lado,
-%$$f(x)D(g(x))+g(x)D(f(x))=\sum_{i=0}^na_ix^i\sum_{j=1}^mjb_jx^{j-1}+\sum_{i=0}^nia_ix^{i-1}\sum_{j=0}^mb_jx^j=$$
-%$$=\sum_{l=1}^{m+n}\left(\sum_{i+j=l}ja_ib_j+ia_ib_j\right)x^{l-1},$$
-%y ambas expresiones son iguales.
-%
-%
-%
-%La segunda afirmación se obtiene de la primera aplicando el principio de inducción en $s$. Si $s=1$, el resultado es una identidad trivial, así que supongamos como hipótesis de inducción que el resultado es cierto cuando $s=k$, y probémoslo para $s=k+1$.\\
-%Por lo visto anteriormente, $D(f(x)^{k+1})=f(x)D(f(x)^k)+D(f(x))f(x)^k$. Por la hipótesis de inducción, esta expresión es igual a $f(x)kf(x)^{k-1}D(f(x))+D(f(x))f(x)^k=(k+1)f(x)^kD(f(x))$, como queríamos ver.
-{{% /proof %}}
-
-{{% theorem %}}
-{Factores múltiples de un polinomio}
-{Sea $f(x)\in k[x]$ un polinomio, donde $k \in \\{ \Q,\RR,\C\\}$. Entonces $f(x)$ tiene factores múltiples si y sólo si $f(x)$ y $f'(x)$ no son primos entre sí.}
-{{% /theorem %}}
-{{% proof %}}
-
-Supongamos en primer lugar que $f(x)$ tiene algún factor múltiple, y sea por tanto $f(x)=p(x)^sq(x)$, con $s>1$. Entonces
-$$f'(x)=p(x)^{s-1}[sp'(x)q(x)+p(x)q'(x)],$$
-luego $p(x)$ es un factor común de $f(x)$ y $f'(x).$
-
-
-
-Supongamos ahora que $d(x)=\mbox{mcd}(f(x),f'(x))$ es de grado mayor que cero, y sea $p(x)$ un factor irreducible de $d(x)$. Veamos que $p(x)$ es un factor múltiple de $f(x)$. Notemos que $p'(x) \neq 0$, al ser $p(x)$ irreducible.\\
-En efecto, como $p(x)|f(x)$, tenemos $f(x)=p(x)g(x)$. Derivando esa expresión,
-$$f'(x)=p'(x)g(x)+p(x)g'(x).$$
-Como $p(x)|f'(x)$, $p(x)$ también divide al producto $p'(x)g(x)$, y, por ser $p(x)$ irreducible, divide a uno de los factores. Ahora bien, $p(x)$ no puede dividir a $p'(x)$ pues tiene grado estrictamente mayor y ambos son no nulos, luego $p(x)|g(x)$, y $g(x)=p(x)h(x)$, así que sustituímos y conseguimos la expresión $f(x)=p(x)^2h(x)$.
-{{% /proof %}}
-
-{{% watch %}}
-
-La especificación de que el cuerpo de coeficientes es $\Q$, $\RR$ o $\C$ no es irrelevante. En efecto, en la segunda implicación hemos usado que un polinomio de grado mayor que $1$ no puede dividir a su derivada. Esto en cuerpos como $\F_p$ no es cierto ya que, por ejemplo, $f(x)=x^3+1$ es un polinomio irreducible de $\F_3[x]$ que verifica que $f'(x) =0$ y, por tanto $f(x)|f'(x)$.
-{{% /watch %}}
-
-
-
-## Congruencias. Teorema chino del resto
-
-Trabajaremos con las congruencias para polinomios, definidas igualmente a las de los enteros y con propiedades similares, ya que son ejemplos del mismo caso general (el cociente de un anillo sobre un ideal). No nos extenderemos mucho por tanto en este punto; simplemente lo preciso.
-
-{{% definition %}}
-{Congruencia de polinomios}
-{Sea $p(x)\in k[x]$ un polinomio. Dados dos polinomios $f(x),g(x)\in k[x]$, diremos que $f(x)$ y $g(x)$ son {\em{\bf congruentes módulo $p(x)$}}, y escribiremos
-$$f(x)\equiv g(x)\; (\mbox{mod } p(x)),$$
-si $p(x)$ divide a $f(x)-g(x)$.}
-{{% /definition %}}
+La derivación satisface la regla de Leibniz para el producto.
 
 {{% proposition %}}
-
-Si un polinomio $m(x)$ tiene grado $d$, cualquier clase de congruencia módulo $m(x)$ tiene un único representante $r(x)$ de grado estrictamente menor que $d$.
+Dados $f,g\in k[x]$, $D(fg)=D(f)g+fD(g)$.
 {{% /proposition %}}
-{{% proof %}}
-
-Sea un polinomio $f(x)\in k[x]$. Por el algoritmo de división tenemos que
-$$f(x)=q(x)m(x)+r(x)\text{, con }\mbox{grado}(r(x))<\mbox{grado}(m(x))$$
-y $f(x)\equiv r(x) \; (\mbox{mod } m(x))$. Como el resto de la división es único, es él el representante de menor grado buscado.
-{{% /proof %}}
-
-Dicho de otro modo, lo que esto prueba es que el conjunto de polinomios de $k[x]$ de grado estrictamente menor que el de $m(x)$ es un conjunto completo de representantes para $k[x]/(m(x))$.
-
-{{% example name="Ejemplo" %}}
-
-Sea $m(x)=x^2+1\in\Q[x]$. Por la proposición, cada elemento de $\Q[x]/(m(x))$ tiene un representante de grado menor o igual que 1. Como
-$$x^2\equiv-1 \; (\mbox{mod } x^2+1),$$
-multiplicando por $x$ tenemos que
-$$x^3\equiv-x \; (\mbox{mod } x^2+1).$$
-En general, es fácil ver por inducción en $n$ que
-$$x^{2n}\equiv(-1)^n \; (\mbox{mod } x^2+1), \; \; x^{2n+1}\equiv(-1)^nx \; (\mbox{mod } x^2+1).$$
-
-
-
-Como $\Q$ es un cuerpo infinito, existen infinitos polinomios de grado menor o igual que 1 en $\Q[x]$, y por tanto $\Q[x]/(x^2+1)$ es un conjunto infinito.
-
-
-
-Si utilizáramos ahora $\F_3$ en lugar de $\Q$, por lo anterior tendríamos que
-$$(\F_3)[x]/(x^2+1)=\\{\, 0,\, 1,\, 2,\, x,\, x+1,\, x+2,\, 2x,\, 2x+1,\, 2x+2\, \\}.$$
-{{% /example %}}
-
-
-
-{{% theorem %}}
-{Teorema chino del resto}
-{Sean $m_1(x),\ldots,m_n(x)\in k[x]$ polinomios primos entre sí dos a dos, y sean $a_1(x),\ldots,a_n(x)\in k[x]$ otros polinomios arbitrarios. Entonces existe $f(x)\in k[x]$ tal que:
-$$\begin{array}{cc}
-    f(x)\equiv a_1(x) & (\mbox{mod } m_1(x)) \\
-    f(x)\equiv a_2(x) & (\mbox{mod } m_2(x)) \\
-    \vdots & \vdots \\
-    f(x)\equiv a_n(x) & (\mbox{mod } m_n(x))
-  \end{array}$$
-Además, para que el polinomio $\tilde{f}(x)\in k[x]$ sea otra solución es condición necesaria y suficiente que se verifique que
-$$f(x)\equiv\tilde{f}(x) \; (\mbox{mod } m_1(x)m_2(x)\cdots m_n(x)).$$}
-{{% /theorem %}}
-{{% proof %}}
-
-La demostración es análoga a la del teorema homónimo en el contexto entero.\\
-Puesto que $m_i(x)$ y $m_j(x)$ son primos entre sí, para todo $i\neq j$, $m_i(x)$ es primo con el producto
-$$l_i(x)=m_1(x)\cdots m_{i-1}(x)m_{i+1}(x)\cdots m_n(x).$$
-Así pues, por la identidad de Bézout, existirán $\alpha_i(x),\beta_i(x)\in k[x]$ tales que
-$$1=\alpha_i(x)m_i(x)+\beta_i(x)l_i(x)\text{ , para cualquier }i=1,\ldots,n.$$
-Se tiene entonces que
-$$\begin{array}{cl}
-  \beta_i(x)l_i(x)\equiv1 & (\mbox{mod } m_i(x))\\
-  \beta_i(x)l_i(x)\equiv0 & (\mbox{mod } m_j(x))\text{, para todo }i \not= j
-\end{array}$$
-Podemos tomar como solución entonces
-$$f(x)=a_1(x)\beta_1(x)l_1(x)+a_2(x)\beta_2(x)l_2(x)+\ldots+a_n(x)\beta_n(x)l_n(x).$$
-
-
-
-Vayamos a por el segundo aserto. Si 
-$$
-f(x)\equiv\tilde{f}(x) \; (\mbox{mod } m_1(x)\cdots m_n(x)),
-$$ 
-existirá un polinomio $q(x)$ tal que 
-$$
-f(x)-\tilde{f}(x)=q(x)m_1(x)\cdots m_n(x).
-$$ 
-
-Tomando en la anterior expresión clases de congruencia módulo $m_i(x)$, es claro que $f(x)\equiv\tilde{f}(x) (\mbox{mod } m_i(x))$ para todo $i$, y por tanto, es solución del problema.\\
-Recíprocamente, si 
-$$
-f(x)\not\equiv\tilde{f}(x) \; (\mbox{mod } m_1(x)\cdots m_n(x)),
-$$ 
-es porque existen dos polinomios, que denominaremos $q(x)$ y $h(x)$, siendo $h(x)$ no divisible por $m_1(x)\cdots m_n(x)$, tales que 
-$$
-f(x)-\tilde{f}(x)=q(x)m_1(x)\cdots m_n(x)+h(x).
-$$ 
-Como alguno de los $m_i(x)$ no puede dividir a $h(x)$, alguna de las congruencias módulo $m_i(x)$ fallará, y por tanto $\tilde{f}(x)$ no será solución del problema.
-{{% /proof %}}
-
-\begin{metodocolor}{Sistemas lineales de congruencias}
-{Para resolver el sistema
-$$f(x)\equiv a_i(x) \; (\mbox{mod } m_i(x))\text{ ,  }i=1,\ldots,n,$$
-siendo los $m_i(x)$ polinomios primos entre sí y los $a_i(x)$ polinomios cualesquiera.\\
-Tome, para cada $i$, $l_i(x)=\left(\prod_{j=1}^nm_j(x)\right)/m_i(x)$. Aplique la identidad de Bézout a cada pareja $l_i,m_i$ para obtener la igualdad
-$$1=\alpha_i(x)m_i(x)+\beta_i(x)l_i(x).$$
-Las soluciones son
-$$f(x)=a_1(x)\beta_1(x)l_1(x)+a_2(x)\beta_2(x)l_2(x)+\ldots+a_n(x)\beta_n(x)l_n(x),$$
-y los polinomios congruentes con él módulo $\prod_{j=1}^nm_j(x)$.}
-\end{metodocolor}
-
-## Factorización en $\C[x]$ y en $\RR[x]$
-
-A continuación enunciaremos un resultado del que hablaremos con más detalle en la última sección. Para lo que estamos tratando aquí, su importancia es que nos dice cómo son los polinomios irreducibles sobre $\C$. Ahora bien, su relevancia es mucho mayor, pero no adelantemos acontecimientos y centrémonos de momento en la factorización de polinomios.
-
-{{% theorem %}}
-{Teorema fundamental del álgebra}
-{Todo polinomio $f(x)\in\C[x]$ de grado positivo tiene una raíz compleja.}
-{{% /theorem %}}
-
-{{% corollary %}}
-
-Todo polinomio $f(x)\in \C[x]$ de grado positivo, digamos $n$, tiene $n$ raíces en $\C$, esto es, se puede escribir como
-$$f(x)=\alpha\prod_{i=1}^n(x-\alpha_i),$$
-donde $\alpha,\alpha_i\in\C$.
-{{% /corollary %}}
-%{{% proof %}}
-
-%Por el teorema fundamental del álgebra, $f(x)$ tiene una raíz $\alpha_1$ en $\C$. Por tanto, por el teorema del resto podemos escribir $f(x)=(x-\alpha_1)f_1(x)$. Aplicando el mismo razonamiento a $f_1(x)$, y así sucesivamente, se llega, después de $n-1$ pasos, a una expresión de la forma
-%$$f(x)=(x-\alpha_1)\cdots(x-\alpha_{n-1})f_{n-1}(x),$$
-%donde $f_{n-1}(x)$ es un polinomio de primer grado. Como $f_{n-1}(x)$ se puede escribir $f_{n-1}(x)=\alpha x-\alpha\alpha_n$, se tiene el resultado.
-%{{% /proof %}}
-
-En virtud del corolario, el problema de dilucidar si un polinomio de $\C[x]$ es irreducible o no es tremendamente sencillo; tanto como mirar su grado, pues los únicos polinomios irreducibles en $\C[x]$ son los de grado $1$. En $\RR[x]$ no ocurre así, ya que, por ejemplo, los polinomios $x^2+1$ o $x^3-15x-4$ no se pueden factorizar en producto de polinomios de primer grado, aunque tampoco es que la cuestión de la factorización devenga complicada. Veamos cómo son los irreducibles en este otro anillo.
-
-{{% proposition %}}
-
-Todo polinomio de $\RR[x]$ de grado impar tiene una raíz en $\RR$. Todo polinomio se descompone en producto de polinomios de grados $1$ o $2$ (los cuales son irreducibles si y sólo si sus raíces son complejas no reales).
-{{% /proposition %}}
-{{% proof %}}
-
-Sea $f(x)\in\RR[x]$ un polinomio de grado positivo, digamos $n$. A $f(x)$ lo podemos mirar con otros ojos, como elemento de $\C[x]$, así que aplicamos el teorema fundamental del álgebra para saber que $f(x)$ tiene $n$ raíces en $\C$. Sea
-$$f(x)=a_nx^n+a_{n-1}x^{n-1}+\ldots+a_1x+a_0 \; , \; a_i\in\RR, i=0,1,\ldots,n,$$
-y sea $\alpha=a+bi$ una raíz de $f(x)$. De
-$$0=f(\alpha)=a_n(a+bi)^n+a_{n-1}(a+bi)^{n-1}+\ldots+a_1(a+bi)+a_0$$
-se deduce, tomando conjugados, que
-$$0=\overline{f(\alpha)}=f(\overline{\alpha})=a_n(a-bi)^n+a_{n-1}(a-bi)^{n-1}+\ldots+a_1(a-bi)+a_0.$$
-En consecuencia, si $\alpha$ es una raíz de $f(x)$, también debe serlo $\overline{\alpha}$, luego las raíces no reales de $f(x)$ aparecen por pares de conjugadas. Si $n$ es impar, tiene que haber una raíz que coincida con su conjugada, es decir, que sea real. Con esto probamos el primer aserto.
-
-
-
-En cuanto a la segunda afirmación, obramos como sigue. Si $\alpha=a+bi$  es una raíz compleja no real de $f(x)$, el polinomio
-$$(x-\alpha)(x-\overline{\alpha})=x^2-2ax+(a^2+b^2)$$
-divide a $f(x)$ y tiene coeficientes reales, con lo que podemos descomponer a $f(x)$ en producto de factores de grado 2 a lo sumo. La cuestión de si éstos se pueden descomponer a su vez en otros de grado 1 o son irreducibles es tan simple como el hecho de que sus raíces sean reales o no.
-{{% /proof %}}
-
-
-
-## Factorización en $\Q[x]$
-
-Sea $f(x)\in k[x]$ un polinomio de grado $2$ o $3$. En ese caso, $f(x)$ es reducible si y sólo si tiene una raíz en $k$. En efecto, el hecho de que $f(x)$ sea reducible es equivalente a decir que tiene un divisor que es de grado $1$. Si éste es $ax-b$, entonces $b/a$ es una raíz de $f(x)$.
-
-
-
-Naturalmente, lo anterior no funciona para grados mayores. Un polinomio de grado $4$ se puede descomponer, por ejemplo, en dos factores irreducibles de grado $2$, como $x^4+3x^2+2$ en $\Q$, luego no tiene por qué tener raíces en $k$. Con mayor razón ocurrirá esto en grados más altos. No obstante es bueno ver si un polinomio dado tiene o no raíces en $k$. Si las tiene, y es de grado mayor que $1$, es automáticamente reducible.
-
-
-
-El problema de saber cuándo un polinomio de $\Q[x]$ es irreducible es algo intrincado si se pretende resolver de manera realmente efectiva. Sin embargo, el problema de la localización de raíces (que, como hemos notado en el párrafo anterior, es más simple), sí se puede atacar fácilmente, y es lo primero que haremos en esta sección.
-
-
-
-Para empezar, notemos que si $f(x)\in\Q[x]$, es igual buscar sus raíces que las de $af(x)$, donde $a\in\Z$. En particular, podemos suponer que $f(x)$ está en realidad en $\Z[x]$ (esto es, todos sus coeficientes son enteros). En estas condiciones tenemos el siguiente resultado, también conocido como {\bf Regla de Ruffini}:
-
-{{% proposition %}}
-
-Sea el polinomio
-$$f(x)=a_nx^n+a_{n-1}x^{n-1}+\ldots+a_1x+a_0 \; , \; a_i\in\Z, i=0,1,\ldots,n,$$
-de grado $n>0$. Supongamos que $f(x)$ tiene una raíz racional $\alpha=a/b$ con $a$ y $b$ primos entre sí. Entonces $a|a_0$ y $b|a_n$.
-{{% /proposition %}}
-{{% proof %}}
-
-En efecto, como $a/b$ es raíz de $f(x)$,
-$$0=f(a/b)=a_n(a/b)^n+a_{n-1}(a/b)^{n-1}+\ldots+a_1(a/b)+a_0,$$
-luego, previa multiplicación por $b^n$, tenemos que
-$$0=a_na^n+a_{n-1}a^{n-1}b+\ldots+a_1ab^{n-1}+a_0b^n.$$
-Como $a$ divide a todos los términos salvo al último y es primo con $b$, debe dividir a $a_0$. E igualmente, como $b$ divide a todos los términos salvo al primero y es primo con $a$, debe dividir a $a_0$.
-{{% /proof %}}
-
-Hemos visto que intentar localizar las raíces de los polinomios en $\Z[x]$ tiene algo más de futuro, o por lo menos es más abarcable, que en $\Q[x]$, así que seguiremos reduciéndonos al caso de los polinomios con coeficientes enteros, donde la factorización única de los coeficientes nos puede ser de ayuda.
-
-{{% definition %}}
-{Contenido de un polinomio}
-{Dado un polinomio $f(x)\in\Z [x]$ no nulo, se llama {\em{\bf contenido de $f(x)$}} al máximo común divisor de sus coeficientes. Se denota por $c(f)$. Se dirá que $f(x)$ es {\em{\bf primitivo}} si su contenido es $1$.}
-{{% /definition %}}
-
-El siguiente resultado es conocido como lema de Gauss, como también se denomina del mismo modo a otros resultados en otros campos matemáticos. Al fin y al cabo, Gauss fue un matemático muy prolijo y no es de extrañar que varios lemas suyos hayan pasado a la historia con el mismo nombre. De hecho, se confunde incluso con un corolario suyo, pero el que presentamos es, en este contexto, el verdadero históricamente hablando, y aparece, con otras palabras, en el Artículo 42 de su gran obra \emph{Disquisitiones Arithmeticae}.
-
-{{% theorem %}}
-{Lema de Gauss}
-{El producto de dos polinomios primitivos es primitivo.}
-{{% /theorem %}}
-{{% proof %}}
-
-Sean
-$$f(x)=a_mx^m+a_{m-1}x^{m-1}+\ldots+a_1x+a_0, \; a_i\in \Z, i=0,1,\ldots,m,$$
-$$g(x)=b_nx^n+b_{n-1}x^{n-1}+\ldots+b_1x+b_0, \; b_j\in \Z, j=0,1,\ldots,n$$
-dos polinomios primitivos. Para probar que $f(x)g(x)$ es primitivo basta ver que, fijado $p\in \Z$ irreducible, existe un coeficiente de $f(x)g(x)$ que no es divisible por él.
-
-
-
-Fijemos pues $p$ irreducible. Sea $s$ (resp $t$) el entero $0\leq s\leq m$ (resp. $0\leq t\leq n$) tal que $p|a_i$ para todo $i>s$ (resp. $p|b_j$ para todo $j>t$), si se da el caso, y $p$ no divide a $a_s$ (resp. a $b_t$). El coeficiente de $x^{s+t}$ en $f(x)g(x)$ es
-$$a_0b_{s+t}+\ldots+a_{s-1}b_{t+1}+a_sb_t+a_{s+1}b_{t-1}+\ldots+a_{s+t}b_0,$$
-en el que se ve que $p$ divide a todos los sumandos salvo a $a_sb_t$. Así, $p$ no divide a la suma, lo que prueba el resultado.
-{{% /proof %}}
-
-{{% corollary %}}
-
-Si $f(x),g(x)\in \Z [x]$ son polinomios no nulos, entonces
-$$c(fg)=c(f)c(g).$$
-{{% /corollary %}}
-{{% proof %}}
-
-Podemos escribir
-$$f(x)=c(f)f_0(x), \; \; \; \; g(x)=c(g)g_0(x)$$
-donde $f_0(x)$ y $g_0(x)$ son primitivos. Así
-$$f(x)g(x)=c(f)c(g)f_0(x)g_0(x)$$
-y, como $f_0(x)g_0(x)$ es primitivo por el lema de Gauss, debe ocurrir que $c(f)c(g)=c(fg)$.
-{{% /proof %}}
-
-El siguiente resultado es engañosamente sencillo, pero de una importancia extrema cuando se trata de factorizar polinomios, como comprobaremos más adelante.
-
-{{% corollary %}}
-
-Sea $f(x)\in\Z[x]$ un polinomio de grado positivo, digamos $n$, que se descompone en $\Q[x]$ en producto de dos polinomios de grados estrictamente menores que $n$. Entonces, se descompone en $\Z[x]$ en producto de dos polinomios de esos mismos grados.
-{{% /corollary %}}
-{{% proof %}}
-
-Sea $f(x)=f_1(x)g_1(x)$, donde $f_1(x),g_1(x)\in\Q [x]$ con 
-$$
-\mbox{grado}(f_1(x))<n, \quad \mbox{grado}(g_1(x))<n.
-$$ 
-
-Multiplicando la anterior igualdad por un cierto
-elemento $a\in\Z$ para quitarnos los denominadores de en medio del producto, se tendrá que
-$$af(x)=g(x)h(x)\; , \; g(x),h(x)\in\Z[x].$$
-De ahí se deduce que $ac(f)=c(gh)=c(g)c(h)$, luego $a|c(g)c(h)$. Por tanto, si tomamos $g(x)=c(g)g'(x)$, $h(x)=c(h)h'(x)$, entonces
-$$f(x)=\frac{c(g)c(h)}{a}g'(x)h'(x),$$
-y ésa es la descomposición buscada.
-{{% /proof %}}
-
-{{% corollary %}}
-
-Sea $f(x)\in\Z[x]$ un polinomio de grado positivo, digamos $n$, y primitivo. Entonces $f(x)$ es reducible en $\Z[x]$ si y sólo si lo es en $\Q[x]$.
-{{% /corollary %}}
-{{% proof %}}
-
-Muy simple; basta con releer el enunciado del corolario anterior.
-{{% /proof %}}
-
-Incluimos también un criterio muy general y útil de irreducibilidad de polinomios, aunque no concluyente al no poderse aplicar a todos los casos.
-
-{{% proposition %}}
-{\bf (Criterio de Eisenstein)}
-Sea un polinomio de grado $n>0$
-$$f(x)=a_nx^n+a_{n-1}x^{n-1}+\ldots+a_1x+a_0 \; , \; a_i\in \Z, i=0,1,\ldots,n.$$
-Supongamos que existe un elemento irreducible $p\in\Z$ que divide a todos los coeficientes, salvo a $a_n$, y cuyo cuadrado $p^2$ no divide a $a_0$. Entonces $f(x)$ es irreducible en $\Q[x]$.
-{{% /proposition %}}
-{{% proof %}}
-
-Se hará por reducción al absurdo. Supongamos que $f(x)$ fuese reducible en $\Q[x]$. En consecuencia se descompondría en $\Q[x]$ en producto de dos polinomios de grado estrictamente inferior. Por el corolario anterior se puede escribir
-$$f(x)=(b_sx^s+b_{s-1}x^{s-1}+\ldots+b_1x+b_0)(c_tx^t+c_{t-1}x^{t-1}+\ldots+c_1x+c_0),$$
-donde $b_i,c_j\in\Z$ para cualesquiera $i,j$ y $s,t<n$.
-
-
-
-Por la segunda hipótesis, $p$ debe dividir a uno de entre $b_0$ y $c_0$, pero no a ambos. Supongamos pues sin pérdida de generalidad que $p|b_0$ y no divide a $c_0$. Como $p$ no divide a $a_n$, no puede dividir a todos los $b_i$. Sea $m$ el mínimo índice tal que $p$ no divide a $b_m$, que sabemos que es menor que $n$. El coeficiente del término en $x^{m}$ es
-$$b_mc_0+b_{m-1}c_1+\ldots+b_0c_m=a_m,$$
-que no es divisible por $p$ pues todos los sumandos lo son salvo el primero. Ahora bien, que $a_m$ con $m<n$ no sea divisible por $p$ es una contradicción, luego hemos terminado con la prueba.
-{{% /proof %}}
-
-
-
-### El método de los interpoladores de Lagrange
-
-
-
-El método de los polinomios interpoladores de Lagrange, como su propio nombre indica, no es más que una adaptación a nuestro contexto del clásico método de interpoladores lineales de Lagrange del Cálculo Numérico. En la literatura también se le conoce como método de Kronecker.
-
-
-
-Comencemos con el caso de un polinomio $f(x)\in\Z[x]$ de grado $n$ y sea $d=\lfloor n/2\rfloor$. Obviamente, salvo que $f(x)$ sea irreducible, alguno de sus factores irreducibles ha de tener grado menor o igual que $d$, por lo que basta buscar los posibles factores que verifican esta condición.
-
-
-
-Para ello fijaremos $d+1$ enteros distintos (normalmente lo más cerca posible de $0$, por motivos de comodidad) $a_0,a_1,\ldots,a_d$ y hallaremos
-$$n_i=f(a_i), \quad i=0,\ldots,d.$$
-Ahora bien, si $g(x)$ es un factor del tipo que busco de $f(x)$, ha de verificar que $s_i=g(a_i)$ divide al $n_i$ correspondiente. Así pues, fijaremos una $(d+1)$-upla de divisores, de la forma
-$$(s_0,s_1,\ldots,s_d)\mbox{ , donde }s_i|n_i, \; \; i=0,\ldots,d.$$
-Recordemos que $g(a_i)$ es precisamente $g(x) (\mbox{mod } x-a_i)$. En ese caso, por el teorema chino del resto, $g(x)$ ha de ser entonces una solución al sistema
-$$\begin{array}{cc}
-    g(x) \equiv s_0 & (\mbox{mod } x-a_0) \\
-    g(x) \equiv s_1 & (\mbox{mod } x-a_1) \\
-         \vdots  &  \vdots \\
-    g(x) \equiv s_d & (\mbox{mod } x-a_d)
-\end{array}$$
-Lo que hemos escrito en otras palabras y símbolos es la imposición de que $g(a_i)=s_i=s_i$ $(\mbox{mod } x-a_i)$ para todo $i$. Sabemos que este sistema tiene solución única (pues los $x-a_i$ son primos entre sí) de grado menor o igual que $d$. Así pues, fijado un vector de divisores, tenemos un posible divisor de $f(x)$. Como los posibles vectores de divisores son finitos, este procedimiento nos da una lista exhaustiva de todos los posibles divisores de $f(x)$ de grado menor o igual que $d$. Es más, podemos quedarnos con la mitad de vectores de divisores, pues la única solución asociada a $(-s_0,-s_1,\ldots,-s_d)$ será así el opuesto de la que verifique el sistema con $(s_0,s_1,\ldots,s_d)$.
-
-\begin{metodocolor}{Polinomios interpoladores de Lagrange}
-{Para factorizar un polinomio $f(x)\in\Z[x]$.\\
-Sea $d=\lfloor n/2\rfloor$, tome $d+1$ enteros distintos $a_i$. Forme la $(d+1)$-upla $(f(a_i))$.\\
-Forme todas las posibles $(d+1)$-uplas $(s_i)$ formadas por divisores de los $f(a_i)$, y resuelva el sistema
-$g(x)\equiv s_i\text{ }(\mbox{mod } x-a_i)$, para todo $i$, y todas las $(d+1)$-uplas que no se diferencien en un signo.\\
-Si $f(x)$ es reducible, de entre las soluciones no constantes, al menos dos serán un factor de $f(x)$.}
-\end{metodocolor}
-
-{{% example name="Ejemplo" %}}
-
-Aprovechando que ya hemos factorizado algunos polinomios en, recuperemos uno de ellos para aplicarle el método que acabamos de detallar. Sea pues el polinomio $f(x)=x^4+x^3+x-1\in\Z[x]$, primitivo. Como tiene grado 4, elegimos 5 puntos cercanos al cero para evitarnos hacer cuentas más latosas. Calculamos los valores que toma $f(x)$ en esos puntos:
-$$f(-2)=5\text{ ,  }f(-1)=-2\text{ ,  }f(0)=-1\text{ ,  }f(1)=2\text{ ,  }f(2)=25.$$
-Podemos formar 768 $5$--uplas distintas, de las que nos quedamos con 384, la mitad. Evidentemente no vamos a comprobar todas ellas. No obstante, cualquier programa de cálculo efectuaría esos cálculos sin rechistar, y al fin y al cabo es por esa razón por la que se comenta este método aquí.
-
-
-
-Una vez aclarado lo anterior, sigamos con el ejemplo y probemos con la $5$--upla $(1,-1,-1,1,5)$. Tenemos así el siguiente sistema de congruencias:
-$$S:\left\\{\begin{array}{ll}
-    g(x) \equiv 1 & (\mbox{mod } x+2) \\
-    g(x) \equiv -1 & (\mbox{mod } x+1) \\
-    g(x) \equiv -1 & (\mbox{mod } x) \\
-    g(x) \equiv 1 & (\mbox{mod } x-1) \\
-    g(x) \equiv 5 & (\mbox{mod } x-2)
-\end{array}\right.,$$
-que tiene como solución al polinomio $x^2+x-1$. Si dividimos $f(x)$ entre aquél, obtenemos como cociente $x^2+1$, que se conseguía al tomar la $5$--upla $(5,2,1,2,5)$. Por consiguiente, $f(x)$ es reducible, y como los de grado 2 que hemos obtenido son irreducibles sobre $\Q$, hemos terminado de calcular su descomposición.\\
-Si hubiéramos seguido buscando factores, no habríamos obtenido más que los opuestos de los anteriores. Por ejemplo, la $5$--upla $(1,2,1,1,1)$ nos habría dado como resultado el polinomio 
-$$
--\frac{x^4}{6}+\frac{x^3}{6}+\frac{2 x^2}{3}-\frac{2 x}{3}+1,
-$$ 
-que evidentemente no es factor de $f(x)$.
-{{% /example %}}
-
-
-## Factorización en $\F_p[x]$
-
-Para ilustrar la importancia del problema de factorizar sobre $\F_p[x]$ de la que hablábamos antes veamos cómo podemos relacionar la irreducibilidad en $\Q$ y en $\F_p$, con $p$ primo. Sea
-$$f(x)=a_nx^n+\ldots+a_1x+a_0\in\Z[x]$$
-primitivo, sea $p$ un primo que no divida a $a_n$, y llamemos $\overline{f}(x)$ al polinomio
-$$\overline{f}(x)=\overline{a}_nx^n+\ldots+\overline{a}_1x+\overline{a}_0\in\F_p[x],$$
-siendo $\overline{a}_i=a_i \; (\mbox{mod } p)$, $0\leq i\leq n$.
-
-{{% proposition %}}
-
-Si $\overline{f}(x)$ es irreducible en $\F_p[x]$, entonces $f(x)$ es irreducible en $\Q[x]$.
-{{% /proposition %}}
-{{% proof %}}
-
-Solo hay que tener en cuenta que para cualesquiera polinomios $f(x),g(x)$, $\overline{f(x)g(x)}=\overline{f}(x)\overline{g}(x)$ y escribir el contrarrecíproco del enunciado.
-{{% /proof %}}
-
-Veamos, con un ejemplo, cómo podemos usar el resultado anterior.
-
-{{% example name="Ejemplo" %}}
-
-Sea $f(x)=x^4-x^3+x^2-x+1\in\Z[x]$. Tomemos $p=2$. Entonces $\overline{f}(x)=x^4+x^3+x^2+x+1\in \F_2$. Ya que $\overline{f}(0)=1$ y $\overline{f}(1)=1$, $\overline{f}(x)$ no tiene raíces en $\F_2$.
-
-
-
-Intentemos factorizar $f(x)$ de forma artesanal. Como en caso de ser reducible, ningún factor de la descomposición de $\overline{f}(x)$ sería de grado 1, pongamos por caso que
-$$\overline{f}(x)=(x^2+ax+b)(x^2+cx+d).$$
-Como otras veces, operando e igualando coeficientes obtenemos el sistema
-$$S:\left\\{\begin{array}{ccl}
-                 1 & = & a+c \\
-                 1 & = & b+ac+d \\
-                 1 & = & ad+bc \\
-                 1 & = & bd
-\end{array}\right.$$
-La última ecuación nos dice que $b=d=1$, y sustituyendo en el resto nos quedamos con
-$$S:\left\\{\begin{array}{ccl}
-                 1 & = & a+c \\
-                 1 & = & ac
-\end{array}\right.,$$
-que no tiene solución. Por tanto, $\overline{f}(x)$ es irreducible en $\F_2$ y así, por la proposición, $f(x)$ es irreducible sobre $\Q.$
-{{% /example %}}
-
-
-
-{{% watch %}}
-
-Si bien en apariencia este procedimiento simplifica los cálculos a la hora de estudiar si un polinomio es o no irreducible sobre $\Q$, tiene un grave inconveniente. El recíproco de la proposición anterior es falso. Por ejemplo, el polinomio $x^2+2$ es irreducible sobre $\Q$, pero $\overline{f}(x)=x^2\in \F_2[x]$ es reducible, o el polinomio $x^2-x+1$, irreducible en $\Q$ y con $\overline{f}(x)$ reducible en $\F_3$.
-{{% /watch %}}
-
-
-
-### El algoritmo de Berlekamp
-
-
-
-El algoritmo de Berlekamp para factorizar en $\F_p[x]$ data de 1967, fecha de publicación del artículo en donde se detallaba. Se basa en una idea sencilla, y gracias a eso y a su efectividad, ha sido desde entonces uno de los más utilizados, tanto para programar como para servir de ejemplo de algoritmo de factorización en característica positiva. La idea de la que hablábamos se presenta en el siguiente teorema.
-
-{{% theorem %}}
-{Teorema de Berlekamp}
-{Sea $f(x)\in\F_p[x]$ de grado $n$, sin factores múltiples y mónico, y supongamos que existe un polinomio $g(x)$ tal que
-$$f(x)|\left(g(x)^p-g(x)\right).$$
-Entonces
-$$f(x)=\prod_{s=0}^{p-1}\mbox{mcd}(f(x),g(x)-s),$$
-aunque varios de estos factores pueden ser polinomios constantes.}
-{{% /theorem %}}
-{{% proof %}}
-
-Del capítulo anterior, recordaremos que en $\F_p$ teníamos que, por el pequeño teorema de Fermat,
-$$x^p-x=\prod_{s=0}^{p-1}(x-s),$$
-lo cual en particular implica que
-$$g(x)^p-g(x)=\prod_{s=0}^{p-1}(g(x)-s).$$
-Hay que decir que todos estos factores son primos entre sí al diferenciarse en una constante.
-
-
-
-Probemos entonces la igualdad que hemos enunciado. Por un lado, no es nada dificultoso ver que
-$$\prod_{s=0}^{p-1}\mbox{mcd}(f(x),g(x)-s)|f(x),$$
-pues todos los elementos de la izquierda dividen a $f(x)$ y como los $g(x)-s$ son primos entre sí también lo serán los divisores comunes.
-
-
-
-En el otro sentido, si tomamos un factor irreducible de $f(x)$, pongamos $h(x)$, debe dividir a $g(x)^p-g(x)$, luego dividirá también a alguno de los $g(x)-s$ y, de igual modo a $\mbox{mcd}(f(x),g(x)-s)$.
-
-
-
-En conclusión, los dos miembros de la igualdad se dividen mutuamente y al ser mónicos, son iguales.
-{{% /proof %}}
-
-A partir de aquí, la factorización de $f(x)\in\F_p[x]$ queda reducida por un lado a encontrar $g(x)$ de grado $r<n$ tal que
-$$f(x)|(g(x)^p-g(x)),$$
-y posteriormente a aplicar el algoritmo de Euclides $p$ veces. Notemos entonces que por estar en característica positiva y por el pequeño teorema de Fermat,
-$$g(x)=\sum_{i=0}^{n-1}a_ix^i \; \Longrightarrow \; g^p(x)=\sum_{i=0}^{n-1}a_ix^{ip}.$$
-
-
-
-Vamos entonces a buscar un tal polinomio $g(x)$ (concretamente, vamos a buscar sus coeficientes $a_0,\ldots,a_{n-1}$). Dividamos así los monomios $x^{ip}$ entre $f(x)$, que al tener grado $n$ obtendremos
-\begin{eqnarray*}
-x^{0p}&=&q_0(x)f(x)+r_0(x) \\
-&=&q_0(x)f(x)+r_{00}+r_{10}x^1+\ldots+r_{n-1,0}x^{n-1}\\
-x^{1p}&=&q_1(x)f(x)+r_1(x) \\ 
-&=&q_1(x)f(x)+r_{01}+r_{11}x^1+\ldots+r_{n-1,1}x^{n-1}\\
-& \vdots \\
-x^{(n-1)p}&=&q_{n-1}(x)f(x)+r_{n-1}(x) \\
-&=&q_{n-1}(x)f(x)+r_{0,n-1}+r_{1,n-1}x^1+\ldots+r_{n-1,n-1}x^{n-1}\\
-\end{eqnarray*}
-Por la unicidad de la división euclídea, el resultado de dividir $g^p(x)$ entre $f(x)$ es el dado por la expresión
-$$g^p(x)=\sum_{i=0}^{n-1}a_ix^{ip}=\left(\sum_{i=0}^{n-1}a_iq_i(x)\right)f(x)+\sum_{i=0}^{n-1}a_ir_i(x),$$
-y por el mismo motivo, el de dividir $g^p(x)-g(x)$ entre $f(x)$ es
-$$g^p(x)-g(x)=\sum_{i=0}^{n-1}a_ix^{ip}-\sum_{i=0}^{n-1}a_ix^i=\left(\sum_{i=0}^{n-1}a_iq_i(x)\right)f(x)+\sum_{i=0}^{n-1}(a_ir_i(x)-a_ix^i).$$
-Por consiguiente, $g(x)$ verifica lo que queremos si y sólo si
-$$0=\sum_{i=0}^{n-1}(a_ir_i(x)-a_ix^i),$$
-o escrito en forma matricial, tomando la matriz de orden $n\times n$ $R=(r_{ij})$, si y sólo si
-$$(a_0,\ldots,a_{n-1})^t\text{ es solución del sistema }\left(R-I_n\right){\bf x}={\bf 0}.$$
-
-Así, gracias al algoritmo de Berlekamp, factorizar en $\F_p[x]$ se reduce a resolver ciertos sistemas de ecuaciones lineales (problema elemental, gracias al álgebra lineal) y a aplicar el algoritmo de Euclides, operaciones ambas que se pueden realizar de manera muy eficiente.
-
-\begin{metodocolor}{Algoritmo de Berlekamp}
-{Para factorizar un polinomio $f(x)\in\F_p[x]$ de grado $n$.\\
-Para cada $i=0,\ldots,n-1$, efectúe las divisiones de $x^{ip}$ entre $f(x)$ para obtener los restos
-$$r(x)=r_{0i}+r_{1i}x^1+\ldots+r_{n-1,i}x^{n-1}.$$
-Construya la matriz $R=(r_{ij})$, y plantee el sistema lineal
-$$\left(R-I_n\right){\bf x}={\bf 0}.$$
-Si el sistema no tiene solución, $f(x)$ es irreducible. Si tiene una solución $(a_0,\ldots,a_{n-1})^t$ que represente a un polinomio no constante, $f(x)$ se descompone como
-$$\prod_{s=0}^{p-1}\mbox{mcd}\left(f(x),(a_0-s)+a_1x+\ldots+a_{n-1}x^{n-1}\right).$$}
-\end{metodocolor}
-
-{{% example name="Ejemplo" %}}
-
-Ilustremos también este método con el mismo polinomio que el anterior ejemplo, pero considerado en $\F_3[x]$. Sea así $f(x)=x^4+x^3+x+2\in \F_3[x]$. Dividimos determinadas potencias de $x$ entre $f(x)$ y obtenemos:
-\begin{eqnarray*}
-1=q_0(x)f(x)+r_0(x)&=&0\cdot f(x)+1\\
-x^{3}=q_1(x)f(x)+r_1(x)&=&0\cdot f(x)+x^3\\
-x^{6}=q_1(x)f(x)+r_1(x)&=&q_2(x)f(x)+1+x+2x^2+x^3\\
-x^{9}=q_1(x)f(x)+r_1(x)&=&q_3(x)f(x)+x
-\end{eqnarray*}
-Los cocientes no los hemos indicado todos porque sólo nos interesan los restos para formar la matriz. En nuestro caso,
-$$R=\left(\begin{array}{cccc}
-1&0&1&0\\
-0&0&1&1\\
-0&0&2&0\\
-0&1&1&0
-\end{array}\right).$$
-El sistema lineal en $\F_3[x]$ que tenemos que resolver es
-$$\left(\begin{array}{cccc}
-0&0&1&0\\
-0&2&1&1\\
-0&0&1&0\\
-0&1&1&2
-\end{array}\right){\bf x}={\bf 0},$$
-que tiene como solución cualquier vector de la forma ${\bf x}=(\alpha,\beta,0,\beta)^t$, donde $\alpha,\beta\in\F_3$. Si tomamos $\alpha=1,\beta=0$, obtenemos la constante 1, que obviamente cumple que $f(x)|1^3-1=0$. Escogiendo pues $\alpha=0,\beta=1$ conseguimos la descomposición
-$$
-\begin{array}{rcl}
-f(x) &=& \mbox{mcd}(f(x),x^3+x) \cdot \mbox{mcd}(f(x),x^3+x+1) \cdot \mbox{mcd}(f(x),x^3+x+2)\\
-&=& (x^2+1) \cdot (x^2+x+2)\cdot 1.
-\end{array}$$
-{{% /example %}}
-
-
-
-## El teorema fundamental del álgebra
-
-
-
-El contenido de esta sección está tomado del artículo {\em The Fundamental Theorem of Algebra and Linear Algebra}, de Harm Derksen, publicado en el American Mathematical Monthly {\bf 110} (2003), número 7, páginas 620-623. El objetivo que perseguimos es dar una prueba del teorema fundamental del álgebra con argumentos puramente algebraicos y a la vez asequible al lector que no tenga un conocimiento profundo de esta materia, pues solamente usa algunas nociones de álgebra lineal.
-
-{{% theorem %}}
-{Teorema fundamental del álgebra}
-{Todo polinomio no constante de $\C[x]$ tiene una raíz en $\C$.}
-{{% /theorem %}}
-
-Si de algo no se puede quejar alguien que se acerque por primera vez al teorema que nos ocupa, es por falta de demostraciones. Existe una cantidad considerable de pruebas distintas, y usando técnicas variopintas. Desde la primera, elaborada por Gauss en su tesis doctoral de 1799 (aunque con algún fallo en el rigor matemático), hasta esta que aquí expondremos, existen pruebas topológicas, usando propiedades de la curva compleja que describe un polinomio, pruebas analíticas, que utilizan el teorema de Liouville de que toda función entera es acotada, pruebas algebraicas, basándose en la teoría de Galois entre otras herramientas, o incluso mixturas de los tres tipos anteriores.
-
-
-
-Vayamos, sin más dilación, al desarrollo de la prueba. Para ello, definamos la propiedad $\mathcal{P}_{k,r}(d)$, donde $k$ es un cuerpo, $\RR$ o $\C$, y $r=1,2$. Su enunciado es el siguiente:
-
-
-
-$\mathcal{P}_{k,r}(d)$: {\em Dados $r$ endomorfismos $A_i$ que conmuten entre todos de un $k$-espacio vectorial $V$ de dimensión $n$, no divisible por $d$, existe un autovector no nulo que es común a todos ellos.}
-
-
-
-Para probar el teorema, bastaría con demostrar que se cumple la propiedad $\mathcal{P}_{\C,1}(2^r)$ para todo $r\in\mathbb{N}$. Así, para cualquier polinomio (que podemos suponer mónico sin problema) no constante $f(x)=x^n+a_{n-1}x^{n-1}+\ldots+a_0\in\C[x]$, se tiene que
-$$f(x)=\det(xI_n-A)\text{, con }A=\left(
-\begin{array}{ccccc}
-0&0&\cdots&0&-a_0\\
-1&0&\cdots&0&-a_1\\
-\vdots&\vdots&\ddots&\vdots&\vdots\\
-0&0&\cdots&1&-a_{n-1}
-\end{array}\right)$$
-Como $A$ representa a un endomorfismo de $\C$ y existe algún $r$ tal que $2^r$ no divide a $n$, $A$ tendría un autovector no nulo. Su autovalor asociado sería raíz de $f(x)$, y habríamos acabado.$\hfill\Box$
-
-
-
-Así pues, para probar $\mathcal{P}_{\C,1}(2^r)$ seguiremos el camino marcado a través de diversos lemas, cada uno apoyándose en los anteriores. Como en la demostración de arriba, denotaremos por $A_i$ tanto a un endomorfismo como a su matriz asociada.
-
-
-
-\begin{lema}
-Si se tiene $\mathcal{P}_{k,1}(d)$, también se cumple $\mathcal{P}_{k,2}(d)$.
-\end{lema}
-{{% proof %}}
-
-Sean $A_1$ y $A_2$ dos endomorfismos que conmutan de un $k$-espacio vectorial $V$ de dimensión $n$ no divisible por $d$. Vamos a probar por inducción en $n$ que tienen un autovector en común. Si $n=1$, cada $A_i$ no es más que la multiplicación por una constante, y todos los vectores de $V$ son propios, siendo trivial el aserto. Supongamos pues que también es cierto si $\dim V<n$, y veámoslo para $\dim V=n$.
-
-
-
-Como $\mathcal{P}_{k,1}(d)$ se cumple, $A_1$ tiene un autovalor $\lambda\in k$. Sean $W$ y $Z$, respectivamente, el núcleo y la imagen del endomorfismo $A_2-\lambda I$. Como $A_1$ y $A_2$ conmutan, $W$ y $Z$ permanecen fijos por $A_1$.\\
-Supongamos que $W\neq V$. Entonces, como $\dim W+\dim Z=\dim V$, $d$ no dividirá a al menos alguna de las dos dimensiones, y además ambas son menores que $n$. Por tanto, por la hipótesis de inducción, $A_1$ y $A_2$ compartirán un autovector no nulo directamente en $W$ o en $Z$.\\
-Si $W=V$, cualquier vector propio de $A_1$ ${\bf v}$ cumple que $A_2{\bf v}=\lambda{\bf v}$, luego también tenemos la propiedad.
-{{% /proof %}}
-
-\begin{lema}
-Si $k=\RR$, $\mathcal{P}_{k,r}(2)$ son ciertas para $r=1,2$.
-\end{lema}
-{{% proof %}}
-
-Por el lema anterior bastaría probar que $\mathcal{P}_{\RR,1}(2)$ es cierta, esto es, que todo endomorfismo de un espacio vectorial sobre $\RR$ de dimensión impar tiene un autovector no nulo, pero eso es equivalente a que su polinomio característico $f(x)=\det(xI-A)$ tenga alguna raíz en $\RR$. Ahora bien, $f(x)$ es un polinomio de grado impar con coeficientes reales, y ya hemos visto que siempre tiene al menos una raíz real.
-{{% /proof %}}
-
-\begin{lema}
-Todo endomorfismo de un $\C$-espacio vectorial de dimensión impar tiene un autovector no nulo, esto es, $\mathcal{P}_{\C,1}(2)$ se cumple.
-\end{lema}
-{{% proof %}}
-
-Sea $A:\C^n\rightarrow\C^n$ un endomorfismo con $n$ impar, y sea $V=\text{Herm}_{n}(\C)$, el $\RR$-espacio vectorial de las matrices hermíticas (aquellas que $A^*=\overline{A}^t=A$) de orden $n\times n$. Consideremos los siguientes endomorfismos $\RR$-lineales de $V$ definidos como:
-$$L_1(B)=\frac{AB+BA^*}{2}\text{ ,  }L_2(B)=\frac{AB-BA^*}{2i}.$$
-Ver que $L_1$ y $L_2$ están bien definidos y conmutan es un cálculo bien sencillo y no lo escribiremos en estas líneas.
-
-
-
-Sabemos que $\dim_{\RR}V=n^2$, que es impar. Entonces, por el lema anterior, $L_1$ y $L_2$ comparten un autovector no nulo al cumplirse $\mathcal{P}_{\RR,2}(2)$. Sea ${\bf B}$ ese autovector en $V$, cuyos valores propios asociados sean $\lambda$ y $\mu$ respectivamente. En ese caso,
-$$(L_1+iL_2)({\bf B})=A{\bf B}=(\lambda+\mu i){\bf B},$$
-luego cualquier columna no nula de ${\bf B}$ constituirá uno de los autovectores buscados para $A$.
-{{% /proof %}}
-
-
-
-Ya hemos acabado el ensamblaje de lemas previos al resultado que nos bastaba para probar el teorema fundamental del álgebra. No hemos usado más que algunas propiedades básicas de espacios vectoriales y matrices. Ahora demostremos la proposición siguiente.
-
-
-
-{{% proposition %}}
-
-Para todo $r\in\mathbb{N}$ se cumple $\mathcal{P}_{\C,1}(2^r)$.
-{{% /proposition %}}
-{{% proof %}}
-
-Se hará por inducción en $r$. Si $r=1$ es el enunciado del lema anterior, así que supongamos como hipótesis de inducción que tenemos $\mathcal{P}_{\C,1}(2^l)$, con $l<r$.\\
-Tomemos pues un endomorfismo $\C$-lineal $A:\C^n\rightarrow\C^n$, con $n$ divisible por $2^{r-1}$ pero no por $2^r$. Esto lo podemos asumir, puesto que si $n$ no fuera divisible por $2^{r-1}$ estaríamos en el caso de probar $\mathcal{P}_{\C,1}(2^{r-1})$. Sea $V=\text{Ant}_{n}(\C)$ el $\C$-espacio vectorial de las matrices antisimétricas con coeficientes complejos. Definamos dos endomorfismos de $V$, $L_1$ y $L_2$ como
-$$L_1(B)=AB-BA^t\text{ ,  }L_2(B)=ABA^t.$$
-De nuevo, no probaremos que están bien definidos ni que conmutan entre ellos, y queda para el lector.
-
-
-
-Notemos que $2^{r-1}$ no divide a $\dim V$, que es igual a $n(n-1)/2$. Por tanto, por la hipótesis de inducción, existe un vector propio ${\bf B}$ común a $L_1$ y $L_2$. Sean sus autovalores asociados $\lambda$ y $\mu$, respectivamente. Así,
-$$\mu{\bf B}=A{\bf B}A^t=A(A{\bf B}-\lambda{\bf B}),$$
-es decir,
-$$(A^2-\lambda A-\mu I){\bf B}={\bf 0}.$$
-Sea ${\bf v}$ un vector columna de ${\bf B}$, y sean $\alpha$ y $\beta$ las dos raíces complejas del polinomio $x^2-\lambda x-\mu$, que sí que sabemos que tiene raíces en $\C$, porque es de grado 2. Si llamamos ${\bf w}=(A-\beta I){\bf v}$ y es no nulo, tenemos que $(A-\alpha I){\bf w}={\bf 0}$, y hemos terminado, siendo ${\bf w}$ el autovector que buscábamos. Si ${\bf w}={\bf 0}$ eso querría decir que $(A-\beta I){\bf v}={\bf 0}$, siendo ${\bf v}$ el vector propio buscado.
-{{% /proof %}} 
 
 -->
+
+
+## Coeficientes complejos y reales
+
+
+{{% theorem name="fundamental del álgebra" %}}
+Todo polinomio $f\in\C[x]$ de grado positivo tiene una raíz en $\mathbb{C}$.
+{{% /theorem %}}
+
+{{% corollary %}}
+Los polinomios irreducibles de $\mathbb{C}[x]$ son los de grado $1$.
+{{% /corollary %}}
+
+{{% proof %}}
+Sabemos que los polinomios de grado $1$ son irreducibles. Si $f$ es de grado $>1$ y $a$ es una raíz de $f$ entonces $f=(x-a)g$. Como $\deg(f)=\deg(x-a)+\deg(g)=1+\deg(g)$ entonces $\deg(g)\geq 1$, así que ni $x-a$ ni $g$ son unidades, por lo que $f$ no es irreducible.
+{{% /proof %}}
+
+{{% corollary %}}
+Todo polinomio $f\in\mathbb{C}[x]$ de grado $n>0$ factoriza de manera única como
+$$f=b\prod_{i=1}^n(x-a\_i)$$
+donde $a\_i,b\in\mathbb{C}$, $b\neq 0$.
+{{% /corollary %}}
+
+Observa que $\RR[x]\subset\C[x]$ pues $\RR\subset\C$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
+
+{{% proposition %}}
+Si $a\in\mathbb{C}$ es una raíz de $f\in \RR[x]$ entonces su conjugado $\bar{a}$ también. Además, ambas tienen la misma multiplicidad.
+{{% /proposition %}}
+
+{{% proof %}}
+Consideramos el homomorfismo de anillos $c\colon \mathbb{C}[x]\rightarrow\mathbb{C}[x]$ definido como
+$$c(a\_nx^n+\cdots+a\_0)=\bar{a}\_nx^n+\cdots+\bar{a}\_0.$$
+Observa que $c$ se comporta como la identidad sobre $\RR[x]$. Si $a$ es raíz de $f$ entonces $(x-a)|f$ en $\C[x]$. Como $c$ es un homomorfismo, esto implica que $x-\bar{a}=c(x-a)|c(f)=f$. Esto demuestra que $\bar{a}$ es raíz de $f$.
+
+Análogamente se demuestra que si $(x-a)^n|f$ entonces $(x-\bar{a})^n|f$, por tanto la multiplicidad de $\bar{a}$ es $\geq$ que la de $a$. Como esto vale para cualquier $a$ y $\bar{\bar{a}}=a$, deducimos la otra desigualdad.
+{{% /proof %}}
+
+{{% proposition %}}
+Todo polinomio en $\RR[x]$ de grado $>0$ factoriza de manera única como producto de un escalar no nulo y polinomios irreducibles de grados $1$ y $2$.
+{{% /proposition %}}
+
+{{% proof %}}
+Tomamos la descomposición en $\C[x]$,
+$$f=b\prod_{i=1}^n(x-a\_i).$$
+Agrupamos los factores de grado $1$ correspondientes a raíces complejas conjugadas
+$$(x-a)(x-\bar{a})=x^2-2\operatorname{Re}(a)x+|a|^2.$$
+Este es un polinomio mónico de grado $2$ en $\RR[x]$ sin raíces reales, por tanto irreducible. El resultado es la descomposición deseada, que sabemos que es única.
+{{% /proof %}}
+
+{{% corollary %}}
+Los polinomios irreducibles en $\RR[x]$ son los de grado $1$ y los de grado $2$ sin raíces en $\mathbb{R}$.
+{{% /corollary %}}
+
+
+## Coeficientes enteros y racionales
+
+Las nociones de divisibilidad e irreducibilidad tienen también sentido en $\mathbb{Z}[x]$. En este apartado estudiaremos cómo se relacionan estos aspectos en $\mathbb{Z}[x]$ y $\mathbb{Q}[x]$ y veremos algunos criterios sencillos de irreducibilidad en $\mathbb{Z}[x]$.
+
+{{% theorem name="Ruffini" %}}
+Si un polinomio $a\_nx^n+a\_{n-1}x^{n-1}+\cdots+a\_1x+a\_0\in\mathbb{Z}[x]$ tiene una raíz racional, $\frac{a}{b}$ en forma reducida, entonces $a|a\_0$ y $b|a\_n$
+{{% /theorem %}}
+
+{{% proof %}}
+Sabemos que $$0=f\left(\frac{a}{b}\right)=a\_n\left(\frac{a}{b}\right)^n+a\_{n-1}\left(\frac{a}{b}\right)^{n-1}+\cdots+a\_{n-1}\frac{a}{b}+a\_0.$$
+Multiplicamos por $b^n$,
+&$0=a\_na^n+a\_{n-1}a^{n-1}b+\cdots+a\_1ab^{n-1}+a\_0b^n$$
+y deducimos las dos condiciones de divisibilidad el enunciado despejando primero el último sumando y luego el primero.
+{{% /proof %}}
+
+{{% definition %}}
+Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in \mathbb{Z}[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in \mathbb{Z}$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
+{{% /definition %}}
+
+Los únicos polinomios constantes primitivos son $\pm1$.
+
+{{% lemma %}}
+Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in \mathbb{Q}[x]$ no nulo existe una constante $c\in \mathbb{Q}$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in \mathbb{Z}[x]$ tal que $$f(x)=c\cdot f_0(x).$$ Además $c$ y $f_0(x)$ son únicos salvo signo. Denotaremos $c=\operatorname{cont}(f)$. 
+{{% /lemma %}}
+
+
+{{% proof %}}
+
+Veamos la existencia. Podemos quitar denominadores de los coeficientes de $f(x)$ multiplicando por una constante $d\in \mathbb{Z}$ no nula, $$d\cdot f(x)\in \mathbb{Z}[x].$$ Si $e$ es el divisor común máximo de los coeficientes de $d\cdot f(x)$ vemos que podemos tomar
+$$\begin{array}{rcl}
+f_0&=&\frac{d}{e}\cdot f(x),\cr
+c&=&\frac{e}{d}.
+\end{array}$$
+
+Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in \mathbb{Z}[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in \mathbb{Z}$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del divisor común máximo, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in \mathbb{Z}$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
+   {{% /proof %}}
+
+
+{{% remark %}}
+Si el contenido de un polinomio $f(x)\in \mathbb{Q}[x]$ está en $\mathbb{Z}$ entonces $f(x)\in \mathbb{Z}[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in \mathbb{Z}[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f)\in \mathbb{Z}$. Es más, dada una constante $a\in \mathbb{Z}$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in \mathbb{Z}[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
+{{% /remark %}}
+
+
+{{% theorem name="Lema de Gauss" %}}
+El producto de polinomios primitivos en $\mathbb{Z}[x]$ es primitivo. 
+{{% /theorem %}}
+
+
+{{% proof %}}
+ Dado un primo $p\in \mathbb{Z}$, consideramos el homomorfismo de **reducción módulo $p$** $$\phi_p\colon \mathbb{Z}[x]\longrightarrow (\mathbb{Z}/(p))[x]$$ definido en las constantes como $\phi_p(a)=\bar a$, $a\in \mathbb{Z}$, tal que $\phi_p(x)=x$. Es decir, $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0.$$ El homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \\mathbb{Q}er \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in \mathbb{Z}[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in \mathbb{Z}$ primo. Si $f,g\in \mathbb{Z}[x]$ son primitivos entonces $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$ para todo $p\in \mathbb{Z}$ primo ya que $(\mathbb{Z}/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
+{{% /proof %}}
+
+
+{{% corollary %}}
+Dados $f,g\in \mathbb{Q}[x]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$. 
+{{% /corollary %}}
+
+
+{{% proof %}}
+ Tomamos $f,g\in \mathbb{Q}[x]$ y los descomponemos  $$\begin{array}{rcl} f&=&c\cdot f_0,\cr g&=&d\cdot g_0, \end{array}$$ con $c,d\in \mathbb{Q}$ y $f_0,g_0\in \mathbb{Z}[x]$ primitivos. Entonces $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposición válida del producto $f\cdot g$, así que $c\cdot d$ es su contenido.
+{{% /proof %}}
+
+
+{{% proposition %}}
+Dados $f,g\in \mathbb{Z}[x]$, si $g|f$ en $\mathbb{Q}[x]$ y $g$ es primitivo entonces $g|f$ en $\mathbb{Z}[x]$. 
+{{% /proposition %}}
+
+
+{{% proof %}}
+ Supongamos que $f=g\cdot q$ en $\mathbb{Q}[x]$. Como $g$ es primitivo, $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$ Como $f\in \mathbb{Z}[x]$ su contenido está en $\mathbb{Z}$, y como este coindice con el de $q$, entonces $q\in \mathbb{Z}[x]$, por lo que $g|f$ en $\mathbb{Z}[x]$.
+{{% /proof %}}
+
+
+{{% proposition %}}
+Un polinomio $f\in \mathbb{Z}[x]$ no constante es irreducible en $\mathbb{Z}[x]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $\mathbb{Q}[x]$. 
+{{% /proposition %}}
+
+
+{{% proof %}}
+
+$\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $\mathbb{Z}[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $\mathbb{Z}[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $\mathbb{Q}[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
+
+$\\mathbb{Z}ightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $\mathbb{Z}[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $\mathbb{Q}[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $\mathbb{Q}$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in \mathbb{Z}[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $\mathbb{Z}[x]$ y por tanto es un divisor propio por cuestión de grados.
+{{% /proof %}}
+
+
+{{% remark %}}
+Una constante $a\in \mathbb{Z}$ es irreducible en $\mathbb{Z}[x]$ si y solo si lo es en $\mathbb{Z}$.
+{{% /remark %}}
+
+Finalmente veremos un par de condiciones suficientes más avanzadas para la irreducibilidad de un polinomio.
+
+{{% proposition %}}
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[x]$ es un polinomio primitivo de grado $n>0$, $p\in \mathbb{Z}$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(\mathbb{Z}/(p))[x]$, entonces $f$ es irreducible en $\mathbb{Z}[x]$. 
+{{% /proposition %}}
+
+
+{{% proof %}}
+ Usaremos el homomorfismo $\phi_p\colon \mathbb{Z}[x]\rightarrow (\mathbb{Z}/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ \mathbb{Z}eduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $\mathbb{Z}$ como $\mathbb{Z}/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.
+{{% /proof %}}
+
+
+{{% theorem name="Criterio de Eisenstein" label="eisenstein" %}}
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[x]$ es un polinomio primitivo de grado $n>0$ y $p\in \mathbb{Z}$ es un primo tal que: 
+
+* $p$ no divide $a\_n$,
+
+* $p$ divide a $a\_{n-1},\dots,a\_0$,
+
+* $p^2$ no divide a $a_0$,
+
+entonces $f$ es irreducible en $\mathbb{Z}[x]$. 
+{{% /theorem %}}
+
+
+{{% proof %}}
+Esta demostración transcurre de manera exactamente igual que la anterior hasta la última frase, que no es válida en este caso. A partir de ahí continuamos del siguiente modo. Si $b_0, c_0\in \mathbb{Z}$ son los términos independientes de $g$ y $h$ entonces $a_0=b_0c_0$. Como $p|a_0$ y $p$ es primo, $p|b_0$ o $p|c_0$, pero no puede dividir a ambos a la vez ya que $p^2$ no divide a $a_0$. Esto prueba que bien $\phi_p(g)$ o bien $\phi_p(h)$ tiene término independiente no nulo. Por las condiciones del enunciado, $\phi_p(f)=\bar a_nx^n$ con $\bar a_n\neq 0$. Al ser $\phi_p(f)=\phi_p(g)\phi_p(h)$ un monomio y $\mathbb{Z}/(p)$ es un dominio, también $\phi_p(g)$ y $\phi_p(h)$ han de ser monomios. Como uno de ellos tiene término independiente no nulo, entonces ha de tener grado $0$, lo que contradice el cálculo al que se llega en la última ecuación de la demostración anterior.   
+{{% /proof %}}
+
