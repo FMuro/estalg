@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.22)  24 JAN 2019 12:21
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.24)  24 JAN 2019 17:01
  restricted system commands enabled.
 **latex.tex
 (./latex.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.092 seconds
+luaotfload | main : initialization completed in 0.082 seconds
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2017/10/31 v2.20.4
 \linespacing=\dimen102
@@ -286,6 +286,7 @@ File: switch.def 2018/06/05 3.22 Babel switching mechanism
 \l@dumylang=\language2
 Package babel Info: Non-standard hyphenation setup on input line 114.
 \l@nohyphenation=\language3
+\l@spanish=\language4
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
@@ -296,21 +297,17 @@ File: babel.def 2018/06/05 3.22 Babel common definitions
 \U@D=\dimen120
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def))
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language `Spanish' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for english instead on input line 51.
-
-\l@spanish = a dialect from \language0
 \es@quottoks=\toks27
 \es@quotdepth=\count111
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex
+UTF-8 Spanish hyphenation patterns
+(/usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-es.tex)))
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count112
 \float@exts=\toks28
@@ -414,19 +411,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 LaTeX Info: Redefining \. on input line 57.
 LaTeX Info: Redefining \% on input line 57.
 (load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
-lmroman10-bold.luc)
-
-Class amsart Warning: Abstract should precede \maketitle in AMS document classes
-; reported on input line 61.
-
-(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
 lmromancaps10-regular.luc)(load luc: /home/fernando/.texlive2018/texmf-var/luate
-x-cache/generic/fonts/otl/lmmono8-regular.luc)
-Overfull \hbox (14.14406pt too wide) in paragraph at lines 62--63
-[]\TU/lmr/m/n/8 No-tas de la asig-natu-ra Es-truc-turas Al-ge-braicas del Gra-d
-o en Matemáti-
- []
-
+x-cache/generic/fonts/otl/lmmono8-regular.luc)(load luc: /home/fernando/.texlive
+2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc)
 (./static/docs/latex.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -463,10 +450,10 @@ LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
  [7]
 Overfull \hbox (36.69992pt too wide) in paragraph at lines 362--366
-[]\TU/lmr/m/n/10 Veamos que $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10   \OT1/cmr/m/n
-/10 1 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 n$\TU/lmr/m/n/10 . Suponien-do que ha
-y un úni-co ho-mo-mor-fis-mo $\OML/cmm/m/it/10 h [] [] R\OT1/cmr/m/n/10 [\OML/
-cmm/m/it/10 x[]; [] ; x[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !
+[]\TU/lmr/m/n/10 Vea-mos que $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10   \OT1/cmr/m/
+n/10 1 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 n$\TU/lmr/m/n/10 . Su-po-nien-do que
+ hay un úni-co ho-mo-mor-fis-mo $\OML/cmm/m/it/10 h [] [] R\OT1/cmr/m/n/10 [\O
+ML/cmm/m/it/10 x[]; [] ; x[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !
  []
 
 (load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
@@ -517,14 +504,8 @@ LaTeX Info: Redefining \% on input line 1085.
 LaTeX Info: Redefining \. on input line 1187.
 LaTeX Info: Redefining \% on input line 1187.
  [18](load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts
-/otl/lmroman5-regular.luc)
-Overfull \hbox (3.80779pt too wide) in paragraph at lines 1209--1214
-[]\TU/lmr/m/it/10 Ejem-p-lo \TU/lmr/m/n/10 1.1.7.20\TU/lmr/m/it/10 . \TU/lmr/m/
-n/10 (Ide-ales max-i-males, análi-sis y topología) Da-do un es-pa-cio topol
-ógi-
- []
-
-) (./hugotopdf/outputs/rings/factorization.tex
+/otl/lmroman5-regular.luc))
+(./hugotopdf/outputs/rings/factorization.tex
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
  [19]
@@ -542,11 +523,11 @@ LaTeX Info: Redefining \% on input line 307.
  [23]
 LaTeX Info: Redefining \. on input line 397.
 LaTeX Info: Redefining \% on input line 397.
-
-[24]
+ [24]
 LaTeX Info: Redefining \. on input line 470.
 LaTeX Info: Redefining \% on input line 470.
- [25]
+
+[25]
 Missing character: There is no   (U+2009) in font cmr10!
 Missing character: There is no   (U+2009) in font cmr10!
 Missing character: There is no   (U+2009) in font cmr10!
@@ -564,9 +545,9 @@ LaTeX Info: Redefining \. on input line 735.
 LaTeX Info: Redefining \% on input line 735.
  [29]
 Overfull \hbox (7.35043pt too wide) in paragraph at lines 771--780
-[]\TU/lmr/m/n/10 Por el prin-ci-pio de susti-tu-ción, hay un úni-co ho-mo-mor
--fis-mo $\OML/cmm/m/it/10 g [] [] R\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x\OT1/cmr/
-m/n/10 ] \OMS/cmsy/m/n/10 !
+[]\TU/lmr/m/n/10 Por el prin-ci-pio de sus-ti-tu-ción, hay un úni-co ho-mo-mo
+r-fis-mo $\OML/cmm/m/it/10 g [] [] R\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x\OT1/cmr
+/m/n/10 ] \OMS/cmsy/m/n/10 !
  []
 
 LaTeX Info: Redefining \. on input line 824.
@@ -587,15 +568,9 @@ LaTeX Info: Redefining \% on input line 1120.
 LaTeX Info: Redefining \. on input line 1200.
 LaTeX Info: Redefining \% on input line 1200.
  [35]
-Overfull \hbox (3.39542pt too wide) in paragraph at lines 1242--1245
-[]\TU/lmr/m/n/10 Por tan-to, para fac-tor-izar $\OML/cmm/m/it/10 z$ \TU/lmr/m/n
-/10 en $\U/msb/m/n/10 Z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ]$ \T
-U/lmr/m/n/10 pode-mos pro-ced-er del sigu-iente mo-do. Primero,
- []
-
 LaTeX Info: Redefining \. on input line 1282.
 LaTeX Info: Redefining \% on input line 1282.
-[36]
+ [36]
 <static/images/gaussian_primes.png, id=142, 1204.5pt x 1204.5pt>
 File: static/images/gaussian_primes.png Graphic file (type png)
 <use static/images/gaussian_primes.png>
@@ -605,35 +580,23 @@ Package luatex.def Info: static/images/gaussian_primes.png  used on input line 1
 LaTeX Info: Redefining \. on input line 1326.
 LaTeX Info: Redefining \% on input line 1326.
  [37]
-Overfull \hbox (10.84552pt too wide) in paragraph at lines 1341--1343
-\TU/lmr/m/n/10 Aho-ra reem-plazare-mos el tér-mi-no in-de-pen-di-ente con un e
-n-tero pos-i-ti-vo $\OML/cmm/m/it/10 > \OT1/cmr/m/n/10 1$ \TU/lmr/m/n/10 cualqu
-iera. 
- []
-
-LaTeX Info: Redefining \. on input line 1386.
-LaTeX Info: Redefining \% on input line 1386.
-[38<./static/images/gaussian_primes.png>]
-Overfull \hbox (4.59256pt too wide) in paragraph at lines 1415--1418
-\TU/lmr/m/n/10 Sus solu-ciones pos-i-ti-vas $\OML/cmm/m/it/10 x; y; z > \OT1/cm
-r/m/n/10 0$ \TU/lmr/m/n/10 se de-nom-i-nan \TU/lmr/bx/n/10 ter-nas pitagóri-c-
-as \TU/lmr/m/n/10 y parametrizan
- []
-
+LaTeX Info: Redefining \. on input line 1378.
+LaTeX Info: Redefining \% on input line 1378.
+ [38<./static/images/gaussian_primes.png>]
 <static/images/pythagorean.png, id=149, 187.71428pt x 149.38928pt>
 File: static/images/pythagorean.png Graphic file (type png)
 <use static/images/pythagorean.png>
 Package luatex.def Info: static/images/pythagorean.png  used on input line 1421.
 
 (luatex.def)             Requested size: 180.0pt x 143.25705pt.
-LaTeX Info: Redefining \. on input line 1433.
-LaTeX Info: Redefining \% on input line 1433.
-[39<./static/images/pythagorean.png>]
+LaTeX Info: Redefining \. on input line 1427.
+LaTeX Info: Redefining \% on input line 1427.
+ [39<./static/images/pythagorean.png>]
 LaTeX Info: Redefining \. on input line 1486.
 LaTeX Info: Redefining \% on input line 1486.
  [40]
-LaTeX Info: Redefining \. on input line 1565.
-LaTeX Info: Redefining \% on input line 1565.
+LaTeX Info: Redefining \. on input line 1554.
+LaTeX Info: Redefining \% on input line 1554.
  [41]
 <static/images/Pythagorean_triple_scatterplot.png, id=161, 3770.60869pt x 3594.6
 4696pt>
@@ -644,14 +607,14 @@ on input line 1586.
 (luatex.def)             Requested size: 180.0pt x 171.57025pt.
 )
 (./hugotopdf/outputs/modules/_index.tex
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
  [42<./static/images/Pythagorean_triple_scatterplot.png>]
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
  [43]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
  [44]
 LaTeX Info: Redefining \. on input line 215.
 LaTeX Info: Redefining \% on input line 215.
@@ -678,9 +641,9 @@ LaTeX Info: Redefining \. on input line 752.
 LaTeX Info: Redefining \% on input line 752.
  [52]
 Overfull \hbox (2.55377pt too wide) in paragraph at lines 766--771
-[]\TU/lmr/bx/n/10 Teo-re-ma 2.0.5.7. \TU/lmr/m/n/10 (Primer Teo-re-ma de Iso-mo
-r-fía)[] \TU/lmr/m/it/10 Da-do un ho-mo-mor-fis-mo $\OML/cmm/m/it/10 f [] [] M
- \OMS/cmsy/m/n/10 !
+[]\TU/lmr/bx/n/10 Teo-re-ma 2.0.5.7. \TU/lmr/m/n/10 (Pri-mer Teo-re-ma de Iso-m
+or-fía)[] \TU/lmr/m/it/10 Da-do un ho-mo-mor-fis-mo $\OML/cmm/m/it/10 f [] [] 
+M \OMS/cmsy/m/n/10 !
  []
 
 <static/images/isomorfiamodulos.png, id=198, 69.25874pt x 53.17868pt>
@@ -797,9 +760,9 @@ LaTeX Info: Redefining \. on input line 371.
 LaTeX Info: Redefining \% on input line 371.
  [78]
 Overfull \hbox (10.37108pt too wide) in paragraph at lines 429--431
-[]\TU/lmr/bx/n/10 Coro-lario 3.1.1.29. \TU/lmr/m/it/10 Da-da una ex-ten-sión $
-\OML/cmm/m/it/10 F \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 K$ \TU/lmr/m/it/10 y el-
-e-men-tos al-ge-braicos $\OML/cmm/m/it/10 []; [] ; [] \OMS/cmsy/m/n/10 2
+[]\TU/lmr/bx/n/10 Co-ro-la-rio 3.1.1.29. \TU/lmr/m/it/10 Da-da una ex-ten-sión
+ $\OML/cmm/m/it/10 F \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 K$ \TU/lmr/m/it/10 y e
+le-men-tos al-ge-brai-cos $\OML/cmm/m/it/10 []; [] ; [] \OMS/cmsy/m/n/10 2
  []
 
 LaTeX Info: Redefining \. on input line 451.
@@ -808,10 +771,10 @@ LaTeX Info: Redefining \% on input line 451.
 LaTeX Info: Redefining \. on input line 534.
 LaTeX Info: Redefining \% on input line 534.
  [80]
-Overfull \hbox (6.26173pt too wide) in paragraph at lines 612--619
-\TU/lmr/m/n/10 spec-ti-va-mente. Supong-amos que sus gra-dos re-spec-tivos son 
-$\OML/cmm/m/it/10 m; n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\TU/lmr/m/n/10 . Se
-an $\OML/cmm/m/it/10 []; [] ; []$
+Overfull \hbox (2.32173pt too wide) in paragraph at lines 612--619
+\TU/lmr/m/n/10 pec-ti-va-men-te. Su-pon-ga-mos que sus gra-dos res-pec-ti-vos s
+on $\OML/cmm/m/it/10 m; n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\TU/lmr/m/n/10 .
+ Sean $\OML/cmm/m/it/10 []; [] ; []$
  []
 
 LaTeX Info: Redefining \. on input line 622.
@@ -991,21 +954,15 @@ LaTeX Info: Redefining \% on input line 78.
 LaTeX Info: Redefining \. on input line 157.
 LaTeX Info: Redefining \% on input line 157.
  [94]
-Overfull \hbox (4.94914pt too wide) in paragraph at lines 216--220
-[]\TU/lmr/m/n/10 El con-jun-to $\OML/cmm/m/it/10 K[]$ \TU/lmr/m/n/10 es-tá con
--tenido en $\OML/cmm/m/it/10 K$ \TU/lmr/m/n/10 por defini-ción. Es más, cualq
-uier
- []
-
 LaTeX Info: Redefining \. on input line 231.
 LaTeX Info: Redefining \% on input line 231.
-[95]
+ [95]
 Overfull \hbox (14.69933pt too wide) in paragraph at lines 253--256
-[]\TU/lmr/bx/n/10 Defini-ción 3.2.2.1. \TU/lmr/m/n/10 Da-do un anil-lo $\OML/c
-mm/m/it/10 R$\TU/lmr/m/n/10 , un poli-nomio $\OML/cmm/m/it/10 f \OT1/cmr/m/n/10
- = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]; [] ; u[]\OT1/cmr/m/
-n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 u
-[]; [] ; u[]\OT1/cmr/m/n/10 ]$
+[]\TU/lmr/bx/n/10 De-fi-ni-ción 3.2.2.1. \TU/lmr/m/n/10 Da-do un ani-llo $\OML
+/cmm/m/it/10 R$\TU/lmr/m/n/10 , un po-li-no-mio $\OML/cmm/m/it/10 f \OT1/cmr/m/
+n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]; [] ; u[]\OT1/cm
+r/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 [\OML/cmm/m/it/
+10 u[]; [] ; u[]\OT1/cmr/m/n/10 ]$
  []
 
 LaTeX Info: Redefining \. on input line 295.
@@ -1018,10 +975,10 @@ Overfull \hbox (9.83525pt too wide) in paragraph at lines 405--410
 \TU/lmr/m/n/10 y $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr
 /m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )) = (\OML/cmm/m/it/10 \OT1/cmr/
 m/n/10 )(\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it
-/10 S$\TU/lmr/m/n/10 , de-duci-mos que $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML
-/cmm/m/it/10 S\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 S$\TU/lmr/m
-/n/10 . Es más, co-mo $\OML/cmm/m/it/10  [] [] R\OT1/cmr/m/n/10 [\OML/cmm/m/i
-t/10 u[]; [] ; u[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !
+/10 S$\TU/lmr/m/n/10 , de-du-ci-mos que $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OM
+L/cmm/m/it/10 S\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 S$\TU/lmr/
+m/n/10 . Es más, co-mo $\OML/cmm/m/it/10  [] [] R\OT1/cmr/m/n/10 [\OML/cmm/m/
+it/10 u[]; [] ; u[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !
  []
 
 LaTeX Info: Redefining \. on input line 418.
@@ -1036,14 +993,9 @@ LaTeX Info: Redefining \% on input line 579.
 LaTeX Info: Redefining \. on input line 667.
 LaTeX Info: Redefining \% on input line 667.
  [101]
-Overfull \hbox (16.18112pt too wide) in paragraph at lines 741--746
-[]\TU/lmr/m/n/10 Una vez es-table-ci-da la equiv-a-len-cia de la primera parte 
-del enun-ci-a-do, de-mostraremos
- []
-
 LaTeX Info: Redefining \. on input line 746.
 LaTeX Info: Redefining \% on input line 746.
-[102]
+ [102]
 LaTeX Info: Redefining \. on input line 806.
 LaTeX Info: Redefining \% on input line 806.
  [103]
@@ -1087,13 +1039,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
 )
 
 Here is how much of LuaTeX's memory you used:
- 7957 strings out of 494412
+ 7970 strings out of 494412
  100000,266212 words of node,token memory allocated
- 2269 words of node memory still in use:
-   5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 458 attribute, 54 glue_spec, 458 at
+ 2296 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 4 glue, 1 kern, 459 attribute, 54 glue_spec, 459 at
 tribute_list, 1 write nodes
-   avail lists: 2:624,3:202,4:30,5:341,6:34,7:3923,8:81,9:506,10:21,11:326
- 11641 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:624,3:202,4:39,5:341,6:34,7:3997,8:81,9:506,10:25,11:477
+ 11644 multiletter control sequences out of 65536+600000
  60 fonts using 4342359 bytes
  34i,14n,31p,395b,624s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf></us
@@ -1121,7 +1073,7 @@ ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm7.pfb>
-Output written on static/docs/latex.pdf (109 pages, 2415112 bytes).
+Output written on static/docs/latex.pdf (109 pages, 2415004 bytes).
 
 PDF statistics: 534 PDF objects out of 1000 (max. 8388607)
  320 compressed objects within 4 object streams

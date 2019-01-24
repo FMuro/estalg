@@ -14,7 +14,7 @@
 \contentsline {subsection}{\tocsubsection {}{1.2.3}{Polinomios}}{27}{subsection.1.2.3}
 \contentsline {subsection}{\tocsubsection {}{1.2.4}{Enteros de Gauss}}{32}{subsection.1.2.4}
 \contentsline {subsection}{\tocsubsection {}{1.2.5}{Ecuaciones diofánticas}}{38}{subsection.1.2.5}
-\contentsline {part}{\tocpart {Parte}{2}{Módulos}}{42}{part.2}
+\contentsline {part}{\tocpart {Parte}{2}{Módulos}}{43}{part.2}
 \contentsline {subsection}{\tocsubsection {}{2.0.1}{Definición}}{43}{subsection.2.0.1}
 \contentsline {subsection}{\tocsubsection {}{2.0.2}{Homomorfismos}}{45}{subsection.2.0.2}
 \contentsline {subsection}{\tocsubsection {}{2.0.3}{Módulos libres}}{47}{subsection.2.0.3}

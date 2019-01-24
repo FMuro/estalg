@@ -245,7 +245,7 @@ $$D=\prod_{1\leq i<j\leq n}(u\_i-u\_j)^2=(u\_1-u\_2)^2\cdots(u\_{n-1}-u\_n)^2.$$
 {{% /definition %}}
 
 {{% remark %}}
-El discriminante es simétrico y, dados $\alpha\_1, \dots,\alpha_n$, tenemos que $D(\alpha\_1, \dots,\alpha_n)$ si y solo si $\alpha\_i=\alpha\_j$ para ciertos $i\neq j$. Denotaremos $\Delta\in R[z\_1,\dots,z\_n]$ al único polinomio tal que $D=\Delta(s\_1,\dots,s\_n)$.
+El discriminante es simétrico y, dados $\alpha\_1, \dots,\alpha_n$, tenemos que $D(\alpha\_1, \dots,\alpha_n)=0$ si y solo si $\alpha\_i=\alpha\_j$ para ciertos $i\neq j$. Denotaremos $\Delta\in R[z\_1,\dots,z\_n]$ al único polinomio tal que $D=\Delta(s\_1,\dots,s\_n)$.
 {{% /remark %}}
 
 {{% example name="Discriminantes en pocas variables" %}}

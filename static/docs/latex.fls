@@ -100,6 +100,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-es.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT ./static/docs/latex.aux
@@ -153,9 +155,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
 INPUT /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc
 INPUT /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
+INPUT /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
 INPUT ./static/docs/latex.toc
 INPUT ./static/docs/latex.toc
 INPUT /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc
