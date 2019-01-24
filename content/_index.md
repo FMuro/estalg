@@ -3,7 +3,7 @@
 Esta web contiene las transparencias del profesor [Fernando Muro](http://personal.us.es/fmuro/) para la asignatura obligatoria [Álgebra Básica](http://www.us.es/estudios/grados/plan_171/asignatura_1710001) del [Grado en Matemáticas](http://www.us.es/estudios/grados/plan_171) de la [Universidad de Sevilla](http://www.us.es). Los contenidos son esencialmente los mismos que los de los apuntes disponibles en PDF en [este enlace](https://rodas5.us.es/items/1141d30f-73ed-4c7a-92f9-d5046dbdffe1/1/). Han sido elaborados por diversos profesores del [Departamento de Álgebra](http://www.algebra.us.es/).
 
 {{% remark %}}
-Los contenidos de estas notas se encuentran también disponibles en PDF en [el este enlace](./docs/latex.pdf). La versión en PDF se generada automáticamente y puede contener errores derivados del proceso de conversion. 
+Los contenidos de estas notas se encuentran también disponibles en PDF en [este enlace](./docs/latex.pdf). La versión en PDF se genera automáticamente y puede contener errores derivados del proceso de conversion. 
 {{% /remark %}}
 
 {{% watch %}}
