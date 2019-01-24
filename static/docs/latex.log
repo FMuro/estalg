@@ -1,0 +1,1130 @@
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.22)  24 JAN 2019 12:21
+ restricted system commands enabled.
+**latex.tex
+(./latex.tex
+LaTeX2e <2018-04-01> patch level 5
+Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
+Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
+llection.(using write cache: /home/fernando/.texlive2018/texmf-var/luatex-cache/
+generic)(using read cache: /usr/share/texlive/texmf-var/luatex-cache/generic /ho
+me/fernando/.texlive2018/texmf-var/luatex-cache/generic)
+luaotfload | conf : Root cache directory is /home/fernando/.texlive2018/texmf-va
+r/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
+-resolved path “/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader
+-2017-02-11.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.027”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 4
+luaotfload | conf : Root cache directory is /home/fernando/.texlive2018/texmf-va
+r/luatex-cache/generic/names.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.092 seconds
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2017/10/31 v2.20.4
+\linespacing=\dimen102
+\normalparindent=\dimen103
+\normaltopskip=\skip41
+luaotfload | db : Font names database loaded from /home/fernando/.texlive2018/te
+xmf-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/fernando
+/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip42
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen104
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks15
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks16
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks17
+\multlinegap=\skip43
+\multlinetaggap=\skip44
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 398.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\copyins=\insert199
+\abstractbox=\box28
+\listisep=\skip45
+\c@part=\count92
+\c@section=\count93
+\c@subsection=\count94
+\c@subsubsection=\count95
+\c@paragraph=\count96
+\c@subparagraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\captionindent=\dimen113
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
+
+(/usr/share/texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
+
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks25
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen114
+\Hy@linkcounter=\count100
+\Hy@pagecounter=\count101
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count102
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `draft' set `true' on input line 4383.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count103
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen115
+\Fld@menulength=\count104
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count105
+\c@Item=\count106
+\c@Hfootnote=\count107
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2018/02/06 v6.86b Hyperref driver for luaTeX
+\Fld@listcount=\count108
+\c@bookmark@seq@number=\count109
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
+2.
+)
+\Hy@SectionHShift=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/06/05 3.22 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/06/05 3.22 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 114.
+\l@nohyphenation=\language3
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/06/05 3.22 Babel common definitions
+\babel@savecnt=\count110
+\U@D=\dimen120
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def))
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language `Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for english instead on input line 51.
+
+\l@spanish = a dialect from \language0
+\es@quottoks=\toks27
+\es@quotdepth=\count111
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count112
+\float@exts=\toks28
+\float@box=\box29
+\@float@everytoks=\toks29
+\@floatcapt=\box30
+)
+(./static/docs/latex.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+
+
+LaTeX Warning: Label `definiciuxf3n' multiply defined.
+
+
+LaTeX Warning: Label `homomorfismos' multiply defined.
+
+
+LaTeX Warning: Label `cocientes' multiply defined.
+
+)
+\openout1 = static/docs/latex.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
+lmroman8-regular.luc)
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl
+/lmroman10-italic.luc)
+\AtBeginShipoutBox=\box31
+
+
+Package hyperref Warning: Draft mode on.
+
+Package hyperref Info: Link coloring OFF on input line 57.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count113
+)
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen121
+\scratchbox=\box32
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen122
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks31
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+))
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
+lmroman10-bold.luc)
+
+Class amsart Warning: Abstract should precede \maketitle in AMS document classes
+; reported on input line 61.
+
+(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
+lmromancaps10-regular.luc)(load luc: /home/fernando/.texlive2018/texmf-var/luate
+x-cache/generic/fonts/otl/lmmono8-regular.luc)
+Overfull \hbox (14.14406pt too wide) in paragraph at lines 62--63
+[]\TU/lmr/m/n/8 No-tas de la asig-natu-ra Es-truc-turas Al-ge-braicas del Gra-d
+o en Matemáti-
+ []
+
+(./static/docs/latex.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
+lmroman7-regular.luc) [1{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/p
+dftex.map}])
+\tf@toc=\write3
+
+\openout3 = static/docs/latex.toc
+ (./hugotopdf/outputs/rings/_index.tex
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+
+[2]) (./hugotopdf/outputs/rings/definitions.tex
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+ [3]
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+ [4]
+<static/images/symmetric_difference.png, id=30, 502.87875pt x 86.30243pt>
+File: static/images/symmetric_difference.png Graphic file (type png)
+<use static/images/symmetric_difference.png>
+Package luatex.def Info: static/images/symmetric_difference.png  used on input l
+ine 145.
+(luatex.def)             Requested size: 180.0pt x 30.89107pt.
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+ [5<./static/images/symmetric_difference.png>]
+LaTeX Info: Redefining \. on input line 259.
+LaTeX Info: Redefining \% on input line 259.
+ [6]
+LaTeX Info: Redefining \. on input line 344.
+LaTeX Info: Redefining \% on input line 344.
+ [7]
+Overfull \hbox (36.69992pt too wide) in paragraph at lines 362--366
+[]\TU/lmr/m/n/10 Veamos que $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10   \OT1/cmr/m/n
+/10 1 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 n$\TU/lmr/m/n/10 . Suponien-do que ha
+y un úni-co ho-mo-mor-fis-mo $\OML/cmm/m/it/10 h [] [] R\OT1/cmr/m/n/10 [\OML/
+cmm/m/it/10 x[]; [] ; x[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !
+ []
+
+(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts/otl/
+lmroman10-bolditalic.luc)
+LaTeX Info: Redefining \. on input line 429.
+LaTeX Info: Redefining \% on input line 429.
+ [8]
+LaTeX Info: Redefining \. on input line 516.
+LaTeX Info: Redefining \% on input line 516.
+ [9]
+LaTeX Info: Redefining \. on input line 602.
+LaTeX Info: Redefining \% on input line 602.
+ [10]
+<static/images/isomorfianillos.png, id=52, 69.25874pt x 53.17868pt>
+File: static/images/isomorfianillos.png Graphic file (type png)
+<use static/images/isomorfianillos.png>
+Package luatex.def Info: static/images/isomorfianillos.png  used on input line 6
+59.
+(luatex.def)             Requested size: 180.0pt x 138.22559pt.
+LaTeX Info: Redefining \. on input line 661.
+LaTeX Info: Redefining \% on input line 661.
+ [11]
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+ [12<./static/images/isomorfianillos.png>](load luc: /home/fernando/.texlive2018
+/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-italic.luc)
+LaTeX Info: Redefining \. on input line 821.
+LaTeX Info: Redefining \% on input line 821.
+ [13]
+LaTeX Info: Redefining \. on input line 898.
+LaTeX Info: Redefining \% on input line 898.
+ [14]
+LaTeX Info: Redefining \. on input line 963.
+LaTeX Info: Redefining \% on input line 963.
+ [15]
+LaTeX Info: Redefining \. on input line 1035.
+LaTeX Info: Redefining \% on input line 1035.
+ [16]
+<static/images/fractionfield.png, id=74, 77.26868pt x 49.20383pt>
+File: static/images/fractionfield.png Graphic file (type png)
+<use static/images/fractionfield.png>
+Package luatex.def Info: static/images/fractionfield.png  used on input line 106
+6.
+(luatex.def)             Requested size: 180.0pt x 114.62595pt.
+LaTeX Info: Redefining \. on input line 1085.
+LaTeX Info: Redefining \% on input line 1085.
+ [17<./static/images/fractionfield.png>]
+LaTeX Info: Redefining \. on input line 1187.
+LaTeX Info: Redefining \% on input line 1187.
+ [18](load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/fonts
+/otl/lmroman5-regular.luc)
+Overfull \hbox (3.80779pt too wide) in paragraph at lines 1209--1214
+[]\TU/lmr/m/it/10 Ejem-p-lo \TU/lmr/m/n/10 1.1.7.20\TU/lmr/m/it/10 . \TU/lmr/m/
+n/10 (Ide-ales max-i-males, análi-sis y topología) Da-do un es-pa-cio topol
+ógi-
+ []
+
+) (./hugotopdf/outputs/rings/factorization.tex
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+ [19]
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [20]
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+ [21]
+LaTeX Info: Redefining \. on input line 236.
+LaTeX Info: Redefining \% on input line 236.
+ [22]
+LaTeX Info: Redefining \. on input line 307.
+LaTeX Info: Redefining \% on input line 307.
+ [23]
+LaTeX Info: Redefining \. on input line 397.
+LaTeX Info: Redefining \% on input line 397.
+
+[24]
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
+ [25]
+Missing character: There is no   (U+2009) in font cmr10!
+Missing character: There is no   (U+2009) in font cmr10!
+Missing character: There is no   (U+2009) in font cmr10!
+Missing character: There is no   (U+2009) in font cmr10!
+LaTeX Info: Redefining \. on input line 528.
+LaTeX Info: Redefining \% on input line 528.
+ [26]
+LaTeX Info: Redefining \. on input line 587.
+LaTeX Info: Redefining \% on input line 587.
+ [27]
+LaTeX Info: Redefining \. on input line 659.
+LaTeX Info: Redefining \% on input line 659.
+ [28]
+LaTeX Info: Redefining \. on input line 735.
+LaTeX Info: Redefining \% on input line 735.
+ [29]
+Overfull \hbox (7.35043pt too wide) in paragraph at lines 771--780
+[]\TU/lmr/m/n/10 Por el prin-ci-pio de susti-tu-ción, hay un úni-co ho-mo-mor
+-fis-mo $\OML/cmm/m/it/10 g [] [] R\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x\OT1/cmr/
+m/n/10 ] \OMS/cmsy/m/n/10 !
+ []
+
+LaTeX Info: Redefining \. on input line 824.
+LaTeX Info: Redefining \% on input line 824.
+[30]
+LaTeX Info: Redefining \. on input line 895.
+LaTeX Info: Redefining \% on input line 895.
+ [31]
+LaTeX Info: Redefining \. on input line 978.
+LaTeX Info: Redefining \% on input line 978.
+ [32]
+LaTeX Info: Redefining \. on input line 1053.
+LaTeX Info: Redefining \% on input line 1053.
+ [33]
+LaTeX Info: Redefining \. on input line 1120.
+LaTeX Info: Redefining \% on input line 1120.
+ [34]
+LaTeX Info: Redefining \. on input line 1200.
+LaTeX Info: Redefining \% on input line 1200.
+ [35]
+Overfull \hbox (3.39542pt too wide) in paragraph at lines 1242--1245
+[]\TU/lmr/m/n/10 Por tan-to, para fac-tor-izar $\OML/cmm/m/it/10 z$ \TU/lmr/m/n
+/10 en $\U/msb/m/n/10 Z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ]$ \T
+U/lmr/m/n/10 pode-mos pro-ced-er del sigu-iente mo-do. Primero,
+ []
+
+LaTeX Info: Redefining \. on input line 1282.
+LaTeX Info: Redefining \% on input line 1282.
+[36]
+<static/images/gaussian_primes.png, id=142, 1204.5pt x 1204.5pt>
+File: static/images/gaussian_primes.png Graphic file (type png)
+<use static/images/gaussian_primes.png>
+Package luatex.def Info: static/images/gaussian_primes.png  used on input line 1
+323.
+(luatex.def)             Requested size: 180.0pt x 179.98717pt.
+LaTeX Info: Redefining \. on input line 1326.
+LaTeX Info: Redefining \% on input line 1326.
+ [37]
+Overfull \hbox (10.84552pt too wide) in paragraph at lines 1341--1343
+\TU/lmr/m/n/10 Aho-ra reem-plazare-mos el tér-mi-no in-de-pen-di-ente con un e
+n-tero pos-i-ti-vo $\OML/cmm/m/it/10 > \OT1/cmr/m/n/10 1$ \TU/lmr/m/n/10 cualqu
+iera. 
+ []
+
+LaTeX Info: Redefining \. on input line 1386.
+LaTeX Info: Redefining \% on input line 1386.
+[38<./static/images/gaussian_primes.png>]
+Overfull \hbox (4.59256pt too wide) in paragraph at lines 1415--1418
+\TU/lmr/m/n/10 Sus solu-ciones pos-i-ti-vas $\OML/cmm/m/it/10 x; y; z > \OT1/cm
+r/m/n/10 0$ \TU/lmr/m/n/10 se de-nom-i-nan \TU/lmr/bx/n/10 ter-nas pitagóri-c-
+as \TU/lmr/m/n/10 y parametrizan
+ []
+
+<static/images/pythagorean.png, id=149, 187.71428pt x 149.38928pt>
+File: static/images/pythagorean.png Graphic file (type png)
+<use static/images/pythagorean.png>
+Package luatex.def Info: static/images/pythagorean.png  used on input line 1421.
+
+(luatex.def)             Requested size: 180.0pt x 143.25705pt.
+LaTeX Info: Redefining \. on input line 1433.
+LaTeX Info: Redefining \% on input line 1433.
+[39<./static/images/pythagorean.png>]
+LaTeX Info: Redefining \. on input line 1486.
+LaTeX Info: Redefining \% on input line 1486.
+ [40]
+LaTeX Info: Redefining \. on input line 1565.
+LaTeX Info: Redefining \% on input line 1565.
+ [41]
+<static/images/Pythagorean_triple_scatterplot.png, id=161, 3770.60869pt x 3594.6
+4696pt>
+File: static/images/Pythagorean_triple_scatterplot.png Graphic file (type png)
+<use static/images/Pythagorean_triple_scatterplot.png>
+Package luatex.def Info: static/images/Pythagorean_triple_scatterplot.png  used 
+on input line 1586.
+(luatex.def)             Requested size: 180.0pt x 171.57025pt.
+)
+(./hugotopdf/outputs/modules/_index.tex
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+ [42<./static/images/Pythagorean_triple_scatterplot.png>]
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [43]
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
+ [44]
+LaTeX Info: Redefining \. on input line 215.
+LaTeX Info: Redefining \% on input line 215.
+ [45]
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+ [46]
+LaTeX Info: Redefining \. on input line 374.
+LaTeX Info: Redefining \% on input line 374.
+ [47]
+LaTeX Info: Redefining \. on input line 456.
+LaTeX Info: Redefining \% on input line 456.
+ [48]
+LaTeX Info: Redefining \. on input line 534.
+LaTeX Info: Redefining \% on input line 534.
+ [49]
+LaTeX Info: Redefining \. on input line 608.
+LaTeX Info: Redefining \% on input line 608.
+ [50]
+LaTeX Info: Redefining \. on input line 688.
+LaTeX Info: Redefining \% on input line 688.
+ [51]
+LaTeX Info: Redefining \. on input line 752.
+LaTeX Info: Redefining \% on input line 752.
+ [52]
+Overfull \hbox (2.55377pt too wide) in paragraph at lines 766--771
+[]\TU/lmr/bx/n/10 Teo-re-ma 2.0.5.7. \TU/lmr/m/n/10 (Primer Teo-re-ma de Iso-mo
+r-fía)[] \TU/lmr/m/it/10 Da-do un ho-mo-mor-fis-mo $\OML/cmm/m/it/10 f [] [] M
+ \OMS/cmsy/m/n/10 !
+ []
+
+<static/images/isomorfiamodulos.png, id=198, 69.25874pt x 53.17868pt>
+File: static/images/isomorfiamodulos.png Graphic file (type png)
+<use static/images/isomorfiamodulos.png>
+Package luatex.def Info: static/images/isomorfiamodulos.png  used on input line 
+774.
+(luatex.def)             Requested size: 180.0pt x 138.22559pt.
+LaTeX Info: Redefining \. on input line 803.
+LaTeX Info: Redefining \% on input line 803.
+[53<./static/images/isomorfiamodulos.png>]
+LaTeX Info: Redefining \. on input line 872.
+LaTeX Info: Redefining \% on input line 872.
+ [54]
+LaTeX Info: Redefining \. on input line 934.
+LaTeX Info: Redefining \% on input line 934.
+ [55]
+LaTeX Info: Redefining \. on input line 987.
+LaTeX Info: Redefining \% on input line 987.
+ [56]
+LaTeX Info: Redefining \. on input line 1048.
+LaTeX Info: Redefining \% on input line 1048.
+ [57]
+LaTeX Info: Redefining \. on input line 1125.
+LaTeX Info: Redefining \% on input line 1125.
+ [58]
+LaTeX Info: Redefining \. on input line 1181.
+LaTeX Info: Redefining \% on input line 1181.
+ [59]
+LaTeX Info: Redefining \. on input line 1246.
+LaTeX Info: Redefining \% on input line 1246.
+
+[60]
+LaTeX Info: Redefining \. on input line 1313.
+LaTeX Info: Redefining \% on input line 1313.
+ [61]
+<static/images/libres.png, id=228, 63.23625pt x 47.15617pt>
+File: static/images/libres.png Graphic file (type png)
+<use static/images/libres.png>
+Package luatex.def Info: static/images/libres.png  used on input line 1352.
+(luatex.def)             Requested size: 180.0pt x 134.23164pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1360
+
+ []
+
+LaTeX Info: Redefining \. on input line 1365.
+LaTeX Info: Redefining \% on input line 1365.
+[62<./static/images/libres.png>]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [63]
+LaTeX Info: Redefining \. on input line 1497.
+LaTeX Info: Redefining \% on input line 1497.
+ [64]
+LaTeX Info: Redefining \. on input line 1556.
+LaTeX Info: Redefining \% on input line 1556.
+ [65]
+LaTeX Info: Redefining \. on input line 1604.
+LaTeX Info: Redefining \% on input line 1604.
+ [66]
+LaTeX Info: Redefining \. on input line 1663.
+LaTeX Info: Redefining \% on input line 1663.
+ [67]
+LaTeX Info: Redefining \. on input line 1719.
+LaTeX Info: Redefining \% on input line 1719.
+ [68]
+LaTeX Info: Redefining \. on input line 1763.
+LaTeX Info: Redefining \% on input line 1763.
+ [69]
+LaTeX Info: Redefining \. on input line 1827.
+LaTeX Info: Redefining \% on input line 1827.
+ [70]
+<static/images/jordanblock.png, id=259, 52.21507pt x 36.135pt>
+File: static/images/jordanblock.png Graphic file (type png)
+<use static/images/jordanblock.png>
+Package luatex.def Info: static/images/jordanblock.png  used on input line 1882.
+
+(luatex.def)             Requested size: 180.0pt x 124.59521pt.
+
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1885.
+LaTeX Info: Redefining \% on input line 1885.
+ [71]
+<static/images/jordanmatrix.png, id=264, 139.54132pt x 109.42882pt>
+File: static/images/jordanmatrix.png Graphic file (type png)
+<use static/images/jordanmatrix.png>
+Package luatex.def Info: static/images/jordanmatrix.png  used on input line 1928
+.
+(luatex.def)             Requested size: 180.0pt x 141.1654pt.
+LaTeX Info: Redefining \. on input line 1930.
+LaTeX Info: Redefining \% on input line 1930.
+
+[72<./static/images/jordanblock.png>]) (./hugotopdf/outputs/fields/_index.tex
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
+
+[73<./static/images/jordanmatrix.png>])
+(./hugotopdf/outputs/fields/extensions.tex
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
+ [74]
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+ [75]
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+ [76]
+LaTeX Info: Redefining \. on input line 298.
+LaTeX Info: Redefining \% on input line 298.
+ [77]
+LaTeX Info: Redefining \. on input line 371.
+LaTeX Info: Redefining \% on input line 371.
+ [78]
+Overfull \hbox (10.37108pt too wide) in paragraph at lines 429--431
+[]\TU/lmr/bx/n/10 Coro-lario 3.1.1.29. \TU/lmr/m/it/10 Da-da una ex-ten-sión $
+\OML/cmm/m/it/10 F \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 K$ \TU/lmr/m/it/10 y el-
+e-men-tos al-ge-braicos $\OML/cmm/m/it/10 []; [] ; [] \OMS/cmsy/m/n/10 2
+ []
+
+LaTeX Info: Redefining \. on input line 451.
+LaTeX Info: Redefining \% on input line 451.
+[79]
+LaTeX Info: Redefining \. on input line 534.
+LaTeX Info: Redefining \% on input line 534.
+ [80]
+Overfull \hbox (6.26173pt too wide) in paragraph at lines 612--619
+\TU/lmr/m/n/10 spec-ti-va-mente. Supong-amos que sus gra-dos re-spec-tivos son 
+$\OML/cmm/m/it/10 m; n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1$\TU/lmr/m/n/10 . Se
+an $\OML/cmm/m/it/10 []; [] ; []$
+ []
+
+LaTeX Info: Redefining \. on input line 622.
+LaTeX Info: Redefining \% on input line 622.
+[81]
+<static/images/constructible-11.png, id=298, 44.14493pt x 13.06883pt>
+File: static/images/constructible-11.png Graphic file (type png)
+<use static/images/constructible-11.png>
+Package luatex.def Info: static/images/constructible-11.png  used on input line 
+694.
+(luatex.def)             Requested size: 180.0pt x 53.29276pt.
+LaTeX Info: Redefining \. on input line 702.
+LaTeX Info: Redefining \% on input line 702.
+ [82<./static/images/constructible-11.png>]
+<static/images/constructible-12.png, id=303, 91.36133pt x 46.19258pt>
+File: static/images/constructible-12.png Graphic file (type png)
+<use static/images/constructible-12.png>
+Package luatex.def Info: static/images/constructible-12.png  used on input line 
+706.
+(luatex.def)             Requested size: 180.0pt x 91.00974pt.
+<static/images/constructible-13.png, id=304, 58.23758pt x 58.23758pt>
+File: static/images/constructible-13.png Graphic file (type png)
+<use static/images/constructible-13.png>
+Package luatex.def Info: static/images/constructible-13.png  used on input line 
+719.
+(luatex.def)             Requested size: 180.0pt x 180.00937pt.
+<static/images/constructible-14.png, id=305, 64.26007pt x 65.22368pt>
+File: static/images/constructible-14.png Graphic file (type png)
+<use static/images/constructible-14.png>
+Package luatex.def Info: static/images/constructible-14.png  used on input line 
+731.
+(luatex.def)             Requested size: 180.0pt x 182.72655pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 734.
+LaTeX Info: Redefining \% on input line 734.
+ [83<./static/images/constructible-12.png><./static/images/constructible-13.png>
+]
+<static/images/constructible-16.png, id=311, 86.30243pt x 58.23758pt>
+File: static/images/constructible-16.png Graphic file (type png)
+<use static/images/constructible-16.png>
+Package luatex.def Info: static/images/constructible-16.png  used on input line 
+743.
+(luatex.def)             Requested size: 180.0pt x 121.47249pt.
+<static/images/constructible-15.png, id=312, 84.315pt x 58.23758pt>
+File: static/images/constructible-15.png Graphic file (type png)
+<use static/images/constructible-15.png>
+Package luatex.def Info: static/images/constructible-15.png  used on input line 
+756.
+(luatex.def)             Requested size: 180.0pt x 124.3312pt.
+LaTeX Info: Redefining \. on input line 763.
+LaTeX Info: Redefining \% on input line 763.
+ [84<./static/images/constructible-14.png><./static/images/constructible-16.png>
+<./static/images/constructible-15.png>]
+<static/images/constructible-17.png, id=319, 199.76633pt x 142.55258pt>
+File: static/images/constructible-17.png Graphic file (type png)
+<use static/images/constructible-17.png>
+Package luatex.def Info: static/images/constructible-17.png  used on input line 
+775.
+(luatex.def)             Requested size: 180.0pt x 128.4462pt.
+<static/images/constructible-0.png, id=320, 199.76633pt x 142.55258pt>
+File: static/images/constructible-0.png Graphic file (type png)
+<use static/images/constructible-0.png>
+Package luatex.def Info: static/images/constructible-0.png  used on input line 7
+88.
+(luatex.def)             Requested size: 180.0pt x 128.4462pt.
+<static/images/constructible-18.png, id=321, 185.67368pt x 156.585pt>
+File: static/images/constructible-18.png Graphic file (type png)
+<use static/images/constructible-18.png>
+Package luatex.def Info: static/images/constructible-18.png  used on input line 
+794.
+(luatex.def)             Requested size: 180.0pt x 151.80124pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 797.
+LaTeX Info: Redefining \% on input line 797.
+ [85<./static/images/constructible-17.png><./static/images/constructible-0.png>]
+<static/images/constructible-1.png, id=327, 142.55258pt x 86.30243pt>
+File: static/images/constructible-1.png Graphic file (type png)
+<use static/images/constructible-1.png>
+Package luatex.def Info: static/images/constructible-1.png  used on input line 8
+07.
+(luatex.def)             Requested size: 180.0pt x 108.97733pt.
+<static/images/constructible-2.png, id=328, 189.70876pt x 155.56117pt>
+File: static/images/constructible-2.png Graphic file (type png)
+<use static/images/constructible-2.png>
+Package luatex.def Info: static/images/constructible-2.png  used on input line 8
+21.
+(luatex.def)             Requested size: 180.0pt x 147.60185pt.
+LaTeX Info: Redefining \. on input line 829.
+LaTeX Info: Redefining \% on input line 829.
+ [86<./static/images/constructible-18.png><./static/images/constructible-1.png><
+./static/images/constructible-2.png>]
+<static/images/constructible-3.png, id=335, 171.64125pt x 128.45993pt>
+File: static/images/constructible-3.png Graphic file (type png)
+<use static/images/constructible-3.png>
+Package luatex.def Info: static/images/constructible-3.png  used on input line 8
+41.
+(luatex.def)             Requested size: 180.0pt x 134.7144pt.
+<static/images/constructible-4.png, id=336, 213.79875pt x 27.10126pt>
+File: static/images/constructible-4.png Graphic file (type png)
+<use static/images/constructible-4.png>
+Package luatex.def Info: static/images/constructible-4.png  used on input line 8
+67.
+(luatex.def)             Requested size: 180.0pt x 22.81699pt.
+<static/images/constructible-5.png, id=337, 213.79875pt x 25.11383pt>
+File: static/images/constructible-5.png Graphic file (type png)
+<use static/images/constructible-5.png>
+Package luatex.def Info: static/images/constructible-5.png  used on input line 8
+73.
+(luatex.def)             Requested size: 180.0pt x 21.14374pt.
+<static/images/constructible-6.png, id=338, 213.79875pt x 105.39375pt>
+File: static/images/constructible-6.png Graphic file (type png)
+<use static/images/constructible-6.png>
+Package luatex.def Info: static/images/constructible-6.png  used on input line 8
+89.
+(luatex.def)             Requested size: 180.0pt x 88.73276pt.
+LaTeX Info: Redefining \. on input line 891.
+LaTeX Info: Redefining \% on input line 891.
+ [87<./static/images/constructible-3.png><./static/images/constructible-4.png><.
+/static/images/constructible-5.png>]
+<static/images/constructible-7.png, id=345, 213.79875pt x 103.40633pt>
+File: static/images/constructible-7.png Graphic file (type png)
+<use static/images/constructible-7.png>
+Package luatex.def Info: static/images/constructible-7.png  used on input line 9
+04.
+(luatex.def)             Requested size: 180.0pt x 87.05952pt.
+<static/images/constructible-8.png, id=346, 222.8325pt x 148.57507pt>
+File: static/images/constructible-8.png Graphic file (type png)
+<use static/images/constructible-8.png>
+Package luatex.def Info: static/images/constructible-8.png  used on input line 9
+36.
+(luatex.def)             Requested size: 180.0pt x 120.01642pt.
+LaTeX Info: Redefining \. on input line 939.
+LaTeX Info: Redefining \% on input line 939.
+ [88<./static/images/constructible-6.png><./static/images/constructible-7.png>]
+LaTeX Info: Redefining \. on input line 1000.
+LaTeX Info: Redefining \% on input line 1000.
+ [89<./static/images/constructible-8.png>]
+<static/images/constructible-9.png, id=356, 159.59625pt x 159.59625pt>
+File: static/images/constructible-9.png Graphic file (type png)
+<use static/images/constructible-9.png>
+Package luatex.def Info: static/images/constructible-9.png  used on input line 1
+075.
+(luatex.def)             Requested size: 180.0pt x 180.0007pt.
+LaTeX Info: Redefining \. on input line 1078.
+LaTeX Info: Redefining \% on input line 1078.
+ [90]
+Missing character: There is no º (U+00BA) in font cmmi10!
+Missing character: There is no º (U+00BA) in font cmmi10!
+Missing character: There is no º (U+00BA) in font cmmi10!
+Missing character: There is no º (U+00BA) in font cmmi10!
+Missing character: There is no º (U+00BA) in font cmmi10!
+Missing character: There is no º (U+00BA) in font cmmi10!
+LaTeX Info: Redefining \. on input line 1132.
+LaTeX Info: Redefining \% on input line 1132.
+ [91<./static/images/constructible-9.png>]
+
+! LaTeX Error: Unknown graphics extension: .gif.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1182 ...ic/images/HeptadecagonConstructionAni.gif}
+                                                  
+? 
+) (./hugotopdf/outputs/fields/Galois.tex
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+ [92]
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+ [93]
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+ [94]
+Overfull \hbox (4.94914pt too wide) in paragraph at lines 216--220
+[]\TU/lmr/m/n/10 El con-jun-to $\OML/cmm/m/it/10 K[]$ \TU/lmr/m/n/10 es-tá con
+-tenido en $\OML/cmm/m/it/10 K$ \TU/lmr/m/n/10 por defini-ción. Es más, cualq
+uier
+ []
+
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+[95]
+Overfull \hbox (14.69933pt too wide) in paragraph at lines 253--256
+[]\TU/lmr/bx/n/10 Defini-ción 3.2.2.1. \TU/lmr/m/n/10 Da-do un anil-lo $\OML/c
+mm/m/it/10 R$\TU/lmr/m/n/10 , un poli-nomio $\OML/cmm/m/it/10 f \OT1/cmr/m/n/10
+ = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]; [] ; u[]\OT1/cmr/m/
+n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 u
+[]; [] ; u[]\OT1/cmr/m/n/10 ]$
+ []
+
+LaTeX Info: Redefining \. on input line 295.
+LaTeX Info: Redefining \% on input line 295.
+[96]
+LaTeX Info: Redefining \. on input line 354.
+LaTeX Info: Redefining \% on input line 354.
+ [97]
+Overfull \hbox (9.83525pt too wide) in paragraph at lines 405--410
+\TU/lmr/m/n/10 y $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr
+/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )) = (\OML/cmm/m/it/10 \OT1/cmr/
+m/n/10 )(\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it
+/10 S$\TU/lmr/m/n/10 , de-duci-mos que $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 S\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 S$\TU/lmr/m
+/n/10 . Es más, co-mo $\OML/cmm/m/it/10  [] [] R\OT1/cmr/m/n/10 [\OML/cmm/m/i
+t/10 u[]; [] ; u[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 !
+ []
+
+LaTeX Info: Redefining \. on input line 418.
+LaTeX Info: Redefining \% on input line 418.
+[98]
+LaTeX Info: Redefining \. on input line 489.
+LaTeX Info: Redefining \% on input line 489.
+ [99]
+LaTeX Info: Redefining \. on input line 579.
+LaTeX Info: Redefining \% on input line 579.
+ [100]
+LaTeX Info: Redefining \. on input line 667.
+LaTeX Info: Redefining \% on input line 667.
+ [101]
+Overfull \hbox (16.18112pt too wide) in paragraph at lines 741--746
+[]\TU/lmr/m/n/10 Una vez es-table-ci-da la equiv-a-len-cia de la primera parte 
+del enun-ci-a-do, de-mostraremos
+ []
+
+LaTeX Info: Redefining \. on input line 746.
+LaTeX Info: Redefining \% on input line 746.
+[102]
+LaTeX Info: Redefining \. on input line 806.
+LaTeX Info: Redefining \% on input line 806.
+ [103]
+LaTeX Info: Redefining \. on input line 864.
+LaTeX Info: Redefining \% on input line 864.
+ [104]
+LaTeX Info: Redefining \. on input line 918.
+LaTeX Info: Redefining \% on input line 918.
+ [105]
+LaTeX Info: Redefining \. on input line 992.
+LaTeX Info: Redefining \% on input line 992.
+ [106]
+LaTeX Info: Redefining \. on input line 1063.
+LaTeX Info: Redefining \% on input line 1063.
+ [107]
+
+LaTeX Warning: Command \= invalid in math mode on input line 1124.
+
+Missing character: There is no ̄ (U+0304) in font cmmi10!
+Missing character: There is no ̄ (U+0304) in font cmmi10!
+LaTeX Info: Redefining \. on input line 1133.
+LaTeX Info: Redefining \% on input line 1133.
+[108])(load luc: /home/fernando/.texlive2018/texmf-var/luatex-cache/generic/font
+s/otl/lmroman8-italic.luc)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+ [109]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
+ (./static/docs/latex.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 95.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 7957 strings out of 494412
+ 100000,266212 words of node,token memory allocated
+ 2269 words of node memory still in use:
+   5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 458 attribute, 54 glue_spec, 458 at
+tribute_list, 1 write nodes
+   avail lists: 2:624,3:202,4:30,5:341,6:34,7:3923,8:81,9:506,10:21,11:326
+ 11641 multiletter control sequences out of 65536+600000
+ 60 fonts using 4342359 bytes
+ 34i,14n,31p,395b,624s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf></us
+r/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-bolditalic.otf></u
+sr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/
+share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/sha
+re/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share
+/texlive/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/tex
+live/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/t
+exlive/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texl
+ive/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm7.pfb>
+Output written on static/docs/latex.pdf (109 pages, 2415112 bytes).
+
+PDF statistics: 534 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

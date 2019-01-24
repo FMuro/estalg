@@ -42,13 +42,13 @@ También podemos considerar el anillo de **series formales** $R[[x]]$ en una var
 ## Definición
 
 {{% definition %}}
- Un **anillo** es un conjunto \\(R\\) equipado con dos aplicaciones, llamadas *suma* y *multiplicación* o *producto*,
- \\[
+ Un **anillo** es un conjunto $R$ equipado con dos aplicaciones, llamadas *suma* y *multiplicación* o *producto*,
+$$
 \begin{array}{ccc}
 R\times R\rightarrow R, &\qquad& R\times R\rightarrow R,\cr
 (a,b)\mapsto a+b;&&(a,b) \mapsto ab.
 \end{array}
-\\]
+$$
 que satisfacen las siguientes propiedades:
 
 * Asociativa: 
@@ -70,7 +70,7 @@ $$
 * Distributiva:
 $$a(b+c)=ab+ac.$$
 
-* Existencia de elementos neutros \\(0,1\in R\\) para la suma y el producto:
+* Existencia de elementos neutros $0,1\in R$ para la suma y el producto:
 $$
 \begin{array}{rcl}
 0+a&=&a,\cr 
@@ -78,12 +78,13 @@ $$
 \end{array}
 $$
 
-* Existencia de un elemento opuesto para la suma \\(-a\in R\\) para todo \\(a\in R\\) de modo que $$a+(-a)=0.$$
+* Existencia de un elemento opuesto para la suma $-a\in R$ para todo $a\in R$ de modo que $$a+(-a)=0.$$
+
 {{% /definition %}}
 
 
 {{% remark %}}
-La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición de anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.
+La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto $a-b=a+(-b)$. Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición de anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.
 {{% /remark %}}
 
 
@@ -109,7 +110,9 @@ $\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.
 {{% example name="Anillos de Boole" %}}
 Dado un conjunto $X$, el conjunto $\mathcal P(X)=\\{A|A \subset X\\}$ formado por los subconjuntos de $X$ es un anillo, denominado **anillo de Boole**, donde la suma es la *diferencia simétrica*, 
 $$A+B=(A\cup B)\setminus (A\cap B)$$ 
-![symmetric_difference](../../images/symmetric_difference.png) 
+
+![Diferencia simétrica](../../images/symmetric_difference.png) 
+
 y el producto es la intersección, $$AB=A\cap B.$$ ¿Cuál es el $0$? ¿Y el $1$? ¿Y $-A$? ¿Y $A^2$? Dibuja $A+B+C$ para tres conjuntos en posición general.
 {{% /example %}}
 
@@ -209,6 +212,7 @@ Dado un homomorfismo $f\colon R\rightarrow S$, su imagen $\operatorname{im} f\su
 * $-f(a)=f(-a)\in \operatorname{im} f$ para todo $a\in R$.
 
 * $f(a)f(b)=f(ab)\in \operatorname{im} f$ para todo $a,b\in R$.
+
 {{% /proof %}}
 
 
@@ -235,7 +239,7 @@ Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** 
 Los anillos de polinomios satisfacen una propiedad universal relacionada con los homomorfismos de evaluación.
 
 {{% theorem name="Principio de sustitución" %}}
-Dado un homomorfismo de anillos \\(f\colon R\rightarrow S\\) y un elemento $c\in S$ existe un único homomorfismo $g\colon R[x]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x)=c$.
+Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y un elemento $c\in S$ existe un único homomorfismo $g\colon R[x]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x)=c$.
 {{% /theorem %}}
 
 
@@ -257,7 +261,7 @@ Es tedioso pero trivial comprobar $g$ así definido es un homomorfismo. El cálc
 
 
 {{% corollary %}}
-Dado un homomorfismo de anillos \\(f\colon R\rightarrow S\\) y elementos $c_1,\dots, c_n\in S$ existe un único homomorfismo $g\colon R[x_1,\dots,x_n]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x_i)=c_i$, $1\leq i\leq n$.
+Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y elementos $c_1,\dots, c_n\in S$ existe un único homomorfismo $g\colon R[x_1,\dots,x_n]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x_i)=c_i$, $1\leq i\leq n$.
 {{% /corollary %}}
 
 
@@ -473,13 +477,16 @@ Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 
 
 {{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
-Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{p}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
+Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
+
+![Primer teorema de isomorfía](../../images/isomorfianillos.png)
+
  Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
 
 
 {{% proof %}}
-[Por un lado](#factorimage) podemos factorizar $f\\colon R\\rightarrow S$ de manera única como $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$ donde $g(a)=f(a)$. En particular $$\ker g = \ker f.$$
+[Por un lado](#factorimage) podemos factorizar $f\colon R\rightarrow S$ de manera única como $f=i\circ g$, $$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$ donde $g(a)=f(a)$. En particular $$\ker g = \ker f.$$
 
 [Por otro lado](#factorquotient) podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$, $$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$ donde $\bar f(\bar{a})=g(a)=f(a)$. 
 
@@ -489,7 +496,7 @@ $$
 f(a)&=&(i\circ\bar f\circ p)(a)\cr
 &=&i(\bar{f}(p(a)))\cr
 &=&i(\bar{f}(\bar{a}))\cr
-\bar{f}(\bar{a}).
+&=&\bar{f}(\bar{a}).
 \end{array}
 $$
 
@@ -517,6 +524,7 @@ Sea $f\colon R\rightarrow S$ un homomorfismo.
 * Si $J\subset S$ es un ideal entonces $f^{-1}(J)\subset R$ también y además $\ker f\subset f^{-1}(J)$. 
 
 * Si $I\subset R$ es un ideal y $f$ es sobreyectivo entonces $f(I)\subset S$ también es un ideal.
+
 {{% /proposition %}}
 
 
@@ -542,6 +550,7 @@ En el segundo caso:
 * En el caso anterior también $-a\in I$ luego $-f(a)=f(-a)\in f(I)$.
 
 * Es más, dado $s\in S$, por ser $f$ sobreyectiva $s=f( r )$ para cierto $r\in R$, y como $ra\in I$ entonces $sf(a)=f( r )f(a)=f(ra)\in f(I)$.  
+
 {{% /proof %}}
 
 
@@ -680,15 +689,20 @@ El cuerpo de fracciones $Q( R )$ de un dominio $R$ está bien definido. La aplic
 
 
 {{% proof %}}
-La relación es simétrica y reflexiva porque el producto en $R$ es conmutativo. Veamos la transitividad. Si $$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a'^\prime}{b'^\prime}$$ entonces $$\begin{array}{rcĺ}ab'&=&a'b,\cr a'b'^\prime&=&a'^\prime b'.\end{array}$$ En particular, 
+La relación es simétrica y reflexiva porque el producto en $R$ es conmutativo. Veamos la transitividad. Si $$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a''}{b''}$$ entonces 
 $$\begin{array}{rcl}
-(a b'^\prime) b'&=&(ab')b'^\prime\cr
-&=&(a'b)b'^\prime\cr
-&=&(a'b'^\prime)b\cr
-&=&(a'^\prime b')b\cr
-&=&(a'^\prime b)b'.
+ab'&=&a'b,\cr 
+a'b''&=&a'' b'.
+\end{array}$$ 
+En particular, 
+$$\begin{array}{rcl}
+(a b'') b'&=&(ab')b''\cr
+&=&(a'b)b''\cr
+&=&(a'b'')b\cr
+&=&(a'' b')b\cr
+&=&(a'' b)b'.
 \end{array}$$
-Por la propiedad cancelativa de los dominios, $ab'^\prime=a'^\prime b$, es decir $\frac{a}{b}\sim \frac{a'^\prime}{b'^\prime}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar que las definiciones de la suma y la multiplicación en $Q(R)$ no dependen de la elección de fracciones representantes es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. También es fácil probar que los axiomas que definen los anillos se verifican. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por tanto una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
+Por la propiedad cancelativa de los dominios, $ab''=a'' b$, es decir $\frac{a}{b}\sim \frac{a''}{b''}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar que las definiciones de la suma y la multiplicación en $Q(R)$ no dependen de la elección de fracciones representantes es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. También es fácil probar que los axiomas que definen los anillos se verifican. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por tanto una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
 
 Es inmediato ver que $i$ es un homomorfismo. Es inyectivo porque $a\in\ker f$ si y solo si $\frac{a}{1}=\frac{0}{1}$, lo cual equivale a $a=0$.
 
@@ -705,7 +719,9 @@ Ahora basta definir $g\colon Q( R )\rightarrow k$ como $g\left(\frac{a}{b}\right
 
 {{% corollary %}}
 Dado un homomorfismo inyectivo entre dominios $f\colon R\rightarrow S$, existe un único homomorfismo entre sus cuerpos de fracciones $g\colon Q( R )\rightarrow Q(S)$ que extiende $f$, en el sentido de que el siguiente cuadrado es conmutativo
-$$\require{AMScd}\begin{CD}R @>f>> S\cr @V{i_R}VV @VV{i_S}V\cr Q( R ) @>>{g}> Q(S) \end{CD}$$ 
+
+![Cuerpos de fracciones](../../images/fractionfield.png)
+
 es decir, $g\circ i_R=i_S\circ f$, donde $i_R$ e $i_S$ son las inclusiones de $R$ y $S$ en sus cuerpos de fracciones.
 {{% /corollary %}}
 

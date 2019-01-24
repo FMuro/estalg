@@ -1,0 +1,39 @@
+\babel@toc {spanish}{}
+\contentsline {part}{\tocpart {Parte}{1}{Anillos}}{2}{part.1}
+\contentsline {section}{\tocsection {}{1.1}{Definiciones}}{3}{section.1.1}
+\contentsline {subsection}{\tocsubsection {}{1.1.1}{Ejemplos}}{3}{subsection.1.1.1}
+\contentsline {subsection}{\tocsubsection {}{1.1.2}{Definición}}{4}{subsection.1.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.1.3}{Homomorfismos}}{6}{subsection.1.1.3}
+\contentsline {subsection}{\tocsubsection {}{1.1.4}{Ideales}}{8}{subsection.1.1.4}
+\contentsline {subsection}{\tocsubsection {}{1.1.5}{Cocientes}}{10}{subsection.1.1.5}
+\contentsline {subsection}{\tocsubsection {}{1.1.6}{Añadir elementos a un anillo}}{13}{subsection.1.1.6}
+\contentsline {subsection}{\tocsubsection {}{1.1.7}{Dominios y fracciones}}{15}{subsection.1.1.7}
+\contentsline {section}{\tocsection {}{1.2}{Factorización}}{20}{section.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.2.1}{Divisores}}{20}{subsection.1.2.1}
+\contentsline {subsection}{\tocsubsection {}{1.2.2}{Factorizaciones}}{20}{subsection.1.2.2}
+\contentsline {subsection}{\tocsubsection {}{1.2.3}{Polinomios}}{27}{subsection.1.2.3}
+\contentsline {subsection}{\tocsubsection {}{1.2.4}{Enteros de Gauss}}{32}{subsection.1.2.4}
+\contentsline {subsection}{\tocsubsection {}{1.2.5}{Ecuaciones diofánticas}}{38}{subsection.1.2.5}
+\contentsline {part}{\tocpart {Parte}{2}{Módulos}}{42}{part.2}
+\contentsline {subsection}{\tocsubsection {}{2.0.1}{Definición}}{43}{subsection.2.0.1}
+\contentsline {subsection}{\tocsubsection {}{2.0.2}{Homomorfismos}}{45}{subsection.2.0.2}
+\contentsline {subsection}{\tocsubsection {}{2.0.3}{Módulos libres}}{47}{subsection.2.0.3}
+\contentsline {subsection}{\tocsubsection {}{2.0.4}{Torsión}}{50}{subsection.2.0.4}
+\contentsline {subsection}{\tocsubsection {}{2.0.5}{Cocientes}}{51}{subsection.2.0.5}
+\contentsline {subsection}{\tocsubsection {}{2.0.6}{Generadores y relaciones}}{55}{subsection.2.0.6}
+\contentsline {subsection}{\tocsubsection {}{2.0.7}{Forma normal de Smith}}{59}{subsection.2.0.7}
+\contentsline {subsection}{\tocsubsection {}{2.0.8}{Teoremas de estructura}}{63}{subsection.2.0.8}
+\contentsline {subsection}{\tocsubsection {}{2.0.9}{Sistemas de ecuaciones lineales diofánticas}}{69}{subsection.2.0.9}
+\contentsline {subsection}{\tocsubsection {}{2.0.10}{Operadores lineales}}{70}{subsection.2.0.10}
+\contentsline {part}{\tocpart {Parte}{3}{Cuerpos}}{73}{part.3}
+\contentsline {section}{\tocsection {}{3.1}{Extensiones}}{74}{section.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.1}{Extensiones de cuerpos}}{74}{subsection.3.1.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.2}{Elementos primitivos}}{81}{subsection.3.1.2}
+\contentsline {subsection}{\tocsubsection {}{3.1.3}{Construcciones con regla y compás}}{82}{subsection.3.1.3}
+\contentsline {section}{\tocsection {}{3.2}{Teoría de Galois}}{92}{section.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.2.1}{El grupo de Galois}}{93}{subsection.3.2.1}
+\contentsline {subsection}{\tocsubsection {}{3.2.2}{Funciones simétricas}}{96}{subsection.3.2.2}
+\contentsline {subsection}{\tocsubsection {}{3.2.3}{Extensiones de Galois}}{100}{subsection.3.2.3}
+\contentsline {subsection}{\tocsubsection {}{3.2.4}{Extensiones ciclotómicas}}{103}{subsection.3.2.4}
+\contentsline {subsection}{\tocsubsection {}{3.2.5}{Extensiones de Kummer}}{104}{subsection.3.2.5}
+\contentsline {subsection}{\tocsubsection {}{3.2.6}{Solubilidad por radicales}}{106}{subsection.3.2.6}

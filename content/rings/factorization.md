@@ -40,6 +40,7 @@ En un dominio $R$:
 * $\Rightarrow$ se ha visto antes. $\Leftarrow$ si $(u)=(1)$ entonces existe $r\in R$ tal que $ru=1$, con lo que $u$ es una unidad.
 
 * Es consecuencia de los tres apartados anteriores. 
+
 {{% /proof %}}
 
 
@@ -175,7 +176,6 @@ Dados dos elementos no nulos de un DFU, $a,b\in R$, existe un **divisor común m
 * si $d'|a$ y $d'|b$ entonces $d'|d$.
 
 El divisor común máximo es único salvo asociados y se denota $\operatorname{mcd}(a,b)$ o $\gcd(a,b)$.
-
 {{% /corollary %}}
 
 
@@ -197,7 +197,6 @@ Dados dos elementos no nulos de un DFU, $a,b\in R$, existe un **múltiplo común
 * si $a|m'$ y $b|m'$ entonces $m|m'$.
 
 El múltiplo común mínimo es único salvo asociados y se denota $\operatorname{mcm}(a,b)$ o $\operatorname{lcm}(a,b)$.
-
 {{% /corollary %}}
 
 
@@ -435,15 +434,15 @@ Este anillo es un DFU pero no es un DIP. Para comprobarlo basta ver que la ident
 Tenemos que $R[x]\subset k[x]$. El siguiente resultado nos permite calcular cómo se ven los ideales del segundo dentro del primero.
 
 {{% proposition %}}
-Si $(f )\subset k[x]$ es un ideal no nulo entonces $(f )\cap R[x]=(f_0 )$, donde $f =c\cdot f_0 $ con $c\in k$ el contenido y $f_0 \in R[x]$ primitivo. 
+Si $(f)\subset k[x]$ es un ideal no nulo entonces $(f)\cap R[x]=(f_0)$, donde $f=c\cdot f_0$ con $c\in k$ el contenido y $f_0 \in R[x]$ primitivo. 
 {{% /proposition %}}
 
 {{% proof %}}
-La intersección $(f )\cap R[x]$ es un ideal ya que es la imagen inversa de $(f )\subset k[x]$ a través de la inclusión $R[x]\hookrightarrow k[x]$. Veamos la igualdad de ideales por doble inclusión.
+La intersección $(f)\cap R[x]$ es un ideal ya que es la imagen inversa de $(f)\subset k[x]$ a través de la inclusión $R[x]\hookrightarrow k[x]$. Veamos la igualdad de ideales por doble inclusión.
 
-$\supset$ Como $f_0 \in R[x]$ y $f_0 =c^{-1}f \in (f )\subset k[x]$, tenemos que $f_0 \in (f )\cap R[x]$, lo cual demuestra esta inclusión.
+$\supset$ Como $f_0 \in R[x]$ y $f_0 =c^{-1}f \in (f)\subset k[x]$, tenemos que $f_0 \in (f)\cap R[x]$, lo cual demuestra esta inclusión.
 
-$\subset$ Todo elemento $p \in (f )$ es de la forma $p =g\cdot f =(g \cdot c)\cdot f_0 $. Si $p \in R[x]$, como $f_0 |p $ en $k[x]$ y $f_0 $ es primitivo, $f_0 |p $ también en $R[x]$, así que $g \cdot c\in R[x]$ y por tanto $p \in (f_0 )\subset R[x]$.
+$\subset$ Todo elemento $p \in (f)$ es de la forma $p =g\cdot f =(g \cdot c)\cdot f_0$. Si $p \in R[x]$, como $f_0 |p$ en $k[x]$ y $f_0$ es primitivo, $f_0 |p$ también en $R[x]$, así que $g \cdot c\in R[x]$ y por tanto $p \in (f_0)\subset R[x]$.
 {{% /proof %}}
 
 El siguiente resultado nos demuestra con rigor que las dos posibles maneras de añadirle a $R$ raíces de polinomios irreducibles dan resultados isomorfos.
@@ -803,7 +802,7 @@ $$
 
 El siguiente gráfico nos muestra la distribución de los primos cercanos al origen en los enteros de Gauss. 
 
-![gaussian_primes](../../images/gaussian_primes.png)
+![Primos de Gauss](../../images/gaussian_primes.png)
 
 Puedes también usar la siguiente aplicación interactiva para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen. Los lados del cuadrado tienen tamaño $2n$. Los puntos rojos son los primos de Gauss de módulo al cuadrado 2. En azul están los que son enteros. El resto, en verde.
 
@@ -886,7 +885,7 @@ $$
 La otra ecuación diofántica que vamos a considerar en este epígrafe es la **ecuación de Pitágoras** $$x^2+y^2=z^2.$$
 Sus soluciones positivas $x,y,z>0$ se denominan **ternas pitagóricas** y parametrizan los triángulos rectángulos con lados de medida entera.
 
-![Terna pitagórica](../../images/pythagorean.png)
+![Teorema de Pitágoras](../../images/pythagorean.png)
 
 Los papeles de $x$ e $y$ en la ecuación de Pitágoras son intercambiables, por lo que $(x,y,z)$ es una solución si y solo si lo es
 $$(y,x,z).$$
@@ -967,7 +966,7 @@ Las tres coordenadas son positivas, pues $a>b>0$. La segunda coordenada es clara
 
 El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pitagórica cualquiera con $x,y\leq 4500$.
 
-![symmetric_difference](../../images/Pythagorean_triple_scatterplot.png)
+![Ternas pitagóricas](../../images/Pythagorean_triple_scatterplot.png)
 
 La siguiente aplicación muestra los pares $(x,y)$ que forman parte de una terna pitagórica primitiva con $x$ impar y $x,y\leq n$, donde $n$ puede ser cualquier múltiplo de $10$ comprendido entre $10$ y $3000$.
 

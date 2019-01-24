@@ -24,12 +24,12 @@ Los módulos sobre el anillo $\mathbb Z$ son simplemente los grupos abelianos. L
 {{% definition %}}
 
 Dado un anillo $R$, un **$R$-módulo** es un conjunto $M$ equipado con dos aplicaciones, llamadas *suma* y *producto por escalares*,
-\\[
+$$
 \begin{array}{ccc}
 M\times M\rightarrow M, &\qquad& R\times M\rightarrow M,\cr
 (a,b)\mapsto a+b;&&(r,a) \mapsto ra;
 \end{array}
-\\]
+$$
 que satisfacen las siguientes propiedades, donde $a,b,c\in M$ y $r,s\in R$:
 
 * Asociativa: $$a+(b+c)=(a+b)+c,\qquad r(sa)=(rs)a.$$
@@ -48,7 +48,7 @@ $$0+a=a,\qquad 1a=a.$$
 
 
 {{% remark %}}
- Cuando quede claro por el contexto o no sea relevante especificarlo, omitiremos $R$ de la notación. La suma en un módulo lo dota de estructura de grupo abeliano. Recordemos que el elemento neutro de un grupo es único, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto \\(a-b=a+(-b)\\). Además $0a=0=r0$ y $r(-a)=-ra=(-r)a$. Si $R=k$ es un cuerpo la noción de $R$-módulo coincide con la de $k$-espacio vectorial.
+ Cuando quede claro por el contexto o no sea relevante especificarlo, omitiremos $R$ de la notación. La suma en un módulo lo dota de estructura de grupo abeliano. Recordemos que el elemento neutro de un grupo es único, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto $a-b=a+(-b)$. Además $0a=0=r0$ y $r(-a)=-ra=(-r)a$. Si $R=k$ es un cuerpo la noción de $R$-módulo coincide con la de $k$-espacio vectorial.
 {{% /remark %}}
 
 
@@ -98,6 +98,7 @@ Un subconjunto $N\subset M$ de un $R$-módulo $M$ es un **submódulo** si:
 * $-a\in N$ para todo $a\in N$.
 
 * $ra\in N$ para todo $r\in R$ y $a\in N$.
+
 {{% /definition %}}
 
 
@@ -194,7 +195,6 @@ Dado un homomorfismo $f\colon M\rightarrow N$, su **imagen** $\operatorname{im} 
 * $-f(a)=f(-a)\in \operatorname{im} f$ para todo $a\in M$.
 
 * $rf(a)=f(ra)\in \operatorname{im} f$ para todo $r\in R$ y $a\in M$.
-
  
 {{% /proof %}}
 
@@ -407,7 +407,7 @@ Dados $a,b\in T(M)$ existen $s,t\in R$ no nulos, $s\neq 0\neq t$, tales que $sa=
 
 * Dado $r\in R$, $ra\in T(M)$ pues $s(ra)=r(sa)=0$.
 
-  {{% /proof %}}
+{{% /proof %}}
 
 
 Los homomorfismos preservan la torsión.
@@ -507,8 +507,11 @@ Si $a+N=a'+N$ entonces $a-a'\in N\subset\ker f$ luego $$0=f(a-a')=f(a)-f(a').$$ 
 El siguiente resultado es una versión para módulos del primer teorema de isomoría, [ya visto para anillos](/estalg/rings/definitions/#primer).
 
 {{% theorem name="Primer Teorema de Isomorfía" label="isomodules" %}}
- Dado un homomorfismo $f\colon M\rightarrow N$, existe un único homomorfismo $\bar f\colon M/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}M @>f>> N\cr @V{p}VV @AA{i}A\cr \frac{M}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
- Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
+Dado un homomorfismo $f\colon M\rightarrow N$, existe un único homomorfismo $\bar f\colon M/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
+
+![Primer teorema de isomorfía](../images/isomorfiamodulos.png)
+
+Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
 
 {{% proof %}}
@@ -713,6 +716,7 @@ A=\left(
 \end{array}
 \right).
 $$
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -724,6 +728,7 @@ Usando el primer [teorema](#isomodules) de isomorfía, podemos comprobar que est
 * Una columna de ceros se corresponde con la relación $0=0$, que no aporta nada, con lo cual puede eliminarse.
 
 * En este caso la $j$-ésima columna se corresponde con la relación $ua_i=0$, que equivale a $a\_i=0$, pues $u$ es una unidad, así que podemos simplemente eliminar $a\_i$ de la lista de generadores y $a\_i=0$ de la de relaciones. Esto se corresponde con la eliminación de la $i$-ésima fila y la $j$-ésima columna de $A$.
+
 {{% /proof %}}
 
 
@@ -1020,7 +1025,9 @@ El determinante de una matriz $A$ de tamaño $n\times n$ es asociado del determi
 
 {{% proof %}}
 Sea $M\subset R^m$ un submódulo. Al [demostrar](#fgfp) que todo $R$-módulo finitamente generado es finitamente presentado vimos que se puede suponer sin pérdida de generalidad que $M=\operatorname{im}A$ para cierto homomorfismo $A\colon R^n\rightarrow R^m$ definido por una matriz $A$ de tamaño $m\times n$. El $R$-módulo $M$ está pues generado por las columnas de $A$. Tomamos la forma normal de Smith $D=QAP^{-1}$. Esta ecuación equivale a $DP=QA$, que es lo mismo que decir que el siguiente diagrama de $R$-módulos libres conmuta,
-$$\require{AMScd}\begin{CD}R^n @>A>> R^m\cr @V{P}VV @VV{Q}V\cr R^n @>>{D}> R^m \end{CD}$$ 
+
+![Cuadrado conmutativo](../images/libres.png)
+
 Como $P$ y $Q$ son invertibles, los homomorfismos que definen son isomorfismos, por tanto $Q$ induce in isomorfismo $M=\operatorname{im}A\cong \operatorname{im}D$. 
 La imagen del homomorfismo definido por  
 $$
@@ -1060,9 +1067,9 @@ donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i\mid d\
 La demostración de que $r=s$ la veremos en general, pero el resto solo lo probaremos para $R=\mathbb{Z}$ y lo esbozaremos par $R=k[x]$ con $k$ un cuerpo. 
 {{% /remark %}}
 
-{{% warning %}}
+{{% watch %}}
 A pesar de la unicidad de la forma del primer teorema de estructura, el isomorfismo no es único. Por ejemplo, de $\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}$ en sí mismo tenemos dos isomorfismos, la identidad y el intercambio de coordenadas $(a,b)\mapsto (b,a)$.
-{{% /warning %}}
+{{% /watch %}}
 
 {{% remark %}}
 Todo módulo cíclico $R/(d)$ sobre un DIP $R$ está en la forma del primer teorema de estructura, por tanto la unicidad antes mencionada demuestra que un $R$-módulo es cíclico si y solo si la descomposición dada por el teorema de estructura posee un único factor.
@@ -1371,8 +1378,10 @@ Como $k$-espacio vectorial, el $k[x]$-módulo de la derecha tiene base
 $$\bigcup\_{i=1}^n\\{(0,\dots,(\bar x-\alpha_i)^j,\dots,0)\\}\_{j=m\_i-1}^0,$$ 
 donde la coordenada no trivial $(\bar x-\alpha_i)^j$ es la $i$-ésima.
 Respecto de esta base, la matriz del homomorfismo de multiplicación por $x$ es la matriz
-diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha\_i$, $1\leq i\leq n$. 
+diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha\_i$, $1\leq i\leq n$.
+ 
 ![Matriz de Jordan](../images/jordanmatrix.png)
+
 Traslandando esta base a $V$ por el isomorfismo dado por el segundo teorema de estructura, obtenemos una base de $V$ respecto de la cual la matriz de $f$ es esta misma.
 
 La unicidad de la forma normal de Jordan se corresponde con la de la segunda forma del teorema de estructura. Observa que, sin embargo, la base respecto de la cual la matriz de $f$ está en forma normal de Jordan no es única en general.

@@ -27,6 +27,7 @@ El grado de una extensión $F\subset K$ es $[K:F]\geq 1$. No hay extensiones de 
 
 * $F\subset F[x]/(p(x))$, donde $p(x)\in F[x]$ es un polinomio irreducible. En efecto, por ser $F[x]$ un DFU tenemos que $p(x)\in F[x]$ es primo, y por ser $F[x]$ un dominio de ideales  principales tenemos que el ideal primo $(p(x))\subset F[x]$, al ser no trivial, es maximal, por tanto $F[x]/(p(x))$ es un cuerpo. Sabemos además que 
 $$[F[x]/(p(x)):F]=\text{grado }p(x).$$
+
 {{% /example %}}
 
 
@@ -157,6 +158,7 @@ Sea $F\subset K$ una extensión y $\alpha\in K$ un elemento algebraico.
 * Si $p\in\mathbb Z$ es primo, el grado de $\sqrt[n]{p}\in\mathbb C$ sobre $\mathbb Q$ es $n$ puesto que es raíz del polinomio irreducible $x^n-p\in\mathbb Q[x]$. Este polinomio es irreducible por el criterio de [Eisenstein](../../rings/factorization/#eisenstein) para el primo $p$. Hay por tanto números complejos, incluso reales, de grado cualquiera sobre $\mathbb Q$.
 
 * Si $\mathbb C\subset K$ es una extensión, los únicos elementos algebraicos son los de $\mathbb C$ ya que los únicos polinomios irreducibles en $\mathbb C[x]$ son los de grado $1$, así que todo elemento algebraico tiene grado $1$. Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
+
 {{% /example %}}
 
 
@@ -244,7 +246,7 @@ Por inducción en $n$. Para $n=1$ está probado en el teorema anterior. Supongam
 
 {{% example name="$\mathbb Q[\sqrt[3]{2},i]$" %}}
 Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos que $$\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i].$$ Ya hemos visto que la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]$  tiene grado $3$. Además, como $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$, la extensión $\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$ tiene grado $2$. Por tanto $$\begin{array}{rcl}[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q]&=&[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q[\sqrt[3]{2}]][\mathbb Q[\sqrt[3]{2}]:\mathbb Q]\cr &=&2\cdot 3=6.\end{array}$$
-{{% /remark %}}
+{{% /example %}}
 
 {{% corollary %}}
 Dada una extensión $F\subset K$, el subconjunto $L\subset K$ formado por los elementos de $K$ que son algebraicos sobre $F$ es un subcuerpo tal que $F\subset L$.
@@ -261,6 +263,7 @@ Dadas extensiones $F\subset K\subset L$:
 
 * $[K:F]=[L:F]\Rightarrow K=L$.
 * $[L:F]=[L:K]\Rightarrow F=K$.
+
 {{% /corollary %}}
 
 
@@ -376,27 +379,27 @@ Este teorema es cierto bajo hipótesis mucho más generales, pero la prueba se c
 
 * Los puntos $(0,0)$ y $(1,0)$.
 
-![constructible-11](../../images/constructible-11.png)
+![Puntos constructibles](../../images/constructible-11.png)
 
 * Las rectas que pasan por dos puntos construidos.
 
-![constructible-12](../../images/constructible-12.png)
+![Recta constructible](../../images/constructible-12.png)
 
 * Las circunferencias de centro un punto construido que pasan por otro punto construido.
 
-![constructible-13](../../images/constructible-13.png)
+![Circunferencia constructible](../../images/constructible-13.png)
 
 * El punto de intersección de dos rectas construidas.
 
-![constructible-14](../../images/constructible-14.png)
+![Intersección de rectas constructibles](../../images/constructible-14.png)
 
 * Los puntos de intersección de dos circunferencias construidas.
 
-![constructible-16](../../images/constructible-16.png)
+![Intersección de circunferencias constructibles](../../images/constructible-16.png)
 
 * Los puntos de intersección de una recta y una circunferencia construidas.
 
-![constructible-15](../../images/constructible-15.png)
+![Intersección de recta y circunferencia constructible](../../images/constructible-15.png)
 
 Un número real $a\in\mathbb R$ es **constructible** si su valor absoluto $|a|$ es la distancia entre dos puntos constructibles.
 
@@ -407,21 +410,21 @@ Deducimos que además podemos construir:
 
 * El punto medio entre dos puntos construidos.
 
-![constructible-17](../../images/constructible-17.png)
+![Punto medio](../../images/constructible-17.png)
 
 * La recta perpendicular a una recta construida que pasa por un punto consruido.
 
-![constructible-0](../../images/constructible-0.png)
+![Perpendicular sobre un punto de la recta](../../images/constructible-0.png)
 
-![constructible-18](../../images/constructible-18.png)
+![Perpendicular sobre un punto exterior](../../images/constructible-18.png)
 
 * La recta paralela a una recta construida que pasa por un punto consruido.
 
-![constructible-1](../../images/constructible-1.png)
+![Paralela](../../images/constructible-1.png)
 
 * Los puntos que están a una distancia constructible de un punto construido dentro de una recta construida. Intuitivamente esta propiedad nos dice que podemos transportar distancias constructibles.
 
-![constructible-2](../../images/constructible-2.png)
+![Transporte de longitud](../../images/constructible-2.png)
 
 
 {{% proposition %}}
@@ -430,7 +433,9 @@ Deducimos que además podemos construir:
 
 
 {{% proof %}}
- $\Rightarrow$ Trazando paralelas y perpendiculares por puntos constructibles, podemos construir los ejes de coordenadas y las proyecciones de $(a,b)$ sobre los mismos. La distancia de las proyecciones al origen son $|a|$ y $|b|$, así que las coordenadas son constructibles. ![constructible-3](../../images/constructible-3.png) 
+$\Rightarrow$ Trazando paralelas y perpendiculares por puntos constructibles, podemos construir los ejes de coordenadas y las proyecciones de $(a,b)$ sobre los mismos. La distancia de las proyecciones al origen son $|a|$ y $|b|$, así que las coordenadas son constructibles. 
+ 
+![Coordenadas](../../images/constructible-3.png) 
 
 $\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir los puntos sobre los ejes de coordenadas que están a distancia $|a|$ y $|b|$ del origen, es decir, $(\pm a,0)$ y $(0,\pm b)$, y obtener $(a,b)$ como punto de intersección de las paralelas a los ejes que pasan por $(a,0)$ y $(0,b)$.
 {{% /proof %}}
@@ -446,16 +451,23 @@ $\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir
 El $0$ y el $1$ son constructibles ya que el $(0,0)$ y el $(1,0)$ están construidos.
 
 Dados $a\geq b\geq 0$ constructibles, podemos construir $a+b$ y $a-b$ tomando a partir del origen puntos del eje horizonal a distancias $a$ y $b$,
-![constructible-4](../../images/constructible-4.png)
-![constructible-5](../../images/constructible-5.png)
+
+![Suma](../../images/constructible-4.png)
+
+![Resta](../../images/constructible-5.png)
+
 Por tanto también son constructibles $-a-b$ y $-a+b$. Esto demuestra que la suma de dos números constructibles cualesquiera y el opuesto de uno dado son constructibles.
 
 Para construir el producto de dos números constructibles $a,b> 0$ usamos triángulos semejantes. Construimos primero el triángulo ractángulo con base en el eje horizontal, de longitud 1, vértice en el origen y altura $a$. El triángulo semejante de base $b$ tiene altura $ab$.
-![constructible-6](../../images/constructible-6.png)
+
+![Producto](../../images/constructible-6.png)
+
 Esto demuestra que también son constructibles $(-a)b$, $a(-b)$ y $(-a)(-b)$, es decir, el producto de dos números constructibles cualesquiera (multiplicar por $0$ da $0$, que es constructible). Con esto hemos visto que los números constructibles forman un subanillo de $\mathbb R$.
 
 La construcción del inverso de un número constructible $a> 0$ se lleva a cabo del mismo modo
-![constructible-7](../../images/constructible-7.png)
+
+![Inverso](../../images/constructible-7.png)
+
 Por tanto $(-a)^{-1}=-a^{-1}$ también es constructible. Esto demuestra que el anillo de los números constructibles es un cuerpo.
  {{% /proof %}}
 
@@ -474,8 +486,10 @@ Por tanto $(-a)^{-1}=-a^{-1}$ también es constructible. Esto demuestra que el a
 {{% proof %}}
 
 Es consecuencia del conocido teorema de la media geométrica. En el eje horizontal tomamos el punto a la izquierda del origen a distancia $a$. Trazamos una circunferencia que pase por él y que tenga centro en el punto medio entre este punto y el $(1,0)$. La distancia del origen al punto de corte con la circunferencia de la perpendicular al eje horizontal es $\sqrt{a}$.
-![constructible-8](../../images/constructible-8.png)
- {{% /proof %}}
+
+![Raíz cuadrada](../../images/constructible-8.png)
+
+{{% /proof %}}
 
 
 Hasta ahora hemos demostrado que podemos construir números constructibles a partir del $1$ sumando, restando, dividiendo por números no nulos, y tomando raíces cuadradas de números positivos. Los siguientes resultados demuestras que no hay más números constructibles que los que se pueden obtener de este modo.
@@ -516,8 +530,6 @@ Dados números reales constructibles $a\_1,\dots,a\_m\in\mathbb R$, hay una cade
 * Cada $F\_{i+1}=F\_i[\sqrt{r\_i}]$, $0\leq i{<}n$, donde $r\_i\in F\_i$ es un número positivo $r\_i>0$ que no es un cuadrado en $F\_i$.
 
 En particular $[K:\mathbb Q]=2^n$.
-
-
 {{% /theorem %}}
 
 
@@ -555,7 +567,7 @@ Más adelante veremos que hay números cuyo grado es una potencia de $2$ pero qu
 
 Por la construcción geométrica de senos y cosenos, está claro que la definición anterior es equivalente a decir que $\sin \theta$ es constructible, o que la recta que pasa por el origen y hace ángulo $\theta$ con el eje horizontal es constructible, o más generalmente que podemos construir la recta que pasa por un punto constructible y que hace ángulo $\theta$ con otra recta constructible que pasa por él.
 
-![constructible-9](../../images/constructible-9.png)
+![Ángulo constructible](../../images/constructible-9.png)
 
 Veamos que en general es imposible trisecar un ángulo cualquiera con regla y compás.
 
@@ -608,7 +620,7 @@ Por ser el polinomio ciclotómico $f(x)$ irreducible y tener a $\zeta$ como raí
 
 La siguiente imagen, obtenida de [Wikipedia](https://en.wikipedia.org/wiki/Constructible_polygon), muestra la construcción paso a paso de un polígono regular de 17 lados con regla y compás. En el artículo de Wikipedia enlazado se puede encontrar otra construccón de este polígono regular, así como una construcción completa del de 257 lados y el comienzo de la construcción del de 65537 lados. 
 
-![17-lados](../../images/HeptadecagonConstructionAni.gif)
+![Heptadecágono](../../images/HeptadecagonConstructionAni.gif)
 
 
 {{% /example %}}

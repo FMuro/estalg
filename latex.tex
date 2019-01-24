@@ -1,0 +1,95 @@
+\documentclass[]{amsart}
+
+\usepackage[draft]{hyperref} % remove all hyperlinks included in the translation
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage%[demo]
+{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{letltxmacro}
+\usepackage{float}
+\floatplacement{figure}{H} % do not float images
+% ----------------------------------------------------------------
+\vfuzz2pt % Don't report over-full v-boxes if over-edge is small
+\hfuzz2pt % Don't report over-full h-boxes if over-edge is small
+%
+\newtheorem{theorem}[equation]{Teorema}
+\newtheorem{corollary}[equation]{Corolario}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{proposition}[equation]{Proposición}
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definición}
+\theoremstyle{remark}
+\newtheorem{remark}[equation]{Observación}
+\newtheorem{example}[equation]{Ejemplo}
+\newtheorem{exercise}[equation]{Ejercicio}
+\newtheorem{watch}[equation]{Advertencia}
+
+\numberwithin{equation}{subsection}
+
+\numberwithin{section}{part}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Fix pandoc not parsing inside latex blocks
+
+\let\Begin\begin
+\let\End\end
+
+% Resizing all images
+
+\LetLtxMacro{\OldIncludegraphics}{\includegraphics} 
+\renewcommand{\includegraphics}[1]{\OldIncludegraphics[width=0.5\textwidth]{#1}}
+
+%opening
+\title{Estructuras algebraicas}
+\author{Fernando Muro}
+\address{Universidad de Sevilla,
+	Facultad de Matem\'aticas,
+	Departamento de \'Algebra,
+	Avda. Reina Mercedes s/n,
+	41012 Sevilla, Spain}
+\email{fmuro@us.es}
+\urladdr{http://personal.us.es/fmuro}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Notas de la asignatura Estructuras Algebraicas del Grado en Matemáticas de la Universidad de Sevilla. Esta versión en PDF se ha generado automáticamente a partir de la página web \url{http://asignatura.us.es/estalg/} y puede contener errores derivados del proceso de conversion. Les agradecería que informasen de cualquier error que encuentren escribiendo a \texttt{fmuro@us.es}.
+\end{abstract}
+
+\tableofcontents
+
+\part{Anillos}
+
+\input{hugotopdf/outputs/rings/_index.tex}
+
+\section{Definiciones}
+
+\input{hugotopdf/outputs/rings/definitions.tex}
+
+\section{Factorización}
+
+\input{hugotopdf/outputs/rings/factorization.tex}
+
+\part{Módulos}
+
+\input{hugotopdf/outputs/modules/_index.tex}
+
+\part{Cuerpos}
+
+\input{hugotopdf/outputs/fields/_index.tex}
+
+\section{Extensiones}
+
+\input{hugotopdf/outputs/fields/extensions.tex}
+
+\section{Teoría de Galois}
+
+\input{hugotopdf/outputs/fields/Galois.tex}
+
+\end{document}

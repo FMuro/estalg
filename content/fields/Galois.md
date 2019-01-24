@@ -354,7 +354,7 @@ Una extensión finita $F\subset K$ es de **Galois** si $|G(K/F)|=[K:F]$.
 {{% /definition %}}
 
 {{% lemma %}}
-Dada una extensión finita $F\subset K$ y un subrgupo $H\subset G(K/F)$, la extensión $K^H\subset K$ es de Galois y $H=G(K/K^H)$.
+Dada una extensión finita $F\subset K$ y un subgrupo $H\subset G(K/F)$, la extensión $K^H\subset K$ es de Galois y $H=G(K/K^H)$.
 {{% /lemma %}}
 
 {{% proof %}}
@@ -375,6 +375,7 @@ Dada una extensión finita $F\subset K$, los siguientes enunciados son equivalen
 1. $F\subset K$ es de Galois.
 2. $F=K^{G(K/F)}$.
 3. $K$ es el cuerpo de descomposición de un polinomio de $F[x]$.
+
 {{% /theorem %}}
 
 {{% proof %}}
@@ -466,21 +467,21 @@ $$
 
 ## Extensiones ciclotómicas
 
-Dado $n\geq 1$, las **raíces $n$-ésimas de la unidad** son las $n$ raíces complejas diferentes del polinomio $$x^n-1$$, $$e^{\frac{2\pi i t}{n}}, \qquad 0\leq t{<}n.$$
+Dado $n\geq 1$, las **raíces $n$-ésimas de la unidad** son las $n$ raíces complejas diferentes del polinomio $$x^n-1,$$ que son $$e^{\frac{2\pi i t}{n}}, \qquad 0\leq t{<}n.$$
 El conjunto formado por estos $n$ números complejos es un grupo cíclico de orden $n$ para la multiplicación, generado por la **raíz $n$-ésima primitiva**, $$\zeta=\zeta_n=e^{\frac{2\pi i}{n}}.$$ Si $n=p$ es primo, cualquier raíz distinta de $1$ genera estre grupo.
 
 {{% proposition %}}
- Dado un entero primo $p\geq 1$, la extensión $\mathbb Q\subset\mathbb Q[\zeta]$ es de Galois, de grado $p-1$ y su grupo de Galois es cíclico.
+Dado un entero primo $p\geq 1$, la extensión $\mathbb Q\subset\mathbb Q[\zeta]$ es de Galois de grado $p-1$ y su grupo de Galois es cíclico.
 {{% /proposition %}}
 
 
 {{% proof %}}
- El cuerpo de descomposición de $x^p-1$ es $$\mathbb Q[1,\zeta,\dots,\zeta^{p-1}]=\mathbb Q[\zeta].$$ En efecto $\supset$ es obvio y $\subset$ es consecuencia de que como $\zeta\in\mathbb Q[\zeta]$ entonces todas las potencias $\zeta^n\in \mathbb Q[\zeta]$ también. Esto demuestra que $\mathbb Q[\zeta]$ es de Galois.
+El cuerpo de descomposición de $x^p-1$ es $$\mathbb Q[1,\zeta,\dots,\zeta^{p-1}]=\mathbb Q[\zeta].$$ En efecto, $\supset$ es obvio y $\subset$ es consecuencia de que como $\zeta\in\mathbb Q[\zeta]$ entonces todas las potencias $\zeta^t\in \mathbb Q[\zeta]$, $0\leq t<n$, también. Esto demuestra que $\mathbb Q[\zeta]$ es de Galois.
 
-Sabemos que $$x^p-1=(x-1)q(x)$$ donde $$q(x)=x^{p-1}+\cdots+x+1$$ es el $p$-ésimo polinomio ciclotómico, que es irreducible. Como $\zeta\neq 1$, $\zeta$ ha de ser raíz de $q(x)$, así que el grado de la extensión es $p-1$. 
+Sabemos que $$x^p-1=(x-1)q(x)$$ donde $$q(x)=x^{p-1}+\cdots+x+1$$ es el $p$-ésimo polinomio ciclotómico, que según vimos es irreducible. Como $\zeta\neq 1$, $\zeta$ ha de ser raíz de $q(x)$, así que el grado de la extensión es $p-1$. 
 
 Para ver que el grupo de Galois es cíclico, definimos un homomorfismo
-$$\psi\colon G(\mathbb Q[\zeta]/\mathbb Q)\longrightarrow (\mathbb Z/(p))^\times$$ que llega al grupo $(\mathbb Z/(p))^\times$ de unidades del cuerpo $\mathbb Z/(p)$. Este último grupo es conocido que es cíclico de orden $p-1$. Todo $f\in G(\mathbb Q[\zeta]/\mathbb Q)$ preserva raíces de $q(x)$, así que $$f(\zeta)=\zeta^i$$ para cierto $0{<}i{<}p$ único y dependiente de $f$. Definimos $$\psi(f)=\bar i.$$ Acabamos de probar que esta aplicación está bien definida. Veamos ahora que es un homomorfismo. Dado $g\in G(\mathbb Q[\zeta]/\mathbb Q)$, hay un único $0{<}j{<}p$ tal que $$g(\zeta)=\zeta^j$$ y que define $\psi(g)=\bar j$. Entonces
+$$\psi\colon G(\mathbb Q[\zeta]/\mathbb Q)\longrightarrow (\mathbb Z/(p))^\times$$ que llega al grupo $(\mathbb Z/(p))^\times$ de unidades del cuerpo $\mathbb Z/(p)$. Este último grupo sabemos que es cíclico de orden $p-1$. Todo $f\in G(\mathbb Q[\zeta]/\mathbb Q)$ preserva raíces de $q(x)$, así que $$f(\zeta)=\zeta^i$$ para cierto $0{<}i{<}p$ único y dependiente de $f$. Definimos $$\psi(f)=\bar i.$$ Acabamos de probar que esta aplicación está bien definida. Veamos ahora que es un homomorfismo. Dado $g\in G(\mathbb Q[\zeta]/\mathbb Q)$, hay un único $0{<}j{<}p$ tal que $$g(\zeta)=\zeta^j$$ y que define $\psi(g)=\bar j$. Entonces
 $$\begin{array}{rcl}
 (f\circ g)(\zeta)&=&f(g(\zeta))\cr
 &=&f(\zeta^j)\cr
@@ -494,26 +495,26 @@ $$\begin{array}{rcl}
 &=&\bar{i}\bar{j}\cr
 &=&\psi(f)\psi(g).
 \end{array}$$
-Además, $$\operatorname{id}\_{\mathbb Q[\zeta]}(\zeta)=\zeta$$ por lo que $$\psi(\operatorname{id}\_{\mathbb Q[\zeta]})=1.$$ Esto termina de dedmostrar que $\psi$ es un homomorfismo.
+Esto demuestra que $\psi$ es un homomorfismo.
 
-Veamos que $\psi$ es inyectivo. Si $f\in G(\mathbb Q[\zeta]/\mathbb Q)$ es tal que $$\psi(f)=\bar 1$$ es porque $$f(\zeta)=\zeta.	$$
-
-  {{% /proof %}}
+Veamos que $\psi$ es inyectivo. Si $f\in G(\mathbb Q[\zeta]/\mathbb Q)$ es tal que $$\psi(f)=\bar 1$$ es porque $$f(\zeta)=\zeta.$$
+Como $f$ actúa como la identidad sobre los racionales y sobre el generador de la extensión $\mathbb{Q}[\zeta]$, $f$ ha de ser la identidad. Esto prueba que el núcleo de $\psi$ es trivial, así que es un homomorfismo inyectivo.
+{{% /proof %}}
 
 
 ## Extensiones de Kummer
 
-En esta sección y en las siguientes supondremos que todos los cuerpos que manejemos están contenidos en $\mathbb C$. Dado un cuerpo $F$, nuestro objetivo es estudiar el cuerpo de descomposición $K$ del polinomio $$q(x)=x^p-a\in F[x]$$ donde $p$ es primo y $a$ no tiene raíces $p$-ésmas en $F$. La **raíz $p$-ésima primitiva de la unidad** es $$\zeta\_p=e^{\frac{2\pi i}{p}}\in\mathbb C.$$ Las raíces $p$-ésimas de la unidad son las potencias de $\zeta\_p$, que forman un grupo cíclico de orden $p$ restecto de la multiplicación, $$1,\zeta\_p,\dots,\zeta\_p^{p-1}.$$ Por tanto si $\alpha$ es una raíz compleja de $q(x)$ el conjunto de todas sus raíces es $$\alpha,\zeta\_p\alpha,\dots,\zeta\_p^{p-1}\alpha.$$ En particular si $\zeta\_p\in F$ entonces $K=F[\alpha]$.
+Dado un cuerpo $F$, nuestro objetivo es estudiar el cuerpo de descomposición $K$ del polinomio $$q(x)=x^p-a\in F[x]$$ donde $p$ es primo y $a$ no tiene raíces $p$-ésmas en $F$. Si $\alpha$ es una raíz compleja de $q(x)$, entonces el conjunto de todas sus raíces es $$\alpha,\zeta\_p\alpha,\dots,\zeta\_p^{p-1}\alpha,$$ donde $\zeta\_p$ es la raíz $p$-ésima primitiva de la unidad, ya que todas son raíces del polinomio $q(x)$ anterior y son todas distintas, pues $\zeta\_p$ tiene orden $p$ para el producto. En particular si $\zeta\_p\in F$ entonces $K=F[\alpha]$.
 
 {{% proposition %}}
- Si $F\subset \mathbb C$ es un subcuerpo tal que $\zeta\_p\in F$ y $p(x)=x^p-a\in F[x]$ no tiene raíces en $F$ entonces el cuerpo de descomposición $K$ de $p(x)$ tiene grado $p$ sobre $F$. 
+Si $\zeta\_p\in F$ y $q(x)=x^p-a\in F[x]$ no tiene raíces en $F$ entonces el cuerpo de descomposición $K$ de $q(x)$ tiene grado $p$ sobre $F$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
- Hemos observado que $K=F[\alpha]$ y $\alpha$ es una raíz de $p(x)$, que es de grado $p$, por tanto $[K:F]\leq p$. Al ser $F\subset K$ de Galois, para probar la otra desigualdad bastará ver que $|G(K/F)|\geq p$. 
+Sea $\alpha$ una raíz compleja de $q(x)$. Hemos observado que $K=F[\alpha]$ y $\alpha$ es una raíz de $q(x)$, que es de grado $p$, por tanto $[K:F]\leq p$. Al ser $F\subset K$ de Galois, para probar la otra desigualdad bastará ver que $[K:F]=|G(K/F)|\geq p$. 
 
-Como $\alpha\notin F$ y $F= K^{G(K/F)}$, ha de existir algún $f\in G(K/F)$ tal que $f(\alpha)\neq\alpha$. Como $f$ preserva raíces de polinomios en $F[x]$, $f(\alpha)=\zeta\_p^i\alpha$ para cierto $0{<}i{<}p$. Usaremos esto para ver que las potencias $f^j$ de $f$ son diferentes para todo $0\leq j{<}p$, así que $G(K/F)$ tiene al menos $p$ elementos. Para ello basta comprobar que cada una de estas potencias $f^j$ manda $\alpha$ a un elemento diferente. Vamos a probar por inducción que $$f^j(\alpha)=(\zeta\_p^{i})^{j}\alpha.$$ Todos estos elementos son diferentes ya que al ser $p$ primo todas las potencias de $\zeta\_p$ distintas de $1$, por ejempo $\zeta\_p^i$, tienen orden multiplicativo $p$, así que todos los $(\zeta\_p^i)^{j}$ son diferentes para $0\leq j{<}p$. Para $j=1$ la ecuación anterior es cierta. Si es cierta para $j-1$ entonces
+Como $\alpha\notin F= K^{G(K/F)}$, ha de existir algún $f\in G(K/F)$ tal que $f(\alpha)\neq\alpha$. Como $f$ preserva raíces de polinomios en $F[x]$, $f(\alpha)=\zeta\_p^i\alpha$ para cierto $0{<}i{<}p$. Usaremos esto para ver que las potencias $f^j$ de $f$ son diferentes para todo $0\leq j{<}p$, así que $G(K/F)$ tendrá en efecto al menos $p$ elementos. Para ello basta comprobar que cada una de estas potencias $f^j$ manda $\alpha$ a un elemento diferente. Vamos a probar por inducción que $$f^j(\alpha)=(\zeta\_p^{i})^{j}\alpha.$$ Todos estos elementos son diferentes ya que al ser $p$ primo todas las potencias de $\zeta\_p$ distintas de $1$, por ejempo $\zeta\_p^i$, tienen orden multiplicativo $p$, así que todos los $(\zeta\_p^i)^{j}$ son diferentes para $0\leq j{<}p$. Para $j=1$ la ecuación anterior es obviamente cierta. Supongamos que es cierta para $j-1$. Como $\zeta\_p\in F$ entonces $f(\zeta\_p)=\zeta\_p$ ya que. Por tanto,
 $$\begin{array}{rcl}
 f^j(\alpha)&=&f(f^{j-1}(\alpha))\cr
 &=&f((\zeta\_p^{i})^{j-1}\alpha)\cr
@@ -521,21 +522,24 @@ f^j(\alpha)&=&f(f^{j-1}(\alpha))\cr
 &=&(\zeta\_p^{i})^{j-1}\zeta\_p^i\alpha\cr
 &=&(\zeta\_p^{i})^{j}\alpha.
 \end{array}$$
-Aquí hemos usado que $f(\zeta\_p)=\zeta\_p$ ya que $\zeta\_p\in F$.
 {{% /proof %}}
+
+{{% remark %}}
+A posteriori vemos que, en las condiciones de la proposición anterior, $x^p-a$ es un polinomio irreducible, pues cualquiera de sus raíces complejas tiene grado $p$.
+{{% /remark %}}
 
 
 Sorprendentemente el resultado a anterior tiene un recíproco.
 
 {{% theorem %}}
- Si $F\subset \mathbb C$ es un subcuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ primo entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^n-a\in F[x]$. 
+Si $p$ es un primo, $F$ es un cuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^p-a\in F[x]$. 
 {{% /theorem %}}
 
 
 {{% proof %}}
- Al ser la extensión de Galois $|G(K/F)|=[K:F]=p$, por tanto $G(K/F)$ es cíclico de orden $p$, así que todo $f\in G(K/F)$ distinto de la identidad genera el grupo de Galois, $$G(K/F)=\\{f^0,f^1,\dots, f^{p-1}\\}.$$ 
+Al ser la extensión de Galois $|G(K/F)|=[K:F]=p$, por tanto $G(K/F)$ es cíclico de orden $p$, así que todo $f\in G(K/F)$ distinto de la identidad genera el grupo de Galois, $$G(K/F)=\\{f^0,f^1,\dots, f^{p-1}\\}.$$ 
 
-Ahora vamos a concentrarnos en el hecho de que $f$ es un homomorfismo de $F$-espacios vectoriales. Como $f^p=\operatorname{id}_K$ tenemos que cualquier autovalor $\lambda$ de $f$ satisface $\lambda^p=1$. Además $f$ es diagonalizable, pues niguna potencia de una caja de Jordan de tamaño $2\times 2$ o superior es la matriz identidad. Como $f$ es diagonalizable y distinto de la identidad, tendrá que tener algún autovalor $\lambda\neq 1$. Este autovalor ha de ser forzosamente de la forma $\lambda =\zeta\_p^i$ para cierto $0{<}i{<}p$. 
+Ahora vamos a concentrarnos en el hecho de que $f$ es un homomorfismo de $F$-espacios vectoriales. Como $f^p=\operatorname{id}_K$ tenemos que cualquier autovalor $\lambda$ de $f$ satisface $\lambda^p=1$, es decir, sus autovalores son raíces $p$-ésimas de la unidad. Además $f$ es diagonalizable, pues niguna potencia de una caja de Jordan de tamaño $2\times 2$ o superior es la matriz identidad. Como $f$ es diagonalizable y distinto de la identidad, tendrá que tener algún autovalor $\lambda\neq 1$. Este autovalor ha de ser forzosamente de la forma $\lambda =\zeta\_p^i$ para cierto $0{<}i{<}p$. 
 
 Sea $\alpha\in K$ un autovector asociado a $\zeta\_p^i$, $$f(\alpha)=\zeta\_p^i\alpha.$$  Tenemos entonces que
 $$\begin{array}{rcl}
@@ -544,57 +548,155 @@ f(\alpha^p)&=&f(\alpha)^p\cr
 &=&(\zeta\_p^i)^p\alpha^p\cr
 &=&\alpha^p.
 \end{array}$$
-Se deduce por inducción que $f^i(\alpha^p)=\alpha^p$ para todo $i\geq 1$, por tanto $\alpha^p\in K^{G(K/F)}=F$. Esto demuestra que $\alpha\in K$ es raíz del polinomio $x^p-\alpha^p\in F[x]$. Además, como $f(\alpha)\notin \alpha$ entonces $\alpha\notin F$ así que $F\subsetneq F[\alpha]\subset K$  y como $[K:F]=p$ es primo concluimos que $K=F[\alpha]$.
+Se deduce por inducción que $f^i(\alpha^p)=\alpha^p$ para todo $i\geq 1$, por tanto $\alpha^p\in K^{G(K/F)}=F$. Esto demuestra que $\alpha\in K$ es raíz del polinomio $x^p-\alpha^p\in F[x]$. Además, como $f(\alpha)\neq \alpha$ entonces $\alpha\notin F$ así que $F\subsetneq F[\alpha]\subset K$  y como $[K:F]=p$ es primo concluimos que $K=F[\alpha]$.
 {{% /proof %}}
 
+Igual que antes, en las condiciones del enunciado de este teorema el polinomio $x^p-a$ es necesariamente irreducible.
 
 Las extensiones del tipo que hemos estudiado en esta sección se denominan **extensiones de Kummer**.
+
 
 ## Solubilidad por radicales
 
 {{% definition %}}
-Una extensión $F\subset K$ es una **extensión por radicales** si hay una sucesión finita de extensiones $$F=F\_0\subset F\_1\subset\cdots\subset F\_n=K$$ tales que $F\_{i+1}=F\_i[\alpha\_i]$ donde $\alpha\_i$ es es raíz de un polinomio de la forma $x^{p\_i}-a\_i\in F\_i[x]$ con $p\_i$ es primo, $i=0,\dots,p-1$. 
+Decimos que $\alpha\in \mathbb{C}$ es **soluble** sobre un cuerpo $F$ si existe una cadena de extensiones
+$$F = F\_0\subset F\_1\subset F\_2\subset\cdots\subset  F\_n=K$$
+tal que $\alpha\in K$ y $F\_{i+1}=F\_i[\sqrt[s\_i]{r\_i}]$ para ciertos $r\_i\in F\_i$ y $s\_i\geq 2$, $0\leq i<n$.
 {{% /definition %}}
 
+Los números solubles sobre $F$ son los que se obtienen a partir de números de $F$ realizando iteradamente sumas, restas, productos, divisiones por números no nulos y raíces $n$-ésimas. Nuestro objetivo es saber cuándo podemos hallar las raíces de un polinomio $p(x)\in F[x]$ de este modo a partir de sus coeficientes, es decir, queremos saber cuándo las raíces de $p(x)$ son solubles sobre $F$. Veremos cómo hacerlo usando el grupo de Galois del cuerpo de descomposición de $p(x)$.
 
-{{% watch %}}
- Observa que toda extensión por radicales es finita pues cada $F\_i\subset F\_{i+1}$ es finita de grado $\leq p\_i$ ya que $r\_i$ es raíz de un polinomio de grado $p\_i$ con coeficientes en $F\_i$. 
-{{% /watch %}}
+{{% remark %}}
+Como $\sqrt[st]{r}=\sqrt[s]{\sqrt[t]{r}}$, no hay pérdida de generalidad sin en la definición anterior suponemos que los $s\_i$ son todos primos.
+
+Añadiendo las raíces de manera sucesiva vemos que si $\alpha\_1,\dots,\alpha\_m\in\mathbb{C}$ son solubles entonces existe una cadena de extensiones como la de la definición tal que $\alpha\_1,\dots,\alpha\_m\in K$.
+{{% /remark %}}
+
 
 
 {{% definition %}}
- Dado un polinomio no nulo $p(x)\in F[x]$ decimos que la ecuación $p(x)=0$ se puede **resolver por radicales** si existe una extensión por radicales de $F$ en la que $p(x)$ factoriza como producto de polinomios de grado $1$. 
+Un grupo $G$ es **soluble** si existe una cadena de subgrupos
+$$\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G$$
+tal que $G\_i\subset G\_{i+1}$ es un subgrupo normal con cociente $G\_{i+1}/G\_i$ abeliano para todo $0\leq i<n$.
 {{% /definition %}}
 
+La solubilidad es una buena propiedad porque permite probar por inducción que muchas propiedades de los grupos abelianos son también ciertas para los grupo solubles.
 
-{{% watch %}}
- Esto equivale a decir que hay una extensión por radicales de $F$ que contiene al cuerpo de descomposición de $p(x)$. 
-{{% /watch %}}
+{{% remark %}}
+Los grupos abelianos son solubles. Los grupos simétricos $S\_2$, $S\_3$ y $S\_4$ también, así como todos sus subgrupos. Sin embargo, $S\_n$ no es soluble para ningún $n\geq 5$, ni tampoco su subgrupo alternado $A\_n\subset S\_n$. La solubilidad se preserva por isomorfismos.
+{{% /remark %}}
 
+{{% lemma %}}
+Dado un grupo $G$ y un subgrupo normal $N$, $G$ es soluble si y solo si lo son $N$ y $G/N$.
+{{% /lemma %}}
 
-{{% definition %}}
- Un grupo finito $G$ es **soluble** si existe una sucesión de subgrupos $$\\{1\\}=G\_0\subset G\_i\subset \cdots\subset G\_n=G$$ tal que $G\_i\subset G\_{i+1}$ es normal y $G\_{i+1}/G\_i$ es cíclico de orden $p\_i$ primo, $0\leq i{<}n$. 
-{{% /definition %}}
+{{% proof %}}
+Denotamos $p\colon G\twoheadrightarrow G\subset N$ a la proyección natural.
+
+$\Rightarrow$ Si 
+$$\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G$$ 
+es una cadena en las condiciones de la definición entonces las cadenas siguientes demuestran que $N$ y $G/N$ son solubles,
+$$
+\begin{array}{c}
+\\{e\\}=N\cap G\_0 \subset N\cap G\_1 \subset \cdots\subset N\cap G\_n=N,\cr
+\\{e\\}=p(G\_0) \subset p(G\_1) \subset \cdots\subset p(G\_n)=G/N.
+\end{array}
+$$
+Aquí usamos que, gracias al primer teorema de isomorfía,
+$$
+\frac{N\cap G\_{i+1}}{N\cap G\_{i}}\subset\frac{G\_{i+1}}{G\_i}
+\cong\frac{p(G\_{i+1})}{p(G\_{i})}.
+$$
+
+$\Leftarrow$ Si $N$ y $G/N$ son solubles gracias a las cadenas
+$$
+\begin{array}{c}
+\\{e\\}=N\_0 \subset N\_1 \subset N\_2 \subset \cdots\subset N\_m=N,\cr
+\\{e\\}=K\_0 \subset K\_1 \subset K\_2 \subset \cdots\subset K\_n=G/N,
+\end{array}
+$$
+entonces $G$ es soluble gracias a la cadena
+$$
+\\{e\\}=N\_0 \subset \cdots\subset N\_m=p^{-1}(K\_0)\subset \cdots\subset p^{-1}(K\_m)=G.
+$$
+Aquí usamos que, gracias al primer teorema de isomorfía,
+$$
+\frac{p^{-1}(K\_{i+1})}{p^{-1}(K\_{i})}\cong \frac{K\_{i+1}}{K\_i}.
+$$
+{{% /proof %}}
+
+{{% corollary %}}
+Dos grupos $G$ y $H$ son solubles si y solo si $G\times H$ es soluble.
+{{% /corollary %}}
+
+{{% proof %}}
+Basta usar el primer teorema de isomorfía para observar que $G\cong G\times \\{e\\}\subset G\times H$ es un subgrupo normal y $(G\times H)/(G\times \\{e\\})\cong H$.
+{{% /proof %}}
 
 
 {{% proposition %}}
- Toda extensión por radicales $F\subset K$ tiene grupo de Galois $G(K/F)$ soluble. 
+Un grupo finito $G$ es soluble si y solo si existe una cadena de subgrupos
+$$\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G$$
+tal que $G\_i\subset G\_{i+1}$ es un subgrupo normal con cociente $G\_{i+1}/G\_i$ de orden primo, $0\leq i<n$.
 {{% /proposition %}}
 
+{{% proof %}}
+Antes que nada, observamos que la demostración del lema anterior también sirve para probar que si $G$ es un grupo y $N\subset G$ es un subgrupo normal, entonces $G$ satisface la condición del enunciado de esta proposición si y solo si $N$ y $G/N$ la cumplen. En particular, dos grupos $G$ y $H$ la satisfacen si y solo si el producto $G\times H$ la cumple. Partiendo de esto, abordamos ahora la prueba de esta proposición.
+
+$\Leftarrow$ Es obvio porque todo grupo de orden primo es cíclico y por tanto abeliano.
+
+$\Rightarrow$ Si $G=\mathbb{Z}/(p^n)$ basta tomar $G\_i=(\bar{p}^{n-i})$, $0\leq i<n$, ya que todos los subgrupos de $G$ son normales por ser abelianos y  $\bar{p}^{n-i}\in\mathbb{Z}/(p^n)$ tiene orden $p^i$, así que $|G\_i|=p^i$ y por tanto 
+$$
+\begin{array}{rcl}
+\left|\frac{G\_{i+1}}{G\_i}\right|&=&\frac{|G\_{i+1}|}{|G\_i|}\cr
+&=&\frac{p^{i+1}}{p^i}\cr
+&=&p.
+\end{array}$$
+Si $G$ es abeliano el resultado también es cierto, ya que al ser finito sería un producto finito de grupos de la forma $\mathbb{Z}/(p^n)$, en virtud del segundo teorema de estructura.
+
+En general, si $G$ satisface la condición de solubilidad gracias a la cadena
+$$
+\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G,
+$$
+vamos a probar por inducción que cada $G\_i$ satisface la condición del enunciado. Obviamente $G\_0$ la satisface por ser trivial. Si $G\_i$ la cumple, como $G\_i\subset G\_{i+1}$ es normal y $G\_{i+1}/G\_i$ la satisface por ser abeliano, tenemos que $G\_{i+1}$ también la cumple.
+{{% /proof %}}
+
+{{% lemma %}}
+Dados dos polinomios $f\_1,f\_2\in F[x]$, si $L\_1$ y $L\_2$ son los cuerpos de descomposición de $f\_1$ y $f\_2$, respectivamente, y $K$ es el cuerpo de descomposición de $f\_1f\_2$ entonces $G(K/F)$ es isomorfo a un subgrupo de $G(L\_1/F)\times G(L\_2/F)$.
+{{% /lemma %}}
 
 {{% proof %}}
-   {{% /proof %}}
+Tenemos que $F\subset L\_1,L\_2\subset K$, ya que las raíces de un producto de dos polinomios son la unión de las raíces de los factores. Consideramos el homomorfismo
+$$G(K/F)\longrightarrow\frac{G(K/F)}{G(K/L\_1)}\times \frac{G(K/F)}{G(K/L\_2)}\cong G(L\_1/F)\times G(L\_2/F)$$
+definido en cada coordenada como la proyecció natural. El núcelo es $G(K/L\_1)\cap G(K/L\_2)$, es decir, los automorfismos de $K$ que dejan fijas a las raíces tanto de $f\_1$ como de $f\_2$. Un automorfismo así deja fijas a las raíces de $f\_1f\_2$ y por tanto a su cuerpo de descomposición $K$, así que tiene que ser la identidad. Como el núcleo es trivial, el homomorfismo es inyectivo y, en virtur del primer teorema de isomorfía, el dominio es isomorfo a un subgrupo del codominio.
+{{% /proof %}}
+
+{{% lemma %}}
+Si $p\_1,\dots,p\_m$ son enteros primos dos a dos entonces el grupo de Galois de la extensión de Galois $F\subset F[\zeta\_{p\_1},\dots,\zeta\_{p\_m}]$ es abeliano.
+{{% /lemma %}}
+
+{{% proof %}}
+Para $m=1$ se prueba como en el caso $F=\mathbb{Q}$. Por inducción, si es cierto para $m-1$ primos, nuestro grupo de Galois es isomorfo a un subgrupo del producto de los de $F\subset F[\zeta\_{p\_1},\dots,\zeta\_{p\_{m-1}}]$ y $F\subset F[\zeta\_{p\_m}]$ en virtud del lema anterior. El producto de grupos abelianos es abeliano y los subgrupos de los grupos abelianos también.
+{{% /proof %}}
 
 
 {{% theorem %}}
- Sea $F$ un cuerpo y $p(x)\in F[x]$ un polinomio con cuerpo de descomposición $K$. La ecuación $p(x)=0$ se puede resolver por radicales si y solo si $G(K/F)$ es soluble. 
+Sea $p(x)\in F[x]$ un polinomio con cuerpo de descomposición $L$. Las raíces complejas de $p(x)$ son todas solubles sobre $F$ si y solo si $G(L/F)$ es un grupo soluble.
 {{% /theorem %}}
 
-
 {{% proof %}}
- 
 
-$$\Rightarrow$$ 
+$\Leftarrow$ Denotamos $G=G(L/F)$. Sea $$\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G$$ una cadena de subgrupos como en la proposición anterior. 
 
-  {{% /proof %}}
+Supongamos primero que $F$ tiene todas las raíces primitivas de la unidad asociadas a los primos que aparecen como el orden de los cocientes $G\_{i+1}/G\_i$. En este caso basta considerar la cadena de extensiones
+$$L= L^{G\_0} \supset L^{G\_1} \supset \cdots\supset L^{G\_n}\supset F[\zeta\_{p\_1},\dots, \zeta\_{p\_n}]\=F.$$
+En efecto, el teorema sobre extensiones de Kummer garantiza que cada $L^{G\_{i}}\supset L^{G\_{i+1}}$ se obtiene añadiendo una raíz.
+
+Si $F$ no tuviera todas las raíces primitivas de la unidad mencionadas, denotamos $F'$ y $L'$ a los cuerpos obtenidos al añadírselas a $F$ y a $L$, respectivamente. Por construcción, la extensión $F\subset F'$ se puede interpolar como en la definición de número soluble. El grupo $G(L'/L)$ es abeliano por el lema anterior y
+$$\frac{G(L'/F)}{G(L'/L)}\cong G(L/F),$$
+que es soluble, así que $G(L'/F)$ es soluble y su subgrupo normal $G(L'/F')$ también. Como $F'$ posee todas las raíces primitivas de la unidad necesarias, el párrafo anterior demuestra que $F'\subset L'$ también se puede interpolar como en la definición de número soluble. Por tanto $F\subset L'$ también, concatenando ambas interpolaciones.
+
+$\Rightarrow$ El argumento es muy parecido anterior. Lo dejamos como ejercicio.
+{{% /proof %}}
+
 
