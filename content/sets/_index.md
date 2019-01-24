@@ -53,7 +53,7 @@ Muchos símbolos matemáticos son **reversibles**, por ejemplo, $A\ni a$ signifi
 {{% /watch %}}
 
 Por ejemplo, si $A = \\{ 1,2,3,4,5 \\}$ entonces $1 \in A$ pero $6\notin A$. Otra manera implícita de expresar este conjunto $A$ es la siguiente:
-\\[ A = \\{n|n\in\mathbb{N},1\leq n\leq 5\\}.\\]
+$$ A = \\{n|n\in\mathbb{N},1\leq n\leq 5\\}.$$
 Se lee del siguiente modo: "$A$ es el conjunto formado por los elementos $n$ tales que $n$ pertenece al conjunto los números naturales, $n$ es mayor o igual que 1 y $n$ es menor o igual que 5."
 
 
@@ -62,7 +62,7 @@ Dos conjuntos $A$ y $B$ son **iguales** $A=B$ cuando poseen los mismos elementos
 {{% /definition %}}
 
 {{% remark %}}
-Deducimos que dos conjuntos $A$ y $B$ son **distintos** $A\neq B$ si bien existe $x\in A$ tal que $x\notin B$ o bien existe $x\in B$ tal que $x\notin A$. En notación matemática: \\(A\neq B\Leftrightarrow(\exists x\in A|x\notin B)\vee(\exists x\in B|x\notin A).\\)
+Deducimos que dos conjuntos $A$ y $B$ son **distintos** $A\neq B$ si bien existe $x\in A$ tal que $x\notin B$ o bien existe $x\in B$ tal que $x\notin A$. En notación matemática: $A\neq B\Leftrightarrow(\exists x\in A|x\notin B)\vee(\exists x\in B|x\notin A).$
 {{% /remark %}}
 
 {{% definition %}}
@@ -132,6 +132,7 @@ donde $A$, $B$ y $C$ son conjuntos cualesquiera:
 * $A \cap B \subset B$.
 * $\varnothing \cap A = \varnothing$.
 * $A \subset B\Leftrightarrow A \cap B = A.$
+
 {{% /theorem %}}
 
 
@@ -231,7 +232,7 @@ $\bigcup_{n\in\mathbb{N}}[0,\frac{1}{2^n})=[0,\frac{1}{2})$ ya que $[0,\frac{1}{
 
 
 {{% definition %}}
-Dados dos conjuntos $A$ y $B$ se define la **diferencia** $A \setminus B$, como el conjunto formado por los elementos de $A$ que no están en $B$, $ A \setminus B = \\{x  |  x \in A  \wedge  x \notin B\\}$.
+Dados dos conjuntos $A$ y $B$ se define la **diferencia** $A \setminus B$, como el conjunto formado por los elementos de $A$ que no están en $B$, $A \setminus B = \\{ x  |  x \in A  \wedge  x \notin B \\}$.
 {{% /definition %}}
 
 ![Diferencia](../images/difference.png)
@@ -253,6 +254,7 @@ Dados tres conjuntos $A$, $B$ y $C$:
 
 * $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
 * $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+
 {{% /theorem %}}
 
 {{% proof %}}
@@ -272,6 +274,7 @@ Dados tres conjuntos $A$, $B$ y $C$:
 
 * $C \setminus (A \cup B) = (C \setminus A) \cap (C \setminus B)$.
 * $C \setminus (A \cap B) = (C \setminus A) \cup (C \setminus B)$.
+
 {{% /theorem %}}
 
 {{% proof %}}
@@ -339,6 +342,7 @@ Dado un conjunto universal $U$:
 * $\bar{\bar{A}}=A$.
 * $\bar U=\varnothing$.
 * $\bar{\varnothing}=U$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -460,11 +464,13 @@ Observa que el nombre de la aplicación se puede poner sobre la flecha.
 
 
 {{% example name="Algunas aplicaciones importantes" %}}
+
 * La **identidad** $1_A\colon A\rightarrow A$ se define como $1_A(a)=a$ para todo $a\in A$. Esta aplicación está definida para cualquier conjunto $A$.
 
 * Dado un subconjunto $B\subset A$, la **inclusión** $i\colon B\rightarrow A$ se definie como $i(b)=b$ para todo $b\in B$. 
 
 * Dados dos conjuntos $A$ y $B$ y un elemento $b\in B$, la aplicación **constante** $c_b\colon A\rightarrow B$ se define como $c_b(a)=b$ para todo $a\in A$.
+
 {{% /example %}}
 
 {{% exercise %}}
@@ -485,6 +491,7 @@ La composición de aplicaciones satisface las propiedades siguientes:
 * Dadas tres aplicaciones $$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C\stackrel{h}\longrightarrow D$$
 se verifica que $h\circ (g\circ f)=(h\circ g)\circ f$ (**asociativa**).
 * Dada una aplicación $f\colon A\rightarrow B$, se tiene que $f\circ 1_A=f=1_B\circ f$ (**elemento neutro**).
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -592,6 +599,7 @@ Sea $f\colon A \rightarrow B$ una aplicación.
 * $f$ es **inyectiva** o **uno-a-uno** si no existen dos elementos diferentes de $A$ con la misma imagen.
 * $f$ es **sobreyectiva** si todo elemento de $B$ es la imagen de algún elemento de $A$.
 * $f$ es **biyectiva** si es inyectiva y sobreyectiva.
+
 {{% /definition %}}
 
 En una aplicación inyectiva no puede ocurrir los siguiente:
@@ -698,6 +706,7 @@ La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la n
 {{% /watch %}}
 
 {{% remark label="rem:directinverse" %}} 
+
 * Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{im}f=f(A)=B$.
 
 * Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
@@ -711,7 +720,7 @@ dada una aplicación $f\colon A\rightarrow B$:
 	- $V \subset V'\subset B\Rightarrow f^{-1}(V)\subset f^{-1}(V')\subset A$.
 
 ¿Son ciertos los recíprocos de estas últimas implicaciones?
-{{% /exercise %}}
+{{% /remark %}}
 
 {{% proposition %}}
 Dada una aplicación $f\colon A \rightarrow B$ y subconjuntos $U\subset
@@ -719,6 +728,7 @@ A$ y $V\subset B$, se verifican las siguientes propiedades:
 
 * $U \subset f^{-1}(f(U))$.
 * $f(f^{-1}(V)) \subset V$. 
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -733,6 +743,7 @@ A$ y $V_1,V_2 \subset B$, se verifican las siguientes propiedades:
 2. $f(U_1 \cap U_2) \subset f(U_1) \cap f(U_2)$.
 3. $f^{-1} (V_1 \cup V_2) = f^{-1} (V_1) \cup f^{-1} (V_2)$.
 4. $f^{-1} (V_1 \cap V_2) = f^{-1} (V_1) \cap f^{-1} (V_2)$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -764,15 +775,19 @@ Dados dos conjuntos $A$ y $B$, el **conjunto exponencial** es $B^A=\\{$aplicacio
 
 {{% example name="Un conjunto exponencial pequeño" %}}
 El conjunto exponencial $\\{a,b\\}^{\\{1,2\\}}=\\{f\_1,f\_2,f\_3,f\_4\\}$ está formado por las cuatro aplicaciones siguientes:
+
 ![Conjunto exponencial](../images/exponential.png)
+
 {{% /example %}}
 
 {{% exercise %}}
+
 * Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $B^A$?
 
 * ¿Cuántos elementos hay en $A^\varnothing$?
 
 * Dado un conjunto cualquiera $A$ y otro unitario $\\{e\\}$, describe $A^{\\{e\\}}$ y $\\{e\\}^A$.
+
 {{% /exercise %}}
 
 
@@ -789,9 +804,11 @@ Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades
 * $aRa$ para todo $a \in A$ (**reflexiva**).
 * $aRb\Leftrightarrow bRa$ para $a,b\in A$ cualesquiera (**simétrica**).
 * $aRb\wedge bRc\Rightarrow aRc$ para $a,b,c\in A$ (**transitiva**).
+
 {{% /definition %}}
 
 {{% example name="Relaciones de equivalencia" %}}
+
 * En el conjunto de los seres humanos, poseer el mismo grupo sanguíneo, es decir $x\sim y$ si $x$ tiene el mismo grupo sanguíneo que $y$.
 
 * En el conjunto de estudiantes del primer curso del Grado en Matemáticas de la Universidad de Sevilla, estar en el mismo grupo de Álgebra Básica.
@@ -803,6 +820,7 @@ Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades
 * En un conjunto cualquiera $A$, la relación dada por la igualdad, $x\sim y$ si $x=y$.
 
 * En un conjunto cualquiera $A$, la relación definida como $x\sim y$ para todo $x,y\in A$.
+
 {{% /example %}}
 
 {{% exercise %}}
@@ -847,6 +865,7 @@ Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos cas
 * En este caso la proyección natural es biyectiva $\pi\colon A\cong A/=$.
 
 * $A/\sim$ es unitario.
+
 {{% /example %}}
 
 
@@ -856,6 +875,7 @@ Una **partición** de $A$ es un subconjunto $P \subset \mathcal{P}(A)$ tal que:
 * Los elementos de $P$ son subconjuntos no vacíos de $A$.
 * La unión de todos los elementos de $P$ es $A$.
 * Dos elementos distintos de $P$ son siempre disjuntos.
+
 {{% /definition %}}
 
 La siguiente es una partición de un conjunto $A$ formada por los subconjuntos $\\{E_1, E_2, E_3, E_4, E_5\\}$.
@@ -922,7 +942,9 @@ Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe el con
 
 {{% theorem name="Factorización canónica" %}}
 Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
-$$\require{AMScd}\begin{CD}A @>f>> B\cr @V{\pi}VV @AA{i}A\cr A/\sim_f @>>{\overline{f}}> \operatorname{im} f \end{CD}$$
+
+![Factorización canónica](../images/canonica.png)
+
 es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además, la aplicación $\overline{f}$ es biyectiva.
 {{% /theorem %}}
 

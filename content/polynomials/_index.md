@@ -53,6 +53,7 @@ Dados $D,d\in k[x]$, $d\neq0$, existen $c,r\in k[x]$ únicos tales que
 * $D=d\cdot c+r$,
 
 * $\deg( r )<\deg(d)$.
+
 {{% /theorem %}}
 
 {{% proof %}}
@@ -412,7 +413,7 @@ Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[x]$ es un polinomio primitivo de g
 
 
 {{% proof %}}
- Usaremos el homomorfismo $\phi_p\colon \mathbb{Z}[x]\rightarrow (\mathbb{Z}/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ \mathbb{Z}eduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $\mathbb{Z}$ como $\mathbb{Z}/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.
+ Usaremos el homomorfismo $\phi_p\colon \mathbb{Z}[x]\rightarrow (\mathbb{Z}/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general, $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$ La condición sobre $a_n$ equivale a decir que concretamente para el polinomio $f$ del enunciado $$\operatorname{grado}(\phi_p(f))= \operatorname{grado}(f).$$ Reduzcamos al absurdo. Si $f$ fuera reducible se descompondría como producto de dos divisores propios $f=gh$. Como $f$ es primitivo, ni $g$ ni $h$ puede ser constante, es decir $$\operatorname{grado}(g),\operatorname{grado}(h)>0.$$ Al ser $\phi_p$ un homomorfismo, $$\phi_p(f)=\phi_p(g)\phi_p(h).$$ Ninguna de las desigualdades  $$\begin{array}{rcl} \operatorname{grado}(\phi_p(g))&\leq &\operatorname{grado}(g),\cr \operatorname{grado}(\phi_p(h))&\leq &\operatorname{grado}(h), \end{array}$$ puede ser estricta ya que de ser así $$\operatorname{grado}(\phi_p(f))=\operatorname{grado}(\phi_p(g))+\operatorname{grado}(\phi_p(h))<\operatorname{grado}(g)+\operatorname{grado}(h)=\operatorname{grado}(f),$$ pero $\operatorname{grado}(\phi_p(f))=\operatorname{grado}(f)$. Las dos igualdades de la ecuación anterior son ciertas porque tanto $\mathbb{Z}$ como $\mathbb{Z}/(p)$ son dominios, el segundo por ser $p$ primo. Por tanto, $$\operatorname{grado}(\phi_p(g)),\operatorname{grado}(\phi_p(h))>0$$ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, que no sería irreducible.
 {{% /proof %}}
 
 

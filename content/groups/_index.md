@@ -21,6 +21,7 @@ que ha de satisfacer las propiedades siguentes:
 * Existe un elemento $e\in G$  tal que $x\star e=x=e\star x$ para todo  $x\in G$ (**elemento neutro**).
 
 * Para todo $x\in G$ existe $\inv{x}\in G$  tal que $x\star \inv{x}=e=\inv{x}\star x$ (elemento **simétrico** o **inverso**).
+
 {{% /definition %}}
 
 Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \star )$ se denotará simplemente $G$. En este caso también es frecuente sustituir el símbolo $\star$ por una mera yuxtaposición de símbolos, es decir $x\star y=xy$. Observa que $e^{-1}=e$.
@@ -40,6 +41,7 @@ Los siguientes son algunos grupos bien conocidos:
 * El conjunto $GL(n,k)$ de las matrices $n\times n$ con entradas en un cuerpo $k$ y  determinante no nulo, con la multiplicación de matrices.
 
 * El **grupo trivial** $\\{e\\}$, con el producto definido como $e\star e=e$, que es el único posible.
+
 {{% /example %}}
 
 
@@ -145,6 +147,7 @@ Dados tres elementos de un grupo $x,y,z\in G$:
 * Si $x\star y=x\star z$ entonces $y=z$.
 
 * Si $y\star x=z\star x$ entonces $y=z$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -168,6 +171,7 @@ Diremos que un elemento de un grupo $x\in G$ tiene **orden finito** si existe un
 {{% /definition %}}
 
 {{% example name="Elementos de orden finito" %}}
+
 * En cualquier grupo, el elemento neutro es el único que tiene orden $1$.
 
 * En el grupo $\\{1,-1,i,-i\\}$ con el producto, el orden de $-1$ es $2$, mientras que el orden de $i$ y de $-i$ es $4$.
@@ -191,6 +195,7 @@ I_{n-1} & 0
 \end{array}
 \right).
 $$
+
 {{% /example %}}
 
 {{% remark %}}
@@ -446,6 +451,7 @@ La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \;
 {{% /watch %}} 
 
 Cualquier notación para los ciclos que quepa en una línea es intrínsecamente mala, lo ideal sería algo así:
+
 ![Ciclos circulares](../images/circular_cycle.png)
 
 
@@ -651,7 +657,9 @@ $$
 S_3=\\{(), (12), (13), (23), (123), (132)\\}.
 $$
 Las permutaciones pares de $S_3$ son $()$, $(123)$ y $(132)$ y las impares son $(12)$, $(13)$ y $(23)$.
+
 ![S3](../images/s3.png)
+
 {{% /example %}}
 
 {{% proposition %}}
@@ -668,7 +676,9 @@ $$
 \end{array}
 $$
 En total hay $1+2(j-i-1)$ inversiones, y este es un número impar.
+
 ![Inversiones de una trasposición](../images/transsign.png)
+
 {{% /proof %}}
 
 {{% proposition %}}
@@ -677,6 +687,7 @@ Dadas dos permutaciones  $\sigma ,\tau\in S_n$:
 * $\signo (\sigma\tau )=\signo (\sigma )\signo (\tau )$.
 
 * $\signo (\sigma^{-1})=\signo (\sigma )$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -737,6 +748,7 @@ $G$ si se dan las siguientes condiciones:
 * Si $x,y\in H$ entonces $xy\in H$.
 
 * Si $x\in H$ entonces $x^{-1}\in H$.
+
 {{% /definition %}}
 
 {{% remark %}}
@@ -756,6 +768,7 @@ Un subgrupo $H\subset G$ es un grupo por derecho propio con la operación binari
 * El subgrupo $SL(n,k)=\\{A\mid |A|=1\\}\subset GL(n,k)$ de matrices $n\times n$ sobre un cuerpo $k$ de determinante $1$.
 
 * El subrgupo de Klein $\\{(), (1\;2)(3\;4), (1\;3)(2\;4), (1\;4)(2\;3)\\}\subset S_4$.
+
 {{% /example %}}
 
 
@@ -765,6 +778,7 @@ Dado un grupo $G$, $H\subset G$ es un subgrupo si y solo si se satisfacen las do
 * $H\neq\varnothing$ 
 
 * Si $x,y\in H$ entonces $x^{-1}y\in H$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -881,6 +895,7 @@ $$
 luego $y^{-1}x\in H$, es decir $y\sim_H x$.
 
 * Transitiva: si $x\sim_H y\sim_H z$ es porque $x^{-1}y, y^{-1}z\in H$, luego $x^{-1}z=(x^{-1}y)(y^{-1}z)\in H$, así que $x\sim_H z$.
+
 {{% /proof %}}
 
 {{% remark %}}
@@ -897,6 +912,7 @@ $G/H:=G/\sim_H$.
 * Sea $\langle n\rangle\subset\mathbb{Z}$ el subgrupo cíclico generado por un entero $n\in\mathbb{Z}$ no trivial $n\neq 0$. Los elementos de $\langle n\rangle$ son los múltiplos de $n$. En este caso, $x\sim_{\langle n\rangle} y$ si y solo si $n|(x-y)$, por tanto se trata de la relación $\sim_n$ considerada en el tema de conjuntos, cuyo cociente, según vimos, es
 $$\mathbb{Z}/\langle n\rangle = \\{[0],\dots,[n-1]\\}.$$
 Este cociente se denomina $\mathbb{Z}$ **módulo** $n$.
+
 {{% /example %}}
 
 
@@ -996,6 +1012,7 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 9. La aplicación **exponencial** $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$, 
 es un homomorfismo del grupo aditivo $\mathbb{R}$ en el grupo multiplicativo $(0,+\infty)$.
+
 {{% /example %}}
 
 Los homomorfismos preservan el elemento neutro y los simétricos.
@@ -1006,15 +1023,16 @@ Si $f\colon G\rightarrow H$ es un homomorfismo, entonces:
 * $f(e)=e$.
 
 * $f(\inv{x})=\inv{f(x)}$ para todo $x\in G$.
+
 {{% /proposition %}}
 
 {{% proof %}}
 Como $e=e e$,
-\\[f(e)=f(e e)=f(e) f(e).\\]
+$$f(e)=f(e e)=f(e) f(e).$$
 Usando la propiedad cancelativa deducimos que $e=f(e)$.
 
 Al ser $e=x \inv{x}$ deducimos que
-\\[e=f(e)=f(x \inv{x})=f(x) f(\inv{x}),\\]
+$$e=f(e)=f(x \inv{x})=f(x) f(\inv{x}),$$
 por tanto $f(\inv{x})=\inv{f(x)}$.
 {{% /proof %}}
 
@@ -1030,7 +1048,7 @@ La composición de homomorfismos es un homomomorfismo.
 
 {{% proposition label="homocomp" %}}
 Dados dos homomorfismos como en el siguiente diagrama,
-\\[G\stackrel{f}\To H\stackrel{g}\To K,\\]
+$$G\stackrel{f}\To H\stackrel{g}\To K,$$
 la composición
 $g\circ f\colon G\rightarrow K$
 es un homomorfismo.
@@ -1073,11 +1091,11 @@ Si $f\colon G\to H$ es un isomorfismo entonces la aplicación inversa $f^{-1}\co
 
 {{% proof %}}
 Dados $x,y\in H$ cualesquiera, hemos de probar que
-\\[f^{-1}(x y)=f^{-1}(x) f^{-1}(y).\\]
+$$f^{-1}(x y)=f^{-1}(x) f^{-1}(y).$$
 Como $f$ es inyectivo, bastará comprobar que
-\\[f(f^{-1}(x y))=f(f^{-1}(x) f^{-1}(y)).\\]
+$$f(f^{-1}(x y))=f(f^{-1}(x) f^{-1}(y)).$$
 Por un lado, por ser $f^{-1}$ la inversa de $f$,
-\\[f(f^{-1}(x y))=(f\circ f^{-1})(x y)=1_H(xy)=x y.\\]
+$$f(f^{-1}(x y))=(f\circ f^{-1})(x y)=1_H(xy)=x y.$$
 Por otro lado, como $f$ es un homomorfismo,
 $$\begin{array}{rcl}
 f(f^{-1}(x) f^{-1}(y))&=&f(f^{-1}(x)) f(f^{-1}(y))\cr
@@ -1105,9 +1123,9 @@ $$f\colon G\stackrel{\cong}\To H.$$
 El isomorfismo inverso
 $$f^{-1}\colon H\stackrel{\cong}\To G$$
 prueba que $H\cong G$. La transitividad es consecuencia de que si $G\cong H\cong K$ es porque hay isomorfismos
-\\[G\mathop{\To}\limits^f\_\cong H\mathop{\To}\limits^g\_\cong K.\\]
+$$G\mathop{\To}\limits^f\_{\cong} H\mathop{\To}\limits^g\_{\cong} K.$$
 Entonces la composición es un isomorfismo
-\\[g\circ f\colon G\stackrel{\cong}\To K,\\]
+$$g\circ f\colon G\stackrel{\cong}\To K,$$
 así que $G\cong K$.
 {{% /proof %}}
 
@@ -1166,7 +1184,7 @@ Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}
 
 {{% definition %}}
 Dado un homomorfismo $f\colon G\to H$, su **núcleo** es
-\\[\ker f=\\{x\in G\mid f(x)=e\\}\subset G.\\]
+$$\ker f=\\{x\in G\mid f(x)=e\\}\subset G.$$
 {{% /definition %}}
 
 
@@ -1220,9 +1238,9 @@ Esta proposición demuestra que para probar que un homomorfismo $f\colon G\right
 Dado un grupo $G$, un subgrupo $K\subset G$ es **normal** $g^{-1}kg\in K$ para todo $g\in G$ y $k\in K$.
 {{% /definition %}}
 
-{{% warning %}}
+{{% watch %}}
 La noción de subrgupo normal $K\subset G$ depende tanto de $K$ como de $G$. Si variamos alguno de los dos, la situación puede cambiar.
-{{% /warning %}}
+{{% /watch %}}
 
 {{% example name="Subgrupos (no) normales" %}}
 Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\; 2)\\}\subset \perm{3}$ no es normal puesto que
@@ -1251,7 +1269,8 @@ Dado un grupo $G$ y un subrgupo $K\subset G$, los siguientes enunciados son equi
 
 2. $gK=Kg$ para todo $g\in G$.
 
-3. Las relaciones $\sim_K$ y ${}_K\\!\sim$ coinciden
+3. Las relaciones $\sim_K$ y ${}_K\\!\sim$ coinciden.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -1340,15 +1359,17 @@ Para cualquier grupo $G$, la proyección natural $\pi\colon G\stackrel{\cong}\tw
 
 Hemos identificado entonces subgrupos normales con núcleos de homomorfismos. No podemos hacer lo mismo con las imágenes de homomorfismos.
 
-{{% warning %}}
+{{% watch %}}
 Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\im\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
-{{% /warning %}}
+{{% /watch %}}
 
 Veamos ahora una vesión del teorema de factorización de aplicaciones para grupos y homomorfismos.
 
 {{% theorem name="Primer teorema de isomorfía" label="groupsisomorph" %}}
 Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\ker f\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
-$$\require{AMScd}\begin{CD}G @>f>> H\cr @V{\pi}VV @AA{i}A\cr G/\ker f @>>{\overline{f}}> \operatorname{im} f \end{CD}$$
+
+![Primer teorema de isomorfía](../images/isomorfiagrupos.png)
+
 es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónica e $i$ es la inclusión. Además,  $\overline{f}$ es un isomorfismo.
 {{% /theorem %}}
 

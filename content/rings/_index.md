@@ -7,13 +7,13 @@ weight = 30
 ## Anillos
 
 {{% definition %}}
- Un **anillo** es un grupo abeliano aditivo \\(R\\) equipado con otra operación binaria, llamada *multiplicación* o *producto*,
- \\[
+ Un **anillo** es un grupo abeliano aditivo $R$ equipado con otra operación binaria, llamada *multiplicación* o *producto*,
+ $$
 \begin{array}{rcl}
 R\times R&\rightarrow& R,\cr
 (a,b) &\mapsto& ab,
 \end{array}
-\\]
+$$
 que satisface las siguientes propiedades, donde $a,b,c\in R$ son elementos cualesquiera:
 
 * Asociativa: 
@@ -29,7 +29,7 @@ a(b+c)&=&ab+ac,\cr
 \end{array}
 $$
 
-* Existencia de elemento neutro \\(1\in R\\) para el producto:
+* Existencia de elemento neutro $1\in R$ para el producto:
 $$
 1a=a=a1.
 $$
@@ -40,6 +40,7 @@ Un anillo es **conmutativo** si además el producto satisface la siguiente propi
 $$
 ab=ba.
 $$
+
 {{% /definition %}}
 
 {{% remark %}}
@@ -80,7 +81,9 @@ $\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.
 {{% example name="Anillos de Boole" %}}
 Dado un conjunto $X$, el conjunto $\mathcal P(X)=\\{A|A \subset X\\}$ formado por los subconjuntos de $X$ es un anillo, denominado **anillo de Boole**, donde la suma es la *diferencia simétrica*, 
 $$A+B=(A\cup B)\setminus (A\cap B)$$ 
-![symmetric_difference](../images/symmetric_difference.png) 
+
+![Diferencia simétrica](../images/symmetric_difference.png) 
+
 y el producto es la intersección, $$AB=A\cap B.$$ ¿Cuál es el $0$? ¿Y el $1$? ¿Y $-A$? ¿Y $A^2$? Dibuja $A+B+C$ para tres conjuntos en posición general.
 {{% /example %}}
 
@@ -98,6 +101,7 @@ En un anillo cualquiera $R$ se cumplen las siguientes propiedades para todo $a\i
 * $0a=0=a0$.
 
 * $(-1)a=-a=a(-1)$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -127,6 +131,7 @@ Un subconjunto $S\subset R$ de un anillo $R$ es un **subanillo** si es un subgru
 * $1\in S$.
 
 * $ab\in S$ para todo $a,b\in S$.
+
 {{% /definition %}}
 
 
@@ -208,6 +213,7 @@ Como $f$ es un homomorfismo entre los grupos aditivos subyacentes, $\operatornam
 * $1=f(1)\in \operatorname{im} f$.
 
 * $f(a)f(b)=f(ab)\in \operatorname{im} f$ para todo $a,b\in R$.
+
 {{% /proof %}}
 
 {{% proposition %}}
@@ -302,6 +308,7 @@ Dado un anillo cualquiera $R$, los siguientes son ejemplos de ideales:
 * El trivial $\\{0\\}\subset R$.
 
 * Dado $a\in R$, el **ideal principal** generado por $a$ está formado por sus múltiplos $$(a)=\\{ra\mid r\in R\\}\subset R.$$ Observa que, si $R=\mathbb{Z}$, dado $n\in\mathbb{Z}$, $(n)=\langle n\rangle$. 
+
 {{% /example %}}
 
 Más adelante veremos que no hay más subgrupos de $\mathbb{Z}$ que estos y que por tanto coinciden con los ideales.
@@ -382,8 +389,11 @@ Es más, dado $m\in\mathbb{Z}$, $[m]=[r]$, donde $r$ es el resto no negativo de 
 {{% /example %}}
 
 {{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
-Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, $$\require{AMScd}\begin{CD}R @>f>> S\cr @V{\pi}VV @AA{i}A\cr \frac{R}{\ker f} @>>{\overline{f}}> \operatorname{im} f \end{CD}$$ 
- Aquí $\pi$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
+Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
+
+![Primer teorema de isomorfía para anillos](../images/isomorfianillos.png)
+
+Aquí $\pi$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
 
 
@@ -395,7 +405,7 @@ $$
 &=&1,\cr
 \overline{f}((a+I)(b+I))&=&\overline{f}((ab)+I)\cr
 &=&f(ab)\cr
-&=&f(a)f(b)\crhttp://localhost:1313/algbas/
+&=&f(a)f(b)\cr
 &=&\overline{f}(a+I)\overline{f}(b+I).
 \end{array}
 $$
@@ -615,6 +625,7 @@ Dados $D,d \in \Z$, $d\ne 0$, existen $c,r\in \Z$ únicos tales que:
 * $D=dc+r$,
 
 * $0\leq r < |d|$.
+
 {{% /theorem %}}
 
 
@@ -709,6 +720,7 @@ El divisor común máximo de dos enteros satisface las siguientes propiedades:
 2. $\mcd (a,b)=\mcd (\pm a,\pm b)$.
 3. $\operatorname{mcd}(a,b)=b\Leftrightarrow b|a$.
 3. $\operatorname{mcd}(0,b)=b$.
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -874,6 +886,7 @@ denotaremos $m=\operatorname{mcm}(a,b)$, si verifica las siguientes propiedades:
 
 1. $a|m$ y $b|m$.
 2. Si $m'$ es tal que $a|m'$ y $b|m'$ entonces $m|m'$.
+
 {{% /definition %}}
 
 {{% lemma %}}

@@ -1,0 +1,4 @@
+sets/_index
+groups/_index
+rings/_index
+polynomials/_index
