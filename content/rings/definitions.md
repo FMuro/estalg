@@ -42,7 +42,7 @@ También podemos considerar el anillo de **series formales** $R[[x]]$ en una var
 ## Definición
 
 {{% definition %}}
- Un **anillo** es un conjunto $R$ equipado con dos aplicaciones, llamadas *suma* y *multiplicación* o *producto*,
+Un **anillo** es un conjunto $R$ equipado con dos aplicaciones, llamadas *suma* y *multiplicación* o *producto*,
 $$
 \begin{array}{ccc}
 R\times R\rightarrow R, &\qquad& R\times R\rightarrow R,\cr

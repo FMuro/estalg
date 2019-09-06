@@ -3,7 +3,7 @@ languageCode = "es-ES"
 DefaultContentLanguage = "es"
 
 title = "Estructuras algebraicas"
-theme = "hugo-theme-lecturenotes"
+theme = "hugo-theme-learn"
 disableLiveReload = true
 ignoreFiles = ["\\.kate\\-swp"]
 

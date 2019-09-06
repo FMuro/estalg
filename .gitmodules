@@ -4,3 +4,6 @@
 [submodule "hugotopdf"]
 	path = hugotopdf
 	url = https://gitlab.com/edarfoc/hugotopdf
+[submodule "themes/hugo-theme-learn"]
+	path = themes/hugo-theme-learn
+	url = https://github.com/matcornic/hugo-theme-learn.git
