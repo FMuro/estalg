@@ -4,7 +4,7 @@ Esta web contiene las notas de clase del profesor [Fernando Muro](http://persona
 
 {{< button href="./docs/latex.pdf" align="center" >}} Versión PDF {{< /button >}}<br>
 
-{{% watch %}}
+{{% watch label="hola" %}}
 Esta web está **en construcción**. El contenido actual es incompleto, puede contener erratas y será modificado para su mejora sin previo aviso. Se recomienda recargar la web cada día que se consulte para evitar que el ordenador muestre copias antiguas almacenadas en la caché. La versión en PDF se genera automáticamente y puede contener errores derivados del proceso de conversion. 
 {{% /watch %}}
 
