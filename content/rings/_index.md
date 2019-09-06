@@ -3,7 +3,7 @@ title = "Anillos"
 weight = 10
 +++
 
-Consideremos la ecuación 
+Consideremos la ecuación ESTA
 
 $$x^2-y^2=25.$$
 
