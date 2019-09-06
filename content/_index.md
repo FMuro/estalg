@@ -40,7 +40,7 @@ Aquí iría la demostración. El final se indica con un cuadrado a la derecha.
 Hay algunas aplicaciones interactivas que se ejecutan al pulsar un botón. ¡Ojo! En ocasiones pueden tardar bastante tiempo en cargarse.
 
 <div class="sage">
-  <script type="text/x-sage">
+ <script type="text/x-sage">
 @interact
 def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
     lattice1 = []
@@ -56,7 +56,7 @@ def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
     lattice2_plot = point(lattice2, rgbcolor='red', size=800/n)
     lattice3_plot = point(lattice3, rgbcolor='blue', size=800/n)
     return show(lattice1_plot+lattice2_plot+lattice3_plot, aspect_ratio=1)
-  </script>
+ </script>
 </div>
 
 ## Agradecimientos

@@ -46,7 +46,6 @@ x-iy&=&5,&-5,&-i5,&i5,
 \end{array}
 \right.$$
 
-
 $$\left\\{
 \begin{array}{rccccccc}
 x+iy&=&(2+i),&-(2+i),&i(2+i),&-i(2+i),\cr

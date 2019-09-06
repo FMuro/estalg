@@ -7,8 +7,11 @@ weight = 10
 
 {{% definition %}}
 Una **extensión (de cuerpos)**
+
 $$F\subset K$$
+
 es un par formado por un cuerpo $K$ y un subanillo $F$ que también es un cuerpo. Decimos en este caso que $K$ es una extensión de $F$. Observa que $K$ es un $F$-espacio vectorial con la suma y el producto por escalares de $F$. La extensión es **finita** si $\dim\_FK<\infty$, en dicho caso definimos el **grado** de la extensión como
+
 $$[K:F]=\dim\_FK.$$
 
 {{% /definition %}}
@@ -30,6 +33,7 @@ El grado de una extensión $F\subset K$ es $[K:F]\geq 1$. No hay extensiones de 
 * $F\subset F(x)$ tampoco es finita.
 
 * $F\subset F[x]/(p(x))$, donde $p(x)\in F[x]$ es un polinomio irreducible. En efecto, por ser $F[x]$ un DFU tenemos que $p(x)\in F[x]$ es primo, y por ser $F[x]$ un dominio de ideales  principales tenemos que el ideal primo $(p(x))\subset F[x]$, al ser no trivial, es maximal, por tanto $F[x]/(p(x))$ es un cuerpo. Sabemos además que 
+
 $$[F[x]/(p(x)):F]=\text{grado }p(x).$$
 
 {{% /example %}}
@@ -73,8 +77,10 @@ Dadas dos extensiones $\mathbb Q\subset K$ y $\mathbb Q\subset L$ de $\mathbb Q$
 
 {{% proof %}}
 Por ser $f$ un homomorfismo de anillos, $f(0)=0$. Es más, como $f(1)=1$ y $f$ preserva sumas, es fácil ver que $f(n)=n$ para cualquier $n\in\mathbb Z$, $n>0$. Además $f$ preserva opuestos, luego $f(-n)=-f(n)=-n$. Esto prueba que $f$ deja fijo a $\mathbb Z$. Todo racional se puede expresar como $\frac{p}{q}=pq^{-1}$ para $p,q\in\mathbb Z$, $q\neq 0$. Los homomorfismos de anillos preservan productos e inversos, así que
+
 $$\begin{array}{rcl}f\left(\frac{p}{q}\right)&=&f(pq^{-1})\cr &=&f(p)f(q^{-1})\cr &=&f(p)f(q)^{-1}\cr &=&pq^{-1}\cr &=&\frac{p}{q}.\end{array}$$
-  
+
+ 
 {{% /proof %}}
 
 {{% corollary %}}
@@ -107,8 +113,11 @@ La existencia del polinomio irreducible de un elemento algebraico no es obvia y 
 
 {{% theorem %}}
 Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, el polinomio irreducible de $\alpha$ es el generador mónico del núcleo del homomorfismo $f\colon F[x]\rightarrow K$, $f(p(x))=p(\alpha)$. Es más, $F[\alpha]$ es un cuerpo y $f$ induce un isomorfismo de extensiones de $F$,
+
 $$\frac{F[x]}{(p(x))}\cong F[\alpha].$$
+
 En particular, 
+
 $$[F[\alpha]:F]=\text{grado }\alpha.$$
 
 {{% /theorem %}}
@@ -121,7 +130,9 @@ Ser $\alpha$ algebraico equivale a $\ker f\neq (0)$, pues los elementos de $\ker
 Supongamos que $\alpha$ tiene polinomio irreducible $p(x)$. Entonces $p(x)\in\ker f$, así que $(p(x))\subset\ker f$. Como $F[x]$ es un DIP, $(p(x))$ es maximal por ser $p(x)$ irreducible, así que $(p(x))=\ker f$. 
 
 Recíprocamente, supongamos que $\ker f=(p(x))$ (este ideal es principal porque $F[x]$ es un DIP). Por el primer teorema de isomorfía, $f$ induce un isomorfismo
+
 $$\overline{f}\colon\frac{F[x]}{(p(x))}\stackrel{\cong}\longrightarrow F[\alpha].$$
+
 Como $F[\alpha]\subset K$ es un dominio, el ideal $(p(x))\subset F[x]$ es primo. Como $F[x]$ es un DFU, esto equivale a decir que $p(x)$ es irreducible. Podemos además suponer que es mónico, dividiendo por su coeficiente líder si fuera necesario. En estas condiciones hemos visto arriba que el cociente es un cuerpo, más cocretamente una extensión de $F$ del mismo grado que $p(x)$. Esto implica que el anillo $F[\alpha]$ es también un cuerpo, por ser isomorfo al cociente. Es más, según vimos en el tema de factorización, el isomorfismo $\overline{f}$ se comporta sobre $F$ como la identidad, por tanto es un isomorfismo de extensiones, así que el grado de $F[\alpha]$ sobre $F$ es también el de $p(x)$.
 {{% /proof %}}
 
@@ -178,9 +189,13 @@ Dadas dos extensiones $F\subset K$ y $F\subset L$ del mismo cuerpo $F$ y un homo
 
 {{% proof %}}
 Como $f\colon K\rightarrow L$ es un homomorfismo de extensiones, $f$ deja fijo a $F$. Si $p(x)=a\_nx^n+\cdots+a\_1x+a\_0$ con $a\_i\in F$ y $\alpha\in K$ es una raíz entonces
+
 $$a\_n\alpha^n+\cdots+a\_1\alpha+a\_0=0,$$
+
 por tanto
+
 $$\begin{array}{rcl} 0&=&f(0)\cr &=&f(a\_n\alpha^n+\cdots+a\_1\alpha+a\_0)\cr &=&f(a\_n)f(\alpha)^n+\cdots+f(a\_1)f(\alpha)+f(a\_0)\cr &=&a\_nf(\alpha)^n+\cdots+a\_1f(\alpha)+a\_0, \end{array}$$
+
 así que $f(\alpha)\in L$ también es raíz de $p(x)$.
 {{% /proof %}}
 
@@ -196,59 +211,70 @@ Dada una extensión $F\subset K$, $\alpha\in K$ es trascendente si y solo si hay
 
 {{% proof %}}
 En virtud del teorema anterior, el elemento $\alpha$ es trascendente si y solo si el homomorfismo $f\colon F[x]\rightarrow K$, $f(p(x))=p(\alpha)$, tiene núcleo trivial. Por el primer teorema de isomorfía, esto equivale a que $f$ induzca un isomorfismo 
+
 $$F[x]\cong \frac{F[x]}{(0)}\cong\operatorname{im} f=F[\alpha]$$
+
 definido por la misma fórmula $p(x)\mapsto p(\alpha)$. Este isomorfismo obviamente deja fijo a $F$.
 {{% /proof %}}
 
 
 {{% corollary %}}
- Dada una extensión $F\subset K$ y $\alpha\in K$ tal que $F[\alpha]$ tiene dimensión finita como $F$-espacio vectorial, $\alpha$ es algebraico. 
+Dada una extensión $F\subset K$ y $\alpha\in K$ tal que $F[\alpha]$ tiene dimensión finita como $F$-espacio vectorial, $\alpha$ es algebraico. 
 {{% /corollary %}}
 
 
 {{% proof %}}
- No puede ser trascendente porque el anillo de polinomios $F[x]$ no tiene dimensión finita sobre $F$.  
+No puede ser trascendente porque el anillo de polinomios $F[x]$ no tiene dimensión finita sobre $F$.  
 {{% /proof %}}
 
 
 {{% corollary %}}
- Si $F\subset K$ es una extensión finita, todo $\alpha\in K$ es algebraico. 
+Si $F\subset K$ es una extensión finita, todo $\alpha\in K$ es algebraico. 
 {{% /corollary %}}
 
 
 {{% proof %}}
- Es consecuencia de que $F[\alpha]\subset K$ es un sub-$F$-espacio vectorial.  
+Es consecuencia de que $F[\alpha]\subset K$ es un sub-$F$-espacio vectorial.  
 {{% /proof %}}
 
 
 
 {{% proposition %}}
- Dadas dos extensiones consecutivas $F\subset K\subset L$, si $F\subset L$ es finita entonces también lo son $F\subset K$ y $K\subset L$. 
+Dadas dos extensiones consecutivas $F\subset K\subset L$, si $F\subset L$ es finita entonces también lo son $F\subset K$ y $K\subset L$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
- Como $K$ es un sub-$F$-espacio vectorial de $L$, si $F\subset L$ es finita entonces $F\subset K$ también. Es más, como $F\subset K$, cualquier conjunto de generadores de $L$ como $F$-espacio vectorial también lo genera como $K$-espacio vectorial, así que $K\subset L$ también es finita.  
+Como $K$ es un sub-$F$-espacio vectorial de $L$, si $F\subset L$ es finita entonces $F\subset K$ también. Es más, como $F\subset K$, cualquier conjunto de generadores de $L$ como $F$-espacio vectorial también lo genera como $K$-espacio vectorial, así que $K\subset L$ también es finita.  
 {{% /proof %}}
 
 
 
 {{% proposition %}}
- Dadas dos extensiones finitas consecutivas $F\subset K\subset L$, $F\subset L$ es finita de grado
+Dadas dos extensiones finitas consecutivas $F\subset K\subset L$, $F\subset L$ es finita de grado
+
 $$[L:F]=[L:K][K:F].$$
 
 {{% /proposition %}}
 
 
 {{% proof %}}
- Dada una base $\\{x\_1,\dots, x\_p\\}\subset K$ como $F$-espacio vectorial y una base $\\{y\_1,\dots, y\_q\\}\subset L$ como $K$-espacio vectorial, afirmamos que
+Dada una base $\\{x\_1,\dots, x\_p\\}\subset K$ como $F$-espacio vectorial y una base $\\{y\_1,\dots, y\_q\\}\subset L$ como $K$-espacio vectorial, afirmamos que
+
 $$\\{x\_iy\_j\\}_{\substack{1\leq i\leq p\cr 1\leq j\leq q}}\subset L$$
+
 es una base como $F$-espacio vectorial. Hemos de ver que todo elemento de $L$ se puede expresar de manera única como combinación lineal de este conjunto con coeficientes en $F$. La base de $L$ como $K$-espacio vectorial nos garantiza que todo $\alpha\in L$ se puede escribir de manera única como
+
 $$\alpha=\beta\_1y\_1+\cdots+\beta\_qy\_q,$$
+
 con $\beta\_j\in K$. La base de $K$ como $F$-espacio vectorial nos asegura que cada uno de estos coeficientes se puede expresar de manera única como
+
 $$\beta\_j=\gamma\_{1j}x\_1+\cdots+\gamma\_{pj}x\_p$$
+
 con $\gamma\_{ij}\in F$. Por tanto
+
 $$\alpha=\sum\_{i=1}^p\sum\_{j=1}^q\gamma\_{ij}x\_iy\_j$$
+
 y esta expresión es única.  
 {{% /proof %}}
 
@@ -267,9 +293,13 @@ Por inducción en $n$. Para $n=1$ está probado en el teorema anterior. Supongam
 
 {{% example name="$\mathbb Q[\sqrt[3]{2},i]$" %}}
 Consideremos la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2},i]$. Tenemos que
+
 $$\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i].$$
+
 Ya hemos visto que la extensión $\mathbb Q\subset\mathbb Q[\sqrt[3]{2}]$  tiene grado $3$. Además, como $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$, la extensión $\mathbb Q[\sqrt[3]{2}]\subset\mathbb Q[\sqrt[3]{2},i]$ tiene grado $2$. Por tanto
+
 $$\begin{array}{rcl}[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q]&=&[\mathbb Q[\sqrt[3]{2},i]:\mathbb Q[\sqrt[3]{2}]][\mathbb Q[\sqrt[3]{2}]:\mathbb Q]\cr &=&2\cdot 3=6.\end{array}$$
+
 {{% /example %}}
 
 {{% corollary %}}
@@ -292,42 +322,46 @@ Dadas extensiones $F\subset K\subset L$:
 
 
 {{% proof %}}
- Usando la fórmula para el grado de extensiones consecutivas vemos que en el primero caso $[L:K]=1$ y en el segundo $[K:F]=1$, así que basta usar que la única extensión de grado $1$ es la trivial.
+Usando la fórmula para el grado de extensiones consecutivas vemos que en el primero caso $[L:K]=1$ y en el segundo $[K:F]=1$, así que basta usar que la única extensión de grado $1$ es la trivial.
 {{% /proof %}}
 
 
 
 {{% corollary %}}
- Si $F\subset K$ es una extensión de grado $[K:F]=p$ primo entonces no posee extensiones intermedias estrictas. 
+Si $F\subset K$ es una extensión de grado $[K:F]=p$ primo entonces no posee extensiones intermedias estrictas. 
 {{% /corollary %}}
 
 
 {{% proof %}}
- Dada una posible extensión intermedia $F\subset L\subset K$, tenemos que $p=[K:F]=[K:L][L:F]$. Por ser $p$ primo esto implica que bien $[K:F]=[K:L]$ o bien $[K:F]=[L:F]$, es decir $F=L$ o $K=L$.  
+Dada una posible extensión intermedia $F\subset L\subset K$, tenemos que $p=[K:F]=[K:L][L:F]$. Por ser $p$ primo esto implica que bien $[K:F]=[K:L]$ o bien $[K:F]=[L:F]$, es decir $F=L$ o $K=L$.  
 {{% /proof %}}
 
 
 {{% corollary %}}
- Dada una extensión finita $F\subset K$, el grado de cualquier $\alpha\in K$ divide a $[K:F]$. 
+Dada una extensión finita $F\subset K$, el grado de cualquier $\alpha\in K$ divide a $[K:F]$. 
 {{% /corollary %}}
 
 
 {{% proof %}}
- Basta observar que tenemos extensiones sucesivas $F\subset F[\alpha]\subset K$ y por tanto $[K:F]=[K:F[\alpha]][F[\alpha]:F]$.
+Basta observar que tenemos extensiones sucesivas $F\subset F[\alpha]\subset K$ y por tanto $[K:F]=[K:F[\alpha]][F[\alpha]:F]$.
 {{% /proof %}}
 
 
 {{% corollary %}}
- Dada una extensión finita $F\subset K$, existe una cantidad finita de elementos $\alpha\_1,\dots,\alpha\_n\in K$ tales que $K=F[\alpha\_1,\dots,\alpha\_n]$, que denominamos **generadores** de $K$ sobre $F$. 
+Dada una extensión finita $F\subset K$, existe una cantidad finita de elementos $\alpha\_1,\dots,\alpha\_n\in K$ tales que $K=F[\alpha\_1,\dots,\alpha\_n]$, que denominamos **generadores** de $K$ sobre $F$. 
 {{% /corollary %}}
 
 
 {{% proof %}}
 Por inducción en el grado. Si $[K:F]=1$ no hay nada que demostrar pues $K=F$. Supongamos que $[K:F]=n>1$ y que el resultado es cierto para extensiones de grado ${<}n$. Entonces, como la inclusión $F\subsetneq K$ es estricta ha de existir $\alpha\_1\in K$ tal que $\alpha\_1\notin F$. Por tanto $F\subsetneq F[\alpha\_1]\subset K$. Esto implica que $[F[\alpha\_1]:F]>1$ así que
+
 $$\begin{array}{rcl}n&=&[K:F]\cr &=&[K:F[\alpha\_1]][F[\alpha\_1]:F]\cr &>&[K:F[\alpha\_1]].\end{array}$$
+
 Entonces, por hipótesis de inducción, han de existir $\alpha\_2,\dots,\alpha\_n\in K$ tales que
+
 $$\begin{array}{rcl}K&=&F[\alpha\_1][\alpha\_2,\dots,\alpha\_n]\cr &=&F[\alpha\_1,\dots,\alpha\_n].\end{array}$$
-  
+
+ 
 {{% /proof %}}
 
 En la siguiente sección veremos que, para extensiones contenidas en $\mathbb{C}$ basta uno.
@@ -343,7 +377,9 @@ Un polinomio $f(x)\in\mathbb{C}[x]$ tiene una raíz múltiple $\alpha\in\mathbb{
 
 {{% proof %}}
 Sabemos que $\alpha$ es raíz de $f$ si y solo si $(x-\alpha)|f$, es decir, si y solo si $f(x)=g(x)(x-a)$ para cierto $g(x)\in\mathbb{C}[x]$. Por tanto, $\alpha$ es una raíz múltiple de $f(x)$ si y solo si $(x-\alpha)|g$, es decir, si y solo si $\alpha$ es también una raíz de $g$. La derivada de $f$ es
+
 $$f'(x)=g'(x)(x-\alpha)+g(x),$$
+
 luego $f'(\alpha)=g(\alpha)$, así que $\alpha$ es una raíz de $f'$ si y solo si es raíz de $g$.
 {{% /proof %}}
 
@@ -377,9 +413,13 @@ Dada una extensión finita $F\subset K$ tal que $K\subset\mathbb{C}$ y $K=F[\alp
 
 {{% proof %}}
 Sean $f(x),g(x)\in F[x]$ los polinomios irreducibles de $\alpha,\beta\in K$, respectivamente. Supongamos que sus grados respectivos son $m,n\geq 1$. Sean $\alpha\_1,\dots,\alpha\_m$ y $\beta\_1,\dots,\beta\_n$ sus raíces en $\mathbb{C}$, con $\alpha=\alpha\_1$ y $\beta=\beta\_1$. Como $f$ y $g$ no tienen raíces múltiples por ser irreducibles, los $\alpha\_i$ son todos distintos, y también los $\beta\_j$. Dado $c\in F$, denotemos
+
 $$\gamma\_{ij}=\beta\_j+c\alpha\_i.$$
+
 Veamos que, si $(i,j)\neq (k,l)$, la igualdad $\gamma\_{ij}=\gamma\_{kl}$ solo puede ser cierta para un único valor de $c\in F$. En efecto, esto es cierto pues equivale a 
+
 $$c(\alpha\_i-\alpha\_k)=\beta\_l-\beta\_j.$$
+
 Si $i\neq k$ entonces $\alpha\_i\neq \alpha\_k$ y podemos despejar $c$, que sería única. Si $i=k$ entonces $j\neq l$, luego $\beta\_l\neq \beta\_j$ y no hay ningún valor de $c$ que satisfaga la ecuación. Por tanto, para casi todos los $c\in F$, los $\gamma\_{ij}$ son todos distintos. Fijemos tal $c\in F$, necesariamente no nula, y demostremos que $\gamma=\gamma_{11}$ es un elemento primitivo.
 
 Consideramos la extensión intermedia $F\subset F[\gamma]\subset F[\alpha,\beta]$. Bastará demostrar que $\alpha\in F[\gamma]$, ya que entonces también $\beta=\gamma-c\alpha\in F[\gamma]$, y por tanto tendríamos la otra inclusión $F[\gamma]\supset F[\alpha,\beta]$. 
@@ -403,7 +443,7 @@ Este teorema es cierto bajo hipótesis mucho más generales, pero la prueba se c
 ## Construcciones con regla y compás
 
 {{% definition %}}
- Un punto, recta o circunferencia del plano $\mathbb R^2$ se considera **construido** en los siguientes casos:
+Un punto, recta o circunferencia del plano $\mathbb R^2$ se considera **construido** en los siguientes casos:
 
 * Los puntos $(0,0)$ y $(1,0)$.
 
@@ -456,13 +496,13 @@ Deducimos que además podemos construir:
 
 
 {{% proposition %}}
- Un punto $(a,b)\in\mathbb R^2$ es constructible si y solo si sus coordenadas $a,b\in\mathbb R$ son números constructibles. 
+Un punto $(a,b)\in\mathbb R^2$ es constructible si y solo si sus coordenadas $a,b\in\mathbb R$ son números constructibles. 
 {{% /proposition %}}
 
 
 {{% proof %}}
 $\Rightarrow$ Trazando paralelas y perpendiculares por puntos constructibles, podemos construir los ejes de coordenadas y las proyecciones de $(a,b)$ sobre los mismos. La distancia de las proyecciones al origen son $|a|$ y $|b|$, así que las coordenadas son constructibles. 
- 
+
 ![Coordenadas](../../images/constructible-3.png) 
 
 $\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir los puntos sobre los ejes de coordenadas que están a distancia $|a|$ y $|b|$ del origen, es decir, $(\pm a,0)$ y $(0,\pm b)$, y obtener $(a,b)$ como punto de intersección de las paralelas a los ejes que pasan por $(a,0)$ y $(0,b)$.
@@ -470,7 +510,7 @@ $\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir
 
 
 {{% proposition %}}
- El subconjunto de $\mathbb R$ formado por los números constructibles es un cuerpo. 
+El subconjunto de $\mathbb R$ formado por los números constructibles es un cuerpo. 
 {{% /proposition %}}
 
 
@@ -497,17 +537,17 @@ La construcción del inverso de un número constructible $a> 0$ se lleva a cabo 
 ![Inverso](../../images/constructible-7.png)
 
 Por tanto $(-a)^{-1}=-a^{-1}$ también es constructible. Esto demuestra que el anillo de los números constructibles es un cuerpo.
- {{% /proof %}}
+{{% /proof %}}
 
 
 
 {{% remark %}}
- El cuerpo de los números constructibles contiene a $\mathbb Q$ ya que está contenido en $\mathbb R$ y cualquier racional se puede obtener a partir del $1$ sumando, tomando opuestos y dividiendo por números no nulos. Esto se aplica también a cualquier cuerpo contenido en $\mathbb C$ pero obviamente no es válido para los cuerpos finitos $\mathbb Z/(p)$. 
+El cuerpo de los números constructibles contiene a $\mathbb Q$ ya que está contenido en $\mathbb R$ y cualquier racional se puede obtener a partir del $1$ sumando, tomando opuestos y dividiendo por números no nulos. Esto se aplica también a cualquier cuerpo contenido en $\mathbb C$ pero obviamente no es válido para los cuerpos finitos $\mathbb Z/(p)$. 
 {{% /remark %}}
 
 
 {{% proposition %}}
- Si $a\in\mathbb R$ es positivo $a>0$ y constructible entonces $\sqrt{a}$ también es constructible. 
+Si $a\in\mathbb R$ es positivo $a>0$ y constructible entonces $\sqrt{a}$ también es constructible. 
 {{% /proposition %}}
 
 
@@ -523,14 +563,17 @@ Es consecuencia del conocido teorema de la media geométrica. En el eje horizont
 Hasta ahora hemos demostrado que podemos construir números constructibles a partir del $1$ sumando, restando, dividiendo por números no nulos, y tomando raíces cuadradas de números positivos. Los siguientes resultados demuestras que no hay más números constructibles que los que se pueden obtener de este modo.
 
 {{% proposition %}}
- Dados cuatro puntos en $\mathbb R^2$ cuyas coordenadas están en un subcuerpo $F\subset\mathbb R$, los puntos de intersección de las rectas y circunferencias que se pueden dibujar apoyándose en dichos puntos tienen coordenadas en $F$ o en $F[\sqrt{r}]$ para cierto $r\in F$ positivo $r>0$ que no sea el cuadrado de ningún número de $F$. 
+Dados cuatro puntos en $\mathbb R^2$ cuyas coordenadas están en un subcuerpo $F\subset\mathbb R$, los puntos de intersección de las rectas y circunferencias que se pueden dibujar apoyándose en dichos puntos tienen coordenadas en $F$ o en $F[\sqrt{r}]$ para cierto $r\in F$ positivo $r>0$ que no sea el cuadrado de ningún número de $F$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
- Dados dos puntos $(a\_0,b\_0), (a\_1,b\_1)\in\mathbb R^2$, la recta que pasa por ambos tiene ecuación 
+Dados dos puntos $(a\_0,b\_0), (a\_1,b\_1)\in\mathbb R^2$, la recta que pasa por ambos tiene ecuación 
+
 $$(a\_1-a\_0)(y-b\_0)=(b\_1-b\_0)(x-a\_0),$$
+
 y la circunferencia de centro el primero que pasa por el segundo está definida por
+
 $$(x-a\_0)^2+(y-b\_0)^2=(a\_1-a\_0)^2+(b\_1-b\_0)^2.$$
 
 Si las coordenadas está en $F$ entonces los coeficientes de ambas ecuaciones también.
@@ -541,7 +584,7 @@ Para hallar la intersección de una recta y una circunferencia, despejamos una i
 
 Para intersecar dos circunferencias, observamos que la diferencia de ambas ecuaciones es de grado $1$, por tanto este caso se reduce al anterior.
 
- 
+
 {{% /proof %}}
 
 
@@ -551,7 +594,9 @@ Recuerda que antes hemos visto que $[F[\sqrt{r}]:F]=2$ si $r\in F$ y $\sqrt{r}\n
 
 {{% theorem %}}
 Dados números reales constructibles $a\_1,\dots,a\_m\in\mathbb R$, hay una cadena de extensiones
+
 $$\mathbb Q=F\_0\subset F\_1\subset F\_2\subset\cdots\subset F\_n=K$$
+
 tales que
 
 * $K\subset\mathbb R$ es un subcuerpo,
@@ -565,8 +610,10 @@ En particular $[K:\mathbb Q]=2^n$.
 
 
 {{% proof %}}
- La construtibilidad de los números $a\_i$ equivale a la de los puntos $(a\_i,0)$. Los puntos constructibles se construyen a partir de los básicos, $(0,0)$ y $(1,0)$, trazando e intersecando rectas y circunferencias mendiante los métodos permitidos. Los puntos básicos tienen coordenadas en $\mathbb Q$. Por la propisición anterior, los puntos que se construyen a partir de ellos tendrán coordenadas en extensiones sucesivas de $\mathbb Q$ obtenidas al añadir nuevas raíces cuadradas de números positivos, por tanto el teorema se sigue de la proposición anterior por inducción. La observación sobre el grado se siguie de la fórmula del grado para extensiones intermedias, que en este caso nos dice que
+La construtibilidad de los números $a\_i$ equivale a la de los puntos $(a\_i,0)$. Los puntos constructibles se construyen a partir de los básicos, $(0,0)$ y $(1,0)$, trazando e intersecando rectas y circunferencias mendiante los métodos permitidos. Los puntos básicos tienen coordenadas en $\mathbb Q$. Por la propisición anterior, los puntos que se construyen a partir de ellos tendrán coordenadas en extensiones sucesivas de $\mathbb Q$ obtenidas al añadir nuevas raíces cuadradas de números positivos, por tanto el teorema se sigue de la proposición anterior por inducción. La observación sobre el grado se siguie de la fórmula del grado para extensiones intermedias, que en este caso nos dice que
+
 $$[K:\mathbb Q]=\prod\_{i=0}^{n-1}[F\_{i+1}:F\_i]=2^n$$
+
 ya que por el tercer apartado $[F\_{i+1}:F\_i]=2$.
 {{% /proof %}}
 
@@ -575,18 +622,20 @@ La cantidad de raíces cuadradas que hemos de añadir a $\mathbb Q$ para constru
 
 
 {{% corollary %}}
- Los números constructibles son algebraicos sobre $\mathbb Q$ y el grado de un número constructible es siempre una potencia de $2$. 
+Los números constructibles son algebraicos sobre $\mathbb Q$ y el grado de un número constructible es siempre una potencia de $2$. 
 {{% /corollary %}}
 
 
 {{% proof %}}
- Por el teorema anterior, si $a\in \mathbb R$ es constructible entonces $a\in K$ para cierta extensión finita $\mathbb{Q}\subset K$ de grado $2^n$. En particular $a$ es algebraico sobre $\mathbb Q$ y su grado divide a $2^n$, así que ha de ser una potencia de $2$.
+Por el teorema anterior, si $a\in \mathbb R$ es constructible entonces $a\in K$ para cierta extensión finita $\mathbb{Q}\subset K$ de grado $2^n$. En particular $a$ es algebraico sobre $\mathbb Q$ y su grado divide a $2^n$, así que ha de ser una potencia de $2$.
 {{% /proof %}}
 
 
 {{% example name="Números constructibles de grado $2^m$ cualquiera" %}}
- Si $p\in\mathbb Z$ es un primo positivo, $\sqrt[n]{p}$ es constructible si y solo si $n$ es una potencia de $2$. Sabemos que este número tiene grado $n$ sobre $\mathbb Q$, así que solo puede ser constructible si $n=2^m$. Además en este caso podemos ver por inducción en $m$ que de hecho es constructible. Para $m=0$ es obvio porque es entero y si $\sqrt[2^{m-1}]{p}$ es constructible entonces
+Si $p\in\mathbb Z$ es un primo positivo, $\sqrt[n]{p}$ es constructible si y solo si $n$ es una potencia de $2$. Sabemos que este número tiene grado $n$ sobre $\mathbb Q$, así que solo puede ser constructible si $n=2^m$. Además en este caso podemos ver por inducción en $m$ que de hecho es constructible. Para $m=0$ es obvio porque es entero y si $\sqrt[2^{m-1}]{p}$ es constructible entonces
+
 $$\sqrt[2^m]{p}=\sqrt{\sqrt[2^{m-1}]{p}}$$
+
 también, por ser la raíz cuadrada de un número constructible. 
 {{% /example %}}
 
@@ -596,7 +645,7 @@ Más adelante veremos que hay números cuyo grado es una potencia de $2$ pero qu
 
 
 {{% definition %}}
- Un ángulo $\theta\in[0,2\pi)$ es **constructible** si el número $\cos \theta\in\mathbb R$ es constructible. 
+Un ángulo $\theta\in[0,2\pi)$ es **constructible** si el número $\cos \theta\in\mathbb R$ es constructible. 
 {{% /definition %}}
 
 
@@ -607,19 +656,21 @@ Por la construcción geométrica de senos y cosenos, está claro que la definici
 Veamos que en general es imposible trisecar un ángulo cualquiera con regla y compás.
 
 {{% proposition %}}
- El ángulo de $60º$ es constructible pero su trisección no. 
+El ángulo de $60º$ es constructible pero su trisección no. 
 {{% /proposition %}}
 
 
 {{% proof %}}z
- Este ángulo se puede construir porque $\cos  60º=\frac{1}{2}$ es constructible. Cada ángulo de su trisección tendría $20º$ y el ángulo de $20º$ no es constructible. En efecto, la siguiente fórmula trigonométrica es cierta en general
+Este ángulo se puede construir porque $\cos  60º=\frac{1}{2}$ es constructible. Cada ángulo de su trisección tendría $20º$ y el ángulo de $20º$ no es constructible. En efecto, la siguiente fórmula trigonométrica es cierta en general
+
 $$\cos 3\theta=4\cos^3\theta-3\cos\theta.$$
+
 Tomando $\theta= 20º$ deducimos que $\alpha=\cos 20º$ es una raíz del polinomio $8x^3-6x-1$. Vamos a ver que este polinomio es irreducible sobre $\mathbb Q$, por tanto $\alpha$ tendrá grado $3$ sobre $\mathbb Q$, así que no podrá ser constructible. El polinomio $8x^3-6x-1$ es primitivo, por tanto es irreducible sobre $\mathbb Q$ si y solo si lo es sobre $\mathbb Z$. Sobre $\mathbb Z$ es irreducible por el criterio de reducción módulo $5$, ya que $3x^3-x-1\in\mathbb Z/(5)[x]$ tiene grado $\leq 3$ pero no tiene raíces.
 {{% /proof %}}
 
 
 {{% proposition %}}
- Un polígono regular de $p$ lados, $p\in\mathbb Z$ primo, puede construirse con regla y compás si y solo si $p=2^n+1$. 
+Un polígono regular de $p$ lados, $p\in\mathbb Z$ primo, puede construirse con regla y compás si y solo si $p=2^n+1$. 
 {{% /proposition %}}
 
 
@@ -629,29 +680,39 @@ Esto equivale a la constructibilidad del ángulo de $\frac{2\pi}{p}$ radianes.
 $\Leftarrow$  Es un resultado de Gauss que no probaremos.
 
 $\Rightarrow$ El número complejo $\zeta=e^{\frac{2\pi i}{p}}=\cos\frac{2\pi}{p}+i\sin \frac{2\pi}{p}$ es una raíz $p$-ésima de la unidad, es decir, una raíz del polinomio $x^p-1$. Este polinonimio factoriza como
+
 $$(x-1)(x^{p-1}+\cdots+x+1)$$
+
 y como $\zeta\neq 1$, $\zeta$ es raíz del segundo, que se denomina $p$-ésimo **polinomio ciclotómico**
+
 $$f(x)=x^{p-1}+\cdots+x+1.$$
+
 Veamos que este polinomio es irreducible sobre $\mathbb Q$. Para ello hacemos el cambio de variable $x=y+1$, que se corresponde con el isomorfismo $g$ que pasamos a definir. 
 
 Consideramos el único homomorfismo de anillos
+
 $$g\colon \mathbb Q[x]\longrightarrow \mathbb Q[y]$$
 
 tal que $g\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[y]$ y $g(x)=y+1$, que está bien definido por el principio de sustitución. El homomorfismo $g$ está definido sobre un polinomio cualquiera $h(x)\in\mathbb{Q}[x]$ como $g(h(x))=h(y+1)$.
 Análogamente, consideramos el único homomorfismo
+
 $$g'\colon \mathbb Q[y]\longrightarrow \mathbb Q[x]$$
 
 tal que $g'\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[x]$ y $g'(y)=x-1$. Sobre un polinomio cualquiera $h'(y)\in\mathbb{Q}[y]$, el homomorfismo $g'$ está definido como $g'(h'(y))=h'(x-1)$. Es fácil comprobar que $g'\circ g=1\_{\mathbb{Q}[x]}$ y $g\circ g'=1\_{\mathbb{Q}[y]}$, por tanto $g$ es un isomorfismo con inverso $g^{-1}=g'$. En particular, $f(x)$ es irreducible en $\mathbb{Q}[x]$ si y solo si $g(f(x))=f(y+1)$ es irreducible en $\mathbb{Q}[y]$. Vamos a probar esto último.
 
 Como $x^p-1=(x-1)f(x)$ entonces 
+
 $$\begin{array}{rcl}
 yf(y+1)&=&(y+1)^p-1\cr
 &=& \sum\_{n=1}^{p}\binom{p}{n}y^n.
 \end{array}$$
+
 Aplicando la propiedad cancelativa en el dominio $\mathbb Q[y]$ obtenemos que
+
 $$\begin{array}{rcl}
 p(y+1)&=&\sum\_{n=1}^{p}\binom{p}{n}y^{n-1}.
 \end{array}$$
+
 Este polinomio es irreducible por el criterio de Eisenstein para el primo $p$ ya que el coeficiente líder es $1$, el término independiente es $p$, y $p$ divide a $\binom{p}{n}$ para todo $0{<}n{<}p$. 
 
 Por ser el polinomio ciclotómico $f(x)$ irreducible y tener a $\zeta$ como raíz, deducimos que $\zeta$ tiene grado $p-1$ sobre $\mathbb Q$. Si $\frac{2\pi}{p}$ fuera constructible, tendríamos un cuerpo $K\subset\mathbb R$ tal que $\cos\frac{2\pi}{p}, \sin\frac{2\pi}{p}\in K$ y $[K:\mathbb Q]=2^n$. Como $K$ está contenido en los reales, $[K[i]:K]=2$, luego $[K[i]:\mathbb Q]=[K[i]:K][K:\mathbb Q]=2^{n+1}$. Además, $\zeta\in K[i]$ luego el grado de $z$, que es $p-1$, ha de ser una potencia de $2$.
@@ -659,7 +720,7 @@ Por ser el polinomio ciclotómico $f(x)$ irreducible y tener a $\zeta$ como raí
 
 
 {{% example name="Primos de Fermat" %}}
-  Los enteros primos $p\in\mathbb Z$ tales que el polígono regular de $p$ lados se puede construir con regla y compás, es decir los que son de la forma $p=2^n+1$, se denominan **primos de Fermat**. Solo se conocen los siguientes: 3, 5, 17, 257 y 65537. No se sabe siquiera si hay una cantidad finita o infinita de primos de Fermat. Este problema fue planteado por Eisenstein en 1844 y permanece abierto. 
+ Los enteros primos $p\in\mathbb Z$ tales que el polígono regular de $p$ lados se puede construir con regla y compás, es decir los que son de la forma $p=2^n+1$, se denominan **primos de Fermat**. Solo se conocen los siguientes: 3, 5, 17, 257 y 65537. No se sabe siquiera si hay una cantidad finita o infinita de primos de Fermat. Este problema fue planteado por Eisenstein en 1844 y permanece abierto. 
 
 La siguiente imagen, obtenida de [Wikipedia](https://en.wikipedia.org/wiki/Constructible_polygon), muestra la construcción paso a paso de un polígono regular de 17 lados con regla y compás. En el artículo de Wikipedia enlazado se puede encontrar otra construccón de este polígono regular, así como una construcción completa del de 257 lados y el comienzo de la construcción del de 65537 lados. 
 
