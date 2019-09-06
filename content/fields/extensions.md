@@ -316,6 +316,7 @@ Los elementos de $F$ son algebraicos de grado $1$ sobre $F$, así que $F\subset 
 Dadas extensiones $F\subset K\subset L$: 
 
 * $[K:F]=[L:F]\Rightarrow K=L$.
+
 * $[L:F]=[L:K]\Rightarrow F=K$.
 
 {{% /corollary %}}

@@ -397,7 +397,6 @@ es un ideal $\ker f\subset R$.
 
 {{% proof %}}
 
-
 * $0\in\ker f$ pues $f(0)=0$.
 
 * Si $a,b\in\ker f$ entonces $a+b\in \ker f$ puesto que $f(a+b)=f(a)+f(b)=0+0=0$.
