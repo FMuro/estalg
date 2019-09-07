@@ -1,5 +1,5 @@
 +++
-title = "Instrucciones"
+title = "Cómo editar"
 hidden = true
 +++
 
@@ -41,25 +41,25 @@ Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir <code>$\LaTeX$</
 Los entornos habituales se escriben de manera algo diferente. Por ejemplo, una definición y su código fuente:
 
 {{% definition %}}
-Esto es una definición. 
+Esto es una **definición**.
 {{% /definition %}}
 
 
 ```
 {{%/* definition */%}}
-Esto es una definición. 
+Esto es una **definición**.
 {{%/* /definition */%}}
 ```
 
-Están definidos los entornos *definition*, *proposition*, *corollary*, *lemma*, *theorem*, *example*, *proof*, *remark*, *exercise* y *watch*. Los tres últimos no tienen barra de título.
+Están definidos los entornos **definition**, **proposition**, **corollary**, **lemma**, **theorem**, **example**, **proof**, **remark**, **exercise** y **watch**. Los tres últimos no tienen barra de título, por ejemplo:
 
 {{% remark %}}
-Esto es una observación. 
+Esto es una **observación**.
 {{% /remark %}}
 
 ```
 {{%/* remark */%}}
-Esto es una observación. 
+Esto es una **observación**.
 {{%/* /remark */%}}
 ```
 
@@ -181,7 +181,7 @@ def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
 
 ## Edita en tu ordenador
 
-Si piensas editar los apuntes de un modo más que ocasional, es probable que te resulte más cómodo hacerlo en tu ordenador y luego subir los cambios a GitLab. Te explico cómo.
+Si vas a editar los apuntes de un modo más que ocasional, es probable que te resulte más cómodo procesar los cambios en tu ordenador y luego subirlos a GitLab. Te explico cómo.
 
 1. Instala [Hugo](https://gohugo.io/getting-started/installing/) y [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
