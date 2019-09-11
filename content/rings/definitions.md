@@ -3,298 +3,47 @@ title = "Fundamentos"
 weight = 10
 +++
 
-Intuitivamente, un **anillo** es un conjunto donde están definidas las siguientes operaciones:
+Recuerda que un **anillo** $R$ es un conjunto donde están definidas las siguientes operaciones para $a,b\in R$:
 
-* Suma.
+* *suma*: $a+b$,
 
-* Resta.
+* *multiplicación* o *producto*: $ab$,
 
-* Multiplicación.
+y además existen elementos:
 
-Estas operaciones deben satisfacer las propiedades habituales.
+* *cero*: $0$,
 
-Además un anillo ha de contener elementos:
+* *uno*: $1$,
 
-* Cero $0$.
+que satisfacen las propiedades habituales de asociatividad y distributividad. La debe ser conmutativa y en esta asignatura solo consideraremos anillos donde el producto también lo es. Todos los elementos $a$ han de poseer *opuestos* para la suma $-a$, con lo cual podemos restar. Los que poseen inversos para el producto se denominan *unidades* y podemos dividir por ellos. Un **cuerpo** es un anillo donde $0\neq 1$ y todo elemento no nulo es una unidad. Se puede comprobar que $0=1$ en un anillo $R$ si y solo si $R=\\{0\\}$ es el anillo trivial.
 
-* Uno $1$.
+Ejemplos de anillos son: 
 
-Estos elementos deben satisfacer las propiedades usuales con respecto de la suma y la multiplicación.
+* Los números enteros $\mathbb Z$, racionales $\mathbb Q$, reales $\mathbb R$ y complejos $\mathbb C$, pero no los naturales $\mathbb N$.
 
-## Ejemplos
+* El anillo de polinomios $R[x]$ en una variable $x$ con coeficientes en un anillo $R$. 
 
+* El anillo de polinomios en varias variables $R[x\_1,\dots, x\_n]$, que se puede definir inductivamente como $R[x\_1,\dots, x\_{n-1}][x\_n]$. 
 
-{{% example name="Clásicos" %}}
-Los números enteros $\mathbb Z$, racionales $\mathbb Q$, reales $\mathbb R$ y complejos $\mathbb C$ son anillos, pero los naturales $\mathbb N$ no. 
-{{% /example %}}
+* El álgebra de Boole de las partes de un conjunto. 
 
+* El anillo de funciones continuas $\mathcal{C}(X,\mathbb{R})$ definidas en un espacio topológico $X$ con valores reales. También lo es su versión con valores complejos $\mathcal{C}(X,\mathbb{C})$ y, cuando la naturaleza de $X$ le dé sentido, lo anillos de funciones derivables, analíticas, etc.
 
-{{% example name="Polinomios" %}}
-Dado un anillo $R$, podemos considerar su anillo de **polinomios** $R[x]$ en una variable $x$, cuyos elementos $p(x)\in R[x]$ son de la forma
+El **producto** cartesiano $R\times S$ de dos anillos $R$ y $S$ es un anillo con las operaciones definidas por coordenadas. El cero y el uno del producto son $(0,0)$ y $(1,1)$.
 
-$$p(x)=a_nx^n+\cdots+a_1x+a_0$$
+Recuerda también que un **subanillo** $R'\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y el producto que contiene al $1$ y a los opuestos de todos sus elementos. Podemos ver $R\subset R[x]$ como el subanillo de los polinomios constantes, sin embargo $R\times\\{0\\}\subset R\times S$ en general no es un subanillo. El total $R\subset R$ siempre es un subanillo pero $\\{0\\}\subset R$ generalmente no.
 
-con *coeficientes* $a\_i\in R$, $1\leq i\leq n$. En ocasiones los denotaremos como si fueran series
 
-$$p(x)=\sum\_{n\geq 0}a\_nx^n$$
 
-dando por supuesto que *casi todos* los coeficientes son $0$. Esto facilita la definición de la suma y la multiplicación
+## El principio de sustitución
 
-$$\sum\_{n\geq 0}a\_nx^n+\sum\_{n\geq 0}b\_nx^n=\sum\_{n\geq 0}(a\_n+b\_n)x^n,$$
+Recuerda que un **homomorfismo** de anillos $f\colon R\rightarrow S$ es una aplicación que preserva esta estructura, es decir la suma, el producto, el $0$ y el $1$. Los homomorfismos inyectivos se denominan **monomorfismos**, los sobreyectivos **epimorfismos** y los biyectivos **isomorfismos**. Estos últimos se denotan con el símbolo $\cong$. Los isomorfismos de un anillo en sí mismo reciben el nombre de **automorfismos**.
 
-$$\left(\sum\_{i\geq 0}a\_ix^i\right)\left(\sum\_{j\geq 0}b\_jx^j\right)=\sum\_{n\geq 0}\left(\sum\_{i+j=n}a\_ib\_j\right)x^n.$$
+Los homomorfismos son cerrados para la composición y los isomorfismos también. La identidad en un anillo es siempre un homomorfismo (de hecho un automorfismo). La conjugación compleja es un automorfismo no trivial de $\mathbb{C}$. El inverso de un isomorfismo también es un isomorfismo. La inclusión de un subanillo $R'\hookrightarrow R$ es un monomorfismo y la proyección sobre la primera coordenada $R\times S\twoheadrightarrow R$ es un epimorfismo, sin embargo estos, en general, no son isomorfismos. Se da el hecho curioso de que, para todo anillo $R$, existe un único homomorfismo $\mathbb{Z}\rightarrow R$, es decir, $\mathbb{Z}$ es el objeto incial en la categoría de los anillos.
 
-Los anillos de polinomios en varias variables se definen inductivamente
+Los homomorfismos preservan las unidades y sus inversos. La **imágen** de un homomorfismo $f\colon R\rightarrow S$ es un subanillo $\operatorname{im} f\subset S$. 
 
-$$R[x\_1,\dots, x\_{n-1},x\_n]=(R[x\_1,\dots, x\_{n-1}])[x\_n].$$
-
-{{% /example %}}
-
-
-{{% example name ="Series formales" %}}
-También podemos considerar el anillo de **series formales** $R[[x]]$ en una variable $x$ con coeficientes en un anillo $R$. Sus elementos son de la forma
-
-$$\sum_{i\geq 0}a_ix^i\in R[[x]],$$
-
-sin restricción sobre los coeficientes $a_i\in R$. La suma y el producto se defininen como antes. Los anillos de series formales en varias variables también se definen inductivamente
-
-$$R[[x\_1,\dots, x\_{n-1},x\_n]]=(R[[x\_1,\dots, x\_{n-1}]])[[x\_n]].$$
-
-{{% /example %}}
-
-
-## Definición
-
-{{% definition %}}
-Un **anillo** es un conjunto $R$ equipado con dos aplicaciones, llamadas *suma* y *multiplicación* o *producto*,
-
-$$
-\begin{array}{ccc}
-R\times R\rightarrow R, &\qquad& R\times R\rightarrow R,\cr
-(a,b)\mapsto a+b;&&(a,b) \mapsto ab.
-\end{array}
-$$
-
-que satisfacen las siguientes propiedades:
-
-* Asociativa: 
-
-$$
-\begin{array}{rcl}
-a+(b+c)&=&(a+b)+c,\cr 
-a(bc)&=&(ab)c.
-\end{array}
-$$
-
-* Conmutativa: 
-
-$$
-\begin{array}{rcl}
-a+b&=&b+a,\cr 
-ab&=&ba.
-\end{array}
-$$
-
-* Distributiva:
-
-$$a(b+c)=ab+ac.$$
-
-* Existencia de elementos neutros $0,1\in R$ para la suma y el producto:
-
-$$
-\begin{array}{rcl}
-0+a&=&a,\cr 
-1a&=&a.
-\end{array}
-$$
-
-* Existencia de un elemento opuesto para la suma $-a\in R$ para todo $a\in R$ de modo que
-
-$$a+(-a)=0.$$
-
-{{% /definition %}}
-
-
-{{% remark %}}
-La suma de un anillo lo dota de estructura de grupo abeliano. Los elementos neutros son únicos, no puede haber dos distintos que satisfagan la misma propiedad. Los opuestos para la suma también. Restar es sumar el elemento opuesto $a-b=a+(-b)$. Multiplicar por cero siempre da cero, $0a=0$, y además $a(-b)=-ab$. La conmutatividad de la multiplicación no suele exigirse en la definición de anillo, pero nosotros la hemos incluido porque todos los anillos que veremos la satisfacen. Otros, como el anillo $M_{2\times 2}(\mathbb R)$ de matrices $2\times 2$ sobre los números reales, no la cumplen.
-{{% /remark %}}
-
-
-{{% example name="El anillo trivial" %}}
-El conjunto unitario $R=\\{0\\}$, dotado de las únicas operaciones suma y multiplicación posibles, es un anillo. Aquí obviamente $1=0$.
-{{% /example %}}
-
-
-{{% proposition %}}
-En un anillo $R$, $1=0$ si y solo si $R=\\{0\\}$. 
-{{% /proposition %}}
-
-
-{{% proof %}}
-
-$\Leftarrow$ Obvio.
-
-$\Rightarrow$ Dado $a\in R$, $a=1a=0a=0$.  
-
-{{% /proof %}}
-
-
-{{% example name="Anillos de Boole" %}}
-Dado un conjunto $X$, el conjunto $\mathcal P(X)=\\{A|A \subset X\\}$ formado por los subconjuntos de $X$ es un anillo, denominado **anillo de Boole**, donde la suma es la *diferencia simétrica*, 
-
-$$A+B=(A\cup B)\setminus (A\cap B)$$
-
-![Diferencia simétrica](../../images/symmetric_difference.png) 
-
-y el producto es la intersección,
-
-$$AB=A\cap B.$$
-
-¿Cuál es el $0$? ¿Y el $1$? ¿Y $-A$? ¿Y $A^2$? Dibuja $A+B+C$ para tres conjuntos en posición general.
-{{% /example %}}
-
-{{% example name="Anillo producto" %}}
-Dados dos anillos $R$ y $S$, el producto cartesiano $R\times S$ es un anillo con las operaciones siguientes:
-
-$$
-\begin{array}{rcl}
-(r,s)+(r',s')&=&(r+r',s+s'),\cr
-(r,s)(r',s')&=&(rr',ss').
-\end{array}
-$$
-
-El cero es $(0,0)$ y el uno es $(1,1)$.
-{{% /example %}}
-
-{{% definition %}}
-Un subconjunto $S\subset R$ de un anillo $R$ es un **subanillo** si:
-
-* $1\in S$.
-
-* $a+b\in S$ para todo $a,b\in S$.
-
-* $-a\in S$ para todo $a\in S$.
-
-* $ab\in S$ para todo $a,b\in S$.
-
-{{% /definition %}}
-
-
-{{% remark %}}
-Un subanillo $S\subset R$ es un anillo por derecho propio con la suma y la multiplicación heredadas de $S$. Observa que $0\in S$. También es un subgrupo para la suma. Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[x]\subset R[[x]]$.
-{{% /remark %}}
-
-
-{{% example name="Series convergentes" %}}
-Si $R=\mathbb R$ o $\mathbb C$, podemos considerar el subanillo de **series convergentes** $R\\{x\\}\subset R[[x]]$. De hecho $R[x]\subset R\\{x\\}\subset R[[x]]$.
-{{% /example %}}
-
-
-{{% example name="Anillos de funciones" %}}
-Si $R$ es un anillo y $X$ es un conjunto, podemos considerar el anillo $R^X$ cuyos elementos son las aplicaciones $X\rightarrow R$. La suma y el producto de aplicaciones $f,g\colon X\rightarrow R$ se define punto a punto, $x\in X$,
-
-$$\begin{array}{rcl}(f+g)(x)&=&f(x)+g(x),\cr (f\cdot g)(x)&=&f(x)g(x).\end{array}$$
-
-Si $R=\mathbb R$ o $\mathbb C$ y $X$ es un espacio topológico, tenemos el subanillo $\mathcal C(X)\subset R^X$ de funciones continuas.
-{{% /example %}}
-
-{{% exercise %}}
-Dados dos anillos $R$ y $S$, ¿es $R\times\\{0\\}\subset R\times S$ un subanillo? ¿Y $\\{0\\}\times S\subset R\times S$?
-{{% /exercise %}}
-
-{{% definition %}}
-Una **unidad** $u\in R$ es un elemento de un anillo tal que existe $u^{-1}\in R$, denominado **inverso** de $u$, de modo que $uu^{-1}=1$. Un **cuerpo** es un anillo no trivial donde todos los elementos no nulos son unidades.
-{{% /definition %}}
-
-
-{{% remark %}}
-El elemento inverso $u^{-1}$ de una unidad $u$ es único. Si $u$ es una unidad entonces $u^{-1}$ también y $(u^{-1})^{-1}=u$. Dividir por una unidad es multiplicar por el elemento inverso $\frac{a}{u}=au^{-1}$. Los elementos $1$ y $-1$ son siempre unidades (no necesariamente distintas) cuyos inversos son ellos mismos. El subconjunto $R^{\times}\subset R$ formado por las unidades de un anillo $R$ es un grupo con la multiplicación. 
-{{% /remark %}}
-
-{{% exercise %}}
-Intenta calcular las unidades de los ejemplos de anillos vistos hasta ahora. ¿Puede el cero ser una unidad? 
-{{% /exercise %}}
-
-
-
-
-## Homomorfismos
-
-Los homomorfismos de anillos son aplicaciones entre anillos que preservan la estructura, es decir, la suma, la multiplicación, el $0$ y el $1$.
-
-{{% definition %}}
-Dados dos anillos $R$ y $S$, un **homomorfismo** $f\colon R\rightarrow S$ es una aplicación tal que, para todo $a,b\in R$,
-
-$$\begin{array}{rcl} f(a+b)&=&f(a)+f(b),\cr f(ab)&=&f(a)f(b),\cr f(0)&=&0,\cr f(1)&=&1.\end{array}$$
-
-Un **isomorfismo** es un homomorfismo biyectivo. Un **automorfismo** es un isomorfismo de un anillo en sí mismo.
-{{% /definition %}}
-
-
-{{% remark %}}
-Los homomorfismos satisfacen $f(-a)=-f(a)$. Es más, si $u$ es una unidad entonces $f(u)$ también y $f(u^{-1})=f(u)^{-1}$. La identidad $\operatorname{id}_R\colon R\rightarrow R$ es un isomorfismo. Comprueba que si
-
-$$R\stackrel{f}\longrightarrow S\stackrel{g}\longrightarrow T$$
-
-son homomorfismos entonces la composición $g\circ f\colon R\rightarrow T$ también. Lo mismo es cierto para isomorfismos. Es más, demuestra que si $f\colon R\rightarrow S$ es un isomorfismo entonces su aplicación inversa $f^{-1}\colon S\rightarrow R$ también. El símbolo $\cong$ se usará para denotar la relación de ser isomorfos $R\cong S$. Prueba que esta relación es de equivalencia. 
-{{% /remark %}}
-
-
-{{% example name="La inclusión" %}}
-Si $R$ es un anillo y $S\subset R$ es un subanillo, la **inclusión** $i\colon S\hookrightarrow R$, $i(a)=a$, es un homomorfismo. ¿Qué diferencia a la inclusión de la identidad?
-{{% /example %}}
-
-{{% example name="Las proyecciones" %}}
-Dados dos anillos $R$ y $S$, la proyección sobre la primera coordenada $p_1\colon R\times S\rightarrow R$, $p_1(r,s)=r$, es un homomorfismo. También lo es la proyección sobre la segunda coordenada $p_2\colon R\times S\rightarrow S$, $p_2(r,s)=s$.
-{{% /example %}}
-
-
-{{% proposition %}}
-Dado un homomorfismo $f\colon R\rightarrow S$, su imagen $\operatorname{im} f\subset S$ es un subanillo. 
-{{% /proposition %}}
-
-
-{{% proof %}}
-
-* $1=f(1)\in \operatorname{im} f$.
-
-* $f(a)+f(b)=f(a+b)\in \operatorname{im} f$ para $a,b\in R$.
-
-* $-f(a)=f(-a)\in \operatorname{im} f$ para todo $a\in R$.
-
-* $f(a)f(b)=f(ab)\in \operatorname{im} f$ para todo $a,b\in R$.
-
-{{% /proof %}}
-
-
-{{% proposition label="factorimage" %}}
-Dado un homomorfismo $f\colon R\rightarrow S$ y un subanillo $U\subset S$, si $\operatorname{im} f\subset U$ entonces $f$ factoriza de manera única a través de la inclusión, es decir, existe un único homomorfismo $g\colon R\rightarrow U$ tal que $f=i\circ g$,
-
-$$f\colon R\stackrel{g}\rightarrow U\stackrel{i}\hookrightarrow S.$$
-
-{{% /proposition %}}
-
-
-{{% proof %}}
-Si $f=i\circ g$ entonces tendríamos
-
-$$f(a)=(i\circ g)(a)=i(g(a))=g(a).$$
-
-La unicidad de $g$ sería consecuencia de esta fórmula ya que fuerza su definición. Definimos pues la aplicación $g\colon R\rightarrow U$ como $g(a)=f(a)$. Tiene sentido porque $\operatorname{im}f\subset U$. La aplicación $g$ es un homomorfismo pues está definida por la misma fórmula que el homomorfismo $f$.  
-{{% /proof %}}
-
-
-{{% remark %}}
-En la proposición anterior podemos siempre tomar $U=\operatorname{im} f$. 
-{{% /remark %}}
-
-
-{{% example name="La evaluación" %}}
-Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[x]\rightarrow R$ como $ev_a(p(x))=p(a)$. Define análogamente homomorfismos de evaluación en los anillos de polinomios en varias variables $R[x_1,\dots, x_n]$, de series convergentes $R\\{x\\}$ y de funciones $R^X$ y $\mathcal C(X)$ definidos arriba.
-{{% /example %}}
-
-
-Los anillos de polinomios satisfacen una propiedad universal relacionada con los homomorfismos de evaluación.
+Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[x]\rightarrow R$ como $ev_a(p(x))=p(a)$. Los anillos de polinomios satisfacen una propiedad universal relacionada con estos homomorfismos.
 
 {{% theorem name="Principio de sustitución" %}}
 Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y un elemento $c\in S$ existe un único homomorfismo $g\colon R[x]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x)=c$.
@@ -303,7 +52,7 @@ Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y un elemento $c\in S$ 
 
 {{% proof %}}
 
-Dado $p(x)=a_nx^n+\cdots+ a_1x+ a_0\in R[x]$, si tal $g\colon R[x]\rightarrow S$ existiera,
+Dado $p(x)=a_nx^n+\cdots+ a_1x+ a_0\in R[x]$, si tal $g\colon R[x]\rightarrow S$ existiera satisfaría
 
 $$
 \begin{array}{rl}
@@ -330,9 +79,9 @@ Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y elementos $c_1,\dots,
 
 {{% proof %}}
 
-Por inducción en $n$.
+Se puede demostrar directamente como el teorema anterior, pero también se puede probar a partir de él por inducción en $n$.
 
-Para $n=1$, la existencia y unicidad de $g\colon R[x_1]\rightarrow S$ es consecuencia del teorema anterior.
+Para $n=1$, la existencia y unicidad de $g\colon R[x_1]\rightarrow S$ es el teorema anterior.
 
 Veamos que $n-1\Rightarrow n$. Suponiendo que hay un único homomorfismo $h\colon R[x\_1,\dots,x\_{n-1}]\rightarrow S$ que se restringe a $f\colon R\rightarrow S$ sobre las constantes y satisface $g(x_i)=c_i$, $1\leq i\leq n-1$, aplicamos el teorema anterior a
 
@@ -340,367 +89,6 @@ $$R[x\_1,\dots,x\_n]=(R[x\_1,\dots,x\_{n-1}])[x\_n]$$
 
 y obtenemos el homomorfismo buscado.  
 {{% /proof %}}
-
-
-El anillo de los enteros cumple la siguiente curiosa propiedad, que en términos categóricos se denomina ser *inicial* en la categoría de los anillos.
-
-{{% proposition %}}
-Para todo anillo $R$ existe un único homorfismo $f\colon \mathbb Z\rightarrow R$. 
-{{% /proposition %}}
-
-
-{{% proof %}}
-Cualquier homomorfismo $f\colon \mathbb Z\rightarrow R$ satisface $f(0)=0$ y $f(1)=1$. Por tanto, si $n>0$ en $\mathbb Z$,
-
-$$\begin{array}{rcl}
-f(n)&=&f(1+\stackrel{n}{\cdots}+1)\cr&=&f(1)+\stackrel{n}{\cdots}+f(1)\cr&=&1+\stackrel{n}{\cdots}+1,\cr
-f(-n)&=&-f(n).
-\end{array}$$
-
-Es fácil comprobar que estas fórmulas definien un homomorfismo, que ha de ser único.  
-{{% /proof %}}
-
-
-
-## Ideales
-
-Existe otro tipo destacado de subconjunto de un anillo que juega un papel más importante que los subanillos.
-
-{{% definition %}}
-Dado un anillo $R$, un **ideal** $I\subset R$ es un subconjunto tal que:
-
-* $0\in I$.
-
-* $a+b\in I$ para todo $a,b\in I$.
-
-* $-a\in I$ para todo $a\in I$.
-
-* $ra\in I$ para todo $r\in R$ y $a\in I$.
-
-{{% /definition %}}
-
-En $\mathbb Z$ los números pares forman un ideal.
-
-
-{{% remark %}}
-Un ideal $I\subset R$ es un subgrupo para la suma. Si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Todo anillo posee al menos el ideal **total** $R\subset R$ y el **trivial** $\\{0\\}\subset R$. Además, si $R$ no es el anillo trivial, el ideal total es distinto del trivial.
-{{% /remark %}}
-
-{{% proposition %}}
-El **núcleo** de un homomorfismo $f\colon R\rightarrow S$,
-
-$$\ker f=\\{a\in R\;|\;f(a)=0\\},$$
-
-es un ideal $\ker f\subset R$.
-{{% /proposition %}}
-
-
-{{% proof %}}
-
-* $0\in\ker f$ pues $f(0)=0$.
-
-* Si $a,b\in\ker f$ entonces $a+b\in \ker f$ puesto que $f(a+b)=f(a)+f(b)=0+0=0$.
-
-* Si $a\in\ker f$ entonces $-a\in \ker f$ puesto que $f(-a)=-f(a)=0$.
-
-* Si $a\in\ker f$ y $r\in R$ entonces $ra\in \ker f$ pues $f(ra)=f( r )f(a)=f( r )0=0$.
-
-{{% /proof %}}
-
-Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$. También podríamos reemplazar $R[x]$ por otro de los anillos de funciones antes vistos.
-
-
-{{% remark %}}
-Como ocurre con los grupos, un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$. De otro modo, la inyectividad de $f$ equivale a que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
-{{% /remark %}}
-
-{{% exercise %}}
-Dados dos anillos $R$ y $S$, ¿es $R\times\\{0\\}\subset R\times S$ un ideal? ¿Y $\\{0\\}\times S\subset R\times S$?
-{{% /exercise %}}
-
-Definimos ahora el ideal generado por un conjunto de elementos de un anillo, que es el menor ideal que los contiene.
-
-{{% definition label="generators" %}}
-El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo: 
-
-$$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}\subset R.$$
-
-Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. 
-{{% /definition %}}
-
-En $\mathbb Z$, el ideal de los números pares es $(2)$.
-
-
-{{% exercise %}}
-Comprueba que $(a_1,\dots,a_n)$ es en efecto un ideal. Observa que $a_1,\dots,a_n\in (a_1,\dots, a_n)$. Es más, demuestra que si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$. Intenta dar una definición razonable de ideal generado por un conjunto infinito de elementos que satisfaga las propiedades análogas al caso finito. 
-{{% /exercise %}}
-
-
-{{% proposition %}}
-Todos los ideales de $\mathbb Z$ son principales. Es más, todo ideal no nulo de $\mathbb Z$ está generado por cualquiera de sus elementos de valor absoluto mínimo.
-{{% /proposition %}}
-
-
-{{% proof %}}
-
-Sea $I\subset \mathbb Z$ un ideal. Si $I=\\{0\\}=(0)$ ya es principal. Si no, tomamos $a\in I$, $a\neq 0$, de valor absoluto mínimo. Veamos que $I=(a)$.
-
-Por un lado $(a)\subset I$ pues $a\in I$.
-
-Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$,
-
-$$b=ca+r.$$
-
-El resto satisface $|r|<|a|$. Además $r=b-ca\in I$, por tanto $r=0$ y $b=ca\in (a)$.  
-{{% /proof %}}
-
-La demostración de la proposición anterior solo usa la noción de división euclídea, por tanto es válida no solo para $\mathbb Z$ sino para cualquier *dominio euclídeo* (noción conocida que repasaremos más adelante). La siguiente proposición destaca otro caso particular de interés.
-
-
-{{% proposition %}}
-Dado un cuerpo $k$, todos los ideales de $k[x]$ son principales. Es más, todo ideal no nulo de $k[x]$ está generado por cualquiera de sus elementos de grado mínimo.
-{{% /proposition %}}
-
-
-Veamos ahora la relación entre ideales y unidades.
-
-{{% proposition %}}
-Un ideal $I\subset R$ contiene una unidad $\Leftrightarrow$ $I=R$.
-{{% /proposition %}}
-
-
-{{% proof %}}
-
-$\Leftarrow$ Obvio porque $1\in R=I$ es una unidad.
-
-$\Rightarrow$ Si $u\in I\subset R$ es una unidad, $u^{-1}\in R$ y por ser $I$ un ideal $1=uu^{-1}\in I.$
-
-Si $1\in I$ y $a\in R$ entonces $1a=a\in I$, por tanto $R\subset I$, así que $I=R$.  
-{{% /proof %}}
-
-
-{{% corollary %}}
-Un anillo es un cuerpo $\Leftrightarrow$ tiene solo dos ideales (necesariamente el total y el trivial).
-{{% /corollary %}}
-
-
-{{% proof %}}
-
-$\Rightarrow$ Sea $k$ un cuerpo. Los cuerpos, en tanto que anillos no triviales, tienen al menos dos ideales: el trivial y el total. Si $I\subset k$ es un ideal no trivial entonces existe un elemento $a\in I\subset k$ no nulo. Como $k$ es un cuerpo este elemento ha de ser una unidad, así que $I=k$.
-
-$\Leftarrow$ Sea $R$ un anillo cuyos dos únicos ideales son $\\{0\\}$ y $R$. En particular $R$ no es trivial. Sea $a\in R$ un elemento no trivial. Como $a\in (a)$, este ideal no puede ser el trivial, así que ha de ser el total $(a)=R$. Al ser $1\in R=(a)$ ha de existir un elemento $r\in R$ tal que $ra=1$, así que $a$ es una unidad.  
-{{% /proof %}}
-
-
-{{% corollary %}}
-Si $f\colon k\rightarrow R$ es un homomorfismo de anillos donde $k$ es un cuerpo y $R$ no es trivial entonces $f$ es inyectivo.
-{{% /corollary %}}
-
-
-{{% proof %}}
-
-El ser $f\colon k\rightarrow R$ un homomorfismo, $f(1)=1$. Como $R$ no es trivial, $1\neq 0$ luego $1\notin\ker f\subset k$ no puede ser el total. Por ser $k$ es un cuerpo la única opción posible es $\ker f=\\{0\\}$, luego $f$ es inyectivo.  
-{{% /proof %}}
-
-
-
-## Cocientes
-
-{{% definition %}}
-Dado un anillo $R$ y un ideal $I\subset R$, el **anillo cociente** $R/I$ es el cociente de los grupos abelianos subyacentes dotado de la multiplicación
-
-$$(a+I)(b+I)=(ab)+I.$$
-
-{{% /definition %}}
-
-
-{{% remark %}}
-Recordemos que $R/I=\\{a+I\,|\, a\in R\\}$ de modo que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El elemento $a+I$ del cociente se denomina **clase** de $a$ **módulo** $I$. Cuando el ideal $I$ se sobreentiende se escribe simplemente
-
-$$a+I=\bar a=[a].$$
-
-La suma en el cociente se define como $(a+I)+(b+I)=(a+b)+I$. El cero y el uno en el cociente son $0+I$ y $1+I$. Comprueba que $R/R$ es el anillo trivial y $R/(0)\cong R$. Los cocientes $\mathbb Z/(n)$ son bien conocidos, $\bar a\in\mathbb Z/(n)$ es una unidad si y solo si $\operatorname{mcd}(a,n)=1$, luego $\mathbb Z/(n)$ es un cuerpo si y solo si $n$ es primo.
-{{% /remark %}}
-
-
-{{% theorem %}}
-El anillo cociente $R/I$ está bien definido. Su estructura es la única que hace que la **proyección natural** $p\colon R\twoheadrightarrow R/I$, $p(a)=a+I$, sea un homomorfismo. El núcleo de esta proyección es $\ker p=I$. 
-{{% /theorem %}}
-
-
-{{% proof %}}
-
-Para ver que la multiplicación está bien definida hay que comprobar que
-
-$$\left.\begin{array}{r}a+I=a'+I\cr b+I=b'+I\end{array}\right\\}\Rightarrow(ab)+I=(a'b')+I.$$
-
-Esto equivale a
-
-$$\left.\begin{array}{r}a-a'\in I\cr b-b'\in I\end{array}\right\\}\Rightarrow ab-a'b'= (a-a')b+a'(b-b')\in I.$$
-
-Las propiedades que el producto y la suma deben satisfacer se cumplen obviamente pues se derivan de las correspondientes propiedades de $R$.
-
-Probemos la unicidad. Si $p\colon R\rightarrow R/I$ es un homomorfismo entonces
-
-$$\begin{array}{rcl}
-p(a+b)&=&p(a)+p(b),\cr p(ab)&=&p(a)p(b),
-\end{array}$$
-
-lo cual equivale a
-
-$$\begin{array}{rcl}
-(a+b)+I&=&(a+I)+(b+I),\cr (ab)+I&=&(a+I)(b+I).
-\end{array}$$
-
-El núcleo de la proyección natural es
-
-$$\ker p =\\{a\in R\;|\; p(a)=0\\},$$
-
-pero $p(a)=a+I$ y $a+I=0+I$ si y solo si $a\in I$, luego $\ker p=I$.  
-{{% /proof %}}
-
-
-{{% proposition label="factorquotient" %}}
-Dado un ideal $I\subset R$ y un homomorfismo $f\colon R\rightarrow S$ tal que $I\subset \ker f$, $f$ factoriza de manera única a través de la proyección natural, es decir existe un único homomorfismo $g\colon R/I\rightarrow S$ tal que $f=g\circ p$,
-
-$$f\colon R\stackrel{p}\twoheadrightarrow R/I\stackrel{g}\rightarrow S.$$
-
-{{% /proposition %}}
-
-
-{{% proof %}}
-
-Si $f=g\circ p$ entonces tendríamos
-
-$$f(a)=(g\circ p)(a)=g(p(a))=g(a+I).$$
-
-Definimos la aplicación $g\colon R/I\rightarrow S$ como
-
-$$g(a+I)=f(a).$$
-
-Veamos que en efecto está bien definida. La unicidad se seguirá de la primera fórmula.
-
-Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego
-
-$$0=f(a-a')=f(a)-f(a').$$
-
-Por tanto
-
-$$g(a+I)=f(a)=f(a')=g(a'+I).$$
-
-Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
-{{% /proof %}}
-
-
-{{% remark %}}
-En la proposición anterior podemos tomar siempre $I=\ker f$. 
-{{% /remark %}}
-
-
-{{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
-Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
-
-![Primer teorema de isomorfía](../../images/isomorfianillos.png)
-
-Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
-{{% /theorem %}}
-
-
-{{% proof %}}
-[Por un lado](#factorimage) podemos factorizar $f\colon R\rightarrow S$ de manera única como $f=i\circ g$,
-
-$$f\colon R\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow S,$$
-
-donde $g(a)=f(a)$. En particular
-
-$$\ker g = \ker f.$$
-
-[Por otro lado](#factorquotient) podemos factorizar $g\colon R\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$,
-
-$$g\colon R\stackrel{p}\twoheadrightarrow R/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$
-
-donde $\bar f(\bar{a})=g(a)=f(a)$. 
-
-Por tanto $f=i\circ g= i\circ(\overline{f}\circ i)$, como queríamos. La unicidad de $\bar f$ se deduce de esta fórmula, ya que fuerza su definición:
-
-$$
-\begin{array}{rcl}
-f(a)&=&(i\circ\bar f\circ p)(a)\cr
-&=&i(\bar{f}(p(a)))\cr
-&=&i(\bar{f}(\bar{a}))\cr
-&=&\bar{f}(\bar{a}).
-\end{array}
-$$
-
-Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es un isomorfismo. Comenzamos probando que es inyectivo. Sea $\bar{a}\in R/\ker f$ tal que $\bar f(\bar{a})=0$. Como $\bar f(\bar{a})=f(a)$, deducimos que $a\in \ker f$, por lo que $\bar{a}=\bar{0}$.
-
-Veamos que $\bar f\colon R/\ker f\rightarrow \operatorname{im} f$ es sobreyectiva. Dado $b\in\operatorname{im} f$ existe $a\in R$ tal que $f(a)=b$. Por tanto $\bar f(\bar{a})=f(a)=b$.  
-{{% /proof %}}
-
-
-{{% corollary %}}
-$\mathbb R[x]/(x^2+1)\cong\mathbb C$.
-{{% /corollary %}}
-
-
-{{% proof %}}
-Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. Como $\mathbb R$ es un cuerpo, es suficiente comprobar que $x^2+1\in\ker f$ pero $\ker f$ no posee ningún polinomio no trivial de grado $<2$. Claramente $f(x^2+1)=i^2+1=0$. Si $bx+a\in\mathbb{R}[x]$ es un polinomio no trivial entonces $f(bx+a)=a+ib$ es un número complejo no trivial, con lo que queda demostrado.
-{{% /proof %}}
-
-
-Concluimos con un estudio de los ideales de un anillo cociente.
-
-{{% proposition %}}
-Sea $f\colon R\rightarrow S$ un homomorfismo. 
-
-* Si $J\subset S$ es un ideal entonces $f^{-1}(J)\subset R$ también y además $\ker f\subset f^{-1}(J)$. 
-
-* Si $I\subset R$ es un ideal y $f$ es sobreyectivo entonces $f(I)\subset S$ también es un ideal.
-
-{{% /proposition %}}
-
-
-{{% proof %}}
-Comenzamos por el primer apartado:
-
-* $0\in f^{-1}(J)$ porque $f(0)=0\in J$.
-
-* Si $a,b\in f^{-1}(J)$ es porque $f(a),f(b)\in J$, luego $f(a+b)=f(a)+f(b)\in J$ y por tanto $a+b\in f^{-1}(J)$.
-
-* En el caso anterior también $f(-a)=-f(a)\in J$, así que $-a\in f^{-1}(J)$.
-
-* Es más, dado $r\in R$,  $f(ra)=f( r )f(a)\in J$ luego $ra\in f^{-1}(J)$.
-
-Además, como $\\{0\\}\subset J$, $\ker f=f^{-1}(\\{0\\})\subset f^{-1}(J)$.
-
-En el segundo caso:
-
-* $0=f(0)\in f(I)$ pues $0\in I$.
-
-* Si $a,b\in I$ entonces $a+b\in I$ luego $f(a)+f(b)=f(a+b)\in f(I)$.
-
-* En el caso anterior también $-a\in I$ luego $-f(a)=f(-a)\in f(I)$.
-
-* Es más, dado $s\in S$, por ser $f$ sobreyectiva $s=f( r )$ para cierto $r\in R$, y como $ra\in I$ entonces $sf(a)=f( r )f(a)=f(ra)\in f(I)$.  
-
-{{% /proof %}}
-
-
-{{% theorem name="de correspondencia" %}}
-Dado un anillo $R$ y un ideal $I$, si $p\colon R\twoheadrightarrow R/I$ denota la proyección natural tenemos la siguiente biyección
-
-$$\begin{array}{rcl}\left\\{\text{ideales de }R\text{ que contienen a }I\right\\}&\longleftrightarrow& \left\\{\text{ideales de }R/I\right\\},\cr I'&\mapsto&p(I'),\cr p^{-1}(J)&\leftarrow&J.\end{array}$$
-
-{{% /theorem %}}
-
-
-{{% proof %}}
-
-La proyección natural es un homomorfismo sobreyectivo con núcleo $I$, por tanto las aplicaciones del enunciado están bien definidas por la proposición anterior. Veamos que una es inversa de la otra. La igualdad $p(p^{-1}(J))=J$ es cierta por ser $p$ sobreyectiva. En general $I'\subset p^{-1}(p(I'))$. Veamos que la otra inclusión es también cierta si $I\subset I'$. Dado $a\in p^{-1}(p(I'))$, $p(a)\in p(I')$ por tanto existe $b\in I'$ tal que $p(b)=p(a)$. Esto implica que $p(a-b)=p(a)-p(b)=0$, es decir, $a-b\in I\subset I'$, por tanto $a=b+(a-b)\in I'$. 
-{{% /proof %}}
-
-
-
 
 
 ## Añadir elementos a un anillo
@@ -720,15 +108,51 @@ La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede 
 Da una definición directa del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. 
 {{% /exercise %}}
 
-También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Veamos cómo añadir elementos que satisfagan ecuaciones.
+También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Para añadir a $R$ elementos que satisfagan ciertas ecuaciones polinómicas necesitaremos trabajar con cocientes. 
+
+A diferencia de otras estructuras algebraicas, no es posible definir el cociente de un anillo por un subanillo. El tipo de subconjunto adecuado para definir cocientes son los ideales. 
+
+Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpo se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. El **núcleo** de un homomorfismo $f\colon R\rightarrow S$ es un ideal 
+
+$$\ker f=\\{a\in R\;|\;f(a)=0\\}.$$
+
+Este ideal posee la particularidad de que $f$ es inyectivo si y solo si $\ker f = \\{0\\}$.
+
+El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo: 
+
+$$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}\subset R.$$
+
+Este es el menor ideal que contiene a los elementos $a_1,\dots,a_n\in R$. Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
+
+Dado un anillo y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
+
+$$a+I=\\{a+b\;|\;b\in I\\}\subset R.$$
+
+Estas clases de equivalencia conforman una partición de $R$ denominada anillo **cociente** $R/I$,
+
+$$R/I=\\{a+I\,|\, a\in R\\}.$$
+
+Sabemos que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El anillo conciente es un anillo con la suma
+
+$$(a+I)+(b+I)=(a+b)+I$$
+
+y el producto
+
+$$(a+I)(b+I)=(ab)+I.$$
+
+Su cero es $0+I$ y su uno es $1+I$. Esto hace que la **proyección natural** $p\colon R\twoheadrightarrow R/I$, $p(a)=a+I$, sea un homomorfismo.
+
+Cuando el ideal $I$ se sobreentiende, sus clases de equivalencia se denotan simplemente
+
+$$a+I=\bar a=[a].$$
+
+
 
 Dado un polinomio $p(x)=a\_nx^n+\cdots + a_1x+ a\_0\in R[x]$, consideramos el anillo $S=R[x]/(p(x))$. Por abuso de notación, la clase de una constante $a\in R$ en $S$ se denotará igual, $a\in S$, no $\bar a$. En este nuevo anillo $\bar x\in S$ es una raíz de $p(x)$ puesto que
 
 $$p(\bar{x})=a_n\bar x^n+\cdots + a_1 \bar x+ a_0=\overline{p(x)}=\bar 0\in S.$$
 
-Este anillo posee en ciertos casos una descripción similar a la de los números complejos.
-
-Para demostrarlo usaremos el siguiente resultado que asegura que en $R[x]$ siempre podemos dividir por un polinomio mónico del modo habitual.
+Este anillo posee en ciertos casos una descripción similar a la de los números complejos. Para demostrarlo usaremos el siguiente resultado que asegura que en $R[x]$ siempre podemos dividir por un polinomio mónico del modo habitual.
 
 {{% lemma %}}
 Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ 
@@ -763,7 +187,7 @@ Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, 
 
 
 {{% proof %}}
-En efecto, dado $[f]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $f-r=c\cdot p$, es decir, $f=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
+En efecto, dado $[bar{f}]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[bar{f}]$ si y solo si $bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $bar{f}-r=c\cdot p$, es decir, $bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
 
 {{% remark %}}
@@ -771,15 +195,12 @@ El corolario anterior nos dice que, bajo sus condiciones, todo elemento de $R[x]
 
 $$b\_{n-1}\bar{x}^{n-1}+\cdots+ b\_1\bar{x}+b\_0,$$
 
-donde $b\_0,\dots, b\_{n-1}\in R$.
+donde $b\_0,\dots, b\_{n-1}\in R$. La suma de estos representantes se hace coeficiente a coeficiente, como en $\mathbb{C}$. El producto es más complejo y depende de $p(x)$.
 
-En particular, si $n\geq 1$, el homomorfismo $R\hookrightarrow R[x]/(p)\colon r\mapsto\bar{r}$ que envía cada constante a la clase del correspondiente polinomio constante es inyectivo. Por ello, en adelante eliminaremos la barra de las clases de los polinomios constantes y las denotaremos simplemente $r$. De este modo podemos ver $R$ como un subanillo $R\subset R[x]/(p)$. Esto refuerza la idea de que este cociente *añade* elementos a $R$.
+En particular, si $n\geq 1$, el homomorfismo $R\hookrightarrow R[x]/(p)\colon r\mapsto\bar{r}$ que envía cada constante a la clase del correspondiente polinomio constante es inyectivo. Por ello, en en estos casos eliminaremos la barra de las clases de los polinomios constantes y las denotaremos simplemente $r$. De este modo podemos ver $R$ como un subanillo $R\subset R[x]/(p)$. Esto refuerza la idea de que este cociente *añade* el elemento $\bar{x}$ a $R$.
 {{% /remark %}}
 
 En adelante, cuando hablemos de añadirle a un anillo $R$ una raíz $\alpha$ de un polinomio $p(x)\in R[x]$ de manera abstracta nos estaremos refiriendo al cociente $R[x]/(p)$ y a $\alpha=\bar{x}$, que como hemos visto es una raíz de $p(x)$ en este anillo. Si $p$ es mónico de grado $n$, todo elemento de $R[x]/(p)$ se escribe de manera única como $b\_{n-1}\alpha^{n-1}+\cdots+ b\_1\alpha+b\_0$, con $b\_0,\dots, b\_{n-1}\in R$.
-
-Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
-
 
 {{% example name="$\mathbb Z[x]/(x^3+3x+1)$" %}}
 Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x^2+ a_1 \bar x+ a_0$ para ciertos coeficientes $a_0,a_1,a_2\in\mathbb Z$. La suma se calcula sumando coeficientes. El producto es más complejo porque suele ser necesario reducir el grado del representante obtenido. Esto se hace usando que $\bar x$ es una raíz del denominador. Concretamente en este caso $\bar x^3+3\bar x+1=0$, luego
@@ -788,38 +209,74 @@ $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr
 
 {{% /example %}}
 
-
 {{% example name="$(\mathbb Z/(4))[x]/(2x^2-1)$" %}}
 En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset (\mathbb Z/(4))[x]$ tendría polinomios mónicos de grado $2$, pero no tiene.
 {{% /example %}}
 
+Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
 
-## Dominios y fracciones 
+Frecuentemente necesitaremos construir homomorfismos que partan de anillos cociente. Para facilitar esta tarea disponemos de los dos resultados siguientes.
 
-{{% definition %}}
-Dado un anillo $R$, un **divisor de cero** es un elemento $a\in R$ no nulo, $a\neq 0$, tal que existe otro $b\in R$, $b\neq 0$, de modo que $ab=0$. Un anillo no trivial $R$ es un **dominio (de integridad)** si no posee divisores de cero.
-{{% /definition %}}
+{{% proposition label="factorquotient" %}}
+Dado un ideal $I\subset R$ y un homomorfismo $f\colon R\rightarrow S$ tal que $I\subset \ker f$, $f$ factoriza de manera única a través de la proyección natural, es decir existe un único homomorfismo $g\colon R/I\rightarrow S$ tal que $f=g\circ p$,
 
+$$f\colon R\stackrel{p}\twoheadrightarrow R/I\stackrel{g}\rightarrow S.$$
 
-{{% remark %}}
-Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $2\cdot 3=6=0$ pero $2\neq 0\neq 3$.
-{{% /remark %}}
-
-
-{{% proposition %}}
-Si $R$ es un dominio entonces $R[x]$ también.
 {{% /proposition %}}
 
 
 {{% proof %}}
-Dados dos polinomios no nulos $p(x)=a_nx^n+\cdots$ y $q(x)=b_mx^m+\cdots$ de grados respectivos $n$ y $m$ ($a_n\neq 0\neq b_m$), su producto $p(x)q(x)=a_nb_mx^{n+m}+\cdots$ es no nulo de grado $n+m$ ya que $a_nb_m\neq 0$ por ser $R$ un dominio.
+
+Si $f=g\circ p$ entonces tendríamos
+
+$$f(a)=(g\circ p)(a)=g(p(a))=g(a+I).$$
+
+Definimos la aplicación $g\colon R/I\rightarrow S$ como
+
+$$g(a+I)=f(a).$$
+
+Veamos que en efecto está bien definida. La unicidad se seguirá de la primera fórmula.
+
+Si $a+I=a'+I$ entonces $a-a'\in I\subset\ker f$ luego
+
+$$0=f(a-a')=f(a)-f(a').$$
+
+Por tanto
+
+$$g(a+I)=f(a)=f(a')=g(a'+I).$$
+
+Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
 {{% /proof %}}
 
 
+{{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
+Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
+
+![Primer teorema de isomorfía](../../images/isomorfianillos.png)
+
+Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
+{{% /theorem %}}
+
+La demostración de este resultado es conocida. Basta recordar que $\bar{f}$ se define como $\bar{f}(\bar{a})=f(a)$, $a\in R$.
+
+Veamos finalmente que el cuerpo de los números complejos es isomorfo al anillo obtenido al añadirle a $\mathbb{R}$ de manera abstracta una raíz de $x^2+1$ por el procedimiento anterior.
+
 {{% corollary %}}
-Si $R$ es un dominio entonces $R[x_1,\dots, x_n]$ también.
+$\mathbb R[x]/(x^2+1)\cong\mathbb C$.
 {{% /corollary %}}
 
+{{% proof %}}
+Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. Como $\mathbb R$ es un cuerpo, todo ideal no trivial de $\mathbb{R}[x]$ está generado por cualquiera de sus elementos no nulos de grado mínimo. Por tanto es suficiente comprobar que $x^2+1\in\ker f$ y que $\ker f$ no posee ningún polinomio no trivial de grado $<2$. Claramente $f(x^2+1)=i^2+1=0$. Si $bx+a\in\mathbb{R}[x]$ es un polinomio no trivial entonces $f(bx+a)=a+ib$ es un número complejo no trivial, con lo que queda demostrado.
+{{% /proof %}}
+
+
+## Cuerpos de fracciones 
+
+Recordemos que, dado un anillo $R$, un **divisor de cero** es un elemento $a\in R$ no nulo, $a\neq 0$, tal que existe otro $b\in R$, $b\neq 0$, de modo que $ab=0$. Un anillo no trivial $R$ es un **dominio (de integridad)** si no posee divisores de cero.
+
+Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $\bar 2\cdot \bar 3=\bar 6=\bar 0$ pero $\bar 2\neq\bar 0\neq\bar 3$.
+
+Sabemos que si $R$ es un dominio entonces $R[x]$ también y que en dicho caso el grado de un producto es el producto de los grados. Por inducción $R[x\_1,\dots,x\_n]$ tambén será un dominio.
 
 Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, todo dominio se puede incluir en un cuerpo.
 
@@ -914,49 +371,80 @@ Da dos definiciones del cuerpo de funciones racionales en varias variables $k(x_
 {{% /exercise %}}
 
 
+## Ideales maximales
+
 {{% definition %}}
-Los ideales distintos del total se denominan **propios**. Un ideal $I\subsetneq R$ es **primo** si dados $a,b\in R$ tales que $ab\in I$ entonces $a\in I$ o $b\in I$.
+Los ideales distintos del total se denominan **propios**. Un ideal $I\subset R$ es **maximal** si es propio los únicos ideales que lo contienen son $I$ y el total $R$.
 {{% /definition %}}
 
 
 {{% remark %}}
-Un ideal $I\subset R$ es propio si y solo si $R/I$ no es trivial. Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$. En general $(0)\subset R$ es primo si y solo si $R$ es un dominio.
+De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$. Todo anillo no trivial posee al menos un ideal maximal por el axioma de elección. ¿Cuál es en el caso de los cuerpos?
 {{% /remark %}}
 
+Recordemos que un ideal $I\subset R$ es **primo** si es propio y dados $a,b\in R$ tales que $ab\in I$ entonces $a\in I$ o $b\in I$.
+
+Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$.
+
+Sabemos que un ideal $I\subset R$ es primo si y solo si $R/I$ es un dominio. En particular $R$ es un dominio si y solo si el ideal trivial $(0)\subset R$ es primo.
+
+Para dar una caracterización similar de los ideales maximales necesitamos saber cuáles son los ideales de un anillo cociente.
 
 {{% proposition %}}
-Un ideal $I\subset R$ es primo $\Leftrightarrow$ $R/I$ es un dominio.
+Sea $f\colon R\rightarrow S$ un homomorfismo. 
+
+* Si $J\subset S$ es un ideal entonces $f^{-1}(J)\subset R$ también y además $\ker f\subset f^{-1}(J)$. 
+
+* Si $I\subset R$ es un ideal y $f$ es sobreyectivo entonces $f(I)\subset S$ también es un ideal.
+
 {{% /proposition %}}
 
 
 {{% proof %}}
+Comenzamos por el primer apartado:
 
-Ser un ideal propio se corresponde con tener un cociente no trivial. Veamos la equivalencia del resto de propiedades.
+* $0\in f^{-1}(J)$ porque $f(0)=0\in J$.
 
-$\Rightarrow$ Dados $\bar a,\bar b\in R/I$, si $\bar a\bar b =\overline{ab}=\bar 0$ entonces $ab\in I$, luego $a\in I$ o $b\in I$, es decir $\bar a=\bar 0$ o $\bar b=\bar 0$.
+* Si $a,b\in f^{-1}(J)$ es porque $f(a),f(b)\in J$, luego $f(a+b)=f(a)+f(b)\in J$ y por tanto $a+b\in f^{-1}(J)$.
 
-$\Leftarrow$ Dados $a,b\in R$, si $ab\in I$ entonces $\bar a\bar b=\overline{ab}=\bar 0$, luego $\bar a=\bar 0$ o $\bar b=\bar 0$, es decir $a\in I$ o $b\in I$.
+* Dado $a\in I$ y $r\in R$,  $f(ra)=f( r )f(a)\in J$ luego $ra\in f^{-1}(J)$.
+
+Además, como $\\{0\\}\subset J$, $\ker f=f^{-1}(\\{0\\})\subset f^{-1}(J)$.
+
+En el segundo caso:
+
+* $0=f(0)\in f(I)$ pues $0\in I$.
+
+* Si $a,b\in I$ entonces $a+b\in I$ luego $f(a)+f(b)=f(a+b)\in f(I)$.
+
+* En el caso anterior también $-a\in I$ luego $-f(a)=f(-a)\in f(I)$.
+
+* Es más, dado $s\in S$, por ser $f$ sobreyectiva $s=f( r )$ para cierto $r\in R$, y como $ra\in I$ entonces $sf(a)=f( r )f(a)=f(ra)\in f(I)$.  
 
 {{% /proof %}}
 
 
-{{% definition %}}
-Un ideal $I\subsetneq R$ es **maximal** si los únicos ideales que lo contienen son el total $R$ y el propio $I$.
-{{% /definition %}}
+{{% theorem name="de correspondencia" %}}
+Dado un anillo $R$ y un ideal $I$, si $p\colon R\twoheadrightarrow R/I$ denota la proyección natural tenemos la siguiente biyección
 
+$$\begin{array}{rcl}\left\\{\text{ideales de }R\text{ que contienen a }I\right\\}&\longleftrightarrow& \left\\{\text{ideales de }R/I\right\\},\cr I'&\mapsto&p(I'),\cr p^{-1}(J)&\leftarrow&J.\end{array}$$
 
-{{% remark %}}
-De otro modo, no puede existir ningún ideal $J$ tal que $I\subsetneq J\subsetneq R$. Todo anillo no trivial posee al menos un ideal maximal. ¿Cuál es en el caso de los cuerpos?
-{{% /remark %}}
-
-
-{{% proposition %}}
-Un ideal $I\subset R$ es maximal $\Leftrightarrow$ $R/I$ es un cuerpo.
-{{% /proposition %}}
+{{% /theorem %}}
 
 
 {{% proof %}}
-Recordemos que un cuerpo es un anillo no trivial con dos ideales. El anillo $R/I$ es no trivial si y solo si $I\subsetneq R$, que es la primera condición de maximalidad. Es más $R/I$ tiene solo dos ideales si y solo si solo hay dos ideales de $R$ que contengan a $I$ (necesariamente el total y el propio $I$). Esta es la segunda condición de maximalidad.  
+
+La proyección natural es un homomorfismo sobreyectivo con núcleo $I$, por tanto las aplicaciones del enunciado están bien definidas por la proposición anterior. Veamos que una es inversa de la otra. La igualdad $p(p^{-1}(J))=J$ es cierta por ser $p$ sobreyectiva. En general $I'\subset p^{-1}(p(I'))$. Veamos que la otra inclusión es también cierta si $I\subset I'$. Dado $a\in p^{-1}(p(I'))$, $p(a)\in p(I')$ por tanto existe $b\in I'$ tal que $p(b)=p(a)$. Esto implica que $p(a-b)=p(a)-p(b)=0$, es decir, $a-b\in I\subset I'$, por tanto $a=b+(a-b)\in I'$. 
+{{% /proof %}}
+
+
+{{% corollary %}}
+Un ideal $I\subset R$ es maximal $\Leftrightarrow$ $R/I$ es un cuerpo.
+{{% /corollary %}}
+
+
+{{% proof %}}
+El cociente $R/I$ es un cuerpo si y solo si posee exactamente dos ideales. Esto ocurre si y solo si hay precisamente dos ideales de $R$ que contienen a $I$. Para que haya más de uno es necesario que $I\subsetneq R$ sea un ideal propio, y que no haya más equivale a que este $I$ sea maximal.
 {{% /proof %}}
 
 
@@ -1014,14 +502,18 @@ El álgebra del anillo cociente $k[x\_1,\dots,x\_n]/(p_1,\dots,p_m)$ no solo cap
 
 
 {{% example name="Ideales maximales, análisis y topología" %}}
-Dado un espacio topológico compacto de Hausdorff $X$, denotamos $\mathcal C(X)$ al anillo de funciones continuas $X\rightarrow \mathbb C$. Cualquier punto $x\in X$ define un homomorfismo sobreyectivo
+Dado un espacio topológico compacto de Hausdorff $X$, denotamos $\mathcal C(X,\mathbb{C})$ al anillo de funciones continuas $X\rightarrow \mathbb C$. Cualquier punto $x\in X$ define un homomorfismo sobreyectivo de evaluación,
 
-$$\begin{array}{rcl} ev_x\colon\mathcal C(X)&\longrightarrow& \mathbb C,\cr f&\mapsto&f(x), \end{array}$$
+$$\begin{array}{rcl} ev_x\colon\mathcal C(X,\mathbb{C})&\longrightarrow& \mathbb C,\cr f&\mapsto&f(x), \end{array}$$
 
-cuyo núcleo $\ker ev_x\subset\mathcal C(X)$ es un ideal maximal por el primer teorema de isomorfía. La **Teoría de Representación de Gelfand** dice que todos los ideales maximales de $\mathcal C(X)$ son de esta forma, con lo que tenemos una biyección
+cuyo núcleo $\ker ev_x\subset\mathcal C(X,\mathbb{C})$ es un ideal maximal por el primer teorema de isomorfía. La **Teoría de Representación de Gelfand** dice que todos los ideales maximales de $\mathcal C(X,\mathbb{C})$ son de esta forma, con lo que tenemos una biyección
 
-$$\\{\text{Ideales maximales de }\mathcal C(X)\\}\longleftrightarrow X.$$
+$$\\{\text{Ideales maximales de }\mathcal C(X,\mathbb{C})\\}\longleftrightarrow X.$$
 
-Esta correspondencia da lugar a una equivalencia de categorías entre los espacios compactos de Hausdorff y las $C^{\ast}$-álgebras conmutativas unitarias, que es una clase de anillos a la que $\mathcal C(X)$ pertenece. Esto permite estudiar la topología desde el punto de vista del álgebra y del análisis funcional. 
+Esta correspondencia da lugar a una equivalencia de categorías entre los espacios compactos de Hausdorff y las $C^{\ast}$-álgebras conmutativas unitarias, que es una clase de anillos a la que $\mathcal C(X,\mathbb{C})$ pertenece. Esto permite estudiar la topología desde el punto de vista del álgebra y del análisis funcional. 
 {{% /example %}}
+
+
+
+
 

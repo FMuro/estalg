@@ -3,7 +3,7 @@ title = "Factorización"
 weight = 20
 +++
 
-La noción clásica de divisibilidad se comporta de manera inesperada en presencia de divisores de cero. Aquí evitaremos estos problemas y estudiaremos la divisibilidad en dominios. Pondremos especial énfasis en el estudio de anillos donde el sea posible generalizar el teorema fundamental de la aritmética. Este teorema, ya conocido para los números enteros y más generalmente para los dominios euclídeos, nos dice que todo número no nulo que no sea una unidad factoriza como producto de primos de manera esencialmente única. Veremos además cómo estos anillos son de utilidad a la hora de resolver ecuaciones diofánticas.
+La noción clásica de divisibilidad se comporta de manera inesperada en presencia de divisores de cero. Aquí evitaremos estos problemas y estudiaremos la divisibilidad en dominios. Pondremos especial énfasis en el estudio de anillos donde el sea posible generalizar el teorema fundamental de la aritmética. Este teorema, ya conocido para los números enteros, nos dice que todo número no nulo que no sea una unidad factoriza como producto de primos de manera esencialmente única. Este teorema también es conocido para el anillo de polinomios en una variable sobre un cuerpo, en cuyo caso los polinomios irreducibles juegan el papel de los enteros primos. Veremos además cómo este tipo de anillos es de utilidad a la hora de resolver ecuaciones diofánticas.
 
 ## Divisores
 
@@ -231,7 +231,7 @@ Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo
 
 
 {{% remark %}}
-Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de los dominios euclídeos, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
+Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ or $k[x]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
 {{% /remark %}}
 
 
@@ -303,7 +303,7 @@ llamada **función de tamaño** o **euclídea**, tal que dados $D,d\in R$ con $d
 
 $$D=dc+r$$
 
-y bien $r=0$ o bien $\delta( r )<\delta(d)$.
+y bien $r=0$ o bien $\delta( r )<\delta(d)$. Esto se denomina **división euclídea** de $D$ por $d$.
 {{% /definition %}}
 
 
@@ -311,10 +311,25 @@ y bien $r=0$ o bien $\delta( r )<\delta(d)$.
 Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con función de tamaño el valor absoluto y el grado, respectivamente. En general, el cociente y el resto no están determinados de manera única por el dividendo y el divisor, por ejemplo
 
 $$13=4\cdot 3+1=5\cdot 3+(-2).$$
-
-Los dominios euclídeos son dominios de ideales principales. Todo ideal no trivial está generado por cualquiera de sus elementos no nulos de menor tamaño.
 {{% /remark %}}
 
+{{% proposition %}}
+Un dominio euclídeo $R$ es un DIP. Es más, todo ideal no nulo de $R$ está generado por cualquiera de sus elementos no nulos de tamaño mínimo.
+{{% /proposition %}}
+
+
+{{% proof %}}
+
+Sea $I\subset R$ un ideal. Si $I=(0)$ ya es principal. Si no, tomamos $a\in I$, $a\neq 0$, de tamaño mínimo. Veamos que $I=(a)$.
+
+Por un lado $(a)\subset I$ pues $a\in I$.
+
+Por otro, dado $b\in I$ realizamos la división euclídea de $b$ por $a$,
+
+$$b=ca+r.$$
+
+El resto satisface $\delta(r)<\delta(a)$. Además $r=b-ca\in I$, por tanto $r=0$ y $b=ca\in (a)$.  
+{{% /proof %}}
 
 {{% example name="Los enteros de Gauss" %}}
 Vamos a ver que $\mathbb{Z}[i]$ con el cuadrado del módulo como función euclídea es un dominio euclídeo. Tomamos $D,d\in\mathbb{Z}[i]$, este último no nulo,$$\begin{array}{rcl}D&=&a+ib,\cr d&=& x+iy.\cr \end{array}$$

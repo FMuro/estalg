@@ -35,6 +35,8 @@ Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir <code>$\LaTeX$</
 
 * **Entornos tabulares**: en vez de usar `\\` para saltos de línea hay que usar `\cr`, así $\left(\begin{smallmatrix} 1 & 0 \cr 0 & 1 \end{smallmatrix}\right)$ es `$\left(\begin{smallmatrix} 1 & 0 \cr 0 & 1 \end{smallmatrix}\right)$`.
 
+* Para escribir $( r )$ y $( c )$ usa `$( r )$` y `$( c )$`, con los espacios, ya que si en su lugar escribes `$(r)$` y `$(c)$` te sale $(r)$ y $(c)$.
+
 
 ## Entornos
 
