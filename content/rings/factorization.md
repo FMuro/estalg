@@ -319,7 +319,6 @@ Un dominio euclídeo $R$ es un DIP. Es más, todo ideal no nulo de $R$ está gen
 
 
 {{% proof %}}
-
 Sea $I\subset R$ un ideal. Si $I=(0)$ ya es principal. Si no, tomamos $a\in I$, $a\neq 0$, de tamaño mínimo. Veamos que $I=(a)$.
 
 Por un lado $(a)\subset I$ pues $a\in I$.

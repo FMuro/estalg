@@ -5,17 +5,17 @@ weight = 10
 
 Recuerda que un **anillo** $R$ es un conjunto donde están definidas las siguientes operaciones para $a,b\in R$:
 
-* *suma*: $a+b$,
+* **suma**: $a+b$,
 
-* *multiplicación* o *producto*: $ab$,
+* **multiplicación** o **producto**: $ab$,
 
 y además existen elementos:
 
-* *cero*: $0$,
+* **cero**: $0$,
 
-* *uno*: $1$,
+* **uno**: $1$,
 
-que satisfacen las propiedades habituales de asociatividad y distributividad. La debe ser conmutativa y en esta asignatura solo consideraremos anillos donde el producto también lo es. Todos los elementos $a$ han de poseer *opuestos* para la suma $-a$, con lo cual podemos restar. Los que poseen inversos para el producto se denominan *unidades* y podemos dividir por ellos. Un **cuerpo** es un anillo donde $0\neq 1$ y todo elemento no nulo es una unidad. Se puede comprobar que $0=1$ en un anillo $R$ si y solo si $R=\\{0\\}$ es el anillo trivial.
+que satisfacen las propiedades habituales de asociatividad y distributividad. La debe ser conmutativa y en esta asignatura solo consideraremos anillos donde el producto también lo es. Todos los elementos $a$ han de poseer **opuestos** para la suma $-a$, con lo cual podemos restar. Los que poseen inversos para el producto se denominan **unidades** y podemos dividir por ellos. Un **cuerpo** es un anillo donde $0\neq 1$ y todo elemento no nulo es una unidad. Se puede comprobar que $0=1$ en un anillo $R$ si y solo si $R=\\{0\\}$ es el anillo trivial.
 
 Ejemplos de anillos son: 
 
