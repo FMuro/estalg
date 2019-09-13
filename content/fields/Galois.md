@@ -411,17 +411,19 @@ $$\\{f(\alpha)\mid f\in H\\}.$$
 {{% /definition %}}
 
 {{% theorem %}}
-Dada una extensión $F\subset K$ y un subgrupo $H\subset G(K/F)$, si $\\{\beta\_1,\dots,\beta\_l\\}$ es la órbita de $\beta\_1$ por $H$ entonces el polinomio irreducible de $\beta\_1$ sobre $K^H$ es
+Dada una extensión $F\subset K$ y un subgrupo $H\subset G(K/F)$, $\beta_1\in K$ es algebraico sobre $K^H$ si y solo si la órbita de $\beta_1$ por $H$ es finita. En dicho caso, si la órbita es $\\{\beta\_1,\dots,\beta\_l\\}$, el polinomio irreducible de $\beta\_1$ sobre $K^H$ es
 
 $$g(x)=(x-\beta\_1)\cdots (x-\beta\_l).$$
 
-En particular $\beta\_1$ es algebraico y su grado es el número de elementos de su órbita.
+En particular el grado de $\beta_1$ sobre $K^H$ es el número de elementos de su órbita.
 {{% /theorem %}}
 
 {{% proof %}}
-Cada $f\in H$ induce una permutación de $\\{\beta\_1,\dots,\beta\_l\\}$. Los coeficientes de $g$ son funciones simétricas elementales evaluadas en los $\beta\_i$, por tanto no varían al aplicar $f\in H$. Esto demuestra que estos coeficientes están en $K^H$. 
+$\Leftarrow$ Cada $f\in H$ induce una permutación de $\\{\beta\_1,\dots,\beta\_l\\}$. Los coeficientes de $g$ son funciones simétricas elementales evaluadas en los $\beta\_i$, por tanto no varían al aplicar $f\in H$. Esto demuestra que estos coeficientes están en $K^H$, por tanto $\beta_1$ es algebraico sobre $K^H$.
 
-Sea $h\in K^H[x]$ un polinomio que tenga $\beta\_1$ como raíz. Todo elemento de $f\in H\subset G(K/K^H)$ envía raíces de un polinomio con coeficientes en $K^H$ en otras raíces, por tanto toda la órbita $\\{\beta\_1,\dots,\beta\_l\\}$ está formada por raíces de $h$. Esto prueba que $g|h$ en $K[x]$ y por tanto también en $K^H[x]$. Es lo último que faltaba para demostrar el teorema.
+$\Rightarrow$ Sea $h\in K^H[x]$ un polinomio que tenga $\beta\_1$ como raíz. Todo elemento de $f\in H\subset G(K/K^H)$ envía raíces de un polinomio con coeficientes en $K^H$ en otras raíces, por tanto toda la órbita de $\beta_1$ por $H$ está formada por raíces de $h$. Como todo polinomio con coeficientes en un cuerpo tiene una cantidad finita de raíces, deducimos que la órbita es finita.  
+
+Hemos visto que cuando la órbita es finita el polinomio $g$ tiene coeficientes en $K^H$ y que todos los elementos de la órbita son también raices de cualquier otro polinomio $h\in K^H[x]$ que tenga $\beta\_1$ como raíz. Esto prueba que $g|h$ en $K[x]$ y por tanto también en $K^H[x]$, así que efectivamente $g$ es el polinomio irreducible de $\beta_1$ sobre $K^H$.
 {{% /proof %}}
 
 {{% definition %}}
@@ -443,11 +445,15 @@ tales que $F\_{i-1}\subsetneq F\_i$ es finita del siguiente modo. Supuesto const
 {{% /proof %}}
 
 {{% theorem name="del cuerpo fijo" %}}
-Dada una extensión $F\subset K$ y un subgrupo finito $H\subset G(K/F)$, $K^H\subset K$ es una extensión finita de grado $[K:K^H]=|H|$.
+Sea $F\subset K$ una extensión y $H\subset G(K/F)$ un subgrupo. La extensión $K^H\subset K$ es finita si y solo si el grupo $H$ es finito, y en dicho caso $[K:K^H]=|H|$.
 {{% /theorem %}}
 
 {{% proof %}}
-Hemos visto en el teorema anterior que la extensión $K^H\subset K$ es algebraica. Es más, el grado de cualquier elemento es el número de elementos de una órbita, por tanto $\leq |H|$. El lema anterior implica pues que $K^H\subset K$ es finita. Sea $\gamma\in K$ un elemento primitivo, $K=K^H[\gamma]$. Cualquier $f\in H$ dejan fijo a $K^H$, así $f,g\in H$ son iguales si y solo si $f(\gamma)=g(\gamma)$. Esto demuestra que la órbita de $\gamma$ tiene $|H|$ elementos. Este es por tanto el grado de $\gamma$ sobre $K^H$, que es igual a $[K,K^H]$ por ser un elemento primitivo.
+$\Leftarrow$ Se sigue del teorema anterior que la extensión $K^H\subset K$ es algebraica. Es más, el grado de cualquier elemento es el número de elementos de una órbita, por tanto es $\leq |H|$. El lema anterior implica pues que $K^H\subset K$ es finita. 
+
+$\Rightarrow$ Sea $\gamma\in K$ un elemento primitivo, $K=K^H[\gamma]$. Cualquier $f\in H$ dejan fijo a $K^H$, así que $f,g\in H$ son iguales si y solo si $f(\gamma)=g(\gamma)$. Esto demuestra que la órbita de $\gamma$ tiene tantos elementos como $H$. Por tanto $H$ ha de ser finito en virtud del teorema anterior. 
+
+Es más, continuando con el argument del párrafo previo, el teorema anterior también implica que el grado de $\gamma$ sobre $K^H$ ha de ser $|H|$, y al ser $\gamma$ primitivo su grado coincide con $[K,K^H]$.
 {{% /proof %}}
 
 {{% corollary %}}
@@ -455,8 +461,7 @@ Si $F\subset K$ es una extensión finita entonces $G(K/F)$ es un grupo finito y 
 {{% /corollary %}}
 
 {{% proof %}}
-Como $F\subset K^{G(K/F)} \subset K$ es una extensión intermedia, 
-$|G(K/F)|=[K,K^{G(K/F)}]$ divide a $[K:F]$.
+Como $F\subset K^{G(K/F)} \subset K$ es una extensión intermedia, $K^{G(K/F)} \subset K$ es una extensión finita, así que por el teorema anterior $G(K/F)$ es finito y $|G(K/F)|=[K:K^{G(K/F)}]$, y por la fórmula del grado para extensiones intermedias este último número divide a $[K:F]$.
 {{% /proof %}}
 
 
