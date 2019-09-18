@@ -7,7 +7,7 @@ Consideremos la ecuación
 
 $$x^2-y^2=25.$$
 
-Nos proponemos hallar todas sus soluciones enteras. El miembro de la izquierda se puede factorizar como producto de dos enteros y el de la derecha como producto de primos,
+Nos proponemos hallar todas sus soluciones enteras, $x,y\in\mathbb{Z}$. El miembro de la izquierda se puede factorizar como producto de dos enteros y el de la derecha como producto de primos,
 
 $$(x+y)(x-y)=5^2.$$
 
@@ -67,7 +67,7 @@ x-iy&=&1,&-1,& -i,& i.
 \end{array}
 \right.$$
 
-Como los térmios de la izquierda, $x+iy$ y $x-iy$, son conjugados, podemos descartar de plano los sistemas cuyos términos independientes no los sean, es decir, los cuatro primeros y los cuatro últimos. Las soluciones del resto, y de nuestro problema, son
+Como los térmios de la izquierda, $x+iy$ y $x-iy$, son conjugados, podemos descartar de plano los sistemas cuyos términos independientes no lo sean, es decir, los cuatro primeros y los cuatro últimos. Las soluciones del resto, y de nuestro problema, son
 
 $$\begin{array}{rcl}
 (x,y)&=&(2,1),\,(-2,-1),\,(-1,2),\,(1,-2),\cr 

@@ -209,8 +209,8 @@ $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr
 
 {{% /example %}}
 
-{{% example name="$(\mathbb Z/(4))[x]/(2x^2-1)$" %}}
-En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset (\mathbb Z/(4))[x]$ tendría polinomios mónicos de grado $2$, pero no tiene.
+{{% example name="$\mathbb Z/(4)[x]/(2x^2-1)$" %}}
+En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset \mathbb Z/(4)[x]$ tendría polinomios mónicos de grado $2$, pero no tiene.
 {{% /example %}}
 
 Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
@@ -276,7 +276,7 @@ Recordemos que, dado un anillo $R$, un **divisor de cero** es un elemento $a\in 
 
 Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $\bar 2\cdot \bar 3=\bar 6=\bar 0$ pero $\bar 2\neq\bar 0\neq\bar 3$.
 
-Sabemos que si $R$ es un dominio entonces $R[x]$ también y que en dicho caso el grado de un producto es el producto de los grados. Por inducción $R[x\_1,\dots,x\_n]$ tambén será un dominio.
+Sabemos que si $R$ es un dominio entonces $R[x]$ también y que en dicho caso el grado de un producto es el producto de los grados y las unidades de $R[x]$ son las de $R$. Por inducción $R[x\_1,\dots,x\_n]$ tambén será un dominio.
 
 Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, todo dominio se puede incluir en un cuerpo.
 
@@ -386,7 +386,7 @@ Recordemos que un ideal $I\subset R$ es **primo** si es propio y dados $a,b\in R
 
 Si $p\in\mathbb Z$ es un primo entonces el ideal $(p)\subset \mathbb Z$ es primo ya que si $ab\in (p)$ es porque $p$ divide a $ab$, luego $p$ ha de dividir a $a$ o a $b$, es decir $a\in(p)$ o $b\in(p)$.
 
-Sabemos que un ideal $I\subset R$ es primo si y solo si $R/I$ es un dominio. En particular $R$ es un dominio si y solo si el ideal trivial $(0)\subset R$ es primo.
+Sabemos que un ideal $I\subset R$ es primo si y solo si $R/I$ es un dominio. En particular $R$ es un dominio si y solo si el ideal trivial $(0)\subset R$ es primo. Los cuerpos son los anillos cuyo único ideal maximal es $(0)$.
 
 Para dar una caracterización similar de los ideales maximales necesitamos saber cuáles son los ideales de un anillo cociente.
 
@@ -460,20 +460,22 @@ Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio
 Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
 
 
-
 {{% proposition %}}
 En un dominio de ideales principales $R$ todos los ideales primos no nulos son maximales.
 {{% /proposition %}}
 
 
 {{% proof %}}
-
 Supongamos que $(a)\subset (b)\subset R$, con $(a)$ primo y $a\neq0$. Entonces $a=cb$ para cierto $c\in R$. En particular $cb\in (a)$, que es primo, luego $c\in (a)$ o $b\in (a)$.
 
 Si $b\in (a)$ entonces $(b)\subset (a)$, luego $(a)=(b)$.
 
 Si $c\in (a)$ entonces $c=da$ para cierto $d\in R$, por tanto $a=dab=dba$. Por la propiedad cancelativa $db=1$, así que $b$ es una unidad, luego $(b)=R$. 
 {{% /proof %}}
+
+{{% corollary %}}
+En un DIP que no es un cuerpo los ideales maximales son los primos no nulos.
+{{% /corollary %}}
 
 
 {{% example name="Ideales maximales y geometría" %}}
