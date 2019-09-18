@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2019.5.11)  31 MAY 2019 00:20
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2019.8.10)  10 AUG 2019 12:17
  restricted system commands enabled.
 **latex.tex
 (./latex.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.088 seconds
+luaotfload | main : initialization completed in 0.086 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2017/10/31 v2.20.4
@@ -288,8 +288,8 @@ File: switch.def 2018/02/14 3.18 Babel switching mechanism
 Package babel Info: Non-standard hyphenation setup on input line 113.
 \l@nohyphenation=\language3
 \l@catalan=\language4
-\l@galician=\language5
-\l@spanish=\language6
+\l@spanish=\language5
+\l@galician=\language6
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
@@ -318,14 +318,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks29
 \@floatcapt=\box30
 )
-(./static/docs/latex.aux
-LaTeX Info: Redefining \. on input line 23.
-LaTeX Info: Redefining \% on input line 23.
-
-
-LaTeX Warning: Label `homomorfismos' multiply defined.
-
-)
+(./static/docs/latex.aux)
 \openout1 = static/docs/latex.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -356,8 +349,9 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)(load luc: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl
-/lmroman10-italic.luc)
+)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmr
+oman10-italic.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/gene
+ric/fonts/otl/lmroman10-italic.luc)
 \AtBeginShipoutBox=\box31
 
 
@@ -412,37 +406,29 @@ LaTeX Info: Redefining \% on input line 81.
 mancaps10-regular.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/
 generic/fonts/otl/lmromancaps10-regular.luc)(save: /home/fernando/.texlive2017/t
 exmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.lua)(save: /home/fernand
-o/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc)(loa
-d luc: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmro
-man10-bold.luc) (./static/docs/latex.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
+o/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc)(sav
+e: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman1
+0-bold.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fon
+ts/otl/lmroman10-bold.luc)
 \tf@toc=\write3
 
 \openout3 = static/docs/latex.toc
- (./hugotopdf/outputs/sets/_index.tex
-Underfull \vbox (badness 1221) has occurred while \output is active []
-
-(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmro
-man7-regular.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/gener
-ic/fonts/otl/lmroman7-regular.luc) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdf
-tex.map}](save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts
-/otl/lmroman5-regular.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-ca
-che/generic/fonts/otl/lmroman5-regular.luc)
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
- [2]
-<static/images/inclusion_transitive.png, id=22, 120.45pt x 81.30376pt>
+ (./hugotopdf/outputs/sets/_index.tex(save: /home/fernando/.texlive2017/texmf-va
+r/luatex-cache/generic/fonts/otl/lmroman7-regular.lua)(save: /home/fernando/.tex
+live2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc)(save: /h
+ome/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regu
+lar.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/
+otl/lmroman5-regular.luc) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<static/images/inclusion_transitive.png, id=19, 120.45pt x 81.30376pt>
 File: static/images/inclusion_transitive.png Graphic file (type png)
 <use static/images/inclusion_transitive.png>
 Package luatex.def Info: static/images/inclusion_transitive.png  used on input l
 ine 114.
 (luatex.def)             Requested size: 180.0pt x 121.51117pt.
-LaTeX Info: Redefining \. on input line 145.
-LaTeX Info: Redefining \% on input line 145.
- [3<./static/images/inclusion_transitive.png>]
-<static/images/intersection.png, id=28, 1440.88312pt x 871.75688pt>
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
+ [2<./static/images/inclusion_transitive.png>]
+<static/images/intersection.png, id=24, 1440.88312pt x 871.75688pt>
 File: static/images/intersection.png Graphic file (type png)
 <use static/images/intersection.png>
 Package luatex.def Info: static/images/intersection.png  used on input line 160.
@@ -451,54 +437,59 @@ Package luatex.def Info: static/images/intersection.png  used on input line 160.
 (save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmro
 man10-bolditalic.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/g
 eneric/fonts/otl/lmroman10-bolditalic.luc)
-LaTeX Info: Redefining \. on input line 212.
-LaTeX Info: Redefining \% on input line 212.
- [4<./static/images/intersection.png>]
-<static/images/disjoint.png, id=33, 1536.49031pt x 1389.69188pt>
+LaTeX Info: Redefining \. on input line 194.
+LaTeX Info: Redefining \% on input line 194.
+ [3<./static/images/intersection.png>]
+<static/images/disjoint.png, id=30, 1536.49031pt x 1389.69188pt>
 File: static/images/disjoint.png Graphic file (type png)
 <use static/images/disjoint.png>
 Package luatex.def Info: static/images/disjoint.png  used on input line 245.
 (luatex.def)             Requested size: 180.0pt x 162.7905pt.
-<static/images/union.png, id=34, 1440.88312pt x 871.75688pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 248.
+LaTeX Info: Redefining \% on input line 248.
+ [4]
+<static/images/union.png, id=38, 1440.88312pt x 871.75688pt>
 File: static/images/union.png Graphic file (type png)
 <use static/images/union.png>
 Package luatex.def Info: static/images/union.png  used on input line 256.
 (luatex.def)             Requested size: 180.0pt x 108.90283pt.
+LaTeX Info: Redefining \. on input line 295.
+LaTeX Info: Redefining \% on input line 295.
 
-Underfull \vbox (badness 3000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
- [5<./static/images/disjoint.png>]
+[5<./static/images/disjoint.png><./static/images/union.png>]
 Overfull \hbox (3.7067pt too wide) in paragraph at lines 306--309
 []\TU/lmr/m/it/10 Ob-ser-va-ción \TU/lmr/m/n/10 1.1.25\TU/lmr/m/it/10 . \TU/lm
 r/m/n/10 Es-tas pro-pie-da-des nos per-mi-ten de-fi-nir in-duc-ti-va-men-te la 
 \TU/lmr/bx/n/10 unión
  []
 
-LaTeX Info: Redefining \. on input line 326.
-LaTeX Info: Redefining \% on input line 326.
-[6<./static/images/union.png>]
-<static/images/difference.png, id=45, 1440.88312pt x 871.75688pt>
+<static/images/difference.png, id=42, 1440.88312pt x 871.75688pt>
 File: static/images/difference.png Graphic file (type png)
 <use static/images/difference.png>
 Package luatex.def Info: static/images/difference.png  used on input line 336.
 (luatex.def)             Requested size: 180.0pt x 108.90283pt.
-<static/images/symmetric_difference.png, id=46, 1440.88312pt x 871.75688pt>
+<static/images/symmetric_difference.png, id=43, 1440.88312pt x 871.75688pt>
 File: static/images/symmetric_difference.png Graphic file (type png)
 <use static/images/symmetric_difference.png>
 Package luatex.def Info: static/images/symmetric_difference.png  used on input l
 ine 350.
 (luatex.def)             Requested size: 180.0pt x 108.90283pt.
-LaTeX Info: Redefining \. on input line 380.
-LaTeX Info: Redefining \% on input line 380.
- [7<./static/images/difference.png><./static/images/symmetric_difference.png>]
-<static/images/distributive_laws.png, id=50, 1535.7375pt x 871.75688pt>
+LaTeX Info: Redefining \. on input line 353.
+LaTeX Info: Redefining \% on input line 353.
+[6<./static/images/difference.png>]
+<static/images/distributive_laws.png, id=47, 1535.7375pt x 871.75688pt>
 File: static/images/distributive_laws.png Graphic file (type png)
 <use static/images/distributive_laws.png>
 Package luatex.def Info: static/images/distributive_laws.png  used on input line
  386.
 (luatex.def)             Requested size: 180.0pt x 102.17206pt.
+LaTeX Info: Redefining \. on input line 421.
+LaTeX Info: Redefining \% on input line 421.
+ [7<./static/images/symmetric_difference.png><./static/images/distributive_laws.
+png>]
 <static/images/morgan.png, id=51, 1535.7375pt x 871.75688pt>
 File: static/images/morgan.png Graphic file (type png)
 <use static/images/morgan.png>
@@ -521,78 +512,78 @@ ML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr
 S/cmsy/m/n/10 g$\TU/lmr/m/n/10 . 
  []
 
-LaTeX Info: Redefining \. on input line 446.
-LaTeX Info: Redefining \% on input line 446.
-[8<./static/images/distributive_laws.png><./static/images/morgan.png>]
-<static/images/universal_set.png, id=55, 1440.13031pt x 1440.13031pt>
+<static/images/universal_set.png, id=52, 1440.13031pt x 1440.13031pt>
 File: static/images/universal_set.png Graphic file (type png)
 <use static/images/universal_set.png>
 Package luatex.def Info: static/images/universal_set.png  used on input line 454
 .
 (luatex.def)             Requested size: 180.0pt x 179.99387pt.
-<static/images/complement.png, id=56, 114.4275pt x 114.4275pt>
+<static/images/complement.png, id=53, 114.4275pt x 114.4275pt>
 File: static/images/complement.png Graphic file (type png)
 <use static/images/complement.png>
 Package luatex.def Info: static/images/complement.png  used on input line 464.
 (luatex.def)             Requested size: 180.0pt x 180.00775pt.
-LaTeX Info: Redefining \. on input line 478.
-LaTeX Info: Redefining \% on input line 478.
- [9<./static/images/universal_set.png><./static/images/complement.png>]
+LaTeX Info: Redefining \. on input line 467.
+LaTeX Info: Redefining \% on input line 467.
+[8<./static/images/morgan.png><./static/images/universal_set.png>]
+LaTeX Info: Redefining \. on input line 517.
+LaTeX Info: Redefining \% on input line 517.
+ [9<./static/images/complement.png>]
 <static/images/correspondence.png, id=61, 97.38382pt x 70.28258pt>
 File: static/images/correspondence.png Graphic file (type png)
 <use static/images/correspondence.png>
 Package luatex.def Info: static/images/correspondence.png  used on input line 55
 8.
 (luatex.def)             Requested size: 180.0pt x 129.91776pt.
-LaTeX Info: Redefining \. on input line 561.
-LaTeX Info: Redefining \% on input line 561.
- [10]
-<static/images/map.png, id=65, 97.38382pt x 75.28125pt>
+LaTeX Info: Redefining \. on input line 577.
+LaTeX Info: Redefining \% on input line 577.
+ [10<./static/images/correspondence.png>]
+<static/images/map.png, id=66, 97.38382pt x 75.28125pt>
 File: static/images/map.png Graphic file (type png)
 <use static/images/map.png>
 Package luatex.def Info: static/images/map.png  used on input line 584.
 (luatex.def)             Requested size: 180.0pt x 139.15782pt.
-LaTeX Info: Redefining \. on input line 604.
-LaTeX Info: Redefining \% on input line 604.
- [11<./static/images/correspondence.png><./static/images/map.png>]
-LaTeX Info: Redefining \. on input line 689.
-LaTeX Info: Redefining \% on input line 689.
+LaTeX Info: Redefining \. on input line 645.
+LaTeX Info: Redefining \% on input line 645.
+ [11<./static/images/map.png>]
+LaTeX Info: Redefining \. on input line 724.
+LaTeX Info: Redefining \% on input line 724.
  [12]
-LaTeX Info: Redefining \. on input line 765.
-LaTeX Info: Redefining \% on input line 765.
- [13]
-<static/images/noinjective.png, id=80, 97.38382pt x 58.23758pt>
+<static/images/noinjective.png, id=75, 97.38382pt x 58.23758pt>
 File: static/images/noinjective.png Graphic file (type png)
 <use static/images/noinjective.png>
 Package luatex.def Info: static/images/noinjective.png  used on input line 785.
 (luatex.def)             Requested size: 180.0pt x 107.65247pt.
-<static/images/nosurjective.png, id=81, 97.38382pt x 58.23758pt>
+<static/images/nosurjective.png, id=76, 97.38382pt x 58.23758pt>
 File: static/images/nosurjective.png Graphic file (type png)
 <use static/images/nosurjective.png>
 Package luatex.def Info: static/images/nosurjective.png  used on input line 793.
 
 (luatex.def)             Requested size: 180.0pt x 107.65247pt.
-LaTeX Info: Redefining \. on input line 819.
-LaTeX Info: Redefining \% on input line 819.
- [14<./static/images/noinjective.png><./static/images/nosurjective.png>]
-LaTeX Info: Redefining \. on input line 884.
-LaTeX Info: Redefining \% on input line 884.
- [15]
-<static/images/direct_image.png, id=90, 97.38382pt x 75.28125pt>
+LaTeX Info: Redefining \. on input line 796.
+LaTeX Info: Redefining \% on input line 796.
+ [13<./static/images/noinjective.png>]
+LaTeX Info: Redefining \. on input line 859.
+LaTeX Info: Redefining \% on input line 859.
+ [14<./static/images/nosurjective.png>]
+<static/images/direct_image.png, id=87, 97.38382pt x 75.28125pt>
 File: static/images/direct_image.png Graphic file (type png)
 <use static/images/direct_image.png>
 Package luatex.def Info: static/images/direct_image.png  used on input line 905.
 
 (luatex.def)             Requested size: 180.0pt x 139.15782pt.
-<static/images/inverse_image.png, id=91, 97.38382pt x 75.28125pt>
+<static/images/inverse_image.png, id=88, 97.38382pt x 75.28125pt>
 File: static/images/inverse_image.png Graphic file (type png)
 <use static/images/inverse_image.png>
 Package luatex.def Info: static/images/inverse_image.png  used on input line 911
 .
 (luatex.def)             Requested size: 180.0pt x 139.15782pt.
-LaTeX Info: Redefining \. on input line 938.
-LaTeX Info: Redefining \% on input line 938.
- [16<./static/images/direct_image.png><./static/images/inverse_image.png>]
+LaTeX Info: Redefining \. on input line 914.
+LaTeX Info: Redefining \% on input line 914.
+ [15<./static/images/direct_image.png>]
+LaTeX Info: Redefining \. on input line 994.
+LaTeX Info: Redefining \% on input line 994.
+ [16<./static/images/inverse_image.png>]
 Overfull \hbox (24.13586pt too wide) in paragraph at lines 1031--1034
 []\TU/lmr/m/it/10 Ejem-plo \TU/lmr/m/n/10 1.2.41\TU/lmr/m/it/10 . \TU/lmr/m/n/1
 0 (Un con-jun-to ex-po-nen-cial pe-que-ño) El con-jun-to ex-po-nen-cial $\OMS/
@@ -605,35 +596,29 @@ File: static/images/exponential.png Graphic file (type png)
 Package luatex.def Info: static/images/exponential.png  used on input line 1037.
 
 (luatex.def)             Requested size: 180.0pt x 124.43248pt.
-LaTeX Info: Redefining \. on input line 1039.
-LaTeX Info: Redefining \% on input line 1039.
-[17]
-LaTeX Info: Redefining \. on input line 1123.
-LaTeX Info: Redefining \% on input line 1123.
- [18<./static/images/exponential.png>]
+LaTeX Info: Redefining \. on input line 1086.
+LaTeX Info: Redefining \% on input line 1086.
+[17<./static/images/exponential.png>]
+LaTeX Info: Redefining \. on input line 1170.
+LaTeX Info: Redefining \% on input line 1170.
+ [18]
 <static/images/partition.png, id=105, 272.03633pt x 163.63133pt>
 File: static/images/partition.png Graphic file (type png)
 <use static/images/partition.png>
 Package luatex.def Info: static/images/partition.png  used on input line 1202.
 (luatex.def)             Requested size: 180.0pt x 108.27165pt.
-
-Underfull \vbox (badness 1540) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1205.
-LaTeX Info: Redefining \% on input line 1205.
- [19]
-LaTeX Info: Redefining \. on input line 1262.
-LaTeX Info: Redefining \% on input line 1262.
-
-[20<./static/images/partition.png>]
-<static/images/canonica.png, id=113, 79.31633pt x 52.21507pt>
+LaTeX Info: Redefining \. on input line 1238.
+LaTeX Info: Redefining \% on input line 1238.
+ [19<./static/images/partition.png>]
+<static/images/canonica.png, id=110, 79.31633pt x 52.21507pt>
 File: static/images/canonica.png Graphic file (type png)
 <use static/images/canonica.png>
 Package luatex.def Info: static/images/canonica.png  used on input line 1285.
 (luatex.def)             Requested size: 180.0pt x 118.50183pt.
-LaTeX Info: Redefining \. on input line 1323.
-LaTeX Info: Redefining \% on input line 1323.
- [21<./static/images/canonica.png>]
+LaTeX Info: Redefining \. on input line 1300.
+LaTeX Info: Redefining \% on input line 1300.
+
+[20<./static/images/canonica.png>]
 Overfull \hbox (9.91884pt too wide) in paragraph at lines 1346--1348
 []\TU/lmr/m/n/10 Apli-can-do el teo-re-ma de fac-to-ri-za-ción, de-du-ci-mos q
 ue hay una bi-yec-ción $[] [] [] \U/msb/m/n/10 Z\OML/cmm/m/it/10 = \OMS/cmsy/m
@@ -641,109 +626,109 @@ ue hay una bi-yec-ción $[] [] [] \U/msb/m/n/10 Z\OML/cmm/m/it/10 = \OMS/cmsy/m
  []
 
 ) (./hugotopdf/outputs/groups/_index.tex
-LaTeX Info: Redefining \. on input line 57.
-LaTeX Info: Redefining \% on input line 57.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+ [21]
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
  [22]
-LaTeX Info: Redefining \. on input line 129.
-LaTeX Info: Redefining \% on input line 129.
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
  [23]
-LaTeX Info: Redefining \. on input line 219.
-LaTeX Info: Redefining \% on input line 219.
+LaTeX Info: Redefining \. on input line 264.
+LaTeX Info: Redefining \% on input line 264.
  [24]
-LaTeX Info: Redefining \. on input line 287.
-LaTeX Info: Redefining \% on input line 287.
- [25]
-<static/images/permutation.png, id=131, 156.585pt x 71.24617pt>
+<static/images/permutation.png, id=128, 156.585pt x 71.24617pt>
 File: static/images/permutation.png Graphic file (type png)
 <use static/images/permutation.png>
 Package luatex.def Info: static/images/permutation.png  used on input line 336.
 (luatex.def)             Requested size: 180.0pt x 81.90308pt.
-LaTeX Info: Redefining \. on input line 346.
-LaTeX Info: Redefining \% on input line 346.
- [26<./static/images/permutation.png>]
-<static/images/composition.png, id=136, 254.93242pt x 134.48242pt>
+LaTeX Info: Redefining \. on input line 338.
+LaTeX Info: Redefining \% on input line 338.
+ [25]
+<static/images/composition.png, id=132, 254.93242pt x 134.48242pt>
 File: static/images/composition.png Graphic file (type png)
 <use static/images/composition.png>
 Package luatex.def Info: static/images/composition.png  used on input line 379.
 (luatex.def)             Requested size: 180.0pt x 94.9558pt.
-LaTeX Info: Redefining \. on input line 416.
-LaTeX Info: Redefining \% on input line 416.
- [27<./static/images/composition.png>]
-<static/images/cycle.png, id=141, 154.59758pt x 71.24617pt>
+LaTeX Info: Redefining \. on input line 398.
+LaTeX Info: Redefining \% on input line 398.
+ [26<./static/images/permutation.png><./static/images/composition.png>]
+<static/images/cycle.png, id=138, 154.59758pt x 71.24617pt>
 File: static/images/cycle.png Graphic file (type png)
 <use static/images/cycle.png>
 Package luatex.def Info: static/images/cycle.png  used on input line 449.
 (luatex.def)             Requested size: 180.0pt x 82.95433pt.
-<static/images/cycle2.png, id=142, 154.59758pt x 71.24617pt>
+<static/images/cycle2.png, id=139, 154.59758pt x 71.24617pt>
 File: static/images/cycle2.png Graphic file (type png)
 <use static/images/cycle2.png>
 Package luatex.def Info: static/images/cycle2.png  used on input line 457.
 (luatex.def)             Requested size: 180.0pt x 82.95433pt.
-<static/images/cycle3.png, id=143, 154.59758pt x 71.24617pt>
+LaTeX Info: Redefining \. on input line 460.
+LaTeX Info: Redefining \% on input line 460.
+ [27<./static/images/cycle.png>]
+<static/images/cycle3.png, id=144, 154.59758pt x 71.24617pt>
 File: static/images/cycle3.png Graphic file (type png)
 <use static/images/cycle3.png>
 Package luatex.def Info: static/images/cycle3.png  used on input line 466.
 (luatex.def)             Requested size: 180.0pt x 82.95433pt.
-LaTeX Info: Redefining \. on input line 469.
-LaTeX Info: Redefining \% on input line 469.
- [28<./static/images/cycle.png><./static/images/cycle2.png>]
 File: static/images/permutation.png Graphic file (type png)
 <use static/images/permutation.png>
 Package luatex.def Info: static/images/permutation.png  used on input line 475.
 (luatex.def)             Requested size: 180.0pt x 81.90308pt.
-<static/images/transposition.png, id=149, 156.585pt x 71.24617pt>
+<static/images/transposition.png, id=145, 156.585pt x 71.24617pt>
 File: static/images/transposition.png Graphic file (type png)
 <use static/images/transposition.png>
 Package luatex.def Info: static/images/transposition.png  used on input line 483
 .
 (luatex.def)             Requested size: 180.0pt x 81.90308pt.
-<static/images/transposition2.png, id=150, 156.585pt x 71.24617pt>
+<static/images/transposition2.png, id=146, 156.585pt x 71.24617pt>
 File: static/images/transposition2.png Graphic file (type png)
 <use static/images/transposition2.png>
 Package luatex.def Info: static/images/transposition2.png  used on input line 49
 2.
 (luatex.def)             Requested size: 180.0pt x 81.90308pt.
-LaTeX Info: Redefining \. on input line 498.
-LaTeX Info: Redefining \% on input line 498.
- [29<./static/images/cycle3.png><./static/images/transposition.png><./static/ima
-ges/transposition2.png>]
-<static/images/circular_cycle.png, id=157, 90.3375pt x 89.31367pt>
+LaTeX Info: Redefining \. on input line 495.
+LaTeX Info: Redefining \% on input line 495.
+ [28<./static/images/cycle2.png><./static/images/cycle3.png><./static/images/tra
+nsposition.png>]
+<static/images/circular_cycle.png, id=153, 90.3375pt x 89.31367pt>
 File: static/images/circular_cycle.png Graphic file (type png)
 <use static/images/circular_cycle.png>
 Package luatex.def Info: static/images/circular_cycle.png  used on input line 50
 5.
 (luatex.def)             Requested size: 180.0pt x 177.97682pt.
-LaTeX Info: Redefining \. on input line 559.
-LaTeX Info: Redefining \% on input line 559.
- [30<./static/images/circular_cycle.png>]
-LaTeX Info: Redefining \. on input line 645.
-LaTeX Info: Redefining \% on input line 645.
+LaTeX Info: Redefining \. on input line 541.
+LaTeX Info: Redefining \% on input line 541.
+ [29<./static/images/transposition2.png><./static/images/circular_cycle.png>]
+LaTeX Info: Redefining \. on input line 628.
+LaTeX Info: Redefining \% on input line 628.
+ [30]
+LaTeX Info: Redefining \. on input line 697.
+LaTeX Info: Redefining \% on input line 697.
  [31]
-LaTeX Info: Redefining \. on input line 714.
-LaTeX Info: Redefining \% on input line 714.
- [32]
-<static/images/permutation_sign.png, id=169, 156.585pt x 71.24617pt>
+<static/images/permutation_sign.png, id=166, 156.585pt x 71.24617pt>
 File: static/images/permutation_sign.png Graphic file (type png)
 <use static/images/permutation_sign.png>
 Package luatex.def Info: static/images/permutation_sign.png  used on input line 
 729.
 (luatex.def)             Requested size: 180.0pt x 81.90308pt.
-<static/images/forbidden_permutations.png, id=170, 187.72133pt x 71.24617pt>
+<static/images/forbidden_permutations.png, id=167, 187.72133pt x 71.24617pt>
 File: static/images/forbidden_permutations.png Graphic file (type png)
 <use static/images/forbidden_permutations.png>
 Package luatex.def Info: static/images/forbidden_permutations.png  used on input
  line 751.
 (luatex.def)             Requested size: 180.0pt x 68.31616pt.
-<static/images/s3.png, id=171, 336.23618pt x 155.56117pt>
+LaTeX Info: Redefining \. on input line 755.
+LaTeX Info: Redefining \% on input line 755.
+ [32<./static/images/permutation_sign.png><./static/images/forbidden_permutation
+s.png>]
+<static/images/s3.png, id=173, 336.23618pt x 155.56117pt>
 File: static/images/s3.png Graphic file (type png)
 <use static/images/s3.png>
 Package luatex.def Info: static/images/s3.png  used on input line 775.
 (luatex.def)             Requested size: 180.0pt x 83.2778pt.
-LaTeX Info: Redefining \. on input line 777.
-LaTeX Info: Redefining \% on input line 777.
- [33<./static/images/permutation_sign.png><./static/images/forbidden_permutation
-s.png>]
-<static/images/transsign.png, id=177, 249.93375pt x 75.28125pt>
+<static/images/transsign.png, id=174, 249.93375pt x 75.28125pt>
 File: static/images/transsign.png Graphic file (type png)
 <use static/images/transsign.png>
 Package luatex.def Info: static/images/transsign.png  used on input line 795.
@@ -754,13 +739,13 @@ Package luatex.def Info: static/images/composition.png  used on input line 820.
 (luatex.def)             Requested size: 180.0pt x 94.9558pt.
 LaTeX Info: Redefining \. on input line 823.
 LaTeX Info: Redefining \% on input line 823.
- [34<./static/images/s3.png><./static/images/transsign.png>]
-LaTeX Info: Redefining \. on input line 881.
-LaTeX Info: Redefining \% on input line 881.
- [35]
+ [33<./static/images/s3.png><./static/images/transsign.png>]
+LaTeX Info: Redefining \. on input line 872.
+LaTeX Info: Redefining \% on input line 872.
+ [34]
 LaTeX Info: Redefining \. on input line 976.
 LaTeX Info: Redefining \% on input line 976.
- [36]
+ [35]
 Overfull \hbox (34.14282pt too wide) in paragraph at lines 996--999
 []\TU/lmr/m/n/10 Vea-mos por re-duc-ción al ab-sur-do que to-dos los ele-men-t
 os de $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 e; x; [] ; x[]\OMS/cmsy/m/n/10 g$
@@ -778,22 +763,22 @@ l.1036 D
 ? 
 LaTeX Info: Redefining \. on input line 1042.
 LaTeX Info: Redefining \% on input line 1042.
-[37]
+[36]
 LaTeX Info: Redefining \. on input line 1122.
 LaTeX Info: Redefining \% on input line 1122.
- [38]
+ [37]
 LaTeX Info: Redefining \. on input line 1196.
 LaTeX Info: Redefining \% on input line 1196.
- [39]
+ [38]
 LaTeX Info: Redefining \. on input line 1270.
 LaTeX Info: Redefining \% on input line 1270.
- [40]
+ [39]
 LaTeX Info: Redefining \. on input line 1323.
 LaTeX Info: Redefining \% on input line 1323.
- [41]
+ [40]
 LaTeX Info: Redefining \. on input line 1386.
 LaTeX Info: Redefining \% on input line 1386.
- [42]
+ [41]
 Overfull \hbox (18.32294pt too wide) in paragraph at lines 1391--1393
 []\TU/lmr/m/n/10 El gru-po al-ter-na-do es un sub-gru-po por-que es el nú-cleo
  del ho-mo-mor-fis-mo $[] [] [] \OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 !
@@ -801,11 +786,11 @@ Overfull \hbox (18.32294pt too wide) in paragraph at lines 1391--1393
 
 LaTeX Info: Redefining \. on input line 1470.
 LaTeX Info: Redefining \% on input line 1470.
-[43]
+[42]
 LaTeX Info: Redefining \. on input line 1532.
 LaTeX Info: Redefining \% on input line 1532.
- [44]
-<static/images/isomorfiagrupos.png, id=215, 86.30243pt x 52.21507pt>
+ [43]
+<static/images/isomorfiagrupos.png, id=212, 86.30243pt x 52.21507pt>
 File: static/images/isomorfiagrupos.png Graphic file (type png)
 <use static/images/isomorfiagrupos.png>
 Package luatex.def Info: static/images/isomorfiagrupos.png  used on input line 1
@@ -813,7 +798,7 @@ Package luatex.def Info: static/images/isomorfiagrupos.png  used on input line 1
 (luatex.def)             Requested size: 180.0pt x 108.9107pt.
 LaTeX Info: Redefining \. on input line 1592.
 LaTeX Info: Redefining \% on input line 1592.
- [45<./static/images/isomorfiagrupos.png>]
+ [44<./static/images/isomorfiagrupos.png>]
 Overfull \hbox (7.39078pt too wide) in paragraph at lines 1605--1609
 []\TU/lmr/m/n/10 El ho-mo-mor-fis-mo $[] [] [] \OML/cmm/m/it/10 S[] \OMS/cmsy/m
 /n/10 ! f\OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 g$ \TU/lmr/m/n/10 es so-bre-yec-ti-
@@ -822,13 +807,13 @@ vo, lue-go $[] [] \OT1/cmr/m/n/10 =
 
 LaTeX Info: Redefining \. on input line 1660.
 LaTeX Info: Redefining \% on input line 1660.
-[46]) (./hugotopdf/outputs/rings/_index.tex
+[45]) (./hugotopdf/outputs/rings/_index.tex
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [47]
+ [46]
 LaTeX Info: Redefining \. on input line 96.
 LaTeX Info: Redefining \% on input line 96.
- [48]
+ [47]
 File: static/images/symmetric_difference.png Graphic file (type png)
 <use static/images/symmetric_difference.png>
 Package luatex.def Info: static/images/symmetric_difference.png  used on input l
@@ -836,21 +821,21 @@ ine 100.
 (luatex.def)             Requested size: 180.0pt x 108.90283pt.
 LaTeX Info: Redefining \. on input line 152.
 LaTeX Info: Redefining \% on input line 152.
- [49]
+ [48]
 LaTeX Info: Redefining \. on input line 216.
 LaTeX Info: Redefining \% on input line 216.
- [50]
+ [49]
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
- [51]
+ [50]
 LaTeX Info: Redefining \. on input line 351.
 LaTeX Info: Redefining \% on input line 351.
- [52]
+ [51]
 LaTeX Info: Redefining \. on input line 421.
 LaTeX Info: Redefining \% on input line 421.
 
-[53]
-<static/images/isomorfianillos.png, id=246, 69.25874pt x 53.17868pt>
+[52]
+<static/images/isomorfianillos.png, id=243, 69.25874pt x 53.17868pt>
 File: static/images/isomorfianillos.png Graphic file (type png)
 <use static/images/isomorfianillos.png>
 Package luatex.def Info: static/images/isomorfianillos.png  used on input line 4
@@ -858,7 +843,7 @@ Package luatex.def Info: static/images/isomorfianillos.png  used on input line 4
 (luatex.def)             Requested size: 180.0pt x 138.22559pt.
 LaTeX Info: Redefining \. on input line 474.
 LaTeX Info: Redefining \% on input line 474.
- [54]
+ [53]
 Overfull \hbox (9.14348pt too wide) in paragraph at lines 496--497
 []\TU/lmr/m/n/10 Bas-ta apli-car-le el pri-mer teo-re-ma de iso-mor-fía a la i
 den-ti-dad $[][] [] [] \OML/cmm/m/it/10 R \OMS/cmsy/m/n/10 !
@@ -875,25 +860,25 @@ OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m
 
 LaTeX Info: Redefining \. on input line 525.
 LaTeX Info: Redefining \% on input line 525.
-[55<./static/images/isomorfianillos.png>]
+[54<./static/images/isomorfianillos.png>]
 LaTeX Info: Redefining \. on input line 595.
 LaTeX Info: Redefining \% on input line 595.
- [56]
+ [55]
 LaTeX Info: Redefining \. on input line 676.
 LaTeX Info: Redefining \% on input line 676.
- [57]
+ [56]
 LaTeX Info: Redefining \. on input line 765.
 LaTeX Info: Redefining \% on input line 765.
- [58]
+ [57]
 LaTeX Info: Redefining \. on input line 840.
 LaTeX Info: Redefining \% on input line 840.
- [59]
+ [58]
 LaTeX Info: Redefining \. on input line 919.
 LaTeX Info: Redefining \% on input line 919.
- [60]
+ [59]
 LaTeX Info: Redefining \. on input line 984.
 LaTeX Info: Redefining \% on input line 984.
- [61]
+ [60]
 Overfull \hbox (5.05557pt too wide) in paragraph at lines 1021--1023
 []\TU/lmr/m/it/10 Ejem-plo \TU/lmr/m/n/10 3.8.9\TU/lmr/m/it/10 . \TU/lmr/m/n/10
  (Iden-ti-dad de Bé-zout) Ha-lle-mos es-ta iden-ti-dad pa-ra $\OT1/cmr/m/n/10 
@@ -902,18 +887,18 @@ Overfull \hbox (5.05557pt too wide) in paragraph at lines 1021--1023
 
 LaTeX Info: Redefining \. on input line 1041.
 LaTeX Info: Redefining \% on input line 1041.
-[62]
+[61]
 LaTeX Info: Redefining \. on input line 1107.
 LaTeX Info: Redefining \% on input line 1107.
- [63]
+ [62]
 LaTeX Info: Redefining \. on input line 1172.
 LaTeX Info: Redefining \% on input line 1172.
- [64](save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl
+ [63](save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl
 /lmroman7-italic.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/g
 eneric/fonts/otl/lmroman7-italic.luc)
 LaTeX Info: Redefining \. on input line 1217.
 LaTeX Info: Redefining \% on input line 1217.
- [65]
+ [64]
 Overfull \hbox (3.74754pt too wide) in paragraph at lines 1231--1233
 \TU/lmr/m/n/10 pro-po-si-ción an-te-rior, y so-bre el múl-ti-plo co-mún mí-
 ni-mo se de-du-ce de que $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/
@@ -922,47 +907,47 @@ ni-mo se de-du-ce de que $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/
 
 LaTeX Info: Redefining \. on input line 1278.
 LaTeX Info: Redefining \% on input line 1278.
-[66]
+[65]
 LaTeX Info: Redefining \. on input line 1344.
 LaTeX Info: Redefining \% on input line 1344.
- [67]) (./hugotopdf/outputs/polynomials/_index.tex
+ [66]) (./hugotopdf/outputs/polynomials/_index.tex
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- [68]
+ [67]
 LaTeX Info: Redefining \. on input line 62.
 LaTeX Info: Redefining \% on input line 62.
- [69]
+ [68]
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
- [70]
+ [69]
 LaTeX Info: Redefining \. on input line 172.
 LaTeX Info: Redefining \% on input line 172.
- [71]
+ [70]
 LaTeX Info: Redefining \. on input line 231.
 LaTeX Info: Redefining \% on input line 231.
 
-[72]
+[71]
 LaTeX Info: Redefining \. on input line 302.
 LaTeX Info: Redefining \% on input line 302.
- [73]
+ [72]
 LaTeX Info: Redefining \. on input line 363.
 LaTeX Info: Redefining \% on input line 363.
- [74]
+ [73]
 LaTeX Info: Redefining \. on input line 430.
 LaTeX Info: Redefining \% on input line 430.
- [75]
+ [74]
 LaTeX Info: Redefining \. on input line 497.
 LaTeX Info: Redefining \% on input line 497.
- [76]
+ [75]
 LaTeX Info: Redefining \. on input line 544.
 LaTeX Info: Redefining \% on input line 544.
- [77])(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/ot
+ [76])(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/ot
 l/lmroman8-italic.lua)(save: /home/fernando/.texlive2017/texmf-var/luatex-cache/
 generic/fonts/otl/lmroman8-italic.luc)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
 LaTeX Info: Redefining \. on input line 107.
 LaTeX Info: Redefining \% on input line 107.
- [78]
+ [77]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
 
 (./static/docs/latex.aux
@@ -973,25 +958,25 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 107.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
 )
 
 Here is how much of LuaTeX's memory you used:
- 8037 strings out of 494480
+ 8031 strings out of 494480
  100000,266212 words of node,token memory allocated
  1486 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 4 glue, 1 kern, 257 attribute, 54 glue_spec, 257 at
 tribute_list, 1 write nodes
-   avail lists: 2:518,3:212,4:52,5:335,6:3188,7:1200,8:71,9:318,10:27,11:408
+   avail lists: 2:514,3:195,4:52,5:335,6:3186,7:1200,8:71,9:318,10:27,11:407
  11650 multiletter control sequences out of 65536+600000
  57 fonts using 4156847 bytes
- 34i,14n,31p,388b,551s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 34i,14n,31p,388b,563s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf/fonts/opentype/public/lm/lmroman8-italic.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmroman7-italic.otf></usr/share/texmf/fonts/opentype/p
 ublic/lm/lmroman10-bolditalic.otf></usr/share/texmf/fonts/opentype/public/lm/lmr
-oman10-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.ot
+oman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.ot
 f></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/t
 exmf/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf/fonts/openty
 pe/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/l
@@ -1009,10 +994,10 @@ onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on static/docs/latex.pdf (78 pages, 2912178 bytes).
+Output written on static/docs/latex.pdf (77 pages, 2911188 bytes).
 
-PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
+PDF statistics: 430 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

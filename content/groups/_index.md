@@ -30,14 +30,14 @@ Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \st
 Los siguientes son algunos grupos bien conocidos:
 
 * $\Z$, $\Q$, $\mathbb{R}$ y $\mathbb{C}$ son grupos con la operación suma $+$. En este caso el elemento neutro es el **cero** $0$. El simétrico de un elemento $x$ es su **opuesto** $-x$. Esta notación se denomina **aditiva** frente a la usada en la definición de grupo, que es la **multiplicativa**.
-  
+
 * $\Q\setminus\\{ 0\\}$, $\mathbb{R}\setminus\\{ 0\\}$ y $\mathbb{C}\setminus\\{ 0\\}$
   son grupos  con la multiplicación. ¿Cuál es el elemento neutro?
-  
+
 * El conjunto $\\{ 1,-1\\}$ con el producto.
 
 * El conjunto $\\{ 1,-1, i, -i\\}$ con el producto.
-  
+
 * El conjunto $GL(n,k)$ de las matrices $n\times n$ con entradas en un cuerpo $k$ y  determinante no nulo, con la multiplicación de matrices.
 
 * El **grupo trivial** $\\{e\\}$, con el producto definido como $e\star e=e$, que es el único posible.
@@ -51,9 +51,9 @@ El elemento neutro de un grupo $(G,\star)$ es único.
 
 {{% proof %}}
 Si $e$ y $e'$ son elementos neutros de $(G,\star)$, entonces se tiene:
-$$
-   e = e\star e' = e',
-$$
+
+$$e = e\star e' = e',$$
+
 donde la primera igualdad es cierta por ser $e'$ un elemento neutro, y la segunda por serlo $e$.
 {{% /proof %}}
 
@@ -63,13 +63,16 @@ El simétrico de un elemento de un grupo $x\in G$ es único.
 
 {{% proof %}}
 Sea $x\in G$, y sean $y$, $z$ elementos simétricos de $x$, es decir, que satisfacen
+
 $$
 \begin{array}{rcl}
 x\star y=e=y\star x,\cr
 x\star z=e=z\star x.
 \end{array}
 $$
+
 Entonces,
+
 $$
 \begin{array}{rcl}
 y&=& y\star e\cr
@@ -79,9 +82,10 @@ y&=& y\star e\cr
 &=& z.
 \end{array}
 $$
+ 
 {{% /proof %}}
 
-Gracias al resultado anterior, podemos denotar  $x^{-1}$ al simétrico de $x$ sin ambigüedad, o $-x$ si estamos usando notación aditiva. Cuando estudiamos los conjuntos demostramos un resultado análogo para aplicaciones biyectivas. 
+Gracias al resultado anterior, podemos denotar  $x^{-1}$ al simétrico de $x$ sin ambigüedad, o $-x$ si estamos usando notación aditiva. Cuando estudiamos los conjuntos demostramos un resultado análogo para aplicaciones biyectivas.
 
 {{% proposition %}}
 Si $x,y\in G$ son elementos de un grupo tales que $x\star y=e$, entonces $y=x^{-1}$ y $x=y^{-1}$.
@@ -89,6 +93,7 @@ Si $x,y\in G$ son elementos de un grupo tales que $x\star y=e$, entonces $y=x^{-
 
 {{% proof %}}
 A partir de $x\star y= e$,
+
 $$
 \begin{array}{rcl}
 y&=&e\star y\cr
@@ -96,16 +101,19 @@ y&=&e\star y\cr
 &=& x^{-1}\star e\cr
 &=&x^{-1}.
 \end{array}
-$$  
+$$
+
 Análogamente,
+
 $$
 \begin{array}{rcl}
-x&=&x\star e\cr
+x &=&x\star e\cr
 &=&x\star y\star y^{-1}\cr
 &=&e\star y^{-1}\cr
 &=&y^{-1}.
 \end{array}
 $$
+
 {{% /proof %}}
 
 {{% watch %}}
@@ -151,7 +159,7 @@ Dados tres elementos de un grupo $x,y,z\in G$:
 {{% /proposition %}}
 
 {{% proof %}}
-Si $x\star y=x\star z$ entonces 
+Si $x\star y=x\star z$ entonces
 $$
 \begin{array}{rcl}
 y&=&x^{-1}\star(x\star y)\cr
@@ -162,7 +170,10 @@ $$
 La otra propiedad se prueba de manera análoga.
 {{% /proof %}}
 
-Las **potencias** positivas de un elemento de un grupo $x\in G$ se definen como $$x^n=x\star\stackrel{n}{\cdots}\star x,\quad n>0.$$
+Las **potencias** positivas de un elemento de un grupo $x\in G$ se definen como
+
+$$x^n=x\star\stackrel{n}{\cdots}\star x,\quad n>0.$$
+
 Definimos además $x^0=e$ y $x^n=(x^{-n})^{-1}$ si $n<0$. Así definidas, las potencias satisfacen $x^mx^n=x^{m+n}$ y $(x^m)^n=x^{mn}$ para $m,n\in\mathbb{Z}$ cualesquiera. Además $x^{1}=x$ y $x^{-1}$ su inverso.
 
 
@@ -186,7 +197,7 @@ $$
   &        & 1 & 0
 \end{array}
 \right)
-{=} 
+{=}
 \left(
 \begin{array}{c|c}
 0 & 1\cr
@@ -200,7 +211,9 @@ $$
 
 {{% remark %}}
 Cuando el grupo es aditivo, la notación exponencial se cambia por una multiplicativa, es decir,
+
 $$n\cdot x=x+\stackrel{n}{\cdots}+ x,\quad n>0.$$
+
 Definimos además $0\cdot x=0$ y $n\cdot x=-(-n)\cdot x$ si $n<0$. De este modo, se satisface $m\cdot x+n\cdot x=(m+n)\cdot x$ y $n\cdot(m\cdot x)=(n\cdot m)\cdot x$ para todo $m,n\in\mathbb{Z}$. Además $1\cdot x=x$ y $(-1)\cdot x=-x$.
 
 Por tanto, en un grupo aditivo $x\in G$ tiene orden finito si $n\cdot x=0$ para cierto $n>0$ y el orden $o(x)$ es el mínimo.
@@ -215,14 +228,16 @@ En lugar de demostrar $A\Leftrightarrow B$ probaremos NO $A$ $\Leftrightarrow$ N
 
 Si $x$ es de orden $n>0$ entonces $x^n=e=x^0$.
 
-Si $x$ tiene dos potencias iguales, digamos $x^r=x^s$ con $r>s$, entonces 
+Si $x$ tiene dos potencias iguales, digamos $x^r=x^s$ con $r>s$, entonces
 $$
 \begin{array}{rcl}
 x^{r-s}&=&x^r\star x^{-s}\cr
 &=&x^s\star x^{-s}\cr
 &=&x^0\cr
 &=&e.
-\end{array}$$ 
+\end{array}$$
+
+
 Como $r-s>0$, esto prueba que $x$ tiene orden finito.
 {{% /proof %}}
 
@@ -235,7 +250,7 @@ Si $x\in G$ es un elemento de orden $o(x)=m$ en un grupo $G$, $x^n=e$ si y solo 
 {{% /proposition %}}
 
 {{% proof %}}
-$\Leftarrow$ Si $m$ divide a $n$ entonces $n=m\cdot k$ para cierto entero $k$, así que 
+$\Leftarrow$ Si $m$ divide a $n$ entonces $n=m\cdot k$ para cierto entero $k$, así que
 $$
 \begin{array}{rcl}
 x^n&=&x^{m\cdot k}\cr
@@ -246,8 +261,8 @@ x^n&=&x^{m\cdot k}\cr
 $$
 
 
-$\Rightarrow$ 
-Si $n=0$ el resultado se tiene porque todo entero divide al $0$. Si no, podemos suponer que $n$ es positivo ya que el signo no afecta a la divisibilidad y además, si $n$ fuera negativo,  $x^{-n}=(x^n)^{-1}=e^{-1}=e$. 
+$\Rightarrow$
+Si $n=0$ el resultado se tiene porque todo entero divide al $0$. Si no, podemos suponer que $n$ es positivo ya que el signo no afecta a la divisibilidad y además, si $n$ fuera negativo,  $x^{-n}=(x^n)^{-1}=e^{-1}=e$.
 
 Por definición de orden $n\geq m$. Sean $c$ y $r$ el cociente y el resto de la división de $n$ por $m$, $n=m\cdot c+r$. El resto satisface $0\leq r < m$. Basta probar que $r=0$. Por reducción al absurdo, si $r>0$ entonces
 $$
@@ -266,7 +281,8 @@ Un elemento de un grupo $x\in G$ tiene orden finito si y solo si $\inv{x}$ tambi
 {{% /proposition %}}
 
 {{% proof %}}
-Si $o(x)=n$ entonces 
+Si $o(x)=n$ entonces
+
 $$
 \begin{array}{rcl}
 (x^{-1})^n&=&x^{-n}\cr
@@ -275,6 +291,7 @@ $$
 &=&e.
 \end{array}
 $$
+
 Por tanto $x^{-1}$ es de orden finito y además $o(x^{-1})\leq o(x)$.
 
 Usando que $(x^{-1})^{-1}=x$, deducimos que $o(x)=o((x^{-1})^{-1})\leq o(x^{-1})$, con lo que se tiene la igualdad, y también la otra implicación.
@@ -287,9 +304,9 @@ Un grupo $(G,\star)$ es **conmutativo** o **abeliano**  si $x\star y=y\star x$ p
 
 {{% example name="Grupo producto" label="productgroup" %}}
 Dados dos grupos $(G,\star)$ y $(H,\ast)$, el **producto cartesiano** $G\times H$ es un grupo con la siguiente operación binaria:
-$$
-(g\_1,h\_1)(g\_2,h\_2)=(g\_1\star g\_2,h\_1\ast h\_2).
-$$
+
+$$(g\_1,h\_1)(g\_2,h\_2)=(g\_1\star g\_2,h\_1\ast h\_2).$$ 
+
 El elemento neutro para el producto es $(e_G,e_H)$, es decir, el elemento neutro de cada grupo en cada una de las coordenadas.
 {{% /example %}}
 
@@ -316,27 +333,32 @@ $$
          1 & 5 & 4 & 2 & 3
         \end{array}\right)
 $$
-En la primera aparecen los números del $1$ al $n$. En la segunda fila, debajo de cada $i$ aparece $\sigma(i)$. En el ejemplo anterior $\sigma(1)=1$, $\sigma(2)=5$, $\sigma(3)=4$, etc. 
+En la primera aparecen los números del $1$ al $n$. En la segunda fila, debajo de cada $i$ aparece $\sigma(i)$. En el ejemplo anterior $\sigma(1)=1$, $\sigma(2)=5$, $\sigma(3)=4$, etc.
 
 ![Permutación](../images/permutation.png)
 
 El orden de las columnas no importa, es decir, la siguiente matriz denota la misma permutación que la anterior
+
 $$
 \left(\begin{array}{ccccccccc}
          2 & 5 & 3 & 1 & 4\cr
          5 & 3 & 4 & 1 & 2
         \end{array}\right),
 $$
+
 si bien lo más común es que los números de la primera fila aparezcan ordenados, como en el primer caso.
 
 La permutación identidad es la que tiene ambas fila iguales
+
 $$
 \left(\begin{array}{ccccccccc}
          1 & 2 & 3 & 4 & 5\cr
          1 & 2 & 3 & 4 & 5
         \end{array}\right).
 $$
+
 La permutación inversa se obtiene simplemente al intercambiar las filas
+
 $$
 \begin{array}{rcl}
 \left(\begin{array}{ccccccccc}
@@ -354,6 +376,7 @@ $$
         \end{array}\right).
 \end{array}
 $$
+
 {{% /remark %}}
 
 
@@ -363,33 +386,47 @@ La composición de permutaciones se puede realizar de manera gráfica del siguie
 ![Composición](../images/composition.png)
 
 Con la notación matricial, la composición en $S_n$ se puede llevar a cabo como en el siguiente ejemplo. Consideramos
-$$\sigma=\left(\begin{array}{ccc}
+
+$$
+\sigma=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
                      1 & 3 & 2
                     \end{array}\right),
    \tau=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
                      3 & 1 & 2
-                    \end{array}\right)\in S_3.$$
+                    \end{array}\right)\in S_3.
+$$
+
 Para calcular $\sigma\circ\tau$ reordenamos las columnas de $\sigma$ de modo que su primera fila coincida con la segunda de $\tau$:
-$$\sigma=\left(\begin{array}{ccc}
+
+$$
+\sigma=\left(\begin{array}{ccc}
                      3 & 1 & 2\cr
                      2 & 1 & 3
-                    \end{array}\right).$$
+                    \end{array}\right).
+$$
+
 La matriz de $\sigma\circ\tau$ consiste en la primera fila de $\tau$ seguida de la segunda de la última representación de $\sigma$,
-$$\sigma\circ\tau=\left(\begin{array}{ccc}
+
+$$
+\sigma\circ\tau=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
                      2 & 1 & 3
-                    \end{array}\right).$$
-                    
+                    \end{array}\right).
+$$
+  
 Calculamos ahora $\tau\circ\sigma$,
+
 $$
    \tau=\left(\begin{array}{ccc}
                      1 & 3 & 2\cr
                      3 & 2 & 1
                     \end{array}\right),
 $$
+
 y entonces
+
 $$
    \tau\circ\sigma=\left(\begin{array}{ccc}
                      1 & 2 & 3\cr
@@ -406,17 +443,26 @@ Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres 
 
 {{% definition %}}
 Dado un conjunto $X$ el **soporte** de una permutación $\sigma\colon X\rightarrow X$ es el subconjunto
+
 $$\sop (\sigma )=\\{ x\in X\mid \sigma (x)\ne x\\} .$$
 
-Decimos que $\sigma\in \Sim(X)$ es un **ciclo** de **longitud** $n$, o un **$n$-ciclo**, si su soporte es un conjunto finito de $n$ elementos $$\sop (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$ y además
+Decimos que $\sigma\in \Sim(X)$ es un **ciclo** de **longitud** $n$, o un **$n$-ciclo**, si su soporte es un conjunto finito de $n$ elementos
+
+$$\sop (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$
+
+y además
+
 $$
 \left\\{
 \begin{array}{ll}
-\sigma(x\_i)=x\_{i+1},& 1\leq i<n,\cr 
+\sigma(x\_i)=x\_{i+1},& 1\leq i<n,\cr
 \sigma (x\_n)=x\_1.
 \end{array}\right.
 $$
-Este ciclo se denotará también $$\sigma=(x\_1\; x\_2\;\cdots\; x\_n).$$
+
+Este ciclo se denotará también
+
+$$\sigma=(x\_1\; x\_2\;\cdots\; x\_n).$$
 
 Una **trasposición** es un ciclo de longitud 2.
 {{% /definition %}}
@@ -447,8 +493,8 @@ Un ejemplo de trasposición $(2\; 4)$ entre elementos *no* consecutivos:
 
 
 {{% watch %}}
-La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \; x\_1 \; x\_2)=(x\_2 \; x\_3 \; x\_1)$. 
-{{% /watch %}} 
+La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \; x\_1 \; x\_2)=(x\_2 \; x\_3 \; x\_1)$.
+{{% /watch %}}
 
 Cualquier notación para los ciclos que quepa en una línea es intrínsecamente mala, lo ideal sería algo así:
 
@@ -509,7 +555,7 @@ Si $\sigma,\tau\in\Sim (X)$ son permutaciones disjuntas entonces $\tau\sigma =\s
 {{% /proposition %}}
 
 {{% proof %}}
-Tenemos que demostrar que $\tau\sigma (x)=\sigma\tau (x)$ para todo  $x\in X$. 
+Tenemos que demostrar que $\tau\sigma (x)=\sigma\tau (x)$ para todo  $x\in X$.
 
 Si $x\notin\sop (\sigma )\cup\sop (\tau )$ entonces $\sigma(x)=x=\tau(x)$, luego
 $$
@@ -536,7 +582,7 @@ Toda permutación con soporte finito se puede descomponer como producto de ciclo
 {{% /theorem %}}
 
 {{% proof %}}
-Sea $\sigma\in\Sim (X)$ una permutación. Definimos una relación de equivalencia $\sim$ en $X$ del siguiente modo: $x\sim y$ si existe $n\in\mathbb{Z}$ tal que $y=\sigma^n(x)$. Esta relación es de equivalencia: 
+Sea $\sigma\in\Sim (X)$ una permutación. Definimos una relación de equivalencia $\sim$ en $X$ del siguiente modo: $x\sim y$ si existe $n\in\mathbb{Z}$ tal que $y=\sigma^n(x)$. Esta relación es de equivalencia:
 
 * Reflexividad: $x\sim x$ es cierto para todo $x\in X$ ya que $x=1_X(x)=\sigma^0(x)$.
 
@@ -544,13 +590,15 @@ Sea $\sigma\in\Sim (X)$ una permutación. Definimos una relación de equivalenci
 
 * Transitividad: si $x\sim y\sim z$ entonces $y=\sigma^n(x)$ y $z=\sigma^m(y)$ para ciertos $n,m\in\mathbb{Z}$, luego $z=\sigma^m(\sigma^n(x))=\sigma^{m+n}(x)$, así que $x\sim z$.
 
-Las clases de equivalencia de esta relación se denominan **órbitas**. La órbita de $x\in X$ es 
+Las clases de equivalencia de esta relación se denominan **órbitas**. La órbita de $x\in X$ es
+
 $$\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}.$$
-Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito. 
+
+Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito.
 Veamos que en general $\bar{x}=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ para cierto $m> 0$. Esto nos va a llevar la mayor parte de esta prueba.
 
 
-Probemos que existe $m> 0$ tal que $\sigma^m(x)=x$. En efecto, como $\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}\subset\sop (\sigma)$, que es finito, todos los $\sigma^n(x)$ no pueden ser distintos, así que han de existir $p,q\in\mathbb{Z}$, $p\neq q$, tales que $\sigma^p(x)=\sigma^q(x)$. Podemos suponer sin pérdida de generalidad que $p < q$, así que, aplicando $\sigma^{-p}$ a la anterior igualdad deducimos que 
+Probemos que existe $m> 0$ tal que $\sigma^m(x)=x$. En efecto, como $\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}\subset\sop (\sigma)$, que es finito, todos los $\sigma^n(x)$ no pueden ser distintos, así que han de existir $p,q\in\mathbb{Z}$, $p\neq q$, tales que $\sigma^p(x)=\sigma^q(x)$. Podemos suponer sin pérdida de generalidad que $p < q$, así que, aplicando $\sigma^{-p}$ a la anterior igualdad deducimos que
 $$
 \begin{array}{rcl}
 x&=&\sigma^{-p}(\sigma^p(x))\cr
@@ -562,7 +610,7 @@ por tanto podemos tomar $m=q-p> 0$.
 
 Sea $m> 0$ el mínimo tal que $\sigma^m(x)=x$. Los elementos de $\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ son todos distintos. Lo veremos por reducción al absurdo. De lo contrario existirían $0\leq p<q<m$ tales que $\sigma^p(x)=\sigma^q(x)=\sigma^{p}(\sigma^{q-p}(x))$. La aplicación $\sigma^p$ es inyectiva por ser una permutación, así que esto implicaría que $x=\sigma^{q-p}(x)$, pero $0 < q-p < m$, lo que contradice la minimalidad de $m$.
 
-Ahora tenemos que ver que, para todo $n\in\mathbb {Z}$, $\sigma^n(x)\in  \\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$. 
+Ahora tenemos que ver que, para todo $n\in\mathbb {Z}$, $\sigma^n(x)\in  \\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$.
 Basta comprobar que, $\sigma^n(x)=\sigma^r(x)$ donde $r$ es el resto no negativo de la división de $n$ por $m$, $n=m\cdot c+r$, $0\leq r<m$. En efecto,
 $$
 \begin{array}{rcl}
@@ -591,11 +639,15 @@ $$\sigma=\left(\begin{array}{ccccccc}
                      3 & 6 & 5 & 1 & 4 & 2 & 7
                     \end{array}\right)\in S_7 .$$
 Las órbitas son:
-$$\begin{array}{rcl}
+
+$$
+\begin{array}{rcl}
 \overline{1}&=&\\{ 1,3,5,4\\},\cr
 \overline{2}&=&\\{ 2,6\\},\cr
 \overline{7}&=&\\{ 7\\}.
-\end{array}$$
+\end{array}
+$$
+
 Por tanto $\sigma =(1\;3\;5\;4)(2\;6)=(2\;6)(1\;3\;5\;4)=(1\;3)(3\;5)(5\;4)(2\;6)$.
 {{% /example %}}
 
@@ -604,8 +656,10 @@ Si $\sigma\in S_n$ se descompone como producto de $c$ ciclos disjuntos de longit
 {{% /proposition %}}
 
 {{% proof %}}
-Sea $\sigma=\sigma_1\cdots\sigma_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos, donde cada $\sigma_i$ es un ciclo de longitud $l_i$. Como las permutaciones disjuntas conmutan, 
+Sea $\sigma=\sigma_1\cdots\sigma_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos, donde cada $\sigma_i$ es un ciclo de longitud $l_i$. Como las permutaciones disjuntas conmutan,
+
 $$\sigma^k=\sigma_1^k\cdots\sigma_c^k$$
+
 para todo $k\geq 1$. Aquí estamos usando que el soporte de cada $\sigma_i^k$ está contenido en el de $\sigma_i$ pues si $\sigma_i(x)=x$ entonces $\sigma_i^k(x)=x$ para todo $k\geq 1$. Por tanto, la descomposición de $\sigma^k$ como producto de ciclos disjuntos se obtendrá descomponiendo cada $\sigma_i^k$ y haciendo el producto de todas estas descomposiciones. Por la unicidad de la descomposición de una permutación como producto de ciclos disjuntos, $\sigma^k=1$ si y solo si $\sigma_i^k=1$ para todo $i=1,\dots, c$. Si esto ocurre, es que $k$ es divisible por el orden de $\sigma_i$ para todo $i$, es decir $l_i|k$ para todo $i$. El mínimo valor de $k$ para el que esto pasa es, por definición, el múltiplo común mínimo de $l_1,\dots, l_c$.
 {{% /proof %}}
 
@@ -642,9 +696,9 @@ Siempre podemos evitarlas moviendo un poco las flechas.
 
 {{% definition %}}
 El **signo** de una permutación $\sigma\in S_n$ se define como
-$$
-\signo(\sigma)=(-1)^{\text{nº de inversiones de }\sigma}.
-$$
+
+$$\signo(\sigma)=(-1)^{\text{nº de inversiones de }\sigma}.$$
+
 Decimos que $\sigma$ es **par** si $\signo(\sigma)=+1$ e **impar** si $\signo(\sigma)=-1$.
 {{% /definition %}}
 
@@ -653,9 +707,9 @@ Obviamente, $\sigma$ es par si tiene un número par de inversiones, e igualmente
 
 {{% example name="$S_3$" %}}
 El grupo $S_3$ tiene $3!=6$ elementos, que son los siguientes:
-$$
-S_3=\\{(), (12), (13), (23), (123), (132)\\}.
-$$
+
+$$S_3=\\{(), (12), (13), (23), (123), (132)\\}.$$
+
 Las permutaciones pares de $S_3$ son $()$, $(123)$ y $(132)$ y las impares son $(12)$, $(13)$ y $(23)$.
 
 ![S3](../images/s3.png)
@@ -706,7 +760,9 @@ Una permutación $\sigma\in S_n$ es par si y solo si es producto de un número p
 
 {{% proof %}}
 En efecto, si $\sigma =\tau\_1\cdots\tau\_r$ donde cada $\tau\_i$ es una trasposición, entonces
+
 $$\signo (\sigma )=\signo (\tau\_1)\cdots\signo (\tau\_r)=(-1)^r.$$
+
 {{% /proof %}}
 
 Este corolario es también cierto cambiando *par* por *impar*.
@@ -720,11 +776,13 @@ Este corolario, que es consecuencia de la descomposición de un ciclo como produ
 
 {{% theorem name="Fórmula de Cauchy" %}}
 Si $\sigma\in S_n$ se descompone como producto de $c$ ciclos disjuntos y $\sop(\sigma)$ tiene $s$ elementos entonces
+
 $$\signo (\sigma )=(-1)^{s-c}.$$
+
 {{% /theorem %}}
 
 {{% proof %}}
-Sea $\sigma =\sigma\_1\cdots\sigma\_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos. Sea $l\_i$ la longitud del ciclo $\sigma\_i$, $i=1,\dots, c$. El número de elementos del soporte de $\sigma$ es $s=\sum\_{i=1}^{c}l\_i$ y 
+Sea $\sigma =\sigma\_1\cdots\sigma\_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos. Sea $l\_i$ la longitud del ciclo $\sigma\_i$, $i=1,\dots, c$. El número de elementos del soporte de $\sigma$ es $s=\sum\_{i=1}^{c}l\_i$ y
 $$
 \begin{array}{rcl}
 \signo(\sigma)&=&\signo(\sigma\_1)\cdots\signo(\sigma\_c)\cr
@@ -775,7 +833,7 @@ Un subgrupo $H\subset G$ es un grupo por derecho propio con la operación binari
 {{% proposition %}}
 Dado un grupo $G$, $H\subset G$ es un subgrupo si y solo si se satisfacen las dos condiciones siguientes:
 
-* $H\neq\varnothing$ 
+* $H\neq\varnothing$
 
 * Si $x,y\in H$ entonces $x^{-1}y\in H$.
 
@@ -789,7 +847,9 @@ $\Leftarrow$ Como $H\neq \varnothing$ ha de existir algún $z\in H$, así que $e
 
 {{% definition %}}
 Dado un grupo $G$ y un subconjunto $X\subset G$, si definimos $X^{-1}=\\{x^{-1}\mid x\in X\\}$, el **subgrupo generado por $X$** se define como
+
 $$\langle X\rangle =\\{y\in G\mid \exists n\geq 0, x_1,\dots, x_n\in X\cup X^{-1}; y=x_1\cdots x_n\\}\subset G.$$
+
 {{% /definition %}}
 
 {{% proposition %}}
@@ -827,8 +887,11 @@ Un grupo $G$ es **cíclico** si existe $x\in G$ tal que $G=\langle x\rangle$.
 {{% /definition %}}
 
 {{% remark %}}
-Observa que en general $\langle x\rangle=\\{x^n\mid n\in\mathbb{Z}\\}$. ¡Ojo! 
-Si $x$ tiene orden infinito, todas estas potencias son distintas según hemos visto [antes](#different), luego $\langle x\rangle$ es infinito. Sin embargo, si $x$ tiene orden finito habrá potencias de $x$ con exponente distinto que sean iguales . En cualquier caso $\langle x\rangle$ es abeliano ya que $$x^px^q=x^{p+q}=x^{q+p}=x^qx^p.$$
+Observa que en general $\langle x\rangle=\\{x^n\mid n\in\mathbb{Z}\\}$. ¡Ojo!
+Si $x$ tiene orden infinito, todas estas potencias son distintas según hemos visto [antes](#different), luego $\langle x\rangle$ es infinito. Sin embargo, si $x$ tiene orden finito habrá potencias de $x$ con exponente distinto que sean iguales . En cualquier caso $\langle x\rangle$ es abeliano ya que
+
+$$x^px^q=x^{p+q}=x^{q+p}=x^qx^p.$$
+
 {{% /remark %}}
 
 
@@ -838,7 +901,7 @@ Si $x\in G$ es de orden $n$ entonces $\langle x\rangle = \\{e,x,\dots, x^{n-1}\\
 {{% /proposition %}}
 
 {{% proof %}}
-Veamos por reducción al absurdo que todos los elementos de $\\{e,x,\dots, x^{n-1}\\}$ son diferentes. Supongamos que dos de ellos fueran iguales $x^p=x^q$, $p\neq q$. Podemos suponer sin pérdida de generalidad que $p > q$. Entonces 
+Veamos por reducción al absurdo que todos los elementos de $\\{e,x,\dots, x^{n-1}\\}$ son diferentes. Supongamos que dos de ellos fueran iguales $x^p=x^q$, $p\neq q$. Podemos suponer sin pérdida de generalidad que $p > q$. Entonces
 $$
 \begin{array}{rcl}
 x^{p-q}&=&x^px^{-q}\cr
@@ -863,19 +926,21 @@ y $x^r\in \\{e,x,\dots, x^{n-1}\\}$. Esto termina la demostración.
 
 
 {{% example name="¿Es $S_n$ cíclico?" %}}
-Tenemos que $S_2=\langle (1\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que 
+Tenemos que $S_2=\langle (1\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que
+
 $$o(\sigma)=\operatorname{mcd}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
+
 excepto si $n=2$, $c=1$ y $l_1=2$. Por tanto $|\langle\sigma\rangle|=o(\sigma) < n!=|S_n|$, así que la inclusión $\langle\sigma\rangle\subset S_n$ ha de ser siempre estricta si $n>2$.
 {{% /example %}}
 
 ## El teorema de Lagrange
 
-{{% definition %}} 
+{{% definition %}}
 Dado un grupo  $G$ y un subgrupo $H\subset G$, definimos la siguiente relación en $G$:
-$$
-x\sim_H y \Leftrightarrow \inv{x} y\in H.
-$$
-{{% /definition %}} 
+
+$$x\sim_H y \Leftrightarrow \inv{x} y\in H.$$
+
+{{% /definition %}}
 
 {{% proposition %}}
 La relación $\sim_H$ es de equivalencia.
@@ -885,7 +950,7 @@ La relación $\sim_H$ es de equivalencia.
 
 * Reflexiva: $x\sim_H x$ pues $x^{-1}x=e\in H$.
 
-* Simétrica: si $x\sim_H y$ es porque $x^{-1}y\in H$, entonces $(x^{-1}y)^{-1}\in H$ y 
+* Simétrica: si $x\sim_H y$ es porque $x^{-1}y\in H$, entonces $(x^{-1}y)^{-1}\in H$ y
 $$
 \begin{array}{rcl}
 (x^{-1}y)^{-1}&=&y^{-1}(x^{-1})^{-1}\cr
@@ -910,7 +975,9 @@ $G/H:=G/\sim_H$.
 * Si consideramos el subgrupo trivial $\\{e\\}\subset G$, $x\sim_{\\{e\\}} y$ si y solo si $x=y$. Por tanto todas las clases de equivalencia son unitarias y la proyección natural $\pi\colon G\rightarrow G/\\{e\\}$ es biyectiva.
 
 * Sea $\langle n\rangle\subset\mathbb{Z}$ el subgrupo cíclico generado por un entero $n\in\mathbb{Z}$ no trivial $n\neq 0$. Los elementos de $\langle n\rangle$ son los múltiplos de $n$. En este caso, $x\sim_{\langle n\rangle} y$ si y solo si $n|(x-y)$, por tanto se trata de la relación $\sim_n$ considerada en el tema de conjuntos, cuyo cociente, según vimos, es
+
 $$\mathbb{Z}/\langle n\rangle = \\{[0],\dots,[n-1]\\}.$$
+
 Este cociente se denomina $\mathbb{Z}$ **módulo** $n$.
 
 {{% /example %}}
@@ -918,9 +985,9 @@ Este cociente se denomina $\mathbb{Z}$ **módulo** $n$.
 
 {{% proposition %}}
 Dado un grupo  $G$, un subgrupo $H\subset G$ y un elemento $x\in G$, la clase de equivalencia de $x$ para la relación $\sim_H$ es
-$$
-[x]=x H:=\\{ x h\mid h\in H\\}.
-$$
+
+$$[x]=x H:=\\{ x h\mid h\in H\\}.$$
+
 {{% /proposition %}}
 
 {{% proof %}}
@@ -931,10 +998,12 @@ $\subset$ Dado $y\in[x]$, como $x\sim_H y$ tenemos que $x^{-1}y\in H$ así que $
 
 {{% remark %}}
 La clase de equivalencia $xH$ se denomina **clase a izquierda**. Podemos definir otra relación de equivalencia en $G$:
-$$
-  x\; {}\_H\\!\sim y \Leftrightarrow xy^{-1}\in H.
-$$ 
-En este caso las clases de equivalencia son de la forma $Hx=\\{hx\mid h\in H\\}$, $x\in G$, y se llaman **clases a derecha**. 
+
+$$x\; {}\_H\\!\sim y \Leftrightarrow xy^{-1}\in H.$$
+
+
+
+En este caso las clases de equivalencia son de la forma $Hx=\\{hx\mid h\in H\\}$, $x\in G$, y se llaman **clases a derecha**.
 En general, las relaciones $\sim_H$ y ${}_H\\!\sim$ son diferentes, por tanto las clases a izquierda no tienen por qué coincidir con las clases a la derecha. Ambas relaciones son iguales si $G$ es abeliano, y en ese caso las clases a izquierda y a derecha de cada elemento de $G$ coinciden.
 {{% /remark %}}
 
@@ -946,18 +1015,22 @@ Dado un grupo $G$, el **índice** de un subgrupo $H\subset G$, denotado $[G:H]$,
 {{% /definition %}}
 
 {{% theorem name="de Lagrange" %}}
- Si $G$ es un grupo finito y
+Si $G$ es un grupo finito y
 $H\subset G$ es un subgrupo, entonces $\vert H\vert$ divide a $\vert
 G\vert$ y $[G:H]=|G|/|H|$.
 {{% /theorem %}}
 
 {{% proof %}}
 Como $G$ es finito, habrá solo un número finito de
-clases de equivalencia $[G:H]=n$,  $$G/H=\\{x\_1 H,\ldots,
-x\_n H\\}.$$ Al ser $G$ unión disjunta de estas clases, 
-$$
- | G| = \\# (x\_1 H)+\cdots +\\# (x\_n H).
-$$
+clases de equivalencia $[G:H]=n$,
+
+$$G/H=\\{x\_1 H,\ldots,
+x\_n H\\}.$$
+
+Al ser $G$ unión disjunta de estas clases,
+
+$$| G| = \\# (x\_1 H)+\cdots +\\# (x\_n H).$$
+
 Para cualquier $x\in G$, la aplicación $f\colon H\rightarrow xH$ definida como $f(h)=xh$ es biyectiva. En efecto, es sobreyectiva por definición de $xH$. Además es inyectiva porque si $f(h_1)=f(h_2)$ entonces $xh_1=xh_2$ y por la propiedad cancelativa $h_1=h_2$. Por tanto $\\# (xH)=|H|$ para todo $x\in G$, así que deducimos de la ecuación anterior que $|G|=n|H|$.
 {{% /proof %}}
 
@@ -1008,9 +1081,11 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 7. Dado $n\in\mathbb Z$, la **multiplicación** por $n$, es decir, la aplicación $f\colon \mathbb Z\to\mathbb Z$ definida como $f(x)=n x$.
 
-8. Si $G$ es un grupo abeliano multiplicativo, la **exponenciación** $f\colon G\to G$, $f(x)=x^n$, es un homomorfismo ya que $$f(xy)=(xy)^n=(xy)\stackrel{n}{\cdots}(xy)=x^ny^n=f(x)f(y).$$
+8. Si $G$ es un grupo abeliano multiplicativo, la **exponenciación** $f\colon G\to G$, $f(x)=x^n$, es un homomorfismo ya que
 
-9. La aplicación **exponencial** $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$, 
+$$f(xy)=(xy)^n=(xy)\stackrel{n}{\cdots}(xy)=x^ny^n=f(x)f(y).$$
+
+9. La aplicación **exponencial** $f\colon\mathbb R\to (0,+\infty)$, $f(x)=e^x$,
 es un homomorfismo del grupo aditivo $\mathbb{R}$ en el grupo multiplicativo $(0,+\infty)$.
 
 {{% /example %}}
@@ -1018,7 +1093,7 @@ es un homomorfismo del grupo aditivo $\mathbb{R}$ en el grupo multiplicativo $(0
 Los homomorfismos preservan el elemento neutro y los simétricos.
 
 {{% proposition %}}
-Si $f\colon G\rightarrow H$ es un homomorfismo, entonces: 
+Si $f\colon G\rightarrow H$ es un homomorfismo, entonces:
 
 * $f(e)=e$.
 
@@ -1028,11 +1103,15 @@ Si $f\colon G\rightarrow H$ es un homomorfismo, entonces:
 
 {{% proof %}}
 Como $e=e e$,
+
 $$f(e)=f(e e)=f(e) f(e).$$
+
 Usando la propiedad cancelativa deducimos que $e=f(e)$.
 
 Al ser $e=x \inv{x}$ deducimos que
+
 $$e=f(e)=f(x \inv{x})=f(x) f(\inv{x}),$$
+
 por tanto $f(\inv{x})=\inv{f(x)}$.
 {{% /proof %}}
 
@@ -1048,7 +1127,9 @@ La composición de homomorfismos es un homomomorfismo.
 
 {{% proposition label="homocomp" %}}
 Dados dos homomorfismos como en el siguiente diagrama,
+
 $$G\stackrel{f}\To H\stackrel{g}\To K,$$
+
 la composición
 $g\circ f\colon G\rightarrow K$
 es un homomorfismo.
@@ -1067,8 +1148,10 @@ $$
 {{% /proof %}}
 
 {{% definition %}}
-Un **monomorfismo** $f\colon G\hookrightarrow H$ es un homomorfismo inyectivo. Un **epimorfismo** $f\colon G\twoheadrightarrow H$ es un homomorfismo sobreyectivo. Un **isomorfismo** 
+Un **monomorfismo** $f\colon G\hookrightarrow H$ es un homomorfismo inyectivo. Un **epimorfismo** $f\colon G\twoheadrightarrow H$ es un homomorfismo sobreyectivo. Un **isomorfismo**
+
 $$f\colon G\stackrel{\cong}{\longrightarrow} H$$
+
 es un homomorfismo biyectivo.
 {{% /definition %}}
 
@@ -1091,18 +1174,28 @@ Si $f\colon G\to H$ es un isomorfismo entonces la aplicación inversa $f^{-1}\co
 
 {{% proof %}}
 Dados $x,y\in H$ cualesquiera, hemos de probar que
+
 $$f^{-1}(x y)=f^{-1}(x) f^{-1}(y).$$
+
 Como $f$ es inyectivo, bastará comprobar que
+
 $$f(f^{-1}(x y))=f(f^{-1}(x) f^{-1}(y)).$$
+
 Por un lado, por ser $f^{-1}$ la inversa de $f$,
+
 $$f(f^{-1}(x y))=(f\circ f^{-1})(x y)=1_H(xy)=x y.$$
+
 Por otro lado, como $f$ es un homomorfismo,
-$$\begin{array}{rcl}
+
+$$
+\begin{array}{rcl}
 f(f^{-1}(x) f^{-1}(y))&=&f(f^{-1}(x)) f(f^{-1}(y))\cr
 &=&(f\circ f^{-1})(x)(f\circ f^{-1})(y)\cr
 &=&1_H(x)1_H(y)\cr
 &=&x y.
-\end{array}$$
+\end{array}
+$$
+
 {{% /proof %}}
 
 {{% example name="Isomorfismos inversos" %}}
@@ -1110,7 +1203,10 @@ Los inversos de los isomorfismos 1, 5 y 9 del [ejemplo](#homomorphisms) anterior
 {{% /example %}}
 
 {{% definition %}}
-Dos grupos $G$ y $H$ son **isomorfos**, y lo denotamos $G\cong H$, si existe un isomorfismo $$f\colon G\stackrel{\cong}\To H.$$
+Dos grupos $G$ y $H$ son **isomorfos**, y lo denotamos $G\cong H$, si existe un isomorfismo
+
+$$f\colon G\stackrel{\cong}\To H.$$
+
 {{% /definition %}}
 
 {{% proposition %}}
@@ -1119,13 +1215,21 @@ La relación de ser isomorfos es de equivalencia.
 
 {{% proof %}}
 Es reflexiva $G\cong G$ porque la identidad es un isomorfismo $1\_G\colon G\to G$. La simetría se sigue de que si $G\cong H$ es por que hay algún isomorfismo
+
 $$f\colon G\stackrel{\cong}\To H.$$
+
 El isomorfismo inverso
+
 $$f^{-1}\colon H\stackrel{\cong}\To G$$
+
 prueba que $H\cong G$. La transitividad es consecuencia de que si $G\cong H\cong K$ es porque hay isomorfismos
+
 $$G\mathop{\To}\limits^f\_{\cong} H\mathop{\To}\limits^g\_{\cong} K.$$
+
 Entonces la composición es un isomorfismo
+
 $$g\circ f\colon G\stackrel{\cong}\To K,$$
+
 así que $G\cong K$.
 {{% /proof %}}
 
@@ -1160,6 +1264,7 @@ es un isomorfismo.
 
 {{% proof %}}
 Si $\sigma\colon X\rightarrow X$ es biyectiva entonces $f\circ\sigma\circ f^{-1}\colon Y\rightarrow Y$ también, por ser composición de aplicaciones biyectivas. Por tanto $\phi\_f$ es una aplicación bien definida. Veamos que es un homomorfismo. Dados $\tau,\sigma\in\Sim(X)$:
+
 $$
 \begin{array}{rcl}
 \phi\_f(\tau)\circ \phi\_f(\sigma)&=&(f\circ \tau\circ f^{-1})\circ(f\circ \sigma\circ f^{-1})\cr
@@ -1167,7 +1272,9 @@ $$
 &=&\phi\_f(\tau\circ \sigma).
 \end{array}
 $$
+
 Para ver que $\phi\_f$ es un isomorfismo, basta comprobar que $\phi\_{f^{-1}}\colon \Sim(Y)\rightarrow \Sim(X)$ es su inversa. En efecto, $\phi\_{f^{-1}}\circ \phi\_{f}=\id{\Sim(X)}$ ya que ambas son aplicaciones que parten de $\Sim(X)$ y llegan a $\Sim(X)$ y además toman el mismo valor en cualquier $\sigma\in \Sim(X)$, pues
+
 $$
 \begin{array}{rcl}
 (\phi\_{f^{-1}}\circ \phi\_{f})(\sigma)&=&
@@ -1178,13 +1285,16 @@ $$
 &=&\id{\Sim(X)}(\sigma).
 \end{array}
 $$
+
 Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}$ son intercambiables, así que también está probada la otra igualdad, $\phi\_{f}\circ \phi\_{f^{-1}}=\id{\Sim(Y)}$.
 {{% /proof %}}
 
 
 {{% definition %}}
 Dado un homomorfismo $f\colon G\to H$, su **núcleo** es
+
 $$\ker f=\\{x\in G\mid f(x)=e\\}\subset G.$$
+
 {{% /definition %}}
 
 
@@ -1194,14 +1304,18 @@ El núcleo de un homomorfismo $f\colon G\to H$ es un subgrupo $\ker f\subset G$.
 
 {{% proof %}}
 Como $f(e)=e$, $e\in \ker f$. Si $x,y\in\ker f$ entonces
+
 $$f(xy)=f(x)f(y)=ee=e,$$
+
 luego $xy\in\ker f$. Es más, si $x\in\ker f$ entonces
+
 $$f(x^{-1})=f(x)^{-1}=e^{-1}=e,$$
+
 así que $x^{-1}\in\ker f$.
 {{% /proof %}}
 
 {{% definition %}}
-El **grupo alternado** es el subgrupo $A_n\subset S_n$ formado por las permutaciones pares. 
+El **grupo alternado** es el subgrupo $A_n\subset S_n$ formado por las permutaciones pares.
 {{% /definition %}}
 
 El grupo alternado es un subgrupo porque es el núcleo del homomorfismo $\signo\colon S_n\rightarrow\\{\pm1\\}$.
@@ -1244,7 +1358,9 @@ La noción de subrgupo normal $K\subset G$ depende tanto de $K$ como de $G$. Si 
 
 {{% example name="Subgrupos (no) normales" %}}
 Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\; 2)\\}\subset \perm{3}$ no es normal puesto que
+
 $$\inv{(1\;3)}(1\;2)(1\;3)=(1\;3)(1\;2)(1\;3)=(2\;3)\notin K.$$
+
 {{% /example %}}
 
 {{% proposition %}}
@@ -1252,7 +1368,7 @@ Si $G$ es abeliano, todo subgrupo $K\subset G$ es normal.
 {{% /proposition %}}
 
 {{% proof %}}
-Dados $g\in G$ y $k\in K$, 
+Dados $g\in G$ y $k\in K$,
 $$
 \begin{array}{rcl}
 g^{-1}kg&=&g^{-1}gk\cr
@@ -1276,7 +1392,7 @@ Dado un grupo $G$ y un subrgupo $K\subset G$, los siguientes enunciados son equi
 {{% proof %}}
 Las propiedades segunda y tercera coinciden porque la correspondencia existente entre relaciones de equivalencia y particiones. Veamos pues que las dos primeras también coinciden.
 
-$1.\Rightarrow 2.$ Veamos primero $\supset$. Todo elemento de $Kg$ es de la forma $kg$ con $k\in K$. Por ser $K\subset G$ normal, $g^{-1}kg\in K$, así que $kg=g(g^{-1}kg)\in gK$. 
+$1.\Rightarrow 2.$ Veamos primero $\supset$. Todo elemento de $Kg$ es de la forma $kg$ con $k\in K$. Por ser $K\subset G$ normal, $g^{-1}kg\in K$, así que $kg=g(g^{-1}kg)\in gK$.
 
 Veamos $\subset$. Todo elemento de $gK$ es de la forma $gk$ con $k\in K$. Por ser $K\subset G$ normal y $g^{-1}\in G$, $gkg^{-1}=(g^{-1})^{-1}kg^{-1}\in K$, así que
 $gk=(gkg^{-1})g\in Kg$.
@@ -1291,7 +1407,7 @@ El núcleo de un homomorfsimo $f\colon G\to H$ es un subgrupo normal  $\ker f\su
 {{% /proposition %}}
 
 {{% proof %}}
-Dados $g\in G$ y $k\in\ker f$, 
+Dados $g\in G$ y $k\in\ker f$,
 $$
 \begin{array}{rcl}
 f(g^{-1}kg)&=&f(g)^{-1}f(k)f(g)\cr
@@ -1312,24 +1428,27 @@ Dado un grupo $G$ y un subgrupo normal $K\subset G$, entonces el conjunto cocien
 
 {{% proof %}}
 Comenzamos viendo que si $G/K$ es un grupo y $\pi$ es un homomorfismo, entonces hay una única elección posible para la operación binaria que dota a $G/K$ de estructura de grupo. En efecto, dados $xK, yK\in G/K$, como $\pi(x)=xK$ y $\pi(y)=yK$, tenemos que
-$$
-(xK)(yK)=\pi(x)\pi(y)=\pi(xy)=(xy)K.
-$$
+
+$$(xK)(yK)=\pi(x)\pi(y)=\pi(xy)=(xy)K.$$
+
 Basta por tanto demostrar que la fórmula
-$$
-(xK)(yK)=(xy)K
-$$
+
+$$(xK)(yK)=(xy)K$$
+
 define una operación binaria en $G/K$ que satisface las propiedades requeridas. Lo más difícil es ver que la aplicación
+
 $$
 \begin{array}{rcl}
 (G/K)\times(G/K)&\longrightarrow& G/K,\cr
 (xK,yK)&\mapsto&(xy)K,
 \end{array}
 $$
+
 está bien definida. Observa que la imagen de un par podría depender de la elección de representantes de las clases a izquierda. Veamos que esto no ocurre. Para ello, dados $x,y\in G$ cualesquiera, debemos comprobar que si $xK=\bar{x}K$ e $yK=\bar{y}K$ entonces $(xy)K=(\bar{x}y)=(x\bar{y})K$, ya que de aquí se deduce que $(xy)K=(\bar{x}\bar{y})K$.
 
-Por un lado, si $yK=\bar{y}K$ entonces $y\sim_K \bar{y}$, es decir $y^{-1}\bar{y}\in K$, 
+Por un lado, si $yK=\bar{y}K$ entonces $y\sim_K \bar{y}$, es decir $y^{-1}\bar{y}\in K$,
 por tanto
+
 $$
 \begin{array}{rcl}
 (xy)^{-1}(x\bar{y})&=&y^{-1}x^{-1}x\bar{y}\cr
@@ -1337,11 +1456,14 @@ $$
 &=&y^{-1}\bar{y}\in K,
 \end{array}
 $$
-así que $xy\sim_K x\bar{y}$, es decir $(xy)K=(x\bar{y})K$. 
+
+así que $xy\sim_K x\bar{y}$, es decir $(xy)K=(x\bar{y})K$.
 
 Por otro lado, si $xK=\bar{x}K$ entonces $x\sim_K \bar{x}$, es decir $x^{-1}\bar{x}\in K$. Como $K\subset G$ es normal, esto implica que
 $y^{-1}x^{-1}\bar{x}y\in K$, luego
+
 $$(xy)^{-1}(\bar{x}y)=y^{-1}x^{-1}\bar{x}y\in K,$$
+
 esto es, $xy\sim_K\bar{x}y$, o lo que es lo mismo, $(xy)K=(\bar{x}y)K$.
 
 Este producto en $G/K$ satisface la propiedad asociativa porque, a nivel de representantes, está definido como en $G$, y el producto del grupo $G$ satisface la propiedad asociativa. Por la misma razón $eK$ es un elemento neutro en $G/K$ y el inverso de $xK$ es $(xK)^{-1}=x^{-1}K$.
@@ -1422,7 +1544,23 @@ Todo grupo $G$ es isomorfo a un subgrupo de un grupo de permutaciones. Si $G$ es
 {{% /theorem %}}
 
 {{% proof %}}
-Definimos la aplicación $$f\colon G\to\Sim (G)$$ del siguiente modo. Dado $g\in G$, $$f(g)\colon G\longrightarrow G$$ es la aplicación definida como $$f(g)(x)=gx.$$ Esta aplicación es biyectiva, por tanto es una permutación del conjunto $G$. Para comprobarlo, demostraremos que $f(g^{-1})\colon G\longrightarrow G$ es su inversa, es decir, que $$f(g)\circ f(g^{-1})=\id{G}=f(g^{-1})\circ f(g).$$ Las tres aplicaciones parten de $G$ y llegan a $G$, así que basta probar que toman los mismos valores sobre cada $x\in G$. En efecto, por un lado,
+Definimos la aplicación
+
+$$f\colon G\to\Sim (G)$$
+
+del siguiente modo. Dado $g\in G$,
+
+$$f(g)\colon G\longrightarrow G$$
+
+es la aplicación definida como
+
+$$f(g)(x)=gx.$$
+
+Esta aplicación es biyectiva, por tanto es una permutación del conjunto $G$. Para comprobarlo, demostraremos que $f(g^{-1})\colon G\longrightarrow G$ es su inversa, es decir, que
+
+$$f(g)\circ f(g^{-1})=\id{G}=f(g^{-1})\circ f(g).$$
+
+Las tres aplicaciones parten de $G$ y llegan a $G$, así que basta probar que toman los mismos valores sobre cada $x\in G$. En efecto, por un lado,
 $$
 \begin{array}{rcl}
 (f(g)\circ f(g^{-1}))(x)&=&
@@ -1460,7 +1598,9 @@ g&=&ge\cr
 $$
 
 Como $\ker f=\\{e\\}$, el primer teorema de isomorfía nos dice que
+
 $$G\cong\frac{G}{\\{e\\}}\cong\im f\subset \Sim (G).$$
+
 Esto demuestra la primera parte del teorema.
 
 Para la segunda parte, basta observar que, como $G$ tiene $n$ elementos, cualquier enumeración de los mismos $G=\\{x\_1,\dots, x\_n\\}$ da lugar a una aplicación biyectiva $\psi\colon G\rightarrow \\{1,\dots, n\\}$ definida como $\psi(x\_i)= i$ para todo $i$. Según hemos visto antes, esta biyección da lugar a un isomorfismo $\phi\_\psi\colon\Sim(G)\cong S\_n$. Argumentando como antes, vemos que $G\cong\im (\phi_\psi \circ f)\subset S_n$.

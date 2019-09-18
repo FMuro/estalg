@@ -1,4 +1,4 @@
-PWD /home/fernando/Documents/Docencia/Basica/algbas
+PWD /home/fernando/Documents/Docencia/Básica/algbas
 INPUT /var/lib/texmf/web2c/luatex/lualatex.fmt
 INPUT ./latex.tex
 OUTPUT static/docs/latex.log
@@ -130,7 +130,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -155,9 +154,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /home/fernando/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
-INPUT ./static/docs/latex.toc
-INPUT ./static/docs/latex.toc
 OUTPUT static/docs/latex.toc
 INPUT ./hugotopdf/outputs/sets/_index.tex
 INPUT ./hugotopdf/outputs/sets/_index.tex

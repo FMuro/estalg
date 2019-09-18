@@ -14,15 +14,14 @@ posible discernir si un elemento arbitrario está o no en él.
 {{% /definition %}}
 
 Los conjuntos pueden definirse de manera **explícita**, citando todos
-los elementos de los que consta *entre llaves*, 
-$$
-A = \\{ 1,2,3,4,5 \\},
-$$
+los elementos de los que consta *entre llaves*,
+
+$$A = \\{ 1,2,3,4,5 \\},$$
+
 o **implícita**, dando una o varias características que
-determinen si un elemento dado está o no en el conjunto, 
-$$
-A = \\{ \text{números naturales del }1\text{ al }5\\}.
-$$
+determinen si un elemento dado está o no en el conjunto,
+
+$$A = \\{ \text{números naturales del }1\text{ al }5\\}.$$
 
 {{% watch %}}
 Los elementos de un conjunto *no están ordenados*, aunque vengan especificados como una lista, por tanto $A=\\{3,1,2,5,4\\}$. En una definición explícita *no se pueden repetir elementos*, así que $\\{1,1,2,3,4,5\\}$ sería una manera incorrecta de expresar el conjunto $A$.
@@ -53,7 +52,9 @@ Muchos símbolos matemáticos son **reversibles**, por ejemplo, $A\ni a$ signifi
 {{% /watch %}}
 
 Por ejemplo, si $A = \\{ 1,2,3,4,5 \\}$ entonces $1 \in A$ pero $6\notin A$. Otra manera implícita de expresar este conjunto $A$ es la siguiente:
-$$ A = \\{n|n\in\mathbb{N},1\leq n\leq 5\\}.$$
+
+$$A = \\{n|n\in\mathbb{N},1\leq n\leq 5\\}.$$
+
 Se lee del siguiente modo: "$A$ es el conjunto formado por los elementos $n$ tales que $n$ pertenece al conjunto los números naturales, $n$ es mayor o igual que 1 y $n$ es menor o igual que 5."
 
 
@@ -93,7 +94,7 @@ La contención es **transitiva**, $A\subset B\subset C\Rightarrow A\subset C$. T
 El siguiente resultado caracteriza la igualdad entre dos conjuntos en términos de contenciones. Es la base de una técnica de prueba conocida como **doble inclusión**, que aplicaremos con frecuencia.
 
 {{% proposition %}}
-$A=B$ $\Leftrightarrow$ $A\subset B$ y $A\supset B$. 
+$A=B$ $\Leftrightarrow$ $A\subset B$ y $A\supset B$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -128,7 +129,7 @@ donde $A$, $B$ y $C$ son conjuntos cualesquiera:
 
 * $A \cap B = B \cap A$ (**conmutativa**).
 * $(A \cap B) \cap C = A \cap (B \cap C)$ (**asociativa**).
-* $A \cap B \subset A$. 
+* $A \cap B \subset A$.
 * $A \cap B \subset B$.
 * $\varnothing \cap A = \varnothing$.
 * $A \subset B\Leftrightarrow A \cap B = A.$
@@ -194,7 +195,7 @@ donde $A$, $B$ y $C$ son conjuntos cualesquiera:
 * $A \cup B = B \cup A$ (**conmutativa**).
 * $(A \cup B) \cup C = A \cup (B \cup C)$ (**asociativa**).
 * $\varnothing \cup A = A$ (**elemento neutro**).
-* $A \subset A \cup B$. 
+* $A \subset A \cup B$.
 * $B \subset A \cup B$.
 * $A \subset B\Leftrightarrow B=A \cup B$.
 
@@ -226,7 +227,7 @@ La **unión** de una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ se define com
 Igual que antes, si $I$ es finito, esta definición coincide con la anterior, pero es también válida para $I$ infinito.
 
 {{% example name="Una unión infinita" %}}
-Si consideramos la familia $\\{[0,\frac{1}{2^n})\\}\_{n\in\mathbb{N}}$ del ejemplo de intersección infinita, tenemos que 
+Si consideramos la familia $\\{[0,\frac{1}{2^n})\\}\_{n\in\mathbb{N}}$ del ejemplo de intersección infinita, tenemos que
 $\bigcup_{n\in\mathbb{N}}[0,\frac{1}{2^n})=[0,\frac{1}{2})$ ya que $[0,\frac{1}{2})$ es uno de los conjuntos de esta familia y todos los demás $[0,\frac{1}{2^n})$ están contenidos en él.
 {{% /example %}}
 
@@ -324,7 +325,7 @@ Si tenemos fijado un conjunto universal $U$ entonces $A \setminus B = A \cap \ba
 {{% /proposition %}}
 
 {{% proof %}}
-Como $A,B\subset U$, 
+Como $A,B\subset U$,
 $$
 \begin{array}{rcl}
 A \setminus B&=&\\{x  |  x \in A  \wedge  x \notin B\\} \cr
@@ -346,7 +347,7 @@ Dado un conjunto universal $U$:
 {{% /proposition %}}
 
 {{% proof %}}
-Como $A\subset U$, 
+Como $A\subset U$,
 $$
 \begin{array}{rcl}
 \bar{\bar{A}} &=& U\setminus \bar{A}\cr
@@ -359,9 +360,9 @@ $$
 $$
 
 Por otro lado,
-$$
-\bar U=U\setminus U=\varnothing,
-$$
+
+$$\bar U=U\setminus U=\varnothing,$$
+
 así que $U=\bar{\bar{U}}=\bar\varnothing$.
 {{% /proof %}}
 
@@ -379,11 +380,11 @@ Si $A= \\{ 1,2,3 \\}$ y $B=\\{a,b\\}$ entonces $A \times B=\\{(1,a), (1,b), (2,a
 {{% /example %}}
 
 {{% remark %}}
-El vacío hace el papel de cero con respecto al producto cartesiano $A \times \varnothing = \varnothing = \varnothing \times B$. 
+El vacío hace el papel de cero con respecto al producto cartesiano $A \times \varnothing = \varnothing = \varnothing \times B$.
 {{% /remark %}}
 
 {{% watch %}}
-En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$. 
+En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$.
 {{% /watch %}}
 
 {{% exercise %}}
@@ -425,7 +426,7 @@ La correspondencia del diagrama anterior no es una aplicación, pero la siguient
 Como conjunto, $f=\\{(1,a), (4,b), (2,b), (3, b)\\}\subset A\times B$.
 
 {{% definition %}}
-Dada una aplicación $f\colon A\rightarrow B$ y $a \in A$, denotaremos $f(a)\in B$ al único elemento tal que $(a,f(a))\in f$ y lo denominaremos **imagen** de $a$ por $f$. También diremos que $f(a)$ es el **valor** de $f$ en $a$. 
+Dada una aplicación $f\colon A\rightarrow B$ y $a \in A$, denotaremos $f(a)\in B$ al único elemento tal que $(a,f(a))\in f$ y lo denominaremos **imagen** de $a$ por $f$. También diremos que $f(a)$ es el **valor** de $f$ en $a$.
 {{% /definition %}}
 
 {{% watch %}}
@@ -467,7 +468,7 @@ Observa que el nombre de la aplicación se puede poner sobre la flecha.
 
 * La **identidad** $1_A\colon A\rightarrow A$ se define como $1_A(a)=a$ para todo $a\in A$. Esta aplicación está definida para cualquier conjunto $A$.
 
-* Dado un subconjunto $B\subset A$, la **inclusión** $i\colon B\rightarrow A$ se definie como $i(b)=b$ para todo $b\in B$. 
+* Dado un subconjunto $B\subset A$, la **inclusión** $i\colon B\rightarrow A$ se definie como $i(b)=b$ para todo $b\in B$.
 
 * Dados dos conjuntos $A$ y $B$ y un elemento $b\in B$, la aplicación **constante** $c_b\colon A\rightarrow B$ se define como $c_b(a)=b$ para todo $a\in A$.
 
@@ -479,8 +480,10 @@ Dado un conjunto $A$, ¿hay algun aplicación $\varnothing\rightarrow A$? ¿Y $A
 
 
 {{% definition %}}
-Dadas dos aplicaciones 
+Dadas dos aplicaciones
+
 $$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C$$
+
 su **composición** $g\circ f\colon A\rightarrow C$ es la aplicación definida como $(g\circ f)(a)=g(f(a))$.
 {{% /definition %}}
 
@@ -488,7 +491,10 @@ su **composición** $g\circ f\colon A\rightarrow C$ es la aplicación definida c
 {{% proposition %}}
 La composición de aplicaciones satisface las propiedades siguientes:
 
-* Dadas tres aplicaciones $$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C\stackrel{h}\longrightarrow D$$
+* Dadas tres aplicaciones
+
+$$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C\stackrel{h}\longrightarrow D$$
+
 se verifica que $h\circ (g\circ f)=(h\circ g)\circ f$ (**asociativa**).
 * Dada una aplicación $f\colon A\rightarrow B$, se tiene que $f\circ 1_A=f=1_B\circ f$ (**elemento neutro**).
 
@@ -508,6 +514,7 @@ $$
 $$
 
 Por otro lado
+
 $$
 \begin{array}{rcl}
 (f\circ 1_A)(a)&=&f(1_A(a))\cr
@@ -516,14 +523,15 @@ $$
 &=&(1_B\circ f)(a).
 \end{array}
 $$
+
 {{% /proof %}}
 
 {{% definition %}}
 Una aplicación $f \colon  A \rightarrow B$ es **invertible** si existe $g \colon B \rightarrow A$ tal que
 $g \circ f = 1_A$ y $f \circ g = 1_B$,
-$$
-{}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}^f\_g B\circlearrowleft\_{1\_B}
-$$
+
+$${}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}^f\_g B\circlearrowleft\_{1\_B}$$
+
 {{% /definition %}}
 
 {{% proposition %}}
@@ -531,7 +539,7 @@ La aplicación $g$ de la definición anterior, si existe, es única.
 {{% /proposition %}}
 
 {{% proof %}}
-Si hubiera otra $g' \colon B \rightarrow A$ tal que $g' \circ f = 1_A$ y $f \circ g' = 1_B$, entonces 
+Si hubiera otra $g' \colon B \rightarrow A$ tal que $g' \circ f = 1_A$ y $f \circ g' = 1_B$, entonces
 $$
 \begin{array}{rcl}
 g&=&g\circ 1_B\cr
@@ -545,9 +553,9 @@ $$
 {{% definition %}}
 Si $f \colon  A \rightarrow B$ es invertible su aplicación **inversa**  $f^{-1} \colon B \rightarrow A$ es la única que satisface
 $f^{-1} \circ f = 1_A$ y $f \circ f^{-1} = 1_B$,
-$$
-{}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}^f\_{f^{-1}} B\circlearrowleft\_{1\_B}
-$$
+
+$${}\_{1\_A}\\!\\!\circlearrowright A\mathop{\leftrightarrows}^f\_{f^{-1}} B\circlearrowleft\_{1\_B}$$
+
 {{% /definition %}}
 
 
@@ -557,11 +565,15 @@ La identidad $1_A\colon A\rightarrow A$ es invertible y $1_A^{-1}=1_A$. Si $f\co
 
 {{% proposition %}}
 Si tenemos dos aplicaciones invertibles
-$$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C$$ entonces $g\circ f$ es invertible y $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
+
+$$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C$$
+
+entonces $g\circ f$ es invertible y $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
 {{% /proposition %}}
 
 {{% proof %}}
 Basta observar que
+
 $$
 \begin{array}{rcl}
 (g\circ f)\circ (f^{-1}\circ g^{-1})
@@ -575,7 +587,9 @@ g\circ g^{-1}\cr
 1_C,
 \end{array}
 $$
+
 y que
+
 $$
 \begin{array}{rcl}
 (f^{-1}\circ g^{-1})\circ (g\circ f)
@@ -589,12 +603,13 @@ f^{-1}\circ f\cr
 1_A.
 \end{array}
 $$
+
 {{% /proof %}}
 
 Nos disponemos a dar una caracterización más asequible de las aplicaciones invertibles.
 
 {{% definition %}}
-Sea $f\colon A \rightarrow B$ una aplicación. 
+Sea $f\colon A \rightarrow B$ una aplicación.
 
 * $f$ es **inyectiva** o **uno-a-uno** si no existen dos elementos diferentes de $A$ con la misma imagen.
 * $f$ es **sobreyectiva** si todo elemento de $B$ es la imagen de algún elemento de $A$.
@@ -642,6 +657,7 @@ Una aplicación $f\colon A \rightarrow B$ es invertible $\Leftrightarrow$ es biy
 Supongamos que $f$ es invertible. Veamos que es sobreyectiva. Dado $b\in B$ tenemos que $f(f^{-1}(b))=(f\circ f^{-1})(b)=1_B(b)=b$, con lo que $f$ es sobreyectiva. Si, dados $a,a'\in A$, $f(a)=f(a')$, entonces $f^{-1}(f(a))=f^{-1}(f(a'))$. Como $f^{-1}\circ f=1_A$ deducimos que $a=a'$, luego $f$ es inyectiva.
 
 Supongamos ahora que $f$ es biyectiva. Definimos $g\colon B\rightarrow A$ del siguiente modo. Dado $b\in B$, definimos $g(b)\in A$ como el único elemento tal que $f(g(b))=b$, que está bien definido por el lema anterior. Esto implica que $f\circ g=1_B$. Veamos que $g\circ f=1_A$. Ambas aplicaciones tienen a $A$ como dominio y codominio, así que basta ver que toman los mismos valores, es decir que para todo $a\in A$, $(g\circ f)(a)=1_A(a)=a$. Como $f$ es inyectiva, esto equivale a probar que $f((g\circ f)(a))=f(a)$. Tenemos también que $f((g\circ f)(a))=(f\circ(g\circ f))(a)$. Usando la asociatividad de la composición y la identidad ya probada deducimos que en efecto
+
 $$
 \begin{array}{rcl}
 f\circ(g\circ f)&=&(f\circ g)\circ f\cr
@@ -649,37 +665,48 @@ f\circ(g\circ f)&=&(f\circ g)\circ f\cr
 &=&f.
 \end{array}
 $$
+
 {{% /proof %}}
 
 {{% remark %}}
-Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que las igualdades en el campo de los números, es por eso que se denotan  $$f\colon A\stackrel{\cong}\longrightarrow B$$ o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
+Las aplicaciones invertibles juegan en el ámbito de los conjuntos el mismo papel que las igualdades en el campo de los números, es por eso que se denotan
+
+$$f\colon A\stackrel{\cong}\longrightarrow B$$
+
+o simplemente $f\colon A\cong B$. Por ejemplo, el producto cartesiano $A\times B$ no es conmutativo estrictamente hablando, pero hay una biyección
+
 $$
 \begin{array}{rcl}
 A\times B&\cong &B\times A,\cr
 (a,b)&\mapsto &(b,a).
 \end{array}
 $$
+
 Decimos pues que el producto cartesiano es conmutativo *salvo biyección*. Lo mismo ocurre con la asociatividad del producto cartesiano,
+
 $$
 \begin{array}{rcl}
 (A\times B)\times C&\cong &A\times(B\times C),\cr
 ((a,b),c)&\mapsto &(a,(b,c)).
 \end{array}
 $$
+
 Es más, ambos están en biyección con el producto triple, por ejemplo
+
 $$
 \begin{array}{rcl}
 (A\times B)\times C&\cong &A\times B\times C,\cr
 ((a,b),c)&\mapsto &(a,b,c).
 \end{array}
 $$
+
 {{% /remark %}}
 
 {{% definition %}}
-Sea $f \colon  A \rightarrow B$ una aplicación. 
+Sea $f \colon  A \rightarrow B$ una aplicación.
 
-* La **imagen directa** de un subconjunto del dominio $U\subset A$ 
-es el subconjunto del codominio $f(U)=\\{b\in B\;|\;\exists a\in U|f(a)=b\\}\subset B$. 
+* La **imagen directa** de un subconjunto del dominio $U\subset A$
+es el subconjunto del codominio $f(U)=\\{b\in B\;|\;\exists a\in U|f(a)=b\\}\subset B$.
 * La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}\subset A$.
 
 La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
@@ -702,19 +729,19 @@ Dada una aplicación $f\colon A\rightarrow B$, conviene no confundir la imagen d
 {{% /exercise %}}
 
 {{% watch %}}
-La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto. 
+La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la notación usada para la inversa de la aplicación $f$, cuando esta existe. La imagen inversa está siempre definida, aun cuando $f$ no es invertible y por tanto $f^{-1}$ no existe. Si $f$ es invertible, no hay ambigüedad ya que en este caso la imagen inversa $f^{-1}(V)$ de $V$ a través de $f$ coincide con la imagen directa de $V$ a través de $f^{-1}\colon B \rightarrow A$. Para añadir aún más confusión, es habitual abusar de la terminología y denotar al subconjunto $f^{-1}(\\{b\\})\subset A$ simplemente por $f^{-1}(b)$. El significado de esta expresión en cada caso se deducirá del contexto.
 {{% /watch %}}
 
-{{% remark label="rem:directinverse" %}} 
+{{% remark label="rem:directinverse" %}}
 
 * Una aplicación $f\colon A\rightarrow B$ es sobreyectiva si y solo si $\operatorname{im}f=f(A)=B$.
 
-* Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$. 
+* Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$.
 
 * A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\overline{f}\colon  A \to \Imag(f)$ como $\overline{f}(a)=f(a)$. ¿En qué se diferencia de la anterior?
 
-* Las imágenes directa e inversa preservan inclusiones, es decir, 
-dada una aplicación $f\colon A\rightarrow B$: 
+* Las imágenes directa e inversa preservan inclusiones, es decir,
+dada una aplicación $f\colon A\rightarrow B$:
 
 	- $U\subset U'\subset A\Rightarrow f(U)\subset f(U')\subset B$
 	- $V \subset V'\subset B\Rightarrow f^{-1}(V)\subset f^{-1}(V')\subset A$.
@@ -727,7 +754,7 @@ Dada una aplicación $f\colon A \rightarrow B$ y subconjuntos $U\subset
 A$ y $V\subset B$, se verifican las siguientes propiedades:
 
 * $U \subset f^{-1}(f(U))$.
-* $f(f^{-1}(V)) \subset V$. 
+* $f(f^{-1}(V)) \subset V$.
 
 {{% /proposition %}}
 
@@ -739,7 +766,7 @@ Probaremos la segunda propiedad y dejaremos la primera como ejercicio. Dado $y\i
 Dada una aplicación $f\colon A \rightarrow B$ y subconjuntos $U_1,U_2 \subset
 A$ y $V_1,V_2 \subset B$, se verifican las siguientes propiedades:
 
-1. $f(U_1 \cup U_2) = f(U_1) \cup f(U_2)$. 
+1. $f(U_1 \cup U_2) = f(U_1) \cup f(U_2)$.
 2. $f(U_1 \cap U_2) \subset f(U_1) \cap f(U_2)$.
 3. $f^{-1} (V_1 \cup V_2) = f^{-1} (V_1) \cup f^{-1} (V_2)$.
 4. $f^{-1} (V_1 \cap V_2) = f^{-1} (V_1) \cap f^{-1} (V_2)$.
@@ -860,7 +887,7 @@ Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos cas
 
 * $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$.
 
-* $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$ si $n>0$. 
+* $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$ si $n>0$.
 
 * En este caso la proyección natural es biyectiva $\pi\colon A\cong A/=$.
 
@@ -898,7 +925,7 @@ Si $R$ es una relación de equivalencia en $A$, entonces $A/R$ es una partición
 {{% /theorem %}}
 
 {{% proof %}}
-Las clases que forman $A/R$ no son vacías porque todas poseen algún representante. La unión de todas las clases es $A$, porque todo $a\in A$ pertenece a una clase, a la suya propia, $a\in R(a)$. Supongamos que dos clases $R(a)$ y $R(b)$ no fueran disjuntas. Entonces existe $c\in R(a)\cap R(b)$. Esto significa que $cRa$ y $cRb$. Por la simetría y la transitividad, $aRb$, luego por la proposición anterior $R(a)=R(b)$. 
+Las clases que forman $A/R$ no son vacías porque todas poseen algún representante. La unión de todas las clases es $A$, porque todo $a\in A$ pertenece a una clase, a la suya propia, $a\in R(a)$. Supongamos que dos clases $R(a)$ y $R(b)$ no fueran disjuntas. Entonces existe $c\in R(a)\cap R(b)$. Esto significa que $cRa$ y $cRb$. Por la simetría y la transitividad, $aRb$, luego por la proposición anterior $R(a)=R(b)$.
 
 Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalencia $a\sim_Pb$ si $a$ y $b$ pertenecen al mismo elemento de la partición. Es obvio que esta relación es simétrica. Es reflexiva porque, en virtud de la segunda propiedad de las particiones, todo elemento de $A$ pertenece a alguno de $P$. Veamos la transitividad. Si $a\sim_Pb\sim_Pc$ entonces existen $U,V\in P$ tales que $a,b\in U$ y $b,c\in V$. Como $b\in U\cap V$ la tercera propiedad de las particiones nos asegura que $U=V$, así que $a\sim_Pc$. Esta relación de equivalencia satisface $A/\sim_P=P$ por su propia definición, ya que el vacío no está en $P$.
 {{% /proof %}}
@@ -909,10 +936,10 @@ Si tenemos una partición $P$ de $A$, podemos definir la relación de equivalenc
 {{% theorem name="Propiedad universal de la proyección canónica" %}}
 Si $f\colon A\rightarrow B$ es una aplicación y $R$ es una relación de equivalencia en $A$ tal que
 $ a R b \Rightarrow f(a) =f(b)$, entonces
-existe una única aplicación $\overline{f}\colon A/R\to B$ tal que $f=\overline{f}\circ\pi$, 
-$$
-f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\overline{f}}\longrightarrow B.
-$$
+existe una única aplicación $\overline{f}\colon A/R\to B$ tal que $f=\overline{f}\circ\pi$,
+
+$$f\colon A\stackrel{\pi}\longrightarrow A/R\stackrel{\overline{f}}\longrightarrow B.$$
+
 {{% /theorem %}}
 
 {{% proof %}}
@@ -949,7 +976,7 @@ es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónic
 {{% /theorem %}}
 
 {{% proof %}}
-Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\im f$ como $f'(a)=f(a)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(a)=i(f(a))=f(a)$ para todo $a\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$. 
+Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\im f$ como $f'(a)=f(a)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(a)=i(f(a))=f(a)$ para todo $a\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
 
 El teorema anterior se puede aplicar a $f'\colon A\rightarrow\im f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \im f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $a\in A$,
 $$
@@ -967,9 +994,9 @@ Veamos que $\overline{f}$ es biyectiva. Comenzamos por la sobreyectividad. Dado 
 Este teorema nos proporciona un método muy eficiente para establecen una biyección de un conjunto cociente en otro.
 
 {{% example name="$\mathbb{Z}$ módulo $n$" %}}
-Vamos a dar una demostración rigurosa de que $\mathbb{Z}/\sim\_n$ posee $n$ elementos para $n>0$. Para ello definimos la aplicación $f\colon \mathbb Z\rightarrow \mathbb Z$ tal que $f(m)$ es el resto no negativo de dividir $m$ entre $n$. 
+Vamos a dar una demostración rigurosa de que $\mathbb{Z}/\sim\_n$ posee $n$ elementos para $n>0$. Para ello definimos la aplicación $f\colon \mathbb Z\rightarrow \mathbb Z$ tal que $f(m)$ es el resto no negativo de dividir $m$ entre $n$.
 
-La imagen de $f$ es $\im f=\\{0,\dots, n-1\\}$. En efecto, el resto de la división es $\geq 0$ y $<n$, lo cual demuestra $\subset$. Además, para $0\leq m<n$, el cociente de la división es $0$ y el resto es el propio $m$, por tanto también tenemos $\subset$. 
+La imagen de $f$ es $\im f=\\{0,\dots, n-1\\}$. En efecto, el resto de la división es $\geq 0$ y $<n$, lo cual demuestra $\subset$. Además, para $0\leq m<n$, el cociente de la división es $0$ y el resto es el propio $m$, por tanto también tenemos $\subset$.
 
 Veamos ahora que $\sim\_f=\sim\_n$. Sean $m,m'\in\mathbb Z$. Dividimos ambos números entre $n$, $m=c\cdot n+f(m)$ y $m'=c'\cdot n+f(m')$. Tenemos que $m-m'=(c-c')\cdot n+(f(m)-f(m'))$ es también una división, porque $|f(m)-f(m')|<n$. Por tanto $f(m)=f(m')$ si y solo si $m-m'$ es divisible por $n$. Esto demuestra que ambas relaciones coinciden.
 
@@ -987,7 +1014,7 @@ Uno de los aspectos que caracterizan a las Matemáticas dentro de las ciencias e
 En esta sección vamos a dar una introducción a este tema, evitando entrar en detalles técnicos que requerirían un conocimiento más profundo de la Teoría axiomática de conjuntos.
 
 
-Nuestros prototipos de conjuntos finitos son los de la forma  $\\{1,2,\dots, n\\}$, donde  $n$ es un número natural mayor o igual que $ 1$. Pero en Matemáticas, uno de los conjuntos más importantes, el de los números naturales 
+Nuestros prototipos de conjuntos finitos son los de la forma  $\\{1,2,\dots, n\\}$, donde  $n$ es un número natural mayor o igual que $ 1$. Pero en Matemáticas, uno de los conjuntos más importantes, el de los números naturales
 $$\N =\\{0,1,2,3,\dots \\},
 $$
 cae fuera de los primeros. Se trata de hecho del primer contacto que tenemos con la noción de "infinito".
@@ -1004,7 +1031,7 @@ Decimos que dos conjuntos $X$ e $Y$ son {\bf equipotentes} si existe una aplicac
 Es fácil ver que la relación de equipotencia es una relación de equivalencia en cualquier "conjunto de conjuntos".
 
 {{% proposition %}}
- \label{prop:aplicaciones_entre_m_y_n} Sean dos números enteros $m,n\geq 1$ y sea $f:\\{1,\dots,m\\} \to \\{1,\dots,n\\}$ una aplicación. Se tienen las siguientes propiedades:
+\label{prop:aplicaciones_entre_m_y_n} Sean dos números enteros $m,n\geq 1$ y sea $f:\\{1,\dots,m\\} \to \\{1,\dots,n\\}$ una aplicación. Se tienen las siguientes propiedades:
 \begin{enumerate}
 \item Si $f$ es inyectiva, entonces $m\leq n$.
 \item Si $f$ es sobreyectiva, entonces $m\geq n$.
@@ -1016,26 +1043,26 @@ Además, si $m=n$, las propiedades siguientes son equivalentes:
 \item[(b)] $f$ es sobreyectiva.
 \item[( c )] $f$ es biyectiva.
 \end{enumerate}
-{{% /proposition %}} 
-
-{{% proof %}}
- La prueba se deja como ejercicio.
-{{% /proof %}}
-
-{{% proposition %}}
- \label{prop:subconj_m} Sea un número entero  $m\geq 1$ e $Y\subset \\{1,\dots,m\\}$ un subconjunto no vacío. Entonces existe un entero $n\geq 1$ y una aplicación biyectiva $f:\\{1,\dots,n\\} \to Y$. Además, por la proposición anterior se debe tener $n\leq m$.
 {{% /proposition %}}
 
 {{% proof %}}
- La prueba se deja como ejercicio.
+La prueba se deja como ejercicio.
+{{% /proof %}}
+
+{{% proposition %}}
+\label{prop:subconj_m} Sea un número entero  $m\geq 1$ e $Y\subset \\{1,\dots,m\\}$ un subconjunto no vacío. Entonces existe un entero $n\geq 1$ y una aplicación biyectiva $f:\\{1,\dots,n\\} \to Y$. Además, por la proposición anterior se debe tener $n\leq m$.
+{{% /proposition %}}
+
+{{% proof %}}
+La prueba se deja como ejercicio.
 {{% /proof %}}
 
 {{% corollary %}}
- \label{cor:sobre_finito} Sea un número entero $m\geq 1$, $Y\subset \\{1,\dots,m\\}$ y supongamos que existe una aplicación sobreyectiva $f: Y \to \\{1,\dots,m\\}$. Entonces $Y= \\{1,\dots,m\\}$.
+\label{cor:sobre_finito} Sea un número entero $m\geq 1$, $Y\subset \\{1,\dots,m\\}$ y supongamos que existe una aplicación sobreyectiva $f: Y \to \\{1,\dots,m\\}$. Entonces $Y= \\{1,\dots,m\\}$.
 {{% /corollary %}}
 
 {{% proof %}}
- Es una consecuencia inmediata de las dos proposiciones anteriores.
+Es una consecuencia inmediata de las dos proposiciones anteriores.
 {{% /proof %}}
 
 Para tratar matemáticamente a las nociones de "conjunto finito" y de "conjunto infinito" debemos dar definiciones formales de ellas.
@@ -1049,10 +1076,12 @@ Decimos que un conjunto $X$ es {\bf finito} si o bien es vacío, o si no es vac�
 {{% /definition %}}
 
 {{% example name="Ejemplo" %}}
- (1) Para cada número natural $n\geq 1$, el conjunto $\\{1,2,\dots, n\\}$ es finito (según la definición anterior).
+(1) Para cada número natural $n\geq 1$, el conjunto $\\{1,2,\dots, n\\}$ es finito (según la definición anterior).
 
 \noindent (2) El conjunto de los números naturales $\N$ es infinito, pues $\N$ es equipotente a $\N_+$:
-$$ f: \N \to \N_+,\quad f(x) = x+1,$$
+
+$$f: \N \to \N_+,\quad f(x) = x+1,$$
+
 es una aplicación biyectiva, y $\N_+$ es un subconjunto propio de $\N$.
 
 \noindent (3) Si $X$ es un conjunto finito (resp. infinito) e $Y$ es un conjunto equipotente a $X$, entonces $Y$ es también un conjunto finito (resp. infinito).
@@ -1061,7 +1090,7 @@ es una aplicación biyectiva, y $\N_+$ es un subconjunto propio de $\N$.
 La proposición siguiente nos garantiza que las definiciones dadas de de conjunto finito y de conjunto infinito son excluyentes y cubren todos los casos.
 
 {{% proposition %}}
- \label{prop:finito_vs_infinito} Sea $X$ un conjunto. Las propiedades siguientes son equivalentes:
+\label{prop:finito_vs_infinito} Sea $X$ un conjunto. Las propiedades siguientes son equivalentes:
 \begin{enumerate}
 \item[(a)] $X$ es un conjunto finito.
 \item[(b)] $X$ no es un conjunto infinito.
@@ -1069,19 +1098,20 @@ La proposición siguiente nos garantiza que las definiciones dadas de de conjunt
 {{% /proposition %}}
 
 {{% proof %}}
-  (a) $\Rightarrow$ (b): Se prueba sin mucha dificultad a partir del Corolario \ref{cor:sobre_finito}.
+(a) $\Rightarrow$ (b): Se prueba sin mucha dificultad a partir del Corolario \ref{cor:sobre_finito}.
 
-
-\noindent (b) $\Rightarrow$ (a): es equivalente a probar que si $X$ no es finito, entonces $X$ es infinito. 
+\noindent (b) $\Rightarrow$ (a): es equivalente a probar que si $X$ no es finito, entonces $X$ es infinito.
 
 Supongamos que $X$ no es finito, es decir, no es vacío y no es posible establecer una aplicación biyectiva entre $X$ y ningún conjunto de la forma $\\{1,2,\dots, m\\}$, con $m\geq 1$. Como $X\neq \varnothing$, podemos encontrar un elemento $x_1\in X$. Sea $f_1:\\{1\\} \to X$ la aplicación inyectiva definida por $f_1(1)=x_1$. Como $X$ no es finito, la aplicación $f$ no puede ser sobreyectiva y por tanto podremos encontrar un $x_2\in X$ que no pertenece a la imagen de $f_1$. Consideremos la aplicación $f_2: \\{1,2\\} \to X$ que extiende a $f_1$ y tal que $f_2(2)=x_2$. Por la misma razón anterior $f_2$ no puede ser sobreyectiva.
 
-Continuando con este proceso definimos una familia de aplicaciones 
-$$ f_n: \\{1,\dots, n\\} \to X,\quad n\in\N,
-$$
+Continuando con este proceso definimos una familia de aplicaciones
+
+$$f_n: \\{1,\dots, n\\} \to X,\quad n\in\N,$$
+
 todas ellas inyectivas, que cada una prolonga a la anterior, es decir $f_n|_{\\{1,\dots, n-1\\}} = f_{n-1}$. Con esta familia construimos una aplicación $f:\N \to X$ de la siguiente forma:
-$$ f(n) = f_n(n)\quad \text{\ para cada\ }\ n\in \N.
-$$
+
+$$f(n) = f_n(n)\quad \text{\ para cada\ }\ n\in \N.$$
+
 Se prueba sin dificultad que $f$ es inyectiva, y como $\N$ es infinito, concluimos aplicando la Proposición \ref{prop:finito_infinito}, 3)\footnote{En esta prueba hemos utilizado un axioma de la Teoría axiomática de conjuntos denominado el "axioma de elección numerable". Al tratarse de una introducción a la Teoría de conjuntos, no entraremos en más detalles.}.
 {{% /proof %}}
 
@@ -1089,7 +1119,7 @@ En la siguiente proposición damos las principales propiedades que se deducen de
 que dichas definiciones modelizan correctamente las ideas intuitivas previas que teníamos de estas nociones.
 
 {{% proposition %}}
- \label{prop:finito_infinito}  Se tienen las siguientes propiedades:
+\label{prop:finito_infinito}  Se tienen las siguientes propiedades:
 \begin{enumerate}
 \item[1)] Si $X$ es un conjunto finito y $f:X \to Y$ es una aplicación sobreyectiva, entonces $Y$ también es un conjunto finito.
 \item[2)] Si $Y$ es un conjunto finito y $f:X \to Y$ es una aplicación inyectiva, entonces $X$ también es un conjunto finito.
@@ -1102,10 +1132,12 @@ que dichas definiciones modelizan correctamente las ideas intuitivas previas que
 {{% /proposition %}}
 
 {{% proof %}}
- Nos limitaremos a dar algunas indicaciones.
+Nos limitaremos a dar algunas indicaciones.
 
 \noindent 1): Podemos restringirnos al caso en que $X= \\{1,\dots,m\\}$ con $m\geq 1$. Definimos $g:Y \to X= \\{1,\dots,m\\}$ de la siguiente forma: para cada $y\in Y$
-$$ g(y) := \min f^{-1} (\\{y\\}) \in X.$$
+
+$$g(y) := \min f^{-1} (\\{y\\}) \in X.$$
+
 Se prueba sin dificultad que $f\circ g = 1_Y$, por lo que $g$ es inyectiva e $Y$ será equipotente a $\Imag(g)\subset X= \\{1,\dots,m\\}$. Concluimos aplicando la Proposición \ref{prop:subconj_m}.
 
 
@@ -1113,13 +1145,19 @@ Se prueba sin dificultad que $f\circ g = 1_Y$, por lo que $g$ es inyectiva e $Y$
 
 
 
-\noindent 3): Basta probar que si $X\subset Y$ con $X$ conjunto infinito, entonces $Y$ también es infinito. 
+\noindent 3): Basta probar que si $X\subset Y$ con $X$ conjunto infinito, entonces $Y$ también es infinito.
 
 Como $X$ es infinito, existe un subconjunto propio $X'\subsetneq X$ y una aplicación biyectiva $f:X'\to X$. Es claro que $Y':= X' \cup (Y\setminus X) $ es un subconjunto propio de $Y$, y que la aplicación $g: Y' \to Y$ definida por
-$$ g(y) = \left\\{ \begin{array}{ccl} f(y) & \text{si} & y\in X'\\
- y & \text{si} & y\in Y\setminus X \end{array} \right.
 $$
-es biyectiva. Por tanto $Y$ es equipotente a un subconjunto propio y concluimos que $Y$ es infinito. 
+g(y) =
+\left\\{
+\begin{array}{ccl}
+f(y) & \text{si} & y\in X'\\
+y & \text{si} & y\in Y\setminus X
+\end{array}
+\right.
+$$
+es biyectiva. Por tanto $Y$ es equipotente a un subconjunto propio y concluimos que $Y$ es infinito.
 
 
 \noindent 4): Por reducción al absurdo. Si $X$ fuera finito, deduciríamos que $Y$ también es finito por 1), lo que contradice que $Y$ sea infinito de acuerdo con la Proposición \ref{prop:finito_vs_infinito}.
@@ -1129,15 +1167,17 @@ es biyectiva. Por tanto $Y$ es equipotente a un subconjunto propio y concluimos 
 
 
 \noindent 6) y 7): Una idea fundamental es que siempre hay una aplicación inyectiva de $X$ en $\mathcal{P}(X)$:
-$$ x\in X \longmapsto  \\{x\\} \in \mathcal{P}(X).
-$$
+
+$$x\in X \longmapsto  \\{x\\} \in \mathcal{P}(X).$$
+
 Por tanto, si $X$ es infinito, $\mathcal{P}(X)$ también es infinito (aplicar 3)), y si $\mathcal{P}(X)$ es finito, $X$ también es finito (aplicar 2)).
 
-Para probar $X$ finito $\Rightarrow$ $\mathcal{P}(X)$ finito, 
+Para probar $X$ finito $\Rightarrow$ $\mathcal{P}(X)$ finito,
 basta considerar el caso en que $X=\\{1,\dots, m\\}$, con $m\geq 1$. En este caso se procede por inducción probando primeramente que
 los conjuntos
-$$ \mathcal{P}(\\{1,\dots, n+1\\}) \quad \text{\ y\ }\quad \mathcal{P}(\\{1,\dots, n\\}) \times \\{0,1\\}
-$$
+
+$$\mathcal{P}(\\{1,\dots, n+1\\}) \quad \text{\ y\ }\quad \mathcal{P}(\\{1,\dots, n\\}) \times \\{0,1\\}$$
+
 son equipotentes.
 
 Por último, si $\mathcal{P}(X)$ fuera infinito, $X$ no podría ser finito y entonces ha de ser infinito por la Proposición \ref{prop:finito_vs_infinito}.
@@ -1151,18 +1191,18 @@ El cardinal de un conjunto finito $X$ se denotará por $\sharp(X)$, o también $
 {{% /definition %}}
 
 {{% watch %}}
- Una de las primeras sorpresas que trajo el estudio matemático de los conjuntos infinitos es que "no todos los infinitos son iguales", o dicho de modo más preciso, no todos los conjuntos infinitos son equipotentes. De hecho, Cantor probó mediante su conocido "método diagonal" que los conjuntos $\N$, de los números naturales, y $\RR$, de los números reales, no son equipotentes. Más generalmente, ningún conjunto $X$ es equipotente al conjunto de sus partes $\mathcal{P}(X)$, lo que nos proporciona "infinitos tipos de infinito". Todo esto lleva a la {\bf Teoría de cardinales} (y de {\bf ordinales}), que no abordaremos en estas notas.
+Una de las primeras sorpresas que trajo el estudio matemático de los conjuntos infinitos es que "no todos los infinitos son iguales", o dicho de modo más preciso, no todos los conjuntos infinitos son equipotentes. De hecho, Cantor probó mediante su conocido "método diagonal" que los conjuntos $\N$, de los números naturales, y $\RR$, de los números reales, no son equipotentes. Más generalmente, ningún conjunto $X$ es equipotente al conjunto de sus partes $\mathcal{P}(X)$, lo que nos proporciona "infinitos tipos de infinito". Todo esto lleva a la {\bf Teoría de cardinales} (y de {\bf ordinales}), que no abordaremos en estas notas.
 {{% /watch %}}
 
 Para terminar este tema, veamos una prueba de que ningún conjunto $X$ es equipotente al conjunto de sus partes $\mathcal{P}(X)$, así como una ilustración del método diagonal de Cantor.
 
 {{% proposition %}}
- Si $X$ es un conjunto cualquiera, no existe ninguna aplicación sobreyectiva $\varphi: X 
+Si $X$ es un conjunto cualquiera, no existe ninguna aplicación sobreyectiva $\varphi: X
 \longrightarrow \mathcal{P}(X)$.
 {{% /proposition %}}
 
 {{% proof %}}
- 
+
 Sea $\varphi: X \longrightarrow \mathcal{P}(X)$ una aplicación arbitraria. Veamos que $\varphi$ nunca puede ser sobreyectiva. La idea fundamental consiste en considerar el siguiente subconjunto de $X$:
 
 
@@ -1187,24 +1227,26 @@ En ambos casos llegamos a un absurdo, por lo que nuestra suposición es falsa y 
 {{% /proof %}}
 
 {{% proposition %}}
- No existe ninguna aplicación sobreyectiva $\varphi: \N \longleftarrow \N^\N$.
+No existe ninguna aplicación sobreyectiva $\varphi: \N \longleftarrow \N^\N$.
 {{% /proposition %}}
 
 {{% proof %}}
-  Sea  $\varphi: \N \longleftarrow \N^\N$ una aplicación. Veamos que $\varphi$ nunca podrá ser sobreyectiva. La idea fundamental es considerar cualquier $f\in \N^\N$ (i.e. cualquier aplicación $f:\N \to \N$) que verifique lo siguiente:
-$$  f(n) \neq \varphi(n)(n)\quad \forall n\in \N.
-$$
+Sea  $\varphi: \N \longleftarrow \N^\N$ una aplicación. Veamos que $\varphi$ nunca podrá ser sobreyectiva. La idea fundamental es considerar cualquier $f\in \N^\N$ (i.e. cualquier aplicación $f:\N \to \N$) que verifique lo siguiente:
+
+$$f(n) \neq \varphi(n)(n)\quad \forall n\in \N.$$
+
 Por ejemplo, podemos tomar $f:\N \to \N$ definida por $f(n) = \varphi(n)(n) + 1$.
 
-Vemos fácilmente que $f$ no pertenece a la imagen de $\varphi$, puesto que si existiera $n_0\in \N$ tal que $f=\varphi(n_0)$ se tendría que 
-$$ f(n) = \varphi(n_0)(n)\quad \forall n\in \N,
-$$
+Vemos fácilmente que $f$ no pertenece a la imagen de $\varphi$, puesto que si existiera $n_0\in \N$ tal que $f=\varphi(n_0)$ se tendría que
+
+$$f(n) = \varphi(n_0)(n)\quad \forall n\in \N,$$
+
 y en particular $f(n_0) = \varphi(n_0)(n_0)$, lo cual contradice la propiedad con la que hemos elegido $f$. Así pues $\varphi$ no es sobreyectiva.
 {{% /proof %}}
 
 {{% watch %}}
 
-Nótese que las pruebas de las dos proposiciones anteriores son muy similares y ambas responden al 
+Nótese que las pruebas de las dos proposiciones anteriores son muy similares y ambas responden al
 "método diagonal" de Cantor. Para apreciar mejor la similitud de ambas pruebas, podemos tener en cuenta que de hecho la segunda proposición es un corolario de la primera, pues sabemos que hay una biyección natural entre $\mathcal{P}(\N)$ y $\\{0,1\\}^\N$, y por otra parte es fácil encontrar una aplicación sobreyectiva $\N^\N \to \\{0,1\\}^\N$ (para ello basta tomar la composición con cualquier aplicación sobreyectiva $\N \to \\{0,1\\}$), de manera que si existiera alguna aplicación sobreyectiva $\N \to \N^\N$, componiéndola con la aplicación sobreyectiva $\N^\N \to \\{0,1\\}^\N$, obtendríamos una aplicación sobreyectiva $\N \to \\{0,1\\}^\N$, lo que contradeciría la primera proposición.
 {{% /watch %}}
 
