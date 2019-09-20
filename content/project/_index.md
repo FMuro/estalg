@@ -8,13 +8,13 @@ pre = "<i class='fa fa-book'></i> "
 
 ### ¿Qué vamos a estudiar?
 
-La asigantura se centrará en el estudio de los conceptos de anillo, módulo y cuerpo y sus aplicaciones a las ecuaciones diofánticas, los operadores lineales, las construcciones geométricas con regla y compás y las ecuaciones polinómicas de grado superior en una variable. Seguiremos los capítulos correspondientes del libro titulado [*Algebra*](http://encore.fama.us.es/iii/encore/record/C__Rb1729980), de Michael Artin, basado en las notas que este profesor del Massachussets Institute of Technology usaba en sus clases. 
+La asigantura se centrará en el estudio de los conceptos de anillo, módulo y cuerpo y sus aplicaciones a las ecuaciones diofánticas, los operadores lineales, las construcciones geométricas con regla y compás y las ecuaciones polinómicas de grado superior en una variable. Seguiremos los capítulos correspondientes de la **segunda edición** del libro titulado [**Algebra**](https://fama.us.es/discovery/search?query=any,contains,algebra%20artin&tab=all_data_not_idus&search_scope=all_data_not_idus&sortby=date_d&vid=34CBUA_US:VU1&facet=frbrgroupid,include,20288007660796345&lang=es&offset=0), de Michael Artin, basado en las notas que este profesor del Massachussets Institute of Technology usaba en sus clases. 
 
 ![book](../images/book.jpeg)
 
-Concretamente usaremos los siguientes capítulos y secciones, referidos siempre a la segunda edición del libro:
+Concretamente usaremos los siguientes capítulos y secciones:
 
-* Capítulo 11, secciones de la 5, 7 y 8.
+* Capítulo 11, secciones 5, 7 y 8.
 
 * Capítulo 12, secciones 2, 3 y 5.
 
@@ -22,7 +22,7 @@ Concretamente usaremos los siguientes capítulos y secciones, referidos siempre 
 
 * Capítulo 15, todas las secciones excepto 6, 7, 9 y 10.
 
-* Capítulo 16, todas las secciones excepto la 8 y la 9.
+* Capítulo 16, todas las secciones excepto 8 y 9.
 
 En el último de estos capítulos y en parte del penúltimo trabajaremos dentro de $\mathbb{C}$ para simplificar la exposición. En el último además veremos parte de la sección 5 del capítulo 7.
 
@@ -38,6 +38,12 @@ Recomendamos repasar conceptos vistos en Álgebra Básica que se corresponden co
 
 * Capítulo 12, secciones 1, 3 y 4.
 
+### Clases
+
+Cuatro horas semanales, de las cuales una hora será de problemas, de media a lo largo del semestre. Haremos los siguientes problemas del libro:
+
+{{< button href="../docs/ejercicios.html" align="center" >}} Problemas {{< /button >}}
+
 ### ¿Cómo vamos a evaluar?
 
 La evaluación continua se basará en dos exámenes. Estos exámenes durarán dos horas y se realizarán en horas de clase. El primero tendrá lugar en la última semana de noviembre y el segundo en las dos últimas horas de clase de la asignatura.
@@ -50,11 +56,6 @@ La evaluación continua se basará en dos exámenes. Estos exámenes durarán do
 Los contenidos de cada examen se fijarán con la suficiente antelación. La nota final de la evaluación continua será la media aritmética de ambos exámenes. Los estudiantes que no aprueben por este método podrán presentarse a las convocatorias oficiales en las fechas designadas por la Facultad de Matemáticas bajo las condiciones establecidas por la Universidad de Sevilla. 
 
 Quien apruebe solo uno de los dos exámenes de la evaluación continua y tenga una media suspensa podrá, si así lo desea, presentarse al examen de la primera convocatoria y examinarse solo de la parte que suspendió. Su nota final será la media aritmética de la parte que aprobó y de la que se examine en la primera convocatoria. También podrán presentarse a la primera convocatoria aquellos estudiantes aprobados que deseen subir su nota, en ningún caso la bajarán.
-
-
-### Clases
-
-Cuatro horas semanales, de las cuales una hora será de problemas, de media a lo largo del semestre.
 
 ### Tutorías
 
