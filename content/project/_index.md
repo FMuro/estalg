@@ -61,7 +61,7 @@ Quien apruebe solo uno de los dos exámenes de la evaluación continua y tenga u
 
 | Profesores                      | Días y horas                                                 |
 |---------------------------------|--------------------------------------------------------------|
-| Fernando Muro (coordinador)     | Martes, miércoles y jueves de 9:30 a 11:30                   |
-| Antonio Rojas                   | Lunes y martes de 11:00 a 13:00 y miércoles de 17:00 a 19:00 |
-| Jesús Soto                      | Martes, Jueves y Viernes de 15:30 a 17:30                    |
+| Fernando Muro (coordinador)     | Martes de 10:30 a 12:30 y jueves y viernes de 9:45 a 11:30   |
+| Antonio Rojas                   | Por determinar                                               |
+| Jesús Soto                      | Por determinar                                               |
 
