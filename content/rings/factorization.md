@@ -616,7 +616,7 @@ El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irredu
 
 $$
 \begin{array}{rcl}
-\mathbb Z[x]/(x^2+1)&\cong&\mathbb Z[i],\cr
+\mathbb Z[x]/(x^2+1)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[i],\cr
 \bar{x}&\mapsto& i.
 \end{array}
 $$
@@ -642,7 +642,7 @@ Por tanto $9x^2-6x+10\in\mathbb{Z}[x]$ es un polinomio irreducible que tiene a $
 
 $$
 \begin{array}{rcl}
-\mathbb Z[x]/(9x^2-6x+10)&\cong&\mathbb Z[\frac{1}{3}+i],\cr
+\mathbb Z[x]/(9x^2-6x+10)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[\frac{1}{3}+i],\cr
 \bar{x}&\mapsto& i.
 \end{array}
 $$
