@@ -59,9 +59,10 @@ Quien apruebe solo uno de los dos exámenes de la evaluación continua y tenga u
 
 ### Tutorías
 
-| Profesores                                                  | Días y horas                                                 | Correo         |
-|-------------------------------------------------------------|--------------------------------------------------------------|----------------|
-| [Fernando Muro](http://personal.us.es/fmuro/) (coordinador) | Martes de 10:30 a 12:30 y jueves y viernes de 9:45 a 11:30   | <fmuro@us.es>  |
-| [Antonio Rojas](http://personal.us.es/arojas/)              | Lunes de 16:00 a 18:00 y miércoles y vernes de 10:00 a 12:00 | <arojas@us.es> |
-| Jesús Soto                                                  | Por determinar                                               | <soto@us.es>   |
+| Profesores                                                  | Días y horas                                                 | Correo            |
+|-------------------------------------------------------------|--------------------------------------------------------------|-------------------|
+| Víctor Carmona                                              |                                                              | <vcarmona1@us.es> |
+| [Fernando Muro](http://personal.us.es/fmuro/) (coordinador) | Martes de 10:30 a 12:30 y jueves y viernes de 9:45 a 11:30   | <fmuro@us.es>     |
+| [Antonio Rojas](http://personal.us.es/arojas/)              | Lunes de 16:00 a 18:00 y miércoles y vernes de 10:00 a 12:00 | <arojas@us.es>    |
+| Jesús Soto                                                  | Por determinar                                               | <soto@us.es>      |
 
