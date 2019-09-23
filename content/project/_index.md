@@ -62,5 +62,5 @@ Cuatro horas semanales, de las cuales una hora será de problemas, de media a lo
 |-------------------------------------|-----------------------------------------------------------------------------------------|----------------------|
 | Fernando Muro                       | Martes de 10:30 a 12:30 y jueves y viernes de 9:45 a 11:30                              | <fmuro@us.es>        |
 | Luis Narváez                        | Lunes y miércoles de 15:00 a 18:00                                                      | <narvaez@us.es>      |
-| Miguel Ángel Olalla (coordinador)   |                                                                                         | <miguelolalla@us.es> |
+| Miguel Ángel Olalla (coordinador)   | Lunes y miércoles de 9:00 a 11:00 y jueves de 15:30 a 17:30                             | <miguelolalla@us.es> |
 | Mercedes Rosas                      | Martes y jueves de 11:00 a 12:00 y miércoles de 11:00 a 13:00 y de 14:00 a 16:00        | <mrosas@us.es>       |
