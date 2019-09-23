@@ -594,11 +594,13 @@ $\subset$ Todo elemento $p \in (f)$ es de la forma $p =g\cdot f =(g \cdot c)\cdo
 El siguiente resultado nos demuestra con rigor que las dos posibles maneras de añadirle a $R$ raíces de polinomios irreducibles dan resultados isomorfos.
 
 {{% theorem %}}
-Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ que contiene al cuerpo de fracciones, $k\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $\bar{x}$ a $\alpha$.
+Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ tal que $R\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $\bar{x}$ a $\alpha$.
 {{% /theorem %}}
 
 {{% proof %}}
-Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusón $R\subset k\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. Para ello, consideramos la extensión $\bar g\colon k[x]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[x]$.
+Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusón $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. 
+
+Recordemos que la inclusión $R\subset K$ se extiende al cuerpo de fracciones $k$ de $R$, $R\subset k\subset K$. Para probar que $\ker g=(f)$ consideramos la extensión $\bar g\colon k[x]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[x]$.
 
 El ideal $\ker\bar{g}\subset k[x]$ está formado por todos los polinomios que tienen a $\alpha$ como raíz. Al ser $k[x]$ un dominio euclídeo, $\ker\bar{g}=(\tilde f)$ donde $\tilde f\in k[x]$ es cualquier polinomio no nulo de grado mínimo en este ideal. Realizamos la división euclídea en $k[x]$, $f(x)=c(x)\tilde{f}(x)+r(x)$. Si $r$ no fuera trivial, su grado sería menor que el de $\tilde{f}$, pero $r(x)=f(x)-c(x)\tilde{f}(x)$, por tanto $r(\alpha)=f(\alpha)-c(\alpha)\tilde{f}(\alpha)=0-c(\alpha)0=0$. Esto es imposible porque $\tilde{f}$ es de grado mínimo. Por tanto $r=0$ y $f(x)=c(x)\tilde{f}(x)$. El polinomio $c(x)$ ha de ser constante porque $f$ es también irreducible en $k[x]$, así que $f$ y $\tilde{f}$ son asociados, luego generan el mismo ideal, $\ker\bar{g}=(f)\subset k[x]$.
 
@@ -609,8 +611,8 @@ Como $g=\bar{g}|_{R[x]}$, $\ker g=\ker\bar{g}\cap R[x]=(f)\subset R[x]$ en virtu
 Recuerda que, dado un cuerpo $k$, un polinomio $f\in k[x]$ de grado $\leq 3$ es irreducible si y solo si no tiene raíces en $k$.
 {{% /remark %}}
 
-{{% example name="Añadiendo elementos" %}}
-El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Por tanto el resultado anterior se aplica a la inclusión $\mathbb Q\subset\mathbb C$ y a la raíz compleja $i\in\mathbb C$ de $x^2+1$ y obtenemos un isomorfismo con los enteros de Gauss,
+{{% example name="Los enteros de Gauss como cociente" %}}
+El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Por tanto el teorema anterior se aplica a la inclusión $\mathbb Z\subset\mathbb C$ y a la raíz compleja $i\in\mathbb C$ de $x^2+1$ y obtenemos un isomorfismo con los enteros de Gauss,
 
 $$
 \begin{array}{rcl}
@@ -619,23 +621,55 @@ $$
 \end{array}
 $$
 
-Análogamente obtenemos por ejemplo 
+{{% /example %}}
+
+{{% example name="$\mathbb{Z}[\frac{1}{3}+i]$" %}}
+Para establecer un isomorfismo entre $\mathbb{Z}[\frac{1}{3}+i]\subset\mathbb{C}$ y un cociente de $\mathbb{Z}[x]$ buscamos un polinomio irreducible con coeficientes enteros que tenga a $\frac{1}{3}+i$ como raíz.
+
+Si denotamos $\alpha=\frac{1}{3}+i$ tenemos que $\alpha-\frac{1}{3}=i$ luego 
+
+$$\left(\alpha-\frac{1}{3}\right)^2=\alpha^2-\frac{2}{3}\alpha+\frac{1}{9}=-1=i^2,$$
+
+es decir, 
+
+$$\alpha^2-\frac{2}{3}\alpha+\frac{10}{9}=0.$$ 
+
+Dicho de otro modo, $\alpha$ es raíz del polinomio irreducible $x^2-\frac{2}{3}x+\frac{1}{9}\in\mathbb{Q}[x]$. Este último polinomio se descompone como producto de un racional por un polinomio primitivo con coeficientes enteros del siguiente modo,
+
+$$x^2-\frac{2}{3}x+\frac{10}{9}=\frac{1}{9}\left(9x^2-6x+10\right).$$
+
+Por tanto $9x^2-6x+10\in\mathbb{Z}[x]$ es un polinomio irreducible que tiene a $\frac{1}{3}+i$ como raíz, así que, aplicando el teorema anterior a la inclusión $\mathbb{Z}\subset\mathbb{C}$ tenemos un isomorfismo
 
 $$
 \begin{array}{rcl}
-\mathbb Z[x]/(x^2-2)&\cong&\mathbb Z[\sqrt{2}],\cr
-\bar{x}&\mapsto& \sqrt{2}.
+\mathbb Z[x]/(9x^2-6x+10)&\cong&\mathbb Z[\frac{1}{3}+i],\cr
+\bar{x}&\mapsto& i.
 \end{array}
 $$
 
-Vimos que todo elemento de $\mathbb Z[x]/(x^2-2)$ se podía expresar de manera única como $a\_1\bar x+a\_0$, $a\_0,a\_1\in\mathbb Z$, así que todo elemento de $\mathbb Z[\sqrt{2}]$ se puede escribir de manera única como $a\_1 \sqrt{2}+a\_0$, $a\_0,a\_1\in\mathbb Z$.
+{{% /example %}}
+
+{{% corollary %}}
+Sea $K$ un cuerpo tal que $R\subset K$ y $\alpha\in K$ la raíz de un polinomio mónico irreducible $f\in R[x]$ de grado $n$. Entonces todo elemento de $R[\alpha]\subset K$ se escribe de manera única como 
+
+$$b\_{n-1}\alpha^{n-1}+\cdots+b\_1\alpha+b\_0$$
+
+con $b\_0,\dots, b\_{n-1}\in R$.
+{{% /corollary %}}
+
+{{% proof %}}
+Hemos visto anteriormente que el enunciado es cierto en $R[x]/(f)$ si reemplazamos $\alpha$ por $\bar{x}$, así que el corolario se deduce del isomorfismo del teorema anterior.
+{{% /proof %}}
+
+{{% example name="$\mathbb{Z}[\sqrt{2}]$" %}}
+El polinomio $x^2-2\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Así que todo elemento de $\mathbb Z[\sqrt{2}]\subset \mathbb{R}$ se puede escribir de manera única como $b\_1 \sqrt{2}+b\_0$, con $b\_0,b\_1\in\mathbb Z$.
 {{% /example %}}
 
 Finalmente veremos un par de condiciones suficientes más avanzadas para la irreducibilidad de un polinomio.
 
-{{% proposition %}}
+{{% theorem name="Reducción módulo $p$" %}}
 Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$, $p\in R$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(R/(p))[x]$, entonces $f$ es irreducible en $R[x]$. 
-{{% /proposition %}}
+{{% /theorem %}}
 
 
 {{% proof %}}
