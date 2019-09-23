@@ -18,7 +18,7 @@ La asigantura consta de cuatro temas:
 
 * Polinomios.
 
-En esta web se irán incluyendo los contenidos teóricos de la asignatura siguiendo los apuntes disponibles en [este enlace](https://rodas5.us.es/items/1141d30f-73ed-4c7a-92f9-d5046dbdffe1/1/). Allí también puedes encontrar las listas de problemas que trabajaremos y otros recursos de utilidad.
+En [este enlace](https://rodas5.us.es/items/1141d30f-73ed-4c7a-92f9-d5046dbdffe1/1/) puedes encontrar las listas de problemas que trabajaremos y otros recursos útiles.
 
 
 ### ¿Cómo vamos a evaluar?
@@ -26,13 +26,14 @@ En esta web se irán incluyendo los contenidos teóricos de la asignatura siguie
 La asignatura se puede superar por evaluación continua, sin necesidad de realizar un examen final. Para ello se llevarán a cabo dos pruebas escritas, cada una de dos horas de duración, en horario de clases, en las fechas siguientes:
 
 
-| Grupo | Primera prueba        | Segunda prueba                    |
-|-------|-----------------------|-----------------------------------|
-| A y E | Lunes 5 de noviembre  | Miércoles 16 de enero             |
-| B     | Lunes 5 de noviembre  | Viernes 18 de enero               |
-| C     | Martes 6 de noviembre | Jueves 17 de enero                |
-| D     | Martes 6 de noviembre | Miércoles 16 de enero             |
-| F     | Lunes 5 de noviembre  | Miércoles 16 y jueves 17 de enero |
+| Grupo | Primera prueba           | Segunda prueba                    |
+|-------|--------------------------|-----------------------------------|
+| A     | Miércoles 6 de noviembre | Viernes 17 de enero               |
+| B     | Lunes 4 de noviembre     | Viernes 17 de enero               |
+| C     | Martes 5 de noviembre    | Jueves 16 de enero                |
+| D     | Martes 5 de noviembre    | Miércoles 15 de enero             |
+| E     | Martes 5 de noviembre    | Jueves 16 de enero                |
+| F     | Lunes 4 de noviembre     | Miércoles 15 y jueves 16 de enero |
 
 Las pruebas parciales constaran de dos ejercicios, cada uno de los cuales versará sobre un tema diferente. Para aprobar la evaluación continua será necesario todo lo siguiente:
 
@@ -57,9 +58,9 @@ Cuatro horas semanales, de las cuales una hora será de problemas, de media a lo
 
 ### Tutorías
 
-| Profesor(a)                         | Días y horas                                                                            |
-|-------------------------------------|-----------------------------------------------------------------------------------------|
-| Fernando Muro                       | Martes, miércoles y jueves de 9:30 a 11:30                                              |
-| Luis Narváez                        | Lunes y miércoles de 15:00 a 18:00                                                      |
-| Miguel Ángel Olalla (coordinador)   | Martes, miércoles y jueves de 10:00 a 12:00                                             |
-|               Mercedes Rosas        | Lunes, martes y jueves de 11:00 a 12:00 y miércoles de 10:00 a 12:00 y de 15:00 a 16:00 |
+| Profesor(a)                         | Días y horas                                                                            | Correo               |
+|-------------------------------------|-----------------------------------------------------------------------------------------|----------------------|
+| Fernando Muro                       | Martes de 10:30 a 12:30 y jueves y viernes de 9:45 a 11:30                              | <fmuro@us.es>        |
+| Luis Narváez                        | Lunes y miércoles de 15:00 a 18:00                                                      | <narvaez@us.es>      |
+| Miguel Ángel Olalla (coordinador)   |                                                                                         | <miguelolalla@us.es> |
+| Mercedes Rosas                      | Martes y jueves de 11:00 a 12:00 y miércoles de 11:00 a 13:00 y de 14:00 a 16:00        | <mrosas@us.es>       |
