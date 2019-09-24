@@ -16,7 +16,7 @@ OPCIONALES = ESTARÍA MUY BIEN QUE LOS HICIERAS
 
     - Sección 3
 
-        - Clase: 3.3 (a) y (b), 3.7, 3.10
+        - Clase: 3.3 (a) y (b), 3.7, 3.10 (después de 2.10 de Factorización)
         - Recomendados: 3.3 (c) y (d) (despúes de Factorización), 3.4 (ídem), 3.6
         - Opcionales: 3.8, 3.9, 3.11, 3.12, 3.13
 
@@ -60,7 +60,7 @@ OPCIONALES = ESTARÍA MUY BIEN QUE LOS HICIERAS
 
     - Sección 2
 
-        - Clase: 2.6 (b), 2.7, 2.10
+        - Clase: 2.6 (b), 2.7, 2.10 (viendo que es DE)
         - Recomendados: 2.1, 2.2, 2.3, 2.4, 2.6 (a), 2.8
         - Opcionales: 2.5, 2.9
 
