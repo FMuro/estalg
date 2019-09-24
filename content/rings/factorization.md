@@ -844,11 +844,17 @@ $$\begin{array}{rcl}(p-1)!&\equiv& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\
 para $m=(2n)!$. 
 {{% /proof %}}
 
+En la demostración hemos visto que si $p=4n+1\geq 0$ podemos tomar $m=(2n)!$, pero este valor es innecesariamente alto. El siguiente resultado demuestra la existencia de otros más pequeños.
 
-{{% remark %}}
-En la demostración hemos visto que si $p=4n+1\geq 0$ podemos tomar $m=(2n)!$, pero en general se pueden usar números más pequeños, concretamente siempre hay un $0{<}m{<}p$ adecuado ya que simplemente se trata de resolver la ecuación $x^2+1\equiv 0$ mod $p$. Este $m$ es el resto de dividir $(2n)!$ por $p$. Por ejemplo, para $p=13=4\cdot 3+1$, $(2\cdot 3)!=720$ pero podemos tomar $m=5$.
-{{% /remark %}}
+{{% lemma %}}
+En las condiciones del lema anterior, siempre podemos tomar $\sqrt{p-1}\leq m\leq\frac{p}{2}$.
+{{% /lemma %}}
 
+{{% proof %}}
+Siempre hay un $0{<}m{<}p$ adecuado ya que simplemente se trata de resolver la ecuación $x^2+1\equiv 0$ mod $p$ y el lema anterior demuestra que hay solución. Es más, como la soluciones de esta ecuación no dependen del signo y $-x=p-x$ mod $p$, podemos escoger $0 < m\leq \frac{p}{2}$. Más aún, si $p|(m^2+1)$ entonces $p\leq m^2+1$, luego cualquier solución positiva satisface $m\geq \sqrt{p-1}$. 
+{{% /proof %}}
+
+Para $p=13=4\cdot 3+1$, el valor del primer lema sería $m=(2\cdot 3)!=720$, pero el segundo lema nos garantiza que podemos tomar $3.46\dots=\sqrt{13-1}\leq m\leq\frac{13}{2}=6.5$, es decir $m=4,5$ o $6$. Probando estos tres posibles valores vemos que $m=5$ es el único que satisface $13|(5^2+1)=26$.
 
 {{% proposition %}}
 Si $p\in\mathbb Z$ es un entero primo tal que $p\equiv 1$ mod $4$ entonces $p$ no es primo en los enteros de Gauss.
