@@ -310,26 +310,26 @@ $$f\colon R\stackrel{i}\rightarrow Q( R )\stackrel{g}\rightarrow k.$$
 {{% proof %}}
 La relación es simétrica y reflexiva porque el producto en $R$ es conmutativo. Veamos la transitividad. Si
 
-$$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a''}{b''}$$
+$$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a^{\prime\prime}}{b^{\prime\prime}}$$
 
 entonces 
 
 $$\begin{array}{rcl}
 ab'&=&a'b,\cr 
-a'b''&=&a'' b'.
+a'b^{\prime\prime}&=&a^{\prime\prime} b'.
 \end{array}$$
 
 En particular, 
 
 $$\begin{array}{rcl}
-(a b'') b'&=&(ab')b''\cr
-&=&(a'b)b''\cr
-&=&(a'b'')b\cr
-&=&(a'' b')b\cr
-&=&(a'' b)b'.
+(a b^{\prime\prime}) b'&=&(ab')b^{\prime\prime}\cr
+&=&(a'b)b^{\prime\prime}\cr
+&=&(a'b^{\prime\prime})b\cr
+&=&(a^{\prime\prime} b')b\cr
+&=&(a^{\prime\prime} b)b'.
 \end{array}$$
 
-Por la propiedad cancelativa de los dominios, $ab''=a'' b$, es decir $\frac{a}{b}\sim \frac{a''}{b''}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar que las definiciones de la suma y la multiplicación en $Q(R)$ no dependen de la elección de fracciones representantes es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. También es fácil probar que los axiomas que definen los anillos se verifican. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por tanto una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
+Por la propiedad cancelativa de los dominios, $ab^{\prime\prime}=a^{\prime\prime} b$, es decir $\frac{a}{b}\sim \frac{a^{\prime\prime}}{b^{\prime\prime}}$. Por tanto el conjunto cociente $Q( R )$ está bien definido. Demostrar que las definiciones de la suma y la multiplicación en $Q( R )$ no dependen de la elección de fracciones representantes es laborioso pero trivial, no es distinto de la construcción clásica de los números racionales. También es fácil probar que los axiomas que definen los anillos se verifican. Obviamente el cero y el uno de $Q( R )$ son $\frac{0}{1}$ y $\frac{1}{1}$, respectivamente. Por tanto una fracción $\frac{a}{b}$ es nula $\Leftrightarrow$ $a=0$. Si $\frac{a}{b}$ es no nula entonces es claramente una unidad y $(\frac{a}{b})^{-1}=\frac{b}{a}$, por lo que $Q( R )$ es un cuerpo.
 
 Es inmediato ver que $i$ es un homomorfismo. Es inyectivo porque $a\in\ker f$ si y solo si $\frac{a}{1}=\frac{0}{1}$, lo cual equivale a $a=0$.
 
