@@ -119,7 +119,7 @@ OPCIONALES = ESTARÍA MUY BIEN QUE LOS HICIERAS
     - Sección 8
 
         - Clase: 8.1, 8.3, hallar la forma normal de Jordan y una base de Jordan de la siguiente matriz de números complejos: [[1,0,-1/2],[2,2,1],[2,0,3]]
-        - Recomendados: todos menos 8.4, 8.5
+        - Recomendados: todos menos 8.2, 8.4, 8.5
 
     - Miscellaneous
 
