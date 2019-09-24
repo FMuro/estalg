@@ -109,7 +109,7 @@ OPCIONALES = ESTARÍA MUY BIEN QUE LOS HICIERAS
 
     - Sección 7
 
-        - Clase: 7.1 (¿Es finito el grupo abeliano presentado por la matriz del enunciado? ¿Es cíclico?), 7.3 (d) (¿Es V finito? ¿Es cíclico? Encuentra un conjunto de generadores de V con dos elementos. Halla un elemento de orden 6 de V.), 7.5, 7.7,resolver los dos siguientes sistemas de ecuaciones lineales diofánticas
+        - Clase: 7.1 (¿Es finito el grupo abeliano presentado por la matriz del enunciado? ¿Es cíclico?), 7.3 (d) (¿Es V finito? ¿Es cíclico? Encuentra un conjunto de generadores de V con dos elementos. Halla un elemento de orden 6 de V.), 7.5, 7.7, resolver los dos siguientes sistemas de ecuaciones lineales diofánticas
 
             3x + 6y + 8x = 1
 
