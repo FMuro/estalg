@@ -8,7 +8,7 @@ pre = "<i class='fa fa-book'></i> "
 
 ### ¿Qué vamos a estudiar?
 
-La asigantura se centrará en el estudio de los conceptos de anillo, módulo y cuerpo y sus aplicaciones a las ecuaciones diofánticas, los operadores lineales, las construcciones geométricas con regla y compás y las ecuaciones polinómicas de grado superior en una variable. Seguiremos los capítulos correspondientes de la **segunda edición** del libro titulado [**Algebra**](https://fama.us.es/discovery/search?query=any,contains,algebra%20artin&tab=all_data_not_idus&search_scope=all_data_not_idus&sortby=date_d&vid=34CBUA_US:VU1&facet=frbrgroupid,include,20288007660796345&lang=es&offset=0), de Michael Artin, basado en las notas que este profesor del Massachussets Institute of Technology usaba en sus clases. 
+La asignatura se centrará en el estudio de los conceptos de anillo, módulo y cuerpo y sus aplicaciones a las ecuaciones diofánticas, los operadores lineales, las construcciones geométricas con regla y compás y las ecuaciones polinómicas de grado superior en una variable. Seguiremos los capítulos correspondientes de la **segunda edición** del libro titulado [**Algebra**](https://fama.us.es/discovery/search?query=any,contains,algebra%20artin&tab=all_data_not_idus&search_scope=all_data_not_idus&sortby=date_d&vid=34CBUA_US:VU1&facet=frbrgroupid,include,20288007660796345&lang=es&offset=0), de Michael Artin, basado en las notas que este profesor del Massachussets Institute of Technology usaba en sus clases. 
 
 ![book](../images/book.jpeg)
 

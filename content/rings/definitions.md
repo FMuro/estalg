@@ -122,7 +122,9 @@ El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ es
 
 $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}\subset R.$$
 
-Este es el menor ideal que contiene a los elementos $a_1,\dots,a_n\in R$. Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
+Este es el menor ideal que contiene a los elementos $a_1,\dots,a_n\in R$. Es decir, si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$.
+
+Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
 
 Dado un anillo y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
 
