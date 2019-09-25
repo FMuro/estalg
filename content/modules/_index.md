@@ -115,8 +115,6 @@ Un subconjunto $N\subset M$ de un $R$-módulo $M$ es un **submódulo** si:
 
 * $a+b\in N$ para todo $a,b\in N$.
 
-* $-a\in N$ para todo $a\in N$.
-
 * $ra\in N$ para todo $r\in R$ y $a\in N$.
 
 {{% /definition %}}
@@ -253,34 +251,9 @@ Dado un homomorfismo $f\colon M\rightarrow N$, su **imagen** $\operatorname{im} 
 
 * $f(a)+f(b)=f(a+b)\in \operatorname{im} f$ para $a,b\in M$.
 
-* $-f(a)=f(-a)\in \operatorname{im} f$ para todo $a\in M$.
-
 * $rf(a)=f(ra)\in \operatorname{im} f$ para todo $r\in R$ y $a\in M$.
 
 {{% /proof %}}
-
-La siguiente proposición posee un análogo para anillos que [ya ha sido demostrado](/estalg/rings/definitions/#factorimage).
-
-{{% proposition label="factorimagemodules" %}}
-Dado un homomorfismo $f\colon M\rightarrow N$ y un submódulo $U\subset N$, si $\operatorname{im} f\subset U$ entonces $f$ factoriza de manera única a través de la inclusión, es decir, existe un único homomorfismo $g\colon M\rightarrow U$ tal que $f=i\circ g$,
-
-$$f\colon M\stackrel{g}\rightarrow U\stackrel{i}\hookrightarrow N.$$
-
-{{% /proposition %}}
-
-
-{{% proof %}}
-Si $f=i\circ g$ entonces tendríamos
-
-$$f(a)=(i\circ g)(a)=i(g(a))=g(a).$$
-
-La unicidad de $g$ sería consecuencia de esta fórmula ya que fuerza su definición. Definimos pues la aplicación $g\colon M\rightarrow U$ como $g(a)=f(a)$. Tiene sentido porque $\operatorname{im}f\subset U$. La aplicación $g$ es un homomorfismo pues está definida por la misma fórmula que el homomorfismo $f$.  
-{{% /proof %}}
-
-{{% remark %}}
-En la proposición anterior podemos siempre tomar $U=\operatorname{im} f$. 
-{{% /remark %}}
-
 
 {{% proposition %}}
 El **núcleo** de un homomorfismo $f\colon M\rightarrow N$,
@@ -296,8 +269,6 @@ es un submódulo $\ker f\subset M$.
 * $0\in\ker f$ pues $f(0)=0$.
 
 * Si $a,b\in\ker f$ entonces $a+b\in \ker f$ puesto que $f(a+b)=f(a)+f(b)=0+0=0$.
-
-* Si $a\in\ker f$ entonces $-a\in \ker f$ puesto que $f(-a)=-f(a)=0$.
 
 * Si $a\in\ker f$ y $r\in R$ entonces $ra\in \ker f$ pues $f(ra)=rf(a)=r0=0$.
 
@@ -522,8 +493,6 @@ Dados $a,b\in T(M)$ existen $s,t\in R$ no nulos, $s\neq 0\neq t$, tales que $sa=
 
 * $a+b\in T(M)$ pues $st\neq 0$ y $st(a+b)=t(sa)+s(tb)=0$.
 
-* $-a\in T(M)$ pues $s(-a)=-sa=0$.
-
 * Dado $r\in R$, $ra\in T(M)$ pues $s(ra)=r(sa)=0$.
 
 {{% /proof %}}
@@ -660,10 +629,10 @@ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en lo
 En la proposición anterior podemos tomar siempre $N=\ker f$. 
 {{% /remark %}}
 
-El siguiente resultado es una versión para módulos del primer teorema de isomoría, [ya visto para anillos](/estalg/rings/definitions/#primer).
+El siguiente resultado es una versión para módulos del primer teorema de isomoría, [ya recordado para anillos](/estalg/rings/definitions/#primer).
 
 {{% theorem name="Primer Teorema de Isomorfía" label="isomodules" %}}
-Dado un homomorfismo $f\colon M\rightarrow N$, existe un único homomorfismo $\bar f\colon M/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
+Dado un homomorfismo de módulos $f\colon M\rightarrow N$, existe un único homomorfismo de módulos $\bar f\colon M/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
 
 ![Primer teorema de isomorfía](../images/isomorfiamodulos.png)
 
@@ -671,34 +640,7 @@ Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es 
 {{% /theorem %}}
 
 {{% proof %}}
-[Por un lado](#factorimagemodules) podemos factorizar $f\\colon M\\rightarrow N$ de manera única como $f=i\circ g$,
-
-$$f\colon M\stackrel{g}\rightarrow \operatorname{im} f\stackrel{i}\hookrightarrow N,$$
-
-donde $g(a)=f(a)$. En particular
-
-$$\ker g = \ker f.$$
-
-[Por otro lado](#factorquotientmodules) podemos factorizar $g\colon M\rightarrow \operatorname{im} f$ de manera única como $g=\bar f\circ p$,
-
-$$g\colon M\stackrel{p}\twoheadrightarrow N/\ker f\stackrel{\overline{f}}\rightarrow \operatorname{im} f,$$
-
-donde $\bar f(\bar{a})=g(a)=f(a)$. 
-
-Por tanto $f=i\circ g= i\circ(\overline{f}\circ i)$, como queríamos. La unicidad de $\bar f$ se deduce de esta fórmula, ya que fuerza su definición:
-
-$$
-\begin{array}{rcl}
-f(a)&=&(i\circ\bar f\circ p)(a)\cr
-&=&i(\bar{f}(p(a)))\cr
-&=&i(\bar{f}(\bar{a}))\cr
-\bar{f}(\bar{a}).
-\end{array}
-$$
-
-Veamos que $\bar f\colon M/\ker f\rightarrow \operatorname{im} f$ es un isomorfismo. Comenzamos probando que es inyectivo. Sea $\bar{a}\in M/\ker f$ tal que $\bar f(\bar{a})=0$. Como $\bar f(\bar{a})=f(a)$, deducimos que $a\in \ker f$, por lo que $\bar{a}=\bar{0}$.
-
-Veamos que $\bar f\colon M/\ker f\rightarrow \operatorname{im} f$ es sobreyectiva. Dado $b\in\operatorname{im} f$ existe $a\in M$ tal que $f(a)=b$. Por tanto $\bar f(\bar{a})=f(a)=b$.  
+El primer teorema de isomorfía para grupos garantiza la existencia de un único homomorfismo de grupos $\bar{f}$ que satisface las propiedades del enunciado. En particular viene dado por $\bar{f}([m])=f(m)$. Por tanto, al ser $f$ un homomorfismo de módulos $\bar{f}$ también lo será. 
 {{% /proof %}}
 
 {{% example name="El cociente de un producto por un factor" %}}
@@ -1307,7 +1249,7 @@ está también generada por sus columnas. Claramente, para generar $\operatornam
 
 $$\\{d_1e_1,\dots, d_ke_k\\}\subset \operatorname{im} D$$
 
-y este módulo es libre re rango $k\leq m$. Esto implica que $M=\operatorname{im}A\cong \operatorname{im} D$ es libre del mismo rango con base
+y este módulo es libre re rango $k\leq m$. Esto implica que $M=\operatorname{im}A$ es libre del mismo rango con base
 
 $$\\{d_1Q^{-1}e_1,\dots, d_kQ^{-1}e_k\\}.$$
 
