@@ -2,6 +2,8 @@ rings/_index
 rings/definitions
 rings/factorization
 modules/_index
+modules/generalities
+modules/finiteness
 fields/_index
 fields/extensions
 fields/Galois
