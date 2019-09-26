@@ -444,7 +444,6 @@ La proyección natural es un homomorfismo sobreyectivo con núcleo $I$, por tant
 Un ideal $I\subset R$ es maximal $\Leftrightarrow$ $R/I$ es un cuerpo.
 {{% /corollary %}}
 
-
 {{% proof %}}
 El cociente $R/I$ es un cuerpo si y solo si posee exactamente dos ideales. Esto ocurre si y solo si hay precisamente dos ideales de $R$ que contienen a $I$. Para que haya más de uno es necesario que $I\subsetneq R$ sea un ideal propio, y que no haya más equivale a que este $I$ sea maximal.
 {{% /proof %}}
@@ -455,12 +454,48 @@ Todo ideal maximal es primo.
 {{% /corollary %}}
 
 
+Es importante observar que la correspondencia del teorema anterior respeta cocientes en el sentido siguiente.
+
+{{% proposition %}}
+Dado un anillo $R$, un ideal $I\subset R$ y un ideal del cociente $J\subset R/I$, si $p\colon R\twoheadrightarrow R/I$ es la proyección natural tenemos un isomorfismo
+
+$$
+\begin{array}{rcl}
+\frac{R}{p^{-1}(J)} & \stackrel{\cong}{\longrightarrow} & \frac{\frac{R}{I}}{J},\cr
+x+p^{-1}(J) & \mapsto & (x+I)+J.
+\end{array}
+$$
+
+{{% /proposition %}}
+
+{{% proof %}}
+Consideramos la composición de proyecciones naturales
+
+$$R \stackrel{p}{\longrightarrow} \frac{R}{I} \stackrel{p'}{\longrightarrow} \frac{\frac{R}{I}}{J}.$$
+
+Por ser ambas sobreyectivas la composición $p'\circ p$ también lo es. El primer teorema de isomorfía nos proporciona un isomorfismo
+
+$$
+\begin{array}{rcl}
+\frac{R}{\ker p'\circ p} & \stackrel{\cong}{\longrightarrow} & \frac{\frac{R}{I}}{J}
+\end{array}
+$$
+
+que se define como en el enunciado, reemplazando $p^{-1}(J)$ por $\ker p'\circ p$. Basta por tanto ver que $\ker p'\circ p=p^{-1}(J)$. En efecto, $x\in \ker p'\circ p$ $\Leftrightarrow$ $(x+I)+J=0$ $\Leftrightarrow$ $p(x)=x+I\in J$ $\Leftrightarrow$ $x\in p^{-1}(J)$.
+{{% /proof %}}
+
+
+{{% corollary %}}
+La correspondencia del teorema anterior preserva ideales primos y maximales.
+{{% /corollary %}}
+
+
+
 {{% definition %}}
 Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio donde todos los ideales son principales.
 {{% /definition %}}
 
 Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
-
 
 {{% proposition %}}
 En un dominio de ideales principales $R$ todos los ideales primos no nulos son maximales.
