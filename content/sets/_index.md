@@ -53,7 +53,7 @@ Muchos símbolos matemáticos son **reversibles**, por ejemplo, $A\ni a$ signifi
 
 Por ejemplo, si $A = \\{ 1,2,3,4,5 \\}$ entonces $1 \in A$ pero $6\notin A$. Otra manera implícita de expresar este conjunto $A$ es la siguiente:
 
-$$A = \\{n|n\in\mathbb{N},1\leq n\leq 5\\}.$$
+$$A = \\{n|n\in\mathbb{N} \wedge 1\leq n\leq 5\\}.$$
 
 Se lee del siguiente modo: "$A$ es el conjunto formado por los elementos $n$ tales que $n$ pertenece al conjunto los números naturales, $n$ es mayor o igual que 1 y $n$ es menor o igual que 5."
 
@@ -314,6 +314,10 @@ Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $A\times B$?
 Análogamente, podemos definir el **producto cartesiano** de una cantidad finita de conjuntos $A\_1\times\cdots\times A\_n$ como el formado por las **$n$-uplas** $(a\_1,\dots, a\_n)$ tales que $a\_i\in A\_i$. Más generalmente,  podemos definir el producto cartesiano de una familia arbitraria de conjuntos $\\{A\_i\\}\_{i\in I}$, $\prod\_{i\in I}A\_i=\\{(a\_i)\_{i\in I}|a\_i\in A\_i\\}$.
 {{% /remark %}}
 
+{{% example name="Un producto infinito" %}}
+El producto infinito $\prod_{n\in\mathbb{N}}[0,\frac{1}{2^n})$ está formado por todas las sucesiones $(a\_n)\_{n\in\mathbb{N}}$ de números reales tales que $0\leq a\_n<\frac{1}{2^n}$ para todo $n\in\mathbb{N}$.
+{{% /example %}}
+
 {{% definition %}}
 Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\{$subconjuntos de $A\\}$.
 {{% /definition %}}
@@ -391,39 +395,43 @@ así que $U=\bar{\bar{U}}=\bar\varnothing$.
 
 
 
-## Producto cartesiano y aplicaciones
+## Aplicaciones
 
 {{% definition %}}
-Dados dos conjuntos $A$ y $B$, una **correspondencia** $C$ de $A$ en $B$ es un subconjunto $C\subset A \times B$.
+Dados dos conjuntos $A$ y $B$, una **aplicación** $f$ de $A$ en $B$, que se denota $f\colon A\rightarrow B$, es una regla que asocia a cada $a\in A$ un único elemento $f(a)\in B$, denominado **imagen** de $a$ por $f$. También diremos que $f(a)$ es el **valor** de $f$ en $a$. Esto se denota también como $a\mapsto f(a)$, especialmente en diagramas como el siguiente,
+
+$$
+\begin{array}{rcl}
+	f\colon A & \longrightarrow & B,\cr
+	a & \mapsto & f(a).
+\end{array}
+$$
+
+También se puede colocar el nombre de la aplicación encima de la flecha,
+
+$$A\stackrel{f}{\longrightarrow} B.$$
+
 {{% /definition %}}
 
-{{% example name="Un producto infinito" %}}
-El producto infinito $\prod_{n\in\mathbb{N}}[0,\frac{1}{2^n})$ está formado por todas las sucesiones $(a\_n)\_{n\in\mathbb{N}}$ de números reales tales que $0\leq a\_n<\frac{1}{2^n}$ para todo $n\in\mathbb{N}$.
-{{% /example %}}
-
-Las correspondencias se suelen representar del siguiente modo
-
-![Correspondencia](../images/correspondence.png)
-
-Esta correspondencia es $C=\\{(1,a), (1,b), (2,b), (3, b)\\}\subset A\times B$. Pensamos en las correspondencias como reglas que asocian elementos del segundo conjunto a elementos del primero. En este ejemplo al $1$ se le asocian el $a$ y el $b$, y al $2$ y al $3$ solo el $b$. Al $4$ no se le asocia ningún elemento de $B$ y $c\in B$ no está asociado a ningún elemento de $A$.
-
-{{% exercise %}}
-¿Cuántas correspondencias hay de $\varnothing$ en $A$? ¿Y de $A$ en $\varnothing$?
-{{% /exercise %}}
-
-{{% definition %}}
-Dados dos conjuntos $A$ y $B$, una **aplicación** $f$ de $A$ en $B$, que se denota $f\colon A\rightarrow B$, es una correspondencia que asocia a cada elemento de $A$ un único elemento de $B$, es decir $ \forall a \in A \; \exists ! \; b \in B | (a,b)\in f$.
-{{% /definition %}}
-
-La correspondencia del diagrama anterior no es una aplicación, pero la siguiente sí:
+El siguiente diagrama ilustra una aplicación
 
 ![Aplicación](../images/map.png)
 
-Como conjunto, $f=\\{(1,a), (4,b), (2,b), (3, b)\\}\subset A\times B$.
+que se puede definir también del siguiente modo:
 
-{{% definition %}}
-Dada una aplicación $f\colon A\rightarrow B$ y $a \in A$, denotaremos $f(a)\in B$ al único elemento tal que $(a,f(a))\in f$ y lo denominaremos **imagen** de $a$ por $f$. También diremos que $f(a)$ es el **valor** de $f$ en $a$.
-{{% /definition %}}
+$$
+\begin{array}{rcl}
+A&\stackrel{f}\longrightarrow& B,\cr
+1&\mapsto&a,\cr
+2&\mapsto&b,\cr
+3&\mapsto&b,\cr
+4&\mapsto&b.
+\end{array}
+$$
+
+Sin embargo el diagrama siguiente no es una aplicación ya que la definición no se cumple por varias razones, ¿sabrías decir cuáles?
+
+![No aplicación](../images/no_map.png)
 
 {{% watch %}}
 Para definir una aplicación hay que especificar lo siguiente:
@@ -436,29 +444,8 @@ Si dos aplicaciones difieren en alguno de estos tres puntos se consideran difere
 {{% /watch %}}
 
 {{% example name="Aplicaciones parecidas pero diferentes" %}}
-La aplicación $f\colon \mathbb{N}\rightarrow \mathbb{N}$ definida como $f(n)=n$ para todo $n\in\mathbb{N}$ es diferente de la aplicación $g\colon \mathbb{N}\rightarrow \mathbb{Z}$ definida como $g(n)=n$ para todo $n\in\mathbb{N}$.
+La aplicación $f\colon \mathbb{N}\rightarrow \mathbb{N}$ definida como $f(n)=n$ es diferente de la aplicación $g\colon \mathbb{N}\rightarrow \mathbb{Z}$ definida como $g(n)=n$.
 {{% /example %}}
-
-
-{{% watch %}}
-Dada una aplicación $f\colon A\rightarrow B$, una manera habitual de denotar que $b=f(a)$ es $a\mapsto b$.
-{{% /watch %}}
-
-
-La aplicación del diagrama anterior se puede definir también del siguiente modo:
-$$
-\begin{array}{rcl}
-A&\stackrel{f}\longrightarrow& B,\cr
-1&\mapsto&a,\cr
-2&\mapsto&b,\cr
-3&\mapsto&b,\cr
-4&\mapsto&b.
-\end{array}
-$$
-Observa que el nombre de la aplicación se puede poner sobre la flecha.
-
-
-
 
 {{% example name="Algunas aplicaciones importantes" %}}
 
@@ -487,11 +474,8 @@ su **composición** $g\circ f\colon A\rightarrow C$ es la aplicación definida c
 {{% proposition %}}
 La composición de aplicaciones satisface las propiedades siguientes:
 
-* Dadas tres aplicaciones
+* Dadas tres aplicaciones $$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C\stackrel{h}\longrightarrow D$$ se verifica que $h\circ (g\circ f)=(h\circ g)\circ f$ (**asociativa**).
 
-$$A\stackrel{f}\longrightarrow B\stackrel{g}\longrightarrow C\stackrel{h}\longrightarrow D$$
-
-se verifica que $h\circ (g\circ f)=(h\circ g)\circ f$ (**asociativa**).
 * Dada una aplicación $f\colon A\rightarrow B$, se tiene que $f\circ 1_A=f=1_B\circ f$ (**elemento neutro**).
 
 {{% /proposition %}}
@@ -779,9 +763,6 @@ f(x)$. Como $x\in U_1$ y $x\in U_2$ deducimos que $y \in f(U_1)$ e $y \in f(U_2)
 Tenemos que $x\in f^{-1}(V_1 \cup V_2)$ si y solo si $f(x)\in V_1\cup V_2$. Esto equivale a decir que $f(x)\in V_1$ o $f(x)\in V_2$, lo que es lo mismo, $x\in f^{-1}(V_1)$ o $x\in f^{-1}(V_2)$. Esto último es idéntico a afirmar que $x\in f^{-1}(V_1)\cup f^{-1}(V_2)$.
 {{% /proof %}}
 
-
-
-
 {{% definition %}}
 La **restricción** de una aplicación $f\colon A \rightarrow B$ a un subconjunto
 $U\subset A$ es la aplicación $f|_U\colon U\rightarrow B$ definida como $f|_U(u)=f(u)$ para todo $u\in U$.
@@ -813,7 +794,24 @@ El conjunto exponencial $\\{a,b\\}^{\\{1,2\\}}=\\{f\_1,f\_2,f\_3,f\_4\\}$ está 
 
 {{% /exercise %}}
 
+{{% definition %}}
+El **grafo** de una aplicación $f\colon A\rightarrow B$ es el conjunto 
 
+$$G_f=\\{(a,b)\in A\times b | b=f(a) \\} \subset A\times B$$
+
+{{% /definition %}}
+
+El grafo de la aplicación
+
+![Aplicación](../images/map.png)
+
+es el conjunto
+
+$$G_f=\\{(1,a), (4,b), (2,b), (3, b)\\}\subset A\times B.$$
+
+{{% remark %}}
+Las aplicaciones $f\colon A\rightarrow B$ se caracterizan porque para cada $a$ está definido un único $f(a)\in B$. Por tanto un subconjunto $S\subset A\times B$ es el grafo de una aplicación $f$ si para cada $a\in A$ existe un único $b\in B$ tal que $(a,b)\in S$. Este $b$ sería $b=f(a)$.
+{{% /remark %}}
 
 
 
@@ -838,7 +836,7 @@ Una relación $R$ es **de equivalencia** si satisface las siguientes propiedades
 
 * En $\mathbb Z$, tener la misma paridad, o equivalentemente $x\sim_2 y$ si $x-y$ es par.
 
-* En $\mathbb Z$, dado $n\in \mathbb Z$, podemos definir la relación $\sim_n$ como $x\sim_n y$ si $x-y$ es divisible por $n$. Observa que $\sim_n=\sim_{-n}$.
+* En $\mathbb Z$, dado $n\in \mathbb Z$, podemos definir la relación $\sim\_n$ como $x\sim\_n y$ si $x-y$ es divisible por $n$. Observa que $\sim\_n=\sim\_{-n}$.
 
 * En un conjunto cualquiera $A$, la relación dada por la igualdad, $x\sim y$ si $x=y$.
 
