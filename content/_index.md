@@ -18,7 +18,7 @@ Una característica importante de la barra lateral es la casilla de búsquedas, 
 
 ![search](./images/search.png)
 
-La barra superior de cada página te permitirá saber dónde estás y navegar a niveles anteriores rápidamente.
+La barra superior de cada página te permitirá saber dónde estás.
 
 ![topbar](./images/topbar.png)
 
