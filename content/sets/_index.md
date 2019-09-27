@@ -322,7 +322,7 @@ Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\
 $B\subset A\Leftrightarrow B\in\mathcal{P}(A)$.
 {{% /watch %}}
 
-{{% example name="Las partes de $A = \\{ 1,2,3 \\}$" %}}
+{{% example name="Las partes de $A = \{ 1,2,3 \}$" %}}
 $\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\},  \\{1,3\\},  \\{2,3\\}, A \\}$.
 {{% /example %}}
 
