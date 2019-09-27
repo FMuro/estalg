@@ -290,7 +290,29 @@ Las leyes de De Morgan quedan mejor explicadas por los siguientes diagramas.
 
 ![Leyes de De Morgan](../images/morgan.png)
 
+{{% definition %}}
+El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$ cuyos elementos son los **pares ordenados** $(a,b)$ cuya primera **coordenada** está en $A$, $a\in A$, y la segunda en $B$, $b\in B$, es decir $A \times B = \\{ (a,b)  |  a \in A \wedge b \in B \\}$.
+{{% /definition %}}
 
+{{% example name="Un producto cartesiano" %}}
+Si $A= \\{ 1,2,3 \\}$ y $B=\\{a,b\\}$ entonces $A \times B=\\{(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)\\}$.
+{{% /example %}}
+
+{{% remark %}}
+El vacío hace el papel de cero con respecto al producto cartesiano $A \times \varnothing = \varnothing = \varnothing \times B$.
+{{% /remark %}}
+
+{{% watch %}}
+En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$.
+{{% /watch %}}
+
+{{% exercise %}}
+Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $A\times B$?
+{{% /exercise %}}
+
+{{% remark %}}
+Análogamente, podemos definir el **producto cartesiano** de una cantidad finita de conjuntos $A\_1\times\cdots\times A\_n$ como el formado por las **$n$-uplas** $(a\_1,\dots, a\_n)$ tales que $a\_i\in A\_i$. Más generalmente,  podemos definir el producto cartesiano de una familia arbitraria de conjuntos $\\{A\_i\\}\_{i\in I}$, $\prod\_{i\in I}A\_i=\\{(a\_i)\_{i\in I}|a\_i\in A\_i\\}$.
+{{% /remark %}}
 
 {{% definition %}}
 Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\{$subconjuntos de $A\\}$.
@@ -370,32 +392,6 @@ así que $U=\bar{\bar{U}}=\bar\varnothing$.
 
 
 ## Producto cartesiano y aplicaciones
-
-{{% definition %}}
-El **producto cartesiano** de dos conjuntos $A$ y $B$ es el conjunto $A\times B$ cuyos elementos son los **pares ordenados** $(a,b)$ cuya primera **coordenada** está en $A$, $a\in A$, y la segunda en $B$, $b\in B$, es decir $A \times B = \\{ (a,b)  |  a \in A \wedge b \in B \\}$.
-{{% /definition %}}
-
-{{% example name="Un producto cartesiano" %}}
-Si $A= \\{ 1,2,3 \\}$ y $B=\\{a,b\\}$ entonces $A \times B=\\{(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)\\}$.
-{{% /example %}}
-
-{{% remark %}}
-El vacío hace el papel de cero con respecto al producto cartesiano $A \times \varnothing = \varnothing = \varnothing \times B$.
-{{% /remark %}}
-
-{{% watch %}}
-En general, el producto cartesiano no es conmutativo $A\times B\neq B\times A$.
-{{% /watch %}}
-
-{{% exercise %}}
-Si $A$ y $B$ son finitos, ¿cuántos elementos tiene $A\times B$?
-{{% /exercise %}}
-
-{{% remark %}}
-Análogamente, podemos definir el **producto cartesiano** de una cantidad finita de conjuntos $A\_1\times\cdots\times A\_n$ como el formado por las **$n$-uplas** $(a\_1,\dots, a\_n)$ tales que $a\_i\in A\_i$. Más generalmente,  podemos definir el producto cartesiano de una familia arbitraria de conjuntos $\\{A\_i\\}\_{i\in I}$, $\prod\_{i\in I}A\_i=\\{(a\_i)\_{i\in I}|a\_i\in A\_i\\}$.
-{{% /remark %}}
-
-
 
 {{% definition %}}
 Dados dos conjuntos $A$ y $B$, una **correspondencia** $C$ de $A$ en $B$ es un subconjunto $C\subset A \times B$.
