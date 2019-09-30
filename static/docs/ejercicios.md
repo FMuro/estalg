@@ -183,8 +183,8 @@ OPCIONALES = ESTARÍA MUY BIEN QUE LOS HICIERAS
 
     - Sección 7
 
-        - Clase: 7.4, 7.8, 7.9
-        - Recomendados: 7.5, 7.6, 7.7, 7.11
+        - Clase: 7.4, 7.7 (a), 7.8, 7.9, 7.11
+        - Recomendados: 7.5, 7.6
         - Opcionales: 7.1, 7.2, 7.3
 
     - Sección 8
