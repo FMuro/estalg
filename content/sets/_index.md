@@ -322,9 +322,9 @@ El producto infinito $\prod_{n\in\mathbb{N}}[0,\frac{1}{2^n})$ está formado por
 Dado un conjunto $A$, el **conjunto de las partes** de $A$ es $\mathcal{P}(A)=\\{$subconjuntos de $A\\}$.
 {{% /definition %}}
 
-{{% watch %}}
+{{% remark %}}
 $B\subset A\Leftrightarrow B\in\mathcal{P}(A)$.
-{{% /watch %}}
+{{% /remark %}}
 
 {{% example name="Las partes de $A = \{ 1,2,3 \}$" %}}
 $\mathcal{P}(A) = \\{\varnothing, \\{ 1 \\},  \\{ 2 \\},  \\{ 3 \\}, \\{1,2\\},  \\{1,3\\},  \\{2,3\\}, A \\}$.
