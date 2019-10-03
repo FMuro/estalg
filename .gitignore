@@ -1,6 +1,3 @@
 /public
-static/docs/latex.pdf
-static/docs/latex.fdb_latexmk
-static/docs/latex.fls
-static/docs/latex.log
-static/docs/latex.aux
+static/docs/latex.*
+!static/docs/latex.pdf
