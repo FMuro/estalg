@@ -17,3 +17,6 @@ lastmodifieremail = "fmuro@us.es"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
+
+[blackfriday]
+  smartypants = false
