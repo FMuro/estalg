@@ -108,7 +108,7 @@ Un subconjunto $N\subset M$ de un $R$-módulo $M$ es un **submódulo** si:
 
 
 {{% remark %}}
-Un submódulo $N\subset M$ es un módulo por derecho propio con la suma y el producto por escalares heredados de $M$. El módulo trivial $\\{0\\}$ es un submódulo de cualquier otro. Los submódulos de $R$ coinciden con los ideales del anillo. 
+Un submódulo $N\subset M$ es un módulo por derecho propio con la suma y el producto por escalares heredados de $M$. En particular es un subgrupo. El módulo trivial $\\{0\\}$ es un submódulo de cualquier otro. Los submódulos de $R$ coinciden con los ideales del anillo. 
 {{% /remark %}}
 
 

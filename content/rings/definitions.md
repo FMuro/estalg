@@ -15,7 +15,7 @@ y además existen elementos:
 
 * **uno**: $1$,
 
-que satisfacen las propiedades habituales de asociatividad y distributividad. La debe ser conmutativa y en esta asignatura solo consideraremos anillos donde el producto también lo es. Todos los elementos $a$ han de poseer **opuestos** para la suma $-a$, con lo cual podemos restar. Los que poseen inversos para el producto se denominan **unidades** y podemos dividir por ellos. Un **cuerpo** es un anillo donde $0\neq 1$ y todo elemento no nulo es una unidad. Se puede comprobar que $0=1$ en un anillo $R$ si y solo si $R=\\{0\\}$ es el anillo trivial.
+que satisfacen las propiedades habituales de asociatividad y distributividad. La suma debe ser conmutativa y en esta asignatura solo consideraremos anillos donde el producto también lo es. Todos los elementos $a$ han de poseer **opuestos** para la suma $-a$, con lo cual podemos restar. Los que poseen inversos para el producto se denominan **unidades** y podemos dividir por ellos. Un **cuerpo** es un anillo donde $0\neq 1$ y todo elemento no nulo es una unidad. Se puede comprobar que $0=1$ en un anillo $R$ si y solo si $R=\\{0\\}$ es el anillo trivial.
 
 Ejemplos de anillos son: 
 
@@ -28,6 +28,8 @@ Ejemplos de anillos son:
 * El álgebra de Boole de las partes de un conjunto. 
 
 * El anillo de funciones continuas $\mathcal{C}(X,\mathbb{R})$ definidas en un espacio topológico $X$ con valores reales. También lo es su versión con valores complejos $\mathcal{C}(X,\mathbb{C})$ y, cuando la naturaleza de $X$ le dé sentido, lo anillos de funciones derivables, analíticas, etc.
+
+La suma dota a un anillo de estructura de grupo abeliano.
 
 El **producto** cartesiano $R\times S$ de dos anillos $R$ y $S$ es un anillo con las operaciones definidas por coordenadas. El cero y el uno del producto son $(0,0)$ y $(1,1)$.
 
@@ -112,7 +114,9 @@ También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, e
 
 A diferencia de otras estructuras algebraicas, no es posible definir el cociente de un anillo por un subanillo. El tipo de subconjunto adecuado para definir cocientes son los ideales. 
 
-Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpo se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. El **núcleo** de un homomorfismo $f\colon R\rightarrow S$ es un ideal 
+Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpo se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. Los ideales son subgrupos de los anillos para la suma.
+
+El **núcleo** de un homomorfismo $f\colon R\rightarrow S$ es un ideal 
 
 $$\ker f=\\{a\in R\;|\;f(a)=0\\}.$$
 
