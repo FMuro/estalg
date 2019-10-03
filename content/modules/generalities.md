@@ -189,11 +189,11 @@ $$\begin{array}{rcl}M\times N&\stackrel{\cong}\longrightarrow&N\times M,\cr (a,b
 {{% example name="Matrices" %}}
 Toda matriz $B$ de tamaño $m\times n$ con entradas en $R$ da lugar a un homomorfismo definido por la multiplicación de matrices:
 
-$$\begin{array}{rcl} R^n&\stackrel{B\cdot}\longrightarrow&R^m,\cr \left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right)&\mapsto& B\left(\begin{smallmatrix}a_1\cr\vdots\cr a_n\end{smallmatrix}\right). \end{array}$$
+$$\begin{array}{rcl} R^n&\stackrel{B\cdot}\longrightarrow&R^m,\cr \left(\begin{array}{c}a_1\cr\vdots\cr a_n\end{array}\right)&\mapsto& B\left(\begin{array}{c}a_1\cr\vdots\cr a_n\end{array}\right). \end{array}$$
 
 La composición de este tipo de homomorfismos es el producto de matrices. En particular $B$ define un isomorfismo si y solo si es una matriz invertible. Cualquier homomorfismo $f\colon R^n\rightarrow R^m$ es de este tipo. En efecto, si para cada $1\leq i\leq n$ consideramos el elemento
 
-$$e\_i=\left(\begin{smallmatrix}0\cr\vdots\cr1\cr\vdots\cr0\end{smallmatrix}\right)\in R^n$$
+$$e\_i=\left(\begin{array}{c}0\cr\vdots\cr1\cr\vdots\cr0\end{array}\right)\in R^n$$
 
 cuya única coordenada no trivial es la $i$-ésima, que vale $1$, puedes comprobar la matriz que define $f\colon R^n\rightarrow R^m$ es aquella cuyas columnas son los $f(e\_i)$,
 
@@ -414,7 +414,7 @@ $$a\_i=b\_{1i}a\_1'+\cdots+b\_{ni}a\_n'.$$
 
 Es decir, las columnas de $B$ son las coordenadas de los elementos de $S$ respecto de la base $S'$. Si $x\in M$ tiene coordenadas $(r\_1,\dots, r\_n)$ respecto de $S$ y $(r\_1',\dots, r\_n')$ respecto de $S'$ entonces se satisface que
 
-$$B\left(\begin{smallmatrix}r\_1\cr\vdots\cr r\_n\end{smallmatrix}\right)=\left(\begin{smallmatrix}r\_1'\cr\vdots\cr r\_n'\end{smallmatrix}\right).$$
+$$B\left(\begin{array}{c}r\_1\cr\vdots\cr r\_n\end{array}\right)=\left(\begin{array}{c}r\_1'\cr\vdots\cr r\_n'\end{array}\right).$$
 
 Por eso $B$ se denomina **matriz de cambio de base** de $S$ a $S'$. 
 {{% /remark %}}
