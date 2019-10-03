@@ -1067,7 +1067,7 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 {{% example name="Homomorfismos" label="homomorphisms" %}}
 
-1. La **identidad** $\operatorname{1}_{G}\colon G\rightarrow G$.
+1. La **identidad** $\operatorname{1}\_{G}\colon G\rightarrow G$.
 
 2. La **inclusión** de un subgrupo $H\subset G$, $i\colon H\hookrightarrow G$.
 
@@ -1273,7 +1273,7 @@ $$
 \end{array}
 $$
 
-Para ver que $\phi\_f$ es un isomorfismo, basta comprobar que $\phi\_{f^{-1}}\colon \operatorname{Sim}(Y)\rightarrow \operatorname{Sim}(X)$ es su inversa. En efecto, $\phi\_{f^{-1}}\circ \phi\_{f}=\operatorname{1}_{\operatorname{Sim}(X)}$ ya que ambas son aplicaciones que parten de $\operatorname{Sim}(X)$ y llegan a $\operatorname{Sim}(X)$ y además toman el mismo valor en cualquier $\sigma\in \operatorname{Sim}(X)$, pues
+Para ver que $\phi\_f$ es un isomorfismo, basta comprobar que $\phi\_{f^{-1}}\colon \operatorname{Sim}(Y)\rightarrow \operatorname{Sim}(X)$ es su inversa. En efecto, $\phi\_{f^{-1}}\circ \phi\_{f}=\operatorname{1}\_{\operatorname{Sim}(X)}$ ya que ambas son aplicaciones que parten de $\operatorname{Sim}(X)$ y llegan a $\operatorname{Sim}(X)$ y además toman el mismo valor en cualquier $\sigma\in \operatorname{Sim}(X)$, pues
 
 $$
 \begin{array}{rcl}
@@ -1282,11 +1282,11 @@ $$
 &=&\phi\_{f^{-1}}(f\circ\sigma\circ f^{-1})\cr
 &=&f^{-1}\circ(f\circ\sigma\circ f^{-1})\circ (f^{-1})^{-1}\cr
 &=& \sigma\cr
-&=&\operatorname{1}_{\operatorname{Sim}(X)}(\sigma).
+&=&\operatorname{1}\_{\operatorname{Sim}(X)}(\sigma).
 \end{array}
 $$
 
-Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}$ son intercambiables, así que también está probada la otra igualdad, $\phi\_{f}\circ \phi\_{f^{-1}}=\operatorname{1}_{\operatorname{Sim}(Y)}$.
+Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}$ son intercambiables, así que también está probada la otra igualdad, $\phi\_{f}\circ \phi\_{f^{-1}}=\operatorname{1}\_{\operatorname{Sim}(Y)}$.
 {{% /proof %}}
 
 
@@ -1558,7 +1558,7 @@ $$f(g)(x)=gx.$$
 
 Esta aplicación es biyectiva, por tanto es una permutación del conjunto $G$. Para comprobarlo, demostraremos que $f(g^{-1})\colon G\longrightarrow G$ es su inversa, es decir, que
 
-$$f(g)\circ f(g^{-1})=\operatorname{1}_{G}=f(g^{-1})\circ f(g).$$
+$$f(g)\circ f(g^{-1})=\operatorname{1}\_{G}=f(g^{-1})\circ f(g).$$
 
 Las tres aplicaciones parten de $G$ y llegan a $G$, así que basta probar que toman los mismos valores sobre cada $x\in G$. En efecto, por un lado,
 $$
@@ -1570,10 +1570,10 @@ f(g)(f(g^{-1})(x))\cr
 &=&(gg^{-1})x\cr
 &=&ex\cr
 &=&x\cr
-&=&\operatorname{1}_{G}(x).
+&=&\operatorname{1}\_{G}(x).
 \end{array}
 $$
-Esto demuestra que $f(g)\circ f(g^{-1})=\operatorname{1}_{G}$. La otra igualdad, $f(g^{-1})\circ f(g)=\operatorname{1}_{G}$, se sigue ahora del hecho de que los papeles de $g$ y $g^{-1}$ son intercambiables, ya que $(g^{-1})^{-1}=g$.
+Esto demuestra que $f(g)\circ f(g^{-1})=\operatorname{1}\_{G}$. La otra igualdad, $f(g^{-1})\circ f(g)=\operatorname{1}\_{G}$, se sigue ahora del hecho de que los papeles de $g$ y $g^{-1}$ son intercambiables, ya que $(g^{-1})^{-1}=g$.
 
 Veamos que $f$ es un homomorfismo. En efecto, dados $g_1,g_2\in G$, $f(g_1g_2)=f(g_1)\circ f(g_2)$ ya que ambas son permutaciones de $G$ y, para todo $x\in G$,
 $$
@@ -1587,12 +1587,12 @@ f(g_1)(f(g_2)(x))\cr
 \end{array}
 $$
 
-Veamos que $f$ es inyectiva, es decir, que $\operatorname{ker} f=\\{e\\}$. En efecto, si $g\in\operatorname{ker} f$ entonces $f(g)=\operatorname{1}_{G}$ luego
+Veamos que $f$ es inyectiva, es decir, que $\operatorname{ker} f=\\{e\\}$. En efecto, si $g\in\operatorname{ker} f$ entonces $f(g)=\operatorname{1}\_{G}$ luego
 $$
 \begin{array}{rcl}
 g&=&ge\cr
 &=&f(g)(e)\cr
-&=&\operatorname{1}_{G}(e)\cr
+&=&\operatorname{1}\_{G}(e)\cr
 &=&e.
 \end{array}
 $$

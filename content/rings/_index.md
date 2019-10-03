@@ -336,7 +336,7 @@ Si $f\colon R\rightarrow S$ es un isomorfismo de anillos entonces la aplicación
 {{% proof %}}
 Sabemos que $f^{-1}\colon S\rightarrow R$ es biyectiva y un homomorfismo de grupos aditivos. Falta por ver que $f^{-1}$ preserva el elemento neutro para el producto y los productos. Como $f$ es inyectivo, para ver que $f^{-1}(1)=1$ basta comprobar que $f(f^{-1}(1))=f(1)$. Esto es cierto pues
 
-$$f(f^{-1}(1))=(f\circ f^{-1})(1)=\operatorname{1}_{S}(1)=1$$
+$$f(f^{-1}(1))=(f\circ f^{-1})(1)=\operatorname{1}\_{S}(1)=1$$
 
 y además $f(1)=1$ por ser $f$ un homomorfismo de anillos. La demostración de que $f^{-1}$ preserva productos se hace igual que en el caso de [grupos](../groups/#inverseisogroup).
 {{% /proof %}}
@@ -533,7 +533,7 @@ Dado un anillo cualquiera $R$, la proyección natural $\pi\colon R\cong R/(0)$ e
 {{% /corollary %}}
 
 {{% proof %}}
-Basta aplicarle el primer teorema de isomorfía a la identidad $\operatorname{1}_{R}\colon R\rightarrow R$.
+Basta aplicarle el primer teorema de isomorfía a la identidad $\operatorname{1}\_{R}\colon R\rightarrow R$.
 {{% /proof %}}
 
 {{% corollary %}}
