@@ -1071,7 +1071,7 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 2. La **inclusión** de un subgrupo $H\subset G$, $i\colon H\hookrightarrow G$.
 
-3. El **signo** de una permutación, $\operatorname{signo}\colonS_{n}\to\\{\pm1\\}$.
+3. El **signo** de una permutación, $\operatorname{signo}\colon S_{n}\to\\{\pm1\\}$.
 
 4. El **determinante** $GL(n,k)\rightarrow k\setminus\\{0\\}$, $A\mapsto |A|$.
 
@@ -1199,7 +1199,7 @@ $$
 {{% /proof %}}
 
 {{% example name="Isomorfismos inversos" %}}
-Los inversos de los isomorfismos 1, 5 y 9 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\operatorname{1}_{G}^{-1}=\operatorname{1}_{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
+Los inversos de los isomorfismos 1, 5 y 9 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\operatorname{1}\_{G}^{-1}=\operatorname{1}\_{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
 {{% /example %}}
 
 {{% definition %}}
