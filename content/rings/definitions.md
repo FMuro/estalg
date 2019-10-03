@@ -33,7 +33,7 @@ La suma dota a un anillo de estructura de grupo abeliano.
 
 El **producto** cartesiano $R\times S$ de dos anillos $R$ y $S$ es un anillo con las operaciones definidas por coordenadas. El cero y el uno del producto son $(0,0)$ y $(1,1)$.
 
-Recuerda también que un **subanillo** $R'\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y el producto que contiene al $1$ y a los opuestos de todos sus elementos. Podemos ver $R\subset R[x]$ como el subanillo de los polinomios constantes, sin embargo $R\times\\{0\\}\subset R\times S$ en general no es un subanillo. El total $R\subset R$ siempre es un subanillo pero $\\{0\\}\subset R$ generalmente no.
+Recuerda también que un **subanillo** $R'\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y el producto que contiene al $1$ y a los opuestos de todos sus elementos. Los subanillos son subgrupos para la suma. Podemos ver $R\subset R[x]$ como el subanillo de los polinomios constantes, sin embargo $R\times\\{0\\}\subset R\times S$ en general no es un subanillo. El total $R\subset R$ siempre es un subanillo pero $\\{0\\}\subset R$ generalmente no.
 
 
 
