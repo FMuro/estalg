@@ -413,9 +413,9 @@ Comenzamos por el primer apartado:
 
 * Si $a,b\in f^{-1}(J)$ es porque $f(a),f(b)\in J$, luego $f(a+b)=f(a)+f(b)\in J$ y por tanto $a+b\in f^{-1}(J)$.
 
-* Dado $a\in I$ y $r\in R$,  $f(ra)=f( r )f(a)\in J$ luego $ra\in f^{-1}(J)$.
+* Dado $a\in f^{-1}(J)$ y $r\in R$,  $f(ra)=f( r )f(a)\in J$ luego $ra\in f^{-1}(J)$.
 
-Además, como $\\{0\\}\subset J$, $\ker f=f^{-1}(\\{0\\})\subset f^{-1}(J)$.
+Además, como $\\{0\\}\subset J$ tenemos que $\ker f=f^{-1}(\\{0\\})\subset f^{-1}(J)$.
 
 En el segundo caso:
 
@@ -423,9 +423,7 @@ En el segundo caso:
 
 * Si $a,b\in I$ entonces $a+b\in I$ luego $f(a)+f(b)=f(a+b)\in f(I)$.
 
-* En el caso anterior también $-a\in I$ luego $-f(a)=f(-a)\in f(I)$.
-
-* Es más, dado $s\in S$, por ser $f$ sobreyectiva $s=f( r )$ para cierto $r\in R$, y como $ra\in I$ entonces $sf(a)=f( r )f(a)=f(ra)\in f(I)$.  
+* Es más, dado $a\in I$ y $s\in S$, por ser $f$ sobreyectiva $s=f( r )$ para cierto $r\in R$, y como $ra\in I$ entonces $sf(a)=f( r )f(a)=f(ra)\in f(I)$.  
 
 {{% /proof %}}
 
