@@ -336,7 +336,7 @@ Si $f\colon R\rightarrow S$ es un isomorfismo de anillos entonces la aplicación
 {{% proof %}}
 Sabemos que $f^{-1}\colon S\rightarrow R$ es biyectiva y un homomorfismo de grupos aditivos. Falta por ver que $f^{-1}$ preserva el elemento neutro para el producto y los productos. Como $f$ es inyectivo, para ver que $f^{-1}(1)=1$ basta comprobar que $f(f^{-1}(1))=f(1)$. Esto es cierto pues
 
-$$f(f^{-1}(1))=(f\circ f^{-1})(1)=\id{S}(1)=1$$
+$$f(f^{-1}(1))=(f\circ f^{-1})(1)=\operatorname{1}_{S}(1)=1$$
 
 y además $f(1)=1$ por ser $f$ un homomorfismo de anillos. La demostración de que $f^{-1}$ preserva productos se hace igual que en el caso de [grupos](../groups/#inverseisogroup).
 {{% /proof %}}
@@ -400,19 +400,19 @@ Más adelante veremos que no hay más subgrupos de $\mathbb{Z}$ que estos y que 
 {{% proposition %}}
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$,
 
-$$\ker f=\\{a\in R\;|\;f(a)=0\\},$$
+$$\operatorname{ker} f=\\{a\in R\;|\;f(a)=0\\},$$
 
-es un ideal $\ker f\subset R$.
+es un ideal $\operatorname{ker} f\subset R$.
 {{% /proposition %}}
 
 {{% proof %}}
-Sabemos que $\ker f\subset R$ es un subgrupo aditivo. Queda probar la condición de ideal. Si $a\in\ker f$ y $r\in R$ entonces $f(ra)=f( r )f(a)=f( r )0=0$ luego $ra\in \ker f$.
+Sabemos que $\operatorname{ker} f\subset R$ es un subgrupo aditivo. Queda probar la condición de ideal. Si $a\in\operatorname{ker} f$ y $r\in R$ entonces $f(ra)=f( r )f(a)=f( r )0=0$ luego $ra\in \operatorname{ker} f$.
 {{% /proof %}}
 
 Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo $ev_1\colon R[x]\rightarrow R$ de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$.
 
 {{% remark %}}
-Un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\ker f=\\{0\\}$, ya que esto es cierto a nivel de grupos. Dicho de otro modo, para probar la inyectividad de $f$ basta ver que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
+Un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\operatorname{ker} f=\\{0\\}$, ya que esto es cierto a nivel de grupos. Dicho de otro modo, para probar la inyectividad de $f$ basta ver que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
 {{% /remark %}}
 
 Veamos ahora la relación entre ideales y unidades.
@@ -444,7 +444,7 @@ Si $f\colon k\rightarrow R$ es un homomorfismo de anillos donde $k$ es un cuerpo
 {{% /corollary %}}
 
 {{% proof %}}
-El ser $f\colon k\rightarrow R$ un homomorfismo, $f(1)=1$. Como $R$ no es trivial, $1\neq 0$ luego $1\notin\ker f\subset k$ no puede ser el total. Por ser $k$ es un cuerpo la única opción posible es $\ker f=\\{0\\}$, luego $f$ es inyectivo.
+El ser $f\colon k\rightarrow R$ un homomorfismo, $f(1)=1$. Como $R$ no es trivial, $1\neq 0$ luego $1\notin\operatorname{ker} f\subset k$ no puede ser el total. Por ser $k$ es un cuerpo la única opción posible es $\operatorname{ker} f=\\{0\\}$, luego $f$ es inyectivo.
 {{% /proof %}}
 
 
@@ -452,7 +452,7 @@ El ser $f\colon k\rightarrow R$ un homomorfismo, $f(1)=1$. Como $R$ no es trivia
 ## Cocientes
 
 {{% theorem %}}
-Dado un anillo $R$ y un ideal $I\subset R$, existe una única estructura de anilo en el grupo cociente $R/I$ tal que la proyección natural $\pi\colon R\twoheadrightarrow R/I$, $\pi(a)=a+I$, es un homomorfismo de anillos. El núcleo de esta proyección es $\ker \pi=I$.
+Dado un anillo $R$ y un ideal $I\subset R$, existe una única estructura de anilo en el grupo cociente $R/I$ tal que la proyección natural $\pi\colon R\twoheadrightarrow R/I$, $\pi(a)=a+I$, es un homomorfismo de anillos. El núcleo de esta proyección es $\operatorname{ker} \pi=I$.
 {{% /theorem %}}
 
 
@@ -506,7 +506,7 @@ Es más, dado $m\in\mathbb{Z}$, $[m]=[r]$, donde $r$ es el resto no negativo de 
 {{% /example %}}
 
 {{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
-Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**,
+Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\operatorname{ker} f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**,
 
 ![Primer teorema de isomorfía para anillos](../images/isomorfianillos.png)
 
@@ -533,7 +533,7 @@ Dado un anillo cualquiera $R$, la proyección natural $\pi\colon R\cong R/(0)$ e
 {{% /corollary %}}
 
 {{% proof %}}
-Basta aplicarle el primer teorema de isomorfía a la identidad $\id{R}\colon R\rightarrow R$.
+Basta aplicarle el primer teorema de isomorfía a la identidad $\operatorname{1}_{R}\colon R\rightarrow R$.
 {{% /proof %}}
 
 {{% corollary %}}
@@ -541,7 +541,7 @@ $\mathbb{R}[x]/(x^2+1)\cong\mathbb{C}$.
 {{% /corollary %}}
 
 {{% proof %}}
-Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido como $f(p(x))=p(i)$. Este homomorfismo está bien definido porque es la composición de la inclusión $\mathbb{R}[x]\subset \mathbb{C}[x]$ y la evaluación $ev_i\colon\mathbb{C}[x]\rightarrow\mathbb{C}$. Es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Usando el primer teorema de isomorfía, basta ahora ver que $\ker f=(x^2+1)\subset\mathbb{R}[x]$. La inclusión $\supset$ es sencilla porque todo elemento $p(x)\in (x^2+1)$ es múltiplo del polinomio $x^2+1$, es decir, de la forma $p(x)=(x^2+1)q(x)$ y entonces $f(p(x))=p(i)=(i^2+1)q(i)=0$. Para ver $\subset$, tomamos ahora un elemento arbitrario $p(x)\in \ker f$, es decir, tal que $p(i)=0$. Dividimos $p(x)$ entre $x^2+1$, obteniendo así una expresión en $\mathbb{R}[x]$ de la forma
+Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido como $f(p(x))=p(i)$. Este homomorfismo está bien definido porque es la composición de la inclusión $\mathbb{R}[x]\subset \mathbb{C}[x]$ y la evaluación $ev_i\colon\mathbb{C}[x]\rightarrow\mathbb{C}$. Es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Usando el primer teorema de isomorfía, basta ahora ver que $\operatorname{ker} f=(x^2+1)\subset\mathbb{R}[x]$. La inclusión $\supset$ es sencilla porque todo elemento $p(x)\in (x^2+1)$ es múltiplo del polinomio $x^2+1$, es decir, de la forma $p(x)=(x^2+1)q(x)$ y entonces $f(p(x))=p(i)=(i^2+1)q(i)=0$. Para ver $\subset$, tomamos ahora un elemento arbitrario $p(x)\in \operatorname{ker} f$, es decir, tal que $p(i)=0$. Dividimos $p(x)$ entre $x^2+1$, obteniendo así una expresión en $\mathbb{R}[x]$ de la forma
 
 $$p(x)=c(x)(x^2+1)+r(x).$$
 
@@ -683,18 +683,18 @@ Los dominios $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ y $\mathbb{C}$ tienen cara
 
 
 
-## Divisibilidad en $\Z$
+## Divisibilidad en $\mathbb{Z}$
 
 En esta sección formalizaremos propiedades de los números enterios relacionadas con la divisibilidad. La mayor parte son bien conocidas. Usaremos sin demostrarlo el siguiente resultado básico de la teoría de conjuntos.
 
 {{% theorem name="Principio de buena ordenación" %}}
-Todo subconjunto no vacío de $\Z$ acotado inferiormente posee un mínimo, necesariamente único.
+Todo subconjunto no vacío de $\mathbb{Z}$ acotado inferiormente posee un mínimo, necesariamente único.
 {{% /theorem %}}
 
 
 
 {{% definition %}}
-Dados $a,b\in\mathbb{Z}$, decimos que $a$ **divide** a $b$, y escribimos $a |  b$, si existe $c\in\Z$ tal que
+Dados $a,b\in\mathbb{Z}$, decimos que $a$ **divide** a $b$, y escribimos $a |  b$, si existe $c\in\mathbb{Z}$ tal que
 $ac=b$. También se dice que $b$ es
 **divisible** por $a$.
 {{% /definition %}}
@@ -724,7 +724,7 @@ Dados $a,b,c\in\mathbb{Z}$, se satisfacen las siguientes propiedades.
 
 4. Si $a |  b$ y $a |  c$ entonces $a |  (b + c)$.
 
-5. Si $a |  b$ entonces $a |  bc$, para todo $c\in\Z$.
+5. Si $a |  b$ entonces $a |  bc$, para todo $c\in\mathbb{Z}$.
 
 {{% /proposition %}}
 
@@ -743,7 +743,7 @@ Por último, en 5, $ar=b$ para cierto $r\in\mathbb{Z}$, así que $a(rc)=(ar)c=bc
 A estas alturas de la vida, vamos a aprender a dividir.
 
 {{% theorem name="División euclídea" %}}
-Dados $D,d \in \Z$, $d\ne 0$, existen $c,r\in \Z$ únicos tales que:
+Dados $D,d \in \mathbb{Z}$, $d\ne 0$, existen $c,r\in \mathbb{Z}$ únicos tales que:
 
 * $D=dc+r$,
 
@@ -755,7 +755,7 @@ Dados $D,d \in \Z$, $d\ne 0$, existen $c,r\in \Z$ únicos tales que:
 {{% proof %}}
 El subconjunto
 
-$$S=\\{ D-dx \mid (x \in \Z) \wedge (D-dx \geq 0) \\}\subset\mathbb{Z}$$
+$$S=\\{ D-dx \mid (x \in \mathbb{Z}) \wedge (D-dx \geq 0) \\}\subset\mathbb{Z}$$
 
 no es vacío. En efecto, si $D\geq 0$ tomamos $x=-dD$ y entonces $D-dx=D+d^2D=D(1+d^2)\geq 0$, y si $D<0$ tomamos $x=dD$ y $D-dx=D-d^2D=D(1-d^2)\geq 0$ ya que, como $d\neq 0$, $d^2\geq 1$.
 
@@ -828,7 +828,7 @@ Si $1$ es un divisor común máximo de $a$ y $b$, se dice que $a$ y $b$ son **co
 {{% /definition %}}
 
 {{% remark %}}
-El divisor común máximo se suele denominar **máximo común divisor**, pero me suena a anglicismo. Como la divisibilidad no depende del signo, si $d$ es un divisor común máximo de $a$ y $b$ entonces $-d$ también. La única posibilidad de que $\mcd(a,b)=0$ es que $a,b=0$.
+El divisor común máximo se suele denominar **máximo común divisor**, pero me suena a anglicismo. Como la divisibilidad no depende del signo, si $d$ es un divisor común máximo de $a$ y $b$ entonces $-d$ también. La única posibilidad de que $\operatorname{mcd}(a,b)=0$ es que $a,b=0$.
 {{% /remark %}}
 
 Un poco maś abajo probaremos la existencia de un divisor común máximo para cualquier par de enteros $a$ y $b$. Hasta entonces, cada vez que hablemos del divisor común máximo de dos enteros daremos por hecho que lo estamos haciendo "caso de existir". De hecho, la existencia se probará reduciendo el cálculo de un divisor común máximo de dos enteros cualesquiera al de otros cuya existencia conozcamos.
@@ -845,8 +845,8 @@ En efecto, porque las condiciones de la definición aseguran que $d|d'$ y $d'|d$
 {{% proposition %}}
 El divisor común máximo de dos enteros satisface las siguientes propiedades:
 
-1. $\mcd (a,b)=\mcd (b,a)$.
-2. $\mcd (a,b)=\mcd (\pm a,\pm b)$.
+1. $\operatorname{mcd} (a,b)=\operatorname{mcd} (b,a)$.
+2. $\operatorname{mcd} (a,b)=\operatorname{mcd} (\pm a,\pm b)$.
 3. $\operatorname{mcd}(a,b)=b\Leftrightarrow b|a$.
 3. $\operatorname{mcd}(0,b)=b$.
 
@@ -863,7 +863,7 @@ La cuarta es consecuencia de la tercera.
 {{% /proof %}}
 
 {{% proposition %}}
-Dados $a,b\in\mathbb{Z}$ tales que $a=bc+r$ entonces $\mcd(a,b)=\mcd(b,r)$.
+Dados $a,b\in\mathbb{Z}$ tales que $a=bc+r$ entonces $\operatorname{mcd}(a,b)=\operatorname{mcd}(b,r)$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -880,15 +880,15 @@ $$r\_{n-1}=r\_nc\_n+r\_{n+1}.$$
 En virtud de la proposición anterior,
 $$
 \begin{array}{rcl}
-\mcd(a,b)&=&\mcd(r\_0,r\_{1})\cr
+\operatorname{mcd}(a,b)&=&\operatorname{mcd}(r\_0,r\_{1})\cr
 &\vdots&\cr
-&=&\mcd(r\_n,r\_{n+1}).
+&=&\operatorname{mcd}(r\_n,r\_{n+1}).
 \end{array}$$
 
 
-Si $r\_{n+1}=0$ para algún $n\geq 0$ entonces $\mcd(a,b)=r\_n$. En virtud de las propiedades de la división euclídea, en cada paso disminuye el tamaño del resto  $|r\_{n}|>|r\_{n+1}|\geq 0$. Esto garantiza que el procedimiento para calcular $\mcd(a,b)$ se acaba como máximo tras realizar $|b|$ divisiones euclídeas. En este procedimiento podemos usar divisiones euclídeas con resto negativo.
+Si $r\_{n+1}=0$ para algún $n\geq 0$ entonces $\operatorname{mcd}(a,b)=r\_n$. En virtud de las propiedades de la división euclídea, en cada paso disminuye el tamaño del resto  $|r\_{n}|>|r\_{n+1}|\geq 0$. Esto garantiza que el procedimiento para calcular $\operatorname{mcd}(a,b)$ se acaba como máximo tras realizar $|b|$ divisiones euclídeas. En este procedimiento podemos usar divisiones euclídeas con resto negativo.
 
-Por ejemplo, calculemos $\mcd(156,58)$. Con divisiones con resto positivo:
+Por ejemplo, calculemos $\operatorname{mcd}(156,58)$. Con divisiones con resto positivo:
 
 $$
 \begin{array}{rcl}
@@ -900,7 +900,7 @@ $$
 \end{array}
 $$
 
-Por tanto $\mcd(156,58)=2$. Si permitimos divisiones con resto negativo, vamos más rápido:
+Por tanto $\operatorname{mcd}(156,58)=2$. Si permitimos divisiones con resto negativo, vamos más rápido:
 
 $$
 \begin{array}{rcl}
@@ -918,7 +918,7 @@ Dos $a,b\in\mathbb{Z}$ cualesquiera siempre tienen un divisor común maximo, que
 {{% /corollary %}}
 
 {{% theorem name="Identidad de Bézout" %}}
-Dados dos enteros $a,b\in\mathbb{Z}$, si $d=\mcd(a,b)$ entonces existen $\alpha,\beta\in \mathbb{Z}$ tales que $d=a\alpha+b\beta$.
+Dados dos enteros $a,b\in\mathbb{Z}$, si $d=\operatorname{mcd}(a,b)$ entonces existen $\alpha,\beta\in \mathbb{Z}$ tales que $d=a\alpha+b\beta$.
 {{% /theorem %}}
 
 {{% proof %}}
@@ -967,7 +967,7 @@ Al final, nos queda una combinación lineal de $a$ y $b$, y basta con agrupar co
 {{% /proof %}}
 
 {{% example name="Identidad de Bézout" %}}
-Hallemos esta identidad para $2=\mcd(156,58)$. Con las divisiones con resto positivo:
+Hallemos esta identidad para $2=\operatorname{mcd}(156,58)$. Con las divisiones con resto positivo:
 
 $$
 \begin{array}{rcl}
@@ -1026,7 +1026,7 @@ En particular observamos que los coeficientes de la identidad de Bézout no son 
 {{% /example %}}
 
 {{% theorem name="de Euclides" label="euclides" %}}
-Si $a,b,c\in\mathbb{Z}$ son tales que $c|ba$ y $\mcd(c,a)=1$ entonces $c|b$.
+Si $a,b,c\in\mathbb{Z}$ son tales que $c|ba$ y $\operatorname{mcd}(c,a)=1$ entonces $c|b$.
 {{% /theorem %}}
 
 {{% proof %}}
@@ -1044,7 +1044,7 @@ denotaremos $m=\operatorname{mcm}(a,b)$, si verifica las siguientes propiedades:
 {{% /definition %}}
 
 {{% lemma %}}
-Dados $a,b\in\mathbb{Z}$, alguno de ellos no nulo, si denotamos $d=\mcd(a,b)$, los enteros $\frac{a}{d}$ y $\frac{b}{d}$ son coprimos.
+Dados $a,b\in\mathbb{Z}$, alguno de ellos no nulo, si denotamos $d=\operatorname{mcd}(a,b)$, los enteros $\frac{a}{d}$ y $\frac{b}{d}$ son coprimos.
 {{% /lemma %}}
 
 {{% proof %}}
@@ -1052,11 +1052,11 @@ Consideramos la identidad de Bézout $d=a\alpha+b\beta$. Podemos dividir por $d$
 
 $$1=\frac{a}{d}\alpha+\frac{b}{d}\beta.$$
 
-Sea $d'=\mcd(\frac{a}{d},\frac{b}{d})$. Como $d'|\frac{a}{d}$ y $d'|\frac{b}{d}$, $d'$ también divide al término de la derecha, así que $d'|1$, luego $d'=\pm 1$.
+Sea $d'=\operatorname{mcd}(\frac{a}{d},\frac{b}{d})$. Como $d'|\frac{a}{d}$ y $d'|\frac{b}{d}$, $d'$ también divide al término de la derecha, así que $d'|1$, luego $d'=\pm 1$.
 {{% /proof %}}
 
 {{% proposition %}}
-Dados $a,b\in\mathbb{Z}$, alguno de ellos no nulo, si denotamos $d=\mcd(a,b)$,  $\frac{ab}{d}=\mcm(a,b)$.
+Dados $a,b\in\mathbb{Z}$, alguno de ellos no nulo, si denotamos $d=\operatorname{mcd}(a,b)$,  $\frac{ab}{d}=\operatorname{mcm}(a,b)$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -1079,11 +1079,11 @@ $$m=b\frac{a}{d}\mid bs=m'.$$
 {{% /proof %}}
 
 {{% corollary %}}
-Dados $a,b\in\mathbb{Z}$ cualesquiera, $\mcm(a,b)$ existe.
+Dados $a,b\in\mathbb{Z}$ cualesquiera, $\operatorname{mcm}(a,b)$ existe.
 {{% /corollary %}}
 
 {{% proof %}}
-Ya lo hemos probado si $a$ o $b$ no es nulo. Es fácil comprobar a partir de la definición que $\mcm(0,0)=0$.
+Ya lo hemos probado si $a$ o $b$ no es nulo. Es fácil comprobar a partir de la definición que $\operatorname{mcm}(0,0)=0$.
 {{% /proof %}}
 
 
@@ -1098,11 +1098,11 @@ Observa que el $0$ no es primo. Como la relación divisibilidad es independiente
 {{% /remark %}}
 
 {{% proposition %}}
-Dados dos enteros $a,p\in\mathbb{Z}$ con $p$ primo, si $p\nmid a$ entonces $\mcd(a,p)=1$.
+Dados dos enteros $a,p\in\mathbb{Z}$ con $p$ primo, si $p\nmid a$ entonces $\operatorname{mcd}(a,p)=1$.
 {{% /proposition %}}
 
 {{% proof %}}
-Sea $d=\mcd(a,p)$. Como $d|p$, $d=\pm p$ o $\pm 1$, pero $d|a$, así que $d\neq \pm p$. Sabemos que $p\neq\pm1$, luego $d=1$.
+Sea $d=\operatorname{mcd}(a,p)$. Como $d|p$, $d=\pm p$ o $\pm 1$, pero $d|a$, así que $d\neq \pm p$. Sabemos que $p\neq\pm1$, luego $d=1$.
 {{% /proof %}}
 
 {{% corollary %}}
@@ -1207,8 +1207,8 @@ tenemos que
 
 $$
 \begin{array}{rcl}
-\mcd(a,b)&=&\displaystyle\pm \prod\_{\substack{p>0 \cr \text{primo}}}p^{\min(r\_p,s\_p)},\cr
-\mcm(a,b)&=&\displaystyle\pm \prod\_{\substack{p>0 \cr \text{primo}}}p^{\max(r\_p,s\_p)}.
+\operatorname{mcd}(a,b)&=&\displaystyle\pm \prod\_{\substack{p>0 \cr \text{primo}}}p^{\min(r\_p,s\_p)},\cr
+\operatorname{mcm}(a,b)&=&\displaystyle\pm \prod\_{\substack{p>0 \cr \text{primo}}}p^{\max(r\_p,s\_p)}.
 \end{array}
 $$
 
@@ -1216,7 +1216,7 @@ $$
 {{% /corollary %}}
 
 {{% proof %}}
-El enunciado sobre el divisor común maximo es consecuencia de la proposición anterior, y sobre el múltiplo común mínimo se deduce de que $\mcm(a,b)=ab/\mcd(a,b)$.
+El enunciado sobre el divisor común maximo es consecuencia de la proposición anterior, y sobre el múltiplo común mínimo se deduce de que $\operatorname{mcm}(a,b)=ab/\operatorname{mcd}(a,b)$.
 {{% /proof %}}
 
 
@@ -1227,11 +1227,11 @@ Dados tres enteros $a,b,n\in\mathbb{Z}$, decimos que $a$ es **congruente** con $
 {{% /definition %}}
 
 {{% proposition %}}
-Dados $a,b,n\in\mathbb{Z}$, la ecuación $ax\equiv b$ mod $n$ tiene solución si y solo si $\mcd(a,n)$ divide a $b$.
+Dados $a,b,n\in\mathbb{Z}$, la ecuación $ax\equiv b$ mod $n$ tiene solución si y solo si $\operatorname{mcd}(a,n)$ divide a $b$.
 {{% /proposition %}}
 
 {{% proof %}}
-Denotemos $d=\mcd(a,n)$.
+Denotemos $d=\operatorname{mcd}(a,n)$.
 
 $\Rightarrow$ Supongamos que $c\in\mathbb{Z}$ es una solución. Entonces $n|(ac-b)$, es decir, $ac-b=ne$ para cierto entero $e$. Por tanto $d|(ac-ne)=b$.
 
@@ -1251,7 +1251,7 @@ Es más, si $c\in\mathbb{Z}$ es una solución entonces el conjunto de todas sus 
 {{% /theorem %}}
 
 {{% proof %}}
-Denotamos $M=m\_1\cdots m\_n$ y $M\_i=M/m\_i$. Al ser los $m\_i>1$, factorizan de manera no trivial como producto de primos. Como $\mcd(m\_i,m\_j)=1$ si $i\neq j$, en la factorización de $m\_i$ y $m\_j$ no aparecen primos comunes, así que tampoco aparecen en la factorizacion de $m\_i$ y $M\_i$, luego $\mcd(m\_i,M\_i)=1$. Tomamos identidades de Bézous para estos últimos,
+Denotamos $M=m\_1\cdots m\_n$ y $M\_i=M/m\_i$. Al ser los $m\_i>1$, factorizan de manera no trivial como producto de primos. Como $\operatorname{mcd}(m\_i,m\_j)=1$ si $i\neq j$, en la factorización de $m\_i$ y $m\_j$ no aparecen primos comunes, así que tampoco aparecen en la factorizacion de $m\_i$ y $M\_i$, luego $\operatorname{mcd}(m\_i,M\_i)=1$. Tomamos identidades de Bézous para estos últimos,
 
 $$m\_i\alpha\_i+M\_i\beta\_i=1.$$
 
@@ -1335,14 +1335,14 @@ Dados dos enteros coprimos $m$ y $n$, tenemos un isomorfismo de grupos $U\_{mn}\
 {{% proposition %}}
 El grupo de las unidades de $\mathbb{Z}/(n)$ es
 
-$$U\_n=\\{\bar{a}\mid \mcd(a,n)=1\\}\subset\mathbb{Z}/(n).$$
+$$U\_n=\\{\bar{a}\mid \operatorname{mcd}(a,n)=1\\}\subset\mathbb{Z}/(n).$$
 
 {{% /proposition %}}
 
 {{% proof %}}
-$\Leftarrow$ Si $\mcd(a,n)=1$, tomamos una identidad de Bézout $1=a\alpha+n\beta$, la proyectamos a $\mathbb{Z}/(n)$ y obtenemos $\bar{1}=\bar{a}\bar{\alpha}+\bar{n}\bar{\beta}=\bar{a}\bar{\alpha}$, así que $\bar{a}$ es una unidad con inversa $\bar{a}^{-1}=\bar{\alpha}$.
+$\Leftarrow$ Si $\operatorname{mcd}(a,n)=1$, tomamos una identidad de Bézout $1=a\alpha+n\beta$, la proyectamos a $\mathbb{Z}/(n)$ y obtenemos $\bar{1}=\bar{a}\bar{\alpha}+\bar{n}\bar{\beta}=\bar{a}\bar{\alpha}$, así que $\bar{a}$ es una unidad con inversa $\bar{a}^{-1}=\bar{\alpha}$.
 
-$\Rightarrow$ Sea $\bar{b}$ el inverso de $\bar{a}$. Entonces $\bar{a}\bar{b}=\overline{ab}=\bar{1}$, es decir, $n|(ab-1)$ y por tanto $ab-1=nc$ para cierto entero $c$. Si $d=\mcd(a,n)$ entonces $d|(ab-nc)=1$, así que $d=1$.
+$\Rightarrow$ Sea $\bar{b}$ el inverso de $\bar{a}$. Entonces $\bar{a}\bar{b}=\overline{ab}=\bar{1}$, es decir, $n|(ab-1)$ y por tanto $ab-1=nc$ para cierto entero $c$. Si $d=\operatorname{mcd}(a,n)$ entonces $d|(ab-nc)=1$, así que $d=1$.
 {{% /proof %}}
 
 {{% proposition %}}

@@ -718,7 +718,7 @@ La notación $f^{-1}(V)$ para la imagen inversa es confusa porque incorpora la n
 
 * Para toda aplicación $f\colon A\rightarrow B$, $f^{-1}(B)=A$.
 
-* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\overline{f}\colon  A \to \Imag(f)$ como $\overline{f}(a)=f(a)$. ¿En qué se diferencia de la anterior?
+* A partir de cualquier aplicación $f\colon A\to B$ podemos definir una sobreyectiva $\overline{f}\colon  A \to \operatorname{im}(f)$ como $\overline{f}(a)=f(a)$. ¿En qué se diferencia de la anterior?
 
 * Las imágenes directa e inversa preservan inclusiones, es decir,
 dada una aplicación $f\colon A\rightarrow B$:
@@ -962,7 +962,7 @@ Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe el con
 
 
 {{% theorem name="Factorización canónica" %}}
-Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
+Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
 
 ![Factorización canónica](../images/canonica.png)
 
@@ -970,9 +970,9 @@ es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónic
 {{% /theorem %}}
 
 {{% proof %}}
-Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\im f$ como $f'(a)=f(a)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(a)=i(f(a))=f(a)$ para todo $a\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
+Hemos visto con anterioridad que podemos definir una aplicación sobreyectiva $f'\colon A\twoheadrightarrow\operatorname{im} f$ como $f'(a)=f(a)$. Está claro que $f=i\circ f'$ ya que ambas posee el mismo dominio y codominio e $(i\circ f)(a)=i(f(a))=f(a)$ para todo $a\in A$. Es más, como $f$ y $f'$ toman los mismos valores, $\sim\_f=\sim\_{f'}$.
 
-El teorema anterior se puede aplicar a $f'\colon A\rightarrow\im f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \im f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $a\in A$,
+El teorema anterior se puede aplicar a $f'\colon A\rightarrow\operatorname{im} f$ y a $\sim\_{f}$. Esto da lugar a una aplicación $\overline{f}\colon A/\sim\_f\rightarrow \operatorname{im} f$ que satisface $f'=\overline{f}\circ\pi$, así que $f=i\circ f'=i\circ(\overline{f}\circ\pi)$. La aplicación $\overline{f}$ es la única que se descompone de este modo, ya que la propia descomposición fuerza una fórmula para su definición. En efecto, dado $a\in A$,
 $$
 \begin{array}{rcl}
 f(a)&=&(i\circ\overline{f}\circ\pi)(a)\cr
@@ -982,7 +982,7 @@ f(a)&=&(i\circ\overline{f}\circ\pi)(a)\cr
 \end{array}
 $$
 
-Veamos que $\overline{f}$ es biyectiva. Comenzamos por la sobreyectividad. Dado $b\in\im f$, como $f'$ es sobreyectiva, existe $a\in A$ tal que $b=f(a)=\overline{f}([a])$. Esto prueba que $\overline{f}$ es sobreyectiva. Comprobemos ahora la inyectividad. Dados $[a],[b]\in A/\sim\_f$, usando la anterior fórmula para $\overline{f}$ vemos que $\overline{f}([a])=\overline{f}([b])$ si y solo si $f(a)=f(b)$, lo cual equivale a que $a\sim\_fb$, que es lo mismo que decir $[a]=[b]$. Esto concluye la prueba.
+Veamos que $\overline{f}$ es biyectiva. Comenzamos por la sobreyectividad. Dado $b\in\operatorname{im} f$, como $f'$ es sobreyectiva, existe $a\in A$ tal que $b=f(a)=\overline{f}([a])$. Esto prueba que $\overline{f}$ es sobreyectiva. Comprobemos ahora la inyectividad. Dados $[a],[b]\in A/\sim\_f$, usando la anterior fórmula para $\overline{f}$ vemos que $\overline{f}([a])=\overline{f}([b])$ si y solo si $f(a)=f(b)$, lo cual equivale a que $a\sim\_fb$, que es lo mismo que decir $[a]=[b]$. Esto concluye la prueba.
 {{% /proof %}}
 
 Este teorema nos proporciona un método muy eficiente para establecen una biyección de un conjunto cociente en otro.
@@ -990,7 +990,7 @@ Este teorema nos proporciona un método muy eficiente para establecen una biyecc
 {{% example name="$\mathbb{Z}$ módulo $n$" %}}
 Vamos a dar una demostración rigurosa de que $\mathbb{Z}/\sim\_n$ posee $n$ elementos para $n>0$. Para ello definimos la aplicación $f\colon \mathbb Z\rightarrow \mathbb Z$ tal que $f(m)$ es el resto no negativo de dividir $m$ entre $n$.
 
-La imagen de $f$ es $\im f=\\{0,\dots, n-1\\}$. En efecto, el resto de la división es $\geq 0$ y $<n$, lo cual demuestra $\subset$. Además, para $0\leq m<n$, el cociente de la división es $0$ y el resto es el propio $m$, por tanto también tenemos $\subset$.
+La imagen de $f$ es $\operatorname{im} f=\\{0,\dots, n-1\\}$. En efecto, el resto de la división es $\geq 0$ y $<n$, lo cual demuestra $\subset$. Además, para $0\leq m<n$, el cociente de la división es $0$ y el resto es el propio $m$, por tanto también tenemos $\subset$.
 
 Veamos ahora que $\sim\_f=\sim\_n$. Sean $m,m'\in\mathbb Z$. Dividimos ambos números entre $n$, $m=c\cdot n+f(m)$ y $m'=c'\cdot n+f(m')$. Tenemos que $m-m'=(c-c')\cdot n+(f(m)-f(m'))$ es también una división, porque $|f(m)-f(m')|<n$. Por tanto $f(m)=f(m')$ si y solo si $m-m'$ es divisible por $n$. Esto demuestra que ambas relaciones coinciden.
 
@@ -1009,7 +1009,7 @@ En esta sección vamos a dar una introducción a este tema, evitando entrar en d
 
 
 Nuestros prototipos de conjuntos finitos son los de la forma  $\\{1,2,\dots, n\\}$, donde  $n$ es un número natural mayor o igual que $ 1$. Pero en Matemáticas, uno de los conjuntos más importantes, el de los números naturales
-$$\N =\\{0,1,2,3,\dots \\},
+$$\mathbb{N} =\\{0,1,2,3,\dots \\},
 $$
 cae fuera de los primeros. Se trata de hecho del primer contacto que tenemos con la noción de "infinito".
 
@@ -1072,11 +1072,11 @@ Decimos que un conjunto $X$ es {\bf finito} si o bien es vacío, o si no es vac�
 {{% example name="Ejemplo" %}}
 (1) Para cada número natural $n\geq 1$, el conjunto $\\{1,2,\dots, n\\}$ es finito (según la definición anterior).
 
-\noindent (2) El conjunto de los números naturales $\N$ es infinito, pues $\N$ es equipotente a $\N_+$:
+\noindent (2) El conjunto de los números naturales $\mathbb{N}$ es infinito, pues $\mathbb{N}$ es equipotente a $\mathbb{N}_+$:
 
-$$f: \N \to \N_+,\quad f(x) = x+1,$$
+$$f: \mathbb{N} \to \mathbb{N}_+,\quad f(x) = x+1,$$
 
-es una aplicación biyectiva, y $\N_+$ es un subconjunto propio de $\N$.
+es una aplicación biyectiva, y $\mathbb{N}_+$ es un subconjunto propio de $\mathbb{N}$.
 
 \noindent (3) Si $X$ es un conjunto finito (resp. infinito) e $Y$ es un conjunto equipotente a $X$, entonces $Y$ es también un conjunto finito (resp. infinito).
 {{% /example %}}
@@ -1100,13 +1100,13 @@ Supongamos que $X$ no es finito, es decir, no es vacío y no es posible establec
 
 Continuando con este proceso definimos una familia de aplicaciones
 
-$$f_n: \\{1,\dots, n\\} \to X,\quad n\in\N,$$
+$$f_n: \\{1,\dots, n\\} \to X,\quad n\in\mathbb{N},$$
 
-todas ellas inyectivas, que cada una prolonga a la anterior, es decir $f_n|_{\\{1,\dots, n-1\\}} = f_{n-1}$. Con esta familia construimos una aplicación $f:\N \to X$ de la siguiente forma:
+todas ellas inyectivas, que cada una prolonga a la anterior, es decir $f_n|_{\\{1,\dots, n-1\\}} = f_{n-1}$. Con esta familia construimos una aplicación $f:\mathbb{N} \to X$ de la siguiente forma:
 
-$$f(n) = f_n(n)\quad \text{\ para cada\ }\ n\in \N.$$
+$$f(n) = f_n(n)\quad \text{\ para cada\ }\ n\in \mathbb{N}.$$
 
-Se prueba sin dificultad que $f$ es inyectiva, y como $\N$ es infinito, concluimos aplicando la Proposición \ref{prop:finito_infinito}, 3)\footnote{En esta prueba hemos utilizado un axioma de la Teoría axiomática de conjuntos denominado el "axioma de elección numerable". Al tratarse de una introducción a la Teoría de conjuntos, no entraremos en más detalles.}.
+Se prueba sin dificultad que $f$ es inyectiva, y como $\mathbb{N}$ es infinito, concluimos aplicando la Proposición \ref{prop:finito_infinito}, 3)\footnote{En esta prueba hemos utilizado un axioma de la Teoría axiomática de conjuntos denominado el "axioma de elección numerable". Al tratarse de una introducción a la Teoría de conjuntos, no entraremos en más detalles.}.
 {{% /proof %}}
 
 En la siguiente proposición damos las principales propiedades que se deducen de las definiciones dadas de conjunto finito y de conjunto infinito. Con ellas comprobamos
@@ -1132,7 +1132,7 @@ Nos limitaremos a dar algunas indicaciones.
 
 $$g(y) := \min f^{-1} (\\{y\\}) \in X.$$
 
-Se prueba sin dificultad que $f\circ g = 1_Y$, por lo que $g$ es inyectiva e $Y$ será equipotente a $\Imag(g)\subset X= \\{1,\dots,m\\}$. Concluimos aplicando la Proposición \ref{prop:subconj_m}.
+Se prueba sin dificultad que $f\circ g = 1_Y$, por lo que $g$ es inyectiva e $Y$ será equipotente a $\operatorname{im}(g)\subset X= \\{1,\dots,m\\}$. Concluimos aplicando la Proposición \ref{prop:subconj_m}.
 
 
 \noindent 2): Es una consecuencia casi inmediata de la Proposición \ref{prop:subconj_m}.
@@ -1185,7 +1185,7 @@ El cardinal de un conjunto finito $X$ se denotará por $\sharp(X)$, o también $
 {{% /definition %}}
 
 {{% watch %}}
-Una de las primeras sorpresas que trajo el estudio matemático de los conjuntos infinitos es que "no todos los infinitos son iguales", o dicho de modo más preciso, no todos los conjuntos infinitos son equipotentes. De hecho, Cantor probó mediante su conocido "método diagonal" que los conjuntos $\N$, de los números naturales, y $\RR$, de los números reales, no son equipotentes. Más generalmente, ningún conjunto $X$ es equipotente al conjunto de sus partes $\mathcal{P}(X)$, lo que nos proporciona "infinitos tipos de infinito". Todo esto lleva a la {\bf Teoría de cardinales} (y de {\bf ordinales}), que no abordaremos en estas notas.
+Una de las primeras sorpresas que trajo el estudio matemático de los conjuntos infinitos es que "no todos los infinitos son iguales", o dicho de modo más preciso, no todos los conjuntos infinitos son equipotentes. De hecho, Cantor probó mediante su conocido "método diagonal" que los conjuntos $\mathbb{N}$, de los números naturales, y $\mathbb{R}$, de los números reales, no son equipotentes. Más generalmente, ningún conjunto $X$ es equipotente al conjunto de sus partes $\mathcal{P}(X)$, lo que nos proporciona "infinitos tipos de infinito". Todo esto lleva a la {\bf Teoría de cardinales} (y de {\bf ordinales}), que no abordaremos en estas notas.
 {{% /watch %}}
 
 Para terminar este tema, veamos una prueba de que ningún conjunto $X$ es equipotente al conjunto de sus partes $\mathcal{P}(X)$, así como una ilustración del método diagonal de Cantor.
@@ -1206,7 +1206,7 @@ $}}
 
 Como $A\subset X$ se tiene que $A\in \mathcal{P}(X)$. Veamos que $A$ no pertenece a la imagen de $\varphi$.
 
-Procederemos por reducción al absurdo. Si $A\in \Imag (\varphi)$, entonces existirá un $x_0\in X$ tal que $\varphi(x_0)=A$
+Procederemos por reducción al absurdo. Si $A\in \operatorname{im} (\varphi)$, entonces existirá un $x_0\in X$ tal que $\varphi(x_0)=A$
 
 Nos preguntamos ahora si $x_0\in A$. Lo que está claro es que o bien $x_0\in A$ o bien $x_0\notin A$.
 
@@ -1217,23 +1217,23 @@ Nos preguntamos ahora si $x_0\in A$. Lo que está claro es que o bien $x_0\in A$
 \noindent Si $x_0\notin A$, como $A=\varphi(x_0)$ tendríamos que $x_0\notin \varphi(x_0)$, y de acuerdo con la definición de $A$ concluimos que $x_0\in A$, lo cual es un absurdo.
 
 
-En ambos casos llegamos a un absurdo, por lo que nuestra suposición es falsa y por tanto $A\notin \Imag (\varphi)$ y por tanto $\varphi$ no es sobreyectiva
+En ambos casos llegamos a un absurdo, por lo que nuestra suposición es falsa y por tanto $A\notin \operatorname{im} (\varphi)$ y por tanto $\varphi$ no es sobreyectiva
 {{% /proof %}}
 
 {{% proposition %}}
-No existe ninguna aplicación sobreyectiva $\varphi: \N \longleftarrow \N^\N$.
+No existe ninguna aplicación sobreyectiva $\varphi: \mathbb{N} \longleftarrow \mathbb{N}^\mathbb{N}$.
 {{% /proposition %}}
 
 {{% proof %}}
-Sea  $\varphi: \N \longleftarrow \N^\N$ una aplicación. Veamos que $\varphi$ nunca podrá ser sobreyectiva. La idea fundamental es considerar cualquier $f\in \N^\N$ (i.e. cualquier aplicación $f:\N \to \N$) que verifique lo siguiente:
+Sea  $\varphi: \mathbb{N} \longleftarrow \mathbb{N}^\mathbb{N}$ una aplicación. Veamos que $\varphi$ nunca podrá ser sobreyectiva. La idea fundamental es considerar cualquier $f\in \mathbb{N}^\mathbb{N}$ (i.e. cualquier aplicación $f:\mathbb{N} \to \mathbb{N}$) que verifique lo siguiente:
 
-$$f(n) \neq \varphi(n)(n)\quad \forall n\in \N.$$
+$$f(n) \neq \varphi(n)(n)\quad \forall n\in \mathbb{N}.$$
 
-Por ejemplo, podemos tomar $f:\N \to \N$ definida por $f(n) = \varphi(n)(n) + 1$.
+Por ejemplo, podemos tomar $f:\mathbb{N} \to \mathbb{N}$ definida por $f(n) = \varphi(n)(n) + 1$.
 
-Vemos fácilmente que $f$ no pertenece a la imagen de $\varphi$, puesto que si existiera $n_0\in \N$ tal que $f=\varphi(n_0)$ se tendría que
+Vemos fácilmente que $f$ no pertenece a la imagen de $\varphi$, puesto que si existiera $n_0\in \mathbb{N}$ tal que $f=\varphi(n_0)$ se tendría que
 
-$$f(n) = \varphi(n_0)(n)\quad \forall n\in \N,$$
+$$f(n) = \varphi(n_0)(n)\quad \forall n\in \mathbb{N},$$
 
 y en particular $f(n_0) = \varphi(n_0)(n_0)$, lo cual contradice la propiedad con la que hemos elegido $f$. Así pues $\varphi$ no es sobreyectiva.
 {{% /proof %}}
@@ -1241,7 +1241,7 @@ y en particular $f(n_0) = \varphi(n_0)(n_0)$, lo cual contradice la propiedad co
 {{% watch %}}
 
 Nótese que las pruebas de las dos proposiciones anteriores son muy similares y ambas responden al
-"método diagonal" de Cantor. Para apreciar mejor la similitud de ambas pruebas, podemos tener en cuenta que de hecho la segunda proposición es un corolario de la primera, pues sabemos que hay una biyección natural entre $\mathcal{P}(\N)$ y $\\{0,1\\}^\N$, y por otra parte es fácil encontrar una aplicación sobreyectiva $\N^\N \to \\{0,1\\}^\N$ (para ello basta tomar la composición con cualquier aplicación sobreyectiva $\N \to \\{0,1\\}$), de manera que si existiera alguna aplicación sobreyectiva $\N \to \N^\N$, componiéndola con la aplicación sobreyectiva $\N^\N \to \\{0,1\\}^\N$, obtendríamos una aplicación sobreyectiva $\N \to \\{0,1\\}^\N$, lo que contradeciría la primera proposición.
+"método diagonal" de Cantor. Para apreciar mejor la similitud de ambas pruebas, podemos tener en cuenta que de hecho la segunda proposición es un corolario de la primera, pues sabemos que hay una biyección natural entre $\mathcal{P}(\mathbb{N})$ y $\\{0,1\\}^\mathbb{N}$, y por otra parte es fácil encontrar una aplicación sobreyectiva $\mathbb{N}^\mathbb{N} \to \\{0,1\\}^\mathbb{N}$ (para ello basta tomar la composición con cualquier aplicación sobreyectiva $\mathbb{N} \to \\{0,1\\}$), de manera que si existiera alguna aplicación sobreyectiva $\mathbb{N} \to \mathbb{N}^\mathbb{N}$, componiéndola con la aplicación sobreyectiva $\mathbb{N}^\mathbb{N} \to \\{0,1\\}^\mathbb{N}$, obtendríamos una aplicación sobreyectiva $\mathbb{N} \to \\{0,1\\}^\mathbb{N}$, lo que contradeciría la primera proposición.
 {{% /watch %}}
 
 -->

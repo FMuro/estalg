@@ -122,7 +122,7 @@ D&=&x^5-\frac{1}{2}x^3+2x^2-3x+3, \cr
 d&=&2x^3-\frac{2}{3}x^2+3x-1,
 \end{array}
 $$
-dos polinomios de $\Q[x]$. Comenzamos tomando
+dos polinomios de $\mathbb{Q}[x]$. Comenzamos tomando
 
 $$D\_1=D-\frac{1}{2}x^2\cdot d=\frac{1}{3}x^4-2x^3+\frac{5}{2}x^2-3x+3.$$
 
@@ -209,11 +209,11 @@ Por inducción en $n=\deg(f)$. Si $n=0$, entonces $f$ es un polinomio constante 
 
 
 {{% remark %}}
-Los conceptos de **divisor común máximo** y **múltiplo común mínimo** en $k[x]$ se definen como en $\mathbb{Z}$ y satisfacen las mismas propieades, excepto las que ahora señalamos. Estos conceptos están bien definidos salvo producto por unidades. Si $d$ y $d'$ son dos divisores comunes máximos de $f,g\in k[x]$ entonces existe $\alpha\in k^\times$ tal que $d'=\alpha\cdot d$, e igual para los múltiplos comunes mínimos. Además, $\mcd(f,g)=\mcd(\alpha\cdot f,\beta\cdot g)$ para todo $\alpha,\beta\in k^\times$. Destacamos que el divisor común máximo se puede calcular medialte el **algoritmo de Euclides** y que satisface la **identidad de Bézout**.
+Los conceptos de **divisor común máximo** y **múltiplo común mínimo** en $k[x]$ se definen como en $\mathbb{Z}$ y satisfacen las mismas propieades, excepto las que ahora señalamos. Estos conceptos están bien definidos salvo producto por unidades. Si $d$ y $d'$ son dos divisores comunes máximos de $f,g\in k[x]$ entonces existe $\alpha\in k^\times$ tal que $d'=\alpha\cdot d$, e igual para los múltiplos comunes mínimos. Además, $\operatorname{mcd}(f,g)=\operatorname{mcd}(\alpha\cdot f,\beta\cdot g)$ para todo $\alpha,\beta\in k^\times$. Destacamos que el divisor común máximo se puede calcular medialte el **algoritmo de Euclides** y que satisface la **identidad de Bézout**.
 {{% /remark %}}
 
 {{% example name="Algoritmo de Euclides" %}}
-Hallemos el divisor común máximo de los siguientes polinomios de $\Q[x]$, consideramos en el [ejemplo](#unadiv) anterior:
+Hallemos el divisor común máximo de los siguientes polinomios de $\mathbb{Q}[x]$, consideramos en el [ejemplo](#unadiv) anterior:
 $$
 \begin{array}{rcl}
 f&=&x^5-\frac{1}{2}x^3+2x^2-3x+3, \cr
@@ -230,7 +230,7 @@ $$g=\left(\frac{37}{27}x^2 +\frac{37}{18}\right)\left(\frac{54}{37}x-\frac{18}{3
 
 por tanto el divisor común máximo es el último resto no nulo,
 
-$$\mcd(f,g)=\frac{37}{27}x^2 +\frac{37}{18}$$
+$$\operatorname{mcd}(f,g)=\frac{37}{27}x^2 +\frac{37}{18}$$
 
 y una identidad de Bézout se obtiene simplemente despejando de la primera división euclídea,
 
@@ -322,7 +322,7 @@ Dados $f,g\in k[x]$, $D(fg)=D(f)g+fD(g)$.
 
 
 {{% theorem name="fundamental del álgebra" %}}
-Todo polinomio $f\in\C[x]$ de grado positivo tiene una raíz en $\mathbb{C}$.
+Todo polinomio $f\in\mathbb{C}[x]$ de grado positivo tiene una raíz en $\mathbb{C}$.
 {{% /theorem %}}
 
 {{% corollary %}}
@@ -341,10 +341,10 @@ $$f=b\prod_{i=1}^n(x-a\_i)$$
 donde $a\_i,b\in\mathbb{C}$, $b\neq 0$.
 {{% /corollary %}}
 
-Observa que $\RR[x]\subset\C[x]$ pues $\RR\subset\C$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
+Observa que $\mathbb{R}[x]\subset\mathbb{C}[x]$ pues $\mathbb{R}\subset\mathbb{C}$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
 
 {{% proposition %}}
-Si $a\in\mathbb{C}$ es una raíz de $f\in \RR[x]$ entonces su conjugado $\bar{a}$ también. Además, ambas tienen la misma multiplicidad.
+Si $a\in\mathbb{C}$ es una raíz de $f\in \mathbb{R}[x]$ entonces su conjugado $\bar{a}$ también. Además, ambas tienen la misma multiplicidad.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -352,17 +352,17 @@ Consideramos el homomorfismo de anillos $c\colon \mathbb{C}[x]\rightarrow\mathbb
 
 $$c(a\_nx^n+\cdots+a\_0)=\bar{a}\_nx^n+\cdots+\bar{a}\_0.$$
 
-Observa que $c$ se comporta como la identidad sobre $\RR[x]$. Si $a$ es raíz de $f$ entonces $(x-a)|f$ en $\C[x]$. Como $c$ es un homomorfismo, esto implica que $x-\bar{a}=c(x-a)|c(f)=f$. Esto demuestra que $\bar{a}$ es raíz de $f$.
+Observa que $c$ se comporta como la identidad sobre $\mathbb{R}[x]$. Si $a$ es raíz de $f$ entonces $(x-a)|f$ en $\mathbb{C}[x]$. Como $c$ es un homomorfismo, esto implica que $x-\bar{a}=c(x-a)|c(f)=f$. Esto demuestra que $\bar{a}$ es raíz de $f$.
 
 Análogamente se demuestra que si $(x-a)^n|f$ entonces $(x-\bar{a})^n|f$, por tanto la multiplicidad de $\bar{a}$ es $\geq$ que la de $a$. Como esto vale para cualquier $a$ y $\bar{\bar{a}}=a$, deducimos la otra desigualdad.
 {{% /proof %}}
 
 {{% proposition %}}
-Todo polinomio en $\RR[x]$ de grado $>0$ factoriza de manera única como producto de un escalar no nulo y polinomios irreducibles de grados $1$ y $2$.
+Todo polinomio en $\mathbb{R}[x]$ de grado $>0$ factoriza de manera única como producto de un escalar no nulo y polinomios irreducibles de grados $1$ y $2$.
 {{% /proposition %}}
 
 {{% proof %}}
-Tomamos la descomposición en $\C[x]$,
+Tomamos la descomposición en $\mathbb{C}[x]$,
 
 $$f=b\prod_{i=1}^n(x-a\_i).$$
 
@@ -370,11 +370,11 @@ Agrupamos los factores de grado $1$ correspondientes a raíces complejas conjuga
 
 $$(x-a)(x-\bar{a})=x^2-2\operatorname{Re}(a)x+|a|^2.$$
 
-Este es un polinomio mónico de grado $2$ en $\RR[x]$ sin raíces reales, por tanto irreducible. El resultado es la descomposición deseada, que sabemos que es única.
+Este es un polinomio mónico de grado $2$ en $\mathbb{R}[x]$ sin raíces reales, por tanto irreducible. El resultado es la descomposición deseada, que sabemos que es única.
 {{% /proof %}}
 
 {{% corollary %}}
-Los polinomios irreducibles en $\RR[x]$ son los de grado $1$ y los de grado $2$ sin raíces en $\mathbb{R}$.
+Los polinomios irreducibles en $\mathbb{R}[x]$ son los de grado $1$ y los de grado $2$ sin raíces en $\mathbb{R}$.
 {{% /corollary %}}
 
 

@@ -20,7 +20,7 @@ que ha de satisfacer las propiedades siguentes:
 
 * Existe un elemento $e\in G$  tal que $x\star e=x=e\star x$ para todo  $x\in G$ (**elemento neutro**).
 
-* Para todo $x\in G$ existe $\inv{x}\in G$  tal que $x\star \inv{x}=e=\inv{x}\star x$ (elemento **simétrico** o **inverso**).
+* Para todo $x\in G$ existe $x^{-1}\in G$  tal que $x\star x^{-1}=e=x^{-1}\star x$ (elemento **simétrico** o **inverso**).
 
 {{% /definition %}}
 
@@ -29,9 +29,9 @@ Cuando la operación $\star$ se sobreentienda por el contexto, el grupo $(G, \st
 {{% example name="Ejemplos de grupos" %}}
 Los siguientes son algunos grupos bien conocidos:
 
-* $\Z$, $\Q$, $\mathbb{R}$ y $\mathbb{C}$ son grupos con la operación suma $+$. En este caso el elemento neutro es el **cero** $0$. El simétrico de un elemento $x$ es su **opuesto** $-x$. Esta notación se denomina **aditiva** frente a la usada en la definición de grupo, que es la **multiplicativa**.
+* $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ y $\mathbb{C}$ son grupos con la operación suma $+$. En este caso el elemento neutro es el **cero** $0$. El simétrico de un elemento $x$ es su **opuesto** $-x$. Esta notación se denomina **aditiva** frente a la usada en la definición de grupo, que es la **multiplicativa**.
 
-* $\Q\setminus\\{ 0\\}$, $\mathbb{R}\setminus\\{ 0\\}$ y $\mathbb{C}\setminus\\{ 0\\}$
+* $\mathbb{Q}\setminus\\{ 0\\}$, $\mathbb{R}\setminus\\{ 0\\}$ y $\mathbb{C}\setminus\\{ 0\\}$
   son grupos  con la multiplicación. ¿Cuál es el elemento neutro?
 
 * El conjunto $\\{ 1,-1\\}$ con el producto.
@@ -277,7 +277,7 @@ Como $0<r<m$, esto contradice $o(x)=m$.
 {{% /proof %}}
 
 {{% proposition %}}
-Un elemento de un grupo $x\in G$ tiene orden finito si y solo si $\inv{x}$ también. En este caso $o(x)=o(\inv{x})$.
+Un elemento de un grupo $x\in G$ tiene orden finito si y solo si $x^{-1}$ también. En este caso $o(x)=o(x^{-1})$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -318,7 +318,7 @@ Dado un conjunto $X$, una **permutación** de $X$ es una aplicación biyectiva $
 {{% /definition %}}
 
 {{% proposition %}}
-El conjunto $\Sim(X)$ de todas las permutaciones de un conjunto $X$ es un grupo para la composición de aplicaciones, denominado **grupo simétrico**.
+El conjunto $\operatorname{Sim}(X)$ de todas las permutaciones de un conjunto $X$ es un grupo para la composición de aplicaciones, denominado **grupo simétrico**.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -436,7 +436,7 @@ $$
 
 Observa que $\tau\circ\sigma\neq \sigma\circ\tau$. Esto demuestra que la composición de permutaciones no es conmutativa en general.
 
-Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres elementos el grupo $\Sim(X)$ no es abeliano.
+Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres elementos el grupo $\operatorname{Sim}(X)$ no es abeliano.
 {{% /example %}}
 
 ## Ciclos y trasposiciones
@@ -444,11 +444,11 @@ Este ejemplo se puede generalizar para demostrar que si $X$ tiene al menos tres 
 {{% definition %}}
 Dado un conjunto $X$ el **soporte** de una permutación $\sigma\colon X\rightarrow X$ es el subconjunto
 
-$$\sop (\sigma )=\\{ x\in X\mid \sigma (x)\ne x\\} .$$
+$$\operatorname{sop} (\sigma )=\\{ x\in X\mid \sigma (x)\ne x\\} .$$
 
-Decimos que $\sigma\in \Sim(X)$ es un **ciclo** de **longitud** $n$, o un **$n$-ciclo**, si su soporte es un conjunto finito de $n$ elementos
+Decimos que $\sigma\in \operatorname{Sim}(X)$ es un **ciclo** de **longitud** $n$, o un **$n$-ciclo**, si su soporte es un conjunto finito de $n$ elementos
 
-$$\sop (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$
+$$\operatorname{sop} (\sigma )=\\{ x_1,x_2,\ldots ,x_n\\}$$
 
 y además
 
@@ -502,7 +502,7 @@ Cualquier notación para los ciclos que quepa en una línea es intrínsecamente 
 
 
 {{% remark %}}
-Dada una permutación $\sigma\in\Sim(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\sop(\sigma)=\sop(\sigma^{-1})$.
+Dada una permutación $\sigma\in\operatorname{Sim}(X)$, al ser $\sigma\colon X\rightarrow X$ biyectiva, $\sigma(x)=y$ si y solo si $x=\sigma^{-1}(y)$, por tanto $\sigma$ y su inversa $\sigma^{-1}$ tienen el mismo soporte, $\operatorname{sop}(\sigma)=\operatorname{sop}(\sigma^{-1})$.
 {{% /remark %}}
 
 
@@ -511,7 +511,7 @@ El orden de un ciclo coincide con su longitud.
 {{% /proposition %}}
 
 {{% proof %}}
-Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \Sim(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
+Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \operatorname{Sim}(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
 {{% /proof %}}
 
 
@@ -525,39 +525,39 @@ Es fácil comprobar que $(x\_1\;\cdots\; x\_n)=(x\_1\; x\_2)\cdots (x\_{n-1}\; x
 
 
 {{% definition %}}
-Dos permutaciones $\sigma ,\tau\in\Sim (X)$ son **disjuntas** si sus soportes son disjuntos, $\sop(\sigma)\cap \sop(\tau)=\varnothing$.
+Dos permutaciones $\sigma ,\tau\in\operatorname{Sim} (X)$ son **disjuntas** si sus soportes son disjuntos, $\operatorname{sop}(\sigma)\cap \operatorname{sop}(\tau)=\varnothing$.
 {{% /definition %}}
 
 {{% lemma label="lem:soporte" %}}
-Dada $\sigma\in\Sim (X)$, si $x\in\sop(\sigma)$ entonces $\sigma(x)\in\sop(\sigma)$.
+Dada $\sigma\in\operatorname{Sim} (X)$, si $x\in\operatorname{sop}(\sigma)$ entonces $\sigma(x)\in\operatorname{sop}(\sigma)$.
 {{% /lemma %}}
 
 {{% proof %}}
 En vez de $A\Rightarrow B$ probaremos NO $A$ $\Leftarrow$ NO $B$.
 
-Si $\sigma(x)\notin\sop(\sigma)$ entonces $\sigma(\sigma(x))=\sigma(x)$. Como $\sigma$ es inyectiva, esto implica que $\sigma(x)=x$, con lo que $x\notin\sop(x)$.
+Si $\sigma(x)\notin\operatorname{sop}(\sigma)$ entonces $\sigma(\sigma(x))=\sigma(x)$. Como $\sigma$ es inyectiva, esto implica que $\sigma(x)=x$, con lo que $x\notin\operatorname{sop}(x)$.
 {{% /proof %}}
 
 {{% remark %}}
-El soporte de una permutación $\sigma$, si no es vacío, ha de tener al menos dos elementos ya que si $\sop(\sigma)=\\{x\\}$, como $\sigma(x)\in\sop(\sigma)$ tendríamos que $\sigma(x)=x$, así que $x\notin\sop(\sigma)$, que es una contradicción. Por tanto los ciclos de soporte no vació tienen como poco longitud $2$. El ciclo de longitud $0$, denotado $()$, es la identidad. De hecho la identidad es la única permutación de soporte vacío.
+El soporte de una permutación $\sigma$, si no es vacío, ha de tener al menos dos elementos ya que si $\operatorname{sop}(\sigma)=\\{x\\}$, como $\sigma(x)\in\operatorname{sop}(\sigma)$ tendríamos que $\sigma(x)=x$, así que $x\notin\operatorname{sop}(\sigma)$, que es una contradicción. Por tanto los ciclos de soporte no vació tienen como poco longitud $2$. El ciclo de longitud $0$, denotado $()$, es la identidad. De hecho la identidad es la única permutación de soporte vacío.
 {{% /remark %}}
 
 {{% corollary label="cor:soporte" %}}
-Dada $\sigma\in\Sim (X)$, si $x\in\sop(\sigma)$ entonces $\sigma^{n}(x)\in\sop(\sigma)$ para todo $n\in\mathbb{Z}$.
+Dada $\sigma\in\operatorname{Sim} (X)$, si $x\in\operatorname{sop}(\sigma)$ entonces $\sigma^{n}(x)\in\operatorname{sop}(\sigma)$ para todo $n\in\mathbb{Z}$.
 {{% /corollary %}}
 
 {{% proof %}}
-Para $n=0$ es obvio. Si $n>0$, es consecuencia del [lema anterior](#lem:soporte), por inducción. Si $n=-1$, se sigue también del lema anterior ya que $\sop(\sigma)=\sop(\sigma^{-1})$. De aquí se deduce también por inducción para todo $n<0$.
+Para $n=0$ es obvio. Si $n>0$, es consecuencia del [lema anterior](#lem:soporte), por inducción. Si $n=-1$, se sigue también del lema anterior ya que $\operatorname{sop}(\sigma)=\operatorname{sop}(\sigma^{-1})$. De aquí se deduce también por inducción para todo $n<0$.
 {{% /proof %}}
 
 {{% proposition %}}
-Si $\sigma,\tau\in\Sim (X)$ son permutaciones disjuntas entonces $\tau\sigma =\sigma\tau$.
+Si $\sigma,\tau\in\operatorname{Sim} (X)$ son permutaciones disjuntas entonces $\tau\sigma =\sigma\tau$.
 {{% /proposition %}}
 
 {{% proof %}}
 Tenemos que demostrar que $\tau\sigma (x)=\sigma\tau (x)$ para todo  $x\in X$.
 
-Si $x\notin\sop (\sigma )\cup\sop (\tau )$ entonces $\sigma(x)=x=\tau(x)$, luego
+Si $x\notin\operatorname{sop} (\sigma )\cup\operatorname{sop} (\tau )$ entonces $\sigma(x)=x=\tau(x)$, luego
 $$
 \begin{array}{rcl}
 \tau\sigma (x)&=&\tau(x)\cr
@@ -567,9 +567,9 @@ $$
 \end{array}
 $$
 
-Si $x\in\sop (\sigma )$, como las permutaciones son disjuntas entonces $x\notin\sop (\tau )$, luego $\tau (x)=x$, así que $\sigma\tau (x)=\sigma(x)$. Es más, por el [lema anterior](#lem:soporte) $\sigma(x)\in\sop (\sigma )$, luego $\sigma(x)\notin\sop (\tau )$ y por tanto también $\tau\sigma (x)=\sigma(x)$.
+Si $x\in\operatorname{sop} (\sigma )$, como las permutaciones son disjuntas entonces $x\notin\operatorname{sop} (\tau )$, luego $\tau (x)=x$, así que $\sigma\tau (x)=\sigma(x)$. Es más, por el [lema anterior](#lem:soporte) $\sigma(x)\in\operatorname{sop} (\sigma )$, luego $\sigma(x)\notin\operatorname{sop} (\tau )$ y por tanto también $\tau\sigma (x)=\sigma(x)$.
 
-Como los papeles de $\sigma$ y $\tau$ son intercambiables, el argumento anterior también demuestra que $\tau\sigma (x)=\sigma \tau(x)$ si $x\in\sop (\tau)$.
+Como los papeles de $\sigma$ y $\tau$ son intercambiables, el argumento anterior también demuestra que $\tau\sigma (x)=\sigma \tau(x)$ si $x\in\operatorname{sop} (\tau)$.
 {{% /proof %}}
 
 {{% watch %}}
@@ -582,7 +582,7 @@ Toda permutación con soporte finito se puede descomponer como producto de ciclo
 {{% /theorem %}}
 
 {{% proof %}}
-Sea $\sigma\in\Sim (X)$ una permutación. Definimos una relación de equivalencia $\sim$ en $X$ del siguiente modo: $x\sim y$ si existe $n\in\mathbb{Z}$ tal que $y=\sigma^n(x)$. Esta relación es de equivalencia:
+Sea $\sigma\in\operatorname{Sim} (X)$ una permutación. Definimos una relación de equivalencia $\sim$ en $X$ del siguiente modo: $x\sim y$ si existe $n\in\mathbb{Z}$ tal que $y=\sigma^n(x)$. Esta relación es de equivalencia:
 
 * Reflexividad: $x\sim x$ es cierto para todo $x\in X$ ya que $x=1_X(x)=\sigma^0(x)$.
 
@@ -594,11 +594,11 @@ Las clases de equivalencia de esta relación se denominan **órbitas**. La órbi
 
 $$\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}.$$
 
-Si $x\notin\sop (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\sop (\sigma )$, entonces $\overline{x}\subset\sop (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito.
+Si $x\notin\operatorname{sop} (\sigma )$, entonces $\overline{x}=\\{ x\\}$. Si $x\in\operatorname{sop} (\sigma )$, entonces $\overline{x}\subset\operatorname{sop} (\sigma )$ por el [corolario anterior](#cor:soporte), y por tanto es un conjunto finito.
 Veamos que en general $\bar{x}=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ para cierto $m> 0$. Esto nos va a llevar la mayor parte de esta prueba.
 
 
-Probemos que existe $m> 0$ tal que $\sigma^m(x)=x$. En efecto, como $\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}\subset\sop (\sigma)$, que es finito, todos los $\sigma^n(x)$ no pueden ser distintos, así que han de existir $p,q\in\mathbb{Z}$, $p\neq q$, tales que $\sigma^p(x)=\sigma^q(x)$. Podemos suponer sin pérdida de generalidad que $p < q$, así que, aplicando $\sigma^{-p}$ a la anterior igualdad deducimos que
+Probemos que existe $m> 0$ tal que $\sigma^m(x)=x$. En efecto, como $\overline{x}=\\{\sigma^n(x)\mid n\in\mathbb{Z}\\}\subset\operatorname{sop} (\sigma)$, que es finito, todos los $\sigma^n(x)$ no pueden ser distintos, así que han de existir $p,q\in\mathbb{Z}$, $p\neq q$, tales que $\sigma^p(x)=\sigma^q(x)$. Podemos suponer sin pérdida de generalidad que $p < q$, así que, aplicando $\sigma^{-p}$ a la anterior igualdad deducimos que
 $$
 \begin{array}{rcl}
 x&=&\sigma^{-p}(\sigma^p(x))\cr
@@ -620,7 +620,7 @@ $$
 $$
 Como $\sigma^m(x)=x$, entonces $(\sigma^m)^c(x)=0$ si $c\geq 0$. Es más, $\sigma^m(x)=x$ también implica que $x=\sigma^{-m}(x)$, así que $(\sigma^m)^c(x)=0$ también si $c<0$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
 
-Hemos probado que $\sigma$ se comporta sobre cada órbita $\bar x=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ como un ciclo de longitud $m$, ya que $\sigma^m(x)=x$, de hecho $m$ era el menor entero positivo que satisfacía esta propiedad. Esto demuestra que $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\sop(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
+Hemos probado que $\sigma$ se comporta sobre cada órbita $\bar x=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ como un ciclo de longitud $m$, ya que $\sigma^m(x)=x$, de hecho $m$ era el menor entero positivo que satisfacía esta propiedad. Esto demuestra que $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\operatorname{sop}(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
 {{% /proof %}}
 
 
@@ -697,9 +697,9 @@ Siempre podemos evitarlas moviendo un poco las flechas.
 {{% definition %}}
 El **signo** de una permutación $\sigma\in S_n$ se define como
 
-$$\signo(\sigma)=(-1)^{\text{nº de inversiones de }\sigma}.$$
+$$\operatorname{signo}(\sigma)=(-1)^{\text{nº de inversiones de }\sigma}.$$
 
-Decimos que $\sigma$ es **par** si $\signo(\sigma)=+1$ e **impar** si $\signo(\sigma)=-1$.
+Decimos que $\sigma$ es **par** si $\operatorname{signo}(\sigma)=+1$ e **impar** si $\operatorname{signo}(\sigma)=-1$.
 {{% /definition %}}
 
 Obviamente, $\sigma$ es par si tiene un número par de inversiones, e igualmente en el caso impar. La permutación del ejemplo anterior es impar.
@@ -738,9 +738,9 @@ En total hay $1+2(j-i-1)$ inversiones, y este es un número impar.
 {{% proposition %}}
 Dadas dos permutaciones  $\sigma ,\tau\in S_n$:
 
-* $\signo (\sigma\tau )=\signo (\sigma )\signo (\tau )$.
+* $\operatorname{signo} (\sigma\tau )=\operatorname{signo} (\sigma )\operatorname{signo} (\tau )$.
 
-* $\signo (\sigma^{-1})=\signo (\sigma )$.
+* $\operatorname{signo} (\sigma^{-1})=\operatorname{signo} (\sigma )$.
 
 {{% /proposition %}}
 
@@ -761,7 +761,7 @@ Una permutación $\sigma\in S_n$ es par si y solo si es producto de un número p
 {{% proof %}}
 En efecto, si $\sigma =\tau\_1\cdots\tau\_r$ donde cada $\tau\_i$ es una trasposición, entonces
 
-$$\signo (\sigma )=\signo (\tau\_1)\cdots\signo (\tau\_r)=(-1)^r.$$
+$$\operatorname{signo} (\sigma )=\operatorname{signo} (\tau\_1)\cdots\operatorname{signo} (\tau\_r)=(-1)^r.$$
 
 {{% /proof %}}
 
@@ -775,9 +775,9 @@ Este corolario, que es consecuencia de la descomposición de un ciclo como produ
 
 
 {{% theorem name="Fórmula de Cauchy" %}}
-Si $\sigma\in S_n$ se descompone como producto de $c$ ciclos disjuntos y $\sop(\sigma)$ tiene $s$ elementos entonces
+Si $\sigma\in S_n$ se descompone como producto de $c$ ciclos disjuntos y $\operatorname{sop}(\sigma)$ tiene $s$ elementos entonces
 
-$$\signo (\sigma )=(-1)^{s-c}.$$
+$$\operatorname{signo} (\sigma )=(-1)^{s-c}.$$
 
 {{% /theorem %}}
 
@@ -785,7 +785,7 @@ $$\signo (\sigma )=(-1)^{s-c}.$$
 Sea $\sigma =\sigma\_1\cdots\sigma\_c$ la descomposición de $\sigma$ como producto de ciclos disjuntos. Sea $l\_i$ la longitud del ciclo $\sigma\_i$, $i=1,\dots, c$. El número de elementos del soporte de $\sigma$ es $s=\sum\_{i=1}^{c}l\_i$ y
 $$
 \begin{array}{rcl}
-\signo(\sigma)&=&\signo(\sigma\_1)\cdots\signo(\sigma\_c)\cr
+\operatorname{signo}(\sigma)&=&\operatorname{signo}(\sigma\_1)\cdots\operatorname{signo}(\sigma\_c)\cr
 &=&(-1)^{l\_1-1}\cdots (-1)^{l\_c-1}\cr
 &=&(-1)^{\sum\_{i=1}^{c}(l\_i-1)}\cr
 &=&(-1)^{s-c}.
@@ -817,9 +817,9 @@ Un subgrupo $H\subset G$ es un grupo por derecho propio con la operación binari
 
 * El subgrupo **trivial** $\\{e\\}\subset G$ y el **total** $G\subset G$.
 
-* Los subgrupos aditivos $\Z\subset\Q\subset\mathbb{R}\subset\mathbb{C}$.
+* Los subgrupos aditivos $\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$.
 
-* Los subgrupos multiplicativos $\\{\pm 1\\}\subset\Q\setminus\\{ 0\\}\subset\mathbb{R}\setminus\\{ 0\\}\subset\mathbb{C}\setminus\\{ 0\\}$.
+* Los subgrupos multiplicativos $\\{\pm 1\\}\subset\mathbb{Q}\setminus\\{ 0\\}\subset\mathbb{R}\setminus\\{ 0\\}\subset\mathbb{C}\setminus\\{ 0\\}$.
 
 * $(0,+\infty)\subset\mathbb{R}\setminus\\{ 0\\}$.
 
@@ -938,7 +938,7 @@ excepto si $n=2$, $c=1$ y $l_1=2$. Por tanto $|\langle\sigma\rangle|=o(\sigma) <
 {{% definition %}}
 Dado un grupo  $G$ y un subgrupo $H\subset G$, definimos la siguiente relación en $G$:
 
-$$x\sim_H y \Leftrightarrow \inv{x} y\in H.$$
+$$x\sim_H y \Leftrightarrow x^{-1} y\in H.$$
 
 {{% /definition %}}
 
@@ -1067,11 +1067,11 @@ Dados dos grupos $G$ y $H$, un **homomorfismo** $f\colon G\rightarrow H$ es una 
 
 {{% example name="Homomorfismos" label="homomorphisms" %}}
 
-1. La **identidad** $\id{G}\colon G\rightarrow G$.
+1. La **identidad** $\operatorname{1}_{G}\colon G\rightarrow G$.
 
 2. La **inclusión** de un subgrupo $H\subset G$, $i\colon H\hookrightarrow G$.
 
-3. El **signo** de una permutación, $\sign\colon\perm{n}\to\\{\pm1\\}$.
+3. El **signo** de una permutación, $\operatorname{signo}\colonS_{n}\to\\{\pm1\\}$.
 
 4. El **determinante** $GL(n,k)\rightarrow k\setminus\\{0\\}$, $A\mapsto |A|$.
 
@@ -1097,7 +1097,7 @@ Si $f\colon G\rightarrow H$ es un homomorfismo, entonces:
 
 * $f(e)=e$.
 
-* $f(\inv{x})=\inv{f(x)}$ para todo $x\in G$.
+* $f(x^{-1})=f(x)^{-1}$ para todo $x\in G$.
 
 {{% /proposition %}}
 
@@ -1108,19 +1108,19 @@ $$f(e)=f(e e)=f(e) f(e).$$
 
 Usando la propiedad cancelativa deducimos que $e=f(e)$.
 
-Al ser $e=x \inv{x}$ deducimos que
+Al ser $e=x x^{-1}$ deducimos que
 
-$$e=f(e)=f(x \inv{x})=f(x) f(\inv{x}),$$
+$$e=f(e)=f(x x^{-1})=f(x) f(x^{-1}),$$
 
-por tanto $f(\inv{x})=\inv{f(x)}$.
+por tanto $f(x^{-1})=f(x)^{-1}$.
 {{% /proof %}}
 
 {{% corollary %}}
-La imagen de un homomorfismo $f\colon G\rightarrow H$ es un subgrupo $\im f\subset H$.
+La imagen de un homomorfismo $f\colon G\rightarrow H$ es un subgrupo $\operatorname{im} f\subset H$.
 {{% /corollary %}}
 
 {{% proof %}}
-Por definición de homomorfismo, el producto de dos elementos de $\im f$ está en $\im f$. Es más, por la proposición anterior $e\in\im f$ y el inverso de un elemento de $\im f$ están en $\im f$.
+Por definición de homomorfismo, el producto de dos elementos de $\operatorname{im} f$ está en $\operatorname{im} f$. Es más, por la proposición anterior $e\in\operatorname{im} f$ y el inverso de un elemento de $\operatorname{im} f$ están en $\operatorname{im} f$.
 {{% /proof %}}
 
 La composición de homomorfismos es un homomomorfismo.
@@ -1128,7 +1128,7 @@ La composición de homomorfismos es un homomomorfismo.
 {{% proposition label="homocomp" %}}
 Dados dos homomorfismos como en el siguiente diagrama,
 
-$$G\stackrel{f}\To H\stackrel{g}\To K,$$
+$$G\stackrel{f}\longrightarrow H\stackrel{g}\longrightarrow K,$$
 
 la composición
 $g\circ f\colon G\rightarrow K$
@@ -1199,13 +1199,13 @@ $$
 {{% /proof %}}
 
 {{% example name="Isomorfismos inversos" %}}
-Los inversos de los isomorfismos 1, 5 y 9 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\id{G}^{-1}=\id{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
+Los inversos de los isomorfismos 1, 5 y 9 del [ejemplo](#homomorphisms) anterior son, respectivamente, $\operatorname{1}_{G}^{-1}=\operatorname{1}_{G}$, $(c\_x)^{-1}=c\_{x^{-1}}$, y el isomorfismo $f^{-1}\colon(0,+\infty)\to\mathbb R$ definido por $f^{-1}(x)=\log(x)$.
 {{% /example %}}
 
 {{% definition %}}
 Dos grupos $G$ y $H$ son **isomorfos**, y lo denotamos $G\cong H$, si existe un isomorfismo
 
-$$f\colon G\stackrel{\cong}\To H.$$
+$$f\colon G\stackrel{\cong}\longrightarrow H.$$
 
 {{% /definition %}}
 
@@ -1216,19 +1216,19 @@ La relación de ser isomorfos es de equivalencia.
 {{% proof %}}
 Es reflexiva $G\cong G$ porque la identidad es un isomorfismo $1\_G\colon G\to G$. La simetría se sigue de que si $G\cong H$ es por que hay algún isomorfismo
 
-$$f\colon G\stackrel{\cong}\To H.$$
+$$f\colon G\stackrel{\cong}\longrightarrow H.$$
 
 El isomorfismo inverso
 
-$$f^{-1}\colon H\stackrel{\cong}\To G$$
+$$f^{-1}\colon H\stackrel{\cong}\longrightarrow G$$
 
 prueba que $H\cong G$. La transitividad es consecuencia de que si $G\cong H\cong K$ es porque hay isomorfismos
 
-$$G\mathop{\To}\limits^f\_{\cong} H\mathop{\To}\limits^g\_{\cong} K.$$
+$$G\mathop{\longrightarrow}\limits^f\_{\cong} H\mathop{\longrightarrow}\limits^g\_{\cong} K.$$
 
 Entonces la composición es un isomorfismo
 
-$$g\circ f\colon G\stackrel{\cong}\To K,$$
+$$g\circ f\colon G\stackrel{\cong}\longrightarrow K,$$
 
 así que $G\cong K$.
 {{% /proof %}}
@@ -1255,7 +1255,7 @@ $\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y 
 Si $X$ e $Y$ son conjuntos cualesquiera y $f\colon X\rightarrow Y$ es una aplicación biyectiva, entonces
 $$
 \begin{array}{rcl}
-\phi_f\colon \Sim (X)&\longrightarrow &\Sim (Y),\cr
+\phi_f\colon \operatorname{Sim} (X)&\longrightarrow &\operatorname{Sim} (Y),\cr
 \sigma&\mapsto&f\circ \sigma\circ f^{-1},
 \end{array}
 $$
@@ -1263,7 +1263,7 @@ es un isomorfismo.
 {{% /proposition %}}
 
 {{% proof %}}
-Si $\sigma\colon X\rightarrow X$ es biyectiva entonces $f\circ\sigma\circ f^{-1}\colon Y\rightarrow Y$ también, por ser composición de aplicaciones biyectivas. Por tanto $\phi\_f$ es una aplicación bien definida. Veamos que es un homomorfismo. Dados $\tau,\sigma\in\Sim(X)$:
+Si $\sigma\colon X\rightarrow X$ es biyectiva entonces $f\circ\sigma\circ f^{-1}\colon Y\rightarrow Y$ también, por ser composición de aplicaciones biyectivas. Por tanto $\phi\_f$ es una aplicación bien definida. Veamos que es un homomorfismo. Dados $\tau,\sigma\in\operatorname{Sim}(X)$:
 
 $$
 \begin{array}{rcl}
@@ -1273,7 +1273,7 @@ $$
 \end{array}
 $$
 
-Para ver que $\phi\_f$ es un isomorfismo, basta comprobar que $\phi\_{f^{-1}}\colon \Sim(Y)\rightarrow \Sim(X)$ es su inversa. En efecto, $\phi\_{f^{-1}}\circ \phi\_{f}=\id{\Sim(X)}$ ya que ambas son aplicaciones que parten de $\Sim(X)$ y llegan a $\Sim(X)$ y además toman el mismo valor en cualquier $\sigma\in \Sim(X)$, pues
+Para ver que $\phi\_f$ es un isomorfismo, basta comprobar que $\phi\_{f^{-1}}\colon \operatorname{Sim}(Y)\rightarrow \operatorname{Sim}(X)$ es su inversa. En efecto, $\phi\_{f^{-1}}\circ \phi\_{f}=\operatorname{1}_{\operatorname{Sim}(X)}$ ya que ambas son aplicaciones que parten de $\operatorname{Sim}(X)$ y llegan a $\operatorname{Sim}(X)$ y además toman el mismo valor en cualquier $\sigma\in \operatorname{Sim}(X)$, pues
 
 $$
 \begin{array}{rcl}
@@ -1282,50 +1282,50 @@ $$
 &=&\phi\_{f^{-1}}(f\circ\sigma\circ f^{-1})\cr
 &=&f^{-1}\circ(f\circ\sigma\circ f^{-1})\circ (f^{-1})^{-1}\cr
 &=& \sigma\cr
-&=&\id{\Sim(X)}(\sigma).
+&=&\operatorname{1}_{\operatorname{Sim}(X)}(\sigma).
 \end{array}
 $$
 
-Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}$ son intercambiables, así que también está probada la otra igualdad, $\phi\_{f}\circ \phi\_{f^{-1}}=\id{\Sim(Y)}$.
+Aquí usamos que $(f^{-1})^{-1}=f$. Por esto mismo, los papeles de $f$ y $f^{-1}$ son intercambiables, así que también está probada la otra igualdad, $\phi\_{f}\circ \phi\_{f^{-1}}=\operatorname{1}_{\operatorname{Sim}(Y)}$.
 {{% /proof %}}
 
 
 {{% definition %}}
 Dado un homomorfismo $f\colon G\to H$, su **núcleo** es
 
-$$\ker f=\\{x\in G\mid f(x)=e\\}\subset G.$$
+$$\operatorname{ker} f=\\{x\in G\mid f(x)=e\\}\subset G.$$
 
 {{% /definition %}}
 
 
 {{% proposition %}}
-El núcleo de un homomorfismo $f\colon G\to H$ es un subgrupo $\ker f\subset G$.
+El núcleo de un homomorfismo $f\colon G\to H$ es un subgrupo $\operatorname{ker} f\subset G$.
 {{% /proposition %}}
 
 {{% proof %}}
-Como $f(e)=e$, $e\in \ker f$. Si $x,y\in\ker f$ entonces
+Como $f(e)=e$, $e\in \operatorname{ker} f$. Si $x,y\in\operatorname{ker} f$ entonces
 
 $$f(xy)=f(x)f(y)=ee=e,$$
 
-luego $xy\in\ker f$. Es más, si $x\in\ker f$ entonces
+luego $xy\in\operatorname{ker} f$. Es más, si $x\in\operatorname{ker} f$ entonces
 
 $$f(x^{-1})=f(x)^{-1}=e^{-1}=e,$$
 
-así que $x^{-1}\in\ker f$.
+así que $x^{-1}\in\operatorname{ker} f$.
 {{% /proof %}}
 
 {{% definition %}}
 El **grupo alternado** es el subgrupo $A_n\subset S_n$ formado por las permutaciones pares.
 {{% /definition %}}
 
-El grupo alternado es un subgrupo porque es el núcleo del homomorfismo $\signo\colon S_n\rightarrow\\{\pm1\\}$.
+El grupo alternado es un subgrupo porque es el núcleo del homomorfismo $\operatorname{signo}\colon S_n\rightarrow\\{\pm1\\}$.
 
 {{% proposition %}}
-Un homomorfismo $f\colon G\to H$ es inyectivo si y solo si $\ker f=\\{e\\}$.
+Un homomorfismo $f\colon G\to H$ es inyectivo si y solo si $\operatorname{ker} f=\\{e\\}$.
 {{% /proposition %}}
 
 {{% proof %}}
-$\Rightarrow$ La inclusión $\supset$ es obvia. Para ver $\subset$ tomamos $x\in\ker f$. Como $f(x)=e=f(e)$ y $f$ es inyectivo deducimos que $x=e$.
+$\Rightarrow$ La inclusión $\supset$ es obvia. Para ver $\subset$ tomamos $x\in\operatorname{ker} f$. Como $f(x)=e=f(e)$ y $f$ es inyectivo deducimos que $x=e$.
 
 $\Leftarrow$. Sean $x,y\in G$ tales que $f(x)=f(y)$. Entonces
 $$
@@ -1335,7 +1335,7 @@ f(x^{-1}y)&=&f(x^{-1})f(y)\cr
 &=&e,
 \end{array}
 $$
-es decir, $x^{-1}y\in\ker f=\\{e\\}$, por tanto $x^{-1}y=e$ y despejando vemos que $y=x$.
+es decir, $x^{-1}y\in\operatorname{ker} f=\\{e\\}$, por tanto $x^{-1}y=e$ y despejando vemos que $y=x$.
 {{% /proof %}}
 
 {{% remark %}}
@@ -1357,9 +1357,9 @@ La noción de subrgupo normal $K\subset G$ depende tanto de $K$ como de $G$. Si 
 {{% /watch %}}
 
 {{% example name="Subgrupos (no) normales" %}}
-Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\; 2)\\}\subset \perm{3}$ no es normal puesto que
+Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\; 2)\\}\subset S_{3}$ no es normal puesto que
 
-$$\inv{(1\;3)}(1\;2)(1\;3)=(1\;3)(1\;2)(1\;3)=(2\;3)\notin K.$$
+$$(1\;3)^{-1}(1\;2)(1\;3)=(1\;3)(1\;2)(1\;3)=(2\;3)\notin K.$$
 
 {{% /example %}}
 
@@ -1403,11 +1403,11 @@ $2.\Rightarrow 1.$ Dados $k\in K$ y $g\in G$, como $kg\in Kg=gK$, existe $k'\in 
 Como veremos a lo largo de este epígrafe, los subgrupos normales de $G$ coinciden con aquellos que son el núcleo de algún homomorfismo que parte de $G$.
 
 {{% proposition %}}
-El núcleo de un homomorfsimo $f\colon G\to H$ es un subgrupo normal  $\ker f\subset G$.
+El núcleo de un homomorfsimo $f\colon G\to H$ es un subgrupo normal  $\operatorname{ker} f\subset G$.
 {{% /proposition %}}
 
 {{% proof %}}
-Dados $g\in G$ y $k\in\ker f$,
+Dados $g\in G$ y $k\in\operatorname{ker} f$,
 $$
 \begin{array}{rcl}
 f(g^{-1}kg)&=&f(g)^{-1}f(k)f(g)\cr
@@ -1416,14 +1416,14 @@ f(g^{-1}kg)&=&f(g)^{-1}f(k)f(g)\cr
 &=&e.
 \end{array}
 $$
-Por tanto $g^{-1}kg\in \ker f$.
+Por tanto $g^{-1}kg\in \operatorname{ker} f$.
 {{% /proof %}}
 
 La propiedad más importante de los subgrupos normales $K\subset G$ es que sirven para dotar de estructura de grupo al cociente $G/K$.
 
 
 {{% theorem label="groupquotient" %}}
-Dado un grupo $G$ y un subgrupo normal $K\subset G$, entonces el conjunto cociente $G/K$ posee una única estructura de grupo tal que la proyección natural $\pi\colon G\twoheadrightarrow G/K$ es un homomorfismo. El núcleo de esta proyección es $\ker\pi= K$
+Dado un grupo $G$ y un subgrupo normal $K\subset G$, entonces el conjunto cociente $G/K$ posee una única estructura de grupo tal que la proyección natural $\pi\colon G\twoheadrightarrow G/K$ es un homomorfismo. El núcleo de esta proyección es $\operatorname{ker}\pi= K$
 {{% /theorem %}}
 
 {{% proof %}}
@@ -1482,13 +1482,13 @@ Para cualquier grupo $G$, la proyección natural $\pi\colon G\stackrel{\cong}\tw
 Hemos identificado entonces subgrupos normales con núcleos de homomorfismos. No podemos hacer lo mismo con las imágenes de homomorfismos.
 
 {{% watch %}}
-Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\im\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
+Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\operatorname{im}\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
 {{% /watch %}}
 
 Veamos ahora una vesión del teorema de factorización de aplicaciones para grupos y homomorfismos.
 
 {{% theorem name="Primer teorema de isomorfía" label="groupsisomorph" %}}
-Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\ker f\rightarrow \im f$ tal que el siguiente diagrama es conmutativo
+Dado un homomorfismo de grupos $f\colon G\to H$, existe un único homomorfismo $\overline{f}\colon G/\operatorname{ker} f\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
 
 ![Primer teorema de isomorfía](../images/isomorfiagrupos.png)
 
@@ -1496,7 +1496,7 @@ es decir, $f=i\circ\overline{f}\circ\pi$. Aquí $\pi$ es la proyección canónic
 {{% /theorem %}}
 
 {{% proof %}}
-La factorización es la del homomorfismo $f$ visto solo como apicación. Basta ver que la relación de equivalencia en $G$ definida por la aplicación $f$ es la misma que la que define el subgrupo $\ker f$. Por comodidad, llamaremos $K=\ker f$. Dados $x,y\in G$, $x\sim_K y$ $\Leftrightarrow$ $x^{-1}y\in K$ $\Leftrightarrow$ $f(x^{-1}y)=e$. Como $f(x^{-1}y)=f(x)^{-1}f(y)$ esto es el elemento neutro si y solo si $f(x)= f(y)$, lo que equivale a $x\sim_f y$. Habría que comprobar también que $\overline{f}$ es un homomorfismo. Esto es cierto porque, recordemos, esta aplicación se define como $f$ sobre los representantes, es decir, $\overline{f}(xK)=f(x)$ y $f$ es un homomorfismo, así que
+La factorización es la del homomorfismo $f$ visto solo como apicación. Basta ver que la relación de equivalencia en $G$ definida por la aplicación $f$ es la misma que la que define el subgrupo $\operatorname{ker} f$. Por comodidad, llamaremos $K=\operatorname{ker} f$. Dados $x,y\in G$, $x\sim_K y$ $\Leftrightarrow$ $x^{-1}y\in K$ $\Leftrightarrow$ $f(x^{-1}y)=e$. Como $f(x^{-1}y)=f(x)^{-1}f(y)$ esto es el elemento neutro si y solo si $f(x)= f(y)$, lo que equivale a $x\sim_f y$. Habría que comprobar también que $\overline{f}$ es un homomorfismo. Esto es cierto porque, recordemos, esta aplicación se define como $f$ sobre los representantes, es decir, $\overline{f}(xK)=f(x)$ y $f$ es un homomorfismo, así que
 $$
 \begin{array}{rcl}
 \overline{f}((xK)(yK))&=&\overline{f}((xy)K)\cr
@@ -1515,7 +1515,7 @@ Dado $n\geq 2$, el orden del correspondiente grupo alternado es $A_n$ es $|A_n|=
 {{% /corollary %}}
 
 {{% proof %}}
-El homomorfismo $\signo\colon S_n\rightarrow\\{\pm1\\}$ es sobreyectivo, luego $\im\signo=\\{\pm 1\\}$. Como $A_n=\ker \signo$, el primer teorema de isomorfía proporciona un isomorfismo $\frac{S_n}{A_n}\cong \\{\pm 1\\}$. Usando el teorema de Lagrange, vemos que
+El homomorfismo $\operatorname{signo}\colon S_n\rightarrow\\{\pm1\\}$ es sobreyectivo, luego $\operatorname{im}\operatorname{signo}=\\{\pm 1\\}$. Como $A_n=\operatorname{ker} \operatorname{signo}$, el primer teorema de isomorfía proporciona un isomorfismo $\frac{S_n}{A_n}\cong \\{\pm 1\\}$. Usando el teorema de Lagrange, vemos que
 $$
 \begin{array}{rcl}
 2&=&|\\{\pm1\\}|\cr
@@ -1532,7 +1532,7 @@ Un grupo $G$ es cíclico de orden $n$ si y solo si es isomorfo a $\mathbb{Z}/\la
 {{% /corollary %}}
 
 {{% proof %}}
-$\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$, así que $\im f_x=G$. Como el orden de $x$ coincide con el de $G$, que es $n$, sabemos que $m\in\ker f_x$ $\Leftrightarrow$ $f_x(m)=x^m=e$ $\Leftrightarrow$ $n|m$ $\Leftrightarrow$ $m\in\langle n\rangle$, así que $\ker f_x=\langle n\rangle$. Por tanto el primer teorema de isomorfía nos da el isomorfismo deseado $\overline{f_x}\colon \mathbb{Z}/\langle n\rangle\cong G$.
+$\Rightarrow$ Sea $x\in G$ un generador, $G=\langle x\rangle$. Consideramos el homomorfismo $f_x\colon \mathbb{Z}\rightarrow G$ definido anteriormente como $f_x(m)=x^m$. Este homomorfismo es sobreyectivo por ser $x$ un generador del grupo cíclico $G$, así que $\operatorname{im} f_x=G$. Como el orden de $x$ coincide con el de $G$, que es $n$, sabemos que $m\in\operatorname{ker} f_x$ $\Leftrightarrow$ $f_x(m)=x^m=e$ $\Leftrightarrow$ $n|m$ $\Leftrightarrow$ $m\in\langle n\rangle$, así que $\operatorname{ker} f_x=\langle n\rangle$. Por tanto el primer teorema de isomorfía nos da el isomorfismo deseado $\overline{f_x}\colon \mathbb{Z}/\langle n\rangle\cong G$.
 
 $\Leftarrow$ Esta implicaición es obvia, porque la propiedad de ser cíclico y el orden se preservan por isomorfismos.
 {{% /proof %}}
@@ -1546,7 +1546,7 @@ Todo grupo $G$ es isomorfo a un subgrupo de un grupo de permutaciones. Si $G$ es
 {{% proof %}}
 Definimos la aplicación
 
-$$f\colon G\to\Sim (G)$$
+$$f\colon G\to\operatorname{Sim} (G)$$
 
 del siguiente modo. Dado $g\in G$,
 
@@ -1558,7 +1558,7 @@ $$f(g)(x)=gx.$$
 
 Esta aplicación es biyectiva, por tanto es una permutación del conjunto $G$. Para comprobarlo, demostraremos que $f(g^{-1})\colon G\longrightarrow G$ es su inversa, es decir, que
 
-$$f(g)\circ f(g^{-1})=\id{G}=f(g^{-1})\circ f(g).$$
+$$f(g)\circ f(g^{-1})=\operatorname{1}_{G}=f(g^{-1})\circ f(g).$$
 
 Las tres aplicaciones parten de $G$ y llegan a $G$, así que basta probar que toman los mismos valores sobre cada $x\in G$. En efecto, por un lado,
 $$
@@ -1570,10 +1570,10 @@ f(g)(f(g^{-1})(x))\cr
 &=&(gg^{-1})x\cr
 &=&ex\cr
 &=&x\cr
-&=&\id{G}(x).
+&=&\operatorname{1}_{G}(x).
 \end{array}
 $$
-Esto demuestra que $f(g)\circ f(g^{-1})=\id{G}$. La otra igualdad, $f(g^{-1})\circ f(g)=\id{G}$, se sigue ahora del hecho de que los papeles de $g$ y $g^{-1}$ son intercambiables, ya que $(g^{-1})^{-1}=g$.
+Esto demuestra que $f(g)\circ f(g^{-1})=\operatorname{1}_{G}$. La otra igualdad, $f(g^{-1})\circ f(g)=\operatorname{1}_{G}$, se sigue ahora del hecho de que los papeles de $g$ y $g^{-1}$ son intercambiables, ya que $(g^{-1})^{-1}=g$.
 
 Veamos que $f$ es un homomorfismo. En efecto, dados $g_1,g_2\in G$, $f(g_1g_2)=f(g_1)\circ f(g_2)$ ya que ambas son permutaciones de $G$ y, para todo $x\in G$,
 $$
@@ -1587,23 +1587,23 @@ f(g_1)(f(g_2)(x))\cr
 \end{array}
 $$
 
-Veamos que $f$ es inyectiva, es decir, que $\ker f=\\{e\\}$. En efecto, si $g\in\ker f$ entonces $f(g)=\id{G}$ luego
+Veamos que $f$ es inyectiva, es decir, que $\operatorname{ker} f=\\{e\\}$. En efecto, si $g\in\operatorname{ker} f$ entonces $f(g)=\operatorname{1}_{G}$ luego
 $$
 \begin{array}{rcl}
 g&=&ge\cr
 &=&f(g)(e)\cr
-&=&\id{G}(e)\cr
+&=&\operatorname{1}_{G}(e)\cr
 &=&e.
 \end{array}
 $$
 
-Como $\ker f=\\{e\\}$, el primer teorema de isomorfía nos dice que
+Como $\operatorname{ker} f=\\{e\\}$, el primer teorema de isomorfía nos dice que
 
-$$G\cong\frac{G}{\\{e\\}}\cong\im f\subset \Sim (G).$$
+$$G\cong\frac{G}{\\{e\\}}\cong\operatorname{im} f\subset \operatorname{Sim} (G).$$
 
 Esto demuestra la primera parte del teorema.
 
-Para la segunda parte, basta observar que, como $G$ tiene $n$ elementos, cualquier enumeración de los mismos $G=\\{x\_1,\dots, x\_n\\}$ da lugar a una aplicación biyectiva $\psi\colon G\rightarrow \\{1,\dots, n\\}$ definida como $\psi(x\_i)= i$ para todo $i$. Según hemos visto antes, esta biyección da lugar a un isomorfismo $\phi\_\psi\colon\Sim(G)\cong S\_n$. Argumentando como antes, vemos que $G\cong\im (\phi_\psi \circ f)\subset S_n$.
+Para la segunda parte, basta observar que, como $G$ tiene $n$ elementos, cualquier enumeración de los mismos $G=\\{x\_1,\dots, x\_n\\}$ da lugar a una aplicación biyectiva $\psi\colon G\rightarrow \\{1,\dots, n\\}$ definida como $\psi(x\_i)= i$ para todo $i$. Según hemos visto antes, esta biyección da lugar a un isomorfismo $\phi\_\psi\colon\operatorname{Sim}(G)\cong S\_n$. Argumentando como antes, vemos que $G\cong\operatorname{im} (\phi_\psi \circ f)\subset S_n$.
 {{% /proof %}}
 
 
