@@ -373,56 +373,7 @@ $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$
 Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con una función de tamaño distinta de $N$.
 {{% /example %}}
 
-La siguiente aplicación interactiva te permite explorar la posibilidad de realizar divisiones euclídeas respecto del cuadrado del módulo complejo en el anillo de enteros cuadráticos imaginarios $R\subset\mathbb Q[\sqrt{-n}]$ para ciertos valores positivos de $n$. Para $n=1$ tenemos los enteros de Gauss. Puedes seleccionar los coeficientes del dividendo $D=a+b\sqrt{-n}$ y del divisor $d=x+y\sqrt{-n}$, si $-n\not\equiv 1$ mod $4$. Si $-n\equiv 1$ mod $4$, el dividendo y el divisor son de la forma $D=a+b\frac{1+\sqrt{-n}}{2}$ y $d=x+y\frac{1+\sqrt{-n}}{2}$, respectivamente. Los coeficientes del dividendo pueden estar en $[-10,10]$ y los del divisor en $[-5,5]$. Aparece un círculo amarillo centrado en $D$ de radio $|d|$. Los puntos verdes son elementos del anillo y los azules son además múltiplos del divisor. Cada punto azul en el _interior_ del círculo representa una división euclídea. La aplicación da la lista de todos los pares $(c,r)$ que producen divisiones euclídeas $D=d\cdot c+r$.
-
-<div class="sage">
- <script type="text/x-sage">
-from sage.plot.circle import Circle
-@interact(layout={'top': [['parameter'],['dividend_x', 'divisor_x'],['dividend_y','divisor_y']]})
-def _(parameter=selector([1,2,3,5,6,7,10,11], label="n=", buttons=True), dividend_x=slider(-10,10, step_size=1, default = 0, label="a="), dividend_y=slider(-10,10, step_size=1, default = 0, label="b="), divisor_x=slider(-5,5, step_size=1, default = 1, label="x="), divisor_y=slider(-5,5, step_size=1, default = 0, label="y=")):
-    if ((divisor_x,divisor_y) == (0,0)):
-        show("NO SE PUEDE DIVIDIR POR CERO. ESCOJE UN DIVISOR NO NULO.")
-    else:
-        if (-parameter % 4 != 1):
-            dividend = dividend_x+I*dividend_y*sqrt(parameter)
-            divisor = divisor_x+I*divisor_y*sqrt(parameter)
-            radius = N(abs(divisor))
-            bound_x = floor(radius)+1
-            bound_y = floor(radius/sqrt(parameter))+1
-            interval_lattice_x = [dividend.real()-bound_x .. dividend.real()+bound_x]
-            interval_lattice_y = [dividend.imag()+y*sqrt(parameter) for y in [-bound_y .. bound_y]]
-            lattice = cartesian_product([interval_lattice_x,interval_lattice_y]).list()
-            multiples = [z for z in lattice if ((((z[0]+I*z[1])/divisor).real()).is_integer() and (((z[0]+I*z[1])/divisor).imag()/sqrt(parameter)).is_integer())]
-        else:
-            dividend = dividend_x+dividend_y*(1+I*sqrt(parameter))/2
-            divisor = divisor_x+divisor_y*(1+I*sqrt(parameter))/2
-            radius = N(abs(divisor))
-            bound_x = floor(radius)+1
-            bound_y = floor(2*radius/sqrt(parameter))+1
-            lattice = [(dividend.real()+x+1/2*is_odd(y), dividend.imag()+y*sqrt(parameter)/2) for y in [-bound_y .. bound_y] for x in [-bound_x .. bound_x]]
-            def integer_odd(x,y):
-                if x.is_integer():
-                    return (y+1/2*ZZ(x).mod(2)).is_integer()
-                else:
-                    return False
-            multiples = [z for z in lattice if integer_odd(((z[0]+I*z[1])/divisor).imag()*2/sqrt(parameter),((z[0]+I*z[1])/divisor).real())]
-        divisions = [z for z in multiples if abs(divisor)-abs(dividend - (z[0]+I*z[1])) > 0]
-        if len(divisions) == 0:
-            show("NO HAY DIVISIONES EUCLÍDEAS.")
-        else:
-            for z in divisions:
-                show((expand((z[0]+I*z[1])*divisor.conjugate()/(divisor.real()^2+divisor.imag()^2)), dividend-(z[0]+I*z[1])))
-        lattice_plot = point(lattice, rgbcolor='green')
-        multiples_plot = point(multiples, rgbcolor='blue', size=50)
-        circ = circle((dividend.real(), dividend.imag()), radius, alpha=.4, fill = True, facecolor='yellow', thickness=0)
-        if (dividend.real(),dividend.imag()) in multiples:
-            cent = point([(dividend.real(),dividend.imag())], rgbcolor='blue', size=200)
-        else:
-            cent = point([(dividend.real(),dividend.imag())], rgbcolor='green', size=200)
-        return show(circ+lattice_plot+multiples_plot+cent, aspect_ratio=1)
- </script>
-</div>
-
+Explora la posibilidad de realizar divisiones euclídeas en anillos de enteros cuadráticos imaginarios con la [aplicación interactiva](../../interactions/#divisiones-euclídeas-en-enteros-cuadráticos-imaginarios) diseñada para ello.
 
 ## Polinomios
 
@@ -1078,28 +1029,7 @@ El siguiente gráfico nos muestra la distribución de los primos cercanos al ori
 
 ![Primos de Gauss](../../images/gaussian_primes.png)
 
-Puedes también usar la siguiente aplicación interactiva para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen. Los lados del cuadrado tienen tamaño $2n$. Los puntos rojos son los primos de Gauss de módulo al cuadrado 2. En azul están los que son enteros. El resto, en verde.
-
-<div class="sage">
- <script type="text/x-sage">
-@interact
-def _(n=slider(3,100, step_size=1, default = 5, label="n=")):
-    lattice1 = []
-    lattice2 = [[1,1], [1,-1], [-1,1], [-1,-1]]
-    lattice3 = []
-    for x in [-n .. n]:
-        for y in [-n .. n]:
-            if is_prime(x^2+y^2) and (x^2+y^2).mod(4) == 1:
-                lattice1 = lattice1 + [[x,y]]
-    for z in list(primes(3,n+1)):
-        lattice3 = lattice3 + [[z,0], [-z,0]]
-    lattice1_plot = point(lattice1, rgbcolor='green', size=400/n)
-    lattice2_plot = point(lattice2, rgbcolor='red', size=800/n)
-    lattice3_plot = point(lattice3, rgbcolor='blue', size=800/n)
-    return show(lattice1_plot+lattice2_plot+lattice3_plot, aspect_ratio=1)
- </script>
-</div>
-
+Puedes usar la [aplicación interactiva](../../interactions/#primos-de-gauss) para explorar la distribución de los primos de Gauss en cuadrados de diferente tamaño centrados en el origen.
 
 
 ## Ecuaciones diofánticas
@@ -1295,23 +1225,4 @@ El siguiente gráfico muestra los pares $(x,y)$ que forman parte de una terna pi
 
 ![Ternas pitagóricas](../../images/Pythagorean_triple_scatterplot.png)
 
-La siguiente aplicación muestra los pares $(x,y)$ que forman parte de una terna pitagórica primitiva con $x$ impar y $x,y\leq n$, donde $n$ puede ser cualquier múltiplo de $10$ comprendido entre $10$ y $3000$.
-
-<div class="sage">
- <script type="text/x-sage">
-@interact
-def _(n=slider(10,3000, step_size=10, default = 100, label="n=")):
-    octant = [[a,b] for a in [1..floor(n/2)] for b in [1..(a-1)]]
-    parameters = []
-    for x in octant:
-        if gcd(x[0],x[1]) == 1 and x[0].mod(2) != x[1].mod(2):
-            parameters.append(x)
-    big_list = [[y[0]^2-y[1]^2,2*y[0]*y[1]] for y in parameters]
-    small_list = []
-    for z in big_list:
-        if z[0] <= n and z[1] <= n and z[0] > 0:
-            small_list.append(z)
-    return show(point(small_list, rgbcolor='green', size=min(max(30,2*3000/n),100), aspect_ratio=1))
- </script>
-</div>
-
+Explora la distribución de las ternas pitagóricas primitivas en el plano con la [aplicación interactiva](../../interactions/#ternas-pitagóricas) diseñada para dicho propósito.

@@ -19,8 +19,10 @@
   });
 </script>
 
-<!-- SageMathCell -->
+<!-- SageMathCell when needed, which currently means only in the Interactions page, which has js = ["sagecell"] in the preamble for this to work -->
 
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+{{- range .Params.js }}
+<script src="https://{{ . }}.sagemath.org/static/embedded_sagecell.js"></script>
 <script>sagecell.makeSagecell({"inputLocation": ".sage", hide: ["editor", "permalink"], evalButtonText: "Ejecutar"});</script>
 <link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+{{- end }}
