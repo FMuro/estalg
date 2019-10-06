@@ -380,7 +380,7 @@ Da dos definiciones del cuerpo de funciones racionales en varias variables $k(x_
 ## Ideales maximales
 
 {{% definition %}}
-Los ideales distintos del total se denominan **propios**. Un ideal $I\subset R$ es **maximal** si es propio los únicos ideales que lo contienen son $I$ y el total $R$.
+Los ideales distintos del total se denominan **propios**. Un ideal $I\subset R$ es **maximal** si es propio y los únicos ideales que lo contienen son $I$ y el total $R$.
 {{% /definition %}}
 
 
