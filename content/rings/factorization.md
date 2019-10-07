@@ -3,7 +3,7 @@ title = "Factorización"
 weight = 20
 +++
 
-La noción clásica de divisibilidad se comporta de manera inesperada en presencia de divisores de cero. Aquí evitaremos estos problemas y estudiaremos la divisibilidad en dominios. Pondremos especial énfasis en el estudio de anillos donde el sea posible generalizar el teorema fundamental de la aritmética. Este teorema, ya conocido para los números enteros, nos dice que todo número no nulo que no sea una unidad factoriza como producto de primos de manera esencialmente única. Este teorema también es conocido para el anillo de polinomios en una variable sobre un cuerpo, en cuyo caso los polinomios irreducibles juegan el papel de los enteros primos. Veremos además cómo este tipo de anillos es de utilidad a la hora de resolver ecuaciones diofánticas.
+La noción clásica de divisibilidad se comporta de manera inesperada en presencia de divisores de cero. Aquí evitaremos estos problemas y estudiaremos la divisibilidad en dominios. Pondremos especial énfasis en el estudio de anillos donde sea posible generalizar el teorema fundamental de la aritmética. Este teorema, ya conocido para los números enteros, nos dice que todo número no nulo que no sea una unidad factoriza como producto de primos de manera esencialmente única. Este teorema también es conocido para el anillo de polinomios en una variable sobre un cuerpo, en cuyo caso los polinomios irreducibles juegan el papel de los enteros primos. Veremos además cómo este tipo de anillos es de utilidad a la hora de resolver ecuaciones diofánticas.
 
 ## Divisores
 
