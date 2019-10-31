@@ -917,7 +917,7 @@ Sea $z$ un entero de Gauss sin parte entera y $\pi$ un primo de Gauss tal que $|
 {{% /lemma %}}
 
 {{% proof %}}
-Por reducción al absurdo, si también $\bar{\pi}\mid p$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
+Por reducción al absurdo, si también $\bar{\pi}\mid z$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
 {{% /proof %}}
 
 {{% example name="Factorización de enteros de Gauss sin parte entera" label="exm:nointeger" %}}
