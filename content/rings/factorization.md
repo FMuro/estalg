@@ -477,9 +477,9 @@ Un polinomio $f\in R[x]$ no constante es irreducible en $R[x]$ $\Leftrightarrow$
 
 {{% proof %}}
 
-$\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
+$\Leftarrow$ Supongamos por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
 
-$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.
+$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposición anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.
 {{% /proof %}}
 
 
