@@ -377,7 +377,7 @@ Explora la posibilidad de realizar divisiones euclídeas en anillos de enteros c
 
 ## Polinomios
 
-En este epígrafe demostraremos que los anillos de polinomios con coeficients en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
+En este epígrafe demostraremos que los anillos de polinomios con coeficientes en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
 
 {{% definition %}}
 Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
