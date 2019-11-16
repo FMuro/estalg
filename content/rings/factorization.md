@@ -549,7 +549,7 @@ Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ tal que $R\subset K$, y
 {{% /theorem %}}
 
 {{% proof %}}
-Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusón $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. 
+Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusión $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. 
 
 Recordemos que la inclusión $R\subset K$ se extiende al cuerpo de fracciones $k$ de $R$, $R\subset k\subset K$. Para probar que $\ker g=(f)$ consideramos la extensión $\bar g\colon k[x]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[x]$.
 
