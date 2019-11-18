@@ -784,7 +784,7 @@ Si $p\in\mathbb Z$ es un  entero primo tal que $p\equiv 1$ mod $4$ entonces $p|(
 
 
 {{% proof %}}
-Podemos suponer sin pérdida de genralidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces
+Podemos suponer sin pérdida de generalidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces
 
 $$\begin{array}{rcl}(p-1)!&=&1\cdot 2\cdots (4n-1)\cdot (4n)\cr &=& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(2n+1)\cdot (2n+2)\cdots (4n-1)\cdot (4n)}.\end{array}$$
 
@@ -943,7 +943,7 @@ Veámoslo en el caso particular $z=201-43i$. En este caso
 
 $$|z|^2=201^2+43^2=42250=2\cdot 5^3 \cdot 13^2.$$
 
-Las factorizaciones de $5$ y de $13$ en $\mathbb{Z}[i]$ son $3=(2+i)(2-i)$ y $13=(3+2i)(3-2i)$, por tanto
+Las factorizaciones de $5$ y de $13$ en $\mathbb{Z}[i]$ son $5=(2+i)(2-i)$ y $13=(3+2i)(3-2i)$, por tanto
 
 $$z=u(1+i)(2\pm i)^3(3\pm 2i)^2.$$
 
