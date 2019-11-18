@@ -761,7 +761,7 @@ $$\begin{array}{rcl}
 La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(1-i)$. Los dos primos que aparecen en esta factorización son asociados.
 {{% /remark %}}
 
-Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como móldulo al cuadrado y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
+Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como módulo al cuadrado y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
 
 {{% lemma %}}
 Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equiv -1$ mod $p$.
