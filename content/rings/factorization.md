@@ -835,7 +835,7 @@ i(a+ib)&=&-b+ia,\cr
 (-i)(a+ib)&=&b-ia.
 \end{array}$$
 
-Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera el primero tendríamos que $b=0$, pero entonces $p=|\pi|^2=a^2$, lo cual es una contradicción. Si fuera el segundo tendríamos que $a=0$ y llegaríamos a la contradicción $p=|\pi|^2=b^2$. Si fuera el tercero tendríamos que $a=-b$, con lo que $\pi=a(1-i)$, que solo es primo si $a$ es una unidad, pero en este caso $p=|\pi|^2=2\not\equiv 1$ mod $4$. Análogamiente si fuera el último tendríamos que $a=b$ y $\pi=a(1+i)$, incurriendo en la misma contradicción que en el caso anterior.
+Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera el primero tendríamos que $b=0$, pero entonces $p=|\pi|^2=a^2$, lo cual es una contradicción. Si fuera el segundo tendríamos que $a=0$ y llegaríamos a la contradicción $p=|\pi|^2=b^2$. Si fuera el tercero tendríamos que $a=-b$, con lo que $\pi=a(1-i)$, que solo es primo si $a$ es una unidad, pero en este caso $p=|\pi|^2=2\not\equiv 1$ mod $4$. Análogamente si fuera el último tendríamos que $a=b$ y $\pi=a(1+i)$, incurriendo en la misma contradicción que en el caso anterior.
 
 Finalmente, comprobemos no puede haber más que estos primos de Gauss y sus asociados con módulo al cuadrado $p$. En efecto, si $\pi'\in\mathbb Z[i]$ satisficiera $p=|\pi'|^2=\pi'\bar\pi'$ entonces como $\pi'|p=\pi\bar\pi$ tendríamos que bien $\pi'|\pi$ o bien $\pi'|\bar\pi$, es decir, como estos tres elementos son primos, $\pi'$ es asociado a $\pi$ o a $\bar\pi$.
 {{% /proof %}}
