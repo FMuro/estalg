@@ -43,7 +43,7 @@ Recuerda que un **homomorfismo** de anillos $f\colon R\rightarrow S$ es una apli
 
 Todas estas clases de morfismos son cerradas para la composición y contienen a la identidad. Es más, el inverso de un isomorfismo es también un isomorfismo, e igual para automorfismos. La conjugación compleja es un automorfismo no trivial de $\mathbb{C}$. El inverso de un isomorfismo también es un isomorfismo. La inclusión de un subanillo $R'\hookrightarrow R$ es un monomorfismo y la proyección sobre la primera coordenada $R\times S\twoheadrightarrow R$ es un epimorfismo, sin embargo estos, en general, no son isomorfismos. Se da el hecho curioso de que, para todo anillo $R$, existe un único homomorfismo $\mathbb{Z}\rightarrow R$, es decir, $\mathbb{Z}$ es el objeto incial en la categoría de los anillos.
 
-Los homomorfismos preservan las unidades y sus inversos. La **imágen** de un homomorfismo $f\colon R\rightarrow S$ es un subanillo $\operatorname{im} f\subset S$. 
+Los homomorfismos preservan las unidades y sus inversos. La **imagen** de un homomorfismo $f\colon R\rightarrow S$ es un subanillo $\operatorname{im} f\subset S$. 
 
 Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[x]\rightarrow R$ como $ev_a(p(x))=p(a)$. Los anillos de polinomios satisfacen una propiedad universal relacionada con estos homomorfismos.
 
@@ -193,7 +193,7 @@ Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, 
 
 
 {{% proof %}}
-En efecto, dado $[\bar{f}]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[\bar{f}]$ si y solo si $\bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $bar{f}-r=c\cdot p$, es decir, $bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
+En efecto, dado $[\bar{f}]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[\bar{f}]$ si y solo si $\bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $\bar{f}-r=c\cdot p$, es decir, $\bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
 
 {{% remark %}}

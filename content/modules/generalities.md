@@ -661,7 +661,7 @@ $\Rightarrow$ Sea $\\{a\\}\subset M$ un generador. El homomorfismo $\phi\_{\\{a\
 
 
 {{% proposition %}}
-Dado un $R$-módulo $M$ y un submódulo $N\subset M$, si $N$ y $M/N$ son finitamente generados entonces $M$ también lo es. 
+Dado un $R$-módulo $M$ y un submódulo $N\subset M$, si $N$ y $M/N$ son finitamente generados entonces $M$ también lo es. Si, además, $N$ y $M/N$ son libres de rangos $p$ y $q$, entonces $M$ es libre de rango $p+q$.
 {{% /proposition %}}
 
 
@@ -680,7 +680,13 @@ así que lo podemos escribir como combinación lineal de los geberadores  de $N$
 
 $$x-(r\_1a\_1+\cdots+r\_pa\_p)=s\_1b\_1+\cdots+s\_qb\_q.$$
 
-Despejando vemos que $x$ es combinación lineal de $S$, y por tanto $S$ genera $M$.  
+Despejando vemos que $x$ es combinación lineal de $S$, y por tanto $S$ genera $M$.
+
+Supongamos ahora que $\\{\bar a\_1,\dots,\bar a\_p\\}$ y $\\{b\_1,\dots,b\_q\\}$ son linealmente independientes (y, por tanto, bases de $M/N$ y $N$). Veamos que $S$ también lo es. Sean $r_1,\ldots,r_p,s_1,\ldots,s_q\in R$ tales que
+
+$$r\_1a\_1+\cdots+r\_pa\_p+s\_1b\_1+\cdots+s\_qb\_q=0.$$
+
+Tomando clases módulo $N$, obtenemos que $r\_1\bar a\_1+\cdots+r\_p\bar a\_p=0$, y por tanto $r\_1=\cdots=r\_p=0$. La igualdad anterior queda entonces como $s\_1b\_1+\cdots+s\_qb\_q=0$, de donde $s\_1=\cdot=s\_q=0$.
 {{% /proof %}}
 
 {{% remark %}}
@@ -689,7 +695,7 @@ Si $M$ es finitamente generado, $M/N$ también lo es, porque si $\\{a\_1,\dots, 
 
 
 {{% corollary %}}
-Dado un dominio de ideales principales $R$, un $R$-módulo libre finitamente generado $M$ y un submódulo $N\subset M$, el $R$-módulo $N$  es finitamente generado.
+Dado un dominio de ideales principales $R$, un $R$-módulo libre finitamente generado $M$ de rango $r$ y un submódulo $N\subset M$, el $R$-módulo $N$  es libre finitamente generado de rango $\leq r$.
 {{% /corollary %}}
 
 
@@ -700,9 +706,9 @@ Sea ahora $n>0$ y supongamos el resultado cierto para $R$-módulos libres de ran
 
 $$\ker p\_{|\_{N}}=N\cap \ker p= N\cap (R^{n-1}\times \\{0\\})\subset R^{n-1}\times \\{0\\},$$
 
-deducimos que $\ker p\_{|\_{N}}$ es finitamente generado por hipótesis de inducción. Es más, por el primer [teorema](#isomodules) de isomorfía aplicado a $p\_{|\_{N}}$, 
+deducimos que $\ker p\_{|\_{N}}$ es finitamente generado de rango $\leq n-1$ por hipótesis de inducción. Es más, por el primer [teorema](#isomodules) de isomorfía aplicado a $p\_{|\_{N}}$, 
 
 $$\frac{N}{\ker p\_{|\_{N}}}\cong \operatorname{im} p\_{|\_{N}}.$$
 
-Más aún, $\operatorname{im} p\_{|\_{N}}\subset R$ es un submódulo, por tanto un ideal, y $R$ es un dominio de ideales principales, así que $\operatorname{im} p\_{|\_{N}}$ es finitamente generado (por un solo elemento). Ahora podemos deducir, haciendo uso de la proposición anterior, que $N$ es finitamente generado.
+Más aún, $\operatorname{im} p\_{|\_{N}}\subset R$ es un submódulo, por tanto un ideal, y $R$ es un dominio de ideales principales, así que $\operatorname{im} p\_{|\_{N}}$ es libre y finitamente generado (por un solo elemento), y por tanto de rango $\leq 1$. Ahora podemos deducir, haciendo uso de la proposición anterior, que $N$ es libre y finitamente generado de rango $\leq (n-1)+1=n$.
 {{% /proof %}}

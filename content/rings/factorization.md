@@ -8,7 +8,7 @@ La noción clásica de divisibilidad se comporta de manera inesperada en presenc
 ## Divisores
 
 {{% definition %}}
-En un dominio $R$, decimos que $a$ **divide** a $b$, o que $b$ es un **múltiplo** de $a$, y escribimos $a|b$, si $b=aq$ para cierto $q\in R$, que llamaremos **cociente**. Decimos que $a$ es un **divisor propio** de $b$ si además ni $a$ ni $q$ son unidades. Un elemento no trivial de $R$ es **irreducible** si no tiene divisores propios ni es una unidad. Dos elementos $a$ y $a'$ son **asociados** si tanto $a| a'$ como $a'|a$. 
+En un dominio $R$, decimos que $a$ **divide** a $b$, o que $b$ es un **múltiplo** de $a$, y escribimos $a|b$, si $b=aq$ para cierto $q\in R$, que llamaremos **cociente**. Decimos que $a$ es un **divisor propio** de $b$ si además $a$ y $q$ no son ni pueden ser unidades. Un elemento no trivial de $R$ es **irreducible** si no tiene divisores propios ni es una unidad. Dos elementos $a$ y $a'$ son **asociados** si tanto $a| a'$ como $a'|a$. 
 {{% /definition %}}
 
 
@@ -358,7 +358,7 @@ $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$
 
 
 {{% example name="Enteros cuadráticos" %}}
-Un entero $n\in\mathbb Z$ es **libre de cuadrados** no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para
+Un entero $n\in\mathbb Z$ es **libre de cuadrados** si no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para
 
 $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$
 
@@ -377,7 +377,7 @@ Explora la posibilidad de realizar divisiones euclídeas en anillos de enteros c
 
 ## Polinomios
 
-En este epígrafe demostraremos que los anillos de polinomios con coeficients en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
+En este epígrafe demostraremos que los anillos de polinomios con coeficientes en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
 
 {{% definition %}}
 Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
@@ -477,9 +477,9 @@ Un polinomio $f\in R[x]$ no constante es irreducible en $R[x]$ $\Leftrightarrow$
 
 {{% proof %}}
 
-$\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
+$\Leftarrow$ Supongamos por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
 
-$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.
+$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposición anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.
 {{% /proof %}}
 
 
@@ -549,7 +549,7 @@ Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ tal que $R\subset K$, y
 {{% /theorem %}}
 
 {{% proof %}}
-Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusón $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. 
+Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusión $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. 
 
 Recordemos que la inclusión $R\subset K$ se extiende al cuerpo de fracciones $k$ de $R$, $R\subset k\subset K$. Para probar que $\ker g=(f)$ consideramos la extensión $\bar g\colon k[x]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[x]$.
 
@@ -761,7 +761,7 @@ $$\begin{array}{rcl}
 La factorización del $2$ como producto de primos en $\mathbb Z[i]$ es $2=(1+i)(1-i)$. Los dos primos que aparecen en esta factorización son asociados.
 {{% /remark %}}
 
-Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como móldulo al cuadrado y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
+Veamos que para el resto de enteros primos $p\equiv 1$ mod $4$ también hay primos en los enteros de Gauss que lo tienen como módulo al cuadrado y que son de hecho los factores primos de $p$ en $\mathbb Z[i]$. Para ello necesitamos resultados técnicos sobre enteros primos.
 
 {{% lemma %}}
 Todo entero primo $p\in\mathbb Z$ no negativo satisface la ecuación $(p-1)!\equiv -1$ mod $p$.
@@ -784,7 +784,7 @@ Si $p\in\mathbb Z$ es un  entero primo tal que $p\equiv 1$ mod $4$ entonces $p|(
 
 
 {{% proof %}}
-Podemos suponer sin pérdida de genralidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces
+Podemos suponer sin pérdida de generalidad que $p\geq 0$. Por el lema anterior, basta ver que $(p-1)!$ es un cuadrado módulo $p$. Como $p=4n+1$ entonces
 
 $$\begin{array}{rcl}(p-1)!&=&1\cdot 2\cdots (4n-1)\cdot (4n)\cr &=& \underbrace{1\cdot 2\cdots (2n-1)\cdot (2n)}\cdot \underbrace{(2n+1)\cdot (2n+2)\cdots (4n-1)\cdot (4n)}.\end{array}$$
 
@@ -835,7 +835,7 @@ i(a+ib)&=&-b+ia,\cr
 (-i)(a+ib)&=&b-ia.
 \end{array}$$
 
-Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera el primero tendríamos que $b=0$, pero entonces $p=|\pi|^2=a^2$, lo cual es una contradicción. Si fuera el segundo tendríamos que $a=0$ y llegaríamos a la contradicción $p=|\pi|^2=b^2$. Si fuera el tercero tendríamos que $a=-b$, con lo que $\pi=a(1-i)$, que solo es primo si $a$ es una unidad, pero en este caso $p=|\pi|^2=2\not\equiv 1$ mod $4$. Análogamiente si fuera el último tendríamos que $a=b$ y $\pi=a(1+i)$, incurriendo en la misma contradicción que en el caso anterior.
+Veamos que ninguno de estos enteros de Gauss puede ser $\bar\pi=a-ib$. Si fuera el primero tendríamos que $b=0$, pero entonces $p=|\pi|^2=a^2$, lo cual es una contradicción. Si fuera el segundo tendríamos que $a=0$ y llegaríamos a la contradicción $p=|\pi|^2=b^2$. Si fuera el tercero tendríamos que $a=-b$, con lo que $\pi=a(1-i)$, que solo es primo si $a$ es una unidad, pero en este caso $p=|\pi|^2=2\not\equiv 1$ mod $4$. Análogamente si fuera el último tendríamos que $a=b$ y $\pi=a(1+i)$, incurriendo en la misma contradicción que en el caso anterior.
 
 Finalmente, comprobemos no puede haber más que estos primos de Gauss y sus asociados con módulo al cuadrado $p$. En efecto, si $\pi'\in\mathbb Z[i]$ satisficiera $p=|\pi'|^2=\pi'\bar\pi'$ entonces como $\pi'|p=\pi\bar\pi$ tendríamos que bien $\pi'|\pi$ o bien $\pi'|\bar\pi$, es decir, como estos tres elementos son primos, $\pi'$ es asociado a $\pi$ o a $\bar\pi$.
 {{% /proof %}}
@@ -917,7 +917,7 @@ Sea $z$ un entero de Gauss sin parte entera y $\pi$ un primo de Gauss tal que $|
 {{% /lemma %}}
 
 {{% proof %}}
-Por reducción al absurdo, si también $\bar{\pi}\mid p$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
+Por reducción al absurdo, si también $\bar{\pi}\mid z$ entonces $\operatorname{mcm}(\pi,\bar{\pi})|z$. Como $\pi$ y $\bar{\pi}$ son primos no asociados, $\operatorname{mcm}(\pi,\bar{\pi})=\pi\bar{\pi}=p$, por tanto $p|z$ y $z$ tendría parte entera.
 {{% /proof %}}
 
 {{% example name="Factorización de enteros de Gauss sin parte entera" label="exm:nointeger" %}}
@@ -943,7 +943,7 @@ Veámoslo en el caso particular $z=201-43i$. En este caso
 
 $$|z|^2=201^2+43^2=42250=2\cdot 5^3 \cdot 13^2.$$
 
-Las factorizaciones de $5$ y de $13$ en $\mathbb{Z}[i]$ son $3=(2+i)(2-i)$ y $13=(3+2i)(3-2i)$, por tanto
+Las factorizaciones de $5$ y de $13$ en $\mathbb{Z}[i]$ son $5=(2+i)(2-i)$ y $13=(3+2i)(3-2i)$, por tanto
 
 $$z=u(1+i)(2\pm i)^3(3\pm 2i)^2.$$
 
