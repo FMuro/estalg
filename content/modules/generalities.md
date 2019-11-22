@@ -57,7 +57,7 @@ El conjunto unitario $\\{0\\}$, dotado de las únicas operaciones suma y product
 
 
 {{% example name="$R^n$" %}}
-Sus elementos son vectores conlumna con entradas en $R$, aunque a veces, cuando convenga, se denotarán por filas. La suma se define coordenada a coordenada, y el producto por escalares se define multiplicando el escalar por todas las coordenadas:
+Sus elementos son vectores columna con entradas en $R$, aunque a veces, cuando convenga, se denotarán por filas. La suma se define coordenada a coordenada, y el producto por escalares se define multiplicando el escalar por todas las coordenadas:
 
 $$\left(\begin{array}{c}a_1\cr\vdots\cr a_n\end{array}\right)+\left(\begin{array}{c}b_1\cr\vdots\cr b_n\end{array}\right)=\left(\begin{array}{c}a_1+b_1\cr\vdots\cr a_n+b_n\end{array}\right),\qquad r\left(\begin{array}{c}a_1\cr\vdots\cr a_n\end{array}\right)=\left(\begin{array}{c}ra_1\cr\vdots\cr ra_n\end{array}\right).$$
 
@@ -89,7 +89,7 @@ n a&=&(1+\stackrel{n}{\cdots}+1)a\cr&=&1a+\stackrel{n}{\cdots}+1a\cr&=&a+\stackr
 0a&=&0.
 \end{array}$$
 
-Es fácil comprobar que estas fórmulas definen una estructra de $\mathbb Z$-módulo en $A$, necesariamente única.  
+Es fácil comprobar que estas fórmulas definen una estructura de $\mathbb Z$-módulo en $A$, necesariamente única.  
 {{% /proof %}}
 
 
@@ -209,7 +209,7 @@ Demuestra que si $M\cong M'$ y $N\cong N'$ entonces $M\times N\cong M'\times N'$
 
 
 {{% proposition %}}
-Si $M$ es un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto cualquiera, existe un único homomorfismo $\phi=\phi_{S}\colon R^n\rightarrow M$ tal quie $\phi(e_i)=a_i$.
+Si $M$ es un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto cualquiera, existe un único homomorfismo $\phi=\phi_{S}\colon R^n\rightarrow M$ tal que $\phi(e_i)=a_i$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -273,11 +273,11 @@ Sea $M$ un $R$-módulo y $S=\\{a\_1,\dots,a\_n\\}\subset M$ un subconjunto. Deci
 
 $$x=r\_1a\_1+\cdots+r\_na\_n$$
 
-para ciertos $r\_1,\dots,r\_n\in R$. Decimos que $S$ es **linealmente independiente** si la única combinación lineal de $S$ que da como resultado $0$ es aquella que tiene todos los cieficientes nulos, es decir si $r\_1,\dots,r\_n\in R$ son tales que
+para ciertos $r\_1,\dots,r\_n\in R$. Decimos que $S$ es **linealmente independiente** si la única combinación lineal de $S$ que da como resultado $0$ es aquella que tiene todos los coeficientes nulos, es decir si $r\_1,\dots,r\_n\in R$ son tales que
 
 $$r\_1a\_1+\cdots+r\_na\_n=0$$
 
-entonces $r\_1=\cdots=r\_n=0$. Decimos además que $S$ es una **base** de $M$ si lo genera y es linealmente independiente. Un $R$-módulo es **finitamente generado** si posee un subconjunto finito que genera, y es **libre** si posee una base.
+entonces $r\_1=\cdots=r\_n=0$. Decimos además que $S$ es una **base** de $M$ si lo genera y es linealmente independiente. Un $R$-módulo es **finitamente generado** si posee un subconjunto finito que lo genera, y es **libre** si posee una base.
 {{% /definition %}}
 
 
@@ -288,7 +288,7 @@ Si $R=k$ es un cuerpo todo $R$-módulo es libre puesto que todo $k$-espacio vect
 
 
 {{% example name="$R^n$ es libre" %}}
-El sub conjunto $\\{e\_1,\dots,e\_n\\}\subset R^n$ es una base denominada **canónica**.
+El subconjunto $\\{e\_1,\dots,e\_n\\}\subset R^n$ es una base denominada **canónica**.
 {{% /example %}}
 
 Podemos definir un submódulo con un conjunto prefijado de generadores al igual que lo hicimos con los [ideales](/estalg/rings/definitions/#generators).
@@ -336,7 +336,7 @@ que es un isomorfismo, por tanto la asignación de coordenadas respecto de una b
 
 
 {{% remark %}}
-Sea $f\colon M\rightarrow N$ es un homomorfismo de $R$-módulos y $S=\\{a\_1,\dots,a\_n\\}\subset M$. Los siguientes enunciados son consecuencia de las observaciones anteriores: 
+Sea $f\colon M\rightarrow N$ un homomorfismo de $R$-módulos y $S=\\{a\_1,\dots,a\_n\\}\subset M$. Los siguientes enunciados son consecuencia de las observaciones anteriores: 
 
 * Si $S\subset M$ genera y $f$ es sobreyectivo $\Rightarrow$ $f(S)\subset N$ genera.
 
@@ -389,7 +389,7 @@ pero esto es imposible porque los determinantes de las matrices de la izquierda 
 
 
 {{% proposition %}}
-Todas las bases de un mismo $R$-módulo libre $M$ tiene el mismo número de elementos. 
+Todas las bases de un mismo $R$-módulo libre $M$ tienen el mismo número de elementos. 
 {{% /proposition %}}
 
 
@@ -431,7 +431,7 @@ El $\mathbb Z$-módulo $\mathbb Z/(2)$ está generado por el conjunto $S=\\{\bar
 En este apartado $R$ denotará siempre un dominio.
 
 {{% definition %}}
-Dado un $R$-módulo $M$, decimos que $a\in M$ es un elemento de **torsion** si existe algún $r\in R$ no nulo, $r\neq 0$, tal que $ra=0$. 
+Dado un $R$-módulo $M$, decimos que $a\in M$ es un elemento de **torsión** si existe algún $r\in R$ no nulo, $r\neq 0$, tal que $ra=0$. 
 {{% /definition %}}
 
 
@@ -461,7 +461,7 @@ Uno de los coeficientes de esta combinación lineal es $sr\_i\neq 0$ que es no n
 
 
 {{% remark %}}
-El $\mathbb Z$-módulo $\mathbb Q$ no tiene torsión, pero se puede comprobar que no es libre, es decir, no posee niguna base, ni finita ni infinita. 
+El $\mathbb Z$-módulo $\mathbb Q$ no tiene torsión, pero se puede comprobar que no es libre, es decir, no posee ninguna base, ni finita ni infinita. 
 {{% /remark %}}
 
 
