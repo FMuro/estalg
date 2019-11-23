@@ -633,14 +633,14 @@ El primer teorema de isomorfía para grupos garantiza la existencia de un único
 Recordemos que dados dos $R$-módulos $M$ y $N$ podemos considerar el $R$-módulos producto $M\times N$ y los homomorfismos de inclusión $i\_1\colon M\rightarrow M\times N$, $i\_1(a)=(a,0)$, y proyección $p\_2\colon M\times N\rightarrow N$, $p\_2(a,b)=b$. El primero es inyectivo y el segundo sobreyectivo. Claramente $\operatorname{im}i\_1=M\times\\{0\\}=\ker p\_2$, por tanto el teorema anterior nos proporciona isomorfismos
 
 $$\begin{array}{rclrcl}
-\frac{M\times N}{M\times\\{0\\}}&\stackrel{\cong}\longrightarrow&N,&\qquad M&\stackrel{\cong}\longrightarrow&M\times\\{0\\},\cr 
+\frac{M\times N}{M\times\\{0\\}}&\stackrel{\cong}\longrightarrow&N,&\qquad M&\stackrel{\cong}\longrightarrow&M\times\\{0\\},\cr
 [(a,b)]&\mapsto& b,&a&\mapsto&(a,0).\end{array}$$
 
 Además, el homomorfismo inyectivo $i_1$ induce un isomorfismo $M\cong M\times\\{0\\}$. 
 Análogamente podemos obtener isomorfismos
 
 $$\begin{array}{rclrcl}
-\frac{M\times N}{\\{0\\}\times N}&\stackrel{\cong}\longrightarrow&M,&\qquad N&\stackrel{\cong}\longrightarrow&\\{0\\}\times N,\cr 
+\frac{M\times N}{\\{0\\}\times N}&\stackrel{\cong}\longrightarrow&M,&\qquad N&\stackrel{\cong}\longrightarrow&\\{0\\}\times N,\cr
 [(a,b)]&\mapsto& a,&b&\mapsto&(0,b).\end{array}$$
 
 {{% /example %}}
