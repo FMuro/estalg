@@ -631,7 +631,7 @@ $$T_n(A)=\\{a\in A\mid n\cdot a=0\\}.$$
 
 Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$. Es más, todo isomorfismo $A\cong B$ se restringe a $T\_n(A)\cong T\_n(B)$, por tanto en este caso $t\_n(A)=t\_n(B)$. Dado $m\neq 0$, el orden de $\bar a\in\mathbb Z/(m)$ divide a $n$ si y solo si $m\mid na$. Si denotamos $d=\operatorname{mcd}(n,m)$, esto equivale a decir que $\frac{m}{d}\mid a$, por tanto
 
-$$T\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\left(\overline{\frac{m}{d}}\right)=\left\\{0\cdot\overline{\frac{m}{d}},1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
+$$T\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\left(\overline{\frac{m}{d}}\right)=\left\\{0\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
 
 pues $\overline{\frac{m}{d}}$ tiene orden $d$. Luego
 
