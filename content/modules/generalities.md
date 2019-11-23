@@ -607,7 +607,7 @@ Por tanto
 
 $$g(a+N)=f(a)=f(a')=g(a'+N).$$
 
-Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en los representantes.  
+Claramente $g$ es un homomorfismo pues se define como el homomorfismo $f$ en los representantes.  
 {{% /proof %}}
 
 
@@ -615,7 +615,7 @@ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en lo
 En la proposición anterior podemos tomar siempre $N=\ker f$. 
 {{% /remark %}}
 
-El siguiente resultado es una versión para módulos del primer teorema de isomoría, [ya recordado para anillos](/estalg/rings/definitions/#primer).
+El siguiente resultado es una versión para módulos del primer teorema de isomorfía, [ya recordado para anillos](/estalg/rings/definitions/#primer).
 
 {{% theorem name="Primer Teorema de Isomorfía" label="isomodules" %}}
 Dado un homomorfismo de módulos $f\colon M\rightarrow N$, existe un único homomorfismo de módulos $\bar f\colon M/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
@@ -630,7 +630,7 @@ El primer teorema de isomorfía para grupos garantiza la existencia de un único
 {{% /proof %}}
 
 {{% example name="El cociente de un producto por un factor" %}}
-Recordemos que dados dos $R$-módulos $M$ y $N$ podemos considerar el $R$-módulos producto $M\times N$ y los homomorfismos de inclusión $i\_1\colon M\rightarrow M\times N$, $i\_1(a)=(a,0)$, y proyección $p\_2\colon M\times N\rightarrow N$, $p\_2(a,b)=b$. El primero es inyectivo y el segundo sobreyectivo. Claramente $\operatorname{im}i\_1=M\times\\{0\\}=\ker p\_2$, por tanto el teorema anterior nos proporciona isomorfismos
+Recordemos que dados dos $R$-módulos $M$ y $N$ podemos considerar el $R$-módulo producto $M\times N$ y los homomorfismos de inclusión $i\_1\colon M\rightarrow M\times N$, $i\_1(a)=(a,0)$, y proyección $p\_2\colon M\times N\rightarrow N$, $p\_2(a,b)=b$. El primero es inyectivo y el segundo sobreyectivo. Claramente $\operatorname{im}i\_1=M\times\\{0\\}=\ker p\_2$, por tanto el teorema anterior nos proporciona isomorfismos
 
 $$\begin{array}{rclrcl}
 \frac{M\times N}{M\times\\{0\\}}&\stackrel{\cong}\longrightarrow&N,&\qquad M&\stackrel{\cong}\longrightarrow&M\times\\{0\\},\cr 
@@ -686,7 +686,7 @@ Supongamos ahora que $\\{\bar a\_1,\dots,\bar a\_p\\}$ y $\\{b\_1,\dots,b\_q\\}$
 
 $$r\_1a\_1+\cdots+r\_pa\_p+s\_1b\_1+\cdots+s\_qb\_q=0.$$
 
-Tomando clases módulo $N$, obtenemos que $r\_1\bar a\_1+\cdots+r\_p\bar a\_p=0$, y por tanto $r\_1=\cdots=r\_p=0$. La igualdad anterior queda entonces como $s\_1b\_1+\cdots+s\_qb\_q=0$, de donde $s\_1=\cdot=s\_q=0$.
+Tomando clases módulo $N$, obtenemos que $r\_1\bar a\_1+\cdots+r\_p\bar a\_p=0$, y por tanto $r\_1=\cdots=r\_p=0$. La igualdad anterior queda entonces como $s\_1b\_1+\cdots+s\_qb\_q=0$, de donde $s\_1=\cdots=s\_q=0$.
 {{% /proof %}}
 
 {{% remark %}}
