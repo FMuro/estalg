@@ -50,7 +50,7 @@ Ae\_3&=&7e\_1&+&6e\_2&+&2e\_3,\cr
 Ae\_4&=&9e\_1&+&6e\_2&+&e\_3,
 \end{array}$$
 
-cuyas clases en el cociente se anulan, lo cual equivale a las ecuaciones del principio. Más aún, esta construcción es universal ya que, por la [proposición](../generalities/#factorquotientmodules) de factorización de homomofismos a través de cocientes, dado un $\mathbb Z$-módulo $N$ y tres elementos $\\{b\_1,b\_2,b\_3\\}\subset N$ que satisfacen las ecuaciones 
+cuyas clases en el cociente se anulan, lo cual equivale a las ecuaciones del principio. Más aún, esta construcción es universal ya que, por la [proposición](../generalities/#factorquotientmodules) de factorización de homomorfismos a través de cocientes, dado un $\mathbb Z$-módulo $N$ y tres elementos $\\{b\_1,b\_2,b\_3\\}\subset N$ que satisfacen las ecuaciones 
 
 $$\begin{array}{rcrcrcl}
 3b\_1&+&2b\_2&+&b\_3&=&0,\cr
@@ -136,7 +136,7 @@ Sea $S=\\{a\_1,\dots,a\_m\\}\subset M$ un conjunto de generadores. Por serlo, el
 
 $$\frac{R^m}{\ker\phi\_{S}}\cong M.$$
 
-Según hemos visto anteriormente, el submódulo $\ker \phi\_S\subset R^n$ es finitamente generado. Escogemos un conjunto de generadores $S'=\\{b\_1,\dots,b\_n\\}\subset \ker \phi\_{S}$, que por tanto inducen otro homomorfismo sobreyectivo $\phi\_{S'}\colon R^n\rightarrow \ker \phi\_{S}$. Consideramos su composición con la inclusión,
+Según hemos visto anteriormente, el submódulo $\ker \phi\_S\subset R^m$ es finitamente generado. Escogemos un conjunto de generadores $S'=\\{b\_1,\dots,b\_n\\}\subset \ker \phi\_{S}$, que por tanto inducen otro homomorfismo sobreyectivo $\phi\_{S'}\colon R^n\rightarrow \ker \phi\_{S}$. Consideramos su composición con la inclusión,
 
 $$A\colon R^n\stackrel{\phi\_{S'}}\twoheadrightarrow \ker \phi\_S\hookrightarrow R^m,$$
 
@@ -151,7 +151,7 @@ Si el $R$-módulo $M$ está presentado por la matriz $A$ de tamaño $m\times n$ 
 
 * Si $A'=QAP^{-1}$ siendo $P$ y $Q$ matrices invertibles.
 
-* Si $A'$ se obtienen a partir de $A$ eliminando una columna de ceros,
+* Si $A'$ se obtiene a partir de $A$ eliminando una columna de ceros,
 
 $$
 A=\left(
