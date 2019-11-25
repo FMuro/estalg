@@ -184,7 +184,7 @@ $$
 * Las matrices invertibles $P$ y $Q$ se corresponden con meros cambios de base en $R^m$ y $R^n$, respectivamente, con lo cual tenemos un isomorfismo
 
 $$\begin{array}{rcl}
-R^m/\operatorname{im}A&\stackrel{\cong}\longrightarrow& R^m/\operatorname{im}A'\cr [x]&\mapsto& [Qx].\end{array}$$
+R^m/\operatorname{im}A&\stackrel{\cong}\longrightarrow& R^m/\operatorname{im}A'\\\ [x]&\mapsto& [Qx].\end{array}$$
 
 Usando el primer [teorema](../generalities/#isomodules) de isomorfía, podemos comprobar que esta aplicación está en efecto bien definida y es un isomorfismo.
 
