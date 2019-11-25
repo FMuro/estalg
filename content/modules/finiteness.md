@@ -772,7 +772,7 @@ Llamando
 
 $$\vec{y}=P\vec{x},$$
 
-lo cual es un simple cambio de veriables, podemos resolver esta ecuación en $\vec{y}$ como arriba, 
+lo cual es un simple cambio de variables, podemos resolver esta ecuación en $\vec{y}$ como arriba, 
 
 $$D\vec{y}=Q\vec{b}.$$
 
