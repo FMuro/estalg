@@ -221,7 +221,7 @@ $$
 \frac{R^m}{\operatorname{im} D}
 &\stackrel{\cong}\longrightarrow&
 \frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{m-n},\cr
-{[(a\_1,\dots,a\_m)]}&\mapsto&(\bar{a}\_1,\dots, \bar{a}\_n,a\_{n+1},\dots,a\_m).
+{[(r\_1,\dots,r\_m)]}&\mapsto&(\bar{r}\_1,\dots, \bar{r}\_n,r\_{n+1},\dots,r\_m).
 \end{array}
 $$
 
