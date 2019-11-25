@@ -654,7 +654,7 @@ Un $R$-módulo $M$ es cíclico $\Leftrightarrow$ $M\cong R/I$ para algún ideal 
 
 
 {{% proof %}}
-$\Leftarrow$ El módulo $R/I$ es cíclico pues $\\{\\bar 1\\}\subset R/I$ genera, así que cualquier módulo isomorfo a $R/I$ será también cíclico. 
+$\Leftarrow$ El módulo $R/I$ es cíclico pues $\\{\bar 1\\}\subset R/I$ genera, así que cualquier módulo isomorfo a $R/I$ será también cíclico. 
 
 $\Rightarrow$ Sea $\\{a\\}\subset M$ un generador. El homomorfismo $\phi\_{\\{a\\}}\colon R\rightarrow M$ que envía $1\mapsto a$ es por tanto sobreyectivo, así que por el primer [teorema](#isomodules) de isomorfía, $R/\ker \phi\_{\\{a\\}}\cong M$, con lo que podemos tomar $I=\ker \phi\_{\\{a\\}}$.   
 {{% /proof %}}
