@@ -815,11 +815,11 @@ Dado un operador lineal $A\colon k^n\rightarrow k^n$, el $k[x]$-módulo asociado
 {{% /proposition %}}
 
 {{% proof %}}
-Hemos de construir un isomorfismo entre el $k[x]$-modulo $k^n$ y el $k[x]$-modulo cociente
+Hemos de construir un isomorfismo entre el $k[x]$-módulo $k^n$ y el $k[x]$-módulo cociente
 
 $$\frac{k[x]^n}{\operatorname{im} (A-xI)}.$$
 
-Para ello, comenzamos considerando el homomorfismo de $k[x]$-modulos
+Para ello, comenzamos considerando el homomorfismo de $k[x]$-módulos
 
 $$\phi=\phi_{\\{e_1,\dots,e_n\\}}\colon k[x]^n\longrightarrow k^n,$$
 
@@ -839,7 +839,7 @@ $$k[x]^n\stackrel{p}\twoheadrightarrow \frac{k[x]^n}{\operatorname{im} (A-xI)}\s
 
 Como $\phi$ y $p$ son sobreyectivos, $g$ también lo será. 
 
-Queremos probar que $g$ es un isomorfismo. Este homomorfismo sobreyectivo de $k[x]$-módulos también lo es de $k$-modulos, es decir, de $k$-espacios vectoriales. Si demostramos que la dimensión del cociente como $k$-espacio vectorial es $\leq n$, entonces $g$ será necesariamente biyectivo. Sabemos que  $S=\\{\bar{e}\_1,\dots, \bar{e}\_n\\}$ es un conjunto de generadores del cociente como $k[x]$-módulo. Es decir, todo elemento del cociente es una combinación lineal de $S$ con coeficientes polinómicos. Veamos que $S$ es también una base del cociente como $k$-espacio vectorial, es decir, que todo elemento es combinación lineal de $S$ con coeficientes constantes. Para ello basta ver que $x \bar{e}\_j$ es siempre una combinación lineal de $S$ con coeficientes constantes, ya que de aquí se deduciría por inducción que $x^m\bar{e}\_i$ también es una combinación lineal de $S$ con coeficientes constantes para todo $m\geq 1$. La $j$-ésima columna de $A-xI$ es $\sum\_{i=1}^na\_{ij}e\_i-xe\_j$, así que en efecto
+Queremos probar que $g$ es un isomorfismo. Este homomorfismo sobreyectivo de $k[x]$-módulos también lo es de $k$-módulos, es decir, de $k$-espacios vectoriales. Si demostramos que la dimensión del cociente como $k$-espacio vectorial es $\leq n$, entonces $g$ será necesariamente biyectivo. Sabemos que  $S=\\{\bar{e}\_1,\dots, \bar{e}\_n\\}$ es un conjunto de generadores del cociente como $k[x]$-módulo. Es decir, todo elemento del cociente es una combinación lineal de $S$ con coeficientes polinómicos. Veamos que $S$ es también una base del cociente como $k$-espacio vectorial, es decir, que todo elemento es combinación lineal de $S$ con coeficientes constantes. Para ello basta ver que $x \bar{e}\_j$ es siempre una combinación lineal de $S$ con coeficientes constantes, ya que de aquí se deduciría por inducción que $x^m\bar{e}\_i$ también es una combinación lineal de $S$ con coeficientes constantes para todo $m\geq 1$. La $j$-ésima columna de $A-xI$ es $\sum\_{i=1}^na\_{ij}e\_i-xe\_j$, así que en efecto
 
 $$x\bar{e}\_j=\sum\_{i=1}^na\_{ij}\bar{e}\_i.$$
 
@@ -905,7 +905,7 @@ diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha
 
 ![Matriz de Jordan](../../images/jordanmatrix.png)
 
-Traslandando esta base a $V$ por el isomorfismo dado por el segundo teorema de estructura, obtenemos una base de $V$ respecto de la cual la matriz de $f$ es esta misma.
+Trasladando esta base a $V$ por el isomorfismo dado por el segundo teorema de estructura, obtenemos una base de $V$ respecto de la cual la matriz de $f$ es esta misma.
 
 La unicidad de la forma normal de Jordan se corresponde con la de la segunda forma del teorema de estructura. Observa que, sin embargo, la base respecto de la cual la matriz de $f$ está en forma normal de Jordan no es única en general.
 {{% /proof %}}
