@@ -487,7 +487,7 @@ $$
 
 {{% /proof %}}
 
-Veamos que el rango de la parte libre de la descomposición del teorema de structura solo depende del módulo $M$.
+Veamos que el rango de la parte libre de la descomposición del teorema de estructura solo depende del módulo $M$.
 
 {{% corollary label="equalrank" %}}
 Dado un dominio $R$ y dos $R$-módulos isomorfos $M\cong N$ tales que 
@@ -631,7 +631,7 @@ $$T_n(A)=\\{a\in A\mid n\cdot a=0\\}.$$
 
 Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$. Es más, todo isomorfismo $A\cong B$ se restringe a $T\_n(A)\cong T\_n(B)$, por tanto en este caso $t\_n(A)=t\_n(B)$. Dado $m\neq 0$, el orden de $\bar a\in\mathbb Z/(m)$ divide a $n$ si y solo si $m\mid na$. Si denotamos $d=\operatorname{mcd}(n,m)$, esto equivale a decir que $\frac{m}{d}\mid a$, por tanto
 
-$$T\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\left(\overline{\frac{m}{d}}\right)=\left\\{1\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
+$$T\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\left(\overline{\frac{m}{d}}\right)=\left\\{0\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
 
 pues $\overline{\frac{m}{d}}$ tiene orden $d$. Luego
 
@@ -703,11 +703,11 @@ Si $p(x)\in k[x]$ tiene grado $n$, el cociente $k[x]/(p(x))$ tiene dimensión $n
 
 $$\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)},\qquad \frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}$$
 
-tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con de **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico no nulo $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Por ejemplo, al orden de $a$ divide a un polinomio $p(x)\in k[x]$ si y solo si $p(x)\cdot a=0$. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)\subset M$ formado por los elementos cuyo orden divide a $p(x)\in k[x]$,
+tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con el **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico no nulo $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Por ejemplo, el orden de $a$ divide a un polinomio $p(x)\in k[x]$ si y solo si $p(x)\cdot a=0$. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)\subset M$ formado por los elementos cuyo orden divide a $p(x)\in k[x]$,
 
 $$T\_{p(x)}(M)=\\{a\in M\mid p(x)\cdot a=0\\}.$$
 
-Tenemos que $T\_{p(x)}(M\times N)=T\_{p(x)}(M)+ T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Es más, todo isomorfismo de $k[x]$-módulos $M\cong N$ se restringe a $T\_{p(x)}(M)\cong T\_{p(x)}(N)$, así que en este caso $t\_{p(x)}(M)= t\_{p(x)}(N)$. Además podemos comprobar que $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. 
+Tenemos que $T\_{p(x)}(M\times N)=T\_{p(x)}(M)\times T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Es más, todo isomorfismo de $k[x]$-módulos $M\cong N$ se restringe a $T\_{p(x)}(M)\cong T\_{p(x)}(N)$, así que en este caso $t\_{p(x)}(M)= t\_{p(x)}(N)$. Además podemos comprobar que $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. 
 
 Los dos $k[x]$-módulos del comienzo no pueden ser isomorfos porque
 
