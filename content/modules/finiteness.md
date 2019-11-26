@@ -424,11 +424,7 @@ $$\underbrace{\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}}\_{\text{part
 {{% remark %}}
 Este primer teorema de estructura demuestra que todo $R$-módulo finitamente generado sobre un DIP $R$ es isomorfo a un producto de módulos cíclicos de un tipo muy particular. Este producto es de hecho único en el siguiente sentido. Si
 
-$$
-\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}
-\cong  
-\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}\times R^{s},
-$$
+$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\cong\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}\times R^{s},$$
 
 donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i\mid d\_{i+1}$ y $e\_j\mid e\_{j+1}$, entonces $r=s$, $n=m$ y cada $d\_i$ es asociado de $e\_i$. 
 
