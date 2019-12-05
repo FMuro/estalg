@@ -354,9 +354,9 @@ Dada una extensión finita $F\subset K$, existe una cantidad finita de elementos
 
 
 {{% proof %}}
-Por inducción en el grado. Si $[K:F]=1$ no hay nada que demostrar pues $K=F$. Supongamos que $[K:F]=n>1$ y que el resultado es cierto para extensiones de grado ${<}n$. Entonces, como la inclusión $F\subsetneq K$ es estricta ha de existir $\alpha\_1\in K$ tal que $\alpha\_1\notin F$. Por tanto $F\subsetneq F[\alpha\_1]\subset K$. Esto implica que $[F[\alpha\_1]:F]>1$ así que
+Por inducción en el grado. Si $[K:F]=1$ no hay nada que demostrar pues $K=F$. Supongamos que $[K:F]=m>1$ y que el resultado es cierto para extensiones de grado ${<}m$. Entonces, como la inclusión $F\subsetneq K$ es estricta ha de existir $\alpha\_1\in K$ tal que $\alpha\_1\notin F$. Por tanto $F\subsetneq F[\alpha\_1]\subset K$. Esto implica que $[F[\alpha\_1]:F]>1$ así que
 
-$$\begin{array}{rcl}n&=&[K:F]\cr &=&[K:F[\alpha\_1]][F[\alpha\_1]:F]\cr &>&[K:F[\alpha\_1]].\end{array}$$
+$$\begin{array}{rcl}m&=&[K:F]\cr &=&[K:F[\alpha\_1]][F[\alpha\_1]:F]\cr &>&[K:F[\alpha\_1]].\end{array}$$
 
 Entonces, por hipótesis de inducción, han de existir $\alpha\_2,\dots,\alpha\_n\in K$ tales que
 
