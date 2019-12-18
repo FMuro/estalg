@@ -21,3 +21,6 @@ home = [ "HTML", "RSS", "JSON"]
 
 [blackfriday]
   smartypants = false
+
+[markup.goldmark.renderer]
+unsafe= true
