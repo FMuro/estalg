@@ -23,4 +23,4 @@ home = [ "HTML", "RSS", "JSON"]
   smartypants = false
 
 [markup.goldmark.renderer]
-unsafe= true
+  unsafe = true
