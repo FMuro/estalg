@@ -118,25 +118,25 @@ Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerr
 
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$ es un ideal 
 
-$$\ker f=\\{a\in R\;|\;f(a)=0\\}.$$
+$$\ker f=\\{a\in R \mid f(a)=0\\}.$$
 
 Este ideal posee la particularidad de que $f$ es inyectivo si y solo si $\ker f = \\{0\\}$.
 
 El **ideal generado por** un conjunto finto de elementos $a_1,\dots,a_n\in R$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo: 
 
-$$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}\subset R.$$
+$$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n  \mid  r_1,\dots,r_n\in R\\}\subset R.$$
 
 Este es el menor ideal que contiene a los elementos $a_1,\dots,a_n\in R$. Es decir, si $I\subset R$ es un ideal y $a_1,\dots,a_n\in I$ entonces $(a_1,\dots,a_n)\subset I$.
 
-Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
+Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra \mid  r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
 
 Dado un anillo y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
 
-$$a+I=\\{a+b\;|\;b\in I\\}\subset R.$$
+$$a+I=\\{a+b \mid b\in I\\}\subset R.$$
 
 Estas clases de equivalencia conforman una partición de $R$ denominada anillo **cociente** $R/I$,
 
-$$R/I=\\{a+I\,|\, a\in R\\}.$$
+$$R/I=\\{a+I \mid  a\in R\\}.$$
 
 Sabemos que $a+I=b+I$ si y solo si $a-b\in I$. En particular $a+I=0+I$ si y solo si $a\in I$. El anillo conciente es un anillo con la suma
 
@@ -289,7 +289,7 @@ Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, tod
 {{% definition %}}
 Dado un dominio $R$, su **cuerpo de fracciones** $Q( R )$ es el cociente del conjunto
 
-$$\left\\{\frac{a}{b}\;\bigg|\; a,b\in R,\,b\neq 0\right\\}$$
+$$\left\\{\frac{a}{b}\\;\bigg|\\; a,b\in R,\\,b\neq 0\right\\}$$
 
 por la relación de equivalencia
 

@@ -296,9 +296,9 @@ Podemos definir un submódulo con un conjunto prefijado de generadores al igual 
 {{% definition %}}
 El **submódulo generado por** un conjunto finto de elementos $a_1,\dots,a_n\in M$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo: 
 
-$$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n\;|\; r_1,\dots,r_n\in R\\}\subset M.$$
+$$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n \mid  r_1,\dots,r_n\in R\\}\subset M.$$
 
-Un **módulo cíclico** es uno que está generado por un único elemento $(a)=\\{ra\,|\, r\in R\\}$ y que por tanto está formado por sus múltiplos. 
+Un **módulo cíclico** es uno que está generado por un único elemento $(a)=\\{ra \mid  r\in R\\}$ y que por tanto está formado por sus múltiplos. 
 {{% /definition %}}
 
 
@@ -527,7 +527,7 @@ $$r(a+N)=(ra)+N.$$
 
 
 {{% remark %}}
-Recordemos que $M/N=\\{a+N\,|\, a\in M\\}$ de modo que $a+N=b+N$ si y solo si $a-b\in N$. En particular $a+N=0+N$ si y solo si $a\in N$. El elemento $a+N$ del cociente se denomina **clase** de $a$ **módulo** $N$. Cuando el submódulo $N$ se sobreentiende se escribe simplemente
+Recordemos que $M/N=\\{a+N \mid  a\in M\\}$ de modo que $a+N=b+N$ si y solo si $a-b\in N$. En particular $a+N=0+N$ si y solo si $a\in N$. El elemento $a+N$ del cociente se denomina **clase** de $a$ **módulo** $N$. Cuando el submódulo $N$ se sobreentiende se escribe simplemente
 
 $$a+N=\bar a=[a].$$
 
@@ -569,7 +569,7 @@ $$\begin{array}{rcl}
 
 El núcleo de la proyección natural es
 
-$$\ker p =\\{a\in M\;|\; p(a)=0\\},$$
+$$\ker p =\\{a\in M \mid  p(a)=0\\},$$
 
 pero $p(a)=a+N$ y $a+N=0+N$ si y solo si $a\in N$, luego $\ker p=N$.  
 {{% /proof %}}

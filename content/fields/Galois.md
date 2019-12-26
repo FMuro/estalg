@@ -141,7 +141,7 @@ Los subgrupos del grupo de Galois nos permiten construir extensiones intermedias
 {{% definition %}}
 Dada una extensión $F\subset K$ y un subgrupo $H\subset G(K/F)$ definimos el **cuerpo fijo** de $H$ del siguiente modo:
 
-$$K^{H}=\\{\alpha\in K\;|\; f(\alpha)=\alpha\;\forall f\in H\\}.$$
+$$K^{H}=\\{\alpha\in K\mid f(\alpha)=\alpha\\;\forall f\in H\\}.$$
 
 {{% /definition %}}
 
@@ -210,7 +210,7 @@ $$\sigma=\left(
 1&2&3\cr
 2&3&1
 \end{array}
-\right)=(1\;2\;3)\in S_3$$
+\right)=(1\\;2\\;3)\in S_3$$
 
 obtenemos el polinomio 
 

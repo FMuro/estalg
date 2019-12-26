@@ -23,8 +23,8 @@ x-y&=&25,&-25,&5,&-5,&1,&-1.
 Todos ellos son compatibles determinados y su solución es entera,
 
 $$\begin{array}{rcl}
-(x,y)&=&(13,-12),\, (-13,12),\, (5,0),\cr 
-&&(-5,0),\, (13,12),\, (-13,-12).
+(x,y)&=&(13,-12),\\, (-13,12),\\, (5,0),\cr 
+&&(-5,0),\\, (13,12),\\, (-13,-12).
 \end{array}$$
 
 Ahora introduciremos ligeros cambios en nuestra ecuación y consideraremos 
@@ -70,8 +70,8 @@ x-iy&=&1,&-1,& -i,& i.
 Como los térmios de la izquierda, $x+iy$ y $x-iy$, son conjugados, podemos descartar de plano los sistemas cuyos términos independientes no lo sean, es decir, los cuatro primeros y los cuatro últimos. Las soluciones del resto, y de nuestro problema, son
 
 $$\begin{array}{rcl}
-(x,y)&=&(2,1),\,(-2,-1),\,(-1,2),\,(1,-2),\cr 
-&&(2,-1),\,(-2,1),\,(1,2),\,(-1,-2).
+(x,y)&=&(2,1),\\,(-2,-1),\\,(-1,2),\\,(1,-2),\cr 
+&&(2,-1),\\,(-2,1),\\,(1,2),\\,(-1,-2).
 \end{array}$$
 
 Obviamente nuestra segunda ecuación se puede resolver fácilmente por métodos elementales, pero los métodos expuestos en este ejemplo, y otros aún más sofisticados, nos permitirán resolver otras ecuaciones que ahora no están realmente a nuestro alcance.

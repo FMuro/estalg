@@ -1165,7 +1165,7 @@ Dados $x,y\in\mathbb Z$ no nulos, tenemos que $\operatorname{mcd}(x,y)=1$ y $x\n
 {{% proof %}}
 $\Rightarrow$ Por reducción al absurdo. Si $\pi\in\mathbb Z[i]$ es un primo de Gauss tal que $\pi|(x+iy)$ y $\pi|(x-iy)$ entonces
 
-$$\begin{array}{rcl}\pi\;|\;[(x+iy)+(x-iy)]&=&2x,\cr \pi\;|\;[(x+iy)-(x-iy)]&=&2yi.\end{array}$$
+$$\begin{array}{rcl}\pi \mid [(x+iy)+(x-iy)]&=&2x,\cr \pi \mid [(x+iy)-(x-iy)]&=&2yi.\end{array}$$
 
 El primo $\pi$ no puede dividir simultáneamente a $x$ y a $y$ ya que $\operatorname{mcd}(x,y)=1$, y el divisor común máximo de dos enteros es el mismo calculado en $\mathbb{Z}$ o en $\mathbb{Z}[i]$. De aquí deducimos que $\pi|2$, es decir $\pi=1+i$ (o un asociado). Por tanto $(1+i)|(x+iy)$, así que por el lema anterior $x\equiv y$ mod $2$, lo cual es una contradicción.
 
