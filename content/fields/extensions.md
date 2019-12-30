@@ -50,7 +50,7 @@ La identidad es un homomorfismo de extensiones y la composición de homomorfismo
 {{% /remark %}}
 
 {{% proposition %}}
-Un homorfismo $f\colon K\rightarrow L$ de extensiones de $F$ es también un homomorfismo de $F$-espacios vectoriales.
+Un homomorfismo $f\colon K\rightarrow L$ de extensiones de $F$ es también un homomorfismo de $F$-espacios vectoriales.
 {{% /proposition %}}
 
 {{% proof %}}
