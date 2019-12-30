@@ -46,7 +46,7 @@ Dadas dos extensiones $F\subset K$ y $F\subset L$ de un mismo cuerpo $F$, un **h
 La conjugación $\mathbb{C}\rightarrow \mathbb{C}$, $z\mapsto\bar{z}$, es un homomorfismo de extensiones de $\mathbb{R}$ ya que $x=\bar{x}$ para todo $x\in\mathbb{R}$.
 
 {{% remark %}}
-La identidad es un homomorfismo de extensiones y la composición de homomorfismos de extensiones es también un homomorfismo de extensiones. Lo mismo ocurre con isomorfismos y automorfismos. Además, la aplicación inversa de un isomorfismo de extensiones es otro isomorfismo de extensiones, e igual para los automorfismos. Los homorfismos de cuerpos son inyectivos, así que los homomorfismos de extensiones también. 
+La identidad es un homomorfismo de extensiones y la composición de homomorfismos de extensiones es también un homomorfismo de extensiones. Lo mismo ocurre con isomorfismos y automorfismos. Además, la aplicación inversa de un isomorfismo de extensiones es otro isomorfismo de extensiones, e igual para los automorfismos. Los homomorfismos de cuerpos son inyectivos, así que los homomorfismos de extensiones también. 
 {{% /remark %}}
 
 {{% proposition %}}
