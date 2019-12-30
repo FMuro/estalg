@@ -32,9 +32,9 @@ El grado de una extensión $F\subset K$ es $[K:F]\geq 1$. No hay extensiones de 
 
 * $F\subset F(x)$ tampoco es finita.
 
-* $F\subset F[x]/(p(x))$, donde $p(x)\in F[x]$ es un polinomio irreducible. En efecto, por ser $F[x]$ un DFU tenemos que $p(x)\in F[x]$ es primo, y por ser $F[x]$ un dominio de ideales  principales tenemos que el ideal primo $(p(x))\subset F[x]$, al ser no trivial, es maximal, por tanto $F[x]/(p(x))$ es un cuerpo. Sabemos además que 
+* $F\subset F[ x ]/(p(x))$, donde $p(x)\in F[ x ]$ es un polinomio irreducible. En efecto, por ser $F[ x ]$ un DFU tenemos que $p(x)\in F[ x ]$ es primo, y por ser $F[ x ]$ un dominio de ideales  principales tenemos que el ideal primo $(p(x))\subset F[ x ]$, al ser no trivial, es maximal, por tanto $F[ x ]/(p(x))$ es un cuerpo. Sabemos además que 
 
-$$[F[x]/(p(x)):F]=\text{grado }p(x).$$
+$$[F[ x ]/(p(x)):F]=\text{grado }p(x).$$
 
 {{% /example %}}
 
@@ -89,32 +89,32 @@ Dada una extension finita $\mathbb{Q}\subset K$, todo homomorfismo de anillos $f
 
 
 {{% definition %}}
-Dada una extensión $F\subset K$, decimos que $\alpha\in K$ es **algebraico** si existe $p(x)\in F[x]$ no nulo tal que $p(\alpha)=0$. En caso contrario decimos que $\alpha$ es **trascendente**. 
+Dada una extensión $F\subset K$, decimos que $\alpha\in K$ es **algebraico** si existe $p(x)\in F[ x ]$ no nulo tal que $p(\alpha)=0$. En caso contrario decimos que $\alpha$ es **trascendente**. 
 {{% /definition %}}
 
 {{% remark %}}
-Si tenemos dos extensiones sucesivas $F\subset K\subset L$ y $\alpha\in L$ es algebraico sobre $F$ entonces también es algebraico sobre $K$ ya que $F[x]\subset K[x]$. ¡Ojo! El recíproco no es cierto. Todo $\alpha\in F$ es algebraico sobre $F$ ya que es raíz de $x-\alpha\in F[x]$.
+Si tenemos dos extensiones sucesivas $F\subset K\subset L$ y $\alpha\in L$ es algebraico sobre $F$ entonces también es algebraico sobre $K$ ya que $F[ x ]\subset K[ x ]$. ¡Ojo! El recíproco no es cierto. Todo $\alpha\in F$ es algebraico sobre $F$ ya que es raíz de $x-\alpha\in F[ x ]$.
 {{% /remark %}}
 
-El elemento $\sqrt{2}\in\mathbb{R}$ es algebraico sobre $\mathbb{Q}$, aunque $\sqrt{2}\notin\mathbb{Q}$. Análogamente $i\in\mathbb{C}$ es algebraico sobre $\mathbb{R}$ ya que es raíz de $x^2+1\in\mathbb{R}[x]$, y también sobre $\mathbb{Q}$.
+El elemento $\sqrt{2}\in\mathbb{R}$ es algebraico sobre $\mathbb{Q}$, aunque $\sqrt{2}\notin\mathbb{Q}$. Análogamente $i\in\mathbb{C}$ es algebraico sobre $\mathbb{R}$ ya que es raíz de $x^2+1\in\mathbb{R}[ x ]$, y también sobre $\mathbb{Q}$.
 
 
 {{% example name="Existencia de elementos trascendentes en $\mathbb Q\subset\mathbb C$" %}}
-Como $\mathbb Q$ es numerable, $\mathbb Q[x]$ también. Además, todo polinomio tiene una cantidad finita de soluciones en $\mathbb C$. Por tanto hay una cantidad numerable de elementos algebraicos para la extensión $\mathbb Q\subset\mathbb C$. Como $\mathbb C$ no es numerable, han de existir elementos trascendentes, de hecho una cantidad no numerable de ellos. Lo mismo se aplica a la extensión $\mathbb Q\subset\mathbb R$. Dar un ejemplo concreto de número trascendente es sin embargo bastante complicado. Es conocido que $\pi$ es trascendente sobre $\mathbb Q$ pero no es fácil probarlo. 
+Como $\mathbb Q$ es numerable, $\mathbb Q[ x ]$ también. Además, todo polinomio tiene una cantidad finita de soluciones en $\mathbb C$. Por tanto hay una cantidad numerable de elementos algebraicos para la extensión $\mathbb Q\subset\mathbb C$. Como $\mathbb C$ no es numerable, han de existir elementos trascendentes, de hecho una cantidad no numerable de ellos. Lo mismo se aplica a la extensión $\mathbb Q\subset\mathbb R$. Dar un ejemplo concreto de número trascendente es sin embargo bastante complicado. Es conocido que $\pi$ es trascendente sobre $\mathbb Q$ pero no es fácil probarlo. 
 {{% /example %}}
 
 {{% definition %}}
-Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, su **polinomio irreducible** $p(x)\in F[x]$ es el único polinomio mónico irreducible con coeficientes en $F$ que tiene a $\alpha$ como raíz. El **grado** de $\alpha$ sobre $F$ es el de su polinomio irreducible.
+Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, su **polinomio irreducible** $p(x)\in F[ x ]$ es el único polinomio mónico irreducible con coeficientes en $F$ que tiene a $\alpha$ como raíz. El **grado** de $\alpha$ sobre $F$ es el de su polinomio irreducible.
 {{% /definition %}}
 
 {{% remark %}}
-La existencia del polinomio irreducible de un elemento algebraico no es obvia y la veremos como consecuencia del siguiente teorema. También es posible probarla usando que $F[x]$ es un DFU. La condición de ser mónico es solo para garantizar su unicidad. Si encontramos un polinomio irreducible en $F[x]$ que tiene a $\alpha$ como raíz, basta dividirlo por su coeficiente líder para convertirlo en mónico.
+La existencia del polinomio irreducible de un elemento algebraico no es obvia y la veremos como consecuencia del siguiente teorema. También es posible probarla usando que $F[ x ]$ es un DFU. La condición de ser mónico es solo para garantizar su unicidad. Si encontramos un polinomio irreducible en $F[ x ]$ que tiene a $\alpha$ como raíz, basta dividirlo por su coeficiente líder para convertirlo en mónico.
 {{% /remark %}}
 
 {{% theorem %}}
-Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, el polinomio irreducible de $\alpha$ es el generador mónico del núcleo del homomorfismo $f\colon F[x]\rightarrow K$, $f(p(x))=p(\alpha)$. Es más, $F[\alpha]$ es un cuerpo y $f$ induce un isomorfismo de extensiones de $F$,
+Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$, el polinomio irreducible de $\alpha$ es el generador mónico del núcleo del homomorfismo $f\colon F[ x ]\rightarrow K$, $f(p(x))=p(\alpha)$. Es más, $F[\alpha]$ es un cuerpo y $f$ induce un isomorfismo de extensiones de $F$,
 
-$$\frac{F[x]}{(p(x))}\cong F[\alpha].$$
+$$\frac{F[ x ]}{(p(x))}\cong F[\alpha].$$
 
 En particular, 
 
@@ -125,21 +125,21 @@ $$[F[\alpha]:F]=\text{grado }\alpha.$$
 {{% proof %}}
 El homomorfismo $f$ está bien definido por el principio de sustitución, ya que es el único tal que $f_{|_F}\colon F\hookrightarrow K$ es la inclusión y $f(x)=\alpha$.
 
-Ser $\alpha$ algebraico equivale a $\ker f\neq (0)$, pues los elementos de $\ker f$ son los polinomios en $F[x]$ que tienen a $\alpha$ como raíz. En particular, $\ker f\subsetneq F[x]$ ya que los polinomios constantes no nulos no tienen raíces. 
+Ser $\alpha$ algebraico equivale a $\ker f\neq (0)$, pues los elementos de $\ker f$ son los polinomios en $F[ x ]$ que tienen a $\alpha$ como raíz. En particular, $\ker f\subsetneq F[ x ]$ ya que los polinomios constantes no nulos no tienen raíces. 
 
-Supongamos que $\alpha$ tiene polinomio irreducible $p(x)$. Entonces $p(x)\in\ker f$, así que $(p(x))\subset\ker f$. Como $F[x]$ es un DIP, $(p(x))$ es maximal por ser $p(x)$ irreducible, así que $(p(x))=\ker f$. 
+Supongamos que $\alpha$ tiene polinomio irreducible $p(x)$. Entonces $p(x)\in\ker f$, así que $(p(x))\subset\ker f$. Como $F[ x ]$ es un DIP, $(p(x))$ es maximal por ser $p(x)$ irreducible, así que $(p(x))=\ker f$. 
 
-Recíprocamente, supongamos que $\ker f=(p(x))$ (este ideal es principal porque $F[x]$ es un DIP). Por el primer teorema de isomorfía, $f$ induce un isomorfismo
+Recíprocamente, supongamos que $\ker f=(p(x))$ (este ideal es principal porque $F[ x ]$ es un DIP). Por el primer teorema de isomorfía, $f$ induce un isomorfismo
 
-$$\overline{f}\colon\frac{F[x]}{(p(x))}\stackrel{\cong}\longrightarrow F[\alpha].$$
+$$\overline{f}\colon\frac{F[ x ]}{(p(x))}\stackrel{\cong}\longrightarrow F[\alpha].$$
 
-Como $F[\alpha]\subset K$ es un dominio, el ideal $(p(x))\subset F[x]$ es primo. Como $F[x]$ es un DFU, esto equivale a decir que $p(x)$ es irreducible. Podemos además suponer que es mónico, dividiendo por su coeficiente líder si fuera necesario. En estas condiciones hemos visto arriba que el cociente es un cuerpo, más cocretamente una extensión de $F$ del mismo grado que $p(x)$. Esto implica que el anillo $F[\alpha]$ es también un cuerpo, por ser isomorfo al cociente. Es más, según vimos en el tema de factorización, el isomorfismo $\overline{f}$ se comporta sobre $F$ como la identidad, por tanto es un isomorfismo de extensiones, así que el grado de $F[\alpha]$ sobre $F$ es también el de $p(x)$.
+Como $F[\alpha]\subset K$ es un dominio, el ideal $(p(x))\subset F[ x ]$ es primo. Como $F[ x ]$ es un DFU, esto equivale a decir que $p(x)$ es irreducible. Podemos además suponer que es mónico, dividiendo por su coeficiente líder si fuera necesario. En estas condiciones hemos visto arriba que el cociente es un cuerpo, más cocretamente una extensión de $F$ del mismo grado que $p(x)$. Esto implica que el anillo $F[\alpha]$ es también un cuerpo, por ser isomorfo al cociente. Es más, según vimos en el tema de factorización, el isomorfismo $\overline{f}$ se comporta sobre $F$ como la identidad, por tanto es un isomorfismo de extensiones, así que el grado de $F[\alpha]$ sobre $F$ es también el de $p(x)$.
 {{% /proof %}}
 
-El siguiente corolario se basa en el hecho de que $F[x]$ es un dominio euclídeo. Su importancia estriba en que da un método para calcular el polinomio irreducible de un elemento algebraico sin necesidad de  comprobar la irreducibilidad por otros métodos.
+El siguiente corolario se basa en el hecho de que $F[ x ]$ es un dominio euclídeo. Su importancia estriba en que da un método para calcular el polinomio irreducible de un elemento algebraico sin necesidad de  comprobar la irreducibilidad por otros métodos.
 
 {{% corollary %}}
-Dada una extensión $F\subset K$, el polinomio irreducible de un elemento algebraico $\alpha\in K$ es el polinomio mónico no nulo de menor grado en $F[x]$ que tiene a $\alpha$ como raíz.
+Dada una extensión $F\subset K$, el polinomio irreducible de un elemento algebraico $\alpha\in K$ es el polinomio mónico no nulo de menor grado en $F[ x ]$ que tiene a $\alpha$ como raíz.
 {{% /corollary %}}
 
 {{% corollary %}}
@@ -147,15 +147,15 @@ Dada una extensión $F\subset K$ y un elemento algebraico $\alpha\in K$ de grado
 {{% /corollary %}}
 
 {{% proof %}}
-El isomorfismo de extensiones del teorema anterior es también un isomorfismo de $F$-espacios vectoriales. Sabemos que $\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ es una base de $F[x]/(p(x))$, donde $p(x)$ es el polinomio irreducible de $\alpha$, así que su imagen, $\\{1,\alpha,\dots,\alpha^{n-1}\\}$, es una base de $F[\alpha]$.
+El isomorfismo de extensiones del teorema anterior es también un isomorfismo de $F$-espacios vectoriales. Sabemos que $\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ es una base de $F[ x ]/(p(x))$, donde $p(x)$ es el polinomio irreducible de $\alpha$, así que su imagen, $\\{1,\alpha,\dots,\alpha^{n-1}\\}$, es una base de $F[\alpha]$.
 {{% /proof %}}
 
 {{% proposition %}}
-Si $F\subset K$ es una extensión, $\alpha\in K$ y $q(x)\in F[x]$ es un polinomio no nulo que tiene a $\alpha$ como raíz, entonces el polinomio irreducible de $\alpha$ divide a $q(x)$, en particular el grado de $\alpha$ sobre $F$ es menor o igual que el grado de $q(x)$. 
+Si $F\subset K$ es una extensión, $\alpha\in K$ y $q(x)\in F[ x ]$ es un polinomio no nulo que tiene a $\alpha$ como raíz, entonces el polinomio irreducible de $\alpha$ divide a $q(x)$, en particular el grado de $\alpha$ sobre $F$ es menor o igual que el grado de $q(x)$. 
 {{% /proposition %}}
 
 {{% proof %}}
-Consideramos el homomorfismo $f\colon F[x]\rightarrow K$ del teorema anterior. Si $p(x)$ es el polinomio irreducible de $\alpha$, $\ker f=(p(x))$. Como $\alpha$ es una raíz de $q(x)$, $q(x)\in\ker f$, así que $q(x)$ es un multiplo no nulo de $p(x)$.
+Consideramos el homomorfismo $f\colon F[ x ]\rightarrow K$ del teorema anterior. Si $p(x)$ es el polinomio irreducible de $\alpha$, $\ker f=(p(x))$. Como $\alpha$ es una raíz de $q(x)$, $q(x)\in\ker f$, así que $q(x)$ es un multiplo no nulo de $p(x)$.
 {{% /proof %}}
 
 {{% example name="Grado de algunos elementos" %}}
@@ -163,19 +163,19 @@ Sea $F\subset K$ una extensión y $\alpha\in K$ un elemento algebraico.
 
 * No hay elementos de grado $0$ porque los polinomios no nulos de grado $0$ no tienen raíces.
 
-* El grado de $\alpha$ es $1$ si y solo si $\alpha\in F$. En efecto, esto equivale a decir que $\alpha$ es raíz de un polinomio mónico de grado $1$ en $F[x]$ (todos ellos irreducibles) que no puede ser otro que $x-\alpha$.
+* El grado de $\alpha$ es $1$ si y solo si $\alpha\in F$. En efecto, esto equivale a decir que $\alpha$ es raíz de un polinomio mónico de grado $1$ en $F[ x ]$ (todos ellos irreducibles) que no puede ser otro que $x-\alpha$.
 
-* El grado de $\alpha$ es $2$ si y solo si $\alpha\notin F$ pero es raíz de un polinomio de grado $2$ en $F[x]$.
+* El grado de $\alpha$ es $2$ si y solo si $\alpha\notin F$ pero es raíz de un polinomio de grado $2$ en $F[ x ]$.
 
-* Dado $\alpha\in K$ tal que $\alpha\notin F$ pero $\alpha^2\in F$, el grado de $\alpha$ es $2$ y su polinomio irreducible es $x^2-\alpha^2\in F[x]$.
+* Dado $\alpha\in K$ tal que $\alpha\notin F$ pero $\alpha^2\in F$, el grado de $\alpha$ es $2$ y su polinomio irreducible es $x^2-\alpha^2\in F[ x ]$.
 
-* Si $F\subset\mathbb R$, el grado de $i\in\mathbb C$ sobre $F$ es $2$ pues $i\notin F$ pero es raíz de $x^2+1\in F[x]$, que es su polinomio irreducible.
+* Si $F\subset\mathbb R$, el grado de $i\in\mathbb C$ sobre $F$ es $2$ pues $i\notin F$ pero es raíz de $x^2+1\in F[ x ]$, que es su polinomio irreducible.
 
-* Si $n\in\mathbb Z$ es libre de cuadrados, el grado de $\sqrt{n}\in\mathbb C$ sobre $\mathbb Q$ es $2$ pues $\sqrt{n}\notin\mathbb Q$ pero es raíz de $x^2-n\in\mathbb Q[x]$.
+* Si $n\in\mathbb Z$ es libre de cuadrados, el grado de $\sqrt{n}\in\mathbb C$ sobre $\mathbb Q$ es $2$ pues $\sqrt{n}\notin\mathbb Q$ pero es raíz de $x^2-n\in\mathbb Q[ x ]$.
 
-* Si $p\in\mathbb Z$ es primo, el grado de $\sqrt[n]{p}\in\mathbb C$ sobre $\mathbb Q$ es $n$ puesto que es raíz del polinomio irreducible $x^n-p\in\mathbb Q[x]$. Este polinomio es irreducible por el criterio de [Eisenstein](../../rings/factorization/#eisenstein) para el primo $p$. Hay por tanto números complejos, incluso reales, de grado cualquiera sobre $\mathbb Q$.
+* Si $p\in\mathbb Z$ es primo, el grado de $\sqrt[n]{p}\in\mathbb C$ sobre $\mathbb Q$ es $n$ puesto que es raíz del polinomio irreducible $x^n-p\in\mathbb Q[ x ]$. Este polinomio es irreducible por el criterio de [Eisenstein](../../rings/factorization/#eisenstein) para el primo $p$. Hay por tanto números complejos, incluso reales, de grado cualquiera sobre $\mathbb Q$.
 
-* Si $\mathbb C\subset K$ es una extensión, los únicos elementos algebraicos son los de $\mathbb C$ ya que los únicos polinomios irreducibles en $\mathbb C[x]$ son los de grado $1$, así que todo elemento algebraico tiene grado $1$. Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
+* Si $\mathbb C\subset K$ es una extensión, los únicos elementos algebraicos son los de $\mathbb C$ ya que los únicos polinomios irreducibles en $\mathbb C[ x ]$ son los de grado $1$, así que todo elemento algebraico tiene grado $1$. Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
 
 {{% /example %}}
 
@@ -183,7 +183,7 @@ Sea $F\subset K$ una extensión y $\alpha\in K$ un elemento algebraico.
 Veamos que los homomorfismos de extensiones de $F$ preservan raíces de polinomios con coeficientes en $F$.
 
 {{% proposition %}}
-Dadas dos extensiones $F\subset K$ y $F\subset L$ del mismo cuerpo $F$ y un homomorfismo de extensiones $f\colon K\rightarrow L$, si $\alpha\in K$ es raíz de un polinomio $p(x)\in F[x]$ entonces $f(\alpha)\in L$ también es raíz de $p(x)$. 
+Dadas dos extensiones $F\subset K$ y $F\subset L$ del mismo cuerpo $F$ y un homomorfismo de extensiones $f\colon K\rightarrow L$, si $\alpha\in K$ es raíz de un polinomio $p(x)\in F[ x ]$ entonces $f(\alpha)\in L$ también es raíz de $p(x)$. 
 {{% /proposition %}}
 
 
@@ -201,18 +201,18 @@ así que $f(\alpha)\in L$ también es raíz de $p(x)$.
 
 
 {{% example name="Extensiones no isomorfas del mismo grado" %}}
-Las extensiones $\mathbb Q[i]$ y $\mathbb Q[\sqrt{2}]$ de $\mathbb Q$ tienen grado $2$ pero no son isomorfas porque el polinomio $x^2+1\in\mathbb Q[x]$ tiene raíces en $\mathbb Q[i]$ pero no en $\mathbb Q[\sqrt{2}]\subset\mathbb R$. 
+Las extensiones $\mathbb Q[i]$ y $\mathbb Q[\sqrt{2}]$ de $\mathbb Q$ tienen grado $2$ pero no son isomorfas porque el polinomio $x^2+1\in\mathbb Q[ x ]$ tiene raíces en $\mathbb Q[i]$ pero no en $\mathbb Q[\sqrt{2}]\subset\mathbb R$. 
 {{% /example %}}
 
 
 {{% proposition %}}
-Dada una extensión $F\subset K$, $\alpha\in K$ es trascendente si y solo si hay un isomorfismo $F[x]\cong F[\alpha]$ que deja fijo a $F$. 
+Dada una extensión $F\subset K$, $\alpha\in K$ es trascendente si y solo si hay un isomorfismo $F[ x ]\cong F[\alpha]$ que deja fijo a $F$. 
 {{% /proposition %}}
 
 {{% proof %}}
-En virtud del teorema anterior, el elemento $\alpha$ es trascendente si y solo si el homomorfismo $f\colon F[x]\rightarrow K$, $f(p(x))=p(\alpha)$, tiene núcleo trivial. Por el primer teorema de isomorfía, esto equivale a que $f$ induzca un isomorfismo 
+En virtud del teorema anterior, el elemento $\alpha$ es trascendente si y solo si el homomorfismo $f\colon F[ x ]\rightarrow K$, $f(p(x))=p(\alpha)$, tiene núcleo trivial. Por el primer teorema de isomorfía, esto equivale a que $f$ induzca un isomorfismo 
 
-$$F[x]\cong \frac{F[x]}{(0)}\cong\operatorname{im} f=F[\alpha]$$
+$$F[ x ]\cong \frac{F[ x ]}{(0)}\cong\operatorname{im} f=F[\alpha]$$
 
 definido por la misma fórmula $p(x)\mapsto p(\alpha)$. Este isomorfismo obviamente deja fijo a $F$.
 {{% /proof %}}
@@ -224,7 +224,7 @@ Dada una extensión $F\subset K$ y $\alpha\in K$ tal que $F[\alpha]$ tiene dimen
 
 
 {{% proof %}}
-No puede ser trascendente porque el anillo de polinomios $F[x]$ no tiene dimensión finita sobre $F$.  
+No puede ser trascendente porque el anillo de polinomios $F[ x ]$ no tiene dimensión finita sobre $F$.  
 {{% /proof %}}
 
 
@@ -370,14 +370,14 @@ En la siguiente sección veremos que, para extensiones contenidas en $\mathbb{C}
 
 ## Elementos primitivos
 
-Recuerda que $\alpha\in\mathbb{C}$ es una **raíz múltiple** de $f(x)\in\mathbb{C}[x]$ si $(x-\alpha)^2|f$.
+Recuerda que $\alpha\in\mathbb{C}$ es una **raíz múltiple** de $f(x)\in\mathbb{C}[ x ]$ si $(x-\alpha)^2|f$.
 
 {{% proposition %}}
-Un polinomio $f(x)\in\mathbb{C}[x]$ tiene una raíz múltiple $\alpha\in\mathbb{C}$ si y solo si $\alpha$ es raíz de $f$ y de su derivada $f'$.
+Un polinomio $f(x)\in\mathbb{C}[ x ]$ tiene una raíz múltiple $\alpha\in\mathbb{C}$ si y solo si $\alpha$ es raíz de $f$ y de su derivada $f'$.
 {{% /proposition %}}
 
 {{% proof %}}
-Sabemos que $\alpha$ es raíz de $f$ si y solo si $(x-\alpha)|f$, es decir, si y solo si $f(x)=g(x)(x-a)$ para cierto $g(x)\in\mathbb{C}[x]$. Por tanto, $\alpha$ es una raíz múltiple de $f(x)$ si y solo si $(x-\alpha)|g$, es decir, si y solo si $\alpha$ es también una raíz de $g$. La derivada de $f$ es
+Sabemos que $\alpha$ es raíz de $f$ si y solo si $(x-\alpha)|f$, es decir, si y solo si $f(x)=g(x)(x-a)$ para cierto $g(x)\in\mathbb{C}[ x ]$. Por tanto, $\alpha$ es una raíz múltiple de $f(x)$ si y solo si $(x-\alpha)|g$, es decir, si y solo si $\alpha$ es también una raíz de $g$. La derivada de $f$ es
 
 $$f'(x)=g'(x)(x-\alpha)+g(x),$$
 
@@ -385,7 +385,7 @@ luego $f'(\alpha)=g(\alpha)$, así que $\alpha$ es una raíz de $f'$ si y solo s
 {{% /proof %}}
 
 {{% proposition %}}
-Un polinomio $f(x)\in\mathbb{C}[x]$ tiene alguna raíz múltiple si y solo si $f$ y $f'$ no son coprimos.
+Un polinomio $f(x)\in\mathbb{C}[ x ]$ tiene alguna raíz múltiple si y solo si $f$ y $f'$ no son coprimos.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -395,7 +395,7 @@ $\Leftarrow$ Si $f$ y $f'$ no son coprimos, entonces $\operatorname{mcd}(f,f')=g
 {{% /proof %}}
 
 {{% proposition %}}
-Dada una extensión $F\subset\mathbb{C}$, si $f(x)\in F[x]$ es irreducible entonces $f$ y $f'$ son coprimos, en particular $f$ no tiene raíces múltiples en $\mathbb{C}$.
+Dada una extensión $F\subset\mathbb{C}$, si $f(x)\in F[ x ]$ es irreducible entonces $f$ y $f'$ son coprimos, en particular $f$ no tiene raíces múltiples en $\mathbb{C}$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -413,7 +413,7 @@ Dada una extensión finita $F\subset K$ tal que $K\subset\mathbb{C}$ y $K=F[\alp
 {{% /lemma %}}
 
 {{% proof %}}
-Sean $f(x),g(x)\in F[x]$ los polinomios irreducibles de $\alpha,\beta\in K$, respectivamente. Supongamos que sus grados respectivos son $m,n\geq 1$. Sean $\alpha\_1,\dots,\alpha\_m$ y $\beta\_1,\dots,\beta\_n$ sus raíces en $\mathbb{C}$, con $\alpha=\alpha\_1$ y $\beta=\beta\_1$. Como $f$ y $g$ no tienen raíces múltiples por ser irreducibles, los $\alpha\_i$ son todos distintos, y también los $\beta\_j$. Dado $c\in F$, denotemos
+Sean $f(x),g(x)\in F[ x ]$ los polinomios irreducibles de $\alpha,\beta\in K$, respectivamente. Supongamos que sus grados respectivos son $m,n\geq 1$. Sean $\alpha\_1,\dots,\alpha\_m$ y $\beta\_1,\dots,\beta\_n$ sus raíces en $\mathbb{C}$, con $\alpha=\alpha\_1$ y $\beta=\beta\_1$. Como $f$ y $g$ no tienen raíces múltiples por ser irreducibles, los $\alpha\_i$ son todos distintos, y también los $\beta\_j$. Dado $c\in F$, denotemos
 
 $$\gamma\_{ij}=\beta\_j+c\alpha\_i.$$
 
@@ -425,7 +425,7 @@ Si $i\neq k$ entonces $\alpha\_i\neq \alpha\_k$ y podemos despejar $c$, que ser�
 
 Consideramos la extensión intermedia $F\subset F[\gamma]\subset F[\alpha,\beta]$. Bastará demostrar que $\alpha\in F[\gamma]$, ya que entonces también $\beta=\gamma-c\alpha\in F[\gamma]$, y por tanto tendríamos la otra inclusión $F[\gamma]\supset F[\alpha,\beta]$. 
 
-Como $g(x)\in F[x]$, $h(x)=g(\gamma-cx)\in F[\gamma][x]$. Tenemos que $\alpha\in \mathbb{C}$ es raíz de $h$ ya que $h(\alpha)=g(\gamma-c\alpha)=g(\beta)=0$. También es raíz de $f\in F[x]$, que es su polinomio mínimo. Veamos que no poseen más raíces complejas en común. En efecto, si algún otro $\alpha\_i$, $i>0$, fuera raíz de $h$, entonces $0=h(\alpha\_i)=g(\gamma-c\alpha\_i)$. Como las raíces de $g$ son los $\beta\_j$, tendríamos que $\gamma-c\alpha\_i=\beta\_j$, así que $\gamma\_{11}=\beta\_j+c\alpha\_i=\gamma_{ij}$, lo cual es imposible porque $i\neq 1$. De aquí deducimos que $\operatorname{mcd}(f,h)=x-\alpha$ en $\mathbb{C}[x]$. El divisor común máximo de dos polinomios está bien definido salvo producto por constantes no nulas. Es más, divisor común máximo de dos polinomios en $F[\gamma][x]$ lo es también en $\mathbb{C}[x]$, ya que toda división euclídea en el primero lo es también en el segundo, así que que el resultado de aplicar el arlgoritmo de Euclides en el primero es también válido en el segundo. Esto demuestra que $x-\alpha\in F[\gamma][x]$, así que en efecto $ \alpha\in F[\gamma]$.
+Como $g(x)\in F[ x ]$, $h(x)=g(\gamma-cx)\in F[\gamma][ x ]$. Tenemos que $\alpha\in \mathbb{C}$ es raíz de $h$ ya que $h(\alpha)=g(\gamma-c\alpha)=g(\beta)=0$. También es raíz de $f\in F[ x ]$, que es su polinomio mínimo. Veamos que no poseen más raíces complejas en común. En efecto, si algún otro $\alpha\_i$, $i>0$, fuera raíz de $h$, entonces $0=h(\alpha\_i)=g(\gamma-c\alpha\_i)$. Como las raíces de $g$ son los $\beta\_j$, tendríamos que $\gamma-c\alpha\_i=\beta\_j$, así que $\gamma\_{11}=\beta\_j+c\alpha\_i=\gamma_{ij}$, lo cual es imposible porque $i\neq 1$. De aquí deducimos que $\operatorname{mcd}(f,h)=x-\alpha$ en $\mathbb{C}[ x ]$. El divisor común máximo de dos polinomios está bien definido salvo producto por constantes no nulas. Es más, divisor común máximo de dos polinomios en $F[\gamma][ x ]$ lo es también en $\mathbb{C}[ x ]$, ya que toda división euclídea en el primero lo es también en el segundo, así que que el resultado de aplicar el arlgoritmo de Euclides en el primero es también válido en el segundo. Esto demuestra que $x-\alpha\in F[\gamma][ x ]$, así que en efecto $ \alpha\in F[\gamma]$.
 {{% /proof %}}
 
 
@@ -641,7 +641,7 @@ también, por ser la raíz cuadrada de un número constructible.
 {{% /example %}}
 
 {{% remark %}}
-Más adelante veremos que hay números cuyo grado es una potencia de $2$ pero que no son constructibles, por ejemplo, las raíces reales del polinomio $x^4−6x+3\in\mathbb{Q}[x]$, que al ser irreducible tienen grado $4=2^2$.
+Más adelante veremos que hay números cuyo grado es una potencia de $2$ pero que no son constructibles, por ejemplo, las raíces reales del polinomio $x^4−6x+3\in\mathbb{Q}[ x ]$, que al ser irreducible tienen grado $4=2^2$.
 {{% /remark %}}
 
 
@@ -666,7 +666,7 @@ Este ángulo se puede construir porque $\cos  60º=\frac{1}{2}$ es constructible
 
 $$\cos 3\theta=4\cos^3\theta-3\cos\theta.$$
 
-Tomando $\theta= 20º$ deducimos que $\alpha=\cos 20º$ es una raíz del polinomio $8x^3-6x-1$. Vamos a ver que este polinomio es irreducible sobre $\mathbb Q$, por tanto $\alpha$ tendrá grado $3$ sobre $\mathbb Q$, así que no podrá ser constructible. El polinomio $8x^3-6x-1$ es primitivo, por tanto es irreducible sobre $\mathbb Q$ si y solo si lo es sobre $\mathbb Z$. Sobre $\mathbb Z$ es irreducible por el criterio de reducción módulo $5$, ya que $3x^3-x-1\in\mathbb Z/(5)[x]$ tiene grado $\leq 3$ pero no tiene raíces.
+Tomando $\theta= 20º$ deducimos que $\alpha=\cos 20º$ es una raíz del polinomio $8x^3-6x-1$. Vamos a ver que este polinomio es irreducible sobre $\mathbb Q$, por tanto $\alpha$ tendrá grado $3$ sobre $\mathbb Q$, así que no podrá ser constructible. El polinomio $8x^3-6x-1$ es primitivo, por tanto es irreducible sobre $\mathbb Q$ si y solo si lo es sobre $\mathbb Z$. Sobre $\mathbb Z$ es irreducible por el criterio de reducción módulo $5$, ya que $3x^3-x-1\in\mathbb Z/(5)[ x ]$ tiene grado $\leq 3$ pero no tiene raíces.
 {{% /proof %}}
 
 
@@ -692,14 +692,14 @@ Veamos que este polinomio es irreducible sobre $\mathbb Q$. Para ello hacemos el
 
 Consideramos el único homomorfismo de anillos
 
-$$g\colon \mathbb Q[x]\longrightarrow \mathbb Q[y]$$
+$$g\colon \mathbb Q[ x ]\longrightarrow \mathbb Q[y]$$
 
-tal que $g\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[y]$ y $g(x)=y+1$, que está bien definido por el principio de sustitución. El homomorfismo $g$ está definido sobre un polinomio cualquiera $h(x)\in\mathbb{Q}[x]$ como $g(h(x))=h(y+1)$.
+tal que $g\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[y]$ y $g(x)=y+1$, que está bien definido por el principio de sustitución. El homomorfismo $g$ está definido sobre un polinomio cualquiera $h(x)\in\mathbb{Q}[ x ]$ como $g(h(x))=h(y+1)$.
 Análogamente, consideramos el único homomorfismo
 
-$$g'\colon \mathbb Q[y]\longrightarrow \mathbb Q[x]$$
+$$g'\colon \mathbb Q[y]\longrightarrow \mathbb Q[ x ]$$
 
-tal que $g'\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[x]$ y $g'(y)=x-1$. Sobre un polinomio cualquiera $h'(y)\in\mathbb{Q}[y]$, el homomorfismo $g'$ está definido como $g'(h'(y))=h'(x-1)$. Es fácil comprobar que $g'\circ g=1\_{\mathbb{Q}[x]}$ y $g\circ g'=1\_{\mathbb{Q}[y]}$, por tanto $g$ es un isomorfismo con inverso $g^{-1}=g'$. En particular, $f(x)$ es irreducible en $\mathbb{Q}[x]$ si y solo si $g(f(x))=f(y+1)$ es irreducible en $\mathbb{Q}[y]$. Vamos a probar esto último.
+tal que $g'\_{|\_{\mathbb{Q}}}$ es la inclusión $\mathbb{Q}\subset\mathbb{Q}[ x ]$ y $g'(y)=x-1$. Sobre un polinomio cualquiera $h'(y)\in\mathbb{Q}[y]$, el homomorfismo $g'$ está definido como $g'(h'(y))=h'(x-1)$. Es fácil comprobar que $g'\circ g=1\_{\mathbb{Q}[ x ]}$ y $g\circ g'=1\_{\mathbb{Q}[y]}$, por tanto $g$ es un isomorfismo con inverso $g^{-1}=g'$. En particular, $f(x)$ es irreducible en $\mathbb{Q}[ x ]$ si y solo si $g(f(x))=f(y+1)$ es irreducible en $\mathbb{Q}[y]$. Vamos a probar esto último.
 
 Como $x^p-1=(x-1)f(x)$ entonces 
 

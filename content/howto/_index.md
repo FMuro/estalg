@@ -27,15 +27,17 @@ El título de esta sección se ha escrito con el código `## Markdown básico`. 
 
 ## Notación matemática
 
-Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir <code>$\LaTeX$</code>. Lo entiende casi todo, pero son necesarias algunas modificaciones: 
+Hugo entiende $\LaTeX$. Prueba de ello es que acabo de escribir `$\LaTeX$`. Lo entiende casi todo, pero son necesarias algunas modificaciones: 
 
 * **Subíndices**: El símbolo `_` se sustituye por `\_`, por tanto $\sum\_{n\geq 0}a\_n$ se escribe `$\sum\_{n\geq 0}a\_n$`.
 
 * **Corchetes**: El conjunto $\\{0,1,2\\}$ se escribe `$\\{0,1,2\\}$`, con doble barra inclinada `\\`.
 
+* **Espacios**: para añadir espacios debemos usar `\\,` y `\\;` ya que por ejemplo `$(1 \; 2)$` da lugar a $(1 \; 2)$ mientras que `$(1 \\; 2)$` produce $(1 \\; 2)$.
+
 * **Entornos tabulares**: en vez de usar `\\` para saltos de línea hay que usar `\cr`, así $\left(\begin{smallmatrix} 1 & 0 \cr 0 & 1 \end{smallmatrix}\right)$ es `$\left(\begin{smallmatrix} 1 & 0 \cr 0 & 1 \end{smallmatrix}\right)$`.
 
-* Para escribir $( r )$ y $( c )$ usa `$( r )$` y `$( c )$`, con los espacios, ya que si en su lugar escribes `$(r)$` y `$(c)$` te sale $(r)$ y $(c)$.
+* **Caracteres especiales**: para escribir $( c )$, $( r )$ y $[ x ]$ usa `$( c )$`, `$( r )$` y `$[ x ]$`, con los espacios, ya que si en su lugar escribes `$(c)$`, `$(r)$` y `$[x]$` te sale $(c)$, $(r)$ y [x].
 
 
 ## Entornos

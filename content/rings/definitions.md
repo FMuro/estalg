@@ -21,7 +21,7 @@ Ejemplos de anillos son:
 
 * Los números enteros $\mathbb Z$, racionales $\mathbb Q$, reales $\mathbb R$ y complejos $\mathbb C$, pero no los naturales $\mathbb N$.
 
-* El anillo de polinomios $R[x]$ en una variable $x$ con coeficientes en un anillo $R$. 
+* El anillo de polinomios $R[ x ]$ en una variable $x$ con coeficientes en un anillo $R$. 
 
 * El anillo de polinomios en varias variables $R[x\_1,\dots, x\_n]$, que se puede definir inductivamente como $R[x\_1,\dots, x\_{n-1}][x\_n]$. 
 
@@ -33,7 +33,7 @@ La suma dota a un anillo de estructura de grupo abeliano.
 
 El **producto** cartesiano $R\times S$ de dos anillos $R$ y $S$ es un anillo con las operaciones definidas por coordenadas. El cero y el uno del producto son $(0,0)$ y $(1,1)$.
 
-Recuerda también que un **subanillo** $R'\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y el producto que contiene al $1$ y a los opuestos de todos sus elementos. Los subanillos son subgrupos para la suma. Podemos ver $R\subset R[x]$ como el subanillo de los polinomios constantes, sin embargo $R\times\\{0\\}\subset R\times S$ en general no es un subanillo. El total $R\subset R$ siempre es un subanillo pero $\\{0\\}\subset R$ generalmente no.
+Recuerda también que un **subanillo** $R'\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y el producto que contiene al $1$ y a los opuestos de todos sus elementos. Los subanillos son subgrupos para la suma. Podemos ver $R\subset R[ x ]$ como el subanillo de los polinomios constantes, sin embargo $R\times\\{0\\}\subset R\times S$ en general no es un subanillo. El total $R\subset R$ siempre es un subanillo pero $\\{0\\}\subset R$ generalmente no.
 
 
 
@@ -45,16 +45,16 @@ Todas estas clases de morfismos son cerradas para la composición y contienen a 
 
 Los homomorfismos preservan las unidades y sus inversos. La **imagen** de un homomorfismo $f\colon R\rightarrow S$ es un subanillo $\operatorname{im} f\subset S$. 
 
-Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[x]\rightarrow R$ como $ev_a(p(x))=p(a)$. Los anillos de polinomios satisfacen una propiedad universal relacionada con estos homomorfismos.
+Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[ x ]\rightarrow R$ como $ev_a(p(x))=p(a)$. Los anillos de polinomios satisfacen una propiedad universal relacionada con estos homomorfismos.
 
 {{% theorem name="Principio de sustitución" %}}
-Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y un elemento $c\in S$ existe un único homomorfismo $g\colon R[x]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x)=c$.
+Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y un elemento $c\in S$ existe un único homomorfismo $g\colon R[ x ]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x)=c$.
 {{% /theorem %}}
 
 
 {{% proof %}}
 
-Dado $p(x)=a_nx^n+\cdots+ a_1x+ a_0\in R[x]$, si tal $g\colon R[x]\rightarrow S$ existiera satisfaría
+Dado $p(x)=a_nx^n+\cdots+ a_1x+ a_0\in R[ x ]$, si tal $g\colon R[ x ]\rightarrow S$ existiera satisfaría
 
 $$
 \begin{array}{rl}
@@ -98,7 +98,7 @@ y obtenemos el homomorfismo buscado.
 La siguiente definición nos da una receta para añadir nuevos elementos a un anillo contenido en otro mayor.
 
 {{% definition %}}
-Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen del homomorfismo $g\colon R[x]\rightarrow S$ definido como la inclusión $i\colon R\hookrightarrow S$ sobre $R$ tal que $g(x)=s$, $R[s]=\operatorname{im} g$.
+Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen del homomorfismo $g\colon R[ x ]\rightarrow S$ definido como la inclusión $i\colon R\hookrightarrow S$ sobre $R$ tal que $g(x)=s$, $R[s]=\operatorname{im} g$.
 {{% /definition %}}
 
 
@@ -110,7 +110,7 @@ La propiedad de ser el menor viene dada porque todo elemento de $R[s]$ se puede 
 Da una definición directa del menor subanillo $R[s_1,\dots,s_n]\subset S$ que contiene a varios elementos $s_i\in S$. 
 {{% /exercise %}}
 
-También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[x]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Para añadir a $R$ elementos que satisfagan ciertas ecuaciones polinómicas necesitaremos trabajar con cocientes. 
+También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, es decir, sin tener previamente otro anillo mayor. El propio anillo de polinomios $R[ x ]$ consiste en añadirle un nuevo elemento $x$ a $R$ de manera libre. Para añadir a $R$ elementos que satisfagan ciertas ecuaciones polinómicas necesitaremos trabajar con cocientes. 
 
 A diferencia de otras estructuras algebraicas, no es posible definir el cociente de un anillo por un subanillo. El tipo de subconjunto adecuado para definir cocientes son los ideales. 
 
@@ -154,21 +154,21 @@ $$a+I=\bar a=[a].$$
 
 
 
-Dado un polinomio $p(x)=a\_nx^n+\cdots + a_1x+ a\_0\in R[x]$, consideramos el anillo $S=R[x]/(p(x))$. Por abuso de notación, la clase de una constante $a\in R$ en $S$ se denotará igual, $a\in S$, no $\bar a$. En este nuevo anillo $\bar x\in S$ es una raíz de $p(x)$ puesto que
+Dado un polinomio $p(x)=a\_nx^n+\cdots + a_1x+ a\_0\in R[ x ]$, consideramos el anillo $S=R[ x ]/(p(x))$. Por abuso de notación, la clase de una constante $a\in R$ en $S$ se denotará igual, $a\in S$, no $\bar a$. En este nuevo anillo $\bar x\in S$ es una raíz de $p(x)$ puesto que
 
 $$p(\bar{x})=a_n\bar x^n+\cdots + a_1 \bar x+ a_0=\overline{p(x)}=\bar 0\in S.$$
 
-Este anillo posee en ciertos casos una descripción similar a la de los números complejos. Para demostrarlo usaremos el siguiente resultado que asegura que en $R[x]$ siempre podemos dividir por un polinomio mónico del modo habitual.
+Este anillo posee en ciertos casos una descripción similar a la de los números complejos. Para demostrarlo usaremos el siguiente resultado que asegura que en $R[ x ]$ siempre podemos dividir por un polinomio mónico del modo habitual.
 
 {{% lemma %}}
-Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[x]$ 
-y otro polinomio cualquiera $f(x)\in R[x]$, existen dos únicos polinomios  
-$c(x), r(x)\in R[x]$ tales que $r(x)$ tiene grado $<n$ y $f=c\cdot p+r$. 
+Dado un polinomio **mónico** $p(x)=x^n+\cdots + a_1x+ a\_0\in R[ x ]$ 
+y otro polinomio cualquiera $f(x)\in R[ x ]$, existen dos únicos polinomios  
+$c(x), r(x)\in R[ x ]$ tales que $r(x)$ tiene grado $<n$ y $f=c\cdot p+r$. 
 {{% /lemma %}}
 
 
 {{% proof %}}
-Sea $f\_0=f$. Si grado $f_0<n$ entonces podemos tomar $c=0$ y $r=f_0$. Veamos ahora cómo proceder si grado $f_0\geq n$. En este caso existen polinomios $c\_1,f\_1\in R[x]$ tales que grado $f\_1<$ grado $f\_0$ y $f\_0=c\_1\cdot p + f\_1$. En efecto, si $f\_0=b\_mx^m+\cdots$ tiene grado  $m\geq n$ podemos tomar $c_1(x)=b\_mx^{m-n}$, que tiene sentido pues estamos suponiendo que $m\geq n$. Si el grado de $f\_1$ sigue siendo $\geq n$,  podemos aplicar el mismo razonamiento a $f\_1$ obteniendo así polinomios $c\_2,f\_2\in R[x]$ tales que grado $f\_2<$ grado $f\_1$ y $f\_1=c\_2\cdot p + f\_2$. Podemos continuar
+Sea $f\_0=f$. Si grado $f_0<n$ entonces podemos tomar $c=0$ y $r=f_0$. Veamos ahora cómo proceder si grado $f_0\geq n$. En este caso existen polinomios $c\_1,f\_1\in R[ x ]$ tales que grado $f\_1<$ grado $f\_0$ y $f\_0=c\_1\cdot p + f\_1$. En efecto, si $f\_0=b\_mx^m+\cdots$ tiene grado  $m\geq n$ podemos tomar $c_1(x)=b\_mx^{m-n}$, que tiene sentido pues estamos suponiendo que $m\geq n$. Si el grado de $f\_1$ sigue siendo $\geq n$,  podemos aplicar el mismo razonamiento a $f\_1$ obteniendo así polinomios $c\_2,f\_2\in R[ x ]$ tales que grado $f\_2<$ grado $f\_1$ y $f\_1=c\_2\cdot p + f\_2$. Podemos continuar
 
 $$
 \begin{array}{rcl}
@@ -188,35 +188,35 @@ Veamos la unicidad de $r$. Si $f=c\cdot p+r=c'\cdot p+r'$ en las condiciones del
 {{% /proof %}}
 
 {{% corollary label="uniquerep" %}}
-Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[x]$ de grado $n$, todo elemento de $R[x]/(p)$ posee un único representante de grado $<n$. 
+Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[ x ]$ de grado $n$, todo elemento de $R[ x ]/(p)$ posee un único representante de grado $<n$. 
 {{% /corollary %}}
 
 
 {{% proof %}}
-En efecto, dado $[\bar{f}]\in R[x]/(p)$, $r\in R[x]$ es un representante de $[\bar{f}]$ si y solo si $\bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[x]$ tal que $\bar{f}-r=c\cdot p$, es decir, $\bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
+En efecto, dado $[\bar{f}]\in R[ x ]/(p)$, $r\in R[ x ]$ es un representante de $[\bar{f}]$ si y solo si $\bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[ x ]$ tal que $\bar{f}-r=c\cdot p$, es decir, $\bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
 
 {{% remark %}}
-El corolario anterior nos dice que, bajo sus condiciones, todo elemento de $R[x]/(p)$ se puede escribir de manera única como
+El corolario anterior nos dice que, bajo sus condiciones, todo elemento de $R[ x ]/(p)$ se puede escribir de manera única como
 
 $$b\_{n-1}\bar{x}^{n-1}+\cdots+ b\_1\bar{x}+b\_0,$$
 
 donde $b\_0,\dots, b\_{n-1}\in R$. La suma de estos representantes se hace coeficiente a coeficiente, como en $\mathbb{C}$. El producto es más complejo y depende de $p(x)$.
 
-En particular, si $n\geq 1$, el homomorfismo $R\hookrightarrow R[x]/(p)\colon r\mapsto\bar{r}$ que envía cada constante a la clase del correspondiente polinomio constante es inyectivo. Por ello, en en estos casos eliminaremos la barra de las clases de los polinomios constantes y las denotaremos simplemente $r$. De este modo podemos ver $R$ como un subanillo $R\subset R[x]/(p)$. Esto refuerza la idea de que este cociente *añade* el elemento $\bar{x}$ a $R$.
+En particular, si $n\geq 1$, el homomorfismo $R\hookrightarrow R[ x ]/(p)\colon r\mapsto\bar{r}$ que envía cada constante a la clase del correspondiente polinomio constante es inyectivo. Por ello, en en estos casos eliminaremos la barra de las clases de los polinomios constantes y las denotaremos simplemente $r$. De este modo podemos ver $R$ como un subanillo $R\subset R[ x ]/(p)$. Esto refuerza la idea de que este cociente *añade* el elemento $\bar{x}$ a $R$.
 {{% /remark %}}
 
-En adelante, cuando hablemos de añadirle a un anillo $R$ una raíz $\alpha$ de un polinomio $p(x)\in R[x]$ de manera abstracta nos estaremos refiriendo al cociente $R[x]/(p)$ y a $\alpha=\bar{x}$, que como hemos visto es una raíz de $p(x)$ en este anillo. Si $p$ es mónico de grado $n$, todo elemento de $R[x]/(p)$ se escribe de manera única como $b\_{n-1}\alpha^{n-1}+\cdots+ b\_1\alpha+b\_0$, con $b\_0,\dots, b\_{n-1}\in R$.
+En adelante, cuando hablemos de añadirle a un anillo $R$ una raíz $\alpha$ de un polinomio $p(x)\in R[ x ]$ de manera abstracta nos estaremos refiriendo al cociente $R[ x ]/(p)$ y a $\alpha=\bar{x}$, que como hemos visto es una raíz de $p(x)$ en este anillo. Si $p$ es mónico de grado $n$, todo elemento de $R[ x ]/(p)$ se escribe de manera única como $b\_{n-1}\alpha^{n-1}+\cdots+ b\_1\alpha+b\_0$, con $b\_0,\dots, b\_{n-1}\in R$.
 
-{{% example name="$\mathbb Z[x]/(x^3+3x+1)$" %}}
+{{% example name="$\mathbb Z[ x ]/(x^3+3x+1)$" %}}
 Todo elemento de este anillo se puede expresar de manera única como $a_2 \bar x^2+ a_1 \bar x+ a_0$ para ciertos coeficientes $a_0,a_1,a_2\in\mathbb Z$. La suma se calcula sumando coeficientes. El producto es más complejo porque suele ser necesario reducir el grado del representante obtenido. Esto se hace usando que $\bar x$ es una raíz del denominador. Concretamente en este caso $\bar x^3+3\bar x+1=0$, luego
 
 $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr\bar x^5&=& -3\bar x^3-\bar x^2\cr&=& -3(-3\bar x-1)-\bar x^2\cr&=&-\bar x^2+9\bar x+3,\cr\bar x^6&=&\dots\end{array}$$Usamos esto en el siguiente ejemplo de cálculo,$$\begin{array}{rcl}(- \bar x^2+ \bar x+ 2)(\bar x+ 1)&=& -\bar x^3+3\bar x+2\cr&=& -(-3\bar x-1)+3\bar x+2\cr&=&6\bar x+3.\end{array}$$
 
 {{% /example %}}
 
-{{% example name="$\mathbb Z/(4)[x]/(2x^2-1)$" %}}
-En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset \mathbb Z/(4)[x]$ tendría polinomios mónicos de grado $2$, pero no tiene.
+{{% example name="$\mathbb Z/(4)[ x ]/(2x^2-1)$" %}}
+En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset \mathbb Z/(4)[ x ]$ tendría polinomios mónicos de grado $2$, pero no tiene.
 {{% /example %}}
 
 Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
@@ -268,11 +268,11 @@ La demostración de este resultado es conocida. Basta recordar que $\bar{f}$ se 
 Veamos finalmente que el cuerpo de los números complejos es isomorfo al anillo obtenido al añadirle a $\mathbb{R}$ de manera abstracta una raíz de $x^2+1$ por el procedimiento anterior.
 
 {{% corollary %}}
-$\mathbb R[x]/(x^2+1)\cong\mathbb C$.
+$\mathbb R[ x ]/(x^2+1)\cong\mathbb C$.
 {{% /corollary %}}
 
 {{% proof %}}
-Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. Como $\mathbb R$ es un cuerpo, todo ideal no trivial de $\mathbb{R}[x]$ está generado por cualquiera de sus elementos no nulos de grado mínimo. Por tanto es suficiente comprobar que $x^2+1\in\ker f$ y que $\ker f$ no posee ningún polinomio no trivial de grado $<2$. Claramente $f(x^2+1)=i^2+1=0$. Si $bx+a\in\mathbb{R}[x]$ es un polinomio no trivial entonces $f(bx+a)=a+ib$ es un número complejo no trivial, con lo que queda demostrado.
+Consideremos el homomorfismo $f\colon \mathbb R[ x ]\rightarrow\mathbb C$ definido por la inclusión $\mathbb R\subset\mathbb C$ y tal que $f(x)=i$. Este homomorfismo es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Basta ahora ver que $\ker f=(x^2+1)$. Como $\mathbb R$ es un cuerpo, todo ideal no trivial de $\mathbb{R}[ x ]$ está generado por cualquiera de sus elementos no nulos de grado mínimo. Por tanto es suficiente comprobar que $x^2+1\in\ker f$ y que $\ker f$ no posee ningún polinomio no trivial de grado $<2$. Claramente $f(x^2+1)=i^2+1=0$. Si $bx+a\in\mathbb{R}[ x ]$ es un polinomio no trivial entonces $f(bx+a)=a+ib$ es un número complejo no trivial, con lo que queda demostrado.
 {{% /proof %}}
 
 
@@ -282,7 +282,7 @@ Recordemos que, dado un anillo $R$, un **divisor de cero** es un elemento $a\in 
 
 Dicho de otro modo, $R$ es un dominio cuando dados $a,b\in R$ tales que $ab=0$ entonces $a=0$ o $b=0$. Los dominios poseen la **propiedad cancelativa**, es decir, si $ab=ac$ y $a\neq 0$ entonces $b=c$ ya que esto equivale a $a(b-c)=0$. Los cuerpos $k$ y los enteros $\mathbb Z$ son dominios. Los subanillos de un dominio también son dominios. El anillo $\mathbb Z/(6)$ no es un dominio porque aquí $\bar 2\cdot \bar 3=\bar 6=\bar 0$ pero $\bar 2\neq\bar 0\neq\bar 3$.
 
-Sabemos que si $R$ es un dominio entonces $R[x]$ también y que en dicho caso el grado de un producto es el producto de los grados y las unidades de $R[x]$ son las de $R$. Por inducción $R[x\_1,\dots,x\_n]$ tambén será un dominio.
+Sabemos que si $R$ es un dominio entonces $R[ x ]$ también y que en dicho caso el grado de un producto es el producto de los grados y las unidades de $R[ x ]$ son las de $R$. Por inducción $R[x\_1,\dots,x\_n]$ tambén será un dominio.
 
 Cualquier subanillo de un cuerpo es un dominio. Veamos que, recíprocamente, todo dominio se puede incluir en un cuerpo.
 
@@ -368,7 +368,7 @@ Basta aplicar la proposición anterior a $i_S\circ f\colon R\rightarrow Q(S)$, q
 
 
 {{% definition %}}
-Dado un cuerpo $k$, el **cuerpo de funciones racionales** en una variable se define como $k(x)=Q(k[x])$.
+Dado un cuerpo $k$, el **cuerpo de funciones racionales** en una variable se define como $k(x)=Q(k[ x ])$.
 {{% /definition %}}
 
 
@@ -497,7 +497,7 @@ La correspondencia del teorema anterior preserva ideales primos y maximales.
 Un **dominio de ideales principales** (también **DIP** o **PID**) es un dominio donde todos los ideales son principales.
 {{% /definition %}}
 
-Son dominios de ideales principales $\mathbb Z$ y $k[x]$ si $k$ es un cuerpo.
+Son dominios de ideales principales $\mathbb Z$ y $k[ x ]$ si $k$ es un cuerpo.
 
 {{% proposition %}}
 En un dominio de ideales principales $R$ todos los ideales primos no nulos son maximales.

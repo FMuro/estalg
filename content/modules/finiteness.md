@@ -184,7 +184,7 @@ $$
 * Las matrices invertibles $P$ y $Q$ se corresponden con meros cambios de base en $R^m$ y $R^n$, respectivamente, con lo cual tenemos un isomorfismo
 
 $$\begin{array}{rcl}
-R^m/\operatorname{im}A&\stackrel{\cong}\longrightarrow& R^m/\operatorname{im}A'\\\ [x]&\mapsto& [Qx].\end{array}$$
+R^m/\operatorname{im}A&\stackrel{\cong}\longrightarrow& R^m/\operatorname{im}A'\\\ [ x ]&\mapsto& [Qx].\end{array}$$
 
 Usando el primer [teorema](../generalities/#isomodules) de isomorfía, podemos comprobar que esta aplicación está en efecto bien definida y es un isomorfismo.
 
@@ -350,7 +350,7 @@ Los menores de orden $1$ son simplemente las entradas de la matriz. El razonamie
 
 Hemos puesto a tu disposición una [calculadora](../../interactions/#forma-normal-de-smith) de la forma normal de Smith paso a paso en el anillo $\mathbb{Z}$ para que puedas practicar y contrastar tus cálculos.
 
-El teorema de la forma normal de Smith es cierto más generalmente para dominios de ideales principales. La demostración es análoga pero hace uso de la identidad de Bézout en lugar de la división euclídea y de un tipo más general de operación elemental. La forma normal de Smith es única salvo asociados, aunque no lo hemos probado. <!--- Si $R=\mathbb Z$ hay una única forma normal de Smith que donde todos los $d\_i$ son positivos, ya que todo entero no nulo es asociado de un único entero positivo. A esta forma normal de Smith se que llega usando también operaciones elementales de tipo $3$. Análogamente, si $R=k[x]$, con $k$ un cuerpo, hay una única forma normal de Smith que donde todos los polinomios $d\_i$ son mónicos. -->
+El teorema de la forma normal de Smith es cierto más generalmente para dominios de ideales principales. La demostración es análoga pero hace uso de la identidad de Bézout en lugar de la división euclídea y de un tipo más general de operación elemental. La forma normal de Smith es única salvo asociados, aunque no lo hemos probado. <!--- Si $R=\mathbb Z$ hay una única forma normal de Smith que donde todos los $d\_i$ son positivos, ya que todo entero no nulo es asociado de un único entero positivo. A esta forma normal de Smith se que llega usando también operaciones elementales de tipo $3$. Análogamente, si $R=k[ x ]$, con $k$ un cuerpo, hay una única forma normal de Smith que donde todos los polinomios $d\_i$ son mónicos. -->
 
 
 
@@ -428,7 +428,7 @@ $$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\cong\frac{R}{
 
 donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i\mid d\_{i+1}$ y $e\_j\mid e\_{j+1}$, entonces $r=s$, $n=m$ y cada $d\_i$ es asociado de $e\_i$. 
 
-La demostración de que $r=s$ la veremos en general, pero el resto solo lo probaremos para $R=\mathbb{Z}$ y lo esbozaremos par $R=k[x]$ con $k$ un cuerpo. 
+La demostración de que $r=s$ la veremos en general, pero el resto solo lo probaremos para $R=\mathbb{Z}$ y lo esbozaremos par $R=k[ x ]$ con $k$ un cuerpo. 
 {{% /remark %}}
 
 {{% watch %}}
@@ -694,22 +694,22 @@ Este argumento se puede iterar, probando así que los últimos $d\_i$ coinciden 
 {{% /proof %}}
 
 
-{{% example name="$k[x]$-módulos de torsión con la misma dimensión" %}}
-Si $p(x)\in k[x]$ tiene grado $n$, el cociente $k[x]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[x]$-módulos
+{{% example name="$k[ x ]$-módulos de torsión con la misma dimensión" %}}
+Si $p(x)\in k[ x ]$ tiene grado $n$, el cociente $k[ x ]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[ x ]$-módulos
 
-$$\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)},\qquad \frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}$$
+$$\frac{k[ x ]}{(x^2)}\times \frac{k[ x ]}{(x^2)},\qquad \frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x^2)}$$
 
-tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[x]$-módulos. En efecto, para verlo, podemos razonar con el **orden** de un elemento de torsión $a\in M$ de un $k[x]$-módulo $M$, que es el polinomio mónico no nulo $p(x)\in k[x]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Por ejemplo, el orden de $a$ divide a un polinomio $p(x)\in k[x]$ si y solo si $p(x)\cdot a=0$. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)\subset M$ formado por los elementos cuyo orden divide a $p(x)\in k[x]$,
+tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[ x ]$-módulos. En efecto, para verlo, podemos razonar con el **orden** de un elemento de torsión $a\in M$ de un $k[ x ]$-módulo $M$, que es el polinomio mónico no nulo $p(x)\in k[ x ]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Por ejemplo, el orden de $a$ divide a un polinomio $p(x)\in k[ x ]$ si y solo si $p(x)\cdot a=0$. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)\subset M$ formado por los elementos cuyo orden divide a $p(x)\in k[ x ]$,
 
 $$T\_{p(x)}(M)=\\{a\in M\mid p(x)\cdot a=0\\}.$$
 
-Tenemos que $T\_{p(x)}(M\times N)=T\_{p(x)}(M)\times T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Es más, todo isomorfismo de $k[x]$-módulos $M\cong N$ se restringe a $T\_{p(x)}(M)\cong T\_{p(x)}(N)$, así que en este caso $t\_{p(x)}(M)= t\_{p(x)}(N)$. Además podemos comprobar que $t\_{p(x)}(k[x]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. 
+Tenemos que $T\_{p(x)}(M\times N)=T\_{p(x)}(M)\times T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Es más, todo isomorfismo de $k[ x ]$-módulos $M\cong N$ se restringe a $T\_{p(x)}(M)\cong T\_{p(x)}(N)$, así que en este caso $t\_{p(x)}(M)= t\_{p(x)}(N)$. Además podemos comprobar que $t\_{p(x)}(k[ x ]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. 
 
-Los dos $k[x]$-módulos del comienzo no pueden ser isomorfos porque
+Los dos $k[ x ]$-módulos del comienzo no pueden ser isomorfos porque
 
-$$\begin{array}{rcl} t\_{x}\left(\frac{k[x]}{(x^2)}\times \frac{k[x]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[x]}{(x)}\times \frac{k[x]}{(x)}\times \frac{k[x]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$
+$$\begin{array}{rcl} t\_{x}\left(\frac{k[ x ]}{(x^2)}\times \frac{k[ x ]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$
 
-La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[x]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[x]$ los números $t\_{p(x)}(M)$ y el orden de un $k[x]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
+La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[ x ]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[ x ]$ los números $t\_{p(x)}(M)$ y el orden de un $k[ x ]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
 {{% /example %}}
 
 
@@ -783,18 +783,18 @@ Dado un cuerpo $k$ y un $k$-espacio vectorial $V$, un **operador lineal** en $V$
 
 
 {{% proposition %}}
-Un $k[x]$-módulo es lo mismo que un $k$-espacio vectorial equipado con un operador lineal.
+Un $k[ x ]$-módulo es lo mismo que un $k$-espacio vectorial equipado con un operador lineal.
 {{% /proposition %}}
 
 
 {{% proof %}}
-Un $k[x]$-módulo $M$ es también un $k$-módulo, es decir, un $k$-espacio vectorial, restringiendo el producto por escalares a $k\subset k[x]$. La multiplicación por $x$ es un homomorfismo de $k[x]$-módulos 
+Un $k[ x ]$-módulo $M$ es también un $k$-módulo, es decir, un $k$-espacio vectorial, restringiendo el producto por escalares a $k\subset k[ x ]$. La multiplicación por $x$ es un homomorfismo de $k[ x ]$-módulos 
 
 $$\begin{array}{rcl}M&\stackrel{x\cdot}\longrightarrow& M,\cr a&\mapsto &x\cdot a,\end{array}$$
 
 en particular también es un homomorfismo de $k$-módulos, es decir, es un operador lineal en el $k$-espacio vectorial $M$.
 
-Recíprocamente, dado un $k$-espacio vectorial $V$ y un operador lineal $f\colon V\rightarrow V$, podemos definir una estructura de $k[x]$-módulo en $V$ del siguiente modo. Dado $v\in V$ y $p(x)=a\_nx^n+\cdots+a\_1x+a\_0\in k[x]$, definimos el producto por escalares como
+Recíprocamente, dado un $k$-espacio vectorial $V$ y un operador lineal $f\colon V\rightarrow V$, podemos definir una estructura de $k[ x ]$-módulo en $V$ del siguiente modo. Dado $v\in V$ y $p(x)=a\_nx^n+\cdots+a\_1x+a\_0\in k[ x ]$, definimos el producto por escalares como
 
 $$p(x)\cdot v=a\_nf^n(v)+\cdots+a\_1f(v)+a\_0v.$$
 
@@ -803,23 +803,23 @@ Dejamos como ejercicio comprobar que este producto por escalares satisface las p
 
 
 {{% remark %}}
-Si $V=k^n$ y consideramos el operador lineal $A\colon k^n\rightarrow k^n$ definido por una matriz $A$ de tamaño $n\times n$ con entradas en $k$, entonces la estructura de $k[x]$-módulo en $k^n$ viene dada por $p(x)\cdot v=p(A)v$ para todo $p(x)\in k[x]$ y $v\in k^n$.
+Si $V=k^n$ y consideramos el operador lineal $A\colon k^n\rightarrow k^n$ definido por una matriz $A$ de tamaño $n\times n$ con entradas en $k$, entonces la estructura de $k[ x ]$-módulo en $k^n$ viene dada por $p(x)\cdot v=p(A)v$ para todo $p(x)\in k[ x ]$ y $v\in k^n$.
 {{% /remark %}}
 
 {{% proposition %}}
-Dado un operador lineal $A\colon k^n\rightarrow k^n$, el $k[x]$-módulo asociado $k^n$ está presentado por la matriz $A-xI$.
+Dado un operador lineal $A\colon k^n\rightarrow k^n$, el $k[ x ]$-módulo asociado $k^n$ está presentado por la matriz $A-xI$.
 {{% /proposition %}}
 
 {{% proof %}}
-Hemos de construir un isomorfismo entre el $k[x]$-módulo $k^n$ y el $k[x]$-módulo cociente
+Hemos de construir un isomorfismo entre el $k[ x ]$-módulo $k^n$ y el $k[ x ]$-módulo cociente
 
-$$\frac{k[x]^n}{\operatorname{im} (A-xI)}.$$
+$$\frac{k[ x ]^n}{\operatorname{im} (A-xI)}.$$
 
-Para ello, comenzamos considerando el homomorfismo de $k[x]$-módulos
+Para ello, comenzamos considerando el homomorfismo de $k[ x ]$-módulos
 
-$$\phi=\phi_{\\{e_1,\dots,e_n\\}}\colon k[x]^n\longrightarrow k^n,$$
+$$\phi=\phi_{\\{e_1,\dots,e_n\\}}\colon k[ x ]^n\longrightarrow k^n,$$
 
-que está definido por $\phi(e_i)=e_i$. Aquí estamos usando la notación $e_i$ tanto para los elementos de la base canónica del $k[x]$-módulo $k[x]^n$ como para los de la base canónica del $k$-espacio vectorial $k^n$. El homomorfismo $\phi$ es sobreyectivo porque su imagen contiene un conjunto de generadores de $k^n$.
+que está definido por $\phi(e_i)=e_i$. Aquí estamos usando la notación $e_i$ tanto para los elementos de la base canónica del $k[ x ]$-módulo $k[ x ]^n$ como para los de la base canónica del $k$-espacio vectorial $k^n$. El homomorfismo $\phi$ es sobreyectivo porque su imagen contiene un conjunto de generadores de $k^n$.
 
 Veamos que $\operatorname{im} (A-xI)\subset\ker \phi$. Como $\operatorname{im} (A-xI)$ está generado por las columnas de la matriz $B=A-xI$, basta ver que estas columnas están en el $\ker \phi$. La $j$-ésima columna es
 
@@ -831,11 +831,11 @@ $$\phi(b\_{*j})=\sum\_{i=1}^na\_{ij}e\_i-Ae\_j=0,$$
 
 puesto que $\sum\_{i=1}^na\_{ij}e\_i=Ae\_j$ es la $j$-ésima columna de $A$. Esto demuestra que $\phi$ factoriza de manera única a través de la proyección natural, $\phi=g\circ p$,
 
-$$k[x]^n\stackrel{p}\twoheadrightarrow \frac{k[x]^n}{\operatorname{im} (A-xI)}\stackrel{g}\longrightarrow k^n.$$
+$$k[ x ]^n\stackrel{p}\twoheadrightarrow \frac{k[ x ]^n}{\operatorname{im} (A-xI)}\stackrel{g}\longrightarrow k^n.$$
 
 Como $\phi$ y $p$ son sobreyectivos, $g$ también lo será. 
 
-Queremos probar que $g$ es un isomorfismo. Este homomorfismo sobreyectivo de $k[x]$-módulos también lo es de $k$-módulos, es decir, de $k$-espacios vectoriales. Si demostramos que la dimensión del cociente como $k$-espacio vectorial es $\leq n$, entonces $g$ será necesariamente biyectivo. Sabemos que  $S=\\{\bar{e}\_1,\dots, \bar{e}\_n\\}$ es un conjunto de generadores del cociente como $k[x]$-módulo. Es decir, todo elemento del cociente es una combinación lineal de $S$ con coeficientes polinómicos. Veamos que $S$ es también una base del cociente como $k$-espacio vectorial, es decir, que todo elemento es combinación lineal de $S$ con coeficientes constantes. Para ello basta ver que $x \bar{e}\_j$ es siempre una combinación lineal de $S$ con coeficientes constantes, ya que de aquí se deduciría por inducción que $x^m\bar{e}\_i$ también es una combinación lineal de $S$ con coeficientes constantes para todo $m\geq 1$. La $j$-ésima columna de $A-xI$ es $\sum\_{i=1}^na\_{ij}e\_i-xe\_j$, así que en efecto
+Queremos probar que $g$ es un isomorfismo. Este homomorfismo sobreyectivo de $k[ x ]$-módulos también lo es de $k$-módulos, es decir, de $k$-espacios vectoriales. Si demostramos que la dimensión del cociente como $k$-espacio vectorial es $\leq n$, entonces $g$ será necesariamente biyectivo. Sabemos que  $S=\\{\bar{e}\_1,\dots, \bar{e}\_n\\}$ es un conjunto de generadores del cociente como $k[ x ]$-módulo. Es decir, todo elemento del cociente es una combinación lineal de $S$ con coeficientes polinómicos. Veamos que $S$ es también una base del cociente como $k$-espacio vectorial, es decir, que todo elemento es combinación lineal de $S$ con coeficientes constantes. Para ello basta ver que $x \bar{e}\_j$ es siempre una combinación lineal de $S$ con coeficientes constantes, ya que de aquí se deduciría por inducción que $x^m\bar{e}\_i$ también es una combinación lineal de $S$ con coeficientes constantes para todo $m\geq 1$. La $j$-ésima columna de $A-xI$ es $\sum\_{i=1}^na\_{ij}e\_i-xe\_j$, así que en efecto
 
 $$x\bar{e}\_j=\sum\_{i=1}^na\_{ij}\bar{e}\_i.$$
 
@@ -844,14 +844,14 @@ $$x\bar{e}\_j=\sum\_{i=1}^na\_{ij}\bar{e}\_i.$$
 
 
 {{% proposition %}}
-Un $k[x]$-módulo $M$ finitamente generado es de torsión, $M=T(M)$, si y solo si tiene dimensión finita como $k$-espacio vectorial.
+Un $k[ x ]$-módulo $M$ finitamente generado es de torsión, $M=T(M)$, si y solo si tiene dimensión finita como $k$-espacio vectorial.
 {{% /proposition %}}
 
 
 {{% proof %}}
-$\Rightarrow$ Si $M$ es de torsión entonces por el teorema de estructura de $k[x]$-módulos finitamente generados, $M$ es isomorfo a un producto de una cantidad finita de $k[x]$-módulos cíclicos $k[x]/(p(x))$ con $p(x)\in k[x]$ un polinomio no trivial. Como $k[x]/(p(x))$ tiene dimensión finita como $k$-espacio vectorial (su dimensión es el grado de $p(x)$), deducimos que $M$ también tiene dimensión finita como $k$ espacio vectorial (la suma de las dimensiones de los factores cíclicos del producto). 
+$\Rightarrow$ Si $M$ es de torsión entonces por el teorema de estructura de $k[ x ]$-módulos finitamente generados, $M$ es isomorfo a un producto de una cantidad finita de $k[ x ]$-módulos cíclicos $k[ x ]/(p(x))$ con $p(x)\in k[ x ]$ un polinomio no trivial. Como $k[ x ]/(p(x))$ tiene dimensión finita como $k$-espacio vectorial (su dimensión es el grado de $p(x)$), deducimos que $M$ también tiene dimensión finita como $k$ espacio vectorial (la suma de las dimensiones de los factores cíclicos del producto). 
 
-$\Leftarrow$ Recíprocamente, si $M$ tiene dimensión finita como $k$ espacio vectorial, entonces no puede tener parte libre en su descomposición como producto de $k[x]$-módulos cíclicos ya que $k[x]$ no tiene dimensión finita como $k$-espacio vectorial.
+$\Leftarrow$ Recíprocamente, si $M$ tiene dimensión finita como $k$ espacio vectorial, entonces no puede tener parte libre en su descomposición como producto de $k[ x ]$-módulos cíclicos ya que $k[ x ]$ no tiene dimensión finita como $k$-espacio vectorial.
 {{% /proof %}}
 
 
@@ -865,13 +865,13 @@ Sea $k$ un cuerpo algebraicamente cerrado. Dado un $k$-espacio vectorial de dime
 
 
 {{% proof %}}
-Como $k$ es algebraicamente cerrado, los primos en $k[x]$ son los polinomios mónicos de grado $1$ y sus asociados. Sabemos que una base de
+Como $k$ es algebraicamente cerrado, los primos en $k[ x ]$ son los polinomios mónicos de grado $1$ y sus asociados. Sabemos que una base de
 
-$$\frac{k[x]}{(x^m)}$$
+$$\frac{k[ x ]}{(x^m)}$$
 
 como $k$-espacio vectorial es  $\\{\bar x^{m-1},\dots,\bar x,1\\}$. Haciendo un cambio de variables es fácil ver que una base de
 
-$$\frac{k[x]}{((x-\alpha)^m)}$$
+$$\frac{k[ x ]}{((x-\alpha)^m)}$$
 
 como $k$-espacio vectorial es  $\\{(\bar x-\alpha)^{m-1},\dots,\bar x-\alpha,1\\}$. Como 
 
@@ -883,15 +883,15 @@ x\cdot(\bar x-\alpha)^j&=&(x-\alpha+\alpha)\cdot(\bar x-\alpha)^j\cr
 
 la matriz de la multiplicación por $x$,
 
-$$\frac{k[x]}{((x-\alpha)^m)}\stackrel{x\cdot}\longrightarrow \frac{k[x]}{((x-\alpha)^m)}$$
+$$\frac{k[ x ]}{((x-\alpha)^m)}\stackrel{x\cdot}\longrightarrow \frac{k[ x ]}{((x-\alpha)^m)}$$
 
 respecto de la base anterior es la caja de Jordan de tamaño $m\times m$ y autovalor $\alpha$.
 
-Usando la primera proposición, consideramos $V$ como un $k[x]$-módulo de torsión con $x\cdot a=f(a)$. En virtud del segundo teorema de estructura, $V$ se descompone como un producto finito de $k[x]$-módulos cíclicos, cocientes por potencias de primos,
+Usando la primera proposición, consideramos $V$ como un $k[ x ]$-módulo de torsión con $x\cdot a=f(a)$. En virtud del segundo teorema de estructura, $V$ se descompone como un producto finito de $k[ x ]$-módulos cíclicos, cocientes por potencias de primos,
 
-$$V\cong\frac{k[x]}{((x-\alpha\_1)^{m\_1})}\times\cdots\times \frac{k[x]}{((x-\alpha\_n)^{m\_n})}.$$
+$$V\cong\frac{k[ x ]}{((x-\alpha\_1)^{m\_1})}\times\cdots\times \frac{k[ x ]}{((x-\alpha\_n)^{m\_n})}.$$
 
-Como $k$-espacio vectorial, el $k[x]$-módulo de la derecha tiene base 
+Como $k$-espacio vectorial, el $k[ x ]$-módulo de la derecha tiene base 
 
 $$\bigcup\_{i=1}^n\\{(0,\dots,(\bar x-\alpha_i)^j,\dots,0)\\}\_{j=m\_i-1}^0,$$
 

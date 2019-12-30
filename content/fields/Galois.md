@@ -18,7 +18,7 @@ La operación de grupo del grupo de Galois es la composición de automorfismos. 
 
 
 {{% example name="$G(\mathbb C/\mathbb R)$" %}}
-Un homomorfismo de $\mathbb R$-espacios vectoriales $f\colon \mathbb C\rightarrow\mathbb C$ está determinado por la imagen de los elementos de una base, por ejemplo $\\{1,i\\}\subset\mathbb C$. Para que $f\in G(\mathbb C/\mathbb R)$ ha de ser un homomorfismo de anillos, así que debe satisfacer $f(1)=1$. También ha de preservar raíces en $\mathbb C$ de polinomios en $\mathbb R[x]$. Las raíces complejas de $x^2+1$ son $\pm i$, así que $f$ ha de cumplir $f(i)=\pm i$. Por tanto los dos posibles elementos de $G(\mathbb C/\mathbb R)$ son los homomorfismos de $\mathbb R$-espacios vectoriales definidos por
+Un homomorfismo de $\mathbb R$-espacios vectoriales $f\colon \mathbb C\rightarrow\mathbb C$ está determinado por la imagen de los elementos de una base, por ejemplo $\\{1,i\\}\subset\mathbb C$. Para que $f\in G(\mathbb C/\mathbb R)$ ha de ser un homomorfismo de anillos, así que debe satisfacer $f(1)=1$. También ha de preservar raíces en $\mathbb C$ de polinomios en $\mathbb R[ x ]$. Las raíces complejas de $x^2+1$ son $\pm i$, así que $f$ ha de cumplir $f(i)=\pm i$. Por tanto los dos posibles elementos de $G(\mathbb C/\mathbb R)$ son los homomorfismos de $\mathbb R$-espacios vectoriales definidos por
 
 $$\begin{array}{rcl}f(1)&=&1,\cr f(i)&=&i,\end{array}$$
 
@@ -36,7 +36,7 @@ Si $F\subset K$ es una extensión de grado $[K:F]=2$ entonces $K=F[\sqrt{\delta}
 
 
 {{% proof %}}
-Como la extensión no es trivial, ha de existir algún $\alpha\in K$ tal que $\alpha\notin F$. El grado de este elemento ha de dividir a $2$. Como no puede ser $1$ porque $\alpha\notin F$, ha de ser $2$. La extensión $F\subset F[\alpha]$ también tiene grado $2$ y $F[\alpha]\subset K$ por tanto $K=F[\alpha]$. Si $x^2+ax+b\in F[x]$ es el polinomio irreducible de $\alpha$, entonces
+Como la extensión no es trivial, ha de existir algún $\alpha\in K$ tal que $\alpha\notin F$. El grado de este elemento ha de dividir a $2$. Como no puede ser $1$ porque $\alpha\notin F$, ha de ser $2$. La extensión $F\subset F[\alpha]$ también tiene grado $2$ y $F[\alpha]\subset K$ por tanto $K=F[\alpha]$. Si $x^2+ax+b\in F[ x ]$ es el polinomio irreducible de $\alpha$, entonces
 
 $$\alpha=\frac{-a\pm\sqrt{\delta}}{2}$$
 
@@ -53,12 +53,12 @@ El primero es la identidad $\operatorname{id}\_{K}$, que es obviamente un isomor
 
 
 {{% example name="$G(\mathbb Q[\sqrt[3]{2}]/\mathbb Q)$" %}}
-Aquí $\sqrt[3]{2}$ denota la raíz cúbica de $2$ real por lo que $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$. El resto de raíces cúbicas de $2$ son puramente complejas. Cualquier $f \in G(\mathbb Q[\sqrt[3]{2}]/\mathbb Q)$ ha de preservar las raíces de $x^3-2\in\mathbb Q[x]$. La única raíz de este polinomio que está en $\mathbb Q[\sqrt[3]{2}]$ es $\sqrt[3]{2}$, ya que las otras dos están en $\mathbb{C}\setminus\mathbb{R}$, por tanto $f(\sqrt[3]{2})=\sqrt[3]{2}$. Una base de $\mathbb Q[\sqrt[3]{2}]$ como $\mathbb Q$-espacio vectorial está formada por las primeras tres potencias de $\sqrt[3]{2}$, es decir, $\\{1,\sqrt[3]{2},(\sqrt[3]{2})^2\\}$. Como $f$ ha de preservar la unidad y los productos, $f$ tiene que mandar cada uno de los elementos de esta base a sí mismo, así que necesariamente $f=\operatorname{id}_{\mathbb Q[\sqrt[3]{2}]}$, por tanto en este caso el grupo de Galois es el tivial, $G(\mathbb Q[\sqrt[3]{2}]/\mathbb Q)=\\{\operatorname{id}\_{\mathbb Q[\sqrt[3]{2}]}\\}$ a pesar de que la extensión $\mathbb Q\subset \mathbb Q[\sqrt[3]{2}]$ no es trivial, es de grado $3$. 
+Aquí $\sqrt[3]{2}$ denota la raíz cúbica de $2$ real por lo que $\mathbb Q[\sqrt[3]{2}]\subset\mathbb R$. El resto de raíces cúbicas de $2$ son puramente complejas. Cualquier $f \in G(\mathbb Q[\sqrt[3]{2}]/\mathbb Q)$ ha de preservar las raíces de $x^3-2\in\mathbb Q[ x ]$. La única raíz de este polinomio que está en $\mathbb Q[\sqrt[3]{2}]$ es $\sqrt[3]{2}$, ya que las otras dos están en $\mathbb{C}\setminus\mathbb{R}$, por tanto $f(\sqrt[3]{2})=\sqrt[3]{2}$. Una base de $\mathbb Q[\sqrt[3]{2}]$ como $\mathbb Q$-espacio vectorial está formada por las primeras tres potencias de $\sqrt[3]{2}$, es decir, $\\{1,\sqrt[3]{2},(\sqrt[3]{2})^2\\}$. Como $f$ ha de preservar la unidad y los productos, $f$ tiene que mandar cada uno de los elementos de esta base a sí mismo, así que necesariamente $f=\operatorname{id}_{\mathbb Q[\sqrt[3]{2}]}$, por tanto en este caso el grupo de Galois es el tivial, $G(\mathbb Q[\sqrt[3]{2}]/\mathbb Q)=\\{\operatorname{id}\_{\mathbb Q[\sqrt[3]{2}]}\\}$ a pesar de que la extensión $\mathbb Q\subset \mathbb Q[\sqrt[3]{2}]$ no es trivial, es de grado $3$. 
 {{% /example %}}
 
 
 {{% definition %}}
-Dado un cuerpo $F$ y un polinomio mónico no constante $p(x)\in F[x]$, el **cuerpo de descomposición** de $p(x)$ es $F[\alpha\_1,\dots,\alpha\_n]$, donde $\alpha\_1,\dots,\alpha\_n$ son las raíces complejas de $p(x)$.
+Dado un cuerpo $F$ y un polinomio mónico no constante $p(x)\in F[ x ]$, el **cuerpo de descomposición** de $p(x)$ es $F[\alpha\_1,\dots,\alpha\_n]$, donde $\alpha\_1,\dots,\alpha\_n$ son las raíces complejas de $p(x)$.
 {{% /definition %}}
 
 
@@ -76,7 +76,7 @@ Ya hemos visto que $K=F[\sqrt{\delta}]$ para cierto $\delta\in F$, entonces $K$ 
 El **grupo simétrico** de $n$ letras, es decir el **grupo de permutaciones** de $\\{1,\dots,n\\}$, se denotará $S\_n$. 
 
 {{% proposition %}}
-Dada una extensión $F\subset K$, si $K$ es el cuerpo de descomposición de un polinomio $p(x)\in F[x]$ con $n$ raíces distintas en $K$, entonces hay un único homomorfismo inyectivo
+Dada una extensión $F\subset K$, si $K$ es el cuerpo de descomposición de un polinomio $p(x)\in F[ x ]$ con $n$ raíces distintas en $K$, entonces hay un único homomorfismo inyectivo
 
 $$\varphi\colon G(K/F)\longrightarrow S\_n$$
 
@@ -271,7 +271,7 @@ $$
 
 En la última línea denotamos $s_0=1$.
 
-En particular, dado un polinomio mónico $f\in F[x]$ degrado $n$ 
+En particular, dado un polinomio mónico $f\in F[ x ]$ degrado $n$ 
 
 $$
 \begin{array}{rcl}
@@ -378,7 +378,7 @@ por ser $h$ simétrica.
 {{% /proof %}}
 
 {{% theorem name="de descomposición" %}}
-Si $K$ es el cuerpo de descomposición de $f\in F[x]$ y $g\in F[x]$ es mónico e irreducible y posee una raíz en $K$ entonces todas las raíces complejas de $g$ están en $K$.
+Si $K$ es el cuerpo de descomposición de $f\in F[ x ]$ y $g\in F[ x ]$ es mónico e irreducible y posee una raíz en $K$ entonces todas las raíces complejas de $g$ están en $K$.
 {{% /theorem %}}
 
 {{% proof %}}
@@ -388,7 +388,7 @@ Nuestro objetivo ahora es probar que las raíces complejas de $g$ están entre l
 
 $$h(x)=(x-\beta\_1)\cdots (x-\beta\_l).$$
 
-Supongamos que hemos probado que $h$ tiene coeficientes en $F$. Como $g$ es el polinomio irreducible de $\beta\_1$ sobre $F$ y $\beta\_1$ también es raíz de $h$, deduciremos que $g|h$ en $F[x]$, así que las raíces de $g$ están entre las de $h$, que es lo que nos habíamos propuesto demostrar.
+Supongamos que hemos probado que $h$ tiene coeficientes en $F$. Como $g$ es el polinomio irreducible de $\beta\_1$ sobre $F$ y $\beta\_1$ también es raíz de $h$, deduciremos que $g|h$ en $F[ x ]$, así que las raíces de $g$ están entre las de $h$, que es lo que nos habíamos propuesto demostrar.
 
 Para ver que $h$ tiene coeficientes en $F$, tomamos las funciones simétricas elementales $s'\_1,\dots, s'\_l$ en $l$ nuevas variables $w\_1,\dots,w\_l$. Los coeficientes de $h$ son los 
 
@@ -421,9 +421,9 @@ En particular el grado de $\beta_1$ sobre $K^H$ es el número de elementos de su
 {{% proof %}}
 $\Leftarrow$ Cada $f\in H$ induce una permutación de $\\{\beta\_1,\dots,\beta\_l\\}$. Los coeficientes de $g$ son funciones simétricas elementales evaluadas en los $\beta\_i$, por tanto no varían al aplicar $f\in H$. Esto demuestra que estos coeficientes están en $K^H$, por tanto $\beta_1$ es algebraico sobre $K^H$.
 
-$\Rightarrow$ Sea $h\in K^H[x]$ un polinomio que tenga $\beta\_1$ como raíz. Todo elemento de $f\in H\subset G(K/K^H)$ envía raíces de un polinomio con coeficientes en $K^H$ en otras raíces, por tanto toda la órbita de $\beta_1$ por $H$ está formada por raíces de $h$. Como todo polinomio con coeficientes en un cuerpo tiene una cantidad finita de raíces, deducimos que la órbita es finita.  
+$\Rightarrow$ Sea $h\in K^H[ x ]$ un polinomio que tenga $\beta\_1$ como raíz. Todo elemento de $f\in H\subset G(K/K^H)$ envía raíces de un polinomio con coeficientes en $K^H$ en otras raíces, por tanto toda la órbita de $\beta_1$ por $H$ está formada por raíces de $h$. Como todo polinomio con coeficientes en un cuerpo tiene una cantidad finita de raíces, deducimos que la órbita es finita.  
 
-Hemos visto que cuando la órbita es finita el polinomio $g$ tiene coeficientes en $K^H$ y que todos los elementos de la órbita son también raices de cualquier otro polinomio $h\in K^H[x]$ que tenga $\beta\_1$ como raíz. Esto prueba que $g|h$ en $K[x]$ y por tanto también en $K^H[x]$, así que efectivamente $g$ es el polinomio irreducible de $\beta_1$ sobre $K^H$.
+Hemos visto que cuando la órbita es finita el polinomio $g$ tiene coeficientes en $K^H$ y que todos los elementos de la órbita son también raices de cualquier otro polinomio $h\in K^H[ x ]$ que tenga $\beta\_1$ como raíz. Esto prueba que $g|h$ en $K[ x ]$ y por tanto también en $K^H[ x ]$, así que efectivamente $g$ es el polinomio irreducible de $\beta_1$ sobre $K^H$.
 {{% /proof %}}
 
 {{% definition %}}
@@ -480,15 +480,15 @@ Sabemos que, en general, $H\subset G(K/K^H)$ es un subgrupo, así que $|H|\leq |
 {{% /proof %}}
 
 {{% lemma %}}
-Sea $F\subset K=F[\gamma\_1]$ una extensión finita, $g\in F[x]$ es el polinomio irreducible de $\gamma\_1$ y $\gamma\_1,\dots,\gamma\_r\in K$ las distintas raíces de $g$ en este cuerpo. Para cada $1\leq i\leq n$ existe un único $f\_i\in G(K/F)$ tal que $f\_i(\gamma\_1)=\gamma\_i$. Es más, $G(K/F)=\\{f\_1,\dots,f\_r\\}$.
+Sea $F\subset K=F[\gamma\_1]$ una extensión finita, $g\in F[ x ]$ es el polinomio irreducible de $\gamma\_1$ y $\gamma\_1,\dots,\gamma\_r\in K$ las distintas raíces de $g$ en este cuerpo. Para cada $1\leq i\leq n$ existe un único $f\_i\in G(K/F)$ tal que $f\_i(\gamma\_1)=\gamma\_i$. Es más, $G(K/F)=\\{f\_1,\dots,f\_r\\}$.
 {{% /lemma %}}
 
 {{% proof %}}
 Todos los $\gamma\_i$ poseen el mismo grado sobre $F$ ya que tienen el mismo polinomio irreducible $g$, por tanto $K=F[\gamma\_i]$ para todo $i$. Sabemos que, para cada $i$, hay un único isomorfismo
 
-$$h\_i\colon \frac{F[x]}{(g)}\cong K$$
+$$h\_i\colon \frac{F[ x ]}{(g)}\cong K$$
 
-que deja fijo a $K$ tal que $h(\bar{x})=\gamma\_i$. Por tanto, $f\_i=h\_ih\_1^{-1}\in G(K/F)$ es el único que satisface la propiedad del enunciado. Todo elemento $f\in G(K/F)$  está determinado por $f(\gamma\_1)$ y además preserva raíces de $g\in F[x]$, así que $G(K/F)$ consta necesariamente de los $f\_i$ anteriores.
+que deja fijo a $K$ tal que $h(\bar{x})=\gamma\_i$. Por tanto, $f\_i=h\_ih\_1^{-1}\in G(K/F)$ es el único que satisface la propiedad del enunciado. Todo elemento $f\in G(K/F)$  está determinado por $f(\gamma\_1)$ y además preserva raíces de $g\in F[ x ]$, así que $G(K/F)$ consta necesariamente de los $f\_i$ anteriores.
 {{% /proof %}}
 
 {{% theorem %}}
@@ -496,14 +496,14 @@ Dada una extensión finita $F\subset K$, los siguientes enunciados son equivalen
 
 1. $F\subset K$ es de Galois.
 2. $F=K^{G(K/F)}$.
-3. $K$ es el cuerpo de descomposición de un polinomio de $F[x]$.
+3. $K$ es el cuerpo de descomposición de un polinomio de $F[ x ]$.
 
 {{% /theorem %}}
 
 {{% proof %}}
 Veamos $1.\Leftrightarrow 2.$ Por el teorema del cuerpo fijo, $|G(K/F)|=[K:K^{G(K/F)}]$. Como $F\subset K^{G(K/F)}\subset K$, $|G(K/F)|=[K:F]$ si y solo si $F=K^{G(K/F)}$.
 
-Probemos ahora que $1.\Leftrightarrow 3.$ Sea $\gamma\_1\in K$ un elemento primitivo de $F\subset K$, $g\in F[x]$ su polinomio irreducible y $L$ el cuerpo de descomposición de $g$. Sean $\gamma\_1,\dots,\gamma\_n\in \mathbb{C}$ las distintas raíces complejas de $g$, de las cuales $\gamma\_1,\dots,\gamma\_r\in K$ y el resto no están en $K$. Denotemos $n=[G:K]$. El grado de $g$ es $n$. Como $K=F[\gamma\_1]$ y $L=F[\gamma\_1,\dots,\gamma\_n]$, $F\subset K\subset L$. Usando el lema anterior vemos que
+Probemos ahora que $1.\Leftrightarrow 3.$ Sea $\gamma\_1\in K$ un elemento primitivo de $F\subset K$, $g\in F[ x ]$ su polinomio irreducible y $L$ el cuerpo de descomposición de $g$. Sean $\gamma\_1,\dots,\gamma\_n\in \mathbb{C}$ las distintas raíces complejas de $g$, de las cuales $\gamma\_1,\dots,\gamma\_r\in K$ y el resto no están en $K$. Denotemos $n=[G:K]$. El grado de $g$ es $n$. Como $K=F[\gamma\_1]$ y $L=F[\gamma\_1,\dots,\gamma\_n]$, $F\subset K\subset L$. Usando el lema anterior vemos que
 $F\subset K$ es de Galois $\Leftrightarrow$ $r=n$ $\Leftrightarrow$ todas las raíces complejas de $g$ están en $K$ $\Leftrightarrow$ $K\supset L$ $\Leftrightarrow$ $K=L$ $\Leftrightarrow$ $K$ es un cuerpo de descomposición. En el último paso hemos usado que $g$ tiene una raíz en $K$.
 {{% /proof %}}
 
@@ -520,7 +520,7 @@ Si $F\subset K$ es una extensión de Galois y $F\subset L\subset K$ es una exten
 {{% /corollary %}}
 
 {{% proof %}}
-Basta observar que si $K$ es el cuerpo de descomposición de $g\in F[x]$ entonces también es el cuerpo de descomposición de del mismo polinomio visto como polinomio con coeficientes en $L$, $g\in L[x]$.
+Basta observar que si $K$ es el cuerpo de descomposición de $g\in F[ x ]$ entonces también es el cuerpo de descomposición de del mismo polinomio visto como polinomio con coeficientes en $L$, $g\in L[ x ]$.
 {{% /proof %}}
 
 {{% theorem name="fundamental de la teoría de Galois" %}}
@@ -556,7 +556,7 @@ $$\frac{G(K/F)}{G(K/L)}\cong G(L/F).$$
 {{% proof %}}
 Comenzaremos probando la equivalencia de la primera parte del enunciado.
 
-Sea $\gamma\_1\in L$ un elemento primitivo, $L=F[\gamma\_1]$, con polinomio irreducible $g\in F[x]$. Sean $\gamma\_1,\dots,\gamma\_r\in K$ sus raíces complejas, que están en $K$ porque es un cuerpo de descomposición y $\gamma\_1\in K$.
+Sea $\gamma\_1\in L$ un elemento primitivo, $L=F[\gamma\_1]$, con polinomio irreducible $g\in F[ x ]$. Sean $\gamma\_1,\dots,\gamma\_r\in K$ sus raíces complejas, que están en $K$ porque es un cuerpo de descomposición y $\gamma\_1\in K$.
 
 $\Rightarrow$  Por ser $F\subset L$ de Galois, $L$ es el cuerpo de descomposición de $g$, así que $L=F[\gamma\_1,\dots,\gamma\_r]$. Todo $f\in G(K/L)$ preserva raíces de $g$, por tanto se restringe $f\_{|\_{L}}\colon L\rightarrow L$ y esta restricción está determinada por $f(\gamma\_1)$ que será algún $\gamma\_i$. En particular $f\_{|\_{L}}$ es la identidad si y solo si $f(\gamma\_1)=\gamma\_1$. 
 
@@ -690,7 +690,7 @@ Como $f$ actúa como la identidad sobre los racionales y sobre el generador de l
 
 Dado un cuerpo $F$, nuestro objetivo es estudiar el cuerpo de descomposición $K$ del polinomio
 
-$$q(x)=x^p-a\in F[x]$$
+$$q(x)=x^p-a\in F[ x ]$$
 
 donde $p$ es primo y $a$ no tiene raíces $p$-ésmas en $F$. Si $\alpha$ es una raíz compleja de $q(x)$, entonces el conjunto de todas sus raíces es
 
@@ -699,14 +699,14 @@ $$\alpha,\zeta\_p\alpha,\dots,\zeta\_p^{p-1}\alpha,$$
 donde $\zeta\_p$ es la raíz $p$-ésima primitiva de la unidad, ya que todas son raíces del polinomio $q(x)$ anterior y son todas distintas, pues $\zeta\_p$ tiene orden $p$ para el producto. En particular si $\zeta\_p\in F$ entonces $K=F[\alpha]$.
 
 {{% proposition %}}
-Si $\zeta\_p\in F$ y $q(x)=x^p-a\in F[x]$ no tiene raíces en $F$ entonces el cuerpo de descomposición $K$ de $q(x)$ tiene grado $p$ sobre $F$. 
+Si $\zeta\_p\in F$ y $q(x)=x^p-a\in F[ x ]$ no tiene raíces en $F$ entonces el cuerpo de descomposición $K$ de $q(x)$ tiene grado $p$ sobre $F$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
 Sea $\alpha$ una raíz compleja de $q(x)$. Hemos observado que $K=F[\alpha]$ y $\alpha$ es una raíz de $q(x)$, que es de grado $p$, por tanto $[K:F]\leq p$. Al ser $F\subset K$ de Galois, para probar la otra desigualdad bastará ver que $[K:F]=|G(K/F)|\geq p$. 
 
-Como $\alpha\notin F= K^{G(K/F)}$, ha de existir algún $f\in G(K/F)$ tal que $f(\alpha)\neq\alpha$. Como $f$ preserva raíces de polinomios en $F[x]$, $f(\alpha)=\zeta\_p^i\alpha$ para cierto $0{<}i{<}p$. Usaremos esto para ver que las potencias $f^j$ de $f$ son diferentes para todo $0\leq j{<}p$, así que $G(K/F)$ tendrá en efecto al menos $p$ elementos. Para ello basta comprobar que cada una de estas potencias $f^j$ manda $\alpha$ a un elemento diferente. Vamos a probar por inducción que
+Como $\alpha\notin F= K^{G(K/F)}$, ha de existir algún $f\in G(K/F)$ tal que $f(\alpha)\neq\alpha$. Como $f$ preserva raíces de polinomios en $F[ x ]$, $f(\alpha)=\zeta\_p^i\alpha$ para cierto $0{<}i{<}p$. Usaremos esto para ver que las potencias $f^j$ de $f$ son diferentes para todo $0\leq j{<}p$, así que $G(K/F)$ tendrá en efecto al menos $p$ elementos. Para ello basta comprobar que cada una de estas potencias $f^j$ manda $\alpha$ a un elemento diferente. Vamos a probar por inducción que
 
 $$f^j(\alpha)=(\zeta\_p^{i})^{j}\alpha.$$
 
@@ -730,7 +730,7 @@ A posteriori vemos que, en las condiciones de la proposición anterior, $x^p-a$ 
 Sorprendentemente el resultado a anterior tiene un recíproco.
 
 {{% theorem %}}
-Si $p$ es un primo, $F$ es un cuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^p-a\in F[x]$. 
+Si $p$ es un primo, $F$ es un cuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^p-a\in F[ x ]$. 
 {{% /theorem %}}
 
 
@@ -754,7 +754,7 @@ f(\alpha^p)&=&f(\alpha)^p\cr
 &=&\alpha^p.
 \end{array}$$
 
-Se deduce por inducción que $f^i(\alpha^p)=\alpha^p$ para todo $i\geq 1$, por tanto $\alpha^p\in K^{G(K/F)}=F$. Esto demuestra que $\alpha\in K$ es raíz del polinomio $x^p-\alpha^p\in F[x]$. Además, como $f(\alpha)\neq \alpha$ entonces $\alpha\notin F$ así que $F\subsetneq F[\alpha]\subset K$  y como $[K:F]=p$ es primo concluimos que $K=F[\alpha]$.
+Se deduce por inducción que $f^i(\alpha^p)=\alpha^p$ para todo $i\geq 1$, por tanto $\alpha^p\in K^{G(K/F)}=F$. Esto demuestra que $\alpha\in K$ es raíz del polinomio $x^p-\alpha^p\in F[ x ]$. Además, como $f(\alpha)\neq \alpha$ entonces $\alpha\notin F$ así que $F\subsetneq F[\alpha]\subset K$  y como $[K:F]=p$ es primo concluimos que $K=F[\alpha]$.
 {{% /proof %}}
 
 Igual que antes, en las condiciones del enunciado de este teorema el polinomio $x^p-a$ es necesariamente irreducible.
@@ -772,7 +772,7 @@ $$F = F\_0\subset F\_1\subset F\_2\subset\cdots\subset  F\_n=K$$
 tal que $\alpha\in K$ y $F\_{i+1}=F\_i[\sqrt[s\_i]{r\_i}]$ para ciertos $r\_i\in F\_i$ y $s\_i\geq 2$, $0\leq i<n$.
 {{% /definition %}}
 
-Los números solubles sobre $F$ son los que se obtienen a partir de números de $F$ realizando iteradamente sumas, restas, productos, divisiones por números no nulos y raíces $n$-ésimas. Nuestro objetivo es saber cuándo podemos hallar las raíces de un polinomio $p(x)\in F[x]$ de este modo a partir de sus coeficientes, es decir, queremos saber cuándo las raíces de $p(x)$ son solubles sobre $F$. Veremos cómo hacerlo usando el grupo de Galois del cuerpo de descomposición de $p(x)$.
+Los números solubles sobre $F$ son los que se obtienen a partir de números de $F$ realizando iteradamente sumas, restas, productos, divisiones por números no nulos y raíces $n$-ésimas. Nuestro objetivo es saber cuándo podemos hallar las raíces de un polinomio $p(x)\in F[ x ]$ de este modo a partir de sus coeficientes, es decir, queremos saber cuándo las raíces de $p(x)$ son solubles sobre $F$. Veremos cómo hacerlo usando el grupo de Galois del cuerpo de descomposición de $p(x)$.
 
 {{% remark %}}
 Como $\sqrt[st]{r}=\sqrt[s]{\sqrt[t]{r}}$, no hay pérdida de generalidad sin en la definición anterior suponemos que los $s\_i$ son todos primos.
@@ -890,7 +890,7 @@ vamos a probar por inducción que cada $G\_i$ satisface la condición del enunci
 {{% /proof %}}
 
 {{% lemma %}}
-Dados dos polinomios $f\_1,f\_2\in F[x]$, si $L\_1$ y $L\_2$ son los cuerpos de descomposición de $f\_1$ y $f\_2$, respectivamente, y $K$ es el cuerpo de descomposición de $f\_1f\_2$ entonces $G(K/F)$ es isomorfo a un subgrupo de $G(L\_1/F)\times G(L\_2/F)$.
+Dados dos polinomios $f\_1,f\_2\in F[ x ]$, si $L\_1$ y $L\_2$ son los cuerpos de descomposición de $f\_1$ y $f\_2$, respectivamente, y $K$ es el cuerpo de descomposición de $f\_1f\_2$ entonces $G(K/F)$ es isomorfo a un subgrupo de $G(L\_1/F)\times G(L\_2/F)$.
 {{% /lemma %}}
 
 {{% proof %}}
@@ -911,7 +911,7 @@ Para $m=1$ se prueba como en el caso $F=\mathbb{Q}$. Por inducción, si es ciert
 
 
 {{% theorem %}}
-Sea $p(x)\in F[x]$ un polinomio con cuerpo de descomposición $L$. Las raíces complejas de $p(x)$ son todas solubles sobre $F$ si y solo si $G(L/F)$ es un grupo soluble.
+Sea $p(x)\in F[ x ]$ un polinomio con cuerpo de descomposición $L$. Las raíces complejas de $p(x)$ son todas solubles sobre $F$ si y solo si $G(L/F)$ es un grupo soluble.
 {{% /theorem %}}
 
 {{% proof %}}

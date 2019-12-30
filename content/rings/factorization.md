@@ -231,7 +231,7 @@ Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo
 
 
 {{% remark %}}
-Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ or $k[x]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
+Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ or $k[ x ]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
 {{% /remark %}}
 
 
@@ -308,7 +308,7 @@ y bien $r=0$ o bien $\delta( r )<\delta(d)$. Esto se denomina **división euclí
 
 
 {{% remark %}}
-Sabemos que $\mathbb Z$ y $k[x]$, con $k$ un cuerpo, son dominios euclídeos con función de tamaño el valor absoluto y el grado, respectivamente. En general, el cociente y el resto no están determinados de manera única por el dividendo y el divisor, por ejemplo
+Sabemos que $\mathbb Z$ y $k[ x ]$, con $k$ un cuerpo, son dominios euclídeos con función de tamaño el valor absoluto y el grado, respectivamente. En general, el cociente y el resto no están determinados de manera única por el dividendo y el divisor, por ejemplo
 
 $$13=4\cdot 3+1=5\cdot 3+(-2).$$
 {{% /remark %}}
@@ -358,7 +358,7 @@ $$|r|=|D-dc|=|d|\cdot \left|\frac{D}{d}-c\right|\leq \frac{|d|}{\sqrt{2}}<|d|.$$
 
 
 {{% example name="Enteros cuadráticos" %}}
-Un entero $n\in\mathbb Z$ es **libre de cuadrados** si no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[x]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para
+Un entero $n\in\mathbb Z$ es **libre de cuadrados** si no es divisible por el cuadrado de ningún primo, es decir, si entre sus factores primos no podemos encontrar dos asociados. Por ejemplo, $-4=2(-2)$ no es libre de cuadrados pero $6=2\cdot 3$ y $-1$ sí. Los **cuerpos de números cuadráticos** son $\mathbb Q[\sqrt{n}]\subset\mathbb C$ donde $n$ es un entero libre de cuadrados. Su **anillo de enteros** $R\subset\mathbb Q[\sqrt{n}]$ está formado por los elementos que son raíces de un polinomio mónico en $\mathbb Z[ x ]$. Se puede comprobar que $R=\mathbb Z[\sqrt{n}]$ si $n\equiv 2,3$ mod $4$ y $R=\mathbb Z[\frac{1+\sqrt{n}}{2}]$ si $n\equiv 1$ mod $4$. Decimos que $R$ es un **anillo de enteros cuadráticos imaginarios** si $n{<}0$. Los anillos de enteros cuadráticos imaginarios que son DIPs se obtienen para
 
 $$n=−1, −2, −3, −7, −11, −19, −43, −67, −163.$$
 
@@ -380,13 +380,13 @@ Explora la posibilidad de realizar divisiones euclídeas en anillos de enteros c
 En este epígrafe demostraremos que los anillos de polinomios con coeficientes en un DFU son también DFUs. En adelante $R$ denotará un DFU y $k=Q( R )$ su cuerpo de fracciones.
 
 {{% definition %}}
-Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
+Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in R[ x ]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in R$ tal que $p|a_i$ para todo $1\leq i\leq n$. 
 {{% /definition %}}
 
 Los únicos polinomios constantes primitivos son las unidades de $R$.
 
 {{% lemma %}}
-Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in k[x]$ no nulo existe una constante $c\in k$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in R[x]$ tal que
+Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in k[ x ]$ no nulo existe una constante $c\in k$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in R[ x ]$ tal que
 
 $$f(x)=c\cdot f_0(x).$$
 
@@ -398,7 +398,7 @@ Además $c$ y $f_0(x)$ son únicos salvo producto por unidades de $R$. Denotarem
 
 Veamos la existencia. Podemos quitar denominadores de los coeficientes de $f(x)$ multiplicando por una constante $d\in R$ no nula,
 
-$$d\cdot f(x)\in R[x].$$
+$$d\cdot f(x)\in R[ x ].$$
 
 Si $e$ es el divisor común máximo de los coeficientes de $d\cdot f(x)$ vemos que podemos tomar
 
@@ -407,48 +407,48 @@ f_0&=&\frac{d}{e}\cdot f(x),\cr
 c&=&\frac{e}{d}.
 \end{array}$$
 
-Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in R[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in R$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del divisor común máximo, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in R$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
+Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in R[ x ]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in R$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del divisor común máximo, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in R$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
 {{% /proof %}}
 
 
 {{% remark %}}
-Si el contenido de un polinomio $f(x)\in k[x]$ está en $R$ entonces $f(x)\in R[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f)\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
+Si el contenido de un polinomio $f(x)\in k[ x ]$ está en $R$ entonces $f(x)\in R[ x ]$. Recíprocamente, el contenido de un polinomio $f(x)\in R[ x ]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f)\in R$. Es más, dada una constante $a\in R$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in R[ x ]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
 {{% /remark %}}
 
 
 {{% theorem name="Lema de Gauss" %}}
-El producto de polinomios primitivos en $R[x]$ es primitivo. 
+El producto de polinomios primitivos en $R[ x ]$ es primitivo. 
 {{% /theorem %}}
 
 
 {{% proof %}}
 Dado un primo $p\in R$, consideramos el homomorfismo de **reducción módulo $p$**
 
-$$\phi_p\colon R[x]\longrightarrow (R/(p))[x]$$
+$$\phi_p\colon R[ x ]\longrightarrow (R/(p))[ x ]$$
 
 definido en las constantes como $\phi_p(a)=\bar a$, $a\in R$, tal que $\phi_p(x)=x$. Es decir,
 
 $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0.$$
 
-El homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[x]$ son primitivos entonces
+El homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \ker \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in R[ x ]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in R$ primo. Si $f,g\in R[ x ]$ son primitivos entonces
 
 $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$
 
-para todo $p\in R$ primo ya que $(R/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
+para todo $p\in R$ primo ya que $(R/(p))[ x ]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
 {{% /proof %}}
 
 
 {{% corollary %}}
-Dados $f,g\in k[x]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$. 
+Dados $f,g\in k[ x ]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$. 
 {{% /corollary %}}
 
 
 {{% proof %}}
-Tomamos $f,g\in k[x]$ y los descomponemos 
+Tomamos $f,g\in k[ x ]$ y los descomponemos 
 
 $$\begin{array}{rcl} f&=&c\cdot f_0,\cr g&=&d\cdot g_0, \end{array}$$
 
-con $c,d\in k$ y $f_0,g_0\in R[x]$ primitivos. Entonces
+con $c,d\in k$ y $f_0,g_0\in R[ x ]$ primitivos. Entonces
 
 $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$
 
@@ -457,45 +457,45 @@ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposici�
 
 
 {{% proposition %}}
-Dados $f,g\in R[x]$, si $g|f$ en $k[x]$ y $g$ es primitivo entonces $g|f$ en $R[x]$. 
+Dados $f,g\in R[ x ]$, si $g|f$ en $k[ x ]$ y $g$ es primitivo entonces $g|f$ en $R[ x ]$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
-Supongamos que $f=g\cdot q$ en $k[x]$. Como $g$ es primitivo,
+Supongamos que $f=g\cdot q$ en $k[ x ]$. Como $g$ es primitivo,
 
 $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$
 
-Como $f\in R[x]$ su contenido está en $R$, y como este coindice con el de $q$, entonces $q\in R[x]$, por lo que $g|f$ en $R[x]$.
+Como $f\in R[ x ]$ su contenido está en $R$, y como este coindice con el de $q$, entonces $q\in R[ x ]$, por lo que $g|f$ en $R[ x ]$.
 {{% /proof %}}
 
 
 {{% proposition %}}
-Un polinomio $f\in R[x]$ no constante es irreducible en $R[x]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $k[x]$. 
+Un polinomio $f\in R[ x ]$ no constante es irreducible en $R[ x ]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $k[ x ]$. 
 {{% /proposition %}}
 
 
 {{% proof %}}
 
-$\Leftarrow$ Supongamos por reducción al absurdo que $f$ no es irreducible en $R[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
+$\Leftarrow$ Supongamos por reducción al absurdo que $f$ no es irreducible en $R[ x ]$. Lo descomponemos como producto de divisores propios $f=gh$ en $R[ x ]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $k[ x ]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
 
-$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[x]$ y es primitivo. Por la proposición anterior $g$ también divide a $f$ en $R[x]$ y por tanto es un divisor propio por cuestión de grados.
+$\Rightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $R[ x ]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $k[ x ]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $k$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in R[ x ]$ y es primitivo. Por la proposición anterior $g$ también divide a $f$ en $R[ x ]$ y por tanto es un divisor propio por cuestión de grados.
 {{% /proof %}}
 
 
 {{% remark %}}
-Una constante $a\in R$ es irreducible en $R[x]$ si y solo si lo es en $R$.
+Una constante $a\in R$ es irreducible en $R[ x ]$ si y solo si lo es en $R$.
 {{% /remark %}}
 
 
 {{% theorem %}}
-$R[x]$ es un DFU.
+$R[ x ]$ es un DFU.
 {{% /theorem %}}
 
 
 {{% proof %}}
 
-Primero probamos que existen factorizaciones en $R[x]$. Supongamos por reducción al absurdo que tenemos una sucesión estrictamente creciente de ideales principales (que podemos suponer no nulos) en este anillo,
+Primero probamos que existen factorizaciones en $R[ x ]$. Supongamos por reducción al absurdo que tenemos una sucesión estrictamente creciente de ideales principales (que podemos suponer no nulos) en este anillo,
 
 $$(f\_1)\subsetneq (f\_2)\subsetneq (f\_3)\subsetneq\cdots.$$
 
@@ -513,9 +513,9 @@ $$
 
 Por tanto el proceso no termina para $d\_{n\_0}$, lo que contradice la existencia de factorizaciones en $R$.
 
-Veamos que todo elemento irreducible de $R[x]$ es primo. Consideraremos primero el caso en el que nuestro irreducible es un polinomio $f\in R[x]$ no constante. Supongamos que $f|gh$ en $R[x]$. Como $f$ también es irreducible en $k[x]$, que es un DFU, entonces $f$ es primo en $k[x]$ y por tanto $f|g$ o $f|h$ en $k[x]$. Los tres polinomios están en $R[x]$ y al ser $f$ irreducible en este anillo ha de ser primitivo, así que entonces $f|g$ o $f|h$ en $R[x]$.
+Veamos que todo elemento irreducible de $R[ x ]$ es primo. Consideraremos primero el caso en el que nuestro irreducible es un polinomio $f\in R[ x ]$ no constante. Supongamos que $f|gh$ en $R[ x ]$. Como $f$ también es irreducible en $k[ x ]$, que es un DFU, entonces $f$ es primo en $k[ x ]$ y por tanto $f|g$ o $f|h$ en $k[ x ]$. Los tres polinomios están en $R[ x ]$ y al ser $f$ irreducible en este anillo ha de ser primitivo, así que entonces $f|g$ o $f|h$ en $R[ x ]$.
 
-Supongamos ahora que  $a\in R\subset  R[x]$ es una constante irreducible y que $a|gh$ en $R[x]$. Esto último equivale adecir que $a|\operatorname{cont}(gh)=\operatorname{cont}(g)\operatorname{cont}(h)$. Como $R$ es un DFU, el irreducible $a$ es primo en $R$, así que $a|\operatorname{cont}(f)$ o $a|\operatorname{cont}(g)$, es decir, $a|g$ o $a|h$.
+Supongamos ahora que  $a\in R\subset  R[ x ]$ es una constante irreducible y que $a|gh$ en $R[ x ]$. Esto último equivale adecir que $a|\operatorname{cont}(gh)=\operatorname{cont}(g)\operatorname{cont}(h)$. Como $R$ es un DFU, el irreducible $a$ es primo en $R$, así que $a|\operatorname{cont}(f)$ o $a|\operatorname{cont}(g)$, es decir, $a|g$ o $a|h$.
 {{% /proof %}}
 
 
@@ -524,50 +524,50 @@ $R[x_1,\dots, x_n]$ es un DFU para todo $n\geq 0$.
 {{% /corollary %}}
 
 
-{{% example name="El anillo $\mathbb Z[x]$" %}}
-Este anillo es un DFU pero no es un DIP. Para comprobarlo basta ver que la identidad de Bézout para el divisor común máximo no siempre se da. Tanto $2$ como $x$ son primos en $\mathbb Z[x]$ según criterios vistos anteriormente. Como no son asociados, $\operatorname{mcd}(2,x)=1$, pero $1\notin (2,x)$ ya que todo elemento de este ideal es de la forma $2g+xh$ para ciertos $g,h\in \mathbb Z[x]$, así que su término independiente ha de ser par. Por tanto no hay una identidad de Bézout en este caso. El ideal $(2,x)\subset \mathbb Z[x]$ es de hecho un ejemplo de ideal que no es principal.
+{{% example name="El anillo $\mathbb Z[ x ]$" %}}
+Este anillo es un DFU pero no es un DIP. Para comprobarlo basta ver que la identidad de Bézout para el divisor común máximo no siempre se da. Tanto $2$ como $x$ son primos en $\mathbb Z[ x ]$ según criterios vistos anteriormente. Como no son asociados, $\operatorname{mcd}(2,x)=1$, pero $1\notin (2,x)$ ya que todo elemento de este ideal es de la forma $2g+xh$ para ciertos $g,h\in \mathbb Z[ x ]$, así que su término independiente ha de ser par. Por tanto no hay una identidad de Bézout en este caso. El ideal $(2,x)\subset \mathbb Z[ x ]$ es de hecho un ejemplo de ideal que no es principal.
 {{% /example %}}
 
-Tenemos que $R[x]\subset k[x]$. El siguiente resultado nos permite calcular cómo se ven los ideales del segundo dentro del primero.
+Tenemos que $R[ x ]\subset k[ x ]$. El siguiente resultado nos permite calcular cómo se ven los ideales del segundo dentro del primero.
 
 {{% proposition %}}
-Si $(f)\subset k[x]$ es un ideal no nulo entonces $(f)\cap R[x]=(f_0)$, donde $f=c\cdot f_0$ con $c\in k$ el contenido y $f_0 \in R[x]$ primitivo. 
+Si $(f)\subset k[ x ]$ es un ideal no nulo entonces $(f)\cap R[ x ]=(f_0)$, donde $f=c\cdot f_0$ con $c\in k$ el contenido y $f_0 \in R[ x ]$ primitivo. 
 {{% /proposition %}}
 
 {{% proof %}}
-La intersección $(f)\cap R[x]$ es un ideal ya que es la imagen inversa de $(f)\subset k[x]$ a través de la inclusión $R[x]\hookrightarrow k[x]$. Veamos la igualdad de ideales por doble inclusión.
+La intersección $(f)\cap R[ x ]$ es un ideal ya que es la imagen inversa de $(f)\subset k[ x ]$ a través de la inclusión $R[ x ]\hookrightarrow k[ x ]$. Veamos la igualdad de ideales por doble inclusión.
 
-$\supset$ Como $f_0 \in R[x]$ y $f_0 =c^{-1}f \in (f)\subset k[x]$, tenemos que $f_0 \in (f)\cap R[x]$, lo cual demuestra esta inclusión.
+$\supset$ Como $f_0 \in R[ x ]$ y $f_0 =c^{-1}f \in (f)\subset k[ x ]$, tenemos que $f_0 \in (f)\cap R[ x ]$, lo cual demuestra esta inclusión.
 
-$\subset$ Todo elemento $p \in (f)$ es de la forma $p =g\cdot f =(g \cdot c)\cdot f_0$. Si $p \in R[x]$, como $f_0 |p$ en $k[x]$ y $f_0$ es primitivo, $f_0 |p$ también en $R[x]$, así que $g \cdot c\in R[x]$ y por tanto $p \in (f_0)\subset R[x]$.
+$\subset$ Todo elemento $p \in (f)$ es de la forma $p =g\cdot f =(g \cdot c)\cdot f_0$. Si $p \in R[ x ]$, como $f_0 |p$ en $k[ x ]$ y $f_0$ es primitivo, $f_0 |p$ también en $R[ x ]$, así que $g \cdot c\in R[ x ]$ y por tanto $p \in (f_0)\subset R[ x ]$.
 {{% /proof %}}
 
 El siguiente resultado nos demuestra con rigor que las dos posibles maneras de añadirle a $R$ raíces de polinomios irreducibles dan resultados isomorfos.
 
 {{% theorem %}}
-Dado un polinomio irreducible $f\in R[x]$, un cuerpo $K$ tal que $R\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[x]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $\bar{x}$ a $\alpha$.
+Dado un polinomio irreducible $f\in R[ x ]$, un cuerpo $K$ tal que $R\subset K$, y una raíz $\alpha\in K$ de $f$, hay un único isomorfismo $R[ x ]/(f)\cong R[\alpha]\subset K$ que se comporta sobre $R$ como la identidad y que envía $\bar{x}$ a $\alpha$.
 {{% /theorem %}}
 
 {{% proof %}}
-Por el principio de sustitución, hay un único homomorfismo $g\colon R[x]\rightarrow K$ que se restringe a la inclusión $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[x]$. 
+Por el principio de sustitución, hay un único homomorfismo $g\colon R[ x ]\rightarrow K$ que se restringe a la inclusión $R\subset K$ sobre el dominio de coeficientes y que satisface $g(x)=\alpha$. La imagen de $g$ es $R[\alpha]$ por definición. Por el primer teorema de isomorfía, basta probar que $\ker g=(f)\subset R[ x ]$. 
 
-Recordemos que la inclusión $R\subset K$ se extiende al cuerpo de fracciones $k$ de $R$, $R\subset k\subset K$. Para probar que $\ker g=(f)$ consideramos la extensión $\bar g\colon k[x]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[x]$.
+Recordemos que la inclusión $R\subset K$ se extiende al cuerpo de fracciones $k$ de $R$, $R\subset k\subset K$. Para probar que $\ker g=(f)$ consideramos la extensión $\bar g\colon k[ x ]\rightarrow K$ de $g$ que se define como la inclusión $k\subset K$ sobre el cuerpo de coeficientes y que cumple $\bar{g}(x)=\alpha$. Veamos que $\ker\bar{g}=(f)\subset k[ x ]$.
 
-El ideal $\ker\bar{g}\subset k[x]$ está formado por todos los polinomios que tienen a $\alpha$ como raíz. Al ser $k[x]$ un dominio euclídeo, $\ker\bar{g}=(\tilde f)$ donde $\tilde f\in k[x]$ es cualquier polinomio no nulo de grado mínimo en este ideal. Realizamos la división euclídea en $k[x]$, $f(x)=c(x)\tilde{f}(x)+r(x)$. Si $r$ no fuera trivial, su grado sería menor que el de $\tilde{f}$, pero $r(x)=f(x)-c(x)\tilde{f}(x)$, por tanto $r(\alpha)=f(\alpha)-c(\alpha)\tilde{f}(\alpha)=0-c(\alpha)0=0$. Esto es imposible porque $\tilde{f}$ es de grado mínimo. Por tanto $r=0$ y $f(x)=c(x)\tilde{f}(x)$. El polinomio $c(x)$ ha de ser constante porque $f$ es también irreducible en $k[x]$, así que $f$ y $\tilde{f}$ son asociados, luego generan el mismo ideal, $\ker\bar{g}=(f)\subset k[x]$.
+El ideal $\ker\bar{g}\subset k[ x ]$ está formado por todos los polinomios que tienen a $\alpha$ como raíz. Al ser $k[ x ]$ un dominio euclídeo, $\ker\bar{g}=(\tilde f)$ donde $\tilde f\in k[ x ]$ es cualquier polinomio no nulo de grado mínimo en este ideal. Realizamos la división euclídea en $k[ x ]$, $f(x)=c(x)\tilde{f}(x)+r(x)$. Si $r$ no fuera trivial, su grado sería menor que el de $\tilde{f}$, pero $r(x)=f(x)-c(x)\tilde{f}(x)$, por tanto $r(\alpha)=f(\alpha)-c(\alpha)\tilde{f}(\alpha)=0-c(\alpha)0=0$. Esto es imposible porque $\tilde{f}$ es de grado mínimo. Por tanto $r=0$ y $f(x)=c(x)\tilde{f}(x)$. El polinomio $c(x)$ ha de ser constante porque $f$ es también irreducible en $k[ x ]$, así que $f$ y $\tilde{f}$ son asociados, luego generan el mismo ideal, $\ker\bar{g}=(f)\subset k[ x ]$.
 
-Como $g=\bar{g}|_{R[x]}$, $\ker g=\ker\bar{g}\cap R[x]=(f)\subset R[x]$ en virtud de la proposición anterior, pues $f\in R[x]$, al ser irreducible, es primitivo. Esto concluye la demostración.
+Como $g=\bar{g}|_{R[ x ]}$, $\ker g=\ker\bar{g}\cap R[ x ]=(f)\subset R[ x ]$ en virtud de la proposición anterior, pues $f\in R[ x ]$, al ser irreducible, es primitivo. Esto concluye la demostración.
 {{% /proof %}}
 
 {{% remark %}}
-Recuerda que, dado un cuerpo $k$, un polinomio $f\in k[x]$ de grado $\leq 3$ es irreducible si y solo si no tiene raíces en $k$.
+Recuerda que, dado un cuerpo $k$, un polinomio $f\in k[ x ]$ de grado $\leq 3$ es irreducible si y solo si no tiene raíces en $k$.
 {{% /remark %}}
 
 {{% example name="Los enteros de Gauss como cociente" %}}
-El polinomio $x^2+1\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Por tanto el teorema anterior se aplica a la inclusión $\mathbb Z\subset\mathbb C$ y a la raíz compleja $i\in\mathbb C$ de $x^2+1$ y obtenemos un isomorfismo con los enteros de Gauss,
+El polinomio $x^2+1\in\mathbb{Z}[ x ]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[ x ]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Por tanto el teorema anterior se aplica a la inclusión $\mathbb Z\subset\mathbb C$ y a la raíz compleja $i\in\mathbb C$ de $x^2+1$ y obtenemos un isomorfismo con los enteros de Gauss,
 
 $$
 \begin{array}{rcl}
-\mathbb Z[x]/(x^2+1)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[i],\cr
+\mathbb Z[ x ]/(x^2+1)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[i],\cr
 \bar{x}&\mapsto& i.
 \end{array}
 $$
@@ -575,7 +575,7 @@ $$
 {{% /example %}}
 
 {{% example name="$\mathbb{Z}[\frac{1}{3}+i]$" %}}
-Para establecer un isomorfismo entre $\mathbb{Z}[\frac{1}{3}+i]\subset\mathbb{C}$ y un cociente de $\mathbb{Z}[x]$ buscamos un polinomio irreducible con coeficientes enteros que tenga a $\frac{1}{3}+i$ como raíz.
+Para establecer un isomorfismo entre $\mathbb{Z}[\frac{1}{3}+i]\subset\mathbb{C}$ y un cociente de $\mathbb{Z}[ x ]$ buscamos un polinomio irreducible con coeficientes enteros que tenga a $\frac{1}{3}+i$ como raíz.
 
 Si denotamos $\alpha=\frac{1}{3}+i$ tenemos que $\alpha-\frac{1}{3}=i$ luego 
 
@@ -585,15 +585,15 @@ es decir,
 
 $$\alpha^2-\frac{2}{3}\alpha+\frac{10}{9}=0.$$ 
 
-Dicho de otro modo, $\alpha$ es raíz del polinomio irreducible $x^2-\frac{2}{3}x+\frac{1}{9}\in\mathbb{Q}[x]$. Este último polinomio se descompone como producto de un racional por un polinomio primitivo con coeficientes enteros del siguiente modo,
+Dicho de otro modo, $\alpha$ es raíz del polinomio irreducible $x^2-\frac{2}{3}x+\frac{1}{9}\in\mathbb{Q}[ x ]$. Este último polinomio se descompone como producto de un racional por un polinomio primitivo con coeficientes enteros del siguiente modo,
 
 $$x^2-\frac{2}{3}x+\frac{10}{9}=\frac{1}{9}\left(9x^2-6x+10\right).$$
 
-Por tanto $9x^2-6x+10\in\mathbb{Z}[x]$ es un polinomio irreducible que tiene a $\frac{1}{3}+i$ como raíz, así que, aplicando el teorema anterior a la inclusión $\mathbb{Z}\subset\mathbb{C}$ tenemos un isomorfismo
+Por tanto $9x^2-6x+10\in\mathbb{Z}[ x ]$ es un polinomio irreducible que tiene a $\frac{1}{3}+i$ como raíz, así que, aplicando el teorema anterior a la inclusión $\mathbb{Z}\subset\mathbb{C}$ tenemos un isomorfismo
 
 $$
 \begin{array}{rcl}
-\mathbb Z[x]/(9x^2-6x+10)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[\frac{1}{3}+i],\cr
+\mathbb Z[ x ]/(9x^2-6x+10)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[\frac{1}{3}+i],\cr
 \bar{x}&\mapsto& i.
 \end{array}
 $$
@@ -601,7 +601,7 @@ $$
 {{% /example %}}
 
 {{% corollary %}}
-Sea $K$ un cuerpo tal que $R\subset K$ y $\alpha\in K$ la raíz de un polinomio mónico irreducible $f\in R[x]$ de grado $n$. Entonces todo elemento de $R[\alpha]\subset K$ se escribe de manera única como 
+Sea $K$ un cuerpo tal que $R\subset K$ y $\alpha\in K$ la raíz de un polinomio mónico irreducible $f\in R[ x ]$ de grado $n$. Entonces todo elemento de $R[\alpha]\subset K$ se escribe de manera única como 
 
 $$b\_{n-1}\alpha^{n-1}+\cdots+b\_1\alpha+b\_0$$
 
@@ -609,22 +609,22 @@ con $b\_0,\dots, b\_{n-1}\in R$.
 {{% /corollary %}}
 
 {{% proof %}}
-Hemos visto anteriormente que el enunciado es cierto en $R[x]/(f)$ si reemplazamos $\alpha$ por $\bar{x}$, así que el corolario se deduce del isomorfismo del teorema anterior.
+Hemos visto anteriormente que el enunciado es cierto en $R[ x ]/(f)$ si reemplazamos $\alpha$ por $\bar{x}$, así que el corolario se deduce del isomorfismo del teorema anterior.
 {{% /proof %}}
 
 {{% example name="$\mathbb{Z}[\sqrt{2}]$" %}}
-El polinomio $x^2-2\in\mathbb{Z}[x]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[x]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Así que todo elemento de $\mathbb Z[\sqrt{2}]\subset \mathbb{R}$ se puede escribir de manera única como $b\_1 \sqrt{2}+b\_0$, con $b\_0,b\_1\in\mathbb Z$.
+El polinomio $x^2-2\in\mathbb{Z}[ x ]$ es irreducible ya que es primitivo e irreducible en $\mathbb{Q}[ x ]$ pues su grado es $\leq 3$ y no tiene raíces racionales. Así que todo elemento de $\mathbb Z[\sqrt{2}]\subset \mathbb{R}$ se puede escribir de manera única como $b\_1 \sqrt{2}+b\_0$, con $b\_0,b\_1\in\mathbb Z$.
 {{% /example %}}
 
 Finalmente veremos un par de condiciones suficientes más avanzadas para la irreducibilidad de un polinomio.
 
 {{% theorem name="Reducción módulo $p$" %}}
-Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$, $p\in R$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(R/(p))[x]$, entonces $f$ es irreducible en $R[x]$. 
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[ x ]$ es un polinomio primitivo de grado $n>0$, $p\in R$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(R/(p))[ x ]$, entonces $f$ es irreducible en $R[ x ]$. 
 {{% /theorem %}}
 
 
 {{% proof %}}
-Usaremos el homomorfismo $\phi_p\colon R[x]\rightarrow (R/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general,
+Usaremos el homomorfismo $\phi_p\colon R[ x ]\rightarrow (R/(p))[ x ]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general,
 
 $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$
 
@@ -657,7 +657,7 @@ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, q
 
 
 {{% theorem name="Criterio de Eisenstein" label="eisenstein" %}}
-Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0$ y $p\in R$ es un primo tal que: 
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[ x ]$ es un polinomio primitivo de grado $n>0$ y $p\in R$ es un primo tal que: 
 
 * $p$ no divide $a\_n$,
 
@@ -665,7 +665,7 @@ Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in R[x]$ es un polinomio primitivo de grado $n>0
 
 * $p^2$ no divide a $a_0$,
 
-entonces $f$ es irreducible en $R[x]$. 
+entonces $f$ es irreducible en $R[ x ]$. 
 {{% /theorem %}}
 
 
