@@ -58,10 +58,10 @@ Como $f$ es un homomorfismo de anillos, preserva sumas. Dado $\alpha\in F\subset
 {{% /proof %}}
 
 {{% corollary %}}
-Si $f\colon K\rightarrow L$ es un isomorfismo de extensiones de $F$ entonces $[K:F]\cong [L:F]$.
+Si $f\colon K\rightarrow L$ es un isomorfismo de extensiones de $F$ entonces $[K:F] = [L:F]$.
 {{% /corollary %}}
 
-Más adelante veremos ejemplos de extensions no isomorfas del mismo grado.
+Más adelante veremos ejemplos de extensiones no isomorfas del mismo grado.
 
 {{% corollary %}}
 Todo endomorfismo $f\colon K\rightarrow K$ de una extensión finita $F\subset K$ es un automorfismo.
