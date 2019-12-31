@@ -481,13 +481,13 @@ Deducimos que además podemos construir:
 
 ![Punto medio](../../images/constructible-17.png)
 
-* La recta perpendicular a una recta construida que pasa por un punto consruido.
+* La recta perpendicular a una recta construida que pasa por un punto construido.
 
 ![Perpendicular sobre un punto de la recta](../../images/constructible-0.png)
 
 ![Perpendicular sobre un punto exterior](../../images/constructible-18.png)
 
-* La recta paralela a una recta construida que pasa por un punto consruido.
+* La recta paralela a una recta construida que pasa por un punto construido.
 
 ![Paralela](../../images/constructible-1.png)
 
