@@ -3,7 +3,7 @@ title = "Teoría de Galois"
 weight = 20
 +++
 
-En esta sección supondremos sin necesida de mencionarlo explícitamente que todos los cuerpos que consideremos son subcuerpos de $\mathbb C$.
+En esta sección supondremos sin necesidad de mencionarlo explícitamente que todos los cuerpos que consideremos son subcuerpos de $\mathbb C$.
 
 ## El grupo de Galois
 
