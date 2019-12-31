@@ -561,7 +561,7 @@ Es consecuencia del conocido teorema de la media geométrica. En el eje horizont
 {{% /proof %}}
 
 
-Hasta ahora hemos demostrado que podemos construir números constructibles a partir del $1$ sumando, restando, dividiendo por números no nulos, y tomando raíces cuadradas de números positivos. Los siguientes resultados demuestras que no hay más números constructibles que los que se pueden obtener de este modo.
+Hasta ahora hemos demostrado que podemos construir números constructibles a partir del $1$ sumando, restando, dividiendo por números no nulos, y tomando raíces cuadradas de números positivos. Los siguientes resultados demuestran que no hay más números constructibles que los que se pueden obtener de este modo.
 
 {{% proposition %}}
 Dados cuatro puntos en $\mathbb R^2$ cuyas coordenadas están en un subcuerpo $F\subset\mathbb R$, los puntos de intersección de las rectas y circunferencias que se pueden dibujar apoyándose en dichos puntos tienen coordenadas en $F$ o en $F[\sqrt{r}]$ para cierto $r\in F$ positivo $r>0$ que no sea el cuadrado de ningún número de $F$. 
@@ -577,7 +577,7 @@ y la circunferencia de centro el primero que pasa por el segundo está definida 
 
 $$(x-a\_0)^2+(y-b\_0)^2=(a\_1-a\_0)^2+(b\_1-b\_0)^2.$$
 
-Si las coordenadas está en $F$ entonces los coeficientes de ambas ecuaciones también.
+Si las coordenadas están en $F$ entonces los coeficientes de ambas ecuaciones también.
 
 La intersección de dos de estas rectas tiene coordenadas en $F$ porque las soluciones de un sistema de ecuaciones lineales con coeficientes en un cuerpo siempre están en dicho cuerpo.
 
@@ -611,7 +611,7 @@ En particular $[K:\mathbb Q]=2^n$.
 
 
 {{% proof %}}
-La construtibilidad de los números $a\_i$ equivale a la de los puntos $(a\_i,0)$. Los puntos constructibles se construyen a partir de los básicos, $(0,0)$ y $(1,0)$, trazando e intersecando rectas y circunferencias mendiante los métodos permitidos. Los puntos básicos tienen coordenadas en $\mathbb Q$. Por la propisición anterior, los puntos que se construyen a partir de ellos tendrán coordenadas en extensiones sucesivas de $\mathbb Q$ obtenidas al añadir nuevas raíces cuadradas de números positivos, por tanto el teorema se sigue de la proposición anterior por inducción. La observación sobre el grado se siguie de la fórmula del grado para extensiones intermedias, que en este caso nos dice que
+La construtibilidad de los números $a\_i$ equivale a la de los puntos $(a\_i,0)$. Los puntos constructibles se construyen a partir de los básicos, $(0,0)$ y $(1,0)$, trazando e intersecando rectas y circunferencias mediante los métodos permitidos. Los puntos básicos tienen coordenadas en $\mathbb Q$. Por la proposición anterior, los puntos que se construyen a partir de ellos tendrán coordenadas en extensiones sucesivas de $\mathbb Q$ obtenidas al añadir nuevas raíces cuadradas de números positivos, por tanto el teorema se sigue de la proposición anterior por inducción. La observación sobre el grado se sigue de la fórmula del grado para extensiones intermedias, que en este caso nos dice que
 
 $$[K:\mathbb Q]=\prod\_{i=0}^{n-1}[F\_{i+1}:F\_i]=2^n$$
 
