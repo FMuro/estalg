@@ -16,14 +16,14 @@ donde los **coeficientes** $a\_0,\dots,a\_n\in R$ y $n\geq 0$. También se puede
 
 $$p(x)=\sum_{n\geq 0}a\_nx^n$$
 
-dando por supuesto que **casi todos** los coeficientes son cero, es decir, todos excepto una cantidad finita. El **polinomio trivial** $0$ es aquel cuyos coeficientes son todos nulos. El **monomio** de **grado** $i$ de $f(x)$ es $a\_ix^i$ y su coeficiente es $a\_i$. El **grado** de un polinomio no trivial $f(x)$ es el mayor $n\geq 0$ tal que su coeficiente de grado $n$ es no nulo $a\_n\neq 0$. En este caso decimos que $a\_nx^n$ es su **monomio líder** y $a\_n$ su **coeficiente líder**. Su **término independiente** es $a\_0$. Un polinomio es **mónico** si su coeficiente líder es $1\in R$. Los **polinomios constantes** son los de grado $0$ y el nulo. El conjunto de los polinomios en una variable $x$ con coeficientes en $R$ se denota $R[x]$.
+dando por supuesto que **casi todos** los coeficientes son cero, es decir, todos excepto una cantidad finita. El **polinomio trivial** $0$ es aquel cuyos coeficientes son todos nulos. El **monomio** de **grado** $i$ de $f(x)$ es $a\_ix^i$ y su coeficiente es $a\_i$. El **grado** de un polinomio no trivial $f(x)$ es el mayor $n\geq 0$ tal que su coeficiente de grado $n$ es no nulo $a\_n\neq 0$. En este caso decimos que $a\_nx^n$ es su **monomio líder** y $a\_n$ su **coeficiente líder**. Su **término independiente** es $a\_0$. Un polinomio es **mónico** si su coeficiente líder es $1\in R$. Los **polinomios constantes** son los de grado $0$ y el nulo. El conjunto de los polinomios en una variable $x$ con coeficientes en $R$ se denota $R[ x ]$.
 {{% /definition %}}
 
 {{% remark %}}
 El polinomio trivial no tiene asignado ningún grado según esta definición, pero podemos considerar que su grado es $-\infty$, ya que esta convención es compatible con fórmulas posteriores.
 {{% /remark %}}
 
-Recordemos que el conjunto $R[x]$ es un anillo con la suma y el producto definidos en un ejemplo [anterior](../rings/#polynomials). Además $R\subset R[x]$ es un subanillo formado por los polinomios constantes. Hemos visto en la prueba de una [proposición](../rings/#polydomain) anterior que si $R$ es un dominio entonces $R[x]$ también y dados $f,g\in R[x]$ se tiene que
+Recordemos que el conjunto $R[ x ]$ es un anillo con la suma y el producto definidos en un ejemplo [anterior](../rings/#polynomials). Además $R\subset R[ x ]$ es un subanillo formado por los polinomios constantes. Hemos visto en la prueba de una [proposición](../rings/#polydomain) anterior que si $R$ es un dominio entonces $R[ x ]$ también y dados $f,g\in R[ x ]$ se tiene que
 
 $$\deg(fg)=\deg(f)+\deg(g).$$
 
@@ -34,11 +34,11 @@ $$\deg(f+g)\leq\max\\{\deg(f),\deg(g)\\}$$
 dándose la igualdad si $\deg(f)\neq deg(g)$, ya que entonces el coeficiente líder de la suma será el mismo que el del polinomio de mayor grado.
 
 {{% theorem %}}
-Si $R$ es un dominio entonces $R[x]^\times=R^\times$.
+Si $R$ es un dominio entonces $R[ x ]^\times=R^\times$.
 {{% /theorem %}}
 
 {{% proof %}}
-Las unidades de $R$ también son unidades de $R[x]$ vistas como polinomios constantes ya que $R\subset R[x]$ es un subanillo. Recíprocamente, si $f\in R[x]$ es una unidad y $f^{-1}$ es su inversa, $ff^{-1}=1$ entonces
+Las unidades de $R$ también son unidades de $R[ x ]$ vistas como polinomios constantes ya que $R\subset R[ x ]$ es un subanillo. Recíprocamente, si $f\in R[ x ]$ es una unidad y $f^{-1}$ es su inversa, $ff^{-1}=1$ entonces
 $$
 \begin{array}{rcl}
 0&=&\deg(1)\cr
@@ -53,14 +53,14 @@ $$\deg(f)=-\deg(f^{-1}).$$
 Como el grado de un polinomio es siempre $\geq 0$, los grados que aparecen a ambos lados de la última ecuación han de ser $0$, así que $f$ es una unidad de $R$.
 {{% /proof %}}
 
-En adelante consideraremos casi siempre el anillo de polinomios $k[x]$ con coeficientes en un cuerpo $k$, que es un dominio. Sus unidades son $k^\times=k\setminus\\{0\\}$. El grado de un polinomio se puede usar como una medida de tamaño, al igual que el valor absoluto en los enteros. Esto nos permite realizar divisiones euclídeas en $k[x]$.
+En adelante consideraremos casi siempre el anillo de polinomios $k[ x ]$ con coeficientes en un cuerpo $k$, que es un dominio. Sus unidades son $k^\times=k\setminus\\{0\\}$. El grado de un polinomio se puede usar como una medida de tamaño, al igual que el valor absoluto en los enteros. Esto nos permite realizar divisiones euclídeas en $k[ x ]$.
 
 {{% remark %}}
-La definición de **divisibilidad** vista en $\mathbb{Z}$ tiene también sentido en $k[x]$ y satisface las mismas propiedades elementales, excepto las que aquí reseñamos. El polinomio $1$ es divisible por cualquier unidad, no solo por $\pm1$. Además, $f|g$ y $g|f$ si y solo si existe una unidad $\alpha\in k^\times$ tal que $f=\alpha\cdot g$. Esta unidad no tiene por qué ser $\pm 1$.
+La definición de **divisibilidad** vista en $\mathbb{Z}$ tiene también sentido en $k[ x ]$ y satisface las mismas propiedades elementales, excepto las que aquí reseñamos. El polinomio $1$ es divisible por cualquier unidad, no solo por $\pm1$. Además, $f|g$ y $g|f$ si y solo si existe una unidad $\alpha\in k^\times$ tal que $f=\alpha\cdot g$. Esta unidad no tiene por qué ser $\pm 1$.
 {{% /remark %}}
 
 {{% theorem name="División euclídea" %}}
-Dados $D,d\in k[x]$, $d\neq0$, existen $c,r\in k[x]$ únicos tales que
+Dados $D,d\in k[ x ]$, $d\neq0$, existen $c,r\in k[ x ]$ únicos tales que
 
 * $D=d\cdot c+r$,
 
@@ -122,7 +122,7 @@ D&=&x^5-\frac{1}{2}x^3+2x^2-3x+3, \cr
 d&=&2x^3-\frac{2}{3}x^2+3x-1,
 \end{array}
 $$
-dos polinomios de $\mathbb{Q}[x]$. Comenzamos tomando
+dos polinomios de $\mathbb{Q}[ x ]$. Comenzamos tomando
 
 $$D\_1=D-\frac{1}{2}x^2\cdot d=\frac{1}{3}x^4-2x^3+\frac{5}{2}x^2-3x+3.$$
 
@@ -148,14 +148,14 @@ $$
 La siguiente proposición se prueba igual que para $\mathbb{Z}$.
 
 {{% proposition %}}
-Dados $D,d\in k[x]$, $d\neq 0$, $d|D$ si y solo si el resto de la división de $D$ entre $d$ es $r=0$.
+Dados $D,d\in k[ x ]$, $d\neq 0$, $d|D$ si y solo si el resto de la división de $D$ entre $d$ es $r=0$.
 {{% /proposition %}}
 
 
 El siguiente teorema es análogo del que decía que todos los subgrupos de $\mathbb{Z}$ son cíclicos.
 
 {{% theorem %}}
-Todo ideal $I \subset k[x]$ es principal.
+Todo ideal $I \subset k[ x ]$ es principal.
 {{% /theorem %}}
 
 {{% proof %}}
@@ -164,17 +164,17 @@ Sea
 
 $$S=\\{\deg(f)\mid 0\neq f\in I \\}\subset\mathbb{Z}.$$
 
-Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\deg(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[x]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, $\deg( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\deg( r )\in S$, pero $\deg( r )<n$, y esto contradeciría la minimalidad de $n$.
+Por el principio de buena ordenación, hay un mínimo $n\in S$. Sea $f\in I$ un polinomio no nulo donde se alcanza el mínimo $\deg(f)=n$. Veamos que $(f) = I$. Por definición, $(f)$ está formado por los múltiplos de $f$. La inclusión $\subset$ es cierta ya que $f\in I$ y $I\subset k[ x ]$ es un ideal, por tanto los múltiplos de $f$ están también en $I$. Para ver $\supset$, tenemos que comprobar que todos los elementos de $I$ son múltiplos de $f$. Sea $g\in I$. Realizamos la división euclídea de $g$ por $f$: $g=f\cdot c+r$, $\deg( r )<n$. Si $r=0$ entonces $g=f\cdot c\in (f)$. Veamos por reducción al absurdo que es imposible que $r\neq 0$. En efecto, en dicho caso $0\neq r=g-f\cdot c\in I$ pues $g\in I$, $f\cdot c\in (f) \subset I$ y $I$ es un ideal. Por tanto $\deg( r )\in S$, pero $\deg( r )<n$, y esto contradeciría la minimalidad de $n$.
 {{% /proof %}}
 
 {{% definition %}}
-Una **raíz** de un polinomio $f\in R[x]$ es un elemento $a\in R$ tal que $f(a)=0$.
+Una **raíz** de un polinomio $f\in R[ x ]$ es un elemento $a\in R$ tal que $f(a)=0$.
 {{% /definition %}}
 
 Un resultado específico del anillo que nos ocupa es el siguiente.
 
 {{% corollary %}}
-El elemento $a\in k$ es una raíz de $f\in k[x]$ si y solo si $(x-a)|f$.
+El elemento $a\in k$ es una raíz de $f\in k[ x ]$ si y solo si $(x-a)|f$.
 {{% /corollary %}}
 
 {{% proof %}}
@@ -190,17 +190,17 @@ y sabemos que $r=f(a)=0$ si y solo si $(x-a)|f$.
 {{% /proof %}}
 
 {{% remark %}}
-En general, los divisores de grado $1$ de un polinomio $f\in k[x]$ se corresponden con sus raíces, ya que $(ax-b)|f$, $a\neq 0$, si y solo si $(x-\frac{b}{a})|f$, pues para la relación de divisibilidad es irrelevante el producto por unidades.
+En general, los divisores de grado $1$ de un polinomio $f\in k[ x ]$ se corresponden con sus raíces, ya que $(ax-b)|f$, $a\neq 0$, si y solo si $(x-\frac{b}{a})|f$, pues para la relación de divisibilidad es irrelevante el producto por unidades.
 {{% /remark %}}
 
 El corolario anterior justifica la siguiente definición, que se usará más adelante.
 
 {{% definition %}}
-La **multiplicidad** de una raíz $a$ de $f\in k[x]$ es el máximo $n\geq 1$ tal que $(x-a)^n|f$.
+La **multiplicidad** de una raíz $a$ de $f\in k[ x ]$ es el máximo $n\geq 1$ tal que $(x-a)^n|f$.
 {{% /definition %}}
 
 {{% corollary %}}
-Un polinomio no nulo $f\in k[x]$ de grado $n$ tiene a lo sumo $n$ raíces distintas en $k$.
+Un polinomio no nulo $f\in k[ x ]$ de grado $n$ tiene a lo sumo $n$ raíces distintas en $k$.
 {{% /corollary %}}
 
 {{% proof %}}
@@ -209,11 +209,11 @@ Por inducción en $n=\deg(f)$. Si $n=0$, entonces $f$ es un polinomio constante 
 
 
 {{% remark %}}
-Los conceptos de **divisor común máximo** y **múltiplo común mínimo** en $k[x]$ se definen como en $\mathbb{Z}$ y satisfacen las mismas propieades, excepto las que ahora señalamos. Estos conceptos están bien definidos salvo producto por unidades. Si $d$ y $d'$ son dos divisores comunes máximos de $f,g\in k[x]$ entonces existe $\alpha\in k^\times$ tal que $d'=\alpha\cdot d$, e igual para los múltiplos comunes mínimos. Además, $\operatorname{mcd}(f,g)=\operatorname{mcd}(\alpha\cdot f,\beta\cdot g)$ para todo $\alpha,\beta\in k^\times$. Destacamos que el divisor común máximo se puede calcular medialte el **algoritmo de Euclides** y que satisface la **identidad de Bézout**.
+Los conceptos de **divisor común máximo** y **múltiplo común mínimo** en $k[ x ]$ se definen como en $\mathbb{Z}$ y satisfacen las mismas propieades, excepto las que ahora señalamos. Estos conceptos están bien definidos salvo producto por unidades. Si $d$ y $d'$ son dos divisores comunes máximos de $f,g\in k[ x ]$ entonces existe $\alpha\in k^\times$ tal que $d'=\alpha\cdot d$, e igual para los múltiplos comunes mínimos. Además, $\operatorname{mcd}(f,g)=\operatorname{mcd}(\alpha\cdot f,\beta\cdot g)$ para todo $\alpha,\beta\in k^\times$. Destacamos que el divisor común máximo se puede calcular medialte el **algoritmo de Euclides** y que satisface la **identidad de Bézout**.
 {{% /remark %}}
 
 {{% example name="Algoritmo de Euclides" %}}
-Hallemos el divisor común máximo de los siguientes polinomios de $\mathbb{Q}[x]$, consideramos en el [ejemplo](#unadiv) anterior:
+Hallemos el divisor común máximo de los siguientes polinomios de $\mathbb{Q}[ x ]$, consideramos en el [ejemplo](#unadiv) anterior:
 $$
 \begin{array}{rcl}
 f&=&x^5-\frac{1}{2}x^3+2x^2-3x+3, \cr
@@ -248,15 +248,15 @@ $$2x^2 +3=f\cdot \frac{54}{37}+g\cdot \left(-\frac{27}{37}x^2-\frac{9}{37}x+\fra
 
 {{% definition %}}
 {Polinomio irreducible}
-Sea $f\in k[x]$. Decimos que $f$ es **primo** si solo es divisible por $\alpha$ y $\alpha\cdot f$, $\alpha\in k^\times$. Decimos que $f$ es **irreducible** si no es nulo y además, si $f=gh$ entonces bien $g$ o bien $h$ es una unidad.
+Sea $f\in k[ x ]$. Decimos que $f$ es **primo** si solo es divisible por $\alpha$ y $\alpha\cdot f$, $\alpha\in k^\times$. Decimos que $f$ es **irreducible** si no es nulo y además, si $f=gh$ entonces bien $g$ o bien $h$ es una unidad.
 {{% /definition %}}
 
 {{% remark %}}
-El $0$ no es primo y $f\in k[x]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Los polinomios de grado $1$ son todos irreducibles por la fórmula del grado de un producto. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[x]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
+El $0$ no es primo y $f\in k[ x ]$ es primo si y solo si lo es $\alpha\cdot f$, $\alpha\in k^\times$. Los polinomios de grado $1$ son todos irreducibles por la fórmula del grado de un producto. Los resultados elementales sobre primos y divisibilidad que vimos en $\mathbb{Z}$ siguien siendo ciertos en $k[ x ]$, con alguna salvedad que reflejamos en los enunciados de los resultados siguientes.
 {{% /remark %}}
 
 {{% proposition %}}
-Un polinomio $f\in k[x]$ de grado $2$ o $3$ es irreducile si y solo si no tiene raíces en $k$.
+Un polinomio $f\in k[ x ]$ de grado $2$ o $3$ es irreducile si y solo si no tiene raíces en $k$.
 {{% /proposition %}}
 
 {{% proof %}}
@@ -268,23 +268,23 @@ $\Leftarrow$ Supongamos que $f$ es reducible y por tanto se descompone como $f=g
 {{% /proof %}}
 
 {{% proposition %}}
-Un polinomio no nulo $f\in k[x]$ es primo si y solo si es irreducible.
+Un polinomio no nulo $f\in k[ x ]$ es primo si y solo si es irreducible.
 {{% /proposition %}}
 
 {{% proof %}}
 $\Rightarrow$ Si $f=gh$, como $f|gh$ entonces $f|g$ o $f|h$. Como los papeles de $g$ y $h$ son intercambiables, podemos suponer que $f|g$, es decir $g=fc$. Entonces $f=gh=fc h$. Como $f$ no es nulo, el resto de polinomios tampoco. Tenemos que $\deg(f)=\deg(f)+\deg( c )+\deg(h)$. Al ser el grado de un polinomio no nulo $\geq 0$ deducimos que $\deg( c )=\deg(h)=0$. Es decir, $h$ es una constante no nula, y por tanto una unidad.
 
-$\Leftarrow$ Supongamos que $g|f$, es decir, $f=gc$ para cierto $c\in k[x]$. Como $f$ no es nulo, $g$ y $c$ tampoco. Si $\deg(g)=0$ entonces $g$ es una constante no nula, es decir una unidad. Si $\deg(g)=\deg(f)$ entonces $c$ es una unidad, $c\in k^\times$, por el mismo argumento, así que $g=c^{-1}f$. Queda por analizar qué ocurre si $0<\deg (g)<\deg(f)$. Como $\deg(f)=\deg(g)+\deg( c )$, entonces también $0<\deg ( c )<\deg(f)$, por lo que $g$ y $c$ no serían unidades. Esto contradeciría la irreducibilidad de $f$.
+$\Leftarrow$ Supongamos que $g|f$, es decir, $f=gc$ para cierto $c\in k[ x ]$. Como $f$ no es nulo, $g$ y $c$ tampoco. Si $\deg(g)=0$ entonces $g$ es una constante no nula, es decir una unidad. Si $\deg(g)=\deg(f)$ entonces $c$ es una unidad, $c\in k^\times$, por el mismo argumento, así que $g=c^{-1}f$. Queda por analizar qué ocurre si $0<\deg (g)<\deg(f)$. Como $\deg(f)=\deg(g)+\deg( c )$, entonces también $0<\deg ( c )<\deg(f)$, por lo que $g$ y $c$ no serían unidades. Esto contradeciría la irreducibilidad de $f$.
 {{% /proof %}}
 
 El siguiente teorema se prueba igual que para $\mathbb{Z}$, reemplazando el valor absoluto por el grado.
 
 {{% theorem name="fundamental de la aritmética" %}}
-Todo polinomio no constante de $k[x]$ se descompone como producto finito de polinomios irreducibles de manera única salvo orden y producto por unidades.
+Todo polinomio no constante de $k[ x ]$ se descompone como producto finito de polinomios irreducibles de manera única salvo orden y producto por unidades.
 {{% /theorem %}}
 
 {{% corollary %}}
-Todo polinomio no constante de $k[x]$ se descompone como producto de una unidad y una cantidad finita de polinomios mónicos irreducibles de manera única salvo orden.
+Todo polinomio no constante de $k[ x ]$ se descompone como producto de una unidad y una cantidad finita de polinomios mónicos irreducibles de manera única salvo orden.
 {{% /corollary %}}
 
 {{% proof %}}
@@ -295,7 +295,7 @@ Basta tomar una factorización dada por el teorema anterior y sacar factor comú
 La demostración del siguiente teorema también es igual que su versión entera.
 
 {{% theorem  %}}
-En $k[x]$ hay infinitos polinomios mónicos irreducibles.
+En $k[ x ]$ hay infinitos polinomios mónicos irreducibles.
 {{% /theorem %}}
 
 Si $k$ es infinito, los polinomios $x-a$, $a\in k$, son un conjunto infinito de irreducibles, pero el teorema es también cierto cuando $k$ es finito.
@@ -303,7 +303,7 @@ Si $k$ es infinito, los polinomios $x-a$, $a\in k$, son un conjunto infinito de 
 <!--
 
 {{% definition %}}
-La **derivación** es el homomorfismo de $k$-espacios vectoriales $D\colon k[x]\rightarrow k[x]$ definidos sobre la base $\\{x^n\\}_{n\geq 0}$ como $D(1)=0$ y $D(x^n)=nx^{n-1}$ si $n>0$. En particular
+La **derivación** es el homomorfismo de $k$-espacios vectoriales $D\colon k[ x ]\rightarrow k[ x ]$ definidos sobre la base $\\{x^n\\}_{n\geq 0}$ como $D(1)=0$ y $D(x^n)=nx^{n-1}$ si $n>0$. En particular
 
 $$D(a\_nx^n+\cdots+a\_1x+a\_0)=na\_nx^{n-1}+\cdots+a\_1.$$
 
@@ -312,7 +312,7 @@ $$D(a\_nx^n+\cdots+a\_1x+a\_0)=na\_nx^{n-1}+\cdots+a\_1.$$
 La derivación satisface la regla de Leibniz para el producto.
 
 {{% proposition %}}
-Dados $f,g\in k[x]$, $D(fg)=D(f)g+fD(g)$.
+Dados $f,g\in k[ x ]$, $D(fg)=D(f)g+fD(g)$.
 {{% /proposition %}}
 
 -->
@@ -322,11 +322,11 @@ Dados $f,g\in k[x]$, $D(fg)=D(f)g+fD(g)$.
 
 
 {{% theorem name="fundamental del álgebra" %}}
-Todo polinomio $f\in\mathbb{C}[x]$ de grado positivo tiene una raíz en $\mathbb{C}$.
+Todo polinomio $f\in\mathbb{C}[ x ]$ de grado positivo tiene una raíz en $\mathbb{C}$.
 {{% /theorem %}}
 
 {{% corollary %}}
-Los polinomios irreducibles de $\mathbb{C}[x]$ son los de grado $1$.
+Los polinomios irreducibles de $\mathbb{C}[ x ]$ son los de grado $1$.
 {{% /corollary %}}
 
 {{% proof %}}
@@ -334,35 +334,35 @@ Sabemos que los polinomios de grado $1$ son irreducibles. Si $f$ es de grado $>1
 {{% /proof %}}
 
 {{% corollary %}}
-Todo polinomio $f\in\mathbb{C}[x]$ de grado $n>0$ factoriza de manera única como
+Todo polinomio $f\in\mathbb{C}[ x ]$ de grado $n>0$ factoriza de manera única como
 
 $$f=b\prod_{i=1}^n(x-a\_i)$$
 
 donde $a\_i,b\in\mathbb{C}$, $b\neq 0$.
 {{% /corollary %}}
 
-Observa que $\mathbb{R}[x]\subset\mathbb{C}[x]$ pues $\mathbb{R}\subset\mathbb{C}$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
+Observa que $\mathbb{R}[ x ]\subset\mathbb{C}[ x ]$ pues $\mathbb{R}\subset\mathbb{C}$. Esto nos permite hablar de raíces complejas de polinomios con coeficientes reales.
 
 {{% proposition %}}
-Si $a\in\mathbb{C}$ es una raíz de $f\in \mathbb{R}[x]$ entonces su conjugado $\bar{a}$ también. Además, ambas tienen la misma multiplicidad.
+Si $a\in\mathbb{C}$ es una raíz de $f\in \mathbb{R}[ x ]$ entonces su conjugado $\bar{a}$ también. Además, ambas tienen la misma multiplicidad.
 {{% /proposition %}}
 
 {{% proof %}}
-Consideramos el homomorfismo de anillos $c\colon \mathbb{C}[x]\rightarrow\mathbb{C}[x]$ definido como
+Consideramos el homomorfismo de anillos $c\colon \mathbb{C}[ x ]\rightarrow\mathbb{C}[ x ]$ definido como
 
 $$c(a\_nx^n+\cdots+a\_0)=\bar{a}\_nx^n+\cdots+\bar{a}\_0.$$
 
-Observa que $c$ se comporta como la identidad sobre $\mathbb{R}[x]$. Si $a$ es raíz de $f$ entonces $(x-a)|f$ en $\mathbb{C}[x]$. Como $c$ es un homomorfismo, esto implica que $x-\bar{a}=c(x-a)|c(f)=f$. Esto demuestra que $\bar{a}$ es raíz de $f$.
+Observa que $c$ se comporta como la identidad sobre $\mathbb{R}[ x ]$. Si $a$ es raíz de $f$ entonces $(x-a)|f$ en $\mathbb{C}[ x ]$. Como $c$ es un homomorfismo, esto implica que $x-\bar{a}=c(x-a)|c(f)=f$. Esto demuestra que $\bar{a}$ es raíz de $f$.
 
 Análogamente se demuestra que si $(x-a)^n|f$ entonces $(x-\bar{a})^n|f$, por tanto la multiplicidad de $\bar{a}$ es $\geq$ que la de $a$. Como esto vale para cualquier $a$ y $\bar{\bar{a}}=a$, deducimos la otra desigualdad.
 {{% /proof %}}
 
 {{% proposition %}}
-Todo polinomio en $\mathbb{R}[x]$ de grado $>0$ factoriza de manera única como producto de un escalar no nulo y polinomios irreducibles de grados $1$ y $2$.
+Todo polinomio en $\mathbb{R}[ x ]$ de grado $>0$ factoriza de manera única como producto de un escalar no nulo y polinomios irreducibles de grados $1$ y $2$.
 {{% /proposition %}}
 
 {{% proof %}}
-Tomamos la descomposición en $\mathbb{C}[x]$,
+Tomamos la descomposición en $\mathbb{C}[ x ]$,
 
 $$f=b\prod_{i=1}^n(x-a\_i).$$
 
@@ -370,20 +370,20 @@ Agrupamos los factores de grado $1$ correspondientes a raíces complejas conjuga
 
 $$(x-a)(x-\bar{a})=x^2-2\operatorname{Re}(a)x+|a|^2.$$
 
-Este es un polinomio mónico de grado $2$ en $\mathbb{R}[x]$ sin raíces reales, por tanto irreducible. El resultado es la descomposición deseada, que sabemos que es única.
+Este es un polinomio mónico de grado $2$ en $\mathbb{R}[ x ]$ sin raíces reales, por tanto irreducible. El resultado es la descomposición deseada, que sabemos que es única.
 {{% /proof %}}
 
 {{% corollary %}}
-Los polinomios irreducibles en $\mathbb{R}[x]$ son los de grado $1$ y los de grado $2$ sin raíces en $\mathbb{R}$.
+Los polinomios irreducibles en $\mathbb{R}[ x ]$ son los de grado $1$ y los de grado $2$ sin raíces en $\mathbb{R}$.
 {{% /corollary %}}
 
 
 ## Coeficientes enteros y racionales
 
-Las nociones de divisibilidad e irreducibilidad tienen también sentido en $\mathbb{Z}[x]$. En este apartado estudiaremos cómo se relacionan estos aspectos en $\mathbb{Z}[x]$ y $\mathbb{Q}[x]$ y veremos algunos criterios sencillos de irreducibilidad en $\mathbb{Z}[x]$.
+Las nociones de divisibilidad e irreducibilidad tienen también sentido en $\mathbb{Z}[ x ]$. En este apartado estudiaremos cómo se relacionan estos aspectos en $\mathbb{Z}[ x ]$ y $\mathbb{Q}[ x ]$ y veremos algunos criterios sencillos de irreducibilidad en $\mathbb{Z}[ x ]$.
 
 {{% theorem name="Ruffini" %}}
-Si un polinomio $a\_nx^n+a\_{n-1}x^{n-1}+\cdots+a\_1x+a\_0\in\mathbb{Z}[x]$ tiene una raíz racional, $\frac{a}{b}$ en forma reducida, entonces $a|a\_0$ y $b|a\_n$
+Si un polinomio $a\_nx^n+a\_{n-1}x^{n-1}+\cdots+a\_1x+a\_0\in\mathbb{Z}[ x ]$ tiene una raíz racional, $\frac{a}{b}$ en forma reducida, entonces $a|a\_0$ y $b|a\_n$
 {{% /theorem %}}
 
 {{% proof %}}
@@ -397,13 +397,13 @@ y deducimos las dos condiciones de divisibilidad el enunciado despejando primero
 {{% /proof %}}
 
 {{% definition %}}
-Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in \mathbb{Z}[x]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in \mathbb{Z}$ tal que $p|a_i$ para todo $1\leq i\leq n$.
+Un polinomio no nulo $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in \mathbb{Z}[ x ]$ es **primitivo** si el divisor común máximo de sus coeficientes es $1$, es decir, si no existe ningún primo $p\in \mathbb{Z}$ tal que $p|a_i$ para todo $1\leq i\leq n$.
 {{% /definition %}}
 
 Los únicos polinomios constantes primitivos son $\pm1$.
 
 {{% lemma %}}
-Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in \mathbb{Q}[x]$ no nulo existe una constante $c\in \mathbb{Q}$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in \mathbb{Z}[x]$ tal que
+Dado $f=f(x)=a_nx^n+\cdots+a_1x+a_0\in \mathbb{Q}[ x ]$ no nulo existe una constante $c\in \mathbb{Q}$, llamada **contenido**, y un polinomio primitivo $f_0(x)\in \mathbb{Z}[ x ]$ tal que
 
 $$f(x)=c\cdot f_0(x).$$
 
@@ -415,7 +415,7 @@ Además $c$ y $f_0(x)$ son únicos salvo signo. Denotaremos $c=\operatorname{con
 
 Veamos la existencia. Podemos quitar denominadores de los coeficientes de $f(x)$ multiplicando por una constante $d\in \mathbb{Z}$ no nula,
 
-$$d\cdot f(x)\in \mathbb{Z}[x].$$
+$$d\cdot f(x)\in \mathbb{Z}[ x ].$$
 
 Si $e$ es el divisor común máximo de los coeficientes de $d\cdot f(x)$ vemos que podemos tomar
 
@@ -426,44 +426,44 @@ c&=&\frac{e}{d}.
 \end{array}
 $$
 
-Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in \mathbb{Z}[x]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in \mathbb{Z}$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del divisor común máximo, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in \mathbb{Z}$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
+Probemos ahora la unicidad. Supongamos que $c\cdot f_0(x)=c'\cdot f'\_0(x)$ siendo $f_0(x),f'\_0(x)\in \mathbb{Z}[ x ]$ primitivos. Podemos además suponer sin pérdida de generalidad que $c,c'\in \mathbb{Z}$, multiplicando por un denominador común si fuera necesario. Como el divisor común máximo de los coeficientesde $f_0(x)$ es $1$, el divisor común máximo de los coeficientes de $c\cdot f_0(x)$ es $c$. Análogamente el divisor común máximo de los coeficientes de $c'\cdot f'\_0(x)$ es $c'$. Por la unicidad del divisor común máximo, $c$ y $c'$ son asociados, es decir $c'=u\cdot c$ donde $u\in \mathbb{Z}$ es una unidad. Por tanto, por la propiedad cancelativa, $f_0(x)=u\cdot f\_0'(x)$.
    {{% /proof %}}
 
 
 {{% remark %}}
-Si el contenido de un polinomio $f(x)\in \mathbb{Q}[x]$ está en $\mathbb{Z}$ entonces $f(x)\in \mathbb{Z}[x]$. Recíprocamente, el contenido de un polinomio $f(x)\in \mathbb{Z}[x]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f)\in \mathbb{Z}$. Es más, dada una constante $a\in \mathbb{Z}$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in \mathbb{Z}[x]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
+Si el contenido de un polinomio $f(x)\in \mathbb{Q}[ x ]$ está en $\mathbb{Z}$ entonces $f(x)\in \mathbb{Z}[ x ]$. Recíprocamente, el contenido de un polinomio $f(x)\in \mathbb{Z}[ x ]$ es el divisor común máximo de sus coeficientes, en particular $\operatorname{cont}(f)\in \mathbb{Z}$. Es más, dada una constante $a\in \mathbb{Z}$ tenemos que $a|f(x)$ si y solo si $a|\operatorname{cont}(f)$. Un polinomio $f(x)\in \mathbb{Z}[ x ]$ es primitivo si y solo si $\operatorname{cont}(f)=1$.
 {{% /remark %}}
 
 
 {{% theorem name="Lema de Gauss" %}}
-El producto de polinomios primitivos en $\mathbb{Z}[x]$ es primitivo.
+El producto de polinomios primitivos en $\mathbb{Z}[ x ]$ es primitivo.
 {{% /theorem %}}
 
 
 {{% proof %}}
 Dado un primo $p\in \mathbb{Z}$, consideramos el homomorfismo de **reducción módulo $p$**
 
-$$\phi_p\colon \mathbb{Z}[x]\longrightarrow (\mathbb{Z}/(p))[x]$$
+$$\phi_p\colon \mathbb{Z}[ x ]\longrightarrow (\mathbb{Z}/(p))[ x ]$$
 
 definido en las constantes como $\phi_p(a)=\bar a$, $a\in \mathbb{Z}$, tal que $\phi_p(x)=x$. Es decir,
 
 $$\phi_p(a_nx^n+\cdots+a_1x+a_0)=\bar a_nx^n+\cdots+\bar a_1x+\bar a_0.$$
 
-El homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \\mathbb{Q}er \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in \mathbb{Z}[x]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in \mathbb{Z}$ primo. Si $f,g\in \mathbb{Z}[x]$ son primitivos entonces
+El homomorfismo $\phi_p$ consiste simplemente en reducir los coeficientes módulo $(p)$. En particular $f\in \\mathbb{Q}er \phi_p$ si y solo si $p$ divide a todos los coeficientes de $f$. Por tanto $f\in \mathbb{Z}[ x ]$ es primitivo si y solo si $\phi_p(f)\neq 0$ para todo $p\in \mathbb{Z}$ primo. Si $f,g\in \mathbb{Z}[ x ]$ son primitivos entonces
 
 $$\phi_p(f\cdot g)=\phi_p(f)\cdot \phi_p(g)\neq 0$$
 
-para todo $p\in \mathbb{Z}$ primo ya que $(\mathbb{Z}/(p))[x]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
+para todo $p\in \mathbb{Z}$ primo ya que $(\mathbb{Z}/(p))[ x ]$ es un dominio. Es decir, $f\cdot g$ también es primitivo.
 {{% /proof %}}
 
 
 {{% corollary %}}
-Dados $f,g\in \mathbb{Q}[x]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$.
+Dados $f,g\in \mathbb{Q}[ x ]$ tenemos que $\operatorname{cont}(f\cdot g)=\operatorname{cont}(f)\cdot \operatorname{cont}(g)$.
 {{% /corollary %}}
 
 
 {{% proof %}}
-Tomamos $f,g\in \mathbb{Q}[x]$ y los descomponemos
+Tomamos $f,g\in \mathbb{Q}[ x ]$ y los descomponemos
 
 $$
 \begin{array}{rcl}
@@ -472,7 +472,7 @@ g&=&d\cdot g_0,
 \end{array}
 $$
 
-con $c,d\in \mathbb{Q}$ y $f_0,g_0\in \mathbb{Z}[x]$ primitivos. Entonces
+con $c,d\in \mathbb{Q}$ y $f_0,g_0\in \mathbb{Z}[ x ]$ primitivos. Entonces
 
 $$f\cdot g=(c\cdot d)\cdot (f_0\cdot g_0).$$
 
@@ -481,45 +481,45 @@ Como $f_0\cdot g_0$ es primitivo por el Lema de Gauss, esta es una descomposici�
 
 
 {{% proposition %}}
-Dados $f,g\in \mathbb{Z}[x]$, si $g|f$ en $\mathbb{Q}[x]$ y $g$ es primitivo entonces $g|f$ en $\mathbb{Z}[x]$.
+Dados $f,g\in \mathbb{Z}[ x ]$, si $g|f$ en $\mathbb{Q}[ x ]$ y $g$ es primitivo entonces $g|f$ en $\mathbb{Z}[ x ]$.
 {{% /proposition %}}
 
 
 {{% proof %}}
-Supongamos que $f=g\cdot q$ en $\mathbb{Q}[x]$. Como $g$ es primitivo,
+Supongamos que $f=g\cdot q$ en $\mathbb{Q}[ x ]$. Como $g$ es primitivo,
 
 $$\operatorname{cont}(f)=\operatorname{cont}(g)\operatorname{cont}(q)=\operatorname{cont}(q).$$
 
-Como $f\in \mathbb{Z}[x]$ su contenido está en $\mathbb{Z}$, y como este coindice con el de $q$, entonces $q\in \mathbb{Z}[x]$, por lo que $g|f$ en $\mathbb{Z}[x]$.
+Como $f\in \mathbb{Z}[ x ]$ su contenido está en $\mathbb{Z}$, y como este coindice con el de $q$, entonces $q\in \mathbb{Z}[ x ]$, por lo que $g|f$ en $\mathbb{Z}[ x ]$.
 {{% /proof %}}
 
 
 {{% proposition %}}
-Un polinomio $f\in \mathbb{Z}[x]$ no constante es irreducible en $\mathbb{Z}[x]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $\mathbb{Q}[x]$.
+Un polinomio $f\in \mathbb{Z}[ x ]$ no constante es irreducible en $\mathbb{Z}[ x ]$ $\Leftrightarrow$ $f$ es primitivo e irreducible en $\mathbb{Q}[ x ]$.
 {{% /proposition %}}
 
 
 {{% proof %}}
 
-$\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $\mathbb{Z}[x]$. Lo descomponemos como producto de divisores propios $f=gh$ en $\mathbb{Z}[x]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $\mathbb{Q}[x]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
+$\Leftarrow$ Supongamos que por reducción al absurdo que $f$ no es irreducible en $\mathbb{Z}[ x ]$. Lo descomponemos como producto de divisores propios $f=gh$ en $\mathbb{Z}[ x ]$. Si $g$ fuera constante entonces dividiría al contenido de $f$, que es $1$, por tanto $g$ sería una unidad, lo cual entra en contradicción con que sea un divisor propio. Lo mismo ocurriría si $h$ fuera constante. Si $g$ y $h$ no son constantes entonces también son divisores propios de $f$ en $\mathbb{Q}[ x ]$, pues no podrían ser unidades, luego $f$ no sería irreducible.
 
-$\\mathbb{Z}ightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $\mathbb{Z}[x]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $\mathbb{Q}[x]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $\mathbb{Q}$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in \mathbb{Z}[x]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $\mathbb{Z}[x]$ y por tanto es un divisor propio por cuestión de grados.
+$\\mathbb{Z}ightarrow$ Si $f$ no fuera primitivo tampoco sería irreducible en $\mathbb{Z}[ x ]$ pues su contenido sería un divisor propio. Supongamos por reducción al absurdo que $f$ tiene un divisor propio $g$ en $\mathbb{Q}[ x ]$. Aquí ser un divisor propio significa que $0<$ grado de $g<$ grado de $f$.  Multiplicando por una constante no nula de $\mathbb{Q}$ si fuera necesario (por el inverso del contenido), podemos suponer que $g\in \mathbb{Z}[ x ]$ y es primitivo. Por la proposción anterior $g$ también divide a $f$ en $\mathbb{Z}[ x ]$ y por tanto es un divisor propio por cuestión de grados.
 {{% /proof %}}
 
 
 {{% remark %}}
-Una constante $a\in \mathbb{Z}$ es irreducible en $\mathbb{Z}[x]$ si y solo si lo es en $\mathbb{Z}$.
+Una constante $a\in \mathbb{Z}$ es irreducible en $\mathbb{Z}[ x ]$ si y solo si lo es en $\mathbb{Z}$.
 {{% /remark %}}
 
 Finalmente veremos un par de condiciones suficientes más avanzadas para la irreducibilidad de un polinomio.
 
 {{% proposition %}}
-Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[x]$ es un polinomio primitivo de grado $n>0$, $p\in \mathbb{Z}$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(\mathbb{Z}/(p))[x]$, entonces $f$ es irreducible en $\mathbb{Z}[x]$.
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[ x ]$ es un polinomio primitivo de grado $n>0$, $p\in \mathbb{Z}$ es un primo que no divide $a\_n$ y la reducción de $f$ módulo $p$ es irreducible en $(\mathbb{Z}/(p))[ x ]$, entonces $f$ es irreducible en $\mathbb{Z}[ x ]$.
 {{% /proposition %}}
 
 
 {{% proof %}}
-Usaremos el homomorfismo $\phi_p\colon \mathbb{Z}[x]\rightarrow (\mathbb{Z}/(p))[x]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general,
+Usaremos el homomorfismo $\phi_p\colon \mathbb{Z}[ x ]\rightarrow (\mathbb{Z}/(p))[ x ]$ de reducción módulo $p$ introducido en la demostración del Lema de Gauss. En general,
 
 $$\operatorname{grado}(\phi_p(f))\leq \operatorname{grado}(f).$$
 
@@ -557,7 +557,7 @@ y tanto $\phi_p(g)$ como $\phi_p(h)$ serían divisores propios de $\phi_p(f)$, q
 
 
 {{% theorem name="Criterio de Eisenstein" label="eisenstein" %}}
-Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[x]$ es un polinomio primitivo de grado $n>0$ y $p\in \mathbb{Z}$ es un primo tal que:
+Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[ x ]$ es un polinomio primitivo de grado $n>0$ y $p\in \mathbb{Z}$ es un primo tal que:
 
 * $p$ no divide $a\_n$,
 
@@ -565,7 +565,7 @@ Si $f=a\_nx^n+\cdots+a\_1x+a\_0\in \mathbb{Z}[x]$ es un polinomio primitivo de g
 
 * $p^2$ no divide a $a_0$,
 
-entonces $f$ es irreducible en $\mathbb{Z}[x]$.
+entonces $f$ es irreducible en $\mathbb{Z}[ x ]$.
 {{% /theorem %}}
 
 

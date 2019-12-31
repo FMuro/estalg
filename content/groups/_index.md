@@ -462,38 +462,38 @@ $$
 
 Este ciclo se denotará también
 
-$$\sigma=(x\_1\; x\_2\;\cdots\; x\_n).$$
+$$\sigma=(x\_1\\; x\_2\\;\cdots\\; x\_n).$$
 
 Una **trasposición** es un ciclo de longitud 2.
 {{% /definition %}}
 
-Un ejemplo de ciclo $(1\; 2\; 3\; 4\; 5)$ donde el soporte es el total:
+Un ejemplo de ciclo $(1\\; 2\\; 3\\; 4\\; 5)$ donde el soporte es el total:
 
 ![Un ciclo](../images/cycle.png)
 
-Otro $(1\; 3\; 4\; 5)$ donde el soporte es un subconjunto propio:
+Otro $(1\\; 3\\; 4\\; 5)$ donde el soporte es un subconjunto propio:
 
 ![Otro ciclo](../images/cycle2.png)
 
-Otro ciclo más $(1\; 4\; 3\; 5\; 2)$ que ofrece un aspecto diferente debido al orden de sus entradas:
+Otro ciclo más $(1\\; 4\\; 3\\; 5\\; 2)$ que ofrece un aspecto diferente debido al orden de sus entradas:
 
 ![Otro ciclo más](../images/cycle3.png)
 
-¡El primer ejemplo de permutación que vimos también es un ciclo! Concretamente el $(2\; 5\; 3\; 4)$:
+¡El primer ejemplo de permutación que vimos también es un ciclo! Concretamente el $(2\\; 5\\; 3\\; 4)$:
 
 ![Permutación](../images/permutation.png)
 
-Un ejemplo de trasposición $(3\; 4)$ entre elementos consecutivos:
+Un ejemplo de trasposición $(3\\; 4)$ entre elementos consecutivos:
 
 ![Un ciclo](../images/transposition.png)
 
-Un ejemplo de trasposición $(2\; 4)$ entre elementos *no* consecutivos:
+Un ejemplo de trasposición $(2\\; 4)$ entre elementos *no* consecutivos:
 
 ![Otro ciclo](../images/transposition2.png)
 
 
 {{% watch %}}
-La notación de ciclo no es única, por ejemplo $(x\_1 \; x\_2 \; x\_3)=(x\_3 \; x\_1 \; x\_2)=(x\_2 \; x\_3 \; x\_1)$.
+La notación de ciclo no es única, por ejemplo $(x\_1 \\; x\_2 \\; x\_3)=(x\_3 \\; x\_1 \\; x\_2)=(x\_2 \\; x\_3 \\; x\_1)$.
 {{% /watch %}}
 
 Cualquier notación para los ciclos que quepa en una línea es intrínsecamente mala, lo ideal sería algo así:
@@ -511,7 +511,7 @@ El orden de un ciclo coincide con su longitud.
 {{% /proposition %}}
 
 {{% proof %}}
-Sea $\sigma=(x\_1\;\cdots\; x\_n)\in \operatorname{Sim}(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
+Sea $\sigma=(x\_1\\;\cdots\\; x\_n)\in \operatorname{Sim}(X)$. Es fácil ver que $\sigma^k(x\_1)=x\_{1+k}\neq x\_1$ para todo $1\leq k<n$, así que $\sigma^k\neq 1\_X$, pero $\sigma^n=1\_X$.
 {{% /proof %}}
 
 
@@ -520,7 +520,7 @@ Todo ciclo es producto de trasposiciones.
 {{% /proposition %}}
 
 {{% proof %}}
-Es fácil comprobar que $(x\_1\;\cdots\; x\_n)=(x\_1\; x\_2)\cdots (x\_{n-1}\; x\_n)$.
+Es fácil comprobar que $(x\_1\\;\cdots\\; x\_n)=(x\_1\\; x\_2)\cdots (x\_{n-1}\\; x\_n)$.
 {{% /proof %}}
 
 
@@ -620,7 +620,7 @@ $$
 $$
 Como $\sigma^m(x)=x$, entonces $(\sigma^m)^c(x)=0$ si $c\geq 0$. Es más, $\sigma^m(x)=x$ también implica que $x=\sigma^{-m}(x)$, así que $(\sigma^m)^c(x)=0$ también si $c<0$. Por tanto, en efecto, $\sigma^n(x)=\sigma^r(x)$.
 
-Hemos probado que $\sigma$ se comporta sobre cada órbita $\bar x=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ como un ciclo de longitud $m$, ya que $\sigma^m(x)=x$, de hecho $m$ era el menor entero positivo que satisfacía esta propiedad. Esto demuestra que $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\;\sigma(x)\;\dots\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\operatorname{sop}(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
+Hemos probado que $\sigma$ se comporta sobre cada órbita $\bar x=\\{x,\sigma(x),\dots,\sigma^{m-1}(x)\\}$ como un ciclo de longitud $m$, ya que $\sigma^m(x)=x$, de hecho $m$ era el menor entero positivo que satisfacía esta propiedad. Esto demuestra que $\sigma$ es el producto de los ciclos asociados a las órbitas no unitarias de la anterior relación de equivalencia. Es decir, por cada órbita no unitaria $\bar{x}$, el ciclo $(x\\;\sigma(x)\\;\dots\\;\sigma^{m-1}(x))$ aparece en la factorización de $\sigma$, donde $m$ es el cardinal de $\bar{x}$. El orden de los factores de este producto no importa porque los ciclos son disjuntos, al ser sus soportes clases de una relacion de equivalencia. Hay una cantidad finita de órbitas no unitarias, ya que hemos visto que están contenidas en $\operatorname{sop}(\sigma)$, que es finito. La unicidad es obvia, pues las órbitas, y por tanto los ciclos, están determinados por $\sigma$ y la relación de equivalencia asociada.
 {{% /proof %}}
 
 
@@ -648,7 +648,7 @@ $$
 \end{array}
 $$
 
-Por tanto $\sigma =(1\;3\;5\;4)(2\;6)=(2\;6)(1\;3\;5\;4)=(1\;3)(3\;5)(5\;4)(2\;6)$.
+Por tanto $\sigma =(1\\;3\\;5\\;4)(2\\;6)=(2\\;6)(1\\;3\\;5\\;4)=(1\\;3)(3\\;5)(5\\;4)(2\\;6)$.
 {{% /example %}}
 
 {{% proposition %}}
@@ -721,7 +721,7 @@ Todas las trasposiciones son impares.
 {{% /proposition %}}
 
 {{% proof %}}
-Las inversiones de una trasposición $(i\; j)\in S_n$ con $i<j$ son:
+Las inversiones de una trasposición $(i\\; j)\in S_n$ con $i<j$ son:
 $$
 \begin{array}{l}
 (i,j),\cr
@@ -825,7 +825,7 @@ Un subgrupo $H\subset G$ es un grupo por derecho propio con la operación binari
 
 * El subgrupo $SL(n,k)=\\{A\mid |A|=1\\}\subset GL(n,k)$ de matrices $n\times n$ sobre un cuerpo $k$ de determinante $1$.
 
-* El subrgupo de Klein $\\{(), (1\;2)(3\;4), (1\;3)(2\;4), (1\;4)(2\;3)\\}\subset S_4$.
+* El subrgupo de Klein $\\{(), (1\\;2)(3\\;4), (1\\;3)(2\\;4), (1\\;4)(2\\;3)\\}\subset S_4$.
 
 {{% /example %}}
 
@@ -874,12 +874,12 @@ $$
 \begin{array}{rcl}
 S_n&=&\langle \text{ciclos} \rangle\cr
 &=&\langle \text{trasposiciones} \rangle\cr
-&=&\langle (1\;2),\dots,(n-1\; n) \rangle\cr
-&=&\langle (1\;2),\dots, (1\; n) \rangle\cr
-&=&\langle (1\;2),(1\;\dots\; n) \rangle.
+&=&\langle (1\\;2),\dots,(n-1\\; n) \rangle\cr
+&=&\langle (1\\;2),\dots, (1\\; n) \rangle\cr
+&=&\langle (1\\;2),(1\\;\dots\\; n) \rangle.
 \end{array}
 $$
-Observa que hemos omitido las llaves en los conjuntos anteriores, es decir, no hemos escrito $\langle\\{ (1\;2),(1\;\dots\; n) \\}\rangle$. Lo hacemos para no sobrecargar la notación.
+Observa que hemos omitido las llaves en los conjuntos anteriores, es decir, no hemos escrito $\langle\\{ (1\\;2),(1\\;\dots\\; n) \\}\rangle$. Lo hacemos para no sobrecargar la notación.
 {{% /example %}}
 
 {{% definition %}}
@@ -926,7 +926,7 @@ y $x^r\in \\{e,x,\dots, x^{n-1}\\}$. Esto termina la demostración.
 
 
 {{% example name="¿Es $S_n$ cíclico?" %}}
-Tenemos que $S_2=\langle (1\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que
+Tenemos que $S_2=\langle (1\\; 2)\rangle$, pero $S_n$ no es cíclico para ningún otro $n>2$. Veámoslo. Todo elemento $\sigma\in S_n$ se puede descomponer como producto de $c$ ciclos disjuntos de longitud $l_1,\dots, l_c$. El número de elementos del soporte de $\sigma$ es $l_1+\cdots+l_c\leq n$. Es fácil pero tedioso ver que
 
 $$o(\sigma)=\operatorname{mcd}(l_1,\dots, l_c)\leq l_1\cdots l_c < n!$$
 
@@ -986,20 +986,20 @@ Este cociente se denomina $\mathbb{Z}$ **módulo** $n$.
 {{% proposition %}}
 Dado un grupo  $G$, un subgrupo $H\subset G$ y un elemento $x\in G$, la clase de equivalencia de $x$ para la relación $\sim_H$ es
 
-$$[x]=x H:=\\{ x h\mid h\in H\\}.$$
+$$[ x ]=x H:=\\{ x h\mid h\in H\\}.$$
 
 {{% /proposition %}}
 
 {{% proof %}}
-$\supset$ Dado $xh\in xH$, como $x^{-1}(xh)=h\in H$, $x\sim_H xh$, luego $xh\in [x]$.
+$\supset$ Dado $xh\in xH$, como $x^{-1}(xh)=h\in H$, $x\sim_H xh$, luego $xh\in [ x ]$.
 
-$\subset$ Dado $y\in[x]$, como $x\sim_H y$ tenemos que $x^{-1}y\in H$ así que $y=x(x^{-1}y)\in x H$.
+$\subset$ Dado $y\in[ x ]$, como $x\sim_H y$ tenemos que $x^{-1}y\in H$ así que $y=x(x^{-1}y)\in x H$.
 {{% /proof %}}
 
 {{% remark %}}
 La clase de equivalencia $xH$ se denomina **clase a izquierda**. Podemos definir otra relación de equivalencia en $G$:
 
-$$x\; {}\_H\\!\sim y \Leftrightarrow xy^{-1}\in H.$$
+$$x\\; {}\_H\\!\sim y \Leftrightarrow xy^{-1}\in H.$$
 
 
 
@@ -1357,9 +1357,9 @@ La noción de subrgupo normal $K\subset G$ depende tanto de $K$ como de $G$. Si 
 {{% /watch %}}
 
 {{% example name="Subgrupos (no) normales" %}}
-Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\; 2)\\}\subset S_{3}$ no es normal puesto que
+Dado un grupo cualquiera $G$, los subgrupos trivial y total $\\{e\\}$ y $G$ son normales. El subgrupo $K=\\{(),(1\\; 2)\\}\subset S_{3}$ no es normal puesto que
 
-$$(1\;3)^{-1}(1\;2)(1\;3)=(1\;3)(1\;2)(1\;3)=(2\;3)\notin K.$$
+$$(1\\;3)^{-1}(1\\;2)(1\\;3)=(1\\;3)(1\\;2)(1\\;3)=(2\\;3)\notin K.$$
 
 {{% /example %}}
 
@@ -1482,7 +1482,7 @@ Para cualquier grupo $G$, la proyección natural $\pi\colon G\stackrel{\cong}\tw
 Hemos identificado entonces subgrupos normales con núcleos de homomorfismos. No podemos hacer lo mismo con las imágenes de homomorfismos.
 
 {{% watch %}}
-Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\operatorname{im}\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
+Si $G$ es un grupo y $H\subset G$ es un subgrupo que no es normal, la imagen de la inclusión $i\colon H\hookrightarrow G$ es $\operatorname{im}\\; i=H$, por tanto la imagen de un homomorfismo, en general, no es normal en el grupo de llegada.
 {{% /watch %}}
 
 Veamos ahora una vesión del teorema de factorización de aplicaciones para grupos y homomorfismos.

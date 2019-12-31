@@ -57,7 +57,7 @@ Los números enteros $\mathbb Z$, racionales $\mathbb Q$, reales $\mathbb R$ y c
 {{% /example %}}
 
 {{% example name="Polinomios" label="polynomials" %}}
-Dado un anillo conmutativo $R$, podemos considerar su anillo de **polinomios** $R[x]$ en una variable $x$, cuyos elementos $p(x)\in R[x]$ son de la forma
+Dado un anillo conmutativo $R$, podemos considerar su anillo de **polinomios** $R[ x ]$ en una variable $x$, cuyos elementos $p(x)\in R[ x ]$ son de la forma
 
 $$p(x)=a_nx^n+\cdots+a_1x+a_0$$
 
@@ -171,7 +171,7 @@ Un subanillo $S\subset R$ es un anillo por derecho propio con la suma y la multi
 El subconjunto $\\{0\\}\subset R$ no es un subanillo, a menos que sean iguales.
 {{% /watch %}}
 
-Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[x]$.
+Ejemplos de subanillos son $\mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ y $R\subset R[ x ]$.
 
 {{% exercise %}}
 Dado un entero primo $p\in\mathbb{Z}$, comprueba que
@@ -250,7 +250,7 @@ Si $R$ es un anillo y $S\subset R$ es un subanillo, la **inclusión** $i\colon S
 
 
 {{% example name="La evaluación" %}}
-Dado un anillo conmutativo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev\_a\colon R[x]\rightarrow R$ como $ev\_a(p(x))=p(a)$.
+Dado un anillo conmutativo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev\_a\colon R[ x ]\rightarrow R$ como $ev\_a(p(x))=p(a)$.
 {{% /example %}}
 
 
@@ -400,7 +400,7 @@ Más adelante veremos que no hay más subgrupos de $\mathbb{Z}$ que estos y que 
 {{% proposition %}}
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$,
 
-$$\operatorname{ker} f=\\{a\in R\;|\;f(a)=0\\},$$
+$$\operatorname{ker} f=\\{a\in R\\;|\\;f(a)=0\\},$$
 
 es un ideal $\operatorname{ker} f\subset R$.
 {{% /proposition %}}
@@ -409,7 +409,7 @@ es un ideal $\operatorname{ker} f\subset R$.
 Sabemos que $\operatorname{ker} f\subset R$ es un subgrupo aditivo. Queda probar la condición de ideal. Si $a\in\operatorname{ker} f$ y $r\in R$ entonces $f(ra)=f( r )f(a)=f( r )0=0$ luego $ra\in \operatorname{ker} f$.
 {{% /proof %}}
 
-Por tanto, en $R[x]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo $ev_1\colon R[x]\rightarrow R$ de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$.
+Por tanto, en $R[ x ]$, los polinomios $f(x)$ tales que $f(1)=0$ forman un ideal pues constituyen el núcleo del homomorfismo $ev_1\colon R[ x ]\rightarrow R$ de evaluación en $1\in R$. De hecho podríamos evaluar en cualquier otro elemento de $R$.
 
 {{% remark %}}
 Un homomorfismo de anillos $f\colon R\rightarrow S$ es inyectivo si y solo si $\operatorname{ker} f=\\{0\\}$, ya que esto es cierto a nivel de grupos. Dicho de otro modo, para probar la inyectividad de $f$ basta ver que si $a\in R$ es tal que $f(a)=0$ entonces $a=0$.
@@ -537,11 +537,11 @@ Basta aplicarle el primer teorema de isomorfía a la identidad $\operatorname{1}
 {{% /proof %}}
 
 {{% corollary %}}
-$\mathbb{R}[x]/(x^2+1)\cong\mathbb{C}$.
+$\mathbb{R}[ x ]/(x^2+1)\cong\mathbb{C}$.
 {{% /corollary %}}
 
 {{% proof %}}
-Consideremos el homomorfismo $f\colon \mathbb R[x]\rightarrow\mathbb C$ definido como $f(p(x))=p(i)$. Este homomorfismo está bien definido porque es la composición de la inclusión $\mathbb{R}[x]\subset \mathbb{C}[x]$ y la evaluación $ev_i\colon\mathbb{C}[x]\rightarrow\mathbb{C}$. Es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Usando el primer teorema de isomorfía, basta ahora ver que $\operatorname{ker} f=(x^2+1)\subset\mathbb{R}[x]$. La inclusión $\supset$ es sencilla porque todo elemento $p(x)\in (x^2+1)$ es múltiplo del polinomio $x^2+1$, es decir, de la forma $p(x)=(x^2+1)q(x)$ y entonces $f(p(x))=p(i)=(i^2+1)q(i)=0$. Para ver $\subset$, tomamos ahora un elemento arbitrario $p(x)\in \operatorname{ker} f$, es decir, tal que $p(i)=0$. Dividimos $p(x)$ entre $x^2+1$, obteniendo así una expresión en $\mathbb{R}[x]$ de la forma
+Consideremos el homomorfismo $f\colon \mathbb R[ x ]\rightarrow\mathbb C$ definido como $f(p(x))=p(i)$. Este homomorfismo está bien definido porque es la composición de la inclusión $\mathbb{R}[ x ]\subset \mathbb{C}[ x ]$ y la evaluación $ev_i\colon\mathbb{C}[ x ]\rightarrow\mathbb{C}$. Es sobreyectivo ya que dado $a+ib\in\mathbb C$, $f(bx+a)=a+ib$ por tanto $\operatorname{im} f =\mathbb C$. Usando el primer teorema de isomorfía, basta ahora ver que $\operatorname{ker} f=(x^2+1)\subset\mathbb{R}[ x ]$. La inclusión $\supset$ es sencilla porque todo elemento $p(x)\in (x^2+1)$ es múltiplo del polinomio $x^2+1$, es decir, de la forma $p(x)=(x^2+1)q(x)$ y entonces $f(p(x))=p(i)=(i^2+1)q(i)=0$. Para ver $\subset$, tomamos ahora un elemento arbitrario $p(x)\in \operatorname{ker} f$, es decir, tal que $p(i)=0$. Dividimos $p(x)$ entre $x^2+1$, obteniendo así una expresión en $\mathbb{R}[ x ]$ de la forma
 
 $$p(x)=c(x)(x^2+1)+r(x).$$
 
@@ -595,7 +595,7 @@ En un anillo $R$, la ecuación $ab=ac$ equivale a $a(b-c)=0$. Si $a\neq 0$ y $R$
 En general, la propiedad cancelativa es cierta si $a$ es una unidad, ya que en ese caso podemos multiplicar a izquierda por el inverso de $a$.
 
 {{% proposition label="polydomain" %}}
-Si $R$ es un dominio entonces $R[x]$ también.
+Si $R$ es un dominio entonces $R[ x ]$ también.
 {{% /proposition %}}
 
 

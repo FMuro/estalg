@@ -221,7 +221,7 @@ Estas propiedades nos permiten definir inductivamente la **unión** de una *cant
 Veamos ahora el caso posiblemente infinito.
 
 {{% definition %}}
-La **unión** de una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ se define como $\bigcup_{i\in I}A_i=\\{x\;|\;\exists i\in I| x\in A_i\\}$.
+La **unión** de una familia de conjuntos $\\{ A\_i \\}\_{i\in I}$ se define como $\bigcup_{i\in I}A_i=\\{x\\;|\\;\exists i\in I| x\in A_i\\}$.
 {{% /definition %}}
 
 Igual que antes, si $I$ es finito, esta definición coincide con la anterior, pero es también válida para $I$ infinito.
@@ -606,7 +606,7 @@ En una sobreyectiva está prohibida la siguiente situación:
 ![Aplicación no sobreyectiva](../images/nosurjective.png)
 
 {{% remark %}}
-En notación matemática, $f\colon A\rightarrow B$ es **inyectiva** si, dados $a,a'\in A$, $f(a)=f(a')\Rightarrow a=a'$, y $f$ es **sobreyectiva** si $\forall b\in B\;\exists a\in A|f(a)=b$. Las flechas de las aplicaciones inyectivas se denotan $f\colon A\hookrightarrow B$ y las de las sobreyectivas $f\colon A\twoheadrightarrow B$.
+En notación matemática, $f\colon A\rightarrow B$ es **inyectiva** si, dados $a,a'\in A$, $f(a)=f(a')\Rightarrow a=a'$, y $f$ es **sobreyectiva** si $\forall b\in B\\;\exists a\in A|f(a)=b$. Las flechas de las aplicaciones inyectivas se denotan $f\colon A\hookrightarrow B$ y las de las sobreyectivas $f\colon A\twoheadrightarrow B$.
 {{% /remark %}}
 
 {{% watch %}}
@@ -614,7 +614,7 @@ Es un error tristemente común el confundir la caracterización anterior de la i
 {{% /watch %}}
 
 {{% lemma %}}
-Una aplicación $f\colon A \rightarrow B$ es biyectiva $\Leftrightarrow$ $\forall b\in B\;\exists! a\in A|f(a)=b$.
+Una aplicación $f\colon A \rightarrow B$ es biyectiva $\Leftrightarrow$ $\forall b\in B\\;\exists! a\in A|f(a)=b$.
 {{% /lemma %}}
 
 {{% proof %}}
@@ -686,7 +686,7 @@ $$
 Sea $f \colon  A \rightarrow B$ una aplicación.
 
 * La **imagen directa** de un subconjunto del dominio $U\subset A$
-es el subconjunto del codominio $f(U)=\\{b\in B\;|\;\exists a\in U|f(a)=b\\}\subset B$.
+es el subconjunto del codominio $f(U)=\\{b\in B\\;|\\;\exists a\in U|f(a)=b\\}\subset B$.
 * La **imagen inversa** de un subconjunto del codominio $V\subset B$ es subconjunto del dominio $f^{-1}(V)=\\{a\in A| f(a)\in V\\}\subset A$.
 
 La **imagen** de la aplicación $A$ se define como $\operatorname{im}f=f(A)$.
@@ -875,13 +875,13 @@ En las relaciones de equivalencia, y por tanto en los cocientes, el problema que
 {{% example name="Conjuntos cociente" %}}
 Aquí identificamos los conjuntos cociente del ejemplo de arriba, en algunos casos estableciendo una biyección con otro conjunto más sencillo.
 
-* $\\{$Seres humanos$\\}/$poseer el mismo grupo sanguíneo $\cong \\{0, A,B,AB\\}\colon [x]\mapsto$ grupo sanguíneo de cualquier representante.
+* $\\{$Seres humanos$\\}/$poseer el mismo grupo sanguíneo $\cong \\{0, A,B,AB\\}\colon [ x ]\mapsto$ grupo sanguíneo de cualquier representante.
 
-* $\\{$Estudiantes de primero de Matemáticas$\\}/$estar en el mismo grupo de Álgebra Básica $\cong \\{A,B,C,D,E,F\\}\colon [x]\mapsto$ grupo al que pertenece un representante cualquiera.
+* $\\{$Estudiantes de primero de Matemáticas$\\}/$estar en el mismo grupo de Álgebra Básica $\cong \\{A,B,C,D,E,F\\}\colon [ x ]\mapsto$ grupo al que pertenece un representante cualquiera.
 
-* $\mathbb Z/\sim_2\;=\; \\{[0],[1]\\}$.
+* $\mathbb Z/\sim_2\\;=\\; \\{[0],[1]\\}$.
 
-* $\mathbb Z/\sim_n\;=\;\\{[0],\dots,[n-1]\\}$ si $n>0$.
+* $\mathbb Z/\sim_n\\;=\\;\\{[0],\dots,[n-1]\\}$ si $n>0$.
 
 * En este caso la proyección natural es biyectiva $\pi\colon A\cong A/=$.
 
@@ -962,7 +962,7 @@ Prueba que $\sim\_f$ es en efecto una relación de equivalencia. Describe el con
 
 
 {{% theorem name="Factorización canónica" %}}
-Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\;\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
+Dada una aplicación $f\colon A\to B$, existe una única aplicación $\overline{f}\colon A/\sim_f\\;\rightarrow \operatorname{im} f$ tal que el siguiente diagrama es conmutativo
 
 ![Factorización canónica](../images/canonica.png)
 
@@ -1200,7 +1200,7 @@ Si $X$ es un conjunto cualquiera, no existe ninguna aplicación sobreyectiva $\v
 Sea $\varphi: X \longrightarrow \mathcal{P}(X)$ una aplicación arbitraria. Veamos que $\varphi$ nunca puede ser sobreyectiva. La idea fundamental consiste en considerar el siguiente subconjunto de $X$:
 
 
-\centerline{\framebox{$ A:=\\{ x\in X\, |\, x\notin \varphi(x)\\} \subset X.
+\centerline{\framebox{$ A:=\\{ x\in X\\, |\ x\notin \varphi(x)\\} \subset X.
 $}}
 
 
