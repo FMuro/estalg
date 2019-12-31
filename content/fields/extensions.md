@@ -661,7 +661,7 @@ El ángulo de $60º$ es constructible pero su trisección no.
 {{% /proposition %}}
 
 
-{{% proof %}}z
+{{% proof %}}
 Este ángulo se puede construir porque $\cos  60º=\frac{1}{2}$ es constructible. Cada ángulo de su trisección tendría $20º$ y el ángulo de $20º$ no es constructible. En efecto, la siguiente fórmula trigonométrica es cierta en general
 
 $$\cos 3\theta=4\cos^3\theta-3\cos\theta.$$
