@@ -711,12 +711,12 @@ yf(y+1)&=&(y+1)^p-1\cr
 Aplicando la propiedad cancelativa en el dominio $\mathbb Q[y]$ obtenemos que
 
 $$\begin{array}{rcl}
-p(y+1)&=&\sum\_{n=1}^{p}\binom{p}{n}y^{n-1}.
+f(y+1)&=&\sum\_{n=1}^{p}\binom{p}{n}y^{n-1}.
 \end{array}$$
 
 Este polinomio es irreducible por el criterio de Eisenstein para el primo $p$ ya que el coeficiente líder es $1$, el término independiente es $p$, y $p$ divide a $\binom{p}{n}$ para todo $0{<}n{<}p$. 
 
-Por ser el polinomio ciclotómico $f(x)$ irreducible y tener a $\zeta$ como raíz, deducimos que $\zeta$ tiene grado $p-1$ sobre $\mathbb Q$. Si $\frac{2\pi}{p}$ fuera constructible, tendríamos un cuerpo $K\subset\mathbb R$ tal que $\cos\frac{2\pi}{p}, \sin\frac{2\pi}{p}\in K$ y $[K:\mathbb Q]=2^n$. Como $K$ está contenido en los reales, $[K[i]:K]=2$, luego $[K[i]:\mathbb Q]=[K[i]:K][K:\mathbb Q]=2^{n+1}$. Además, $\zeta\in K[i]$ luego el grado de $z$, que es $p-1$, ha de ser una potencia de $2$.
+Por ser el polinomio ciclotómico $f(x)$ irreducible y tener a $\zeta$ como raíz, deducimos que $\zeta$ tiene grado $p-1$ sobre $\mathbb Q$. Si $\frac{2\pi}{p}$ fuera constructible, tendríamos un cuerpo $K\subset\mathbb R$ tal que $\cos\frac{2\pi}{p}, \sin\frac{2\pi}{p}\in K$ y $[K:\mathbb Q]=2^n$. Como $K$ está contenido en los reales, $[K[i]:K]=2$, luego $[K[i]:\mathbb Q]=[K[i]:K][K:\mathbb Q]=2^{n+1}$. Además, $\zeta\in K[i]$ luego el grado de $\zeta$, que es $p-1$, ha de ser una potencia de $2$.
 {{% /proof %}}
 
 
