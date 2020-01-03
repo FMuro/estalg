@@ -204,7 +204,7 @@ Decimos que $f$ es **simétrico** si $f=\sigma(f)$ para todo $\sigma\in S_n$.
 {{% /definition %}}
 
 {{% example name="Una permutación aplicada a un polinomio" %}}
-Si tomamos el polinomio $f=2u\_1^2u\_3^2-3u\_2\in\mathbb{Z}[u\_1,u\_2,u\_3]$ y le aplicamos la permutacición
+Si tomamos el polinomio $f=2u\_1^2u\_3^2-3u\_2\in\mathbb{Z}[u\_1,u\_2,u\_3]$ y le aplicamos la permutación
 
 $$\sigma=\left(
 \begin{array}{ccc}
@@ -217,7 +217,7 @@ obtenemos el polinomio
 
 $$\sigma(f)=2u\_2^2u\_1^2-3u\_3.$$
 
-Consideranto las $3!=6$ permutaciones de $S_3$, puedes comprobar que la órbita de $f$ es el conjunto
+Considerando las $3!=6$ permutaciones de $S_3$, puedes comprobar que la órbita de $f$ es el conjunto
 
 $$
 \\{2u\_1^2u\_3^2-3u\_2, 2u\_2^2u\_3^2-3u\_1, 2u\_1^2u\_2^2-3u\_3\\}.
