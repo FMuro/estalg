@@ -76,14 +76,15 @@ Ya hemos visto que $K=F[\sqrt{\delta}]$ para cierto $\delta\in F$, entonces $K$ 
 El **grupo simétrico** de $n$ letras, es decir el **grupo de permutaciones** de $\\{1,\dots,n\\}$, se denotará $S\_n$. 
 
 {{% proposition %}}
-Dada una extensión $F\subset K$, si $K$ es el cuerpo de descomposición de un polinomio $p(x)\in F[ x ]$ con $n$ raíces distintas en $K$, entonces hay un único homomorfismo inyectivo
+Dada una extensión $F\subset K$, si $K$ es el cuerpo de descomposición de un polinomio $p(x)\in F[ x ]$ con $n$ raíces distintas en $K$, entonces hay un único homomorfismo
 
 $$\varphi\colon G(K/F)\longrightarrow S\_n$$
 
-tal que, si $\alpha\_1,\dots,\alpha\_n\in K$ son la raíces de $p(x)$ en $K$ y $f\in G(K/F)$, la permutación $\varphi(f)=\sigma$ es la única que satisface la siguiente ecuación para todo $i=1,\dots,n$,
+tal que, si $\alpha\_1,\dots,\alpha\_n\in K$ son las raíces de $p(x)$ en $K$ y $f\in G(K/F)$, la permutación $\varphi(f)=\sigma$ es la única que satisface la siguiente ecuación para todo $i=1,\dots,n$,
 
 $$f(\alpha\_i)=\alpha_{\sigma(i)}.$$
 
+Además, este homomorfismo es inyectivo.
 {{% /proposition %}}
 
 
