@@ -175,7 +175,7 @@ Sea $F\subset K$ una extensión y $\alpha\in K$ un elemento algebraico.
 
 * Si $p\in\mathbb Z$ es primo, el grado de $\sqrt[n]{p}\in\mathbb C$ sobre $\mathbb Q$ es $n$ puesto que es raíz del polinomio irreducible $x^n-p\in\mathbb Q[ x ]$. Este polinomio es irreducible por el criterio de [Eisenstein](../../rings/factorization/#eisenstein) para el primo $p$. Hay por tanto números complejos, incluso reales, de grado cualquiera sobre $\mathbb Q$.
 
-* Si $\mathbb C\subset K$ es una extensión, los únicos elementos algebraicos son los de $\mathbb C$ ya que los únicos polinomios irreducibles en $\mathbb C[ x ]$ son los de grado $1$, así que todo elemento algebraico tiene grado $1$. Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
+* Si $\mathbb C\subset K$ es una extensión, los únicos elementos algebraicos son los de $\mathbb C$ ya que los únicos polinomios irreducibles en $\mathbb C[ x ]$ son los de grado $1$.
 
 {{% /example %}}
 
@@ -232,6 +232,7 @@ No puede ser trascendente porque el anillo de polinomios $F[ x ]$ no tiene dimen
 Si $F\subset K$ es una extensión finita, todo $\alpha\in K$ es algebraico. 
 {{% /corollary %}}
 
+Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
 
 {{% proof %}}
 Es consecuencia de que $F[\alpha]\subset K$ es un sub-$F$-espacio vectorial.  
