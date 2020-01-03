@@ -230,7 +230,7 @@ La órbita de un polinomio en $n$ variables tiene como máximo $|S\_n|=n!$ eleme
 
 $$\sigma\colon R[u\_1,\dots,u\_n]\rightarrow R[u\_1,\dots,u\_n]$$
 
-definida arriba es, por el principio de sustitución, el único homomorfismo de anillos tal que $\sigma\_{|\_R}$ es la inlcusión $R\subset R[u\_1,\dots,u\_n]$ y $\sigma(u\_i)=u\_{\sigma(i)}$. Dadas $\sigma,\tau\in S_n$ y $f\in R[u\_1,\dots,u\_n]$,
+definida arriba es, por el principio de sustitución, el único homomorfismo de anillos tal que $\sigma\_{|\_R}$ es la inclusión $R\subset R[u\_1,\dots,u\_n]$ y $\sigma(u\_i)=u\_{\sigma(i)}$. Dadas $\sigma,\tau\in S_n$ y $f\in R[u\_1,\dots,u\_n]$,
 
 $$\sigma(\tau(f))=(\sigma\tau)(f),$$
 
