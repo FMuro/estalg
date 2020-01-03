@@ -125,7 +125,7 @@ así que $f=\operatorname{id}\_{K}$. En las ecuaciones anteriores hemos usado qu
 {{% /proof %}}
 
 
-Uno homomorfismo $\varphi$ como el del enunciado se denomina **representación** del grupo de Galois como grupo de permutaciones.
+Un homomorfismo $\varphi$ como el del enunciado se denomina **representación** del grupo de Galois como grupo de permutaciones.
 
 {{% proposition %}}
 Dadas dos extensiones consecutivas $F\subset L\subset K$, tenemos que $G(K/L)\subset G(K/F)$. 
