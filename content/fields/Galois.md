@@ -481,7 +481,7 @@ Sabemos que, en general, $H\subset G(K/K^H)$ es un subgrupo, así que $|H|\leq |
 {{% /proof %}}
 
 {{% lemma %}}
-Sea $F\subset K=F[\gamma\_1]$ una extensión finita, $g\in F[ x ]$ es el polinomio irreducible de $\gamma\_1$ y $\gamma\_1,\dots,\gamma\_r\in K$ las distintas raíces de $g$ en este cuerpo. Para cada $1\leq i\leq n$ existe un único $f\_i\in G(K/F)$ tal que $f\_i(\gamma\_1)=\gamma\_i$. Es más, $G(K/F)=\\{f\_1,\dots,f\_r\\}$.
+Sea $F\subset K=F[\gamma\_1]$ una extensión finita, $g\in F[ x ]$ es el polinomio irreducible de $\gamma\_1$ y $\gamma\_1,\dots,\gamma\_r\in K$ las distintas raíces de $g$ en este cuerpo. Para cada $1\leq i\leq r$ existe un único $f\_i\in G(K/F)$ tal que $f\_i(\gamma\_1)=\gamma\_i$. Es más, $G(K/F)=\\{f\_1,\dots,f\_r\\}$.
 {{% /lemma %}}
 
 {{% proof %}}
@@ -489,7 +489,7 @@ Todos los $\gamma\_i$ poseen el mismo grado sobre $F$ ya que tienen el mismo pol
 
 $$h\_i\colon \frac{F[ x ]}{(g)}\cong K$$
 
-que deja fijo a $K$ tal que $h(\bar{x})=\gamma\_i$. Por tanto, $f\_i=h\_ih\_1^{-1}\in G(K/F)$ es el único que satisface la propiedad del enunciado. Todo elemento $f\in G(K/F)$  está determinado por $f(\gamma\_1)$ y además preserva raíces de $g\in F[ x ]$, así que $G(K/F)$ consta necesariamente de los $f\_i$ anteriores.
+que deja fijo a $F$ tal que $h(\bar{x})=\gamma\_i$. Por tanto, $f\_i=h\_ih\_1^{-1}\in G(K/F)$ es el único que satisface la propiedad del enunciado. Todo elemento $f\in G(K/F)$  está determinado por $f(\gamma\_1)$ y además preserva raíces de $g\in F[ x ]$, así que $G(K/F)$ consta necesariamente de los $f\_i$ anteriores.
 {{% /proof %}}
 
 {{% theorem %}}
