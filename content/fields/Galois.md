@@ -452,9 +452,9 @@ Sea $F\subset K$ una extensión y $H\subset G(K/F)$ un subgrupo. La extensión $
 {{% proof %}}
 $\Leftarrow$ Se sigue del teorema anterior que la extensión $K^H\subset K$ es algebraica. Es más, el grado de cualquier elemento es el número de elementos de una órbita, por tanto es $\leq |H|$. El lema anterior implica pues que $K^H\subset K$ es finita. 
 
-$\Rightarrow$ Sea $\gamma\in K$ un elemento primitivo, $K=K^H[\gamma]$. Cualquier $f\in H$ dejan fijo a $K^H$, así que $f,g\in H$ son iguales si y solo si $f(\gamma)=g(\gamma)$. Esto demuestra que la órbita de $\gamma$ tiene tantos elementos como $H$. Por tanto $H$ ha de ser finito en virtud del teorema anterior. 
+$\Rightarrow$ Sea $\gamma\in K$ un elemento primitivo, $K=K^H[\gamma]$. Cualquier $f\in H$ deja fijo a $K^H$, así que $f,g\in H$ son iguales si y solo si $f(\gamma)=g(\gamma)$. Esto demuestra que la órbita de $\gamma$ tiene tantos elementos como $H$. Por tanto $H$ ha de ser finito en virtud del teorema anterior. 
 
-Es más, continuando con el argument del párrafo previo, el teorema anterior también implica que el grado de $\gamma$ sobre $K^H$ ha de ser $|H|$, y al ser $\gamma$ primitivo su grado coincide con $[K,K^H]$.
+Es más, continuando con el argumento del párrafo previo, el teorema anterior también implica que el grado de $\gamma$ sobre $K^H$ ha de ser $|H|$, y al ser $\gamma$ primitivo su grado coincide con $[K:K^H]$.
 {{% /proof %}}
 
 {{% corollary %}}
