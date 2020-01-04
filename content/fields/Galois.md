@@ -297,7 +297,7 @@ Dado un polinomio simétrico $g\in R[u\_1,\dots,u\_n]$, existe un único polinom
 {{% proof %}}
 Por doble inducción, primero en el número de variables y luego en el grado. 
 
-Para una sola variable, el resultado es obviamente cierto par cualquier grado ya que $s\_1=u\_1$ y basta tomar $G=g(z\_1)$. También es obvio para polinomios de grado $0$. Supongamos que es cierto para polinomios de hasta $n-1$ variables de cualquier grado y para polinomios de $n$ variables de grado $< \operatorname{grado} g$. 
+Para una sola variable, el resultado es obviamente cierto para cualquier grado ya que $s\_1=u\_1$ y basta tomar $G=g(z\_1)$. También es obvio para polinomios de grado $0$. Supongamos que es cierto para polinomios de hasta $n-1$ variables de cualquier grado y para polinomios de $n$ variables de grado $< \operatorname{grado} g$. 
 
 Consideramos el polinomio $g_0=g(u\_1,\dots,u\_{n-1},0)$. Por hipótesis de inducción existe $G_0\in R[z\_1,\dots,z\_{n-1}]$ tal que $g\_0=G\_0(s'\_1,\dots,s'\_{n-1})$, donde las $s\_i'\in R[u\_1,\dots,u\_{n-1}]$ son las funciones simétricas elementales en $n-1$ variables. El polinomio 
 
