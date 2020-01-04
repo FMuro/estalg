@@ -424,7 +424,7 @@ $\Leftarrow$ Cada $f\in H$ induce una permutación de $\\{\beta\_1,\dots,\beta\_
 
 $\Rightarrow$ Sea $h\in K^H[ x ]$ un polinomio que tenga $\beta\_1$ como raíz. Todo elemento de $f\in H\subset G(K/K^H)$ envía raíces de un polinomio con coeficientes en $K^H$ en otras raíces, por tanto toda la órbita de $\beta_1$ por $H$ está formada por raíces de $h$. Como todo polinomio con coeficientes en un cuerpo tiene una cantidad finita de raíces, deducimos que la órbita es finita.  
 
-Hemos visto que cuando la órbita es finita el polinomio $g$ tiene coeficientes en $K^H$ y que todos los elementos de la órbita son también raices de cualquier otro polinomio $h\in K^H[ x ]$ que tenga $\beta\_1$ como raíz. Esto prueba que $g|h$ en $K[ x ]$ y por tanto también en $K^H[ x ]$, así que efectivamente $g$ es el polinomio irreducible de $\beta_1$ sobre $K^H$.
+Hemos visto que cuando la órbita es finita el polinomio $g$ tiene coeficientes en $K^H$ y que todos los elementos de la órbita son también raíces de cualquier otro polinomio $h\in K^H[ x ]$ que tenga $\beta\_1$ como raíz. Esto prueba que $g|h$ en $K[ x ]$ y por tanto también en $K^H[ x ]$, así que efectivamente $g$ es el polinomio irreducible de $\beta_1$ sobre $K^H$.
 {{% /proof %}}
 
 {{% definition %}}
