@@ -504,7 +504,7 @@ Dada una extensión finita $F\subset K$, los siguientes enunciados son equivalen
 {{% proof %}}
 Veamos $1.\Leftrightarrow 2.$ Por el teorema del cuerpo fijo, $|G(K/F)|=[K:K^{G(K/F)}]$. Como $F\subset K^{G(K/F)}\subset K$, $|G(K/F)|=[K:F]$ si y solo si $F=K^{G(K/F)}$.
 
-Probemos ahora que $1.\Leftrightarrow 3.$ Sea $\gamma\_1\in K$ un elemento primitivo de $F\subset K$, $g\in F[ x ]$ su polinomio irreducible y $L$ el cuerpo de descomposición de $g$. Sean $\gamma\_1,\dots,\gamma\_n\in \mathbb{C}$ las distintas raíces complejas de $g$, de las cuales $\gamma\_1,\dots,\gamma\_r\in K$ y el resto no están en $K$. Denotemos $n=[G:K]$. El grado de $g$ es $n$. Como $K=F[\gamma\_1]$ y $L=F[\gamma\_1,\dots,\gamma\_n]$, $F\subset K\subset L$. Usando el lema anterior vemos que
+Probemos ahora que $1.\Leftrightarrow 3.$ Sea $\gamma\_1\in K$ un elemento primitivo de $F\subset K$, $g\in F[ x ]$ su polinomio irreducible y $L$ el cuerpo de descomposición de $g$. Sean $\gamma\_1,\dots,\gamma\_n\in \mathbb{C}$ las distintas raíces complejas de $g$, de las cuales $\gamma\_1,\dots,\gamma\_r\in K$ y el resto no están en $K$. Observemos que $n=\operatorname{grado}g=[K:F]$. Como $K=F[\gamma\_1]$ y $L=F[\gamma\_1,\dots,\gamma\_n]$, $F\subset K\subset L$. Usando el lema anterior vemos que
 $F\subset K$ es de Galois $\Leftrightarrow$ $r=n$ $\Leftrightarrow$ todas las raíces complejas de $g$ están en $K$ $\Leftrightarrow$ $K\supset L$ $\Leftrightarrow$ $K=L$ $\Leftrightarrow$ $K$ es un cuerpo de descomposición. En el último paso hemos usado que $g$ tiene una raíz en $K$.
 {{% /proof %}}
 
