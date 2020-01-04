@@ -559,9 +559,9 @@ Comenzaremos probando la equivalencia de la primera parte del enunciado.
 
 Sea $\gamma\_1\in L$ un elemento primitivo, $L=F[\gamma\_1]$, con polinomio irreducible $g\in F[ x ]$. Sean $\gamma\_1,\dots,\gamma\_r\in K$ sus raíces complejas, que están en $K$ porque es un cuerpo de descomposición y $\gamma\_1\in K$.
 
-$\Rightarrow$  Por ser $F\subset L$ de Galois, $L$ es el cuerpo de descomposición de $g$, así que $L=F[\gamma\_1,\dots,\gamma\_r]$. Todo $f\in G(K/L)$ preserva raíces de $g$, por tanto se restringe $f\_{|\_{L}}\colon L\rightarrow L$ y esta restricción está determinada por $f(\gamma\_1)$ que será algún $\gamma\_i$. En particular $f\_{|\_{L}}$ es la identidad si y solo si $f(\gamma\_1)=\gamma\_1$. 
+$\Rightarrow$  Por ser $F\subset L$ de Galois, $L$ es el cuerpo de descomposición de $g$, así que $L=F[\gamma\_1,\dots,\gamma\_r]$. Todo $f\in G(K/F)$ preserva raíces de $g$, por tanto se restringe $f\_{|\_{L}}\colon L\rightarrow L$ y esta restricción está determinada por $f(\gamma\_1)$ que será algún $\gamma\_i$. En particular $f\_{|\_{L}}$ es la identidad si y solo si $f(\gamma\_1)=\gamma\_1$. 
 
-Sea $h\in G(K/L)$ un elemento cualquiera. Para ver que este grupo es normal tenemos que probar que $f^{-1}hf\in G(K/F)$ deja fijo a $L$ y por tanto $f^{-1}hf\in G(K/L)$, es decir, que hay que probar que $(f^{-1}hf)(\gamma\_1)=1$. Esto es cierto porque $h$ deja fijo a $L$, así que 
+Sea $h\in G(K/L)$ un elemento cualquiera. Para ver que este grupo es normal tenemos que probar que $f^{-1}hf\in G(K/F)$ deja fijo a $L$ y por tanto $f^{-1}hf\in G(K/L)$, es decir, que hay que probar que $(f^{-1}hf)(\gamma\_1)=\gamma\_1$. Esto es cierto porque $h$ deja fijo a $L$, así que 
 
 $$
 \begin{array}{rcl}
@@ -572,7 +572,7 @@ $$
 \end{array}
 $$
 
-$\Leftarrow$ Si $F\subset L$ no fuera de Galois no podría ser el cuerpo de descomposición de $g$, así que alguna raíz de $g$ no estaría en $L$. Supongamos que $\gamma\_i$ es tal raíz. Como $L=K^{G(K/L)}$ y $\gamma\_i\notin L$, existe $h\in G(K/L)$ tal qye $h(\gamma\_i)\neq\gamma\_i$. Es más, como $F=K^{G(K/F)}$, las raíces de $g$ son la órbita de $\gamma\_1$ por $G(K/F)$, así que existe $f\in G(K/F)$ tal que $f(\gamma\_1)=\gamma\_i$. El elemento $f^{-1}hf\in G(K/F)$ no puede dejar fijo a $\gamma\_1$ ya que de lo contrario $\gamma\_i=f(\gamma\_1)=hf(\gamma\_1)=h(\gamma\_i)\neq\gamma\_i$. Esto implica que $f^{-1}hf$ no deja fijo a $L$, luego $f^{-1}hf\in G(K/L)$.
+$\Leftarrow$ Si $F\subset L$ no fuera de Galois no podría ser el cuerpo de descomposición de $g$, así que alguna raíz de $g$ no estaría en $L$. Supongamos que $\gamma\_i$ es tal raíz. Como $L=K^{G(K/L)}$ y $\gamma\_i\notin L$, existe $h\in G(K/L)$ tal que $h(\gamma\_i)\neq\gamma\_i$. Es más, como $F=K^{G(K/F)}$, las raíces de $g$ son la órbita de $\gamma\_1$ por $G(K/F)$, así que existe $f\in G(K/F)$ tal que $f(\gamma\_1)=\gamma\_i$. El elemento $f^{-1}hf\in G(K/F)$ no puede dejar fijo a $\gamma\_1$ ya que de lo contrario $\gamma\_i=f(\gamma\_1)=hf(\gamma\_1)=h(\gamma\_i)\neq\gamma\_i$. Esto implica que $f^{-1}hf$ no deja fijo a $L$, luego $f^{-1}hf\notin G(K/L)$.
 
 Una vez establecida la equivalencia de la primera parte del enunciado, demostraremos el isomorfismo de la segunda. Supongamos pues que $F\subset L$ es de Galois. Hemos visto que entonces todo $f\in G(K/F)$ se restringe a $L$, es decir $f\_{|\_{L}}\in G(L/F)$. Esta restricción induce un homomorfismo de grupos
 
@@ -583,7 +583,7 @@ f&\mapsto&f\_{|\_{L}}.
 \end{array}
 $$
 
-Obviamente $G(K/L)$ está contenido en el núcleo de este homomorfismo ya que los elementos de $G(K/L)$ se restringen a la identidad sobre $L$. Este homomorfismo es sobreyectivo porque $G(L/F)$ tiene $r$ elementos, uno por cada raíz $\gamma\_i$ de $g$ determinado por $\gamma\_1\mapsto\gamma\_i$, y además hemos visto que en $G(K/F)$ siempre hay elementos que satisfacen $\gamma\_1\mapsto\gamma\_i$. Por el primer teorema de isomorfía y el teorema de Lagrange, el número de elementos del núcleo núcleo es
+Obviamente $G(K/L)$ está contenido en el núcleo de este homomorfismo ya que los elementos de $G(K/L)$ se restringen a la identidad sobre $L$. Este homomorfismo es sobreyectivo porque $G(L/F)$ tiene $r$ elementos, uno por cada raíz $\gamma\_i$ de $g$ determinado por $\gamma\_1\mapsto\gamma\_i$, y además hemos visto que en $G(K/F)$ siempre hay elementos que satisfacen $\gamma\_1\mapsto\gamma\_i$. Por el primer teorema de isomorfía y el teorema de Lagrange, el número de elementos del núcleo es
 
 $$
 \frac{|G(K/F)|}{|G(L/F)|}=\frac{[K:F]}{[L:F]}=[K:L]=|G(K/L)|.
@@ -595,7 +595,7 @@ $$
 \begin{array}{rcl}
 \frac{G(K/F)}{G(K/L)}&\stackrel{\cong}\longrightarrow&G(L/F),\cr
 [f]&\mapsto&f\_{|\_{L}}.
-\end{array}
+\end{array} 
 $$
 
 {{% /proof %}}
