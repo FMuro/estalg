@@ -232,13 +232,11 @@ No puede ser trascendente porque el anillo de polinomios $F[ x ]$ no tiene dimen
 Si $F\subset K$ es una extensión finita, todo $\alpha\in K$ es algebraico. 
 {{% /corollary %}}
 
-Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
-
 {{% proof %}}
 Es consecuencia de que $F[\alpha]\subset K$ es un sub-$F$-espacio vectorial.  
 {{% /proof %}}
 
-
+Deducimos por tanto que la única extensión finita de $\mathbb C$ es la trivial.
 
 {{% proposition %}}
 Dadas dos extensiones consecutivas $F\subset K\subset L$, si $F\subset L$ es finita entonces también lo son $F\subset K$ y $K\subset L$. 
