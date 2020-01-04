@@ -272,7 +272,7 @@ $$
 
 En la última línea denotamos $s_0=1$.
 
-En particular, dado un polinomio mónico $f\in F[ x ]$ degrado $n$ 
+En particular, dado un polinomio mónico $f\in F[ x ]$ de grado $n$ 
 
 $$
 \begin{array}{rcl}
