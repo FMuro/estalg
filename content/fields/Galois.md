@@ -594,7 +594,7 @@ Por tanto $G(K/L)$ es todo el núcleo y el isomorfismo del enunciado es el defin
 $$
 \begin{array}{rcl}
 \frac{G(K/F)}{G(K/L)}&\stackrel{\cong}\longrightarrow&G(L/F),\cr
-[f]&\mapsto&f\_{|\_{L}}.
+{[f]}&\mapsto&f\_{|\_{L}}.
 \end{array} 
 $$
 
