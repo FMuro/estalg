@@ -693,7 +693,7 @@ Dado un cuerpo $F$, nuestro objetivo es estudiar el cuerpo de descomposición $K
 
 $$q(x)=x^p-a\in F[ x ]$$
 
-donde $p$ es primo y $a$ no tiene raíces $p$-ésmas en $F$. Si $\alpha$ es una raíz compleja de $q(x)$, entonces el conjunto de todas sus raíces es
+donde $p$ es primo y $a$ no tiene raíces $p$-ésimas en $F$. Si $\alpha$ es una raíz compleja de $q(x)$, entonces el conjunto de todas sus raíces es
 
 $$\alpha,\zeta\_p\alpha,\dots,\zeta\_p^{p-1}\alpha,$$
 
