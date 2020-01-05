@@ -903,7 +903,7 @@ definido en cada coordenada como la proyección natural. El núcleo es $G(K/L\_1
 {{% /proof %}}
 
 {{% lemma %}}
-Si $p\_1,\dots,p\_m$ son enteros primos dos a dos entonces el grupo de Galois de la extensión de Galois $F\subset F[\zeta\_{p\_1},\dots,\zeta\_{p\_m}]$ es abeliano.
+Si $p\_1,\dots,p\_m$ son enteros primos entonces el grupo de Galois de la extensión de Galois $F\subset F[\zeta\_{p\_1},\dots,\zeta\_{p\_m}]$ es abeliano.
 {{% /lemma %}}
 
 {{% proof %}}
