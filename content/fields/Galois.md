@@ -693,7 +693,7 @@ Dado un cuerpo $F$, nuestro objetivo es estudiar el cuerpo de descomposición $K
 
 $$q(x)=x^p-a\in F[ x ]$$
 
-donde $p$ es primo y $a$ no tiene raíces $p$-ésmas en $F$. Si $\alpha$ es una raíz compleja de $q(x)$, entonces el conjunto de todas sus raíces es
+donde $p$ es primo y $a$ no tiene raíces $p$-ésimas en $F$. Si $\alpha$ es una raíz compleja de $q(x)$, entonces el conjunto de todas sus raíces es
 
 $$\alpha,\zeta\_p\alpha,\dots,\zeta\_p^{p-1}\alpha,$$
 
@@ -728,7 +728,7 @@ A posteriori vemos que, en las condiciones de la proposición anterior, $x^p-a$ 
 {{% /remark %}}
 
 
-Sorprendentemente el resultado a anterior tiene un recíproco.
+Sorprendentemente el resultado anterior tiene un recíproco.
 
 {{% theorem %}}
 Si $p$ es un primo, $F$ es un cuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^p-a\in F[ x ]$. 
@@ -740,7 +740,7 @@ Al ser la extensión de Galois $|G(K/F)|=[K:F]=p$, por tanto $G(K/F)$ es cíclic
 
 $$G(K/F)=\\{f^0,f^1,\dots, f^{p-1}\\}.$$
 
-Ahora vamos a concentrarnos en el hecho de que $f$ es un homomorfismo de $F$-espacios vectoriales. Como $f^p=\operatorname{id}_K$ tenemos que cualquier autovalor $\lambda$ de $f$ satisface $\lambda^p=1$, es decir, sus autovalores son raíces $p$-ésimas de la unidad. Además $f$ es diagonalizable, pues niguna potencia de una caja de Jordan de tamaño $2\times 2$ o superior es la matriz identidad. Como $f$ es diagonalizable y distinto de la identidad, tendrá que tener algún autovalor $\lambda\neq 1$. Este autovalor ha de ser forzosamente de la forma $\lambda =\zeta\_p^i$ para cierto $0{<}i{<}p$. 
+Ahora vamos a concentrarnos en el hecho de que $f$ es un homomorfismo de $F$-espacios vectoriales. Como $f^p=\operatorname{id}_K$ tenemos que cualquier autovalor $\lambda$ de $f$ satisface $\lambda^p=1$, es decir, sus autovalores son raíces $p$-ésimas de la unidad. Además $f$ es diagonalizable, pues ninguna potencia de una caja de Jordan de tamaño $2\times 2$ o superior es la matriz identidad. Como $f$ es diagonalizable y distinto de la identidad, tendrá que tener algún autovalor $\lambda\neq 1$. Este autovalor ha de ser forzosamente de la forma $\lambda =\zeta\_p^i$ para cierto $0{<}i{<}p$. 
 
 Sea $\alpha\in K$ un autovector asociado a $\zeta\_p^i$,
 
@@ -776,7 +776,7 @@ tal que $\alpha\in K$ y $F\_{i+1}=F\_i[\sqrt[s\_i]{r\_i}]$ para ciertos $r\_i\in
 Los números solubles sobre $F$ son los que se obtienen a partir de números de $F$ realizando iteradamente sumas, restas, productos, divisiones por números no nulos y raíces $n$-ésimas. Nuestro objetivo es saber cuándo podemos hallar las raíces de un polinomio $p(x)\in F[ x ]$ de este modo a partir de sus coeficientes, es decir, queremos saber cuándo las raíces de $p(x)$ son solubles sobre $F$. Veremos cómo hacerlo usando el grupo de Galois del cuerpo de descomposición de $p(x)$.
 
 {{% remark %}}
-Como $\sqrt[st]{r}=\sqrt[s]{\sqrt[t]{r}}$, no hay pérdida de generalidad sin en la definición anterior suponemos que los $s\_i$ son todos primos.
+Como $\sqrt[st]{r}=\sqrt[s]{\sqrt[t]{r}}$, no hay pérdida de generalidad si en la definición anterior suponemos que los $s\_i$ son todos primos.
 
 Añadiendo las raíces de manera sucesiva vemos que si $\alpha\_1,\dots,\alpha\_m\in\mathbb{C}$ son solubles entonces existe una cadena de extensiones como la de la definición tal que $\alpha\_1,\dots,\alpha\_m\in K$.
 {{% /remark %}}
@@ -791,7 +791,7 @@ $$\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G$$
 tal que $G\_i\subset G\_{i+1}$ es un subgrupo normal con cociente $G\_{i+1}/G\_i$ abeliano para todo $0\leq i<n$.
 {{% /definition %}}
 
-La solubilidad es una buena propiedad porque permite probar por inducción que muchas propiedades de los grupos abelianos son también ciertas para los grupo solubles.
+La solubilidad es una buena propiedad porque permite probar por inducción que muchas propiedades de los grupos abelianos son también ciertas para los grupos solubles.
 
 {{% remark %}}
 Los grupos abelianos son solubles. Los grupos simétricos $S\_2$, $S\_3$ y $S\_4$ también, así como todos sus subgrupos. Sin embargo, $S\_n$ no es soluble para ningún $n\geq 5$, ni tampoco su subgrupo alternado $A\_n\subset S\_n$. La solubilidad se preserva por isomorfismos.
@@ -802,7 +802,7 @@ Dado un grupo $G$ y un subgrupo normal $N$, $G$ es soluble si y solo si lo son $
 {{% /lemma %}}
 
 {{% proof %}}
-Denotamos $p\colon G\twoheadrightarrow G\subset N$ a la proyección natural.
+Denotamos $p\colon G\twoheadrightarrow G/ N$ a la proyección natural.
 
 $\Rightarrow$ Si 
 
