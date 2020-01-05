@@ -802,7 +802,7 @@ Dado un grupo $G$ y un subgrupo normal $N$, $G$ es soluble si y solo si lo son $
 {{% /lemma %}}
 
 {{% proof %}}
-Denotamos $p\colon G\twoheadrightarrow G\subset N$ a la proyección natural.
+Denotamos $p\colon G\twoheadrightarrow G/ N$ a la proyección natural.
 
 $\Rightarrow$ Si 
 
