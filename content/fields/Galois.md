@@ -899,7 +899,7 @@ Tenemos que $F\subset L\_1,L\_2\subset K$, ya que las raíces de un producto de 
 
 $$G(K/F)\longrightarrow\frac{G(K/F)}{G(K/L\_1)}\times \frac{G(K/F)}{G(K/L\_2)}\cong G(L\_1/F)\times G(L\_2/F)$$
 
-definido en cada coordenada como la proyecció natural. El núcelo es $G(K/L\_1)\cap G(K/L\_2)$, es decir, los automorfismos de $K$ que dejan fijas a las raíces tanto de $f\_1$ como de $f\_2$. Un automorfismo así deja fijas a las raíces de $f\_1f\_2$ y por tanto a su cuerpo de descomposición $K$, así que tiene que ser la identidad. Como el núcleo es trivial, el homomorfismo es inyectivo y, en virtur del primer teorema de isomorfía, el dominio es isomorfo a un subgrupo del codominio.
+definido en cada coordenada como la proyección natural. El núcleo es $G(K/L\_1)\cap G(K/L\_2)$, es decir, los automorfismos de $K$ que dejan fijas a las raíces tanto de $f\_1$ como de $f\_2$. Un automorfismo así deja fijas a las raíces de $f\_1f\_2$ y por tanto a su cuerpo de descomposición $K$, así que tiene que ser la identidad. Como el núcleo es trivial, el homomorfismo es inyectivo y, en virtud del primer teorema de isomorfía, el dominio es isomorfo a un subgrupo del codominio.
 {{% /proof %}}
 
 {{% lemma %}}
