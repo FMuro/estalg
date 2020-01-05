@@ -728,7 +728,7 @@ A posteriori vemos que, en las condiciones de la proposición anterior, $x^p-a$ 
 {{% /remark %}}
 
 
-Sorprendentemente el resultado a anterior tiene un recíproco.
+Sorprendentemente el resultado anterior tiene un recíproco.
 
 {{% theorem %}}
 Si $p$ es un primo, $F$ es un cuerpo tal que $\zeta\_p\in F$ y $F\subset K$ es una extensión de Galois de grado $[K:F]=p$ entonces $K=F[\alpha]$ para cierto $\alpha\in K$ que es raíz de un polinomio de la forma $x^p-a\in F[ x ]$. 
