@@ -776,7 +776,7 @@ tal que $\alpha\in K$ y $F\_{i+1}=F\_i[\sqrt[s\_i]{r\_i}]$ para ciertos $r\_i\in
 Los números solubles sobre $F$ son los que se obtienen a partir de números de $F$ realizando iteradamente sumas, restas, productos, divisiones por números no nulos y raíces $n$-ésimas. Nuestro objetivo es saber cuándo podemos hallar las raíces de un polinomio $p(x)\in F[ x ]$ de este modo a partir de sus coeficientes, es decir, queremos saber cuándo las raíces de $p(x)$ son solubles sobre $F$. Veremos cómo hacerlo usando el grupo de Galois del cuerpo de descomposición de $p(x)$.
 
 {{% remark %}}
-Como $\sqrt[st]{r}=\sqrt[s]{\sqrt[t]{r}}$, no hay pérdida de generalidad sin en la definición anterior suponemos que los $s\_i$ son todos primos.
+Como $\sqrt[st]{r}=\sqrt[s]{\sqrt[t]{r}}$, no hay pérdida de generalidad si en la definición anterior suponemos que los $s\_i$ son todos primos.
 
 Añadiendo las raíces de manera sucesiva vemos que si $\alpha\_1,\dots,\alpha\_m\in\mathbb{C}$ son solubles entonces existe una cadena de extensiones como la de la definición tal que $\alpha\_1,\dots,\alpha\_m\in K$.
 {{% /remark %}}
@@ -791,7 +791,7 @@ $$\\{e\\}=G\_0 \subset G\_1 \subset G\_2 \subset \cdots\subset G\_n=G$$
 tal que $G\_i\subset G\_{i+1}$ es un subgrupo normal con cociente $G\_{i+1}/G\_i$ abeliano para todo $0\leq i<n$.
 {{% /definition %}}
 
-La solubilidad es una buena propiedad porque permite probar por inducción que muchas propiedades de los grupos abelianos son también ciertas para los grupo solubles.
+La solubilidad es una buena propiedad porque permite probar por inducción que muchas propiedades de los grupos abelianos son también ciertas para los grupos solubles.
 
 {{% remark %}}
 Los grupos abelianos son solubles. Los grupos simétricos $S\_2$, $S\_3$ y $S\_4$ también, así como todos sus subgrupos. Sin embargo, $S\_n$ no es soluble para ningún $n\geq 5$, ni tampoco su subgrupo alternado $A\_n\subset S\_n$. La solubilidad se preserva por isomorfismos.
