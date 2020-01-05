@@ -740,7 +740,7 @@ Al ser la extensión de Galois $|G(K/F)|=[K:F]=p$, por tanto $G(K/F)$ es cíclic
 
 $$G(K/F)=\\{f^0,f^1,\dots, f^{p-1}\\}.$$
 
-Ahora vamos a concentrarnos en el hecho de que $f$ es un homomorfismo de $F$-espacios vectoriales. Como $f^p=\operatorname{id}_K$ tenemos que cualquier autovalor $\lambda$ de $f$ satisface $\lambda^p=1$, es decir, sus autovalores son raíces $p$-ésimas de la unidad. Además $f$ es diagonalizable, pues niguna potencia de una caja de Jordan de tamaño $2\times 2$ o superior es la matriz identidad. Como $f$ es diagonalizable y distinto de la identidad, tendrá que tener algún autovalor $\lambda\neq 1$. Este autovalor ha de ser forzosamente de la forma $\lambda =\zeta\_p^i$ para cierto $0{<}i{<}p$. 
+Ahora vamos a concentrarnos en el hecho de que $f$ es un homomorfismo de $F$-espacios vectoriales. Como $f^p=\operatorname{id}_K$ tenemos que cualquier autovalor $\lambda$ de $f$ satisface $\lambda^p=1$, es decir, sus autovalores son raíces $p$-ésimas de la unidad. Además $f$ es diagonalizable, pues ninguna potencia de una caja de Jordan de tamaño $2\times 2$ o superior es la matriz identidad. Como $f$ es diagonalizable y distinto de la identidad, tendrá que tener algún autovalor $\lambda\neq 1$. Este autovalor ha de ser forzosamente de la forma $\lambda =\zeta\_p^i$ para cierto $0{<}i{<}p$. 
 
 Sea $\alpha\in K$ un autovector asociado a $\zeta\_p^i$,
 
