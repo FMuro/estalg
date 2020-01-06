@@ -925,7 +925,7 @@ una cadena de subgrupos como en la proposición anterior.
 
 Supongamos primero que $F$ tiene todas las raíces primitivas de la unidad asociadas a los primos que aparecen como el orden de los cocientes $G\_{i+1}/G\_i$. En este caso basta considerar la cadena de extensiones
 
-$$L= L^{G\_0} \supset L^{G\_1} \supset \cdots\supset L^{G\_n}\supset F[\zeta\_{p\_1},\dots, \zeta\_{p\_n}]\supset F.$$
+$$L= L^{G\_0} \supset L^{G\_1} \supset \cdots\supset L^{G\_n}= F[\zeta\_{p\_1},\dots, \zeta\_{p\_n}]= F.$$
 
 En efecto, el teorema sobre extensiones de Kummer garantiza que cada $L^{G\_{i}}\supset L^{G\_{i+1}}$ se obtiene añadiendo una raíz.
 
