@@ -107,7 +107,7 @@ $$\begin{array}{rcl}
 &=&\varphi(f)\circ \varphi(g).
 \end{array}$$
 
-Comprobemos por último que $\varphi$ es inyectivo. Para ello debemos probar que si $f\in G(K/F)$ es tal que $\varphi(f)$ es le permutación identidad entonces $f=\operatorname{id}\_{K}$. Por definición $\varphi(f)$ es la permutación identidad si y solo si $f(\alpha\_i)=\alpha\_i$ para todo $i=1,\dots,n$. Como $K=F[\alpha\_1,\dots,\alpha\_n]$, todo elemento $\alpha\in K$ se puede escribir como polinomio en $\alpha\_1,\dots,\alpha\_n$ con coeficientes en $F$, es decir
+Comprobemos por último que $\varphi$ es inyectivo. Para ello debemos probar que si $f\in G(K/F)$ es tal que $\varphi(f)$ es la permutación identidad entonces $f=\operatorname{id}\_{K}$. Por definición $\varphi(f)$ es la permutación identidad si y solo si $f(\alpha\_i)=\alpha\_i$ para todo $i=1,\dots,n$. Como $K=F[\alpha\_1,\dots,\alpha\_n]$, todo elemento $\alpha\in K$ se puede escribir como polinomio en $\alpha\_1,\dots,\alpha\_n$ con coeficientes en $F$, es decir
 
 $$\alpha=\sum\_{m\_i\geq 0} b\_{m\_1,\dots,m\_n}\alpha\_1^{m\_1}\cdots\alpha\_n^{m\_n}$$
 
