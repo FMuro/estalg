@@ -1072,7 +1072,7 @@ Podemos cancelar $d\neq 0$, ya que $a$ o $b$ es no nulo, así que
 
 $$\frac{a}{d}r=\frac{b}{d}s.$$
 
-Como $\frac{a}{d}$ divide al término de la izquierda y es coprimo con $\frac{b}{d}$, entonces, por el teorema de Euclides, $\frac{a}{d}|s$, luego
+Como $\frac{a}{d}$ divide al término de la derecha y es coprimo con $\frac{b}{d}$, entonces, por el teorema de Euclides, $\frac{a}{d}|s$, luego
 
 $$m=b\frac{a}{d}\mid bs=m'.$$
 
