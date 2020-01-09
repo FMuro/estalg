@@ -759,7 +759,7 @@ $$S=\\{ D-dx \mid (x \in \mathbb{Z}) \wedge (D-dx \geq 0) \\}\subset\mathbb{Z}$$
 
 no es vacío. En efecto, si $D\geq 0$ tomamos $x=-dD$ y entonces $D-dx=D+d^2D=D(1+d^2)\geq 0$, y si $D<0$ tomamos $x=dD$ y $D-dx=D-d^2D=D(1-d^2)\geq 0$ ya que, como $d\neq 0$, $d^2\geq 1$.
 
-Como $S$ está acotado inferiormente por $0$, ha de tener un mínimo $r\in S$ por el principio de buena ordenación. Este mínimo se alcanzará para cierto valor de $x=c\in\mathbb{Z}$, y por tanto $r=D-dc\geq 0$, es decir, $D=dc+r$. Veamos que $r<|d|$. Por reducción al absurdo, si $r\geq |d|$ entonces $r'=r-|d|\geq 0$. Es más, como $d\neq 0$, $r'>r$, pero $r'\in S$ ya que $r'=r\pm d=D-dc\pm d=D-d(c\mp 1)$. Esto contradice la minimalidad de $r\in S$.
+Como $S$ está acotado inferiormente por $0$, ha de tener un mínimo $r\in S$ por el principio de buena ordenación. Este mínimo se alcanzará para cierto valor de $x=c\in\mathbb{Z}$, y por tanto $r=D-dc\geq 0$, es decir, $D=dc+r$. Veamos que $r<|d|$. Por reducción al absurdo, si $r\geq |d|$ entonces $r'=r-|d|\geq 0$. Es más, como $d\neq 0$, $r'<r$, pero $r'\in S$ ya que $r'=r\pm d=D-dc\pm d=D-d(c\mp 1)$. Esto contradice la minimalidad de $r\in S$.
 
 Veamos ahora la unicidad del cociente y del resto. Supongamos que también $D=dc'+r'$ para ciertos $c',r'\in\mathbb{Z}$ con $0\leq r'<|d|$. Entonces $dc+r=dc'+r'$. Si $r=r'$ entonces $dc=dc'$. Como $d\neq 0$ podemos aplicar la propiedad cancelativa y deducimos que $c=c'$. Veamos que es imposible que $r\neq r'$. De lo contrario, podemos suponer sin pérdida de generalidad que $r>r'$. Como $0\leq r,r'<|d|$ entonces $0<r-r'<|d|$, pero $r-r'=d(c'-c)$, que es divisible por $d$, así que $|d|\leq |r-r'|$, lo cual entra en contradicción.
 {{% /proof %}}
