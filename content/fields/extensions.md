@@ -679,7 +679,7 @@ Esto equivale a la constructibilidad del ángulo de $\frac{2\pi}{p}$ radianes.
 
 $\Leftarrow$  Es un resultado de Gauss que no probaremos.
 
-$\Rightarrow$ El número complejo $\zeta=e^{\frac{2\pi i}{p}}=\cos\frac{2\pi}{p}+i\sin \frac{2\pi}{p}$ es una raíz $p$-ésima de la unidad, es decir, una raíz del polinomio $x^p-1$. Este polinonimio factoriza como
+$\Rightarrow$ El número complejo $\zeta=e^{\frac{2\pi i}{p}}=\cos\frac{2\pi}{p}+i\sin \frac{2\pi}{p}$ es una raíz $p$-ésima de la unidad, es decir, una raíz del polinomio $x^p-1$. Este polinomio factoriza como
 
 $$(x-1)(x^{p-1}+\cdots+x+1)$$
 
