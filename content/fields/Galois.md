@@ -615,7 +615,7 @@ El conjunto formado por estos $n$ números complejos es un grupo cíclico de ord
 
 $$\zeta=\zeta_n=e^{\frac{2\pi i}{n}}.$$
 
-Si $n=p$ es primo, cualquier raíz distinta de $1$ genera estre grupo.
+Si $n=p$ es primo, cualquier raíz distinta de $1$ genera este grupo.
 
 {{% proposition %}}
 Dado un entero primo $p\geq 1$, la extensión $\mathbb Q\subset\mathbb Q[\zeta]$ es de Galois de grado $p-1$ y su grupo de Galois es cíclico.
