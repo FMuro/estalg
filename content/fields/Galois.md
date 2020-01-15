@@ -711,7 +711,7 @@ Como $\alpha\notin F= K^{G(K/F)}$, ha de existir algún $f\in G(K/F)$ tal que $f
 
 $$f^j(\alpha)=(\zeta\_p^{i})^{j}\alpha.$$
 
-Todos estos elementos son diferentes ya que al ser $p$ primo todas las potencias de $\zeta\_p$ distintas de $1$, por ejempo $\zeta\_p^i$, tienen orden multiplicativo $p$, así que todos los $(\zeta\_p^i)^{j}$ son diferentes para $0\leq j{<}p$. Para $j=1$ la ecuación anterior es obviamente cierta. Supongamos que es cierta para $j-1$. Como $\zeta\_p\in F$ entonces $f(\zeta\_p)=\zeta\_p$ ya que. Por tanto,
+Todos estos elementos son diferentes ya que al ser $p$ primo todas las potencias de $\zeta\_p$ distintas de $1$, por ejempo $\zeta\_p^i$, tienen orden multiplicativo $p$, así que todos los $(\zeta\_p^i)^{j}$ son diferentes para $0\leq j{<}p$. Para $j=1$ la ecuación anterior es obviamente cierta. Supongamos que es cierta para $j-1$. Como $\zeta\_p\in F$ se tiene que $f(\zeta\_p)=\zeta\_p$. Por tanto,
 
 $$\begin{array}{rcl}
 f^j(\alpha)&=&f(f^{j-1}(\alpha))\cr
