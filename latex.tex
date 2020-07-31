@@ -1,14 +1,30 @@
-\documentclass[]{amsart}
+% !TEX program = 
+% The above is so as not to compile on save in vscode
+\documentclass[12pt]{book}
 
-\usepackage[draft]{hyperref} % remove all hyperlinks included in the translation
+% Promote sections one step up
+
+\let\subparagraph\paragraph 
+\let\paragraph\subsubsection
+\let\subsubsection\subsection
+\let\subsection\section
+\let\section\chapter
+
+\usepackage{hyperref} % remove all hyperlinks included in the translation
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage%[demo]
-{graphicx}
+\usepackage{amsthm}
+\usepackage{graphicx} % graphics support
 \usepackage[spanish]{babel}
-\usepackage{letltxmacro}
+\usepackage{letltxmacro} % rename macros
 \usepackage{float}
 \floatplacement{figure}{H} % do not float images
+
+% for animated gif
+\usepackage{epstopdf}
+\epstopdfDeclareGraphicsRule{.gif}{png}{.png}{convert gif:#1 png:\OutputFile}
+\AppendGraphicsExtensions{.gif}
+
 % ----------------------------------------------------------------
 \vfuzz2pt % Don't report over-full v-boxes if over-edge is small
 \hfuzz2pt % Don't report over-full h-boxes if over-edge is small
@@ -32,6 +48,14 @@
 \providecommand{\tightlist}{%
 	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% Numbering: chapter.section.number
+
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\numberwithin{equation}{section}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 % Fix pandoc not parsing inside latex blocks
 
 \let\Begin\begin
@@ -43,23 +67,13 @@
 \renewcommand{\includegraphics}[1]{\OldIncludegraphics[width=0.5\textwidth]{#1}}
 
 %opening
-\title{Estructuras algebraicas}
-\author{Fernando Muro}
-\address{Universidad de Sevilla,
-	Facultad de Matem\'aticas,
-	Departamento de \'Algebra,
-	Avda. Reina Mercedes s/n,
-	41012 Sevilla, Spain}
-\email{fmuro@us.es}
-\urladdr{http://personal.us.es/fmuro}
+
+\title{Estructuras Algebraicas}
+\author{Equipo docente de la asignatura}
 
 
 \begin{document}
-
-\begin{abstract}
-Notas de la asignatura Estructuras Algebraicas del Grado en Matemáticas de la Universidad de Sevilla. Esta versión en PDF se ha generado automáticamente a partir de la página web \url{http://asignatura.us.es/estalg/} y puede contener errores derivados del proceso de conversion. Les agradecería que informasen de cualquier error que encuentren escribiendo a \texttt{fmuro@us.es}.
-\end{abstract}
-
+ 
 \maketitle
 
 \tableofcontents
