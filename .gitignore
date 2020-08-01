@@ -2,3 +2,6 @@ public/
 static/docs/latex.*
 !static/docs/latex.pdf
 .vscode/
+pics/*
+!pics/pics.tex
+!pics/script.sh

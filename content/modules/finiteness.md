@@ -374,7 +374,7 @@ Si $Q$ y $P$ son matrices invertibles tales que $QAP^{-1}=D$, el núcleo del hom
 {{% proof %}}
 La ecuación $D=QAP^{-1}$ equivale a $DP=QA$, que es lo mismo que decir que el siguiente diagrama de $R$-módulos libres conmuta,
 
-![Cuadrado conmutativo](../../images/libres.png)
+![Cuadrado conmutativo](../../images/libres.svg)
 
 Como $P$ y $Q$ son invertibles, los homomorfismos que definen son isomorfismos.
 
@@ -857,7 +857,7 @@ $\Leftarrow$ Recíprocamente, si $M$ tiene dimensión finita como $k$ espacio ve
 
 Una **caja de Jordan** es una matriz cuadrada con una constante $\alpha \in k$, denominada **autovalor**, en todas las entradas diagonal principal, $1$ en todas las entradas de la diagonal que está justo por encima de la principal y $0$ en el resto, 
 
-![Caja de Jordan](../../images/jordanblock.png)
+![Caja de Jordan](../../images/jordanblock.svg)
 
 {{% theorem name="Forma normal de Jordan" %}}
 Sea $k$ un cuerpo algebraicamente cerrado. Dado un $k$-espacio vectorial de dimensión finita $V$ equipado con un operador lineal $f\colon V\rightarrow V$ existe una base de $V$ respecto de la cual la matriz de $f$ es una matriz diagonal por cajas de Jordan. Esta matriz diagonal por cajas es única salvo permutación de las cajas y se denomina **forma normal de Jordan**.
@@ -899,7 +899,7 @@ donde la coordenada no trivial $(\bar x-\alpha_i)^j$ es la $i$-ésima.
 Respecto de esta base, la matriz del homomorfismo de multiplicación por $x$ es la matriz
 diagonal por cajas de Jordan de tamaños $m\_i\times m\_i$ y autovalores $\alpha\_i$, $1\leq i\leq n$.
 
-![Matriz de Jordan](../../images/jordanmatrix.png)
+![Matriz de Jordan](../../images/jordanmatrix.svg)
 
 Trasladando esta base a $V$ por el isomorfismo dado por el segundo teorema de estructura, obtenemos una base de $V$ respecto de la cual la matriz de $f$ es esta misma.
 

@@ -258,7 +258,7 @@ Claramente $g$ es un homomorfismo pues se definie como el homomorfismo $f$ en lo
 {{% theorem name="Primer Teorema de Isomorfía" label="primer" %}}
 Dado un homomorfismo $f\colon R\rightarrow S$, existe un único homomorfismo $\bar f\colon R/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
 
-![Primer teorema de isomorfía](../../images/isomorfianillos.png)
+![Primer teorema de isomorfía](../../images/isomorfianillos.svg)
 
 Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}
@@ -357,7 +357,7 @@ Ahora basta definir $g\colon Q( R )\rightarrow k$ como $g\left(\frac{a}{b}\right
 {{% corollary %}}
 Dado un homomorfismo inyectivo entre dominios $f\colon R\rightarrow S$, existe un único homomorfismo entre sus cuerpos de fracciones $g\colon Q( R )\rightarrow Q(S)$ que extiende $f$, en el sentido de que el siguiente cuadrado es conmutativo
 
-![Cuerpos de fracciones](../../images/fractionfield.png)
+![Cuerpos de fracciones](../../images/fractionfield.svg)
 
 es decir, $g\circ i_R=i_S\circ f$, donde $i_R$ e $i_S$ son las inclusiones de $R$ y $S$ en sus cuerpos de fracciones.
 {{% /corollary %}}

@@ -620,7 +620,7 @@ El siguiente resultado es una versión para módulos del primer teorema de isomo
 {{% theorem name="Primer Teorema de Isomorfía" label="isomodules" %}}
 Dado un homomorfismo de módulos $f\colon M\rightarrow N$, existe un único homomorfismo de módulos $\bar f\colon M/\ker f\rightarrow \operatorname{im}f$ tal que $f$ factoriza como $f=i\circ\bar f\circ p$, es decir, $f$ encaja en el siguente **diagrama conmutativo**, 
 
-![Primer teorema de isomorfía](../../images/isomorfiamodulos.png)
+![Primer teorema de isomorfía](../../images/isomorfiamodulos.svg)
 
 Aquí $p$ es la proyección natural e $i$ es la inclusión. Además $\bar f$ es un isomorfismo.
 {{% /theorem %}}

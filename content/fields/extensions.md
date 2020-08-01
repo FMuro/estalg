@@ -447,27 +447,27 @@ Un punto, recta o circunferencia del plano $\mathbb R^2$ se considera **construi
 
 * Los puntos $(0,0)$ y $(1,0)$.
 
-![Puntos constructibles](../../images/constructible-11.png)
+![Puntos constructibles](../../images/puntos.svg)
 
 * Las rectas que pasan por dos puntos construidos.
 
-![Recta constructible](../../images/constructible-12.png)
+![Recta constructible](../../images/recta.svg)
 
 * Las circunferencias de centro un punto construido que pasan por otro punto construido.
 
-![Circunferencia constructible](../../images/constructible-13.png)
+![Circunferencia constructible](../../images/circunferencia.svg)
 
 * El punto de intersección de dos rectas construidas.
 
-![Intersección de rectas constructibles](../../images/constructible-14.png)
+![Intersección de rectas constructibles](../../images/intersec_rectas.svg)
 
 * Los puntos de intersección de dos circunferencias construidas.
 
-![Intersección de circunferencias constructibles](../../images/constructible-16.png)
+![Intersección de circunferencias constructibles](../../images/intersec_circs.svg)
 
 * Los puntos de intersección de una recta y una circunferencia construidas.
 
-![Intersección de recta y circunferencia constructible](../../images/constructible-15.png)
+![Intersección de recta y circunferencia constructible](../../images/intersec_recta_circ.svg)
 
 Un número real $a\in\mathbb R$ es **constructible** si su valor absoluto $|a|$ es la distancia entre dos puntos constructibles.
 
@@ -478,21 +478,21 @@ Deducimos que además podemos construir:
 
 * El punto medio entre dos puntos construidos.
 
-![Punto medio](../../images/constructible-17.png)
+![Punto medio](../../images/medio.svg)
 
 * La recta perpendicular a una recta construida que pasa por un punto construido.
 
-![Perpendicular sobre un punto de la recta](../../images/constructible-0.png)
+![Perpendicular sobre un punto de la recta](../../images/perpendicular_interior.svg)
 
-![Perpendicular sobre un punto exterior](../../images/constructible-18.png)
+![Perpendicular sobre un punto exterior](../../images/perpendicular_exterior.svg)
 
 * La recta paralela a una recta construida que pasa por un punto construido.
 
-![Paralela](../../images/constructible-1.png)
+![Paralela](../../images/paralela.svg)
 
 * Los puntos que están a una distancia constructible de un punto construido dentro de una recta construida. Intuitivamente esta propiedad nos dice que podemos transportar distancias constructibles.
 
-![Transporte de longitud](../../images/constructible-2.png)
+![Transporte de longitud](../../images/distancia.svg)
 
 
 {{% proposition %}}
@@ -503,7 +503,7 @@ Un punto $(a,b)\in\mathbb R^2$ es constructible si y solo si sus coordenadas $a,
 {{% proof %}}
 $\Rightarrow$ Trazando paralelas y perpendiculares por puntos constructibles, podemos construir los ejes de coordenadas y las proyecciones de $(a,b)$ sobre los mismos. La distancia de las proyecciones al origen son $|a|$ y $|b|$, así que las coordenadas son constructibles. 
 
-![Coordenadas](../../images/constructible-3.png) 
+![Coordenadas](../../images/coordenadas.svg) 
 
 $\Leftarrow$ Recíprocamente, asi $a$ y $b$ son constructibles podemos construir los puntos sobre los ejes de coordenadas que están a distancia $|a|$ y $|b|$ del origen, es decir, $(\pm a,0)$ y $(0,\pm b)$, y obtener $(a,b)$ como punto de intersección de las paralelas a los ejes que pasan por $(a,0)$ y $(0,b)$.
 {{% /proof %}}
@@ -520,21 +520,21 @@ El $0$ y el $1$ son constructibles ya que el $(0,0)$ y el $(1,0)$ están constru
 
 Dados $a\geq b\geq 0$ constructibles, podemos construir $a+b$ y $a-b$ tomando a partir del origen puntos del eje horizonal a distancias $a$ y $b$,
 
-![Suma](../../images/constructible-4.png)
+![Suma](../../images/suma.svg)
 
-![Resta](../../images/constructible-5.png)
+![Resta](../../images/resta.svg)
 
 Por tanto también son constructibles $-a-b$ y $-a+b$. Esto demuestra que la suma de dos números constructibles cualesquiera y el opuesto de uno dado son constructibles.
 
 Para construir el producto de dos números constructibles $a,b> 0$ usamos triángulos semejantes. Construimos primero el triángulo ractángulo con base en el eje horizontal, de longitud 1, vértice en el origen y altura $a$. El triángulo semejante de base $b$ tiene altura $ab$.
 
-![Producto](../../images/constructible-6.png)
+![Producto](../../images/producto.svg)
 
 Esto demuestra que también son constructibles $(-a)b$, $a(-b)$ y $(-a)(-b)$, es decir, el producto de dos números constructibles cualesquiera (multiplicar por $0$ da $0$, que es constructible). Con esto hemos visto que los números constructibles forman un subanillo de $\mathbb R$.
 
 La construcción del inverso de un número constructible $a> 0$ se lleva a cabo del mismo modo
 
-![Inverso](../../images/constructible-7.png)
+![Inverso](../../images/inverso.svg)
 
 Por tanto $(-a)^{-1}=-a^{-1}$ también es constructible. Esto demuestra que el anillo de los números constructibles es un cuerpo.
 {{% /proof %}}
@@ -555,7 +555,7 @@ Si $a\in\mathbb R$ es positivo $a>0$ y constructible entonces $\sqrt{a}$ tambié
 
 Es consecuencia del conocido teorema de la media geométrica. En el eje horizontal tomamos el punto a la izquierda del origen a distancia $a$. Trazamos una circunferencia que pase por él y que tenga centro en el punto medio entre este punto y el $(1,0)$. La distancia del origen al punto de corte con la circunferencia de la perpendicular al eje horizontal es $\sqrt{a}$.
 
-![Raíz cuadrada](../../images/constructible-8.png)
+![Raíz cuadrada](../../images/raiz.svg)
 
 {{% /proof %}}
 
@@ -651,7 +651,7 @@ Un ángulo $\theta\in[0,2\pi)$ es **constructible** si el número $\cos \theta\i
 
 Por la construcción geométrica de senos y cosenos, está claro que la definición anterior es equivalente a decir que $\sin \theta$ es constructible, o que la recta que pasa por el origen y hace ángulo $\theta$ con el eje horizontal es constructible, o más generalmente que podemos construir la recta que pasa por un punto constructible y que hace ángulo $\theta$ con otra recta constructible que pasa por él.
 
-![Ángulo constructible](../../images/constructible-9.png)
+![Ángulo constructible](../../images/angulo.svg)
 
 Veamos que en general es imposible trisecar un ángulo cualquiera con regla y compás.
 
