@@ -1,0 +1,78 @@
+\usepackage{amsthm}
+\def\statementamount{\bigskipamount}
+\def\statementcolor{\color{USred}}
+\def\statementsquare{\vrule height 8pt depth 1pt width 2pt\relax}
+\newtheoremstyle{ItalicStatement}
+   {\statementamount}% pre
+   {\statementamount}% post
+   {\normalfont\itshape} % body
+   {0pt} %indentation
+   {\normalfont\bfseries\statementcolor\statementsquare\enspace} % head
+   {{}} %punctuation default (.)
+   {1em}  % space head body
+   {\statementcolor\thmname{{#1}}\thmnumber{ #2}{\thmnote{ (#3)}}} %desc.
+\newtheoremstyle{RomanStatement}
+   {\statementamount}
+   {\statementamount}
+   {\normalfont\rm}
+   {0pt}
+   {\normalfont\bfseries\statementcolor\statementsquare\enspace} % head
+   {{}} %punctuation default (.)
+   {1em}  % space head body
+   {\statementcolor\thmname{{#1}}\thmnumber{ #2}{\thmnote{ (#3)}}} %desc.
+\newtheoremstyle{RomanStar}
+   {\statementamount}
+   {\statementamount}
+   {\normalfont\rm}
+   {0pt}
+   {\normalfont\bfseries\statementcolor\statementsquare\enspace} % head
+   {{}} %punctuation default (.)
+   {1em}  % space head body
+   {\statementcolor\thmname{#1}\thmnote{ (#3)}}%description
+\newtheoremstyle{Statement}
+   {\statementamount}
+   {\statementamount}
+   {\normalfont\rm}
+   {0pt}
+   {\normalfont\bfseries\statementcolor\statementsquare\enspace} % head
+   {{}} %punctuation default (.)
+   {1em}  % space head body
+   {\statementcolor\thmnote{#3}}%description
+%
+\theoremstyle{ItalicStatement}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+%
+%\theoremstyle{RomanStar}
+%\newtheorem{theorem*}{Teorema}
+\theoremstyle{Statement}
+\newtheorem{statement}{}
+%
+\theoremstyle{RomanStatement}
+\newtheorem{example}{Example}
+\newtheorem*{exercise}{Ejercicio}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lema}
+\newtheorem{question}{Question}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\newtheorem*{solve}{Answer}
+%% Proofs setup.
+\def\qedsymbol{{\statementcolor\statementsquare}\global\qedtrue}
+\renewenvironment{proof}[1][\statementcolor\proofname]{\par
+  \normalfont
+  \global\qedsfalse
+  \topsep6pt plus6 pt \trivlist
+  \itemindent=\parindent%//soto
+  \item[\hskip\labelsep\itshape\Red
+    #1.]\ignorespaces
+}{%
+  \ifqeds\else\qed\fi
+  \endtrivlist
+	\vskip\medskipamount
+}
+\newif\ifqeds
+\def\qed{\leavevmode\unskip\penalty\@M
+   \kern3pt\mbox{\statementcolor\qedsymbol}\global\qedstrue}
+%
+

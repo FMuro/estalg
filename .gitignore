@@ -5,3 +5,8 @@ static/docs/latex.*
 pics/*
 !pics/pics.tex
 !pics/script.sh
+exercises/clase.aux
+exercises/clase.log
+exercises/clase.out
+exercises/clase.pdf
+exercises/clase.synctex.gz

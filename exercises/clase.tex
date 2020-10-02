@@ -1,0 +1,585 @@
+%!TEX TS-program = pdflatex
+%!TEX encoding = utf8
+\documentclass[12pt]{article}
+% ============
+% = Packages =
+% ============
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} \let\enumerate\compactenum
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{t101-theorems}
+\usepackage[spanish]{babel}
+%\usepackage{relsize}
+\usepackage[textwidth=78ex]{geometry}
+\def\bmmax{0}\def\hmmax{0} \usepackage{bm}
+%\usepackage[euler-digits]{eulervm}
+% \usepackage[mathbb, mathcal, mathfrak]{mathpi}
+\usepackage{ccicons}
+\usepackage{awesomebox}
+\usepackage[hidelinks]{hyperref}
+% \usepackage{uskit} \WmarkUS
+%     \AddToShipoutPicture{\tikz[overlay]\node[anchor=south west,
+%     inner sep=.75cm] at (current page.south west){%
+%         \color{black!80!white}
+%         Este documento se distribuye bajo licencia 
+%         \larger[2]\ccbynceu
+%     };}%
+
+\definecolor{USred}{cmyk}{0,1.00,0.65,0.34} % some color
+%\usepackage{leading} \leading{14pt}
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{USred}}{\thesection}{1ex}{}
+\titleformat{\subsection}
+  {\normalfont\large\itshape\color{USred}}{\P\thesubsection}{1ex}{}
+
+\parskip=3pt plus 1pt minus .5pt
+\frenchspacing
+%\raggedright
+
+
+\title{Ejercicios de Clase\\ Estructuras Algebraicas}
+\author{}
+\date{}
+
+
+\begin{document}
+    
+    \maketitle
+    
+
+    
+    
+    
+    % {\larger[4]\ccbynceu}
+    
+    \setlength{\aweboxleftmargin}{0.22\linewidth}
+    \setlength{\aweboxcontentwidth}{0.78\linewidth}
+    \awesomebox{4pt}{\ccbynceu}{USred}{\scriptsize Este documento se distribuye bajo la Licencia Creative Commons \href{https://creativecommons.org/licenses/by-nc/4.0/legalcode.es}{ Atribución-NoComercial 4.0 Internacional}. Bajo esta licencia, no se puede hacer uso del material con propósitos comerciales.}
+    
+    
+    
+    
+    
+    
+    \bigskip
+    
+    La numeración de los ejercicios se corresponde a la segunda edición de \emph{Algebra}, Michael Artin, Pearson.
+    
+    
+    
+    \section*{Capítulo 11}
+    
+    \begin{exercise}[11.2.2]
+        Sea $k$~un cuerpo. El conjunto de series de potencias formales $a_{0}+a_{1}t+a_{2}t^{2}+\cdots$, con $a_{i}\in k$, se denotada habitualmente por $k[\![t]\!]$. La palabra formal quiere decir que los coeficientes son sucesiones arbitrarias de elementos de~$k$, sin condiciones de convergencia. Prueba que $k[\![t]\!]$ es un anillo con las operaciones obvias y determina sus unidades.
+    \end{exercise}
+    
+    \begin{exercise}[11.3.3]
+        Encuentra conjuntos finitos de generadores de los núcleos de los siguientes homomorfismos de anillos:
+        \begin{enumerate}[\bfseries(a)]
+            \item $\mathbb{R}[x,y]\to \mathbb{R}$ definida por $f(x,y)\mapsto f(0,0)$,
+            \item $\mathbb{R}[x]\to \mathbb{C}$ definida por $f(x)\mapsto f(2+i)$.
+        \end{enumerate}
+    \end{exercise}
+    
+    
+    \begin{exercise}[11.3.7]
+        Determina los automorfismos del anillo de polinomios~$\mathbb{Z}[x]$.
+    \end{exercise}
+	
+    
+    \begin{exercise}[11.3.10]\hspace{-4mm}\footnote{Mejor hacerlo después del ejercicio 12.2.10.}
+        Determina los ideales del anillo $k[\![t]\!]$ de series formales con coeficientes en un cuerpo~$k$.
+    \end{exercise}
+    
+    
+    \begin{exercise}[11.4.1]
+        Considera el homomorfismo $\mathbb{Z}[x]\to \mathbb{Z}$ que envía $x\mapsto1$. Explica qué dice el Teorema de Correspondencia, aplicado a este homomorfismo, sobre los ideales de~$\mathbb{Z}[x]$.
+    \end{exercise}
+    
+    
+    
+    \begin{exercise}[11.5.2]
+        Sea $a$ un elemento de un anillo~$R$. Si añadimos a $R$ un elemento $\alpha$ con la relación $\alpha=a$, sería de esperar que obtuviéramos un anillo isomorfo a~$R$. Demuestra que es cierto.
+    \end{exercise}
+    
+    \begin{exercise}[11.5.3]
+        Describe el anillo  que se obtiene a partir de $\mathbb{Z}/12\mathbb{Z}$ añadiendo un inverso de~$2$.
+    \end{exercise}
+    
+    \begin{exercise}[11.5.5]
+        ¿Existen cuerpos $k$ para los que los anillos $k[x]/(x^{2})$ y $k[x]/(x^{2}-1)$ son isomorfos?
+    \end{exercise}
+    
+    \begin{exercise}[11.6.1]
+        Sea $\varphi\colon \mathbb{R}[x]\to \mathbb{C}\times \mathbb{C}$ el homomorfismo definido por $\varphi(x)=(1,i)$ y $\varphi(r)=(r,r)$, para $r\in \mathbb{R}$. Determina el núcleo y la imagen de~$\varphi$.
+    \end{exercise}
+    
+    
+    
+    \begin{exercise}[11.6.4]
+        En cada caso, describe el anillo que se obtiene del cuerpo $\mathbb{F}_{2}$ añadiendo un elemento $\alpha$ que verifica la siguiente relación
+        
+        \noindent
+       \begin{inparaenum}[\bfseries(a)]
+           \item $\alpha^{2}+\alpha+1=0$,
+           \item $\alpha^{2}+1=0$,
+           \item $\alpha^{2}+\alpha=0$.
+       \end{inparaenum} 
+    \end{exercise}
+    
+    
+    \begin{exercise}[11.6.5]
+        Supongamos que añadimos un elemento $\alpha$ que satisface la relación $\alpha^{2}=1$ a los números reales~$\mathbb{R}$. Demuestra que el anillo que resulta es isomorfo al producto~$\mathbb{R}\times \mathbb{R}$.
+    \end{exercise}
+    
+    
+    \begin{exercise}[11.7.4]\hspace{-4mm}\footnote{Hacer después de estudiar el tema de \emph{Factorización}.}
+        Demuestra que el cuerpo de fracciones del anillo de series formales $k[\![t]\!]$ sobre un cuerpo~$k$ se puede obtener invirtiendo el elemento~$t$. Encuentra una buena descripción de los elementos de este cuerpo.
+    \end{exercise}
+    
+    
+    \begin{exercise}[11.8.2]
+        Determina los ideales maximales de los siguientes anillos:
+        
+        \noindent
+        \begin{inparaenum}[\bfseries (a)]
+            \setcounter{enumi}{1}\item $\mathbb{R}[x]/(x^{2})$,
+            \item $\mathbb{R}[x]/(x^{2}-3x+2)$,
+            \item $\mathbb{R}[x]/(x^{2}+x+1)$.
+        \end{inparaenum}
+        
+    \end{exercise}
+    
+    \begin{exercise}[11.8.3]\hspace{-4mm}\footnote{Se puede hacer ahora con técnicas elementales o después del tema de \emph{Factorización} con otras más sofisticadas.}
+        Demuestra que el anillo $\mathbb{F}_{2}[x]/(x^{3}+x+1)$ es un cuerpo pero el anillo $\mathbb{F}_{3}[x]/(x^{3}+x+1)$ no lo es.
+    \end{exercise}
+    
+    
+    \section*{Capítulo 12}
+    
+    \begin{exercise}[2.6.b]
+        Demuestra que el anillo $\mathbb{Z}[\sqrt{-2}]$ es un dominio Euclídeo.
+    \end{exercise}
+    
+    \begin{exercise}[12.2.7]
+        Sean $a$~y~$b$ enteros. Demuestra que su máximo común divisor en el anillo de los enteros es el mismo que su máximo común divisor en el anillo de los enteros de Gauss.
+    \end{exercise}
+    
+    
+    \begin{exercise}[12.2.10]\hspace{-4mm}\footnote{Lo más sencillo es probar que de hecho es un DE.}
+        Demuestra que el anillo $k[\![t]\!]$ de series formales con coeficientes en un cuerpo $k$ es un DFU.
+    \end{exercise}
+    
+    
+    \begin{exercise}[12.3.1]
+        Sea $\varphi$ el homomorfismo $\mathbb{Z}[x]\to \mathbb{R}$ definido por 
+        
+        
+        \noindent
+        \begin{inparaenum}[\bfseries(a)]
+            \item $\varphi(x)=1+\sqrt{2}$,
+            \item $\varphi(x)=\frac{1}{2}+\sqrt{2}$.
+        \end{inparaenum}
+        
+        \noindent
+        ¿Es el núcleo de $\varphi$~un ideal principal? Si es así, encuentra un generador.
+    \end{exercise}
+    
+    \begin{exercise}[12.3.2]
+        Demuestra que dos polinomios con coeficientes enteros son coprimos como elementos de $\mathbb{Q}[x]$ si y solo si el ideal que generan en $\mathbb{Z}[x]$ contiene un entero.
+    \end{exercise}
+    
+    
+    \begin{exercise}[12.3.4]
+        Sean $x$, $y$, $z$, $w$ variables. Demuestra que $xy-zw$, el determinante de la matriz $2\times2$ de variables, es  un elemento irreducible del anillo de polinomios $\mathbb{C}[x,y,z,w]$.
+    \end{exercise}
+    
+    
+    \begin{exercise}[12.3.5.b]
+        Considera el homomorfismo de anillos $\phi\colon \mathbb{C}[x,y]\to \mathbb{C}[t]$ definido por $f(x,y)\mapsto f(t^{2}-t,t^{3}-t^{2})$. Demuestra que $\ker \varphi$ es un ideal principal, y encuentra un generador $g(x,y)$ de este ideal. Demuestra que la imagen de $\varphi$~es el conjunto de polinomios $p(t)$~tales que $p(0)=p(1)$. Da una explicación intuitiva en términos de la geometría de la variedad $\{g=0\}$ en~$\mathbb{C}^{2}$.
+    \end{exercise}
+  
+    % LOS SIGUIENTES PROBLEMAS EN REALIDAD SON **OPCIONALES**
+
+    % \begin{exercise}[12.4.11]
+    %     Usa la criba para determinar los primos menores que $100$, y estudia la eficiencia de la criba. ¿Cómo de rápidamente se filtran los no primos?
+    % \end{exercise}
+    
+    
+    
+    % \begin{exercise}[12.4.14]
+    %     Analizando el lugar geométrico de $x^{2}+y^{2}=1$, demuestra que el polinomio $x^{2}+y^{2}-1$ es irreducible en $\mathbb{C}[x,y]$.
+    % \end{exercise}
+    
+    
+    
+    
+    % \begin{exercise}[12.4.18]
+    %     Sea $q=p^{e}$ con $p$~primo, y sea $r=p^{e-1}$. Demuestra que el polinomio ciclotómico $(x^{q}-1)/(x^{r}-1)$ es irreducible.
+    % \end{exercise}
+    
+    \begin{exercise}[12.5.1]
+        Factoriza los siguientes enteros de Gauss como producto de primos en $\mathbb{Z}[i]$: 
+        \begin{inparaenum}[\bfseries(a)]
+            \item $1-3i$,
+            \item $10$,
+            \item $6+9i$,
+            \item $7+i$.
+        \end{inparaenum}
+    \end{exercise}
+    
+    \begin{exercise}[12.5.3]
+        Calcula un generador del ideal de $\mathbb{Z}[i]$ generado por $3+4i$ y $4+7i$.
+    \end{exercise}
+    
+    \begin{exercise}[12.5.6]
+        Sea $R$ el anillo $\mathbb{Z}[\sqrt{3}]$. Demuestra que un entero primo~$p$ es un elemento primo de~$R$ si y solo si el polinomio~$x^{2}+3$ es irreducible en $\mathbb{F}_{p}[x]$.
+    \end{exercise}
+    
+    \begin{exercise}[12.5.7]
+        Describe el anillo cociente $\mathbb{Z}[i]/(p)$ para cada primo de Gauss~$p$.
+    \end{exercise}
+    
+    
+    \section*{Capítulo 14} % (fold)
+    \label{sec:capitulo_14}
+    
+    \begin{exercise}[14.1.1]
+        Sea $R$ un anillo, y denotemos por $V$ el $R$-módulo $R$. Determina todos los homomorfismos $\varphi\colon V\to V$.
+    \end{exercise}
+    
+    
+    \begin{exercise}[14.2.1]
+        Sea $R=\mathbb{C}[x,y]$ y sea $M$ el ideal de $R$ generado por los dos elementos $x$~e~$y$. ¿Es $M$ un $R$-módulo libre?
+    \end{exercise}
+    
+    \begin{exercise}[14.2.4]
+        Sea $I$ un ideal de un anillo $R$.
+        \begin{enumerate}[\bfseries(a)]
+            \item ¿Bajo qué circunstancias es $I$ un $R$-módulo libre?
+            \item ¿Bajo qué circunstancias es el cociente $R/I$ un $R$-módulo libre?
+        \end{enumerate}
+    \end{exercise}
+    
+    \begin{exercise}[14.4.2]
+        Sea $A$ una matriz con coeficientes enteros. Prueba que la primera entrada de su forma normal de Smith es el máximo común divisor de los coeficientes de~$A$.
+    \end{exercise}
+    
+    \begin{exercise}[14.4.3]
+        Calcula todas las soluciones enteras del sistema de ecuaciones $AX=0$, con
+        \[
+            A=\begin{pmatrix}
+                4&7&2\\2&4&6
+            \end{pmatrix}.
+        \]
+        Calcula una base del espacio de vectores columa enteros~$B$ tal que $AX=B$ tiene solución.
+    \end{exercise}
+    
+    \begin{exercise}[14.4.6]
+        Sea $\varphi\colon \mathbb{Z}^{k}\to \mathbb{Z}^{k}$ un homomorfismo que viene dado por la multiplicación por una matriz entera~$A$. Demuestra que la imagen de~$\varphi$ es de índice finito si y solo si $A$ es no singular y que, en ese caso, el índice es $|\det(A)|$.
+    \end{exercise}
+    
+    \begin{exercise}[14.5.2]
+        Identifica el grupo abeliano $G$ presentado por la matriz
+        \[
+            \begin{pmatrix}
+                3&1&2\\
+                1&1&1\\
+                2&3&6
+            \end{pmatrix}.
+        \]
+        ¿Es $G$ finito? ¿Es cíclico? Caso de serlo, halla un generador.
+    \end{exercise}
+    
+    
+    
+    
+    \begin{exercise}[14.7.1]
+        Halla una suma directa de grupos cíclicos isomorfa al grupo abeliano presentado por la matriz 
+        \[
+            \begin{pmatrix}
+                2&2&2\\
+                2&2&0\\
+                2&0&2
+            \end{pmatrix}.
+        \]
+        ¿Es finito el grupo abeliano presentado por esta matriz? ¿Es cíclico?
+    \end{exercise}
+    
+    \begin{exercise}[14.7.3.d]
+        Da una suma directa de grupos cíclicos isomorfa al grupo abeliano~$V$ generado por $x,y,z$~con las siguientes relaciones
+        \[
+            \begin{aligned}
+                7x+5y+2z&=0,\\
+                3x+3y&=0,\\
+                13x+11y+2z&=0.
+            \end{aligned}
+        \]
+        ¿Es $V$ finito? ¿Es cíclico? Encuentra un conjunto de generadores de $V$ con dos elementos. Halla un elemento de orden $6$ de $V$.
+    \end{exercise}
+    
+    \begin{exercise}[14.7.5]
+        Determina el número de clases de isomorfía de grupos abelianos de orden~$400$.
+    \end{exercise}
+    
+    
+    \begin{exercise}[14.7.7]
+        Sea $R=\mathbb{Z}[i]$ y sea~$V$ el $R$-módulo generado por los elementos $v_{1}$~y~$v_{2}$ con relaciones
+        \[
+            \begin{aligned}
+                (1+i)v_{1}+(2-i)v_{2}&=0,\\
+                3v_{1}+5iv_{2}&=0.
+            \end{aligned}
+        \]
+        Establece un isomorfismo entre $V$ y una suma directa de $R$-módulos cíclicos.
+    \end{exercise}
+    
+    
+    \begin{exercise}
+        Resuelve los dos sistemas de ecuaciones lineales diofánticas siguientes:
+        \[
+            \left\{
+            \begin{aligned}
+                3x+6y+8z&=1,\\
+                6x-10y-10z&=26,
+            \end{aligned}
+            \right.
+            \qquad\qquad
+            \left\{
+            \begin{aligned}
+                3x+6y+8z&=1,\\
+                6x-10y-10z&=27.
+            \end{aligned}
+            \right.
+        \]
+    \end{exercise}
+    
+    
+    
+    % section capitulo_14 (end)
+    
+    
+    
+    \section*{Capítulo 15} % (fold)
+    \label{sec:capitulo_15}
+    
+    \begin{exercise}[15.1.1]
+        Sea $R$ un anillo que contiene un cuerpo~$k$ como subanillo, y que es de dimensión finita como $k$-espacio vectorial. Demuestra que $R$ es un cuerpo.
+    \end{exercise}
+    
+    \begin{exercise}[15.2.1]
+        Sea $\alpha$ una raíz compleja del polinomio $x^{3}-3x+4$. Halla el inverso de~$\alpha^{2}+\alpha+1$ expresado de la forma $a+b \alpha+c \alpha^{2}$, con $a$, $b$, $c\in \mathbb{Q}$. ¿Es esta expresión única?
+    \end{exercise}
+    
+    \begin{exercise}[15.3.1]
+        Sea $F\subset\mathbb{C}$ un cuerpo, y sea $\alpha\in \mathbb{C}$ un elemento que genera una extensión de $F$ de grado~$5$. Demuestra que $\alpha^{2}$ genera la misma extensión.
+    \end{exercise}
+    
+    \begin{exercise}[15.3.2]
+        Demuestra que el polinomio $x^{4}+3x+3$ es irreducible sobre el cuerpo~$\mathbb{Q}[\sqrt[3]{2}]$.
+    \end{exercise}
+    
+    \begin{exercise}[15.3.5]
+        Determina los valores $n$ para los que $\zeta_{n}=e^{2 \pi i/n}$ tiene grado a lo más~$3$ sobre~$\mathbb{Q}$.
+    \end{exercise}
+    
+    \begin{exercise}[15.3.7.a]
+        ¿Es $i$~un elemento del cuerpo~$\mathbb{Q}(\sqrt[4]{-2})$?
+    \end{exercise}
+    
+    \begin{exercise}[15.4.1]
+        Sea $K=\mathbb{Q}(\alpha)$, con $\alpha$ una raíz del polinomio $x^{3}-x-1$. Determina el polinomio irreducible del elemento $\gamma=1+\alpha^{2}$ sobre~$\mathbb{Q}$.
+    \end{exercise}
+    
+    \begin{exercise}[15.4.2]
+        Determina el polinomio irreducible de $\alpha=\sqrt{3}+\sqrt{5}$ sobre los siguientes cuerpos:  
+        
+        \noindent
+        \begin{inparaenum}[\bfseries(a)]
+            \item $\mathbb{Q}$, 
+            \item $\mathbb{Q}(\sqrt{5})$,
+            \item $\mathbb{Q}(\sqrt{10})$,
+            \item $\mathbb{Q}(\sqrt{15})$.
+        \end{inparaenum}
+    \end{exercise}
+    
+    \begin{exercise}[15.5.1]
+        Expresa $\cos(15^{\circ})$ en términos de raíces cuadradas reales.
+    \end{exercise}
+    
+    \begin{exercise}[15.5.3]
+        ¿Es el nonágono regular constructible con regla y compás?
+    \end{exercise}
+    
+    \begin{exercise}[15.8.2]
+        Determina \emph{todos} los elementos primitivos de la extensión $K=\mathbb{Q}(\sqrt{2}, \sqrt{3})$ de~$\mathbb{Q}$.
+    \end{exercise}
+    
+    
+    
+    
+    % section capitulo_15 (end)
+    
+    
+    \section*{Capítulo 16} % (fold)
+    \label{sec:capitulo_16}
+    
+    
+    
+    \begin{exercise}[16.2.2]\quad
+        \begin{enumerate}[\bfseries(a)]
+            \item Demuestra que el discriminante de una cúbica real es no~negativo si y solo si tiene tres raíces reales.
+            
+            \item Supongamos que un polinomio real de grado cuatro tiene discriminante positivo ¿Qué puedes decir sobre el número de raíces?
+        \end{enumerate}
+    
+    \end{exercise}
+    
+    \begin{exercise}[16.3.2]
+        Determina los grados de los cuerpos de descomposición de los siguientes polinomios sobre $\mathbb{Q}$:
+        
+        
+        \noindent
+        \begin{inparaenum}[\bfseries(a)]
+            \item $x^{3}-2$,
+            \item $x^{4}-1$,
+            \item $x^{4}+1$.
+        \end{inparaenum}
+    \end{exercise}
+    
+    
+    \begin{exercise}[16.6.2]
+        Sea $K=\mathbb{Q}(\sqrt{2}, \sqrt{3}, \sqrt{5})$. Determina $[K:\mathbb{Q}]$, demuestra que $K$~es una extensión de Galois de~$\mathbb{Q}$ y determina su grupo de Galois.
+    \end{exercise}
+    
+    \begin{exercise}[16.7.4]
+        Sea $F=\mathbb{Q}$ y  $K=\mathbb{Q}(\sqrt{2}, \sqrt{3}, \sqrt{5})$. Determina todos los cuerpos intermedios.
+    \end{exercise}
+    
+    \begin{exercise}[16.7.7.a]
+        Determina el polinomio irreducible de $i+\sqrt{2}$ sobre~$\mathbb{Q}$.
+    \end{exercise}
+    
+    \begin{exercise}[16.7.8]
+        Denotemos por $\alpha$ a la raíz cuarta real positiva de~$2$. Factoriza el polinomio $x^{4}-2$ como producto de factores irreducibles en cada uno de los cuerpos $\mathbb{Q}$, $\mathbb{Q}(\sqrt{2})$, $\mathbb{Q}(\sqrt{2},i)$, $\mathbb{Q}(\alpha)$, $\mathbb{Q}(\alpha,i)$.
+    \end{exercise}
+    
+    
+    \begin{exercise}[16.7.9]
+        Sea $\zeta=e^{2\pi i/5}$. Demuestra que $\mathbb{Q}(\zeta)$ es el cuerpo de descomposición del polinomio $x^{5}-1$ sobre~$\mathbb{Q}$ y determina el grado~$[K:\mathbb{Q}]$. Prueba que $K$ es una extensión de Galois de $\mathbb{Q}$ y calcula su grupo de Galois.
+    \end{exercise}
+    
+    \begin{exercise}[16.7.11]
+        Sea $\alpha=\sqrt[3]{2}$, $\beta=\sqrt{3}$, y $\gamma=\alpha+\beta$. Sea $L$~el cuerpo~$\mathbb{Q}(\alpha,\beta)$ y sea~$K$ el cuerpo de descomposición del polinomio $(x^{3}-2)(x^{2}-3)$~sobre~$\mathbb{Q}$.
+        \begin{enumerate}[\bfseries(a)]
+            \item Determina el polinomio irreducible de~$\gamma$ sobre~$\mathbb{Q}$, y sus raíces en~$\mathbb{C}$.
+            \item Determina el grupo de Galois de $K/\mathbb{Q}$.
+        \end{enumerate}
+    \end{exercise}
+    
+    
+    \begin{exercise}[16.8.2]
+        Determina el grupo de Galois de los siguientes polinomios sobre~$\mathbb{Q}$:
+        
+        \noindent
+        \begin{inparaenum}[\bfseries(a)]
+            \item $x^{3}-2$,
+            \item $x^{3}+3x+14$.
+        \end{inparaenum}
+    \end{exercise}
+    
+    
+    \begin{exercise}[16.9.3]
+        ¿Es posible escribir $\sqrt{4+\sqrt{7}}$ de la forma $\sqrt{a}+\sqrt{b}$, con racionales $a$~y~$b$? ¿Y el $\sqrt{4+\sqrt{17}}$?
+    \end{exercise}
+    
+    
+    \begin{exercise}[16.9.6]
+        Calcula el discriminante de la cuártica $x^{4}+1$ y determina su grupo de Galois sobre~$\mathbb{Q}$.
+    \end{exercise}
+    
+    \begin{exercise}[16.9.11]
+        Sea $F=\mathbb{Q}$ y sea~$K$ el cuerpo de descomposición del polinomio $f(x)=x^{4}-2$ sobre~$F$. Las raíces son $\alpha$, $-\alpha$, $i \alpha$, $-i \alpha$, con $\alpha=\sqrt{2}$.
+        \begin{enumerate}[\bfseries(a)]
+            \item Determina el grupo de Galois $G=G(K/F)$, y el subgrupo $H=G\bigl(K/F(i)\bigr)$.
+            \item Calcula cómo cada elemento de~$H$ permuta las raíces de~$f$.
+            \item Calcula todos los cuerpos intermedios.
+        \end{enumerate}
+    \end{exercise}
+    
+    \begin{exercise}[16.9.12]
+        Determina el grupo de Galois de los siguientes polinomios sobre~$\mathbb{Q}$:
+        
+        \noindent
+        \begin{inparaenum}[\bfseries(a)]
+            \item $x^{4}+4x^{2}+2$,
+            \item $x^{4}+2x^{2}+4$.
+        \end{inparaenum}
+    \end{exercise}
+    
+    \begin{exercise}[16.9.13]
+        Sea $K$~el cuerpo de descomposición del polinomio $x^{4}-2x-1$. Determina el grupo de Galois~$G$ de~$K/\mathbb{Q}$, calcula todos los cuerpos intermedios y sus correspondientes subgrupos de~$G$. 
+    \end{exercise}
+    
+    
+    \begin{exercise}[16.10.7]
+        Sea $\zeta_{n}=e^{2\pi i/n}$ y sea $K=\mathbb{Q}(\zeta_{n})$.
+        \begin{enumerate}[\bfseries(a)]
+            \item Demuestra que $K$~es una extensión de Galois de $\mathbb{Q}$.
+            \item Define un homomorfismo inyectivo $G(K/Q)\to U$, con $U$~el grupo de unidades en el anillo~$\mathbb{Z}/(n)$.
+            \item Demuestra que este homomorfismo es biyectivo cuando $n=6$, $8$, $12$. (De hecho, esta aplicación es siembre biyectiva.)
+        \end{enumerate}
+    \end{exercise}
+    
+    
+    
+    \begin{exercise}[16.10.8]
+        Determina el grupo de Galois de los polinomios $x^{8}-1$, $x^{12}-1$, $x^{9}-1$.
+    \end{exercise}
+    
+    
+    % \begin{exercise}[16.11.1]
+    %     Demuestra que si el discriminante de un polinomio cúbico en $F[x]$ no es un cuadrado en $F$, entonces las raíces no se pueden obtener añadiendo una raíz cúbica a~$F$.
+    % \end{exercise}
+    %
+    %
+    % \begin{exercise}[16.11.3]
+    %
+    % \end{exercise}
+    % 
+    
+    % section capitulo_16 (end)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
