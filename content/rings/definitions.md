@@ -215,10 +215,6 @@ $$\begin{array}{rcl}\bar x^3&=& -3\bar x-1,\cr \bar x^4&=& -3\bar x^2-\bar x,\cr
 
 {{% /example %}}
 
-{{% example name="$\mathbb Z/(4)[ x ]/(2x^2-1)$" %}}
-En este anillo la posible generalización del corolario anterior es totalmente falsa. En efecto, aquí $2=0$ ya que $0=2(2\bar x^2-1)=4\bar x^2-2=2$ pues $4=0$ en $\mathbb Z/4$. Además $\bar x^2$ no se puede expresar como la clase de un polinomio de grado ${<}2$ porque, si se pudiera, entonces el ideal $(2x^2-1)\subset \mathbb Z/(4)[ x ]$ tendría polinomios mónicos de grado $2$, pero no tiene.
-{{% /example %}}
-
 Es posible añadir a un anillo de manera abstracta no solo uno sino varios elementos que satisfagan determinadas ecuaciones. Se puede hacer tanto de manera directa como inductiva. Prueba a hacerlo como ejericio.
 
 Frecuentemente necesitaremos construir homomorfismos que partan de anillos cociente. Para facilitar esta tarea disponemos de los dos resultados siguientes.
