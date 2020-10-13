@@ -45,7 +45,7 @@ En un dominio $R$:
 
 
 {{% remark %}}
-Si $a\in R$ no es nulo ni una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ y $a'$ son irreducibles y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.
+Si $a\in R$ no es una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ no es una unidad, $a'$ es irreducible y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.
 {{% /remark %}}
 
 
