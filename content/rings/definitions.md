@@ -114,7 +114,7 @@ También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, e
 
 A diferencia de otras estructuras algebraicas, no es posible definir el cociente de un anillo por un subanillo. El tipo de subconjunto adecuado para definir cocientes son los ideales. 
 
-Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpo se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. Los ideales son subgrupos de los anillos para la suma.
+Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpos se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. Los ideales son subgrupos de los anillos para la suma.
 
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$ es un ideal 
 
@@ -130,7 +130,7 @@ Este es el menor ideal que contiene a los elementos $a_1,\dots,a_n\in R$. Es dec
 
 Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra \mid  r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
 
-Dado un anillo y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
+Dado un anillo $R$ y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
 
 $$a+I=\\{a+b \mid b\in I\\}\subset R.$$
 
