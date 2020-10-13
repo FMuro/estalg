@@ -231,7 +231,7 @@ Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo
 
 
 {{% remark %}}
-Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ or $k[ x ]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
+Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ o $k[ x ]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
 {{% /remark %}}
 
 
