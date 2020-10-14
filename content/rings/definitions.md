@@ -193,7 +193,7 @@ Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[ x ]$ de grado $n$
 
 
 {{% proof %}}
-En efecto, dado $[\bar{f}]\in R[ x ]/(p)$, $r\in R[ x ]$ es un representante de $[\bar{f}]$ si y solo si $\bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[ x ]$ tal que $\bar{f}-r=c\cdot p$, es decir, $\bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
+En efecto, dado $[f]\in R[ x ]/(p)$, $r\in R[ x ]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[ x ]$ tal que $f-r=c\cdot p$, es decir, $f=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
 
 {{% remark %}}
