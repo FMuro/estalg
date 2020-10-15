@@ -47,7 +47,7 @@ Los homomorfismos preservan las unidades y sus inversos. La **imagen** de un hom
 
 Dado un anillo $R$ y $a\in R$ está definido el homomorfismo de **evaluación** $ev_a\colon R[ x ]\rightarrow R$ como $ev_a(p(x))=p(a)$. Los anillos de polinomios satisfacen una propiedad universal relacionada con estos homomorfismos.
 
-{{% theorem name="Principio de sustitución" %}}
+{{% theorem name="Principio de sustitución" label="sustitucion" %}}
 Dado un homomorfismo de anillos $f\colon R\rightarrow S$ y un elemento $c\in S$ existe un único homomorfismo $g\colon R[ x ]\rightarrow S$ tal que la restricción de $g$ a $R$ es $f$ y $g(x)=c$.
 {{% /theorem %}}
 
@@ -98,7 +98,7 @@ y obtenemos el homomorfismo buscado.
 La siguiente definición nos da una receta para añadir nuevos elementos a un anillo contenido en otro mayor.
 
 {{% definition %}}
-Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el menor subanillo $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen del homomorfismo $g\colon R[ x ]\rightarrow S$ definido como la inclusión $i\colon R\hookrightarrow S$ sobre $R$ tal que $g(x)=s$, $R[s]=\operatorname{im} g$.
+Dado un anillo $S$, un subanillo $R\subset S$ y $s\in S$, el **menor subanillo** $R[s]\subset S$ que contiene a $R$ y a $s$ es la imagen $R[s]=\operatorname{im} g$ del homomorfismo $g\colon R[ x ]\rightarrow S$, definido por el [principio de sustitución](#sustitucion), cuya restricción $g_{|_R}\colon R\hookrightarrow S$ es la inclusión y $g(x)=s$.
 {{% /definition %}}
 
 
