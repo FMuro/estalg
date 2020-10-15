@@ -41,7 +41,7 @@ Recuerda también que un **subanillo** $R'\subset R$ de un anillo $R$ es un subc
 
 Recuerda que un **homomorfismo** de anillos $f\colon R\rightarrow S$ es una aplicación que preserva esta estructura, es decir la suma, el producto, el $0$ y el $1$. Los homomorfismos inyectivos se denominan **monomorfismos**, los sobreyectivos **epimorfismos** y los biyectivos **isomorfismos**. Estos últimos se denotan con el símbolo $\cong$. Los isomorfismos de un anillo en sí mismo reciben el nombre de **automorfismos**. 
 
-Todas estas clases de morfismos son cerradas para la composición y contienen a la identidad. Es más, el inverso de un isomorfismo es también un isomorfismo, e igual para automorfismos. La conjugación compleja es un automorfismo no trivial de $\mathbb{C}$. El inverso de un isomorfismo también es un isomorfismo. La inclusión de un subanillo $R'\hookrightarrow R$ es un monomorfismo y la proyección sobre la primera coordenada $R\times S\twoheadrightarrow R$ es un epimorfismo, sin embargo estos, en general, no son isomorfismos. Se da el hecho curioso de que, para todo anillo $R$, existe un único homomorfismo $\mathbb{Z}\rightarrow R$, es decir, $\mathbb{Z}$ es el objeto incial en la categoría de los anillos.
+Todas estas clases de morfismos son cerradas para la composición y contienen a la identidad. Es más, el inverso de un isomorfismo es también un isomorfismo, e igual para automorfismos. La conjugación compleja es un automorfismo no trivial de $\mathbb{C}$. La inclusión de un subanillo $R'\hookrightarrow R$ es un monomorfismo y la proyección sobre la primera coordenada $R\times S\twoheadrightarrow R$ es un epimorfismo, sin embargo estos, en general, no son isomorfismos. Se da el hecho curioso de que, para todo anillo $R$, existe un único homomorfismo $\mathbb{Z}\rightarrow R$, es decir, $\mathbb{Z}$ es el objeto incial en la categoría de los anillos.
 
 Los homomorfismos preservan las unidades y sus inversos. La **imagen** de un homomorfismo $f\colon R\rightarrow S$ es un subanillo $\operatorname{im} f\subset S$. 
 
@@ -114,7 +114,7 @@ También podemos añadir nuevos elementos a un anillo $R$ de manera abstracta, e
 
 A diferencia de otras estructuras algebraicas, no es posible definir el cociente de un anillo por un subanillo. El tipo de subconjunto adecuado para definir cocientes son los ideales. 
 
-Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpo se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. Los ideales son subgrupos de los anillos para la suma.
+Recordemos que un **ideal** $I\subset R$ de un anillo $R$ es un subconjunto cerrado para la suma y para el producto por escalares de $R$ que contiene al $0$. En particular, si $a_1,\dots,a_n\in I$ y $r_1,\dots, r_n\in R$ entonces la **combinación lineal** $r_1a_1+\cdots+r_na_n\in I$. Tanto el total $R\subset R$ como el trivial $\\{0\\}\subset R$ son ideales. Los cuerpos se caracterizan como los anillos que poseen exactamente dos ideales (necesariamente el total y el trivial). En general, el único ideal que contiene al $1$ (o a cualquier otra unidad) es el total. Los ideales son subgrupos de los anillos para la suma.
 
 El **núcleo** de un homomorfismo $f\colon R\rightarrow S$ es un ideal 
 
@@ -130,7 +130,7 @@ Este es el menor ideal que contiene a los elementos $a_1,\dots,a_n\in R$. Es dec
 
 Un **ideal principal** es uno que está generado por un único elemento $(a)=\\{ra \mid  r\in R\\}$ y que por tanto está formado por sus múltiplos. En $\mathbb Z$, el ideal de los números pares es $(2)$.
 
-Dado un anillo y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
+Dado un anillo $R$ y un ideal $I\subset R$, la **clase** de $a\in R$ **módulo** $I$ es el subconjunto
 
 $$a+I=\\{a+b \mid b\in I\\}\subset R.$$
 
@@ -193,7 +193,7 @@ Dado un polinomio mónico $p(x)=x^n+\cdots + a\_1x+ a\_0\in R[ x ]$ de grado $n$
 
 
 {{% proof %}}
-En efecto, dado $[\bar{f}]\in R[ x ]/(p)$, $r\in R[ x ]$ es un representante de $[\bar{f}]$ si y solo si $\bar{f}-r\in (p)$, lo que equivale a la existencia de $c\in R[ x ]$ tal que $\bar{f}-r=c\cdot p$, es decir, $\bar{f}=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
+En efecto, dado $[f]\in R[ x ]/(p)$, $r\in R[ x ]$ es un representante de $[f]$ si y solo si $f-r\in (p)$, lo que equivale a la existencia de $c\in R[ x ]$ tal que $f-r=c\cdot p$, es decir, $f=c\cdot p+r$. Este resultado se deduce por tanto del lema anterior.
 {{% /proof %}}
 
 {{% remark %}}

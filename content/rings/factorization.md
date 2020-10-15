@@ -45,7 +45,7 @@ En un dominio $R$:
 
 
 {{% remark %}}
-Si $a\in R$ no es nulo ni una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ y $a'$ son irreducibles y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.
+Si $a\in R$ no es una unidad, un divisor de $a$  es bien propio, bien asociado, o bien una unidad, pero no puede ser dos de estas cosas a la vez. En particular, si $a$ no es una unidad, $a'$ es irreducible y $a|a'$ entonces $a$ y $a'$ son asociados.  Los divisores de una unidad son las unidades. La primera caracterización de los asociados es especialmente interesante porque demuestra que cualquier propiedad de elementos de $R$ que pueda enunciarse en términos de sus correspondientes ideales principales es también válida para los elementos asociados.
 {{% /remark %}}
 
 
@@ -231,7 +231,7 @@ Si $a$ o $b$ fuera una unidad, cualquier unidad sería un divisor común máximo
 
 
 {{% remark %}}
-Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ or $k[ x ]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
+Si $a$ o $b$ es una unidad $\operatorname{mcd}(a,b)=1$. A diferencia de $\mathbb{Z}$ o $k[ x ]$, $k$ un cuerpo, en un DFU un divisor común máximo no tiene por qué satisfacer una identidad de Bézout, es decir, $\operatorname{mcd}(a,b)$ no tiene por qué estar en el ideal $(a,b)$. Veremos ejemplos más adelante.
 {{% /remark %}}
 
 
