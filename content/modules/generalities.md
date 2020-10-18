@@ -294,7 +294,7 @@ El subconjunto $\\{e\_1,\dots,e\_n\\}\subset R^n$ es una base denominada **canó
 Podemos definir un submódulo con un conjunto prefijado de generadores al igual que lo hicimos con los [ideales](/estalg/rings/definitions/#generators).
 
 {{% definition %}}
-El **submódulo generado por** un conjunto finto de elementos $a_1,\dots,a_n\in M$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo: 
+El **submódulo generado por** un conjunto finito de elementos $a_1,\dots,a_n\in M$ está formado por todas las combinaciones lineales de los generadores con coeficientes en el anillo: 
 
 $$(a_1,\dots,a_n)=\\{r_1a_1+\dots+r_na_n \mid  r_1,\dots,r_n\in R\\}\subset M.$$
 
