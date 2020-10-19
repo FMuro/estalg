@@ -315,16 +315,16 @@ $$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a^{\prime\prime}}{b^{\pr
 entonces 
 
 $$\begin{array}{rcl}
-ab'&=&a'b,\cr 
-a'b^{\prime\prime}&=&a^{\prime\prime} b'.
+ab'&=&a^{\prime}b,\cr 
+a^{\prime}b^{\prime\prime}&=&a^{\prime\prime} b'.
 \end{array}$$
 
 En particular, 
 
 $$\begin{array}{rcl}
 (a b^{\prime\prime}) b'&=&(ab')b^{\prime\prime}\cr
-&=&(a'b)b^{\prime\prime}\cr
-&=&(a'b^{\prime\prime})b\cr
+&=&(a'^{\prime}b)b^{\prime\prime}\cr
+&=&(a'^{\prime}b^{\prime\prime})b\cr
 &=&(a^{\prime\prime} b')b\cr
 &=&(a^{\prime\prime} b)b'.
 \end{array}$$
@@ -359,7 +359,7 @@ es decir, $g\circ i_R=i_S\circ f$, donde $i_R$ e $i_S$ son las inclusiones de $R
 {{% /corollary %}}
 
 {{% proof %}}
-Basta aplicar la proposición anterior a $i_S\circ f\colon R\rightarrow Q(S)$, que es inyectivo por ser composición de inyectivos. El homomorfismo $g$ estará por tanto definido como $g\left(\frac{a}{b}\right)=\frac{g(a)}{g(b)}$.
+Basta aplicar la proposición anterior a $i_S\circ f\colon R\rightarrow Q(S)$, que es inyectivo por ser composición de inyectivos. El homomorfismo $g$ estará por tanto definido como $g\left(\frac{a}{b}\right)=\frac{f(a)}{f(b)}$.
 {{% /proof %}}
 
 
