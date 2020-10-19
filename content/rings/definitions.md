@@ -315,16 +315,16 @@ $$\displaystyle \frac{a}{b}\sim \frac{a'}{b'}\sim \frac{a^{\prime\prime}}{b^{\pr
 entonces 
 
 $$\begin{array}{rcl}
-ab'&=&a'b,\cr 
-a'b^{\prime\prime}&=&a^{\prime\prime} b'.
+ab'&=&a^{\prime}b,\cr 
+a^{\prime}b^{\prime\prime}&=&a^{\prime\prime} b'.
 \end{array}$$
 
 En particular, 
 
 $$\begin{array}{rcl}
 (a b^{\prime\prime}) b'&=&(ab')b^{\prime\prime}\cr
-&=&(a'b)b^{\prime\prime}\cr
-&=&(a'b^{\prime\prime})b\cr
+&=&(a'^{\prime}b)b^{\prime\prime}\cr
+&=&(a'^{\prime}b^{\prime\prime})b\cr
 &=&(a^{\prime\prime} b')b\cr
 &=&(a^{\prime\prime} b)b'.
 \end{array}$$
