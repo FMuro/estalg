@@ -359,7 +359,7 @@ es decir, $g\circ i_R=i_S\circ f$, donde $i_R$ e $i_S$ son las inclusiones de $R
 {{% /corollary %}}
 
 {{% proof %}}
-Basta aplicar la proposición anterior a $i_S\circ f\colon R\rightarrow Q(S)$, que es inyectivo por ser composición de inyectivos. El homomorfismo $g$ estará por tanto definido como $g\left(\frac{a}{b}\right)=\frac{g(a)}{g(b)}$.
+Basta aplicar la proposición anterior a $i_S\circ f\colon R\rightarrow Q(S)$, que es inyectivo por ser composición de inyectivos. El homomorfismo $g$ estará por tanto definido como $g\left(\frac{a}{b}\right)=\frac{f(a)}{f(b)}$.
 {{% /proof %}}
 
 
