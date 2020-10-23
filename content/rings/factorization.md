@@ -13,7 +13,7 @@ En un dominio $R$, decimos que $a$ **divide** a $b$, o que $b$ es un **múltiplo
 
 
 {{% watch %}}
-El cero solo divide al cero, por tanto el cero es el único asociado del cero. Es más, si $a\neq 0$ y $a|b$ el cociente es único, es decir, solo hay un $q\in R$ tal que $b=qa$ pues si $b=q'a$ entonces $qa=q'a$ y por la propiedad cancelativa $q=q'$.
+El cero solo divide al cero, por tanto el cero es el único asociado del cero. Es más, si $a\neq 0$ y $a|b$ el cociente es único, es decir, solo hay un $q\in R$ tal que $b=qa$ pues si $b=q^{\prime}a$ entonces $qa=q^{\prime}a$ y por la propiedad cancelativa $q=q'$.
 {{% /watch %}}
 
 
@@ -35,7 +35,7 @@ En un dominio $R$:
 
 * $(a)\supset (b)\Leftrightarrow (a)\ni b\Leftrightarrow a|b$.
 
-* La primera equivalencia se sigue del apartado anterior. Para la segunda, $\Leftarrow$ es obvio pues también $a=u^{-1}a'$. Veamos $\Rightarrow$. Si $a$ y $a'$ son asociados entonces $a'=qa$ y $a=q'a'$, luego $a=q'qa$. Si $a=0$ entonces $a'=0$ y podemos tomar $u=1$. En caso contrario, por la propiedad cancelativa $1=q'q$, luego $q'$ y $q$ son unidades y podemos tomar $u=q$.
+* La primera equivalencia se sigue del apartado anterior. Para la segunda, $\Leftarrow$ es obvio pues también $a=u^{-1}a'$. Veamos $\Rightarrow$. Si $a$ y $a'$ son asociados entonces $a'=qa$ y $a=q^{\prime}a'$, luego $a=q^{\prime}qa$. Si $a=0$ entonces $a'=0$ y podemos tomar $u=1$. En caso contrario, por la propiedad cancelativa $1=q^{\prime}q$, luego $q'$ y $q$ son unidades y podemos tomar $u=q$.
 
 * $\Rightarrow$ se ha visto antes. $\Leftarrow$ si $(u)=(1)$ entonces existe $r\in R$ tal que $ru=1$, con lo que $u$ es una unidad.
 
