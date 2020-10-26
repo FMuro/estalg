@@ -370,7 +370,7 @@ En todos estos casos podemos además tomar el cuadrado del módulo como función
 
 $$n=2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73.$$
 
-Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero no con una función de tamaño distinta de $N$.
+Para $n=69$, $R=\mathbb Z[\frac{1+\sqrt{69}}{2}]$ es también un dominio euclídeo pero con una función de tamaño distinta de $N$.
 {{% /example %}}
 
 Explora la posibilidad de realizar divisiones euclídeas en anillos de enteros cuadráticos imaginarios con la [aplicación interactiva](../../interactions/#divisiones-euclídeas-en-enteros-cuadráticos-imaginarios) diseñada para ello.
