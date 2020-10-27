@@ -41,13 +41,6 @@
 \newtheorem{exercise}[equation]{Ejercicio}
 \newtheorem{watch}[equation]{Advertencia}
 
-\numberwithin{equation}{subsection}
-
-\numberwithin{section}{part}
-
-\providecommand{\tightlist}{%
-	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
 % Numbering: chapter.section.number
 
 \renewcommand{\thesection}{\thechapter.\arabic{section}}
@@ -55,6 +48,10 @@
 
 \providecommand{\tightlist}{%
 	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% No indentations, forced by markdown fomatting requiring some empty lines
+
+\setlength\parindent{0pt}
 
 % Fix pandoc not parsing inside latex blocks
 
