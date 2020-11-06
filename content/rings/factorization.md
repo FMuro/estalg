@@ -594,7 +594,7 @@ Por tanto $9x^2-6x+10\in\mathbb{Z}[ x ]$ es un polinomio irreducible que tiene a
 $$
 \begin{array}{rcl}
 \mathbb Z[ x ]/(9x^2-6x+10)&\stackrel{\cong}{\longrightarrow}&\mathbb Z[\frac{1}{3}+i],\cr
-\bar{x}&\mapsto& i.
+\bar{x}&\mapsto& \frac{1}{3}+i.
 \end{array}
 $$
 
