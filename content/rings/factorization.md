@@ -979,11 +979,11 @@ $$(1+i)(2-i)^3(3- 2i)^2=-43-201i,$$
 
 así que $u=i$,
 
-$$z=i(1+i)(2+i)^3(3\pm 2i)^2.$$
+$$z=i(1+i)(2-i)^3(3-2i)^2.$$
 
 La unidad $i$ se puede incorporar a cualquier factor primo, por ejemplo al primero, $i(1+i)=-1+i$, y en conclusión
 
-$$z=(-1+i)(2+i)^3(3\pm 2i)^2$$
+$$z=(-1+i)(2-i)^3(3-2i)^2$$
 
 es una factorización de $z$ como producto de primos de Gauss.
 {{% /example %}}
