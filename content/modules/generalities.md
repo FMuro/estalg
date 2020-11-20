@@ -575,7 +575,7 @@ pero $p(a)=a+N$ y $a+N=0+N$ si y solo si $a\in N$, luego $\ker p=N$.
 {{% /proof %}}
 
 {{% example name="$R[ x ]/(p(x))$ como $R$-módulo" %}}
-Sea $R$ un anillo y $p(x)\in R[ x ]$ un polinomio mónico de grado $n$. El $R[ x ]$-módulo cociente $R[ x ]/(p(x))$ es también un $R$-módulo, restringiendo el producto por escalares al subanillo $R\subset R[ x ]$. Hemos [visto](../rings/definitions/#uniquerep) que todo elemento del cociente está representado por un único polinomio de grado $<n$. Es decir, todo elemento de $R[ x ]/(p(x))$ se puede escribir como combinación lineal de $S=\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ de manera única. Por tanto, $R[ x ]/(p(x))$ es libre como $R$-módulo y $S$ es una base. Recuerda que, sin embargo, cuando estudiamos la torsión vimos que, si $R$ es un dominio, $R[ x ]/(p(x))$ no es libre como $R[ x ]$-módulo.
+Sea $R$ un anillo y $p(x)\in R[ x ]$ un polinomio mónico de grado $n$. El $R[ x ]$-módulo cociente $R[ x ]/(p(x))$ es también un $R$-módulo, restringiendo el producto por escalares al subanillo $R\subset R[ x ]$. Hemos [visto](../../rings/definitions/#uniquerep) que todo elemento del cociente está representado por un único polinomio de grado $<n$. Es decir, todo elemento de $R[ x ]/(p(x))$ se puede escribir como combinación lineal de $S=\\{1,\bar{x},\dots,\bar{x}^{n-1}\\}$ de manera única. Por tanto, $R[ x ]/(p(x))$ es libre como $R$-módulo y $S$ es una base. Recuerda que, sin embargo, cuando estudiamos la torsión vimos que, si $R$ es un dominio, $R[ x ]/(p(x))$ no es libre como $R[ x ]$-módulo.
 {{% /example %}}
 
 La siguiente proposición también tiene un análogo para anillos [ya demostrado](/estalg/rings/definitions/#factorquotient).
