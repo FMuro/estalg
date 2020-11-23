@@ -282,7 +282,7 @@ Las operaciones elementales por filas y columnas se corresponden con los product
 
 $$\begin{array}{rclrcl}
 A&\stackrel{F\_i+rF\_j}\longrightarrow& E\_{ij}( r )A,& A&\stackrel{C\_i+rC\_j}\longrightarrow& AE\_{ji}( r ),\cr
-A&\stackrel{F\_i\leftrightarrow F\_j}\longrightarrow &E\_{ij}A=A,&  A&\stackrel{C\_i\leftrightarrow C\_j}\longrightarrow& AE\_{ij},\cr
+A&\stackrel{F\_i\leftrightarrow F\_j}\longrightarrow &E\_{ij}A,&  A&\stackrel{C\_i\leftrightarrow C\_j}\longrightarrow& AE\_{ij},\cr
 A&\stackrel{uF\_i}\longrightarrow& E\_{ii}(u)A,& A&\stackrel{uC\_i}\longrightarrow& AE\_{ii}(u).
 \end{array}$$
 
