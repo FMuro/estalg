@@ -460,7 +460,7 @@ En particular, el $R$-módulo $M/T(M)$ es libre de rango $r$.
 
 
 {{% proof %}}
-Hemos visto antes que la torsión se preserva por [isomorfismos](#torsionquotient) y además preserva [productos](../generalities/#torsionproduct), así que, por un lado,
+Hemos visto antes que la torsión se preserva por [isomorfismos](../generalities/#torsionquotient) y además preserva [productos](../generalities/#torsionproduct), así que, por un lado,
 
 $$
 \begin{array}{rcl}
@@ -500,7 +500,7 @@ y los $d_i$ y los $e_j$ son no nulos para todos los $i$ y $j$. Entonces $r=s$.
 {{% /corollary %}}
 
 {{% proof %}}
-Como acabamos de ver, $M/T(M)$  es libre de rango $r$ y $N/T(N)$ es libre de rango $s$. También hemos [visto](#torsionquotient) que $M/T(M)\cong N/T(N)$. Deducimos que $r=s$, ya que el rango de un módulo libre es invariante por isomorfismos, pues los isomorfismos preservan bases.
+Como acabamos de ver, $M/T(M)$  es libre de rango $r$ y $N/T(N)$ es libre de rango $s$. También hemos [visto](../generalities/#torsionquotient) que $M/T(M)\cong N/T(N)$. Deducimos que $r=s$, ya que el rango de un módulo libre es invariante por isomorfismos, pues los isomorfismos preservan bases.
 {{% /proof %}}
 
 
