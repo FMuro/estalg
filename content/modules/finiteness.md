@@ -460,7 +460,7 @@ En particular, el $R$-módulo $M/T(M)$ es libre de rango $r$.
 
 
 {{% proof %}}
-Hemos visto antes que la torsión se preserva por [isomorfismos](../generalities/#torsionquotient) y además preserva [productos](../generalities/#torsionproduct), así que, por un lado,
+Hemos visto antes que la torsión se preserva por [isomorfismos](../generalities/#torsioniso) y además preserva [productos](../generalities/#torsionproduct), así que, por un lado,
 
 $$
 \begin{array}{rcl}

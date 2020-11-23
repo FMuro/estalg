@@ -436,7 +436,7 @@ Dado un $R$-módulo $M$, decimos que $a\in M$ es un elemento de **torsión** si 
 
 
 {{% remark %}}
-El $0\in M$ es siempre un elemento de torsión ya que $1\neq 0$ y $1\cdot 0 = 0$. Dado un entero no nulo $0\neq n\in\mathbb Z$, todo elemento $\bar a$ del $\mathbb Z$-módulo $\mathbb Z/(n)$ es de torsión puesto que $n\bar a=\overline{na}=\bar 0$. Más generalmente, si $I\subset R$ es un ideal no nulo entonces todo elemento de $R/I$ es de torsión, pues existe $0\neq a\in I$ y dado $\bar r\in R/I$, $a\bar r=\overline{ar}=0$. Como $R$ no tiene divisores de cero, $T( {R} )=\\{0\\}$, y más generalmente $T(R^n)=\\{0\\}$, $n\geq 0$.
+El $0\in M$ es siempre un elemento de torsión ya que $1\neq 0$ y $1\cdot 0 = 0$. Dado un entero no nulo $0\neq n\in\mathbb Z$, todo elemento $\bar a$ del $\mathbb Z$-módulo $\mathbb Z/(n)$ es de torsión puesto que $n\bar a=\overline{na}=\bar 0$. Más generalmente, si $I\subset R$ es un ideal no nulo entonces todo elemento de $R/I$ es de torsión, pues existe $0\neq a\in I$ y dado $\bar r\in R/I$, $a\bar r=\overline{ar}=0$.
 {{% /remark %}}
 
 
@@ -461,7 +461,7 @@ Uno de los coeficientes de esta combinación lineal es $sr\_i\neq 0$ que es no n
 
 
 {{% remark %}}
-El $\mathbb Z$-módulo $\mathbb Q$ no tiene torsión, pero se puede comprobar que no es libre, es decir, no posee ninguna base, ni finita ni infinita. 
+El $\mathbb Z$-módulo $\mathbb Q$ no tiene torsión, es decir, el único elemento de torsión es el $0$, pero se puede comprobar que no es libre. No posee ninguna base, ni finita ni infinita. 
 {{% /remark %}}
 
 
@@ -469,7 +469,6 @@ Los elementos de torsión forman un submódulo.
 {{% proposition %}}
 Si $M$ es un $R$-módulo, el subconjunto $T(M)\subset M$ formado por los elementos de torsión es un submódulo.
 {{% /proposition %}}
-
 
 {{% proof %}}
  
@@ -483,6 +482,9 @@ Dados $a,b\in T(M)$ existen $s,t\in R$ no nulos, $s\neq 0\neq t$, tales que $sa=
 
 {{% /proof %}}
 
+{{% remark %}}
+Según hemos visto antes, si $I\subset R$ es un ideal no nulo entonces $T(R/I)=R/I$. Como $R$ no tiene divisores de cero, $T( {R} )=\\{0\\}$, y más generalmente $T(R^n)=\\{0\\}$, $n\geq 0$.
+{{% /remark %}}
 
 Los homomorfismos preservan la torsión.
 
@@ -490,15 +492,18 @@ Los homomorfismos preservan la torsión.
 Si $f\colon M\rightarrow N$ es un homomorfismo de $R$-módulos entonces $f(T(M))\subset T(N)$. Si $f$ es un isomorfismo entonces $f(T(M))= T(N)$. 
 {{% /proposition %}}
 
-
 {{% proof %}}
 Dado $a\in T(M)$ existe $0\neq r\in R$ tal que $ra=0$ luego $rf(a)=f(ra)=f(0)=0$ y por tanto $f(a)$ es de torsión. Esto prueba la inclusión. Si $f$ además es un isomorfismo entonces podemos aplicarle la parte ya probada a $f^{-1}\colon N\rightarrow M$, con lo que tenemos $f^{-1}(T(N))\subset T(M)$, lo cual equivale a la otra inclusión $T(N)\subset f(T(M))$.
 {{% /proof %}}
 
 
-{{% corollary label="torsionquotient" %}}
-Si dos módulos son isomorfos $M\cong N$ entonces sus submódulos de torsión también $T(M)\cong T(N)$, y los correspondientes cocientes $M/T(M)\cong N/T(N)$.
+{{% corollary label="torsioniso" %}}
+Si dos módulos son isomorfos $M\cong N$ entonces sus submódulos de torsión también $T(M)\cong T(N)$.
 {{% /corollary %}}
+
+{{% proof %}}
+Tomamos un isomorfismo $f\colon M\rightarrow N$. Consideramos la restricción $f_{|_{T(M)}}\colon T(M)\rightarrow N$, que será inyectiva. Tomamos la correspondiente aplicación sobreyectiva $g\colon T(M)\rightarrow \operatorname{im} f_{|_{T(M)}}$ definida como $g(x)=f_{|_{T(M)}}(x)$. Como $f_{|_{T(M)}}$ es inyectiva, $g$ también, así que esta última es un isomorfismo. Por la proposición anterior, $\operatorname{im} f_{|_{T(M)}}=f(T(M))=T(N)$. Esto concluye la prueba.
+{{% /proof %}}
 
 
 La torsión preserva productos.
@@ -657,6 +662,14 @@ Un $R$-módulo $M$ es cíclico $\Leftrightarrow$ $M\cong R/I$ para algún ideal 
 $\Leftarrow$ El módulo $R/I$ es cíclico pues $\\{\bar 1\\}\subset R/I$ genera, así que cualquier módulo isomorfo a $R/I$ será también cíclico. 
 
 $\Rightarrow$ Sea $\\{a\\}\subset M$ un generador. El homomorfismo $\phi\_{\\{a\\}}\colon R\rightarrow M$ que envía $1\mapsto a$ es por tanto sobreyectivo, así que por el primer [teorema](#isomodules) de isomorfía, $R/\ker \phi\_{\\{a\\}}\cong M$, con lo que podemos tomar $I=\ker \phi\_{\\{a\\}}$.   
+{{% /proof %}}
+
+{{% corollary label="torsionquotient" %}}
+Si dos módulos son isomorfos $M\cong N$ entonces $M/T(M)\cong N/T(N)$.
+{{% /corollary %}}
+
+{{% proof %}}
+Tomamos un isomorfismo $f\colon M\rightarrow N$. Consideramos la aplicación sobreyectiva $g=p\circ f\colon M\twoheadrightarrow N/T(N)$ definida como la composición del isomorfismo $f$ con la proyección natural $p\colon N\twoheadrightarrow N/T(N)$. Por una [proposición anterior](#homotorsion), $\ker g=f^{-1}(T(N))=T(M)$, así que aplicando el primer teorema de isomorfía obtenemos el isomorfismo deseado $\bar{g}\colon M/T(M)\rightarrow N/T(N)$.
 {{% /proof %}}
 
 
