@@ -427,8 +427,6 @@ Este primer teorema de estructura demuestra que todo $R$-módulo finitamente gen
 $$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}\times R^{r}\cong\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}\times R^{s},$$
 
 donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i\mid d\_{i+1}$ y $e\_j\mid e\_{j+1}$, entonces $r=s$, $n=m$ y cada $d\_i$ es asociado de $e\_i$. 
-
-La demostración de que $r=s$ la veremos en general, pero el resto solo lo probaremos para $R=\mathbb{Z}$ y lo esbozaremos par $R=k[ x ]$ con $k$ un cuerpo. 
 {{% /remark %}}
 
 {{% watch %}}
@@ -561,7 +559,56 @@ El isomorfismo está definido simplemente como $\bar r\mapsto (\bar r,\dots,\bar
 {{% /proof %}}
 
 
-Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes, se puede pasar de una a otra mediante el isomorfismo dado por el teorema chino del resto. La segunda forma del teorema de estructura es por tanto también única, esta vez salvo reordenamiento de los factores de la parte de torsión.
+Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes, se puede pasar de una a otra mediante el isomorfismo dado por el teorema chino del resto. Veamos ahora que ambas descomposiciones son únicas, en el segundo caso salvo orden de los factores.
+
+{{% theorem %}}
+La descomposición de un $R$-módulo finitamente generado $M$ dada en la 2ª forma del teorema de escructura es única, salvo orden de los factores.
+{{% /theorem %}}
+
+{{% proof %}}
+Ya sabemos que el rango de la parte libre está unívocamente determinado, así que podemos restringirnos a $T(M)$ y, por tanto, suponer que el módulo es de torsión.
+
+Dado un elemento $r\in R$, denotemos por $M[r]$ el núcleo de la multiplicación por $r$ en $M$, es decir, el submódulo $\\{a\in M | r\cdot a=0\\}\subseteq M$. Dado un elemento irreducible $p\in R$ y $m\geq 1$, es fácil ver que
+$$p\cdot M[p^{m}]\subseteq M[p^{m-1}]\subseteq M[p^{m}].$$
+
+En particular, el $R$-módulo cociente $M[p^{m}]/M[p^{m-1}]$ se anula al multiplicar por $p$, y por tanto podemos verlo como un módulo (es decir, un espacio vectorial) sobre el cuerpo $k=R/(p)$. Denotemos por $d(p,m)$ la dimensión de este espacio.
+
+Tomemos ahora una descomposición de $M$ como producto de $R$-módulos cíclicos del segundo tipo,
+$$M\cong M_1\times\cdots\times M_n,$$
+con $M_i=\frac{R}{(p\_i^{m\_i})}$. Tenemos entonces que
+$$
+M[p^{m}]/M[p^{m-1}]\cong(M_1[p^{m}]/M_1[p^{m-1}])\times\cdots\times(M_n[p^{m}]/M_n[p^{m-1}])
+$$
+y, por tanto, $d(p,m)=\sum\_{i=1}^n \dim(M_i[p^{m}]/M_i[p^{m-1}])$. Veamos cuáles son estas dimensiones.
+
+Consideramos primero el caso en el que $p_i\neq p$. Entonces, la multiplicación por $p^m$ en $M_i=\frac{R}{(p\_i^{m\_i})}$ es inyectiva: si $p^m\cdot\bar r=\bar 0$ para algún $r\in R$, entonces $p\_i^{m\_i}|p^mr$, y por tanto $p\_i^{m\_i}|r$ (ya que $p$ y $p_i$ son primos entre sí). Así que $M_i[p^m]=\\{0\\}$, y en este caso la dimensión es $0$.
+
+Supongamos ahora que $p_i=p$ y $m_i<m$. En este caso, se tiene que $M_i[p^{m-1}]=M_i[p^m]=M_i$ (todo elemento de $M_i=\frac{R}{(p^{m\_i})}$ se anula al multiplicar por $p^{m-1}$), así que $M_n[p^{m}]/M_n[p^{m-1}]$ es trivial y de nuevo su dimensión es $0$.
+
+Finalmente, consideramos el caso en el que $p_i=p$ y $m\_i\geq m$. Para todo $r\in R$, $p^m\cdot\overline{rp^{m\_i-m}}=\overline{rp^{m\_i}}=\bar 0$ en $M_i$, y por tanto $\overline{rp^{m\_i-m}}\in M_i[p^m]$. El homomorfismo $\phi:R\to M_i[p^m]$ dado por $\phi(r)=\overline{rp^{m\_i-m}}$ es sobreyectivo: si $\bar s\in M_i[p^m]$, entonces $p^m\cdot\bar s=\bar 0$ en $M_i$, es decir, $p^{m\_i}|p^ms$, y por tanto $p^{m\_i-m}|s$. Podemos entonces escribir $s=tp^{m\_i-m}$ con $t\in R$, de donde $\bar s=\phi(t)$. Componiendo con la proyección sobre el cociente, obtenemos un homomorfismo sobreyectivo $\psi:R\to M_i[p^m]/M_i[p^{m-1}]$.
+
+Veamos cuál es su núcleo: $r\in\ker\psi$ si y solo si $\overline{rp^{m\_i-m}}\in M_i[p^{m-1}]$, es decir, si y solo si $p^{m-1}\cdot\overline{rp^{m\_i-m}}=\overline{rp^{m\_i-1}}=\bar 0$, si y solo si $p^{m\_i}|rp^{m\_i-1}$, si y solo si $p|r$. Por tanto, $\ker\psi=(p)$, y el teorema de isomorfía nos dice que $M_i[p^m]/M_i[p^{m-1}]\cong R/(p)=k$ como $R$-módulos (y como $k$-espacios vectoriales, ya que la operación es la misma). Así que, en este caso, la dimensión es $1$.
+
+Concluimos entonces que $d(p,m)$ es igual al número de $i=1,\ldots,n$ tales que $p_i=p$ y $m\_i\geq m$. Equivalentemente, el número de factores iguales a $R/(p^{m})$ en la descomposición de $M$ es $d(p,m)-d(p,m+1)$ y, en particular, está unívocamente determinado.
+{{% /proof %}}
+
+{{% corollary %}}
+La descomposición de un $R$-módulo finitamente generado $M$ dada en la 1ª forma del teorema de escructura es única.
+{{% /corollary %}}
+
+{{% proof %}}
+De nuevo, podemos suponer que $M$ es de torsión. Supongamos que existen dos descomposiciones distintas
+$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}$$
+y
+$$\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}$$
+cumpliendo las condiciones del teorema de estructura. Descomponiendo los $d_i$ y los $e_j$ como producto de potencias de irreducibles, obtenemos dos descomposiciones en la 2ª forma, que deben ser la misma (salvo orden de los factores) por el teorema anterior.
+
+Sea $k\geq 0$ tal que $(d\_{n-k})\neq (e\_{m-k})$. Existe al menos un elemento irreducible $p\in R$ que divide a $d\_{n-k}$ y $e\_{m-k}$ con distinto exponente (posiblemente cero). Supongamos que $p$ divide $d\_{n-k}$ con exponente $a$, y a $e\_{m-k}$ con exponente $b<a$. Como $e_j|e_{j+1}$, $p$ divide a $e_j$ con exponente $<a$ para todo $j=1,\ldots,m-k$. Es decir, el número de factores de la forma $R/(p^{m})$ con $m\geq a$ en la segunda descomposición es, como máximo, $k$. Pero, por otra parte, $d\_i$ es múltiplo de $p^a$ para todo $i=n-k,\ldots,n$, por lo que el número de factores de la forma $R/(p^{m})$ con $m\geq a$ en la primera descomposición es, como mínimo, $k+1$. Esto contradice el hecho de que las dos descomposiciones deben ser iguales salvo orden de los factores.
+{{% /proof %}}
+
+{{% definition %}}
+Los elementos $d_1,\ldots,d_n$ que aparecen en la primera forma del teorema de estructura para un $R$-módulo finitamente generado $M$, que son únicos salvo producto por unidades, se llaman los **factores invariantes** de $M$. Los elementos $p\_1^{m\_1},\ldots,p\_n^{m_n}$ que aparecen en la segunda forma del teorema de estructura, que son únicos salvo orden y producto por unidades, se llaman los **divisores elementales** de $M$.
+{{% /definition %}}
 
 {{% example name="Las dos formas del teorema de estructura" %}}
 El $\mathbb{Z}$-módulo
@@ -642,74 +689,6 @@ mientras que el segundo satisface
 $$t\_2\left(\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(4)}\right)=2\cdot 2\cdot 2=8,$$
 
 con lo cual no pueden ser isomorfos.
-{{% /example %}}
-
-El siguiente teorema, combinado con la [proposición](#partsoffg) y el [corolario](#equalrank) anterior, demuestra que la descomposición de un $\mathbb Z$-módulo finitamente generado $M$ dada por el primer teorema de estructura es única. La del segundo también lo será, salvo cambio de orden de los factores de la parte de torsión, pues ambos son equivalentes.
-
-{{% theorem %}}
-Dados dos $\mathbb Z$-módulos 
-
-$$
-\begin{array}{rlc}
-A&=&\frac{\mathbb Z}{(d\_1)}\times \cdots \times\frac{\mathbb Z}{(d\_n)},\cr
-B&=&\frac{\mathbb Z}{(e\_1)}\times \cdots \times\frac{\mathbb Z}{(e\_m)},
-\end{array}
-$$
-
-donde los $d\_i$ y los $e\_j$ no son nulos ni unidades y satisfacen $d\_i|d\_{i+1}$ y $e\_j|e\_{j+1}$, si $A\cong B$ entonces $n=m$ y cada $d\_i$ es asociado de $e\_i$.
-{{% /theorem %}}
-
-
-{{% proof %}}
-Podemos suponer sin pérdida de generalidad que los $d\_i$ y los $e\_j$ son positivos. Como ambos grupos son finitos e isomorfos, tienen el mismo orden, es decir,
-
-$$d\_1\cdots d\_n=e\_1\cdots e\_m.$$
-
-En $A$, el orden de cualquier elemento divide a $d\_n$, y en $B$ a $e\_m$. Ambos grupos son isomorfos, por tanto el orden de cualquier elemento de $A$ o de $B$ divide a $d\_n$ y a $e\_m$. En $A$ hay un elemento de orden $d\_n$, el $(\bar 0,\dots,\bar 0,\bar 1)$, por tanto $d\_n|e\_m$. En $B$ hay otro con orden $e\_m$, por tanto $e\_m|d\_n$, así que $d\_n=e\_m$. De aquí deducimos también que
-
-$$d\_1\cdots d\_{n-1}=e\_1\cdots e\_{m-1}.$$
-
-Demostremos ahora que $d\_{n-1}=e\_{m-1}$. Por un lado, 
-
-$$t\_{d\_{n-1}}(A)=d\_1\cdots d\_{n-2}\cdot d\_{n-1}^2$$
-
-y por otro
-
-$$\begin{array}{rcl}
-t\_{d\_{n-1}}(B)&=&\operatorname{mcd}(d\_{n-1},e\_1)\cdots\operatorname{mcd}(d\_{n-1},e\_{m-1})\operatorname{mcd}(d\_{n-1},e\_{m})\cr
-&=&\frac{d\_{n-1}e\_1}{\operatorname{mcm}(d\_{n-1},e\_1)}\cdots\frac{d\_{n-1}e\_{m-1}}{\operatorname{mcm}(d\_{n-1},e\_{m-1})}d\_{n-1}\cr
-&=&\frac{e\_1\cdots e\_{m-1}d\_{n-1}^m}{\operatorname{mcm}(d\_{n-1},e\_1)\cdots\operatorname{mcm}(d\_{n-1},e\_{m-1})}\cr
-&=&\frac{d\_1\cdots d\_{n-2}\cdot d\_{n-1}^{m+1}}{\operatorname{mcm}(d\_{n-1},e\_1)\cdots\operatorname{mcm}(d\_{n-1},e\_{m-1})}.
-\end{array}$$
-
-Como necesariamente $t\_{d\_{n-1}}(A)=t\_{d\_{n-1}}(B)$ deducimos que 
-
-$$d\_{n-1}^{m-1}=\operatorname{mcm}(d\_{n-1},e\_1)\cdots\operatorname{mcm}(d\_{n-1},e\_{m-1}).$$
-
-Pero $d\_{n-1}|\operatorname{mcm}(d\_{n-1},e\_{j})$ para todo $1\leq j\leq m-1$, así que la única posibilidad de que ambos productos coincidan es que en todos los casos $d\_{n-1}=\operatorname{mcm}(d\_{n-1},e\_{j})$, es decir $e\_j|d\_{n-1}$. Los papeles de $A$ y $B$, y en particular los de los $d\_i$ y los $e\_j$, son intercambiables, así que también concluimos que $d\_i|e\_{m-1}$ para todo $1\leq i\leq n-1$. En particular $e\_{m-1}|d\_{n-1}$ y $d\_{n-1}|e\_{m-1}$, por tanto $d\_{n-1}=e\_{m-1}$ y deducimos también que
-
-$$d\_1\cdots d\_{n-2}=e\_1\cdots e\_{m-2}.$$
-
-Este argumento se puede iterar, probando así que los últimos $d\_i$ coinciden con los últimos $e\_j$. Veamos por reducción al absurdo que $n=m$, con lo cual $d\_i=e\_i$ para todo $1\leq i\leq n$. Si $n\neq m$ podemos suponer sin pérdida de generalidad que $n{<}m$. En ese caso acabaríamos probando que $1=e\_1\cdots e\_{m-n}$, pero esto implicaría que estos primeros $e\_j$ son unidades, lo cual sería una contradicción.
-{{% /proof %}}
-
-
-{{% example name="$k[ x ]$-módulos de torsión con la misma dimensión" %}}
-Si $p(x)\in k[ x ]$ tiene grado $n$, el cociente $k[ x ]/(p(x))$ tiene dimensión $n$ como $k$-espacio vectorial pues $\\{1,\dots,\bar x^{n-1}\\}$ es una base. Por tanto los $k[ x ]$-módulos
-
-$$\frac{k[ x ]}{(x^2)}\times \frac{k[ x ]}{(x^2)},\qquad \frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x^2)}$$
-
-tienen dimensión $2+2=4=1+1+2$, así que son isomorfos como $k$-espacios vectoriales, pero no como $k[ x ]$-módulos. En efecto, para verlo, podemos razonar con el **orden** de un elemento de torsión $a\in M$ de un $k[ x ]$-módulo $M$, que es el polinomio mónico no nulo $p(x)\in k[ x ]$ de menor grado tal que $p(x)\cdot a=0$. Esta noción de orden satisface propiedades formales similares a las de grupos abelianos. Por ejemplo, el orden de $a$ divide a un polinomio $p(x)\in k[ x ]$ si y solo si $p(x)\cdot a=0$. Los números relevantes aquí son los $t\_{p(x)}(M)$, que es la dimensión como $k$-espacio vectorial del submódulo $T\_{p(x)}(M)\subset M$ formado por los elementos cuyo orden divide a $p(x)\in k[ x ]$,
-
-$$T\_{p(x)}(M)=\\{a\in M\mid p(x)\cdot a=0\\}.$$
-
-Tenemos que $T\_{p(x)}(M\times N)=T\_{p(x)}(M)\times T\_{p(x)}(N)$, luego  $t\_{p(x)}(M\times N)=t\_{p(x)}(M)+ t\_{p(x)}(N)$ pues la dimensión de un producto de espacios vectoriales es la suma de las dimensiones de los factores. Es más, todo isomorfismo de $k[ x ]$-módulos $M\cong N$ se restringe a $T\_{p(x)}(M)\cong T\_{p(x)}(N)$, así que en este caso $t\_{p(x)}(M)= t\_{p(x)}(N)$. Además podemos comprobar que $t\_{p(x)}(k[ x ]/(q(x)))$ es el grado de $\operatorname{mcd}(p(x),q(x))$. 
-
-Los dos $k[ x ]$-módulos del comienzo no pueden ser isomorfos porque
-
-$$\begin{array}{rcl} t\_{x}\left(\frac{k[ x ]}{(x^2)}\times \frac{k[ x ]}{(x^2)}\right)&=&1+1=2,\cr t\_{x}\left(\frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x)}\times \frac{k[ x ]}{(x^2)}\right)&=&1+1+1=3. \end{array}$$
-
-La demostración de la unicidad de las descomposicións de los teoremas de estructura de $R$-módulos finitamente generados para $R=k[ x ]$ es análoga al caso de $R=\mathbb Z$, usando para $R=k[ x ]$ los números $t\_{p(x)}(M)$ y el orden de un $k[ x ]$-módulo $M$ de torsión $M=T(M)$, que es simplemente su dimensión como $k$-espacio vectorial. La dejamos como ejercicio. 
 {{% /example %}}
 
 
