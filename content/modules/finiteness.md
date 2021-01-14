@@ -384,16 +384,6 @@ Del cálculo anterior también deducimos que la imagen de $D$ es el submódulo d
 {{% /proof %}}
 
 
-{{% corollary %}}
-Dado un dominio de ideales principales $R$, todo submódulo de $R^m$ es libre de rango $\leq m$. 
-{{% /corollary %}}
-
-
-{{% proof %}}
-Sea $M\subset R^m$ un submódulo. Al [demostrar](#fgfp) que todo $R$-módulo finitamente generado es finitamente presentado vimos que se puede suponer sin pérdida de generalidad que $M=\operatorname{im}A$ para cierto homomorfismo $A\colon R^n\rightarrow R^m$ definido por una matriz $A$ de tamaño $m\times n$. Este resultado es pues una consecuencia de la proposición anterior.
-{{% /proof %}}
-
-
 ## Teoremas de estructura
 
 Veamos que sobre un dominio de ideales principales todo módulo finitamente generado se descompone salvo isomorfismo como producto de módulos cíclicos.
