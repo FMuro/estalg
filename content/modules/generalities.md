@@ -725,3 +725,17 @@ $$\frac{N}{\ker p\_{|\_{N}}}\cong \operatorname{im} p\_{|\_{N}}.$$
 
 Más aún, $\operatorname{im} p\_{|\_{N}}\subset R$ es un submódulo, por tanto un ideal, y $R$ es un dominio de ideales principales, así que $\operatorname{im} p\_{|\_{N}}$ es libre y finitamente generado (por un solo elemento), y por tanto de rango $\leq 1$. Ahora podemos deducir, haciendo uso de la proposición anterior, que $N$ es libre y finitamente generado de rango $\leq (n-1)+1=n$.
 {{% /proof %}}
+
+
+{{% corollary %}}
+Dado un dominio de ideales principales $R$, todo submódulo $N$ de un $R$-módulo libre finitamente generado $M$ es finitamente generado.
+{{% /corollary %}}
+
+
+{{% proof %}}
+Sea $\\{a\_1,\ldots,a\_n\\}$ un sistema generador finito de $M$, y sea $\varphi:R^n\to M$ el homomorfismo sobreyectivo dado por $\varphi(r\_1,\ldots,r\_n)=r\_1a\_1+\cdots+r\_na\_n$. Sea $N\_0=\varphi^{-1}(N)\subseteq R^n$. Por el corolario anterior, $N\_0$ es libre y generado por, a lo más, $n$ elementos. Como $\varphi$ es sobreyectivo, $N=\varphi(N\_0)$ está generado por las imágenes de los generadores de $N\_0$ y, por tanto, es finitamente generado.
+{{% /proof %}}
+
+{{% remark %}}
+El resultado anterior es cierto, más generalmente, cuando $R$ es un anillo **noetheriano**, es decir, tal que todos sus ideales son finitamente generados.
+{{% /remark %}}
