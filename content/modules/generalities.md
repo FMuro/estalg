@@ -728,7 +728,7 @@ Más aún, $\operatorname{im} p\_{|\_{N}}\subset R$ es un submódulo, por tanto 
 
 
 {{% corollary %}}
-Dado un dominio de ideales principales $R$, todo submódulo $N$ de un $R$-módulo libre finitamente generado $M$ es finitamente generado.
+Dado un dominio de ideales principales $R$, todo submódulo $N$ de un $R$-módulo finitamente generado $M$ es finitamente generado.
 {{% /corollary %}}
 
 
