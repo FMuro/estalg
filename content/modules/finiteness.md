@@ -636,7 +636,7 @@ Concluimos entonces que $d(p,m)$ es igual al número de $i=1,\ldots,n$ tales que
 {{% /proof %}}
 
 {{% example name="Grupos abelianos con el mismo número de elementos" %}}
-Los grupos abelianos TEST
+Los grupos abelianos
 
 $$\frac{\mathbb{Z}}{(4)}\times \frac{\mathbb{Z}}{(4)},\qquad\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(4)},$$
 
