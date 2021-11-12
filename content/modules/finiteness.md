@@ -549,56 +549,7 @@ El isomorfismo está definido simplemente como $\bar r\mapsto (\bar r,\dots,\bar
 {{% /proof %}}
 
 
-Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes, se puede pasar de una a otra mediante el isomorfismo dado por el teorema chino del resto. Veamos ahora que ambas descomposiciones son únicas, en el segundo caso salvo orden de los factores.
-
-{{% theorem %}}
-La descomposición de un $R$-módulo finitamente generado $M$ dada en la 2ª forma del teorema de escructura es única, salvo orden de los factores.
-{{% /theorem %}}
-
-{{% proof %}}
-Ya sabemos que el rango de la parte libre está unívocamente determinado, así que podemos restringirnos a $T(M)$ y, por tanto, suponer que el módulo es de torsión.
-
-Dado un elemento $r\in R$, denotemos por $M[r]$ el núcleo de la multiplicación por $r$ en $M$, es decir, el submódulo $\\{a\in M | r\cdot a=0\\}\subseteq M$. Dado un elemento irreducible $p\in R$ y $m\geq 1$, es fácil ver que
-$$p\cdot M[p^{m}]\subseteq M[p^{m-1}]\subseteq M[p^{m}].$$
-
-En particular, el $R$-módulo cociente $M[p^{m}]/M[p^{m-1}]$ se anula al multiplicar por $p$, y por tanto podemos verlo como un módulo (es decir, un espacio vectorial) sobre el cuerpo $k=R/(p)$. Denotemos por $d(p,m)$ la dimensión de este espacio.
-
-Tomemos ahora una descomposición de $M$ como producto de $R$-módulos cíclicos del segundo tipo,
-$$M\cong M_1\times\cdots\times M_n,$$
-con $M_i=\frac{R}{(p\_i^{m\_i})}$. Tenemos entonces que
-$$
-M[p^{m}]/M[p^{m-1}]\cong(M_1[p^{m}]/M_1[p^{m-1}])\times\cdots\times(M_n[p^{m}]/M_n[p^{m-1}])
-$$
-y, por tanto, $d(p,m)=\sum\_{i=1}^n \dim(M_i[p^{m}]/M_i[p^{m-1}])$. Veamos cuáles son estas dimensiones.
-
-Consideramos primero el caso en el que $p_i\neq p$. Entonces, la multiplicación por $p^m$ en $M_i=\frac{R}{(p\_i^{m\_i})}$ es inyectiva: si $p^m\cdot\bar r=\bar 0$ para algún $r\in R$, entonces $p\_i^{m\_i}|p^mr$, y por tanto $p\_i^{m\_i}|r$ (ya que $p$ y $p_i$ son primos entre sí). Así que $M_i[p^m]=\\{0\\}$, y en este caso la dimensión es $0$.
-
-Supongamos ahora que $p_i=p$ y $m_i<m$. En este caso, se tiene que $M_i[p^{m-1}]=M_i[p^m]=M_i$ (todo elemento de $M_i=\frac{R}{(p^{m\_i})}$ se anula al multiplicar por $p^{m-1}$), así que $M_n[p^{m}]/M_n[p^{m-1}]$ es trivial y de nuevo su dimensión es $0$.
-
-Finalmente, consideramos el caso en el que $p_i=p$ y $m\_i\geq m$. Para todo $r\in R$, $p^m\cdot\overline{rp^{m\_i-m}}=\overline{rp^{m\_i}}=\bar 0$ en $M_i$, y por tanto $\overline{rp^{m\_i-m}}\in M_i[p^m]$. El homomorfismo $\phi:R\to M_i[p^m]$ dado por $\phi(r)=\overline{rp^{m\_i-m}}$ es sobreyectivo: si $\bar s\in M_i[p^m]$, entonces $p^m\cdot\bar s=\bar 0$ en $M_i$, es decir, $p^{m\_i}|p^ms$, y por tanto $p^{m\_i-m}|s$. Podemos entonces escribir $s=tp^{m\_i-m}$ con $t\in R$, de donde $\bar s=\phi(t)$. Componiendo con la proyección sobre el cociente, obtenemos un homomorfismo sobreyectivo $\psi:R\to M_i[p^m]/M_i[p^{m-1}]$.
-
-Veamos cuál es su núcleo: $r\in\ker\psi$ si y solo si $\overline{rp^{m\_i-m}}\in M_i[p^{m-1}]$, es decir, si y solo si $p^{m-1}\cdot\overline{rp^{m\_i-m}}=\overline{rp^{m\_i-1}}=\bar 0$, si y solo si $p^{m\_i}|rp^{m\_i-1}$, si y solo si $p|r$. Por tanto, $\ker\psi=(p)$, y el teorema de isomorfía nos dice que $M_i[p^m]/M_i[p^{m-1}]\cong R/(p)=k$ como $R$-módulos (y como $k$-espacios vectoriales, ya que la operación es la misma). Así que, en este caso, la dimensión es $1$.
-
-Concluimos entonces que $d(p,m)$ es igual al número de $i=1,\ldots,n$ tales que $p_i=p$ y $m\_i\geq m$. Equivalentemente, el número de factores iguales a $R/(p^{m})$ en la descomposición de $M$ es $d(p,m)-d(p,m+1)$ y, en particular, está unívocamente determinado.
-{{% /proof %}}
-
-{{% corollary %}}
-La descomposición de un $R$-módulo finitamente generado $M$ dada en la 1ª forma del teorema de escructura es única.
-{{% /corollary %}}
-
-{{% proof %}}
-De nuevo, podemos suponer que $M$ es de torsión. Supongamos que existen dos descomposiciones distintas
-$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}$$
-y
-$$\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}$$
-cumpliendo las condiciones del teorema de estructura. Descomponiendo los $d_i$ y los $e_j$ como producto de potencias de irreducibles, obtenemos dos descomposiciones en la 2ª forma, que deben ser la misma (salvo orden de los factores) por el teorema anterior.
-
-Sea $k\geq 0$ tal que $(d\_{n-k})\neq (e\_{m-k})$. Existe al menos un elemento irreducible $p\in R$ que divide a $d\_{n-k}$ y $e\_{m-k}$ con distinto exponente (posiblemente cero). Supongamos que $p$ divide $d\_{n-k}$ con exponente $a$, y a $e\_{m-k}$ con exponente $b<a$. Como $e_j|e_{j+1}$, $p$ divide a $e_j$ con exponente $<a$ para todo $j=1,\ldots,m-k$. Es decir, el número de factores de la forma $R/(p^{m})$ con $m\geq a$ en la segunda descomposición es, como máximo, $k$. Pero, por otra parte, $d\_i$ es múltiplo de $p^a$ para todo $i=n-k,\ldots,n$, por lo que el número de factores de la forma $R/(p^{m})$ con $m\geq a$ en la primera descomposición es, como mínimo, $k+1$. Esto contradice el hecho de que las dos descomposiciones deben ser iguales salvo orden de los factores.
-{{% /proof %}}
-
-{{% definition %}}
-Los elementos $d_1,\ldots,d_n$ que aparecen en la primera forma del teorema de estructura para un $R$-módulo finitamente generado $M$, que son únicos salvo producto por unidades, se llaman los **factores invariantes** de $M$. Los elementos $p\_1^{m\_1},\ldots,p\_n^{m_n}$ que aparecen en la segunda forma del teorema de estructura, que son únicos salvo orden y producto por unidades, se llaman los **divisores elementales** de $M$.
-{{% /definition %}}
+Las dos formas del teorema de estructura de módulos finitamente generados sobre un DIP son de hecho equivalentes, se puede pasar de una a otra mediante el isomorfismo dado por el teorema chino del resto. 
 
 {{% example name="Las dos formas del teorema de estructura" %}}
 El $\mathbb{Z}$-módulo
@@ -651,35 +602,64 @@ $$
 que es un isomorfismo por la conmutatividad del producto salvo isomorfismo.
 {{% /example %}}
 
+Veamos ahora que ambas descomposiciones son únicas, en el segundo caso salvo orden de los factores.
 
+{{% theorem %}}
+La descomposición de un $R$-módulo finitamente generado $M$ dada en la 2ª forma del teorema de escructura es única, salvo orden de los factores.
+{{% /theorem %}}
+
+{{% proof %}}
+Ya sabemos que el rango de la parte libre está unívocamente determinado, así que podemos restringirnos a $T(M)$ y, por tanto, suponer que el módulo es de torsión.
+
+Dado un elemento $r\in R$, denotemos por $M[r]$ el núcleo de la multiplicación por $r$ en $M$, es decir, el submódulo $\\{a\in M | r\cdot a=0\\}\subseteq M$. Dado un elemento irreducible $p\in R$ y $m\geq 1$, es fácil ver que
+$$p\cdot M[p^{m}]\subseteq M[p^{m-1}]\subseteq M[p^{m}].$$
+
+En particular, el $R$-módulo cociente $M[p^{m}]/M[p^{m-1}]$ se anula al multiplicar por $p$, y por tanto podemos verlo como un módulo (es decir, un espacio vectorial) sobre el cuerpo $k=R/(p)$. Denotemos por $d(p,m)$ la dimensión de este espacio.
+
+Tomemos ahora una descomposición de $M$ como producto de $R$-módulos cíclicos del segundo tipo,
+$$M\cong M_1\times\cdots\times M_n,$$
+con $M_i=\frac{R}{(p\_i^{m\_i})}$. Tenemos entonces que
+$$
+M[p^{m}]/M[p^{m-1}]\cong(M_1[p^{m}]/M_1[p^{m-1}])\times\cdots\times(M_n[p^{m}]/M_n[p^{m-1}])
+$$
+y, por tanto, $d(p,m)=\sum\_{i=1}^n \dim(M_i[p^{m}]/M_i[p^{m-1}])$. Veamos cuáles son estas dimensiones.
+
+Consideramos primero el caso en el que $p_i\neq p$. Entonces, la multiplicación por $p^m$ en $M_i=\frac{R}{(p\_i^{m\_i})}$ es inyectiva: si $p^m\cdot\bar r=\bar 0$ para algún $r\in R$, entonces $p\_i^{m\_i}|p^mr$, y por tanto $p\_i^{m\_i}|r$ (ya que $p$ y $p_i$ son primos entre sí). Así que $M_i[p^m]=\\{0\\}$, y en este caso la dimensión es $0$.
+
+Supongamos ahora que $p_i=p$ y $m_i<m$. En este caso, se tiene que $M_i[p^{m-1}]=M_i[p^m]=M_i$ (todo elemento de $M_i=\frac{R}{(p^{m\_i})}$ se anula al multiplicar por $p^{m-1}$), así que $M_n[p^{m}]/M_n[p^{m-1}]$ es trivial y de nuevo su dimensión es $0$.
+
+Finalmente, consideramos el caso en el que $p_i=p$ y $m\_i\geq m$. Para todo $r\in R$, $p^m\cdot\overline{rp^{m\_i-m}}=\overline{rp^{m\_i}}=\bar 0$ en $M_i$, y por tanto $\overline{rp^{m\_i-m}}\in M_i[p^m]$. El homomorfismo $\phi:R\to M_i[p^m]$ dado por $\phi(r)=\overline{rp^{m\_i-m}}$ es sobreyectivo: si $\bar s\in M_i[p^m]$, entonces $p^m\cdot\bar s=\bar 0$ en $M_i$, es decir, $p^{m\_i}|p^ms$, y por tanto $p^{m\_i-m}|s$. Podemos entonces escribir $s=tp^{m\_i-m}$ con $t\in R$, de donde $\bar s=\phi(t)$. Componiendo con la proyección sobre el cociente, obtenemos un homomorfismo sobreyectivo $\psi:R\to M_i[p^m]/M_i[p^{m-1}]$.
+
+Veamos cuál es su núcleo: $r\in\ker\psi$ si y solo si $\overline{rp^{m\_i-m}}\in M_i[p^{m-1}]$, es decir, si y solo si $p^{m-1}\cdot\overline{rp^{m\_i-m}}=\overline{rp^{m\_i-1}}=\bar 0$, si y solo si $p^{m\_i}|rp^{m\_i-1}$, si y solo si $p|r$. Por tanto, $\ker\psi=(p)$, y el teorema de isomorfía nos dice que $M_i[p^m]/M_i[p^{m-1}]\cong R/(p)=k$ como $R$-módulos (y como $k$-espacios vectoriales, ya que la operación es la misma). Así que, en este caso, la dimensión es $1$.
+
+Concluimos entonces que $d(p,m)$ es igual al número de $i=1,\ldots,n$ tales que $p_i=p$ y $m\_i\geq m$. Equivalentemente, el número de factores iguales a $R/(p^{m})$ en la descomposición de $M$ es $d(p,m)-d(p,m+1)$ y, en particular, está unívocamente determinado.
+{{% /proof %}}
 
 {{% example name="Grupos abelianos con el mismo número de elementos" %}}
 Los grupos abelianos
 
 $$\frac{\mathbb{Z}}{(4)}\times \frac{\mathbb{Z}}{(4)},\qquad\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(4)},$$
 
-tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos. Para verlo jugaremos con la noción de **orden** de un elemento de torsión $a\in A$ de un grupo abeliano $A$, que es el menor entero positivo $n\in\mathbb Z$ tal que $na=0$. El orden de $a$ divide a $n$ si y solo si $na=0$. En particular, para cada entero $n$, el subconjunto $T\_n(A)\subset A$ formado por los elementos cuyo orden divide a $n$ es un subgrupo, que se puede describir como 
-
-$$T_n(A)=\\{a\in A\mid n\cdot a=0\\}.$$
-
-Denotaremos $t\_n(A)$ al orden de $T_n(A)$. Además $T\_n(A\times B)=T\_n(A)\times T\_n(B)$, luego $t\_n(A\times B)=t\_n(A)t\_n(B)$. Es más, todo isomorfismo $A\cong B$ se restringe a $T\_n(A)\cong T\_n(B)$, por tanto en este caso $t\_n(A)=t\_n(B)$. Dado $m\neq 0$, el orden de $\bar a\in\mathbb Z/(m)$ divide a $n$ si y solo si $m\mid na$. Si denotamos $d=\operatorname{mcd}(n,m)$, esto equivale a decir que $\frac{m}{d}\mid a$, por tanto
-
-$$T\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\left(\overline{\frac{m}{d}}\right)=\left\\{0\cdot\overline{\frac{m}{d}},\dots,(d-1)\cdot \overline{\frac{m}{d}}\right\\},$$
-
-pues $\overline{\frac{m}{d}}$ tiene orden $d$. Luego
-
-$$t\_n\left(\frac{\mathbb{Z}}{(m)}\right)=\operatorname{mcd}(n,m).$$
-
-Aplicando esto a los dos grupos del principio, vemos que el primero cumple
-
-$$t\_2\left(\frac{\mathbb{Z}}{(4)}\times \frac{\mathbb{Z}}{(4)}\right)=2\cdot 2=4,$$
-
-mientras que el segundo satisface
-
-$$t\_2\left(\frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(2)}\times \frac{\mathbb{Z}}{(4)}\right)=2\cdot 2\cdot 2=8,$$
-
-con lo cual no pueden ser isomorfos.
+tienen $16$ elementos, pues $4\cdot 4=16=2\cdot 2\cdot 4$, luego existe una biyección entre ambos. Veamos que, a pesar de ello, no son isomorfos en virtud del teorema anterior.
 {{% /example %}}
+
+{{% corollary %}}
+La descomposición de un $R$-módulo finitamente generado $M$ dada en la 1ª forma del teorema de escructura es única.
+{{% /corollary %}}
+
+{{% proof %}}
+De nuevo, podemos suponer que $M$ es de torsión. Supongamos que existen dos descomposiciones distintas
+$$\frac{R}{(d\_1)}\times \cdots \times\frac{R}{(d\_n)}$$
+y
+$$\frac{R}{(e\_1)}\times \cdots \times\frac{R}{(e\_m)}$$
+cumpliendo las condiciones del teorema de estructura. Descomponiendo los $d_i$ y los $e_j$ como producto de potencias de irreducibles, obtenemos dos descomposiciones en la 2ª forma, que deben ser la misma (salvo orden de los factores) por el teorema anterior.
+
+Sea $k\geq 0$ tal que $(d\_{n-k})\neq (e\_{m-k})$. Existe al menos un elemento irreducible $p\in R$ que divide a $d\_{n-k}$ y $e\_{m-k}$ con distinto exponente (posiblemente cero). Supongamos que $p$ divide $d\_{n-k}$ con exponente $a$, y a $e\_{m-k}$ con exponente $b<a$. Como $e_j|e_{j+1}$, $p$ divide a $e_j$ con exponente $<a$ para todo $j=1,\ldots,m-k$. Es decir, el número de factores de la forma $R/(p^{m})$ con $m\geq a$ en la segunda descomposición es, como máximo, $k$. Pero, por otra parte, $d\_i$ es múltiplo de $p^a$ para todo $i=n-k,\ldots,n$, por lo que el número de factores de la forma $R/(p^{m})$ con $m\geq a$ en la primera descomposición es, como mínimo, $k+1$. Esto contradice el hecho de que las dos descomposiciones deben ser iguales salvo orden de los factores.
+{{% /proof %}}
+
+{{% definition %}}
+Los elementos $d_1,\ldots,d_n$ que aparecen en la primera forma del teorema de estructura para un $R$-módulo finitamente generado $M$, que son únicos salvo producto por unidades, se llaman los **factores invariantes** de $M$. Los elementos $p\_1^{m\_1},\ldots,p\_n^{m_n}$ que aparecen en la segunda forma del teorema de estructura, que son únicos salvo orden y producto por unidades, se llaman los **divisores elementales** de $M$.
+{{% /definition %}}
 
 
 ## Sistemas de ecuaciones lineales diofánticas
@@ -874,5 +854,3 @@ Trasladando esta base a $V$ por el isomorfismo dado por el segundo teorema de es
 
 La unicidad de la forma normal de Jordan se corresponde con la de la segunda forma del teorema de estructura. Observa que, sin embargo, la base respecto de la cual la matriz de $f$ está en forma normal de Jordan no es única en general.
 {{% /proof %}}
-
-
